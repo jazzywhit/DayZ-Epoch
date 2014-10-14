@@ -148,3 +148,6 @@ class DayZ_loadingScreen
 		};
 	};
 };
+
+//snapbuilding
+#include "custom\snap_pro\snappoints.hpp"
