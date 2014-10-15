@@ -66,89 +66,32 @@ DZMSSkills3 = [
 //////////////////////////////////////////////////////////////
 // This is the primary weaponlist that can be assigned to AI
 // These are assigned based on AI difficulty level
-DZMSWeps0 = [
-"M16A2",
-"M16A2GL",
-"AK_74",
-"M4A1_Aim",
-"AKS_74_kobra",
-"AKS_74_U",
-"AK_47_M",
-"M24",
-"M1014",
-"DMR_DZ",
-"M4A1",
-"M14_EP1",
-"Remington870_lamp",
-"MP5A5",
-"MP5SD",
-"M4A3_CCO_EP1"
-];
+DZMS_Rifles = [
+		"AK_47_M",
+		"AK_47_S",
+		"Sa58P_EP1",
+		"Sa58V_EP1",
+		"AK_74",
+		"AKS_74",
+		"AKS_74_U",
+		"Saiga12K",
+		"bizon"
+		];
 
-DZMSWeps1 = [
-"M16A2",
-"M16A2GL",
-"M249_DZ",
-"AK_74",
-"M4A1_Aim",
-"AKS_74_kobra",
-"AKS_74_U",
-"AK_47_M",
-"M24",
-"SVD_CAMO",
-"M1014",
-"DMR_DZ",
-"M4A1",
-"M14_EP1",
-"Remington870_lamp",
-"M240_DZ",
-"M4A1_AIM_SD_camo",
-"M16A4_ACG",
-"M4A1_HWS_GL_camo",
-"Mk_48_DZ",
-"M4A3_CCO_EP1",
-"Sa58V_RCO_EP1",
-"Sa58V_CCO_EP1",
-"M40A3",
-"Sa58P_EP1",
-"Sa58V_EP1"
-];
+DZMS_Rifles_NATO = [
+		"G36C",
+		"MP5A5",
+		"M16A2",
+		"M4A1",
+		"SCAR_L_CQC",
+		"m8_compact",
+		"M1014"
+		];
 
-DZMSWeps2 = [
-"FN_FAL",
-"FN_FAL_ANPVS4",
-"Mk_48_DZ",
-"M249_DZ",
-"BAF_L85A2_RIS_Holo",
-"G36C",
-"G36C_camo",
-"G36A_camo",
-"G36K_camo",
-"AK_47_M",
-"AKS_74_U",
-"M14_EP1",
-"bizon_silenced",
-"DMR_DZ",
-"RPK_74"
-];
-
-DZMSWeps3 = [
-"FN_FAL",
-"FN_FAL_ANPVS4",
-"Mk_48_DZ",
-"M249_DZ",
-"BAF_L85A2_RIS_Holo",
-"G36C",
-"G36C_camo",
-"G36A_camo",
-"G36K_camo",
-"AK_47_M",
-"AKS_74_U",
-"M14_EP1",
-"bizon_silenced",
-"DMR_DZ",
-"RPK_74"
-];
+DZMSWeps0 = DZMS_Rifles;
+DZMSWeps1 = DZMS_Rifles;
+DZMSWeps2 = DZMS_Rifles; //Default Skill and BRIC Weapons
+DZMSWeps3 = DZMS_Rifles_NATO; //More dangerous and NATO Weapons
 
 /////////////////////////////////////////////////////////////
 // These are gear sets that will be randomly given to the AI
@@ -183,10 +126,5 @@ DZMSGear4 = [
 DZMSPacklist = [
 "DZ_Patrol_Pack_EP1",
 "DZ_Assault_Pack_EP1",
-"DZ_Czech_Vest_Puch",
-"DZ_ALICE_Pack_EP1",
-"DZ_TK_Assault_Pack_EP1",
-"DZ_British_ACU",
-"DZ_CivilBackpack_EP1",
-"DZ_Backpack_EP1"
+"DZ_Czech_Vest_Puch"
 ];

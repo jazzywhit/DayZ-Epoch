@@ -11,7 +11,7 @@ _missName = "Supply Drop";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"An AN-2 with Bandit Supplies is Flying In!\nGet to the Location and Capture the Package!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"An AN-2 with NATO Supplies is Flying In!\nBeat the Bandits to the Package!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -48,11 +48,11 @@ sleep 5;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[_coords,6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[_coords,6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[_coords,4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,2,2,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
 
 _loop = true;
@@ -147,7 +147,7 @@ deletevehicle _chute;
 clearWeaponCargoGlobal _boxFin;
 clearMagazineCargoGlobal _boxFin;
 clearBackpackCargoGlobal _boxFin;
-[_boxFin,"weapons"] ExecVM DZMSBoxSetup;
+[_boxFin,"weapons_nato"] ExecVM DZMSBoxSetup;
 [_boxFin] call DZMSProtectObj;
 
 //Wait until the player is within 30 meters and also meets the kill req

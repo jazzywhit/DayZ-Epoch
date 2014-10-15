@@ -11,7 +11,7 @@ _missName = "C130 Crash";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"A C130 Carrying Supplies has Crashed!\nBandits are Securing the Cargo!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"A C130 Carrying Building Supplies has Crashed!\nThe UN is Securing the Cargo!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -75,22 +75,26 @@ _vehicle1 = createVehicle [_veh2,[(_coords select 0) - 6.541, (_coords select 1)
 
 //DZMSBoxFill fills the box, DZMSProtectObj prevents it from disappearing
 _crate = createVehicle ["USVehicleBox",[(_coords select 0) - 1.5547,(_coords select 1) + 2.3486,0],[], 0, "CAN_COLLIDE"];
-[_crate,"supply"] ExecVM DZMSBoxSetup;
+[_crate,"supply_high"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
 
 _crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) + 0.3428,(_coords select 1) - 1.8985,0],[], 0, "CAN_COLLIDE"];
-[_crate1,"supply"] ExecVM DZMSBoxSetup;
+[_crate1,"supply_high"] ExecVM DZMSBoxSetup;
 [_crate1] call DZMSProtectObj;
+
+_crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) + 1,(_coords select 1) - 1.8985,0],[], 0, "CAN_COLLIDE"];
+[_crate2,"weapons_nato"] ExecVM DZMSBoxSetup;
+[_crate2] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 10.5005,(_coords select 1) - 2.6465,0],6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 10.5005,(_coords select 1) - 2.6465,0],4,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 4.7027,(_coords select 1) + 12.2138,0],6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 4.7027,(_coords select 1) + 12.2138,0],4,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 2.918,(_coords select 1) - 9.0342,0],4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 2.918,(_coords select 1) - 9.0342,0],4,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 2.918,(_coords select 1) - 9.0342,0],4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 2.918,(_coords select 1) - 9.0342,0],4,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 
 //Wait until the player is within 30 meters and also meets the kill req
 [_coords,"DZMSUnitsMajor"] call DZMSWaitMissionComp;
