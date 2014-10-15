@@ -18,3 +18,5 @@ instance_11_chernaurus/*
 !restart.cmd
 !timechange.vbs
 /MPMissions/readme.txt
+*.pbo
+@DayZ_Epoch_Server/addons/dayz_server.pbo
