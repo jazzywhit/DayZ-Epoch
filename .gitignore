@@ -3,6 +3,7 @@ instance_11_chernaurus/*
 /*
 /*/
 *.bak
+.idea/
 /Keys/bi.bikey
 /Keys/bi2.bikey
 !.gitignore
