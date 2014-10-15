@@ -5,7 +5,7 @@
 
 ///////////////////////////////////////////////////////////////////////
 // Do you want your players to gain humanity from killing mission AI?
-DZMSMissHumanity = false;
+DZMSMissHumanity = true;
 
 // How Much Humanity?
 DZMSCntHumanity = 25;
@@ -16,10 +16,10 @@ DZMSUseNVG = true;
 
 // Do you want AI to use RPG7V's?
 //(Only one unit per group spawn will have one)
-DZMSUseRPG = true;
+DZMSUseRPG = false;
 
 // Do you want AI kills to count as bandit kills?
-DZMSCntBanditKls = false;
+DZMSCntBanditKls = true;
 
 // Do you want AI to disappear instantly when killed?
 DZMSCleanDeath = false;
@@ -33,10 +33,10 @@ DZMSBodyTime = 2400;
 
 // Percentage of AI that must be dead before mission completes (default = 0)
 //( 0 is 0% of AI / 0.50 is 50% / 1 is 100% )
-DZMSRequiredKillPercent = 0.8;
+DZMSRequiredKillPercent = 0;
 
 // How long in seconds before mission scenery disappears (default = 1800 / 0 = disabled)
-DZMSSceneryDespawnTimer = 0;
+DZMSSceneryDespawnTimer = 1800;
 
 // Should crates despawn with scenery? (default = false)
 DZMSSceneryDespawnLoot = false;
@@ -86,17 +86,17 @@ Minor missions have less AI than Major missions, but have crates that reflect th
 Below is the array of mission file names and the minimum and maximum times they run.
 Do not edit the Arrays unless you know what you are doing.
 */
-DZMSMajorArray = ["SM1","SM2","SM3","SM4","SM5","SM6","EM1","SM8","PF1"];
-DZMSMinorArray = ["SM2","SM3","SM4","SM5","SM6","SM7","SM8"];
+DZMSMajorArray = ["SM1","SM2","SM3","SM4","SM5","SM6"];
+DZMSMinorArray = ["SM1","SM2","SM3","SM4","SM5","SM6"];
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-// The Minimum time in seconds before a major mission will run.
-// At least this much time will pass between major missions. Default = 900
-DZMSMajorMin = 900;
+// The Minumum time in seconds before a major mission will run.
+// At least this much time will pass between major missions. Default = 650 (10.8 Minutes)
+DZMSMajorMin = 650;
 
 // Maximum time in seconds before a major mission will run.
-// A major mission will always run before this much time has passed. Default = 2700
-DZMSMajorMax = 2700;
+// A major mission will always run before this much time has passed. Default = 2000 (33.33 Minutes)
+DZMSMajorMax = 2000;
 
 // Time in seconds before a minor mission will run.
 // At least this much time will pass between minor missions. Default = 600 (10 Minutes)
@@ -104,14 +104,13 @@ DZMSMinorMin = 600;
 
 // Maximum time in seconds before a minor mission will run.
 // A minor mission will always run before this much time has passed. Default = 990 (16.5 Minutes)
-DZMSMinorMax = 900;
+DZMSMinorMax = 990;
 
 // Blacklist Zone Array -- missions will not spawn in these areas
 // format: [[x,y,z],radius]
 // Ex: [[06325,07807,0],300] //Starry Sobor
 DZMSBlacklistZones = [
-	[[0,0,0],50],
-	[[06325,07807,0],300]
+	[[0,0,0],50]
 ];
 
 /*=============================================================================================*/

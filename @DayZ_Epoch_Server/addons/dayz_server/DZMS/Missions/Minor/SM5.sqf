@@ -23,14 +23,14 @@ _crash = createVehicle ["HMMWVwreck",_coords,[], 0, "CAN_COLLIDE"];
 
 //Add and fill the crate
 _crate = createVehicle ["RULaunchersBox",[(_coords select 0) - 14, _coords select 1,0],[], 0, "CAN_COLLIDE"];
-[_crate,"weapons_nato"] ExecVM DZMSBoxSetup;
+[_crate,"weapons"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[_coords,3,3,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 1;
-[_coords,3,3,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 1;
 
 //Wait until the player is within 30 meters and also meets the kill req

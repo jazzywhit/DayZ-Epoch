@@ -99,16 +99,17 @@ _vehicle = createVehicle [_veh1,[(_coords select 0) - 17.5078, (_coords select 1
 //Create the loot
 _crate = createVehicle ["USLaunchersBox",[(_coords select 0) - 6.8277, (_coords select 1) + 5.6748,0],[], 0, "CAN_COLLIDE"];
 [_crate,"medical"] ExecVM DZMSBoxSetup;
+[_crate] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],2,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],2,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 
 
 //Wait until the player is within 30 meters and also meets the kill req

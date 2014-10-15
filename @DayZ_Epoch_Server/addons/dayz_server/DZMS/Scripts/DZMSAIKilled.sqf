@@ -58,6 +58,10 @@ if (DZMSCleanDeath) then {
 	if (DZMSCleanDeath) exitWith {};
 };
 
+if (DZMSUseNVG) then {
+	_unit removeWeapon "NVGoggles";
+};
+
 if (DZMSUseRPG AND ("RPG7V" in (weapons _unit))) then {
 	_unit removeWeapon "RPG7V";
 	_unit removeMagazines "PG7V";
