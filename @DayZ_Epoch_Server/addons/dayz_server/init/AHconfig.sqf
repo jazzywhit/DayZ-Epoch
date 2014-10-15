@@ -6,7 +6,7 @@
 
 
 	//	NEW (EXPERIMENTAL):
-	_UDP = false;		// Use Dupe Protection
+	_UDP = true;		// Use Dupe Protection
 	_ARFACG = true;	// Antirefuel & AntiCargod
 	_ASLV = true;		// Anti Spawn Local Vehicle
 		_UIC = false;		//	checks if ids on a vehicle are valid or not (replaced by _ASLV)
@@ -20,11 +20,11 @@
 /*  SUPER ADMIN HERE      */ _SAdmins = ["0","0","0"]; //do not have a , at the end.
 /*  BANNED PLAYER HERE    */ _BLOCKED = ["0","0","0"]; //do not have a , at the end.
 /* ********************************************************************************* */
-/*  Top esc menu TXT      */ _TopOfESC = "DayZ Server"; //do not use " in this text.
-/*  Bottom esc menu TXT   */ _LowerTop = "AntiHack / AdminTool"; //do not use " in this text.
-/*  Bottom esc menu TXT2  */ _LowerBottom = "by infiSTAR.de"; //do not use " in this text.
+/*  Top esc menu TXT      */ _TopOfESC = "Narrow Minded Gaming"; //do not use " in this text.
+/*  Bottom esc menu TXT   */ _LowerTop = ""; //do not use " in this text.
+/*  Bottom esc menu TXT2  */ _LowerBottom = "by narrowmindedgaming.com"; //do not use " in this text.
 /*  Color esc menu TXT    */ _EscColor = [0.6,0,0,1];
-/*  DebugMonitor TXT      */ _BottomDebug = "infiSTAR.de"; //do not use " in this text.
+/*  DebugMonitor TXT      */ _BottomDebug = ""; //do not use " in this text.
 /*  DebugMonitor Key      */ _ODK =  0xCF;	/* google DIK_KeyCodes (0xCF is END) */
 /*  Use DebugMonitor      */ _DMS =  false;	/* true or false */	/* starts up with debugmonitor ON if true */
 /*  DebugMonitor Action   */ _DMW = false;	/* true or false */	/* "Debug" option on mousewheel */
