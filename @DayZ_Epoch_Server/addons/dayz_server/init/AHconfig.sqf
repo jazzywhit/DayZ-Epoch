@@ -3,16 +3,6 @@
 /* ******************Copyright © 2014 infiSTAR all rights reserved****************** */
 /* *********************************www.infiSTAR.de********************************* */
 /* ********************************************************************************* */
-
-
-	//	NEW (EXPERIMENTAL):
-	_UDP = true;		// Use Dupe Protection
-	_ARFACG = true;	// Antirefuel & AntiCargod
-	_ASLV = true;		// Anti Spawn Local Vehicle
-		_UIC = false;		//	checks if ids on a vehicle are valid or not (replaced by _ASLV)
-
-
-/* ********************************************************************************* */
 /*  infiSTAR.de .dll path */  infiSTAR_DLL_PATH = "";    /* "" == empty == arma2oa directory */
 /*  Key to open the menu  */ _OpenMenuKey = 0x3C;    /* google DIK_KeyCodes (0x3C is F2) */
 /*  LOW ADMIN HERE        */ _LAdmins = ["0","0","0"]; //do not have a , at the end.
@@ -22,16 +12,14 @@
 /* ********************************************************************************* */
 /*  Top esc menu TXT      */ _TopOfESC = "Narrow Minded Gaming"; //do not use " in this text.
 /*  Bottom esc menu TXT   */ _LowerTop = ""; //do not use " in this text.
-/*  Bottom esc menu TXT2  */ _LowerBottom = "by narrowmindedgaming.com"; //do not use " in this text.
+/*  Bottom esc menu TXT2  */ _LowerBottom = "narrowmindedgaming.com"; //do not use " in this text.
 /*  Color esc menu TXT    */ _EscColor = [0.6,0,0,1];
-/*  DebugMonitor TXT      */ _BottomDebug = ""; //do not use " in this text.
+/*  DebugMonitor TXT      */ _BottomDebug = "infiSTAR.de"; //do not use " in this text.
 /*  DebugMonitor Key      */ _ODK =  0xCF;	/* google DIK_KeyCodes (0xCF is END) */
 /*  Use DebugMonitor      */ _DMS =  false;	/* true or false */	/* starts up with debugmonitor ON if true */
 /*  DebugMonitor Action   */ _DMW = false;	/* true or false */	/* "Debug" option on mousewheel */
 /*  Mod EPOCH ?           */ _MEH =  true;	/* true or false */
 /* ********************************************************************************* */
-/*  Use AUTOBAN HACKER    */ _UAB =  true;	/* true or false */	/* recommended:  true */	/* temp bans are cleared after a server restart */
-/*  Enable BadKey Kick    */ _BKK =  false;	/* true or false */	/* recommended:  true */	/* If people press a forbidden Key twice, they get kicked! */
 /*  Forbid VON Sidechat   */ _VON =  true;	/* true or false */	/* recommended:  true */	/* talking on sidechat will put out a warning and kick if continue */
 
 /*  Break Functions ?     */ _BHF = false;	/* true or false */	/* recommended:  true */	/* break some known functions used by hacks! */
@@ -57,10 +45,10 @@
 /*  Check Actions ?       */ _CSA = false;	/* true or false */	/* recommended: false */	/* this checks mousewheel actions */
 /*  Force Terrain Grid ?  */ _FTG =    25;	/* 50, 25, 12.5  */	/* recommended:    25 */	/* if set to 50 grass will be very low for better client FPS */
 /* ********************************************************************************* */
-/*  ALLOWED Custom Dialogs are only used if you have  _CUD =  true;					 */
-/*  If you want install custom scripts using dialog windows, you can add IDD numbers */
-/*  from the custom script's desc.h file included through MPMIssions/description.ext */
-/*  ALLOWED Dialogs       */ _ALLOWED_Dialogs = [-1,106,2200,6900,6901,6902,6903,420420,41144,711194];
+/*  ALLOWED Custom Dialogs "_ALLOWED_Dialogs" are only used if you have "_CUD =  true;"  */
+/*  If you want install custom scripts using dialog windows, you can add IDD numbers  */
+/*  from the custom script's desc.h file included through MPMIssions/description.ext  */
+_ALLOWED_Dialogs = [-1,106,2200,6900,6901,6902,6903,420420,41144,711194];
 //	-1			Epoch Safe/Lockbox Keycode UI
 //	106		Inventory (Gear)
 //	2200		Blood Test
@@ -72,27 +60,33 @@
 //	4444		Radio Communication
 //	65431,65432,65433,65434,65440,65441,65442		R3F ARTY Lift/Tow/Transport.
 //	711194	Plot Management	(http://epochmod.com/forum/index.php?/topic/16166-release-plot-management/)
-/* ********************************************************************************* */
-/*  Player that have one of the items in _ForbiddenWeapons in their inventory will get punished!  */
-/*  FORBIDDEN Weapons     */ _ForbiddenWeapons =
+
+/*  Player that have one of these items in their inventory will get punished!  */
+_ForbiddenItems =
 [
 	"ItemMap_Debug","ItemCore","Laserdesignator"
 ];
-/* ********************************************************************************* */
-/*  If _UVC = true; and _UVW = true; this check will start and delete all vehicles that are not in _ALLOWED_Vehicles  */
-/*  ALLOWED  Vehicles     */ _ALLOWED_Vehicles = ["ALL IF _UVW = false","Tractor","Policecar"];
-/* ********************************************************************************* */
-/*  If _UVC = true; this check will start and delete all vehicles that are in _FORBIDDEN_Vehicles  */
-/*  FORBIDDEN Vehicles    */ _FORBIDDEN_Vehicles =
+
+/*  If "_UVC =  true;" and "_UVW =  true;" this will delete all vehicles that are not in "_ALLOWED_Vehicles"  */
+_ALLOWED_Vehicles = ["ALL IF _UVW = false","Tractor","Policecar"];
+
+/*  If "_UVC =  true;" this will delete all vehicles that are in "_FORBIDDEN_Vehicles"  */
+_FORBIDDEN_Vehicles =
 [
 	"A10","AH1Z","AH64D","T90","F35B","AV8B2","UH1Y","Mi24_V",
 	"Mi24_P","Mi24_D","KA52","KA52Black","SU39","Su25_CDF","SU25_Ins",
 	"A10_US_EP1","AH64D_EP1","M1A1","M1A1_TUSK_MG","T72","T72_INS","T72_RU",
-	"T72_CDF","T72_Gue","BMP3","MLRS","T34","2S6M_Tunguska"
+	"T72_CDF","T72_Gue","BMP3","MLRS","T34","2S6M_Tunguska", "Su25_TK_EP1",
+	"BAF_Apache_AH1_D","UH60M_EP1","UH60M_MEV_EP1","Mi171Sh_rockets_CZ_EP1",
+	"Mi24_D_TK_EP1","L39_TK_EP1","M1A1_US_DES_EP1","M1A2_US_TUSK_MG_EP1",
+	"T72_TK_EP1","BMP2_TK_EP1","BMP2_UN_EP1","BMP2_HQ_TK_EP1","ZSU_TK_EP1",
+	"MLRS_DES_EP1","T34_TK_EP1","T34_TK_GUE_EP1","T55_TK_EP1","T55_TK_GUE_EP1",
+	"M113_TK_EP1","M113_UN_EP1","M113Ambul_TK_EP1","M113Ambul_UN_EP1","M2A2_EP1",
+	"M2A3_EP1","M6_EP1","BAF_FV510_D","BAF_FV510_W"
 ];
-/* ********************************************************************************* */
-/*  ALLOWED CMDMenus are only used if you have _BCM = false; which I would not recommend.  */
-/*  ALLOWED CMDMenus      */ _cMenu =
+
+/*  ALLOWED CMDMenus "_cMenu" are only used if you have "_BCM = false;" which I would not recommend.  */
+_cMenu =
 [
 	"","RscMainMenu","RscMoveHigh","#WATCH","#WATCH0",
 	"RscWatchDir","RscDisplayClassSelecter","RscDisplayGenderSelect",
@@ -101,9 +95,9 @@
 	"RscCallSupport","#ACTION","#CUSTOM_RADIO","RscRadio","RscGroupRootMenu",
 	"BTC_Hud","PlotManagement"
 ];
-/* ********************************************************************************* */
-/*  ALLOWED Actions are only used if you have _CSA =  true;  */
-/*  ALLOWED Actions      */ _dayzActions =
+
+/*  ALLOWED Actions "_dayzActions" are only used if you have "_CSA =  true;"  */
+_dayzActions =
 [
 	"DonorSkins","wardrobe","s_player_maintain_area","s_player_maintain_area_preview","BTC_SganciaActionId","BTC_liftActionId","BTC_liftHudId","dayz_myLiftVehicle","s_player_heli_detach",
 	"dayz_myCursorTarget","s_player_craftZombieBait","s_player_butcher_human","s_player_makeBomb","s_player_zombieShield","s_player_upgrademoto",
@@ -144,8 +138,50 @@
 	"STR_R3F_LOG_action_selectionner_objet_charge","STR_R3F_LOG_action_remorquer_selection","STR_R3F_LOG_action_charger_selection",
 	"STR_R3F_LOG_action_contenu_vehicule","STR_R3F_ARTY_action_ouvrir_dlg_SM",
 	"s_player_removeActions","s_player_repairActions","r_player_actions","r_player_actions2","s_player_parts","s_player_combi","s_player_parts",
-	"s_player_lockunlock","s_vehicle_lockunlock","s_player_toggleSnap","s_player_toggleSnapSelect","s_player_toggleSnapSelectPoint"
+	"s_player_lockunlock","s_vehicle_lockunlock","s_player_toggleSnap","s_player_toggleSnapSelect","s_player_toggleSnapSelectPoint",
+	"s_player_evacCall","s_player_makeEvacChopper","s_player_clearEvacChopper",
+	"s_player_deploybike2","s_player_deploymoped","s_player_deploymoped2","s_player_deploymozzie","s_player_deploymozzie2"
 ];
+/* ********************************************************************************* */
+	//	NEW (EXPERIMENTAL):
+	_UDP = false;		// Use Dupe Protection			/* true or false */
+	_URG = false;		// Antirefuel & AntiCargod		/* true or false */
+	_UIC = false;	//	Vehicle ID Check	/* true or false */
+	_UCL =  true;		// Use Anti Combat Log	/* true or false */
+	
+	
+	/*
+		"_UIM": Use Incognito Mode, makes it for the most part look like you don't run infiSTAR to the normal player.
+		But for that it disables for example:
+		Script Scan, reworked unconscious, Bad Keybinds, The debugmonitor,
+		Escape Menu will be default again, Chatfunctions and more
+		So it will make the server more unsecure! but look like it's a default one.
+	*/
+	_UIM = false;	/* true or false */
+	
+	
+	/*
+		"_sUptime": Server Uptime in seconds!
+		Using this will show "Restart in: xh xxmin"
+		If you don't want to use it - just do:
+		_sUptime = 0;
+	*/
+	_sUptime = 0;
+	
+	
+	/*
+		"_UDN": Players can Vote if they want Day- or NighTime
+		!vote day,/vote day, vote day,
+		!vote night,/vote night, vote night
+	*/
+	_UDN =  true;	/* true or false */
+	
+	
+	/*
+		"_FRC": FNCRestored Check.
+		When "_BHF =  true;" which it always should be in my opinion, then this will check if "_BHF" is persistent.
+	*/
+	_FRC =  true;	/* true or false */
 /* ********************************************************************************* */
 /* *******************Developer : infiSTAR (infiSTAR23@gmail.com)******************* */
 /* ******************Copyright © 2014 infiSTAR all rights reserved****************** */
