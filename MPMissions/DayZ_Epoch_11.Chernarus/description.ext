@@ -12,7 +12,7 @@ briefing = 0;
 debriefing = 0;
 
 onPauseScript = "";
-loadScreen = "\custom\custom_splash\NMG-Splash.jpg";
+loadScreen = "custom\custom_splash\loadscreen.jpg";
 
 class Header
 {
