@@ -72,6 +72,11 @@ if (isServer) then {
 };
 
 if (!isDedicated) then {
+
+	//server credits
+[] execVM "custom\server_credits\Server_WelcomeCredits.sqf";
+
+
 	//Conduct map operations
 	0 fadeSound 0;
 	waitUntil {!isNil "dayz_loadScreenMsg"};
