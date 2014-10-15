@@ -52,9 +52,12 @@ _vehicle setPos _vehSpawnPos;
 _driver moveInDriver _vehicle;
 
 //Run needed commands to set up group vehicle
+
+// TODO Check to make sure vehicles have fuel and ammo
 //_vehicle setFuel 1;
 //_vehicle setVehicleAmmo 1;
 //_vehicle engineOn true;
+
 _nul = _vehicle call DZAI_protectObject;
 if !(_vehicle isKindOf "Plane") then {
 	_vehicle setDir (random 360);
@@ -78,7 +81,7 @@ if (_isAirVehicle) then {
 	_vehicle addEventHandler ["HandleDamage",{_this call DZAI_vHandleDamage}];
 };
 _vehicle allowCrewInImmobile (!_isAirVehicle);
-_vehicle setVehicleLock "LOCKED";
+_vehicle setVehicleLock "UNLOCKED";
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 

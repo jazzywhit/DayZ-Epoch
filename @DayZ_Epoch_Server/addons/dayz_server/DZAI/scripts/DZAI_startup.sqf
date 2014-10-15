@@ -40,6 +40,7 @@ DZAI_locationsLand = [];
 DZAI_heliTypesUsable = [];
 DZAI_vehTypesUsable = [];
 
+// TODO Check the verify tables to ensure that all the tables are checked properly
 if (DZAI_verifyTables) then {
 	DZAI_tableChecklist = ["DZAI_Rifles0","DZAI_Rifles1","DZAI_Rifles2","DZAI_Rifles3","DZAI_Pistols0","DZAI_Pistols1","DZAI_Pistols2","DZAI_Pistols3",
 				"DZAI_Backpacks0","DZAI_Backpacks1","DZAI_Backpacks2","DZAI_Backpacks3","DZAI_Edibles","DZAI_Medicals1","DZAI_Medicals2",

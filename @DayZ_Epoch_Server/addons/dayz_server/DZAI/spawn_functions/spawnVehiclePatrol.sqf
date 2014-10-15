@@ -50,9 +50,12 @@ _vehicle setPos _vehSpawnPos;
 _driver moveInDriver _vehicle;
 
 //Run high-priority commands to set up group vehicle
+
+// TODO Check to ensure that vehicles are spawning with fuel and ammo
 //_vehicle setFuel 1;
 //_vehicle setVehicleAmmo 1;
 //_vehicle engineOn true;
+
 _nul = _vehicle call DZAI_protectObject;
 if !(_vehicle isKindOf "Plane") then {
 	_vehicle setDir (random 360);
@@ -74,9 +77,12 @@ if (_isAirVehicle) then {
 } else {
 	_vehicle addEventHandler ["Killed",{_this call DZAI_vehDestroyed;}];
 	_vehicle addEventHandler ["HandleDamage",{_this call DZAI_vHandleDamage}];
+	_vehicle addEventHandler ["GetIn",{
+		_nil = [nil,(_this select 2),"loc",rTITLETEXT,"Warning: This vehicle will disappear on server restart!","PLAIN DOWN",5] call RE;
+	}];
 };
 _vehicle allowCrewInImmobile (!_isAirVehicle);
-_vehicle setVehicleLock "LOCKED";
+_vehicle setVehicleLock "UNLOCKED";
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 

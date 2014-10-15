@@ -25,7 +25,7 @@ _bldgClasses = [["Residential","Farm"],["Military"],["MilitarySpecial"],["HeliCr
 //Built-in weapon ban list for melee weapons and nonweapon items
 _aiWeaponBanList = 
 	[
-		"Crossbow_DZ","Crossbow","MeleeHatchet","MeleeCrowbar","MeleeMachete","MeleeBaseball","MeleeBaseBallBat","MeleeBaseBallBatBarbed","MeleeBaseBallBatNails","Chainsaw", //Melee weapons
+		"Crossbow_DZ","Crossbow","MeleeHatchet","MeleeCrowbar","MeleeMachete","MeleeBaseball","MeleeBaseBallBat","MeleeBaseBallBatBarbed","MeleeBaseBallBatNails","Chainsaw", "ChainsawB", "ChainsawG", "ChainsawP", "ChainsawR", //Melee weapons
 		"ItemMap","Binocular","ItemWatch","ItemCompass","ItemFlashlight","ItemKnife","NVGoggles","ItemGPS","ItemEtool","Binocular_Vector","ItemMatchbox","ItemToolbox", //Non-weapon items
 		"ItemKeyKit","ItemMatchbox_DZE" //Epoch items
 	];
