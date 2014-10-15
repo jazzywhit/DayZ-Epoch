@@ -20,3 +20,4 @@ instance_11_chernaurus/*
 /MPMissions/readme.txt
 *.pbo
 @DayZ_Epoch_Server/addons/dayz_server.pbo
+*.bak
