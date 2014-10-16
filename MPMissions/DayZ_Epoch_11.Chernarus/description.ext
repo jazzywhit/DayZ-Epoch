@@ -149,5 +149,8 @@ class DayZ_loadingScreen
 	};
 };
 
-//snapbuilding
+//Snap Building
 #include "custom\snap_pro\snappoints.hpp"
+
+//Custom Loot
+#include "custom\custom_loot\config\CfgBuildingLoot.hpp"

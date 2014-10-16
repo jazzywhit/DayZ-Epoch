@@ -20,4 +20,7 @@ if (!isDedicated) then {
 	} else {
 	    call compile preprocessFileLineNumbers "custom\fast_trade\player_traderMenuHive.sqf";
 	};
+
+	//Custom code
+	call compile preprocessFileLineNumbers "custom\code\variables.sqf";
 };
