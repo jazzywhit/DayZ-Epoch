@@ -105,6 +105,3 @@ if (!isDedicated) then {
 
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
-
-//Custom time
-call compile preprocessFileLineNumbers "custom\custom_time\time_control.sqf";

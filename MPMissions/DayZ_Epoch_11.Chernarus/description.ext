@@ -149,8 +149,69 @@ class DayZ_loadingScreen
 	};
 };
 
+//walkamongstthedead
+
+class RscPictureGUI
+{
+	access=0;
+	type=0;
+	idc=-1;
+	colorBackground[]={0,0,0,0};
+	colorText[]={0.38,0.63,0.25999999,0.75};
+	font="TahomaB";
+	sizeEx=0;
+	lineSpacing=0;
+	text="";
+	style="0x30 + 0x100";
+	x=0;
+	y=0;
+	w=0.2;
+	h=0.15000001;
+};
+
+class RscTitles
+{ 
+	class zCamoStatusGUI {
+	idd = -1;
+	fadeout=0;
+	fadein=0;
+		onLoad = "uiNamespace setVariable ['zCamo_GUI_display', _this select 0]";
+		duration = 10e10;
+		name= "zCamoGui";
+		controlsBackground[] = {};
+		objects[] = {};
+		class controls {
+			class zCamoIcon:RscPictureGUI {
+			idc = 1;
+			text="custom\walkamongstthedead\zombie.paa";
+			x="0.958313 * safezoneW + safezoneX";
+			y="0.43 * safezoneH + safezoneY";
+			w=0.059999999;
+			h=0.079999998;
+			colorText[]={1,1,1,1};
+			};
+		};
+	};
+};
+
+class CfgSounds
+{
+	sounds[] ={z_wzombie1,z_wzombie2};
+	class z_wzombie1 {
+		name = "";
+		sound[] = {"custom\walkamongstthedead\dayz_sfx\femalezombie_attack_04.ogg",0.3,1,40};
+		titles[] = {0, ""};
+	};
+	
+	class z_wzombie2 : z_wzombie1 {
+		sound[] = {"custom\walkamongstthedead\dayz_sfx\femalezombie_spotted_01.ogg",0.3,1,40};
+	};
+};
 //Snap Building
 #include "custom\snap_pro\snappoints.hpp"
 
 //Custom Loot
 #include "custom\custom_loot\config\CfgBuildingLoot.hpp"
+
+//walkamongstthedead
+#include "custom\walkamongstthedead\watd.hpp"
