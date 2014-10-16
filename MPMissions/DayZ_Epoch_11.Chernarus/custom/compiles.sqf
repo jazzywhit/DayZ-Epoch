@@ -10,4 +10,14 @@ if (!isDedicated) then {
 	
 	//custom select_slot - used in many scripts
 	player_selectSlot =			compile preprocessFileLineNumbers "custom\ui_selectSlot.sqf";
+	
+	//take clothes
+	player_death =				compile preprocessFileLineNumbers "Recover_Skin\player_death.sqf";
+	
+	// //instant trade
+	// if (DZE_ConfigTrader) then {
+		// call compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_traderMenuConfig.sqf";
+	// }else{
+		// call compile preprocessFileLineNumbers "custom\player_traderMenuHive.sqf";
+	// };
 };
