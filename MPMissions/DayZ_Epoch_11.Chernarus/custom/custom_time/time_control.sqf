@@ -1,5 +1,12 @@
+//http://epochmod.com/forum/index.php?/topic/16067-joelmas-time-control/
+//_multi = 4/3; -> 3 hours day
+//_multi = 2;   -> 2 hours day
+//_multi = 4;   -> 1 hours day
+//_multi = 8;   -> 1 half-hour day
+//_multi = 16;  -> 1 quarter-hour day
+
 donn_sleep = 0.2;
-donn_multi = 2;
+donn_multi = 8;
 drn_fnc_DynamicWeather_SetWeatherLocal = {};
 0 setOvercast 0;
 0 setFog 0.05;
