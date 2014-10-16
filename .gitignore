@@ -14,6 +14,7 @@ instance_11_chernaurus/*
 !/MPMissions/
 !/SQL/
 !/Tools/
+!/DayZ-SQF/
 !Readme.txt
 !restart.cmd
 !timechange.vbs
@@ -21,4 +22,3 @@ instance_11_chernaurus/*
 *.pbo
 @DayZ_Epoch_Server/addons/dayz_server.pbo
 *.bak
-*.pbo
