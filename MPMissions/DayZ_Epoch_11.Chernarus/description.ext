@@ -1,3 +1,6 @@
+// Custom Loot
+#include "custom\custom_loot\config\CfgBuildingLoot.hpp"
+
 respawn = "BASE";
 respawndelay = 5;
 onLoadMission= "DayZ Epoch Chernarus";
@@ -207,11 +210,9 @@ class CfgSounds
 		sound[] = {"custom\walkamongstthedead\dayz_sfx\femalezombie_spotted_01.ogg",0.3,1,40};
 	};
 };
+
 //Snap Building
 #include "custom\snap_pro\snappoints.hpp"
-
-//Custom Loot
-#include "custom\custom_loot\config\CfgBuildingLoot.hpp"
 
 //walkamongstthedead
 #include "custom\walkamongstthedead\watd.hpp"
