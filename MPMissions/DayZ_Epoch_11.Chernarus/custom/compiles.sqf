@@ -25,10 +25,6 @@ if (!isDedicated) then {
 	    call compile preprocessFileLineNumbers "custom\fast_trade\player_traderMenuHive.sqf";
 	};
 
-	//Custom code
-	call compile preprocessFileLineNumbers "custom\code\variables.sqf";
-	
-	
 	//walkamongstthedead
 	call compile preprocessFileLineNumbers "custom\walkamongstthedead\config.sqf";
 };
