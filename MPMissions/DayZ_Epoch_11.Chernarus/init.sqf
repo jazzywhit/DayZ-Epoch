@@ -50,10 +50,16 @@ DZE_SelfTransfuse = true;
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 dayz_fullMoonNights = true;
 
+///////////////////////////////////
+// Load in custom variables
+// complete before dayz_code to ensure custom variables are written first
+call compile preprocessFileLineNumbers "custom\code\variables.sqf";				//Initialize the Variables (IMPORTANT: Must happen very early)
+
+///////////////////////////////////
 //Load in compiled functions
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
+call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initialize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";				//Initilize the publicVariable event handlers
+call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";				//Initialize the publicVariable event handlers
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
@@ -77,7 +83,7 @@ if (isServer) then {
 if (!isDedicated) then {
 
 	//server credits
-[] execVM "custom\server_credits\Server_WelcomeCredits.sqf";
+    [] execVM "custom\server_credits\Server_WelcomeCredits.sqf";
 
 
 	//Conduct map operations

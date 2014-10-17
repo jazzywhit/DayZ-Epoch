@@ -1,6 +1,9 @@
+///////////////////////////////////
 // Custom Loot
-#include "loot\config\CfgBuildingLoot.hpp"
+#include "custom\custom_loot\config\CfgBuildingLoot.hpp"
 
+///////////////////////////////////
+// Default
 respawn = "BASE";
 respawndelay = 5;
 onLoadMission= "DayZ Epoch Chernarus";
