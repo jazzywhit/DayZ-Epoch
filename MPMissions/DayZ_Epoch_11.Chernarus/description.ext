@@ -1,5 +1,5 @@
 // Custom Loot
-#include "custom\custom_loot\config\CfgBuildingLoot.hpp"
+#include "loot\config\CfgBuildingLoot.hpp"
 
 respawn = "BASE";
 respawndelay = 5;
