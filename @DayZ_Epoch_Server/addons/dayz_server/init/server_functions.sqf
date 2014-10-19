@@ -946,23 +946,23 @@ server_timeSync = {if (!initialSend) then {[] call donn_server_timeSync;}; initi
 
 
 //IXXO custom buildings
-// execVM "\z\addons\dayz_server\CustomBuildings\3cities.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\kamenka.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\krasnostav.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\northeastairfield.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\northwestairfield.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\vybor.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\BorMilitaryBase.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\DichinaMilitaryBase.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\NovyLugMilitaryBase.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\Zelenogorsk.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\ganjafarma.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\trader_guglovo.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\cult.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\trader_klen.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\trader_cherno.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\trader_berezino.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\trader_sosnovy.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\trader_hero.sqf";
-// execVM "\z\addons\dayz_server\CustomBuildings\trader_bandit.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\3cities.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\kamenka.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\krasnostav.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\northeastairfield.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\northwestairfield.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\vybor.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\BorMilitaryBase.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\DichinaMilitaryBase.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\NovyLugMilitaryBase.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\Zelenogorsk.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\ganjafarma.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\trader_guglovo.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\cult.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\trader_klen.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\trader_cherno.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\trader_berezino.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\trader_sosnovy.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\trader_hero.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\trader_bandit.sqf";
