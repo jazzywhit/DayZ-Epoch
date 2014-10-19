@@ -17,23 +17,25 @@ if (!_isBuried) then {
 
         _position = getPosATL _corpse;
         _dir = getDir _corpse;
-private ["_newBackpackType","_backpackWpn","_backpackMag"];
+		private ["_newBackpackType","_backpackWpn","_backpackMag"];
         dayz_myBackpack = unitBackpack _corpse;
-_newBackpackType = (typeOf dayz_myBackpack);
+		_newBackpackType = (typeOf dayz_myBackpack);
         _corpse; private ["_weapons","_magazines","_primweapon","_secweapon"];
         _weapons = weapons _corpse;
         _magazines = magazines _corpse;
+		
         if(_newBackpackType != "") then {
-_backpackWpn = getWeaponCargo unitBackpack _corpse;
-_backpackMag = getMagazineCargo unitBackpack _corpse;
-};
-  _box = createVehicle ["Foodbox0", _position, [], 0, "CAN_COLLIDE"];
+			_backpackWpn = getWeaponCargo unitBackpack _corpse;
+			_backpackMag = getMagazineCargo unitBackpack _corpse;
+		};
+		
+		_box = createVehicle ["Foodbox0", _position, [], 0, "CAN_COLLIDE"];
         _box setpos [(getposATL _box select 0),(getposATL _box select 1)+1.2, 0];
         clearWeaponCargoGlobal _box;
         clearMagazineCargoGlobal _box;
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
-deleteVehicle _corpse;
+		deleteVehicle _corpse;
 
         _mound = createVehicle ["Grave", _position, [], 0, "CAN_COLLIDE"];
         _mound setpos [(getposATL _mound select 0),(getposATL _mound select 1), 0];
@@ -72,7 +74,10 @@ deleteVehicle _corpse;
         [player,100] call player_humanityChange;
         _id = [player,50,true,(getPosATL player)] spawn player_alertZombies;
         player playMove "AmovPercMstpSlowWrflDnon_Salute";
-    } else {
-        cutText ["The poor bastards been eaten, there's not much left to bury", "PLAIN DOWN"];
-    };
+		
+	} else {
+		cutText ["The poor bastards been eaten, there's not much left to bury", "PLAIN DOWN"];
+	};
+} else {
+	cutText ["This man has already had a proper funeral", "PLAIN DOWN"];
 };
