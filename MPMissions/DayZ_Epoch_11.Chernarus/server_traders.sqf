@@ -1,7 +1,7 @@
 // DayZ Epoch TRADERS for 11
-serverTraders = ["RU_Functionary1","RU_Citizen3","Rocker4","Profiteer4","Rita_Ensler_EP1","CIV_EuroMan01_EP1","CIV_EuroMan02_EP1","TK_GUE_Soldier_5_EP1","GUE_Soldier_MG","Worker2","Worker3","Woodlander1","UN_CDF_Soldier_Pilot_EP1","RU_WorkWoman1","Dr_Annie_Baker_EP1","RU_Citizen4","RU_WorkWoman5","RU_Citizen1","RU_Villager3","TK_CIV_Takistani04_EP1","Pilot_EP1","RU_Profiteer4","Woodlander3","Dr_Hladik_EP1","Doctor","HouseWife1","GUE_Woodlander2"];
+serverTraders = ["UN_CDF_Soldier_SL_EP1","RU_Citizen3","Rocker4","Assistant","Rita_Ensler_EP1","CIV_EuroMan01_EP1","CIV_EuroMan02_EP1","TK_GUE_Soldier_5_EP1","Ins_Soldier_MG","Worker2","Worker3","Woodlander1","UN_CDF_Soldier_Pilot_EP1","RU_WorkWoman1","Dr_Annie_Baker_EP1","RU_Citizen4","RU_WorkWoman5","RU_Citizen1","RU_Villager3","CDF_Commander","CDF_Soldier_Light","RU_Profiteer4","Woodlander3","Dr_Hladik_EP1","Doctor","HouseWife1","GUE_Woodlander2"];
 // Hero Vendor
-menu_RU_Functionary1 = [
+menu_UN_CDF_Soldier_SL_EP1 = [
 	[["Ammunition",478],["Clothes",476],["Helicopter Armed",493],["Military Armed",562],["Trucks Armed",479],["Weapons",477]],
 	[],
 	"hero"
@@ -17,18 +17,6 @@ menu_Rocker4 = [
 	[["Assault Rifle",485],["Light Machine Gun",486],["Pistols",489],["Shotguns and Single-shot",574],["Sniper Rifle",487],["Submachine Guns",488]],
 	[],
 	"friendly"
-];
-// Friendly Vehicles
-menu_Profiteer4 = [
-	[["Bikes and ATV",608],["Buses and Vans",563],["Cargo Trucks",564],["Fuel Trucks",492],["Military Unarmed",491],["Trucks",495],["Used Cars",585],["Utility Vehicles",565]],
-	[],
-	"friendly"
-];
-// General Store
-menu_Rita_Ensler_EP1 = [
-	[["Backpacks",496],["Clothes",497],["Cooked Meats",580],["Drinks",498],["Packaged Food",579]],
-	[["ItemTinBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Tin Bar",101]],
-	"neutral"
 ];
 // Weapons neutral
 menu_CIV_EuroMan01_EP1 = [
@@ -49,7 +37,7 @@ menu_TK_GUE_Soldier_5_EP1 = [
 	"neutral"
 ];
 // Bandit Trader
-menu_GUE_Soldier_MG = [
+menu_Ins_Soldier_MG = [
 	[["Ammunition",577],["Clothing",575],["Helicopter Armed",512],["Military Armed",569],["Trucks Armed",534],["Weapons",627]],
 	[],
 	"hostile"
@@ -76,12 +64,6 @@ menu_Woodlander1 = [
 menu_UN_CDF_Soldier_Pilot_EP1 = [
 	[["Bikes and ATV",536],["Buses and Vans",592],["Cargo Trucks",570],["Fuel Trucks",595],["Military Unarmed",599],["Trucks Unarmed",535],["Used Cars",600],["Utility Vehicles",568]],
 	[],
-	"friendly"
-];
-// General Store 2
-menu_RU_WorkWoman1 = [
-	[["Backpacks",538],["Clothes",628],["Cooked Meats",630],["Drinks",601],["Packaged Food",629]],
-	[["ItemTinBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Tin Bar",101]],
 	"friendly"
 ];
 // Medical Supplies
@@ -114,31 +96,49 @@ menu_RU_Villager3 = [
 	[],
 	"neutral"
 ];
-// Weapons neutral 2
-menu_TK_CIV_Takistani04_EP1 = [
+// Vehicles / low tier
+menu_Assistant = [
+	[["Bikes and ATV",608],["Used Cars",585]],
+	[],
+	"friendly"
+];
+// General Store / low tier
+menu_RU_WorkWoman1 = [
+	[["Backpacks",538],["Drinks",601],["Packaged Food",629]],
+	[["ItemTinBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Tin Bar",101]],
+	"neutral"
+];
+// General Store / mid tier
+menu_Rita_Ensler_EP1 = [
+	[["Backpacks",496],["Clothes",497],["Cooked Meats",580],["Drinks",498],["Packaged Food",579]],
+	[["ItemTinBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Tin Bar",101]],
+	"neutral"
+];
+// Weapons neutral / mid tier
+menu_CDF_Commander = [
 	[["Assault Rifle",637],["Light Machine Gun",638],["Pistols",674],["Shotguns and Single-shot",641],["Sniper Rifle",640],["Submachine Guns",642]],
 	[],
 	"neutral"
 ];
-// Ammunition Neutral 2
-menu_Pilot_EP1 = [
+// Ammunition Neutral / mid tier
+menu_CDF_Soldier_Light = [
 	[["Assault Rifle Ammo",643],["Light Machine Gun Ammo",644],["Pistol Ammo",646],["Shotguns and Single-shot Ammo",649],["Sniper Rifle Ammo",647],["Submachine Gun Ammo",648]],
 	[],
 	"neutral"
 ];
-// Vehicles Neutral 2
+// Vehicles Neutral / mid tier
 menu_RU_Profiteer4 = [
 	[["Bikes and ATV",650],["Buses and Vans",651],["Cargo Trucks",653],["Fuel Trucks",655],["Military Unarmed",658],["Trucks",659],["Used Cars",660],["Utility Vehicles",661]],
 	[],
 	"neutral"
 ];
-// Neutral Building/Parts
+// Neutral Building/Parts / mid tier
 menu_Woodlander3 = [
 	[["Building Supplies",662],["Toolbelt Items",663],["Vehicle Parts",664]],
 	[],
 	"neutral"
 ];
-// Medical Supplies 2
+// Medical Supplies / mid tier
 menu_Dr_Hladik_EP1 = [
 	[["Chem-lites/Flares",666],["Medical Supplies",665],["Smoke Grenades",668]],
 	[["FoodBioMeat","ItemZombieParts",1,1,"buy","Zombie Parts","Bio Meat",101]],

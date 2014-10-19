@@ -1172,7 +1172,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=17;
+		items=20;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1217,9 +1217,9 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={6326.4805,304.99265,7809.4888};
-			name="Tradercitystary";
-			text="Trader City Stary";
+			position[]={8199.5771, 0.22283147, 6681.4678};
+			name="Tradercityguglovo";
+			text="Trader City Guglovo";
 			type="mil_circle";
 			colorName="ColorBlack";
 		};
@@ -1257,7 +1257,7 @@ class Mission
 		};
 		class Item12
 		{
-			position[]={1606.6443,289.70795,7803.5156};
+			position[]={2187.6755,0.9907096,12753.201};
 			name="BanditDen";
 			text="Bandit Camp";
 			type="mil_dot";
@@ -1269,7 +1269,7 @@ class Mission
 			name="Klen";
 			text="Trader City Klen";
 			type="mil_circle";
-			colorName="ColorGreen";
+			colorName="ColorBlack";
 		};
 		class Item14
 		{
@@ -1289,29 +1289,53 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={12944.227,210.19823,12766.889};
+			position[]={1008.5195,8.6307526e-005,2125.6699};
 			name="HeroTrader";
 			text="Hero Camp";
 			type="mil_dot";
 			colorName="ColorBlue";
 		};
+		class Item17
+		{
+			position[]={7193.186, 0.30284521, 2230.0115};
+			name="tradercherno";
+			text="Trader Dock";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};
+		class Item18
+		{
+			position[]={13134.313, 6.1988831e-006, 10268.306};
+			name="traderberezino";
+			text="Trader Dock";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};
+		class Item19
+		{
+			position[]={2838.0198, -0.073676318, 6625.1831};
+			name="Tradercitysosnovy";
+			text="Trader City Sosnovy";
+			type="mil_circle";
+			colorName="ColorBlack";
+		};
 	};
 	class Sensors
 	{
-		items=5;
+		items=8;
 		class Item0
 		{
-			position[]={6325.6772,304.99033,7807.7412};
+			position[]={2838.0198, -0.073676318, 6625.1831};
 			a=100;
 			b=100;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			name="zonestary";
-			expCond="(player distance zonestary) < 100;";
-			expActiv="[""trader city Stary"",true,""enter""] spawn player_traderCity;";
-			expDesactiv="[""trader city Stary"",true,""leave""] spawn player_traderCity;";
+			name="zonesosnovy";
+			expCond="(player distance zonesosnovy) < 100;";
+			expActiv="[""trader city Sosnovy"",true,""enter""] spawn player_traderCity;";
+			expDesactiv="[""trader city Sosnovy"",true,""leave""] spawn player_traderCity;";
 			class Effects
 			{
 			};
@@ -1352,7 +1376,7 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={1606.6443,289.70795,7803.5156};
+			position[]={2187.6755,0.9907096,12753.201};
 			a=100;
 			b=100;
 			activationBy="WEST";
@@ -1369,7 +1393,7 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={12944.227,210.19823,12766.889};
+			position[]={1008.5195,8.6307526e-005,2125.6699};
 			a=100;
 			b=100;
 			activationBy="WEST";
@@ -1380,6 +1404,57 @@ class Mission
 			expCond="(player distance zonehero) < 100;";
 			expActiv="[""Hero Trader"",false,""enter""] spawn player_traderCity;";
 			expDesactiv="[""Hero Trader"",false,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item5
+		{
+			position[]={8199.5771, 0.22283147, 6681.4678};
+			a=100;
+			b=100;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="zoneguglovo";
+			expCond="(player distance zoneguglovo) < 100;";
+			expActiv="[""trader city Guglovo"",true,""enter""] spawn player_traderCity;";
+			expDesactiv="[""trader city Guglovo"",true,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item6
+		{
+			position[]={7193.186, 0.30284521, 2230.0115};
+			a=100;
+			b=100;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="zonecherno";
+			expCond="(player distance zonecherno) < 50;";
+			expActiv="[""trader dock"",true,""enter""] spawn player_traderCity;";
+			expDesactiv="[""trader dock"",true,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item7
+		{
+			position[]={13134.313, 6.1988831e-006, 10268.306};
+			a=100;
+			b=100;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="zoneberezino";
+			expCond="(player distance zoneberezino) < 50;";
+			expActiv="[""trader dock"",true,""enter""] spawn player_traderCity;";
+			expDesactiv="[""trader dock"",true,""leave""] spawn player_traderCity;";
 			class Effects
 			{
 			};
