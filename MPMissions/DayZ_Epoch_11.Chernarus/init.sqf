@@ -107,7 +107,7 @@ if (!isDedicated) then {
 //#include "\z\addons\dayz_code\system\REsec.sqf"
 
 //Start Dynamic Weather *commented out for custom time mod*
-//execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
+execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
-
+//BIS Effects init
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
