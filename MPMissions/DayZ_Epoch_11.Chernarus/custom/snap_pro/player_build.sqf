@@ -11,9 +11,9 @@ DZE_ActionInProgress = true;
 /////////////////////////////////////////////
 // Check locally if there is a city or town and cancel building
 // NO building in cities or towns (if you don't mind people building in Villages, remove "NameVillage" etc)
-_nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage"],1000];
+_nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage", "NameLocal", "Airport"],1000];
 // No building in Cities or Towns
-if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 1km of a Capital, City, or Village!");};
+if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 1km of a Capital, City, Village, Airport, or Local Destination!");};
 ///////////////////////////////////////////
 
 //snap vars -- temporary fix for errors so variables.sqf can be skipped
