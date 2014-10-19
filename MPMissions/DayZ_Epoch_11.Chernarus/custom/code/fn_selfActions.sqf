@@ -4,7 +4,7 @@ scriptName "Functions\misc\fn_selfActions.sqf";
 	- Function
 	- [] call fnc_usec_selfActions;
 ************************************************************/
-private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasToolbox","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
+private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasToolbox","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
 
 if (DZE_ActionInProgress) exitWith {}; // Do not allow if any script is running.
 
@@ -141,7 +141,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_hasFuelE = 	"ItemJerrycanEmpty" in _magazinesPlayer;
 	_hasFuelBarrelE = 	"ItemFuelBarrelEmpty" in _magazinesPlayer;
 	_hasHotwireKit = 	"ItemHotwireKit" in _magazinesPlayer;
-
+	_hasETool = "ItemEtool" in items player;
+	
 	_itemsPlayer = items player;
 	
 	_temp_keys = [];
@@ -741,11 +742,31 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	// Cannibalism
 	if (!_isAlive and !_isZombie and !_isAnimal and !_isHarvested and _isMan and _hasKnife and _canDo) then {
         if (s_player_butcher_human < 0) then {
-            s_player_butcher_human = player addAction [format["<t color='#42426F'>Gut Human%1</t>"], "custom\cannibal\gather_meat_human.sqf",cursorTarget, 3, true, true, "", ""];
+            s_player_butcher_human = player addAction [format["<t color='#42426F'>Gut Human%1</t>"], "custom\custom_corpse\gather_meat_human.sqf",cursorTarget, 3, true, true, "", ""];
         };
     } else {
         player removeAction s_player_butcher_human;
         s_player_butcher_human = -1;
+    };
+	
+	// Drag Body
+	// if (_isMan and !_isAlive) then {
+        // if (s_player_dragbody < 0) then {
+            // s_player_dragbody = player addAction [localize "str_action_studybody", "\z\addons\dayz_code\actions\drag_body.sqf",cursorTarget, 0, false, true, "",""];
+        // };
+        // } else {
+        // player removeAction s_player_dragbody;
+        // s_player_dragbody = -1;
+    // };
+	
+	// 
+	if (!_isAlive and !_isZombie and !_isAnimal and _hasETool and _isMan and _canDo) then {
+        if (s_player_bury_human < 0) then {
+            s_player_bury_human = player addAction [format["Bury Body"], "custom\custom_corpse\bury_human.sqf",cursorTarget, 0, false, true, "", ""];
+        }
+    } else {
+        player removeAction s_player_bury_human;
+        s_player_bury_human = -1;
     };
 
 	// All Traders
@@ -884,6 +905,11 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	// Cannibalism
 	player removeAction s_player_butcher_human;
 	s_player_butcher_human = -1;
+	//////////////////////////////
+	///////////////////////////////////
+	// Bury Body
+	player removeAction s_player_bury_human;
+    s_player_bury_human = -1;
 	//////////////////////////////
 	player removeAction s_player_sleep;
 	s_player_sleep = -1;

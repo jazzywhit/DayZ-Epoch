@@ -10,4 +10,11 @@ DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
 
 // Cannibalism
-s_player_butcher_human = -1;
+if(isNil "s_player_butcher_human") then {
+	s_player_butcher_human = -1;
+}
+
+// Bury Corpse
+if(isNil "s_player_bury_human") then {
+	s_player_bury_human = -1;
+}
