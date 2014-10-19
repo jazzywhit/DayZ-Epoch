@@ -8,3 +8,6 @@ DefaultMagazines = ["ItemBandage"];
 DefaultWeapons = ["ItemFlashlight"];
 DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
+
+// Cannibalism
+s_player_butcher_human = -1;

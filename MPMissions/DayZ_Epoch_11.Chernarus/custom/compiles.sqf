@@ -27,4 +27,7 @@ if (!isDedicated) then {
 
 	//walkamongstthedead
 	call compile preprocessFileLineNumbers "custom\walkamongstthedead\config.sqf";
+	
+	//Self Actions
+	fnc_usec_selfActions = compile preprocessFileLineNumbers "custom\code\fn_selfActions.sqf";
 };
