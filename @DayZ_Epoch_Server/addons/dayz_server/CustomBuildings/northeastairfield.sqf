@@ -2182,7 +2182,7 @@ if (true) then
 _vehicle_251 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MASH", [12556.335, 12492.215, -0.020375844], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["MASH_EP1", [12556.335, 12492.215, -0.020375844], [], 0, "CAN_COLLIDE"];
   _vehicle_251 = _this;
   _this setDir -192.27382;
   _this setPos [12556.335, 12492.215, -0.020375844];
@@ -2191,7 +2191,7 @@ if (true) then
 _vehicle_252 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MASH", [12564.981, 12492.827, 1.5258789e-005], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["MASH_EP1", [12564.981, 12492.827, 1.5258789e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_252 = _this;
   _this setDir -175.38777;
   _this setPos [12564.981, 12492.827, 1.5258789e-005];

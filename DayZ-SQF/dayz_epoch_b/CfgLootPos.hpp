@@ -376,7 +376,7 @@ class CampEast_EP1: Military {
 
 class MASH: Hospital {
 	maxRoaming = 1;
-	lootChance = 0.4;
+	lootChance = 0.6;
 	lootPos[] = {{1.18213,-1.65039,-1.17793},{0.24707,0.799316,-1.17803}};
 }; // Qty: 1
 class MASH_EP1: MASH{};

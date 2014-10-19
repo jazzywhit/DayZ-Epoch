@@ -367,19 +367,25 @@ class Camp: Military {
 	maxRoaming = 1;
 	lootPos[] = {{0.833252,-1.52246,-1.15955},{0.38501,0.963867,-1.15955}};
 }; // Qty: 1
+class Camp_EP1: Camp{};
 
 class CampEast: Military {
 	maxRoaming = 1;
+	lootChance = 0.8;
 	lootPos[] = {{-1.05713,-1.80762,-1.31049},{0.627441,1.83398,-1.31049}};
 }; // Qty: 1
-class CampEast_EP1: Military {
-	maxRoaming = 1;
-	lootPos[] = {{-0.670898,0.95459,-1.31049},{1.68506,-2.43384,-1.31049},{-1.76318,-1.62646,-1.31049}};
-}; // Qty: 1
+class CampEast_EP1: CampEast{};
 
-class MASH: Hospital {
+class Land_tent_east: Military {
+	lootPos[] = {{2.06,-0.97,-1.74},{-1.82,1.71,-1.74}};
+	lootChance = 0.5;
+	minRoaming = 2;
+	maxRoaming = 3;
+};
+
+class MASH: Military {
 	maxRoaming = 1;
-	lootChance = 0.4;
+	lootChance = 0.5;
 	lootPos[] = {{1.18213,-1.65039,-1.17793},{0.24707,0.799316,-1.17803}};
 }; // Qty: 1
 class MASH_EP1: MASH{};
@@ -438,7 +444,7 @@ class UH60_ARMY_Wreck_burned_DZ: Military {
 	lootPos[] = {};
 };
 
-class USMC_WarfareBFieldhHospital: MASH {
+class USMC_WarfareBFieldhHospital: Military {
 	minRoaming = 1;
 	maxRoaming = 3;
 	zombieClass[] = {"z_soldier","z_soldier_heavy"};
