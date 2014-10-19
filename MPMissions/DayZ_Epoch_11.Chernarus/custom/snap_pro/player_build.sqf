@@ -8,6 +8,14 @@ private ["_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_
 if(DZE_ActionInProgress) exitWith { cutText [(localize "str_epoch_player_40") , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
 
+/////////////////////////////////////////////
+// Check locally if there is a city or town and cancel building
+// NO building in cities or towns (if you don't mind people building in Villages, remove "NameVillage" etc)
+_nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage"],500];
+// No building in Cities or Towns
+if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build near a Capital, City, or Village!");};
+///////////////////////////////////////////
+
 //snap vars -- temporary fix for errors so variables.sqf can be skipped
 if (isNil "snapProVariables") then {
 	if (isNil "DZE_snapExtraRange") then {
