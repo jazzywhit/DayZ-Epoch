@@ -31,12 +31,12 @@ if (!_isBuried) then {
 			_corpse addMagazineGlobal _item;
 		};
 	 
-		_id = [player,50,true,(getPosATL player)] spawn player_alertZombies;
+		_id = [player,150,true,(getPosATL player)] spawn player_alertZombies;
 		dayzHumanity = [player,-500];
 		_id = dayzHumanity spawn player_humanityChange;
-		cutText ["You have gutted a human your hands are covered with blood, you feel your humanity lower.", "PLAIN DOWN"];
+		cutText ["You have gutted a human your hands are covered with blood, you feel like a monster", "PLAIN DOWN"];
 	} else {
-		cutText ["The poor bastard has already been eaten", "PLAIN DOWN"];
+		cutText ["Someone got the meat before you could", "PLAIN DOWN"];
     };
 } else {
 	cutText ["The worms have already had their fill", "PLAIN DOWN"];
