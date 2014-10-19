@@ -742,7 +742,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	// Cannibalism
 	if (!_isAlive and !_isZombie and !_isAnimal and !_isHarvested and _isMan and _hasKnife and _canDo) then {
         if (s_player_butcher_human < 0) then {
-            s_player_butcher_human = player addAction [format["<t color='#42426F'>Gut Human%1</t>"], "custom\custom_corpse\gather_meat_human.sqf",cursorTarget, 3, true, true, "", ""];
+            s_player_butcher_human = player addAction [format["<t color='#cc6600'>Gut Human%1</t>"], "custom\custom_corpse\gather_meat_human.sqf",cursorTarget, 3, true, true, "", ""];
         };
     } else {
         player removeAction s_player_butcher_human;
@@ -762,7 +762,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	// 
 	if (!_isAlive and !_isZombie and !_isAnimal and _hasETool and _isMan and _canDo) then {
         if (s_player_bury_human < 0) then {
-            s_player_bury_human = player addAction [format["Bury Body"], "custom\custom_corpse\bury_human.sqf",cursorTarget, 0, false, true, "", ""];
+            s_player_bury_human = player addAction [format["<t color='#6600ff'>Bury Body%1</t>"], "custom\custom_corpse\bury_human.sqf",cursorTarget, 0, false, true, "", ""];
         }
     } else {
         player removeAction s_player_bury_human;
