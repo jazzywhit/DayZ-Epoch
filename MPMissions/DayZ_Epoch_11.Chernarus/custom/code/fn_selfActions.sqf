@@ -742,7 +742,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	// Cannibalism
 	if (!_isAlive and !_isZombie and !_isAnimal and !_isHarvested and _isMan and _hasKnife and _canDo) then {
         if (s_player_butcher_human < 0) then {
-            s_player_butcher_human = player addAction [format["<t color='#cc6600'>Gut Human%1</t>"], "custom\custom_corpse\gather_meat_human.sqf",cursorTarget, 3, true, true, "", ""];
+            s_player_butcher_human = player addAction [format["<t color='#cc6600'>Gut Human%1</t>"], "custom\custom_corpse\gather_meat_human.sqf",cursorTarget, 0, false, false];
         };
     } else {
         player removeAction s_player_butcher_human;
