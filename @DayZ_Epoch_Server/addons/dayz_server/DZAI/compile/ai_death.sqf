@@ -58,9 +58,9 @@ if (_unitType in ["static","dynamic","unknown"]) then {
 	0 = [_victim,_killer,_unitGroup] call DZAI_AI_killed_all;
 };
 
-if ((_victim getVariable ["removeNVG",0]) == 1) then {
-	_victim removeWeapon "NVGoggles";
-};
+//if ((_victim getVariable ["removeNVG",0]) == 1) then {
+//	_victim removeWeapon "NVGoggles";
+//};
 
 _launchWeapon = (secondaryWeapon _victim);
 if (_launchWeapon in DZAI_launcherTypes) then {
