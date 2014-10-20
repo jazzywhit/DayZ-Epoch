@@ -1,4 +1,4 @@
-private["_corpse","_type","_isBuried", "_hasHarvested"];
+private["_corpse","_type","_isBuried", "_hasHarvested", "_rnd", "_qty", "_item", "_id"];
 
 if(DZE_ActionInProgress) exitWith { cutText ["You butcher this man right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
