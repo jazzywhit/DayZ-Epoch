@@ -760,14 +760,14 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
     };
 	
 	// Bury Body
-	if (!_isAlive and !_isZombie and !_isAnimal and _hasETool and _isMan and _canDo) then {
-        if (s_player_bury_human < 0) then {
-            s_player_bury_human = player addAction [format["<t color='#0071c5'>Bury Body%1</t>"], "custom\custom_corpse\bury_human.sqf",cursorTarget, 0, false, true, "", ""];
-        }
-    } else {
-        player removeAction s_player_bury_human;
-        s_player_bury_human = -1;
-    };
+	// if (!_isAlive and !_isZombie and !_isAnimal and _hasETool and _isMan and _canDo) then {
+        // if (s_player_bury_human < 0) then {
+            // s_player_bury_human = player addAction [format["<t color='#0071c5'>Bury Body%1</t>"], "custom\custom_corpse\bury_human.sqf",cursorTarget, 0, false, true, "", ""];
+        // }
+    // } else {
+        // player removeAction s_player_bury_human;
+        // s_player_bury_human = -1;
+    // };
 
 	// All Traders
 	if (_isMan && !_isPZombie && _traderType in serverTraders) then {
