@@ -39,9 +39,6 @@ dayz_sellDistance_air = 40;
 
 dayz_maxAnimals = 8; // Default: 8
 dayz_tameDogs = true;
-DynamicVehicleDamageLow = 70; // Default: 0
-DynamicVehicleDamageHigh = 100; // Default: 100
-
 DZE_BuildOnRoads = false; // Default: False
 
 //self bloodbag
