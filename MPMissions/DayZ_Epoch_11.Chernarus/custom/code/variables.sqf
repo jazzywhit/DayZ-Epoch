@@ -39,3 +39,7 @@ if(isnil "DynamicVehicleDamageHigh") then {
 if(isnil "MaxMineVeins") then {
 	MaxMineVeins = 50;
 };
+
+//Plot for life and snap building
+DZE_APlotforLife = true;
+DZE_modularBuild = true;

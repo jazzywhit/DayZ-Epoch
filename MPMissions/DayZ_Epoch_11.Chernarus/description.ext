@@ -216,3 +216,6 @@ class CfgSounds
 
 //walkamongstthedead
 #include "custom\walkamongstthedead\watd.hpp"
+
+//snap building
+#include "custom\snap_pro\snappoints.hpp"

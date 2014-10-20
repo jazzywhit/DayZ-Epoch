@@ -2,9 +2,17 @@
 	For DayZ Epoch
 	Addons Credits: Jetski Yanahui by Kol9yN, Zakat, Gerasimow9, YuraPetrov, zGuba, A.Karagod, IceBreakr, Sahbazz
 */
+DZEdebug = true;
+
 startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
+
+// --------------------------------
+DZE_PlotOwnership = true;
+DZE_APlotforLife = true;
+DZE_modularBuild = true;
+// --------------------------------
 
 //REALLY IMPORTANT VALUES
 dayZ_instance =	11;					//The instance
@@ -23,8 +31,8 @@ enableSentences false;
 spawnShoremode = 1; // Default = 1 (on shore)
 spawnArea= 1500; // Default = 1500
 
-MaxVehicleLimit = 150; // Default = 50
-MaxDynamicDebris = 100; // Default = 100
+MaxVehicleLimit = 300; // Default = 50
+MaxDynamicDebris = 500; // Default = 100
 dayz_MapArea = 14000; // Default = 10000
 dayz_maxLocalZombies = 30; // Default = 30 
 
@@ -37,31 +45,24 @@ dayz_sellDistance_vehicle = 10;
 dayz_sellDistance_boat = 30;
 dayz_sellDistance_air = 40;
 
-dayz_maxAnimals = 8; // Default: 8
+dayz_maxAnimals = 5; // Default: 8
 dayz_tameDogs = true;
-DZE_BuildOnRoads = false; // Default: False
+DynamicVehicleDamageLow = 0; // Default: 0
+DynamicVehicleDamageHigh = 100; // Default: 100
 
-//self bloodbag
-DZE_SelfTransfuse = true;
+DZE_BuildOnRoads = false; // Default: False
 
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 dayz_fullMoonNights = true;
 
-///////////////////////////////////
-// Load in custom variables
-// complete before dayz_code to ensure custom variables are written first
-call compile preprocessFileLineNumbers "custom\code\variables.sqf";				//Initialize the Variables (IMPORTANT: Must happen very early)
-
-///////////////////////////////////
 //Load in compiled functions
-call compile preprocessFileLineNumbers "Custom\A_Plot_for_Life\init\variables.sqf";				//Initialize the Variables (IMPORTANT: Must happen very early)
+call compile preprocessFileLineNumbers "custom\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;
-call compile preprocessFileLineNumbers "Custom\A_Plot_for_Life\init\publicEH.sqf";				//Initialize the publicVariable event handlers
+call compile preprocessFileLineNumbers "custom\publicEH.sqf";				//Initilize the publicVariable event handlers
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
-call compile preprocessFileLineNumbers "Custom\A_Plot_for_Life\init\compiles.sqf";			//Compile regular functions
-call compile preprocessFileLineNumbers "custom\code\compiles.sqf"; 								//custom compiles for our own scripts
+call compile preprocessFileLineNumbers "custom\compiles.sqf";				//Compile regular functions
 progressLoadingScreen 0.5;
 call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
 progressLoadingScreen 1.0;
@@ -78,11 +79,6 @@ if (isServer) then {
 };
 
 if (!isDedicated) then {
-
-	//server credits
-    [] execVM "custom\server_credits\Server_WelcomeCredits.sqf";
-
-
 	//Conduct map operations
 	0 fadeSound 0;
 	waitUntil {!isNil "dayz_loadScreenMsg"};
@@ -92,19 +88,18 @@ if (!isDedicated) then {
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
 	
-	//anti Hack *commented out for infistar*
-	//[] execVM "\z\addons\dayz_code\system\antihack.sqf";
+	//anti Hack
+	[] execVM "\z\addons\dayz_code\system\antihack.sqf";
 
 	//Lights
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
 	
 };
 
-//commented out for infistar
-//#include "\z\addons\dayz_code\system\REsec.sqf"
+#include "\z\addons\dayz_code\system\REsec.sqf"
 
-//Start Dynamic Weather *commented out for custom time mod*
+//Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
-//BIS Effects init
+
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
