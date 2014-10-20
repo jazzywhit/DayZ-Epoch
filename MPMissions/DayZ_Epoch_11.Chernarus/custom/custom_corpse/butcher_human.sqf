@@ -1,12 +1,15 @@
 private["_corpse","_type","_isBuried", "_hasHarvested"];
+
+if(DZE_ActionInProgress) exitWith { cutText ["You butcher this man right now", "PLAIN DOWN"]; };
+DZE_ActionInProgress = true;
+
 _corpse = _this select 3;
 _type = typeOf _corpse;
 _isBuried = _corpse getVariable["isBuried",false];
 _hasHarvested = _corpse getVariable["meatHarvested",false];
-_name = _corpse getVariable["bodyName","unknown"];
 
 player removeAction s_player_butcher_human;
-s_player_butcher_human = -1;
+s_player_butcher_human = 1;
 
 if (!_isBuried) then {
     if (!_hasHarvested) then {
@@ -34,10 +37,13 @@ if (!_isBuried) then {
 		_id = [player,150,true,(getPosATL player)] spawn player_alertZombies;
 		dayzHumanity = [player,-500];
 		_id = dayzHumanity spawn player_humanityChange;
-		cutText ["You have gutted a human your hands are covered with blood, you feel like a monster", "PLAIN DOWN"];
+		cutText ["You have gutted a human and your hands are covered with blood, you feel like a monster", "PLAIN DOWN"];
 	} else {
-		cutText ["Someone got the meat before you could", "PLAIN DOWN"];
+		cutText ["Someone got to the body before you could", "PLAIN DOWN"];
     };
 } else {
 	cutText ["The worms have already had their fill", "PLAIN DOWN"];
 };
+
+s_player_butcher_human = -1;
+DZE_ActionInProgress = false;

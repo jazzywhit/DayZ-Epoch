@@ -1,4 +1,8 @@
 private["_corpse","_type","_isBuried","_mound","_cross","_gun"];
+
+if(DZE_ActionInProgress) exitWith { cutText ["You can't perform burial rites right now", "PLAIN DOWN"]; };
+DZE_ActionInProgress = true;
+
 _corpse = _this select 3;
 _type = typeOf _corpse;
 _isBuried = _corpse getVariable["isBuried",false];
@@ -6,13 +10,14 @@ _hasHarvested = _corpse getVariable["meatHarvested",false];
 _name = _corpse getVariable["bodyName","unknown"];
 
 player removeAction s_player_bury_human;
-s_player_bury_human = -1;
+s_player_bury_human = 1;
 
 if (!_isBuried) then {
     if (!_hasHarvested) then {
 
-          _corpse setVariable["isBuried",true,true];
+        _corpse setVariable["isBuried",true,true];
         player playActionNow "Medic";
+		[player,"tentunpack",0,false] call dayz_zombieSpeak;
         sleep 10;
 
         _position = getPosATL _corpse;
@@ -76,8 +81,11 @@ if (!_isBuried) then {
         player playMove "AmovPercMstpSlowWrflDnon_Salute";
 		
 	} else {
-		cutText ["The poor bastards been eaten, there's not much left to bury", "PLAIN DOWN"];
+		cutText ["The poor bastard has been eaten, there's not much left to bury", "PLAIN DOWN"];
 	};
 } else {
 	cutText ["This man has already had a proper funeral", "PLAIN DOWN"];
 };
+
+s_player_bury_human = -1;
+DZE_ActionInProgress = false;
