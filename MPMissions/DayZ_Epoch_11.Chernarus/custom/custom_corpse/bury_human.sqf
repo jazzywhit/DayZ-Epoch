@@ -22,6 +22,7 @@ if (!_isBuried) then {
 
         _position = getPosATL _corpse;
         _dir = getDir _corpse;
+		if (isOnRoad _position) exitWith { cutText ["You cannot bury him here", "PLAIN DOWN"]; };
 		private ["_newBackpackType","_backpackWpn","_backpackMag"];
         dayz_myBackpack = unitBackpack _corpse;
 		_newBackpackType = (typeOf dayz_myBackpack);
