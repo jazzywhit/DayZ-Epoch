@@ -14,15 +14,23 @@ s_player_bury_human = 1;
 
 if (!_isBuried) then {
     if (!_hasHarvested) then {
-
         _corpse setVariable["isBuried",true,true];
         player playActionNow "Medic";
 		[player,"tentunpack",0,false] call dayz_zombieSpeak;
         sleep 10;
 
+		// Get body position and direction
         _position = getPosATL _corpse;
         _dir = getDir _corpse;
-		if (isOnRoad _position) exitWith { cutText ["You cannot bury him here", "PLAIN DOWN"]; };
+		
+		// Check if the body is on a road and exit if it is
+		if (isOnRoad _position) exitWith { 
+			DZE_ActionInProgress = false; 
+			s_player_bury_human = -1; 
+			cutText ["You cannot bury him here", "PLAIN DOWN"]; 
+		};
+		
+		// Gather backpack and prepare to move items from body
 		private ["_newBackpackType","_backpackWpn","_backpackMag"];
         dayz_myBackpack = unitBackpack _corpse;
 		_newBackpackType = (typeOf dayz_myBackpack);
@@ -82,10 +90,10 @@ if (!_isBuried) then {
         player playMove "AmovPercMstpSlowWrflDnon_Salute";
 		
 	} else {
-		cutText ["The poor bastard has been eaten, there's not much left to bury", "PLAIN DOWN"];
+		cutText ["The poor bastard has been eaten, there's not enough left  much left to bury", "PLAIN DOWN"];
 	};
 } else {
-	cutText ["This man has already had a proper funeral", "PLAIN DOWN"];
+	cutText ["This man is currently being buried", "PLAIN DOWN"];
 };
 
 s_player_bury_human = -1;
