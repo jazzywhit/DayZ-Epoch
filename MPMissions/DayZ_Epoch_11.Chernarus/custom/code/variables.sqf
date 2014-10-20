@@ -34,3 +34,8 @@ if(isnil "DynamicVehicleDamageLow") then {
 if(isnil "DynamicVehicleDamageHigh") then {
 	DynamicVehicleDamageHigh = 100;
 };
+
+// Setup maximum number of mine veins
+if(isnil "MaxMineVeins") then {
+	MaxMineVeins = 50;
+};
