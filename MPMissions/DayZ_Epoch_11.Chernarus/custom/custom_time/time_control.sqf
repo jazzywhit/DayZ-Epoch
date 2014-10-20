@@ -6,7 +6,7 @@
 //_multi = 16;  -> 1 quarter-hour day
 
 donn_sleep = 0.2;
-donn_multi = 8;
+donn_multi = 4/3;
 drn_fnc_DynamicWeather_SetWeatherLocal = {};
 0 setOvercast 0;
 0 setFog 0.05;

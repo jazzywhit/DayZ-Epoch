@@ -214,8 +214,5 @@ class CfgSounds
 	};
 };
 
-//Snap Building
-#include "custom\snap_pro\snappoints.hpp"
-
 //walkamongstthedead
 #include "custom\walkamongstthedead\watd.hpp"
