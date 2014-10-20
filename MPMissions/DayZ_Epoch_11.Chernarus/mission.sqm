@@ -4,6 +4,10 @@ class Mission
 	addOns[]=
 	{
 		"chernarus",
+		"warehouse",
+        "mbg_killhouses",
+        "mbg_buildings_3",
+        "mbg_african_buildings",
 		"ca_modules_animals",
 		"dayz_anim",
 		"dayz_code",
