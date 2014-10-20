@@ -12,12 +12,12 @@ DefaultBackpackWeapon = "";
 // Cannibalism
 if(isNil "s_player_butcher_human") then {
 	s_player_butcher_human = -1;
-}
+};
 
 // Bury Corpse
 if(isNil "s_player_bury_human") then {
 	s_player_bury_human = -1;
-}
+};
 
 // Dynamic Vehicles Fuel Level
 if(isnil "DynamicVehicleFuelLow") then {

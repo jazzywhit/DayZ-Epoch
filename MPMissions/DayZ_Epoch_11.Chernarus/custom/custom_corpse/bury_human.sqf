@@ -14,11 +14,6 @@ s_player_bury_human = 1;
 
 if (!_isBuried) then {
     if (!_hasHarvested) then {
-        _corpse setVariable["isBuried",true,true];
-        player playActionNow "Medic";
-		[player,"tentunpack",0,false] call dayz_zombieSpeak;
-        sleep 10;
-
 		// Get body position and direction
         _position = getPosATL _corpse;
         _dir = getDir _corpse;
@@ -30,6 +25,12 @@ if (!_isBuried) then {
 			cutText ["You cannot bury him here", "PLAIN DOWN"]; 
 		};
 		
+		// Corpse can be buried, set variables and play action
+        _corpse setVariable["isBuried",true,true];
+        player playActionNow "Medic";
+		[player,"tentunpack",0,false] call dayz_zombieSpeak;
+        sleep 10;
+
 		// Gather backpack and prepare to move items from body
 		private ["_newBackpackType","_backpackWpn","_backpackMag"];
         dayz_myBackpack = unitBackpack _corpse;
