@@ -1,4 +1,4 @@
-private["_corpse","_type","_isBuried", "_hasHarvested", "_name", "_mound","_cross","_gun", "_position", "_dir"];
+private["_corpse","_type","_isBuried","_mound","_cross","_gun"];
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't perform burial rites right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
@@ -35,9 +35,7 @@ if (!_isBuried) then {
 		private ["_newBackpackType","_backpackWpn","_backpackMag"];
         dayz_myBackpack = unitBackpack _corpse;
 		_newBackpackType = (typeOf dayz_myBackpack);
-        //_corpse;
-		
-		private ["_weapons","_magazines","_primweapon","_secweapon"];
+        _corpse; private ["_weapons","_magazines","_primweapon","_secweapon"];
         _weapons = weapons _corpse;
         _magazines = magazines _corpse;
 		
@@ -46,7 +44,6 @@ if (!_isBuried) then {
 			_backpackMag = getMagazineCargo unitBackpack _corpse;
 		};
 		
-		private ["_box", "_crosstype", "_backpackWpnTypes", "_backpackWpnQtys", "_countr", "_deathMessage", "_id"];
 		_box = createVehicle ["Foodbox0", _position, [], 0, "CAN_COLLIDE"];
         _box setpos [(getposATL _box select 0),(getposATL _box select 1)+1.2, 0];
         clearWeaponCargoGlobal _box;
