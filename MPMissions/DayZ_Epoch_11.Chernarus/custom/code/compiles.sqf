@@ -8,7 +8,7 @@ if (!isDedicated) then {
 	player_useMeds = compile preprocessFileLineNumbers "custom\self_bb\player_useMeds.sqf";
 	
 	//custom select_slot - used in many scripts
-	player_selectSlot = compile preprocessFileLineNumbers "custom\ui_selectSlot.sqf";
+	player_selectSlot = compile preprocessFileLineNumbers "custom\code\ui_selectSlot.sqf";
 	
 	//take clothes
 	player_death = compile preprocessFileLineNumbers "custom\Recover_Skin\player_death.sqf";
