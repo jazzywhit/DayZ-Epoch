@@ -17,14 +17,14 @@ if (!_isBuried) then {
 		_corpse setVariable["meatHarvested",true,true];
         player playActionNow "Medic";
 		[player,"gut",0,false] call dayz_zombieSpeak;
-        sleep 10;
+        sleep 8;
 
 		_rnd = random 1;
 		if (_rnd < 0.1) then {
 			r_player_inpain = true;
 			player setVariable["USEC_inPain",true,true];
 			r_player_blood = r_player_blood - 1000;
-			cutText ["You cut yourself while removing the meat", "PLAIN DOWN"];
+			cutText ["You cut yourself while removing the meat!", "PLAIN DOWN"];
 		};
 
 		// Replace the person with a bone pile
@@ -48,16 +48,8 @@ if (!_isBuried) then {
         clearMagazineCargoGlobal _box;
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
-
-        // Add steak to the bone pile
-        //_qty = (random 2) + 1; // 1 - 3 steaks
-        //_item = "FoodSteakRaw";
-        //for "_x" from 1 to _qty do {
-
         _box addMagazineCargoGlobal ["FoodSteakRaw",1];
-
-        //};
-
+		
         // Delete Body
 		deleteVehicle _corpse;
 
@@ -91,7 +83,7 @@ if (!_isBuried) then {
         //Permaloot
         _box setVariable ["permaLoot", true];
 
-        cutText ["You have gutted a human and your hands are covered with blood, you feel like a monster", "PLAIN DOWN"];
+        cutText ["You have gutted a human and your hands are covered with blood", "PLAIN DOWN"];
         [player,-500] call player_humanityChange;
         _id = [player,50,true,(getPosATL player)] spawn player_alertZombies;
     } else {

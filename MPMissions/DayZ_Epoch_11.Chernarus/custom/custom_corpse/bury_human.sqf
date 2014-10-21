@@ -22,7 +22,7 @@ if (!_isBuried) then {
 		if (isOnRoad _position) exitWith { 
 			DZE_ActionInProgress = false; 
 			s_player_bury_human = -1; 
-			cutText ["You cannot bury him here", "PLAIN DOWN"]; 
+			cutText ["You can't perform burial rites here!", "PLAIN DOWN"]; 
 		};
 		
 		// Corpse can be buried, set variables and play action
