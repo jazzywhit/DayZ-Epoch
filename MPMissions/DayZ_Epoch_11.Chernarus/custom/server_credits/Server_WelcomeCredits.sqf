@@ -36,6 +36,7 @@ _role5names = ["Phobix", "Jesquik","Carbonoid","Nat","Neb"];
 
 
 {
+	playsound "introSong";
 	sleep 2;
 	_memberFunction = _x select 0;
 	_memberNames = _x select 1;
