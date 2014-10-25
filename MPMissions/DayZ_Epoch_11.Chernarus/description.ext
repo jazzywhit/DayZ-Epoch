@@ -216,9 +216,9 @@ class CfgSounds
 	};
 	
 	class introSong {
-    name="introSong";
-    sound[]={"custom\introSong\introSong.ogg",0.9,1};
-    titles[] = {};
+		name="introSong";
+		sound[]={"custom\server_credits\introSong.ogg",0.9,1};
+		titles[] = {};
     };
 };
 
