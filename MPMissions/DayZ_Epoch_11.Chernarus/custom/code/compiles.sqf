@@ -1,8 +1,7 @@
 if (!isDedicated) then {
 
 	//Custom time
-	call compile preprocessFileLineNumbers "custom\custom_time\time_control.sqf";
-	
+	//call compile preprocessFileLineNumbers "custom\custom_time\time_control.sqf";
   
 	//custom bloodbag
 	player_useMeds = compile preprocessFileLineNumbers "custom\self_bb\player_useMeds.sqf";

@@ -84,7 +84,7 @@ r_player_dead = true;
 "colorCorrections" ppEffectCommit 1;
 
 // Begin adding skin to player body
-call compile preprocessFileLineNumbers "Recover_Skin\Recoverskin.sqf";
+call compile preprocessFileLineNumbers "custom\Recover_Skin\Recoverskin.sqf";
 // End adding skin to player body
 
 //Player is Dead!
