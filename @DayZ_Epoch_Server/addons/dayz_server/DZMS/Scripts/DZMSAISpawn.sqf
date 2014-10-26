@@ -5,11 +5,12 @@
 		UnitCount is the number of units to spawn
 		SkillLevel is the skill number defined in DZMSAIConfig.sqf
 */																		//
-private ["_position","_unitcount","_skill","_wpRadius","_xpos","_ypos","_unitGroup","_aiskin","_unit","_weapon","_magazine","_wppos1","_wppos2","_wppos3","_wppos4","_wp1","_wp2","_wp3","_wp4","_wpfin","_unitArrayName","_unitMissionCount"];
+private ["_position","_unitcount","_skill","_wpRadius","_xpos","_ypos","unitSide","_unitGroup","_aiskin","_unit","_weapon","_magazine","_wppos1","_wppos2","_wppos3","_wppos4","_wp1","_wp2","_wp3","_wp4","_wpfin","_unitArrayName","_unitMissionCount"];
 _position = _this select 0;
 _unitcount = _this select 1;
 _skill = _this select 2;
 _unitArrayName = _this select 3;
+_unitWest = _this select 4;
 
 //diag_log text format ["[DZMS]: AI Pos:%1 / AI UnitNum: %2 / AI SkillLev:%3",_position,_unitcount,_skill];
 
@@ -19,7 +20,11 @@ _xpos = _position select 0;
 _ypos = _position select 1;
 
 //Create the unit group. We use east by default.
-_unitGroup = createGroup east;
+if (isNil "_unitWest") then {
+    _unitGroup = createGroup east;
+} else {
+    _unitGroup = createGroup west;
+};
 
 //Probably unnecessary, but prevents client AI stacking
 if (!isServer) exitWith {};
