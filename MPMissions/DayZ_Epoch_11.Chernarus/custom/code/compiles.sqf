@@ -24,4 +24,7 @@ if (!isDedicated) then {
 	
 	//Self Actions
 	fnc_usec_selfActions = compile preprocessFileLineNumbers "custom\code\fn_selfActions.sqf";
+	
+	//tow and lift
+	call compile preprocessFileLineNumbers "custom\tow_lift\init.sqf";
 };
