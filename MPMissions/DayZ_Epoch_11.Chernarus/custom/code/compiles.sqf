@@ -1,8 +1,5 @@
 if (!isDedicated) then {
 
-	//Custom time
-	//call compile preprocessFileLineNumbers "custom\custom_time\time_control.sqf";
-  
 	//custom bloodbag
 	player_useMeds = compile preprocessFileLineNumbers "custom\self_bb\player_useMeds.sqf";
 	
@@ -11,6 +8,9 @@ if (!isDedicated) then {
 	
 	//take clothes
 	player_death = compile preprocessFileLineNumbers "custom\Recover_Skin\player_death.sqf";
+
+	//dynamic traders
+	execVM "custom\dynamic_traders\player_tradermarkers.sqf";
 	
 	//instant trade
 	if (DZE_ConfigTrader) then {

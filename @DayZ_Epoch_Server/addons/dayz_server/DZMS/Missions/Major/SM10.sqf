@@ -49,30 +49,8 @@ _crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 8, _coords selec
 [_crate2,"weapons"] ExecVM DZMSBoxSetup;
 [_crate2] call DZMSProtectObj;
 
-// Move the black market trader to the mission zone
-_trader = createAgent [(_coords select 0), (_coords select 1), [], 0, "CAN_COLLIDE"];
-_trader setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
-_trader setUnitAbility 0.60000002;
-_trader allowDammage false;
-_trader disableAI 'FSM';
-_trader disableAI 'MOVE';
-_trader disableAI 'AUTOTARGET';
-_trader disableAI 'TARGET';
-_trader setBehaviour 'CARELESS';
-_trader forceSpeed 0;
-_trader enableSimulation false;
-//_trader setDir (_this select 2);
-
-if (!isNil "_unit_108") then {
-    _orig_coords = getPos _unit_108;
-    _unit_108 setPos [(_coords select 0), (_coords select 1),0];
-} else {
-    [nil,nil,rTitleText,"Couldn't Find him...", "PLAIN",6] call RE;
-};
-
-// Add a couple of AI and add them to West
-[[(_coords select 0) + 20, (_coords select 1) + 15,0],2,2,"DZMSUnitsMinor", true] call DZMSAISpawn;
-sleep 3;
+// Move the black market trader to the mission zone, use Dynamic trader to create the black market trader
+_trader = ["GUE_Soldier_MG", [(_coords select 0),(_coords select 1)], (135.159-180)] call DT_fnc_CreateTrader;
 
 // Wait 10 minutes and then take the mission away
 [600,5] call DZMSSleep; // sleep 10 minutes
@@ -86,6 +64,7 @@ sleep 3;
 [_vehicle] ExecVM DZMSSaveVeh;
 [_vehicle1] ExecVM DZMSSaveVeh;
 
+//Remove the trader
 deleteVehicle _trader;
 
 //Let everyone know the mission is over
