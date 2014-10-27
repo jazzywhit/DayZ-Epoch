@@ -681,31 +681,6 @@ if (true) then
   _this setPos [6351.2158, 2430.24, -9.5367432e-007];
 };
 
-_vehicle_1216 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Land_Misc_Garb_Heap_EP1", [6675.9722, 2792.0386, -1.9073486e-006], [], 0, "CAN_COLLIDE"];
-  _vehicle_1216 = _this;
-  _this setPos [6675.9722, 2792.0386, -1.9073486e-006];
-};
-
-_vehicle_1217 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Land_Misc_Garb_Heap_EP1", [6672.5654, 2752.3125], [], 0, "CAN_COLLIDE"];
-  _vehicle_1217 = _this;
-  _this setPos [6672.5654, 2752.3125];
-};
-
-_vehicle_1218 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Land_CncBlock_Stripes", [6669.7466, 2752.407, -1.335144e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_1218 = _this;
-  _this setDir 22.991377;
-  _this setPos [6669.7466, 2752.407, -1.335144e-005];
-};
-
 _vehicle_1219 = objNull;
 if (true) then
 {
@@ -3398,33 +3373,6 @@ if (true) then
   _this setPos [6821.603, 2477.0315, -8.5830688e-006];
 };
 
-_vehicle_1978 = objNull;
-if (true) then
-{
-  _this = createVehicle ["PowGen_Big_EP1", [6646.8955, 2769.8455, -9.5367432e-006], [], 0, "CAN_COLLIDE"];
-  _vehicle_1978 = _this;
-  _this setDir 178.1658;
-  _this setPos [6646.8955, 2769.8455, -9.5367432e-006];
-};
-
-_vehicle_1979 = objNull;
-if (true) then
-{
-  _this = createVehicle ["USMC_WarfareBFieldhHospital", [6636.1284, 2779.6697, -3.2424927e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_1979 = _this;
-  _this setDir 135.19322;
-  _this setPos [6636.1284, 2779.6697, -3.2424927e-005];
-};
-
-_vehicle_1980 = objNull;
-if (true) then
-{
-  _this = createVehicle ["CampEast", [6649.6206, 2800.1421, 0.004932588], [], 0, "CAN_COLLIDE"];
-  _vehicle_1980 = _this;
-  _this setDir 49.046127;
-  _this setPos [6649.6206, 2800.1421, 0.004932588];
-};
-
 _vehicle_1981 = objNull;
 if (true) then
 {
@@ -3840,14 +3788,6 @@ if (true) then
   _this = createVehicle ["Rubbish3", [6773.2954, 2504.7729, -2.3841858e-006], [], 0, "CAN_COLLIDE"];
   _vehicle_2745 = _this;
   _this setPos [6773.2954, 2504.7729, -2.3841858e-006];
-};
-
-_vehicle_2749 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Rubbish3", [6695.8765, 2686.7915, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_2749 = _this;
-  _this setPos [6695.8765, 2686.7915, -3.0517578e-005];
 };
 
 _vehicle_2782 = objNull;
