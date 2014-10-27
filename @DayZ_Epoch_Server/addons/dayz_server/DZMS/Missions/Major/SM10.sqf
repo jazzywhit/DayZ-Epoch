@@ -50,7 +50,6 @@ _crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 8, _coords selec
 [_crate2] call DZMSProtectObj;
 
 // Move the black market trader to the mission zone, use Dynamic trader to create the black market trader
-_position execVM format["\z\addons\dayz_server\DynamicTraders\traders\%1", _x select 1];
 BlackMarketTrader setPos [(_coords select 0) + 10, (_coords select 1) + 10,0];
 BlackMarketTrader2 setPos [(_coords select 0), (_coords select 1) + 10,0];
 BlackMarketTrader3 setPos [(_coords select 0) + 10, (_coords select 1),0];
