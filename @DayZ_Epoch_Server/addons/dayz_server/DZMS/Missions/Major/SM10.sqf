@@ -51,10 +51,9 @@ _crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 8, _coords selec
 
 // Move the black market trader to the mission zone, use Dynamic trader to create the black market trader
 _position execVM format["\z\addons\dayz_server\DynamicTraders\traders\%1", _x select 1];
-
-_trader = ["GUE_Soldier_MG", [(_coords select 0) + 10,(_coords select 1)], (135.159-180)] call DT_fnc_CreateTrader;
-_trader = ["TK_GUE_Soldier_Sniper_EP1", [(_coords select 0),(_coords select 1) + 10], (135.159-180)] call DT_fnc_CreateTrader;
-_trader = ["Soldier_GL_M16A2_PMC", [(_coords select 0) + 10,(_coords select 1) + 10], (135.159-180)] call DT_fnc_CreateTrader;
+BlackMarketTrader setPos [(_coords select 0) + 10, (_coords select 1) + 10,0];
+BlackMarketTrader2 setPos [(_coords select 0), (_coords select 1) + 10,0];
+BlackMarketTrader3 setPos [(_coords select 0) + 10, (_coords select 1),0];
 
 // Wait 10 minutes and then take the mission away
 [600,5] call DZMSSleep; // sleep 10 minutes
