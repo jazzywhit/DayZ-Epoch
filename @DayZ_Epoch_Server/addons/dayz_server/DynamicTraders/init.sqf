@@ -12,15 +12,24 @@ DT_fnc_ObjectsMapper = compile preprocessFileLineNumbers "\z\addons\dayz_server\
 DT_fnc_CreateTrader = compile preprocessFileLineNumbers "\z\addons\dayz_server\DynamicTraders\createTrader.sqf";
 
 _trader_config = [
-	[2, "general.sqf", 		"General/Building Traders", 	"ColorGreen"],
-	[3, "medical.sqf", 		"Medical Trader", 				"ColorGreen"],
-	[3, "weapons.sqf", 		"Weapons Trader", 				"ColorYellow"],
-	[3, "wholesaler.sqf", 	"Wholesaler", 					"ColorBlack"],
+	[1, "general.sqf", 		"General/Building Traders", 	"ColorGreen"],
+	[1, "medical.sqf", 		"Medical Trader", 				"ColorGreen"],
+	[1, "weapons.sqf", 		"Weapons Trader", 				"ColorYellow"],
+	[1, "wholesaler.sqf", 	"Wholesaler", 					"ColorBlack"],
 	[2, "boat.sqf", 		"Boat", 						"ColorBlack"]
-]; 
+];
 
 _markers = [];
 waitUntil { sleep 1; !isNil "sm_done" };
+
+//Spawn the static traders
+BlackMarketTrader = ["GUE_Woodlander2", [0,0], (135.159-180)] call DT_fnc_CreateTrader;
+
+//Spawn the hemp trader
+HempTrader = ["TK_GUE_Soldier_Sniper_EP1", [8989.61,7769.91, 1.81754], (194.28-180)] call DT_fnc_CreateTrader;
+_markers set [count _markers, [[8989.61,7769.91], "Hemp Trader", "ColorGreen"]];
+
+//Loop through all other traders
 {
 	for [{_i=0}, {_i<(_x select 0)}, {_i=_i+1}] do {
 		private ["_position", "_found_position", "_j", "_near_trader"];
@@ -63,10 +72,6 @@ waitUntil { sleep 1; !isNil "sm_done" };
 	};
 	true
 } count _trader_config;
-
-BlackMarketTrader = ["GUE_Soldier_MG", [06325,07807], (135.159-180)] call DT_fnc_CreateTrader;
-BlackMarketTrader2 = ["TK_GUE_Soldier_Sniper_EP1", [06325,07807], (135.159-180)] call DT_fnc_CreateTrader;
-BlackMarketTrader3 = ["Soldier_GL_M16A2_PMC", [06325,07807], (135.159-180)] call DT_fnc_CreateTrader;
 
 PV_TraderMarkers = _markers;
 publicVariable "PV_TraderMarkers";
