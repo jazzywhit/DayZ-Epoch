@@ -12,9 +12,9 @@ DT_fnc_ObjectsMapper = compile preprocessFileLineNumbers "\z\addons\dayz_server\
 DT_fnc_CreateTrader = compile preprocessFileLineNumbers "\z\addons\dayz_server\DynamicTraders\createTrader.sqf";
 
 _trader_config = [
-	[1, "general.sqf", 		"General/Building Traders", 	"ColorGreen"],
-	[1, "medical.sqf", 		"Medical Trader", 				"ColorGreen"],
-	[1, "weapons.sqf", 		"Weapons Trader", 				"ColorYellow"],
+	[1, "general.sqf", 		"General/Building Traders", 	"ColorBlack"],
+	[1, "medical.sqf", 		"Medical Trader", 				"ColorBlack"],
+	[1, "weapons.sqf", 		"Weapons Trader", 				"ColorBlack"],
 	[1, "wholesaler.sqf", 	"Wholesaler", 					"ColorBlack"],
 	[2, "boat.sqf", 		"Boat", 						"ColorBlack"]
 ];
@@ -55,24 +55,32 @@ _markers set [count _markers, [[8989.61,7769.91], "Hemp Trader", "ColorGreen"]];
 
 			// Check current markers to see if there is another trader within 5km
 			{
-				if (((_x select 0) distance _position) < 5000) exitWith {
+				if (((_x select 0) distance _position) < 3000) exitWith {
 					_position = [];
 				};
 				true
 			} count _markers;
 
-			// Ensure that the dynamic traders are within 750 meters of a city
-			_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],750];
-			if (count _nearestCities == 0) then {
-			    diag_log format["DynTrader: %1 was not a valid location for %2", _position, _x select 1];
-			    _nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],10000];
-			    _position = [_nearestCities select 0,0,1500,10,0,25,0] call BIS_fnc_findSafePos;
-			    diag_log format["DynTrader: %1 was used instead for %2", _position, _x select 1];
+			// Ensure that the dynamic traders are within 750 meters of a city for non boat traders
+			if ((count _position) == 2 and (_x select 1) != "boat.sqf") then {
+				_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],750];
+				if (count _nearestCities == 0) then {
+					diag_log format["DynTrader: %1 was not a valid location for %2", _position, _x select 1];
+					_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],10000];
+					_nearestCity = _nearestCities select 0;
+					_cityPos = position _nearestCity;
+					diag_log format["DynTrader: Looking near %1 for a valid location for %2", _cityPos, _x select 1];
+					_position = [[_cityPos select 0, _cityPos select 1, 0],0,750,20,0,2000,0] call BIS_fnc_findSafePos;
+					diag_log format["DynTrader: %1 was used instead for %2", _position, _x select 1];
+				};
 			};
 
             // Exit if there are more than 10 unsuccessful loops or position is found
 			if ((count _position) == 2 or _j > 10) then {
 				_found_position = true;
+				if (_j > 10) then {
+					diag_log format["DynTrader: Bailed after %1 tries", _j];
+				}
 			};
 		};
 
