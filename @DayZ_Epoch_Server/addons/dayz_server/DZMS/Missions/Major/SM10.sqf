@@ -51,11 +51,13 @@ _crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 8, _coords selec
 
 // Move the black market trader to the mission zone, use Dynamic trader to create the black market trader
 BlackMarketTrader setPos [(_coords select 0) + 10, (_coords select 1) + 10,0];
+[60,5] call DZMSSleep;
 BlackMarketTrader2 setPos [(_coords select 0), (_coords select 1) + 10,0];
+[60,5] call DZMSSleep;
 BlackMarketTrader3 setPos [(_coords select 0) + 10, (_coords select 1),0];
 
 // Wait 10 minutes and then take the mission away
-[600,5] call DZMSSleep; // sleep 10 minutes
+[900,5] call DZMSSleep; // sleep 15 minutes
 
 // Wait 10 minutes and then take the mission away
 [nil,nil,rTitleText,"The Black Market Trader is Packing Up Shop", "PLAIN",6] call RE;

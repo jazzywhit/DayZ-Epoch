@@ -64,9 +64,9 @@ waitUntil { sleep 1; !isNil "sm_done" };
 	true
 } count _trader_config;
 
-BlackMarketTrader = ["GUE_Soldier_MG", [0,0], (135.159-180)] call DT_fnc_CreateTrader;
-BlackMarketTrader2 = ["TK_GUE_Soldier_Sniper_EP1", [0,0], (135.159-180)] call DT_fnc_CreateTrader;
-BlackMarketTrader3 = ["Soldier_GL_M16A2_PMC", [0,0], (135.159-180)] call DT_fnc_CreateTrader;
+BlackMarketTrader = ["GUE_Soldier_MG", [06325,07807], (135.159-180)] call DT_fnc_CreateTrader;
+BlackMarketTrader2 = ["TK_GUE_Soldier_Sniper_EP1", [06325,07807], (135.159-180)] call DT_fnc_CreateTrader;
+BlackMarketTrader3 = ["Soldier_GL_M16A2_PMC", [06325,07807], (135.159-180)] call DT_fnc_CreateTrader;
 
 PV_TraderMarkers = _markers;
 publicVariable "PV_TraderMarkers";
