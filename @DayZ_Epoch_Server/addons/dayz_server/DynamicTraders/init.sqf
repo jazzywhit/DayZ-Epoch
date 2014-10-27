@@ -52,13 +52,25 @@ _markers set [count _markers, [[8989.61,7769.91], "Hemp Trader", "ColorGreen"]];
 					_position = [getMarkerPos 'center',0,DynamicVehicleArea,20,0,2000,0] call BIS_fnc_findSafePos;
 				};
 			};
-			
+
+			// Check current markers to see if there is another trader within 5km
 			{
-				if (((_x select 0) distance _position) < 1000) exitWith {
+				if (((_x select 0) distance _position) < 5000) exitWith {
 					_position = [];
 				};
 				true
 			} count _markers;
+
+			// Ensure that the dynamic traders are within 750 meters of a city
+			_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],750];
+			if (count _nearestCities == 0) then {
+			    diag_log format["DynTrader: %1 was not a valid location for %2", _position, _x select 1];
+			    _nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],10000];
+			    _position = [_nearestCities select 0,0,1500,10,0,25,0] call BIS_fnc_findSafePos;
+			    diag_log format["DynTrader: %1 was used instead for %2", _position, _x select 1];
+			};
+
+            // Exit if there are more than 10 unsuccessful loops or position is found
 			if ((count _position) == 2 or _j > 10) then {
 				_found_position = true;
 			};
