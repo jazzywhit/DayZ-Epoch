@@ -397,6 +397,9 @@ if (isServer && isNil "sm_done") then {
 	[] call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";
 	[] ExecVM "\z\addons\dayz_server\DZMS\DZMSInit.sqf";
 
+	//Dynamic Traders
+	[] ExecVM "\z\addons\dayz_server\DynamicTraders\init.sqf";
+
 	allowConnection = true;
 	sm_done = true;
 	publicVariable "sm_done";
