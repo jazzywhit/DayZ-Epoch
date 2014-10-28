@@ -24,7 +24,7 @@ sleep 7;
 _objectID = _ent getVariable["ObjectID","0"];
 _objectUID = _ent getVariable["ObjectUID","0"];
 
-PVDZ_obj_Fire = [_ent,2,time,false,true];
+PVDZ_obj_Fire = [_ent,4,time,false,true];
 publicVariable "PVDZ_obj_Fire";
 _id = PVDZ_obj_Fire spawn BIS_Effects_Burn;
 
@@ -36,13 +36,14 @@ for "_i" from 0 to _countDownTimer do {
 if(_timeLeft == 0 || _timeLeft < 0) then {
 	_ent setDamage 1;
 
+	// Let the damage destroy the vehicle for now, check on server restart if that works
 	//Deleting from database. Function found in player_packTent.sqf
-	PVDZ_obj_Delete = [_objectID,_objectUID];
-	publicVariableServer "PVDZ_obj_Delete";
-	if (isServer) then {
-		PVDZ_obj_Delete call server_deleteObj;
-	};
-	deleteVehicle _ent;
+	//PVDZ_obj_Delete = [_objectID,_objectUID];
+	//publicVariableServer "PVDZ_obj_Delete";
+	//if (isServer) then {
+	//	PVDZ_obj_Delete call server_deleteObj;
+	//};
+	//deleteVehicle _ent;
 };
 
 s_player_igniteVehicle = -1;

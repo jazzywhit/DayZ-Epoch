@@ -113,6 +113,12 @@ if(_isAir || _isShip) then {
 	_allowedDistance = 8;
 };
 
+// Increase distance if building
+_isBuilding = cursorTarget isKindOf "Building";
+if (_isBuilding) then {
+	_allowedDistance = 10;
+};
+
 if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance cursorTarget < _allowedDistance) && _canDo) then {	//Has some kind of target
 
 	// set cursortarget to variable
@@ -124,7 +130,6 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	// hintsilent _typeOfCursorTarget;
 
 	_isVehicle = _cursorTarget isKindOf "AllVehicles";
-	_isBuilding = _cursorTarget isKindOf "Building";
 	_isVehicletype = _typeOfCursorTarget in ["ATV_US_EP1","ATV_CZ_EP1"];
 	_isnewstorage = _typeOfCursorTarget in DZE_isNewStorage;
 	
@@ -510,17 +515,18 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	//------------------- Pyromaniac ------------------------------
 	if(_isBuilding and _hasMatches) then {
 		if (s_player_igniteBuilding < 0) then {
-			s_player_igniteBuilding = player addAction [format["<t color='#ff0000'>Ignite Building"], "custom\pyromaniac\burn_building.sqf",_cursorTarget, 1, true, true, "", ""];
+			s_player_igniteBuilding = player addAction [format["Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 0, false, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_igniteBuilding;
 		s_player_igniteBuilding = -1;
 	};
 		
+	//------------------- Pyromaniac ------------------------------
 	// Burn Vehicle
 	if(_isVehicle and _hasMatches) then {
 		if (s_player_igniteVehicle < 0) then {
-			s_player_igniteVehicle = player addAction [format["<t color='#ff0000'>Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",_cursorTarget, 1, true, true, "", ""];
+			s_player_igniteVehicle = player addAction [format["Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 0, false, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_igniteVehicle;

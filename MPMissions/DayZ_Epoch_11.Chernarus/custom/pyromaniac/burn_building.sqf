@@ -21,7 +21,7 @@ s_player_igniteBuilding = 1;
 player playActionNow "Medic";
 sleep 7;
 
-PVDZ_obj_Fire = [_ent,2,time,false,true];
+PVDZ_obj_Fire = [_ent,10,time,false,true];
 publicVariable "PVDZ_obj_Fire";
 _id = PVDZ_obj_Fire spawn BIS_Effects_Burn;
 
