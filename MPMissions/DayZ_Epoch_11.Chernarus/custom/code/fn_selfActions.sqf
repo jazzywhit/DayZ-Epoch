@@ -1047,21 +1047,32 @@ if (_dogHandle > 0) then {
 	player removeAction s_player_calldog;
 	s_player_calldog = 		-1;
 };
-//------------------- Burn Building ------------------------------
+//------------------- Pyromaniac ------------------------------
 private["_playerPos","_hasFuel", "_hasMatches","_display"];
  
+// Burn Building
 _playerPos = getPosATL player;
 _hasFuel = count nearestObjects [_playerPos, ["Land_Mil_Barracks_i"], 4] > 0;
 _hasMatches  = "ItemMatchbox" in items player;
 
 if (_hasFuel and _hasMatches) then {
         if (s_player_igniteBuilding < 0) then {
-            s_player_igniteBuilding = player addaction[("<t color=""#0000c7"">" + ("BURN IT") +"</t>"),"custom\pyromaniac\burn_building.sqf"];
+            s_player_igniteBuilding = player addAction [format["Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 1, true, true, "", ""];
         };
     } else {
         player removeAction s_player_igniteBuilding;
         s_player_igniteBuilding = -1;
     };
+	
+// Burn Vehicle
+if(_isTent and _hasMatches and _canDo and !_isMan) then {
+	if (s_player_igniteVehicle < 0) then {
+		s_player_igniteVehicle = player addAction [format["Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 1, true, true, "", ""];
+	};
+} else {
+	player removeAction s_player_igniteTent;
+	s_player_igniteVehicle = -1;
+};
 
 //------------------- Drink Water --------------------------------
 private["_playerPos","_canDrink","_isPond","_isWell","_pondPos","_objectsWell","_objectsPond","_display"];
