@@ -19,10 +19,10 @@ _trader_base_config = [
 	[2, "boat.sqf", 		"Boat", 						"ColorBlack"]
 ];
 
-_static_trader_base_config = 
-	[[8989.61,7769.91, 1.81754], "hemp.sqf", 			"Hemp Trader", 						"ColorGreen"],
-	[[5134.57, 2344.57, 0.0016], "aircraft.sqf", 		"Balota Aircraft Trader", 			"ColorBlack"],
-	[[4141.11, 10729.4, 0.0016], "aircraft.sqf", 		"NW Aircraft Trader", 				"ColorBlack"]
+_static_trader_base_config = [
+	[[8989.61,7769.91, 1.81754, 194.28], "hemp.sqf", 					"Hemp Trader", 						"ColorGreen"],
+	[[5134.57, 2344.57, 0.0016, 222.252], "aircraft.sqf", 		"Balota Aircraft Trader", 			"ColorBlack"],
+	[[4141.11, 10729.4, 0.0016, 239.099], "aircraft.sqf", 		"NW Aircraft Trader", 				"ColorBlack"]
 ];
 
 _markers = [];
