@@ -4,7 +4,7 @@ scriptName "Functions\misc\fn_selfActions.sqf";
 	- Function
 	- [] call fnc_usec_selfActions;
 ************************************************************/
-private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasToolbox","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
+private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasToolbox","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isBuilding","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
 
 if (DZE_ActionInProgress) exitWith {}; // Do not allow if any script is running.
 
@@ -124,6 +124,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	// hintsilent _typeOfCursorTarget;
 
 	_isVehicle = _cursorTarget isKindOf "AllVehicles";
+	_isBuilding = _cursorTarget isKindOf "Building";
 	_isVehicletype = _typeOfCursorTarget in ["ATV_US_EP1","ATV_CZ_EP1"];
 	_isnewstorage = _typeOfCursorTarget in DZE_isNewStorage;
 	
@@ -503,6 +504,26 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	} else {
 		player removeAction s_player_fireout;
 		s_player_fireout = -1;
+	};
+	
+	//------------------- Pyromaniac ------------------------------
+	if(_isBuilding and _hasMatches and _canDo and !_isMan) then {
+		if (s_player_igniteBuilding < 0) then {
+			s_player_igniteBuilding = player addAction [format["Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 1, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_igniteBuilding;
+		s_player_igniteBuilding = -1;
+	};
+		
+	// Burn Vehicle
+	if(_isVehicle and _hasMatches and _canDo and !_isMan) then {
+		if (s_player_igniteVehicle < 0) then {
+			s_player_igniteVehicle = player addAction [format["Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 1, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_igniteTent;
+		s_player_igniteVehicle = -1;
 	};
 	
 	//Packing my tent
@@ -942,6 +963,12 @@ _unlockedVault = ["VaultStorage"];
 	player removeAction s_player_flipveh;
 	s_player_flipveh = -1;
 	///////////////////////////////////
+	// Pyromaniac
+	player removeAction s_player_igniteVehicle;
+	s_player_igniteVehicle = -1;
+	player removeAction s_player_igniteBuilding;
+	s_player_igniteBuilding = -1;
+	///////////////////////////////////
 	// Cannibalism
 	player removeAction s_player_butcher_human;
 	s_player_butcher_human = -1;
@@ -1046,32 +1073,6 @@ if (_dogHandle > 0) then {
 	s_player_speeddog =		-1;
 	player removeAction s_player_calldog;
 	s_player_calldog = 		-1;
-};
-//------------------- Pyromaniac ------------------------------
-private["_playerPos","_hasFuel", "_hasMatches","_display"];
- 
-// Burn Building
-_playerPos = getPosATL player;
-_hasFuel = count nearestObjects [_playerPos, ["Land_Mil_Barracks_i"], 4] > 0;
-_hasMatches  = "ItemMatchbox" in items player;
-
-if (_hasFuel and _hasMatches) then {
-        if (s_player_igniteBuilding < 0) then {
-            s_player_igniteBuilding = player addAction [format["Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 1, true, true, "", ""];
-        };
-    } else {
-        player removeAction s_player_igniteBuilding;
-        s_player_igniteBuilding = -1;
-    };
-	
-// Burn Vehicle
-if(_isTent and _hasMatches and _canDo and !_isMan) then {
-	if (s_player_igniteVehicle < 0) then {
-		s_player_igniteVehicle = player addAction [format["Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 1, true, true, "", ""];
-	};
-} else {
-	player removeAction s_player_igniteTent;
-	s_player_igniteVehicle = -1;
 };
 
 //------------------- Drink Water --------------------------------
