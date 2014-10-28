@@ -509,7 +509,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	//------------------- Pyromaniac ------------------------------
 	if(_isBuilding and _hasMatches and _canDo and !_isMan) then {
 		if (s_player_igniteBuilding < 0) then {
-			s_player_igniteBuilding = player addAction [format["Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 1, true, true, "", ""];
+			s_player_igniteBuilding = player addAction [format["<t color='#ff0000'>Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 1, true, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_igniteBuilding;
@@ -519,10 +519,10 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	// Burn Vehicle
 	if(_isVehicle and _hasMatches and _canDo and !_isMan) then {
 		if (s_player_igniteVehicle < 0) then {
-			s_player_igniteVehicle = player addAction [format["Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 1, true, true, "", ""];
+			s_player_igniteVehicle = player addAction [format["<t color='#ff0000'>Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 1, true, true, "", ""];
 		};
 	} else {
-		player removeAction s_player_igniteTent;
+		player removeAction s_player_igniteVehicle;
 		s_player_igniteVehicle = -1;
 	};
 	
@@ -566,9 +566,9 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 
 
 
-//Allow owner to change vault code
+	//Allow owner to change vault code
 
-_unlockedVault = ["VaultStorage"];
+	_unlockedVault = ["VaultStorage"];
 
 	if(typeOf(cursortarget) in _unlockedVault && _ownerID != "0" && (player distance _cursorTarget < 2)) then {
 	

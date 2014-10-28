@@ -5,6 +5,9 @@
 
 private["_ent"];
 
+if(DZE_ActionInProgress) exitWith { cutText ["You can't burn anything right now", "PLAIN DOWN"]; };
+DZE_ActionInProgress = true;
+
 //Variables ------------------------------------------------
 _ent = _this select 3; //Dont touch this
 _countDownTimer = 60; //Total time to count down, makes the tent burn for 60 seconds. Change to whatever you like...
@@ -13,7 +16,7 @@ canAbort = true;
 //----------------------------------------------------------
 
 player removeAction s_player_igniteBuilding;
-s_player_igniteBuilding = -1;
+s_player_igniteBuilding = 1;
 
 player playActionNow "Medic";
 sleep 7;
@@ -30,3 +33,6 @@ for "_i" from 0 to _countDownTimer do {
 if(_timeLeft == 0 || _timeLeft < 0) then {
 	_ent setDamage 1;
 };
+
+s_player_igniteBuilding = -1;
+DZE_ActionInProgress = false;
