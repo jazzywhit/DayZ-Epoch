@@ -375,6 +375,42 @@ class CfgBuildingLoot {
 			{ "","hospital",0.9 }
 		};
 	};
+	
+	class MilitaryCity: Default {
+		zombieChance = 0.3;
+		maxRoaming = 6;
+		zombieClass[] = {"z_soldier","z_soldier_heavy","z_policeman"};
+		lootChance = 0.6;
+		lootPos[] = {};
+		lootType[] = {
+			{ "pistols_bric", "cfglootweapon", 0.26},
+			{ "militaryshotguns_bric", "cfglootweapon", 0.06 },
+			{ "submachinegun_bric", "cfglootweapon", 0.02 },
+			{"Binocular","weapon",0.03},
+			{"ItemRadio","weapon",0.01},
+			{"ItemFlashlightRed","military_bric",0.04},
+			{"ItemKnife","military_bric",0.01},
+			{"ItemGPS","weapon",0.01},
+			{"ItemMap","military_bric",0.02},
+			{"militarybackpacks","militarybackpacks",0.05},
+			{"ItemHatchet_DZE","object",0.05},
+			{"","medical",0.03},
+			{"","generic",0.1},
+			{"ItemEtool","weapon",0.02},
+			{"ItemSandbag","magazine",0.02}
+		};
+		lootTypeSmall[] = {
+			{ "Binocular", "weapon", 0.05 },
+			{ "ItemFlashlightRed", "weapon", 0.03 },
+			{ "ItemKnife", "weapon", 0.04 },
+			{ "ItemGPS", "weapon", 0.02 },
+			{ "", "medical", 0.12 },
+			{ "", "generic", 0.22 },
+			{ "", "military_bric", 0.49 },
+			{ "ItemEtool", "weapon", 0.03 }
+		};
+	};
+	
 	class Military: Default {
 		zombieChance = 0.3;
 		maxRoaming = 6;
@@ -412,6 +448,7 @@ class CfgBuildingLoot {
 			{ "ItemEtool", "weapon", 0.03 }
 		};
 	};
+	
 	class MilitaryIndustrial: Default {
 		zombieChance = 0.3;
 		maxRoaming = 6;
