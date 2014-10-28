@@ -555,7 +555,7 @@ _unlockedVault = ["VaultStorage"];
 	if ((typeOf(cursortarget) == "VaultStorage") &&(_ownerID == dayz_combination || _ownerID == dayz_playerUID)  ) then {
      
 				
-			s_player_Safe_ckc = player addaction["Set new Code", "ckc\ckc_startSafeUI.sqf","",1,false,true,"", ""];
+			s_player_Safe_ckc = player addaction["Set new Code", "custom\ckc\ckc_startSafeUI.sqf","",1,false,true,"", ""];
 		};
 		};
 	} else {
