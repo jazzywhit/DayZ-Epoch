@@ -3,7 +3,6 @@ private ["_camp"];
 _x = _this select 0;
 _y = _this select 1;
 _z = _this select 2;
-_a = _this select 3;
 
 _camp = [
 	["Land_fort_bagfence_long",[0.468506, 2.44519],123.738,1,0,{}],
@@ -24,4 +23,4 @@ _camp = [
 
 [[_x, _y], 0, _camp] call DT_fnc_ObjectsMapper;
 
-["Worker2", [_x + -2.84399,_y + 6.00989], (_a)] call DT_fnc_CreateTrader;
+["Worker2", [_x + -2.84399,_y + 6.00989], (222.252)] call DT_fnc_CreateTrader;

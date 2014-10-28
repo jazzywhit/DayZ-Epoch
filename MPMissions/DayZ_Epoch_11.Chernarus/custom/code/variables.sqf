@@ -3,6 +3,9 @@ if(isNil "DZE_MissionLootTable") then {
 	DZE_MissionLootTable = true;
 };
 
+//drink water
+s_player_drinkWater = -1;
+
 //Default Loadout
 DefaultMagazines = ["ItemBandage"];
 DefaultWeapons = ["ItemFlashlight"];
