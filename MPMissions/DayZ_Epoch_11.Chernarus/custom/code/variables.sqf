@@ -12,6 +12,14 @@ DefaultWeapons = ["ItemFlashlight"];
 DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
 
+// Pyromaniac
+if(isNil "s_player_igniteVehicle") then {
+	s_player_igniteVehicle = -1;
+};
+if(isNil "s_player_igniteBuilding") then {
+	s_player_igniteBuilding = -1;
+};
+
 // Cannibalism
 if(isNil "s_player_butcher_human") then {
 	s_player_butcher_human = -1;

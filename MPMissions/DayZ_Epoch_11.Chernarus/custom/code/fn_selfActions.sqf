@@ -507,9 +507,9 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	};
 	
 	//------------------- Pyromaniac ------------------------------
-	if(_isBuilding and _hasMatches and _canDo and !_isMan) then {
+	if(_isBuilding and _hasMatches) then {
 		if (s_player_igniteBuilding < 0) then {
-			s_player_igniteBuilding = player addAction [format["<t color='#ff0000'>Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 1, true, true, "", ""];
+			s_player_igniteBuilding = player addAction [format["<t color='#ff0000'>Ignite Building"], "custom\pyromaniac\burn_building.sqf",_cursorTarget, 1, true, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_igniteBuilding;
@@ -517,9 +517,9 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	};
 		
 	// Burn Vehicle
-	if(_isVehicle and _hasMatches and _canDo and !_isMan) then {
+	if(_isVehicle and _hasMatches) then {
 		if (s_player_igniteVehicle < 0) then {
-			s_player_igniteVehicle = player addAction [format["<t color='#ff0000'>Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 1, true, true, "", ""];
+			s_player_igniteVehicle = player addAction [format["<t color='#ff0000'>Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",_cursorTarget, 1, true, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_igniteVehicle;
