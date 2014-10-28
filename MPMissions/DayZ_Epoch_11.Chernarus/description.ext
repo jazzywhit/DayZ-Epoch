@@ -222,6 +222,10 @@ class CfgSounds
     };
 };
 
+//change safe code
+#include "custom\ckc\ckc_defines.hpp"
+#include "custom\ckc\ckc_ui.hpp"
+#include "custom\ckc\ckc_SafeUI.hpp"
 
 //walkamongstthedead
 #include "custom\walkamongstthedead\watd.hpp"

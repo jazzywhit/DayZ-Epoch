@@ -27,4 +27,9 @@ if (!isDedicated) then {
 	
 	//tow and lift
 	call compile preprocessFileLineNumbers "custom\tow_lift\init.sqf";
+	
+	//change safe code (ckc)
+	ckc_button     =	compile preprocessFileLineNumbers "custom\ckc\ckc_button.sqf";
+	ckc_upddoor    =    compile preprocessFileLineNumbers "custom\ckc\ckc_upddoor.sqf";
+	ckc_updSafe    =    compile preprocessFileLineNumbers "custom\ckc\ckc_updSafe.sqf";
 };
