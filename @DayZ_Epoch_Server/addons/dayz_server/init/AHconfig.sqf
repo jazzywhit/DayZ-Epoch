@@ -141,7 +141,7 @@ _dayzActions =
 	"s_player_lockunlock","s_vehicle_lockunlock","s_player_toggleSnap","s_player_toggleSnapSelect","s_player_toggleSnapSelectPoint",
 	"s_player_evacCall","s_player_makeEvacChopper","s_player_clearEvacChopper",
 	"s_player_deploybike2","s_player_deploymoped","s_player_deploymoped2","s_player_deploymozzie","s_player_deploymozzie2",
-	"s_player_bury_human"
+	"s_player_bury_human", "s_player_igniteVehicle", "s_player_igniteBuilding"
 ];
 /* ********************************************************************************* */
 	//	NEW (EXPERIMENTAL):

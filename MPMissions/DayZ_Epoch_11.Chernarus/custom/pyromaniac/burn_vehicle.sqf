@@ -41,22 +41,3 @@ if(_timeLeft == 0 || _timeLeft < 0) then {
 	};
 	deleteVehicle _ent;
 };
-
-/*
-How to use: PVDZ_obj_Fire = [_ent,5,time,false,true];
- 
-> handle=[unit,intensity,time,lifecheck,fade] spawn BIS_Effects_Burn
->
-> unit: the name of the object that the fire will be attached to
-> intensity: the intensity of the fire. Recommended to use values between
-> 0.7 and 10, higher values may be used if desired though.
-> time: the time that the fire started. use global variable "time". this is used to keep effects synced for JIP players
-> lifecheck: if this is true then the unit will only burn as long as it is dead (!alive unit). set to false to burn things like buildings and
-gamelogics
-> fade: if true then the fire will die down over time, eventually dying
-out. set to false if you want it to keep burning. (affected by rain too).
- 
-To make a gamelogic named mygamelogic burn forever with a big fire:
-PVDZ_obj_Fire=[_ent,10,time,false,false] spawn BIS_Effects_Burn
- 
-*/
