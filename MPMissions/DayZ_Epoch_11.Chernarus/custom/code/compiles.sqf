@@ -33,3 +33,10 @@ if (!isDedicated) then {
 	ckc_upddoor    =    compile preprocessFileLineNumbers "custom\ckc\ckc_upddoor.sqf";
 	ckc_updSafe    =    compile preprocessFileLineNumbers "custom\ckc\ckc_updSafe.sqf";
 };
+
+if (isServer) then { 
+
+["Epoch"] execFSM  "custom\ASM\fn_ASM.fsm";
+
+
+};
