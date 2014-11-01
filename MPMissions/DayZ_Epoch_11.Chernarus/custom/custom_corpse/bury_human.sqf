@@ -4,11 +4,17 @@ if(DZE_ActionInProgress) exitWith { cutText ["You can't perform burial rites rig
 DZE_ActionInProgress = true;
 
 _corpse = _this select 3;
-_isPlayer = (isPlayer _corpse);
+
 _type = typeOf _corpse;
 _isBuried = _corpse getVariable["isBuried",false];
 _hasHarvested = _corpse getVariable["meatHarvested",false];
 _name = _corpse getVariable["bodyName","unknown"];
+
+//Check if the corpse was a player
+_corpseID = _corpse getVariable ["CharacterID", "0"];
+_isPlayer = true;
+if (_corpseID == "0") then { _isPlayer = false };
+diag_log(format["bury_human.sqf - CorpseID: %1", _corpseID]);
 
 player removeAction s_player_bury_human;
 s_player_bury_human = 1;
@@ -52,7 +58,7 @@ if (!_isBuried) then {
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
 		if (_isPlayer) then {
-			_box addMagazineCargoGlobal ["EvDogTags",1]; //Add Dog Tags to the body, use them for currency
+			_box addWeaponCargoGlobal ["EvDogTags",1]; //Add Dog Tags to the body, use them for currency
 		};
 		
 		//Delete Body

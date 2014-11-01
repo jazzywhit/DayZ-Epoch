@@ -513,7 +513,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	};
 	
 	//------------------- Pyromaniac ------------------------------
-	if(_isBuilding and _canIgnite) then {
+	if(_isBuilding and _canIgnite and !_isMan) then {
 		if (s_player_igniteBuilding < 0) then {
 			s_player_igniteBuilding = player addAction [format["Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 0, false, true, "", ""];
 		};
@@ -524,7 +524,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		
 	//------------------- Pyromaniac ------------------------------
 	// Burn Vehicle
-	if(_isVehicle and _canIgnite) then {
+	if(_isVehicle and _canIgnite and !_isMan) then {
 		if (s_player_igniteVehicle < 0) then {
 			s_player_igniteVehicle = player addAction [format["Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 0, false, true, "", ""];
 		};
