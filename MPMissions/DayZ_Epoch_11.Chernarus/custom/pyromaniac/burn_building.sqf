@@ -3,7 +3,7 @@
 // Krixes for the countdown timer example in his sleep script ;D
 // The whole community for releasing all there scripts and so enabling me to learn alot!
 
-private["_ent"];
+private["_ent", "_fuelCans", "_qty_fuelCans"];
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't burn anything right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
@@ -18,6 +18,17 @@ canAbort = true;
 player removeAction s_player_igniteBuilding;
 s_player_igniteBuilding = 1;
 
+// Count number of Fuel Cans
+_fuelCans = [];
+{
+	if(_x == "ItemJerrycanEmpty" || _x == "ItemFuelBarrelEmpty") then {
+		_fuelCans set [(count _fuelCans),_x];
+	};
+} count magazines player;
+_qty_fuelCans = count _fuelCans;
+if(_qty_fuelCans == 0) exitWith { cutText ["You need Fuel to set fire to this", "PLAIN DOWN"]; s_player_igniteBuilding = -1; DZE_ActionInProgress = false;};
+
+// Perform Character Action
 player playActionNow "Medic";
 sleep 7;
 
