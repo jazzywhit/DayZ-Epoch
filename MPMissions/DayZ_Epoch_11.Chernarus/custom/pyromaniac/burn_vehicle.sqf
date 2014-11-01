@@ -48,6 +48,7 @@ _objectUID = _ent getVariable["ObjectUID","0"];
 PVDZ_obj_Fire = [_ent,3,time,false,true];
 publicVariable "PVDZ_obj_Fire";
 _id = PVDZ_obj_Fire spawn BIS_Effects_Burn;
+_ent setDamage 0.99; //Damage the vehicle so it cannot be driven
 sleep _fireStageTime;
 
 // Start a small fire with only smoke
