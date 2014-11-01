@@ -3,15 +3,14 @@
 // Krixes for the countdown timer example in his sleep script ;D
 // The whole community for releasing all there scripts and so enabling me to learn alot!
 
-private["_id", "_ent", "_fuelCans", "_qty_fuelCans", "_fuelBarrels", "_qty_fuelBarrels, "_fuelSource", "_timeLeft"];
+private["_id", "_ent", "_fuelCans", "_qty_fuelCans", "_fuelBarrels", "_qty_fuelBarrels", "_fuelSource"];
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't burn anything right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
 
 //Variables ------------------------------------------------
 _ent = _this select 3; //Dont touch this
-_countDownTimer = 60; //Total time to count down, makes the tent burn for 60 seconds. Change to whatever you like...
-_timeLeft = _countDownTimer; //time left to count down, dont touch this
+_fireStageTime = 60; //Total time to count down, makes the tent burn for 60 seconds. Change to whatever you like...
 canAbort = true;
 //----------------------------------------------------------
 
@@ -60,30 +59,30 @@ if(([player, _fuelSource] call BIS_fnc_invRemove) == 1) then {
 s_player_igniteBuilding = -1;
 DZE_ActionInProgress = false;
 
-// Start a small fire with mostly smoke
+// Start a small fire with only smoke
 PVDZ_obj_Fire = [_ent,3,time,false,true];
 publicVariable "PVDZ_obj_Fire";
 _id = PVDZ_obj_Fire spawn BIS_Effects_Burn;
-sleep 15;
+sleep _fireStageTime;
+
+// Add flames to the fire
+// TODO Players should be damaged if they go inside the building
+PVDZ_obj_Fire = [_ent,3,time,false,true];
+publicVariable "PVDZ_obj_Fire";
+_id = PVDZ_obj_Fire spawn BIS_Effects_Burn;
+sleep _fireStageTime;
 
 // Make the fire larger
 PVDZ_obj_Fire = [_ent,10,time,false,true];
 publicVariable "PVDZ_obj_Fire";
 _id = PVDZ_obj_Fire spawn BIS_Effects_Burn;
-sleep 15;
+sleep _fireStageTime;
 
-// Make the fire larger
-PVDZ_obj_Fire = [_ent,20,time,false,true];
+// Make the fire consume the building
+PVDZ_obj_Fire = [_ent,15,time,false,true];
 publicVariable "PVDZ_obj_Fire";
 _id = PVDZ_obj_Fire spawn BIS_Effects_Burn;
+sleep _fireStageTime;
 
-private["_i"];
-for "_i" from 0 to _countDownTimer do {
-	sleep 1;
-	_timeLeft = _timeLeft - 1;
-};
-
-if(_timeLeft == 0 || _timeLeft < 0) then {
-	_ent setDamage 1;
-};
-
+//Destroy the building
+_ent setDamage 1;
