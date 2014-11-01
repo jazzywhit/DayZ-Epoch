@@ -166,7 +166,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 
 	_hasKnife = 	"ItemKnife" in _itemsPlayer;
 	_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
-	_canIgnite = ("ItemJerrycan" in _magazinesPlayer) && ("ItemMatchbox_DZE" in weapons player)
+	_canIgnite = ("ItemJerrycan" in _magazinesPlayer) && (("ItemMatchbox_DZE" in weapons player) || ("ItemMatchbox" in weapons player));
 
 	_isMan = _cursorTarget isKindOf "Man";
 	_traderType = _typeOfCursorTarget;
