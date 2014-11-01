@@ -4,6 +4,7 @@ if(DZE_ActionInProgress) exitWith { cutText ["You can't perform burial rites rig
 DZE_ActionInProgress = true;
 
 _corpse = _this select 3;
+_isPlayer = (isPlayer _corpse);
 _type = typeOf _corpse;
 _isBuried = _corpse getVariable["isBuried",false];
 _hasHarvested = _corpse getVariable["meatHarvested",false];
@@ -50,6 +51,11 @@ if (!_isBuried) then {
         clearMagazineCargoGlobal _box;
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
+		if (_isPlayer) then {
+			_box addMagazineCargoGlobal ["EvDogTags",1]; //Add Dog Tags to the body, use them for currency
+		};
+		
+		//Delete Body
 		deleteVehicle _corpse;
 
         _mound = createVehicle ["Grave", _position, [], 0, "CAN_COLLIDE"];

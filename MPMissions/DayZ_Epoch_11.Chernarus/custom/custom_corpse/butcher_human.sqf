@@ -4,6 +4,7 @@ if(DZE_ActionInProgress) exitWith { cutText ["You cannot butcher this man right 
 DZE_ActionInProgress = true;
 
 _corpse = _this select 3;
+_isPlayer = (isPlayer _corpse);
 _type = typeOf _corpse;
 _isBuried = _corpse getVariable["isBuried",false];
 _hasHarvested = _corpse getVariable["meatHarvested",false];
@@ -48,7 +49,10 @@ if (!_isBuried) then {
         clearMagazineCargoGlobal _box;
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
-        _box addMagazineCargoGlobal ["FoodSteakRaw",1];
+        _box addMagazineCargoGlobal ["FoodSteakRaw",1]; //Add Food
+		if (_isPlayer) then {
+			_box addMagazineCargoGlobal ["Kostey_notebook",1]; //Add Kill Record
+		};
 		
         // Delete Body
 		deleteVehicle _corpse;
