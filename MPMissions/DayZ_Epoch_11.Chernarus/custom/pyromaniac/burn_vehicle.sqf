@@ -21,7 +21,7 @@ s_player_igniteVehicle = 1;
 // Count number of Fuel Cans
 _fuelCans = [];
 {
-	if(_x == "ItemJerrycanEmpty" || _x == "ItemFuelBarrelEmpty") then {
+	if(_x == "ItemJerrycan" || _x == "ItemFuelBarrel") then {
 		_fuelCans set [(count _fuelCans),_x];
 	};
 } count magazines player;
