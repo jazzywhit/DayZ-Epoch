@@ -32,4 +32,10 @@ if (!isDedicated) then {
 	ckc_button     =	compile preprocessFileLineNumbers "custom\ckc\ckc_button.sqf";
 	ckc_upddoor    =    compile preprocessFileLineNumbers "custom\ckc\ckc_upddoor.sqf";
 	ckc_updSafe    =    compile preprocessFileLineNumbers "custom\ckc\ckc_updSafe.sqf";
+
+	// custom fire making (can use lumber)
+	player_makeFire =	compile preprocessFileLineNumbers "custom\code\player_makefire.sqf";
+
+	// custom harvest to allow lumber to come from trees
+	player_harvest =	compile preprocessFileLineNumbers "custom\code\player_harvest.sqf";
 };
