@@ -1,4 +1,4 @@
-private ["_location","_isOk","_dir","_classname","_fire","_hasWood", "hasLumber"];
+private ["_location","_isOk","_dir","_classname","_fire","_hasWood", "_hasLumber"];
 _location = player modeltoworld [0,0.3,0];
 if ((_location select 2) < 0) then {
 	_location set [2,0];
@@ -15,7 +15,7 @@ if (_hasWood || _hasLumber) then {
 		} else {
 			player removeMagazine "PartWoodLumber";
 		};
-		
+
 		_dir = getDir player;
 		_classname = "Land_Fire_DZ";
 		[1,1] call dayz_HungerThirst;
