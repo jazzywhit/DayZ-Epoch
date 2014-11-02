@@ -3,6 +3,8 @@ private ["_nul","_result","_pos","_wsDone","_dir","_isOK","_countr","_objWpnType
 dayz_versionNo = 		getText(configFile >> "CfgMods" >> "DayZ" >> "version");
 dayz_hiveVersionNo = 	getNumber(configFile >> "CfgMods" >> "DayZ" >> "hiveVersion");
 
+
+
 _hiveLoaded = false;
 
 waitUntil{initialized}; //means all the functions are now defined

@@ -8,6 +8,12 @@ _type = typeOf _corpse;
 _isBuried = _corpse getVariable["isBuried",false];
 _hasHarvested = _corpse getVariable["meatHarvested",false];
 
+//Check if the corpse was a player
+_corpseID = _corpse getVariable ["CharacterID", "0"];
+_isPlayer = true;
+if (_corpseID == "0") then { _isPlayer = false };
+diag_log(format["butcher_human.sqf - CorpseID: %1", _corpseID]);
+
 player removeAction s_player_butcher_human;
 s_player_butcher_human = 1;
 
@@ -48,7 +54,10 @@ if (!_isBuried) then {
         clearMagazineCargoGlobal _box;
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
-        _box addMagazineCargoGlobal ["FoodSteakRaw",1];
+        _box addMagazineCargoGlobal ["FoodSteakRaw",1]; //Add Food
+		if (_isPlayer) then {
+			_box addWeaponCargoGlobal ["Kostey_notebook",1]; //Add Kill Record
+		};
 		
         // Delete Body
 		deleteVehicle _corpse;

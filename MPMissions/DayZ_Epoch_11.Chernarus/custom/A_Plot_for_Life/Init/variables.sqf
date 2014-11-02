@@ -755,7 +755,7 @@ if(!isDedicated) then {
 	dayzGearSave = 			false;
 	dayz_unsaved =			false;
 	dayz_scaleLight = 		0;
-	dayzDebug = false;
+	dayzDebug = true;
 	dayzState = -1;
 	//uiNamespace setVariable ['DAYZ_GUI_display',displayNull];
 	//if (uiNamespace getVariable ['DZ_displayUI', 0] == 2) then {
