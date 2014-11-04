@@ -30,7 +30,7 @@ playsound "introSong";
 _role1 = "Bolt Action Hardcore";
 _role1names = ["Narrow Minded Gaming", "narrowmindedgaming.com"];
 _role2 = "Supported Mods";
-_role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex"];
+_role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
 _role3 = "True Hardcore";
 _role3names = ["First Person", "No P2W", "No Safe Zones"];
 _role4 = "Server Mods";
