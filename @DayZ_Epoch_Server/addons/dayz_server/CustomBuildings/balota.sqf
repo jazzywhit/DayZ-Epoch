@@ -4669,15 +4669,6 @@ if (true) then
   _this setPos [5107.3867, 2213.9172, -0.21272156];
 };
 
-_vehicle_547 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Park_bench2_noRoad", [5101.124, 2239.0437, 0.0095908251], [], 0, "CAN_COLLIDE"];
-  _vehicle_547 = _this;
-  _this setDir 29.4804;
-  _this setPos [5101.124, 2239.0437, 0.0095908251];
-};
-
 _vehicle_548 = objNull;
 if (true) then
 {
@@ -5014,15 +5005,6 @@ if (true) then
   _vehicle_585 = _this;
   _this setDir -57.275528;
   _this setPos [5130.7891, 2200.3047, 9.5367432e-007];
-};
-
-_vehicle_586 = objNull;
-if (true) then
-{
-  _this = createVehicle ["ASC_EU_LHVOld", [5100.0322, 2240.2356, -3.4332275e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_586 = _this;
-  _this setDir 27.511106;
-  _this setPos [5100.0322, 2240.2356, -3.4332275e-005];
 };
 
 _vehicle_587 = objNull;

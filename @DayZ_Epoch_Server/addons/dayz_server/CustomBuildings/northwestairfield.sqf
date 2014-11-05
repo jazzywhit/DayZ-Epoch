@@ -5955,15 +5955,6 @@ if (true) then
   _this setPos [4941.8394, 10176.138, -3.0680833];
 };
 
-_vehicle_2209 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Land_Ind_Shed_02_EP1", [4548.6538, 10784.982], [], 0, "CAN_COLLIDE"];
-  _vehicle_2209 = _this;
-  _this setDir 329.84637;
-  _this setPos [4548.6538, 10784.982];
-};
-
 _vehicle_2212 = objNull;
 if (true) then
 {
