@@ -511,27 +511,27 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		player removeAction s_player_fireout;
 		s_player_fireout = -1;
 	};
-	
+
 	//------------------- Pyromaniac ------------------------------
-	if(_isBuilding and _canIgnite and !_isMan) then {
-		if (s_player_igniteBuilding < 0) then {
-			s_player_igniteBuilding = player addAction [format["Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 0, false, true, "", ""];
-		};
-	} else {
-		player removeAction s_player_igniteBuilding;
-		s_player_igniteBuilding = -1;
-	};
-		
+	// Burn Building
+	//if(_isBuilding and _canIgnite and !_isMan) then {
+	//	if (s_player_igniteBuilding < 0) then {
+	//		s_player_igniteBuilding = player addAction [format["Ignite Building"], "custom\pyromaniac\burn_building.sqf",cursorTarget, 0, false, true, "", ""];
+	//	};
+	//} else {
+	//	player removeAction s_player_igniteBuilding;
+	//	s_player_igniteBuilding = -1;
+	//};
 	//------------------- Pyromaniac ------------------------------
 	// Burn Vehicle
-	if(_isVehicle and _canIgnite and !_isMan) then {
-		if (s_player_igniteVehicle < 0) then {
-			s_player_igniteVehicle = player addAction [format["Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 0, false, true, "", ""];
-		};
-	} else {
-		player removeAction s_player_igniteVehicle;
-		s_player_igniteVehicle = -1;
-	};
+	//if(_isVehicle and _canIgnite and !_isMan) then {
+	//	if (s_player_igniteVehicle < 0) then {
+	//		s_player_igniteVehicle = player addAction [format["Ignite Vehicle"], "custom\pyromaniac\burn_vehicle.sqf",cursorTarget, 0, false, true, "", ""];
+	//	};
+	//} else {
+	//	player removeAction s_player_igniteVehicle;
+	//	s_player_igniteVehicle = -1;
+	//};
 	
 	//Packing my tent
 	if(_isTent && (player distance _cursorTarget < 3)) then {
