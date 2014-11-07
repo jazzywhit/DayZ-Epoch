@@ -44,7 +44,7 @@ DZAI_useHealthSystem = true;
 
 //Minimum and maximum AI blood level to spawn each unit with. Each individual unit will have a randomized blood level within this range. Upper limit: 12000 blood (Default: [10000,12000])
 //Note: No effect if DZAI_useHealthSystem is false
-DZAI_unitBloodLevel = [10000,12000];
+DZAI_unitBloodLevel = [5000,8000];
 
 //Amount of blood restored from a full self-heal. One-third of the total amount is restored 3 times every 3 seconds. Note: Applies to infantry-type AI units. (Default: 6000)
 //Note: No effect if DZAI_useHealthSystem is false
@@ -52,7 +52,7 @@ DZAI_unitHealAmount = 4000;
 
 //Below this blood level, AI may decide to heal themselves for amount specified by DZAI_unitHealAmount. Healing requires 9 seconds to fully complete and can be interrupted by knocking the unit unconscious. (Default: 5000)
 //Note: No effect if DZAI_useHealthSystem is false
-DZAI_lowBloodLevel = 5000;
+DZAI_lowBloodLevel = 4000;
 
 //Enable or disable zombie attraction to AI weapon sounds. No effect if DZAI_zombieEnemy is set to false. Enabling this option may impact server performance as a script is run for each AI bullet fired.
 //Note: AI cannot be attacked or damaged by zombies.(Default: false)		
