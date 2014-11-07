@@ -11,6 +11,7 @@ dayZ_instance =	11;					//The instance
 dayzHiveRequest = [];
 initialized = false;
 dayz_previousID = 0;
+server_name = "NMG";
 
 //disable greeting menu 
 player setVariable ["BIS_noCoreConversations", true];
@@ -108,3 +109,13 @@ execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 //BIS Effects init
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
+
+//Watermark
+if (!isNil "server_name") then {
+	[] spawn {
+		waitUntil {(!isNull Player) and (alive Player) and (player == player)};
+		waituntil {!(isNull (findDisplay 46))};
+		5 cutRsc ["wm_disp","PLAIN"];
+		((uiNamespace getVariable "wm_disp") displayCtrl 1) ctrlSetText server_name;
+	};
+};
