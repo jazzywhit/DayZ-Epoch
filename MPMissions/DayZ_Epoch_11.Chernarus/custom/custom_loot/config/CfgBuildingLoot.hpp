@@ -137,9 +137,9 @@ class CfgBuildingLoot {
 			{"ItemToolbox","weapon",0.06},
 			{"ItemCrowbar","weapon",0.05},
 			{"ItemWire","magazine",0.04},
-			{"ItemTankTrap","magazine",0.04},
+			{"ItemTankTrap","magazine",0.05},
 			{"ItemKeyKit","weapon",0.01},
-			{"CinderBlocks","magazine",0.02},
+			{"CinderBlocks","magazine",0.01},
 			{ "PartPlywoodPack", "magazine", 0.05},
 			{ "PartPlankPack", "magazine", 0.05 }
 		};
