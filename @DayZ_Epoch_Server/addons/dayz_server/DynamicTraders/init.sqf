@@ -12,11 +12,11 @@ DT_fnc_ObjectsMapper = compile preprocessFileLineNumbers "\z\addons\dayz_server\
 DT_fnc_CreateTrader = compile preprocessFileLineNumbers "\z\addons\dayz_server\DynamicTraders\createTrader.sqf";
 
 _trader_base_config = [
-	[1, "general.sqf", 		"General/Building Traders", 	"ColorBlack"],
+	[3, "general.sqf", 		"General/Building Traders", 	"ColorBlack"],
 	[1, "medical.sqf", 		"Medical Trader", 				"ColorBlack"],
-	[1, "weapons.sqf", 		"Weapons Trader", 				"ColorBlack"],
-	[1, "wholesaler.sqf", 	"Wholesaler", 					"ColorBlack"],
-	[2, "boat.sqf", 		"Boat", 						"ColorBlack"]
+	[2, "weapons.sqf", 		"Weapons Trader", 				"ColorBlack"],
+	[2, "wholesaler.sqf", 	"Wholesaler", 					"ColorBlack"],
+	[3, "boat.sqf", 		"Boat", 						"ColorBlack"]
 ];
 
 _static_trader_base_config = [

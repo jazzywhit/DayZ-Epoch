@@ -1237,29 +1237,13 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlack";
 		};
-		class Item9
-		{
-			position[]={13532.614,3.0083523,6355.9497};
-			name="boatTraderEast";
-			text="Wholesaler";
-			type="mil_dot";
-			colorName="ColorBlack";
-		};
-		class Item10
-		{
-			position[]={7989.3354,0.30462033,2900.9946};
-			name="BoatDealerSouth";
-			text="Boat Dealer";
-			type="mil_dot";
-			colorName="ColorBlack";
-		};
 		class Item11
 		{
 			position[]={12060.471,158.85699,12638.533};
 			name="AirVehicles";
-			text="Aircraft Dealer";
+			text="NE Aircraft Trader";
 			type="mil_dot";
-			colorName="ColorGreen";
+			colorName="ColorBlack";
 		};
 		class Item12
 		{
