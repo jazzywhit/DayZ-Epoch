@@ -577,16 +577,6 @@ if (true) then
   _this setPos [2197.1992, 12762.035, -0.0002746582];
 };
 
-_vehicle_214 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Hanged", [2163.302, 12856.891, 0.53036225], [], 0, "CAN_COLLIDE"];
-  _vehicle_214 = _this;
-  _this setDir 13.027464;
-  _this setVehicleInit "this setVectorUp [0 ,0 ,1 ]";
-  _this setPos [2163.302, 12856.891, 0.53036225];
-};
-
 _vehicle_217 = objNull;
 if (true) then
 {

@@ -831,16 +831,6 @@ if (true) then
   _this setPos [12061.653, 12636.994, 1.5258789e-005];
 };
 
-_unit_124 = objNull;
-if (true) then
-{
-  _this = createAgent ["HouseWife1", [13468.382, 5439.5752, 2.8821261], [], 0, "CAN_COLLIDE"];
-  _unit_124 = _this;
-  _this setDir -91.741302;
-  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
-  _this setUnitAbility 0.60000002;
-  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
-
 _vehicle_686 = objNull;
 if (true) then
 {

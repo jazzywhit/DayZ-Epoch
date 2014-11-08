@@ -15,3 +15,6 @@ Update epoch.Traders_DATA set item = '["M60A4_EP1",3]' where item like '%M60A4_E
 Update epoch.Traders_DATA set item = '["M249",3]' where item like '%M249_EP1_DZ%';
 Update epoch.Traders_DATA set item = '["M240",3]' where item like '%M240_DZ%';
 Update epoch.Traders_DATA set item = '["Mk_48",3]' where item like '%Mk_48_DZ%';
+
+#Remove Gyros
+DELETE FROM epoch.Traders_DATA WHERE item LIKE '%gyro%';

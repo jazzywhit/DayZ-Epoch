@@ -21,7 +21,7 @@ _trader_base_config = [
 
 _static_trader_base_config = [
 	[[5134.57, 2344.57, 0.0016], "static_aircraft.sqf", 		"Balota Aircraft Trader", 			"ColorBlack"],
-	[[4141.11, 10729.4, 0.0016], "static_aircraft.sqf", 		"NW Aircraft Trader", 				"ColorBlack"]
+	[[4138.92, 10728.7, 0.0016], "static_aircraft.sqf", 		"NW Aircraft Trader", 				"ColorBlack"]
 ];
 
 _hide_markers = true;
