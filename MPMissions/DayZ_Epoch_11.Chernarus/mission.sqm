@@ -1178,7 +1178,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=20;
+		items=18;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1237,7 +1237,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlack";
 		};
-		class Item11
+		class Item9
 		{
 			position[]={12060.471,158.85699,12638.533};
 			name="AirVehicles";
@@ -1245,7 +1245,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlack";
 		};
-		class Item12
+		class Item10
 		{
 			position[]={2187.6755,0.9907096,12753.201};
 			name="BanditDen";
@@ -1253,7 +1253,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorRed";
 		};
-		class Item13
+		class Item11
 		{
 			position[]={11447.91,317.27109,11364.536};
 			name="Klen";
@@ -1261,7 +1261,7 @@ class Mission
 			type="mil_circle";
 			colorName="ColorBlack";
 		};
-		class Item14
+		class Item12
 		{
 			position[]={13441.16,1.1406164,5429.3013};
 			name="BoatDealerEast";
@@ -1269,7 +1269,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlack";
 		};
-		class Item15
+		class Item13
 		{
 			position[]={4064.2258,365.13501,11665.938};
 			name="TradercityBash";
@@ -1277,7 +1277,7 @@ class Mission
 			type="mil_circle";
 			colorName="ColorBlack";
 		};
-		class Item16
+		class Item14
 		{
 			position[]={1008.5195,8.6307526e-005,2125.6699};
 			name="HeroTrader";
@@ -1285,7 +1285,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlue";
 		};
-		class Item17
+		class Item15
 		{
 			position[]={7193.186, 0.30284521, 2230.0115};
 			name="tradercherno";
@@ -1293,7 +1293,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlack";
 		};
-		class Item18
+		class Item16
 		{
 			position[]={13134.313, 6.1988831e-006, 10268.306};
 			name="traderberezino";
@@ -1301,7 +1301,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlack";
 		};
-		class Item19
+		class Item17
 		{
 			position[]={2838.0198, -0.073676318, 6625.1831};
 			name="Tradercitysosnovy";
