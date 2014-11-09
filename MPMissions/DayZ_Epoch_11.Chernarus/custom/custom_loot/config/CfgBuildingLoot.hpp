@@ -26,24 +26,13 @@ class CfgBuildingLoot {
 		lootChance = 0.2;
 		lootPos[] = {};
 		lootType[] = {
-		//one spawn
-		//tools
-			//{"ItemMatchbox","weapon",0.01},
 			{"ItemKnife","weapon",0.01},
 			{"ItemMap","generic",0.01},
 			{"ItemCompass","weapon",0.01},
 			{"ItemFlashlight","weapon",0.01},
-		//weapons
 			{"ItemHatchet_DZE","object",0.01},
-		//special
 			{"WeaponHolder_ItemTent","object",0.01},
-			//{"WeaponHolder_DomeTentStorage","object",0.01},
-		//mags special
 			{"PartWoodPile","magazine",0.04},
-		//bags
-			//{"DZ_Patrol_Pack_EP1","object",0.01},
-		//Multiple spawns
-			//{"","Residential",0.60},
 			{"","generic",0.40}
 		};
 	};
