@@ -240,6 +240,10 @@ class CfgLoot {
 		,{"ItemSledgeHead",0.02}
 		,{"ItemDocument",0.01}
 	};
+	hunter_clothes[] = {
+        {"Skin_Camo1_DZ",0.9}
+        ,{"Skin_Sniper1_DZ",0.1}
+    };
 	clothes[] = {
 		{"Skin_RU_Policeman_DZ",0.11}
 		,{"Skin_Pilot_EP1_DZ",0.1}
@@ -256,10 +260,8 @@ class CfgLoot {
 		,{"Skin_INS_Worker2_DZ",0.02}
 	};
 	militaryclothes[] = {
-		{"Skin_Camo1_DZ",0.09}
-		,{"Skin_Sniper1_DZ",0.08}
-		,{"Skin_Rocket_DZ",0.05}
-		,{"Skin_Soldier1_DZ",0.5}
+		{"Skin_Rocket_DZ",0.14}
+		,{"Skin_Soldier1_DZ",0.58}
 		,{"Skin_Drake_Light_DZ",0.07}
 		,{"Skin_Soldier_TL_PMC_DZ",0.07}
 		,{"Skin_Soldier_Sniper_PMC_DZ",0.05}

@@ -581,23 +581,25 @@ class CfgBuildingLoot {
 		lootChance = 1;
 		lootPos[] = {};
 		lootType[] = {
-			{"ItemMap","weapon",0.02},
-			{"ItemFlashlight","generic",0.01},
-			{"ItemKnife","generic",0.01},
-			{"ItemMatchbox_DZE","generic",0.03},
-			{"farmweapons", "cfglootweapon", 0.25 },
-			{"WeaponHolder_ItemMachete","object",0.02},
-			{"huntingrifle", "weapon", 0.17},
+			{"ItemMap","weapon",0.05},
+			{"ItemFlashlight","generic",0.05},
+			{"ItemKnife","generic",0.05},
+			{"ItemMatchbox_DZE","generic",0.05},
+			{"farmweapons", "cfglootweapon", 0.4 },
+			{"WeaponHolder_ItemMachete","object",0.05},
+			{"huntingrifle", "weapon", 0.1},
+			{"pistols_bric", "cfglootweapon", 0.15},
+			{"", "hunter_clothes", 0.05 },
 			{"","hunter",0.5}
 		};
 		lootTypeSmall[] =	{
-			{"ItemMap","weapon",0.02},
+			{"ItemMap","weapon",0.06},
 			{"ItemFlashlight","weapon",0.02},
 			{"ItemKnife","weapon",0.02},
 			{"ItemMatchbox_DZE","weapon",0.04},
 			{"","military_bric",0.4},
 			{"5x_22_LR_17_HMR","weapon", 0.08},
-			{"","hunter",0.5}
+			{"","hunter",0.4}
 		};
 	};
 	class DynamicDebris: Default

@@ -2,7 +2,7 @@
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%skin%';
 
 # Ammo
-UPDATE epoch.Traders_DATA SET buy = '[1,"ItemGoldBar10oz",1]' WHERE item LIKE '%5Rnd_86x70_L115A1%';  # Update ammo to cost the same as it sells for
+UPDATE epoch.Traders_DATA SET buy = '[1,"ItemGoldBar10oz",1]' WHERE item LIKE '%L115A1%';  # Update ammo to cost the same as it sells for
 UPDATE epoch.Traders_DATA SET buy = sell WHERE item LIKE '%Rnd%';  # Update ammo to cost the same as it sells for
 
 # Food Items
@@ -11,7 +11,6 @@ UPDATE epoch.Traders_DATA SET sell = '[2,"ItemGoldBar",1]' WHERE item LIKE '%sod
 UPDATE epoch.Traders_DATA SET buy = '[2,"ItemGoldBar",1]' WHERE item LIKE '%food%'; # Update buy price for food to be 2 gold
 UPDATE epoch.Traders_DATA SET sell = '[5,"ItemSilverBar",1]' WHERE item LIKE '%food%'; # Update sell price for food to be 5 silver
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%cooked%'; # Remove cooked food from traders
-#Add basic sodas here to be 5 silver to sell
 
 # Remove Items
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%cinder%'; # Remove cinder blocks from the traders
@@ -38,7 +37,7 @@ UPDATE epoch.Traders_DATA SET sell = '[5,"ItemSilverBar10oz",1]' WHERE item LIKE
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%Pecheneg%",3]';
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%ksvk%",3]';
 
-#Remove Vehicles
+# Vehicles
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%gyro%';
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%C130J_US_EP1%';
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%FN_FAL_ANPVS4%';
@@ -46,3 +45,8 @@ DELETE FROM epoch.Traders_DATA WHERE item LIKE '%Vodnik%';
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%LandRover_MG_TK_EP1_DZE%';
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%LandRover_Special_CZ_EP1_DZE%';
 DELETE FROM epoch.Traders_DATA WHERE item LIKE '%ArmoredSUV_PMC_DZE%';
+DELETE FROM epoch.Traders_DATA WHERE item LIKE '%HMMWV_M1151%'; #GPK
+UPDATE epoch.Traders_DATA SET buy = '[5,"ItemBriefcase100oz",1]' WHERE item LIKE '%HMMWV_M998A2_SOV%'; # Grenade HMMV
+UPDATE epoch.Traders_DATA SET sell = '[2,"ItemBriefcase100oz",1]' WHERE item LIKE '%HMMWV_M998A2_SOV%';
+
+
