@@ -540,12 +540,12 @@ class CfgBuildingLoot {
 		lootChance = 0.4;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles_bric", "cfglootweapon", 0.16 },
+			{ "assaultrifles_bric_high", "cfglootweapon", 0.16 },
 			{ "machineguns_bric", "cfglootweapon", 0.08 },
 			{ "pistols_bric", "cfglootweapon", 0.1 },
 			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
-			{"AmmoBoxSmall_762","object",0.02},
-			{"Binocular","weapon",0.01},
+			{"AmmoBoxSmall_762","object",0.01},
+			{"Binocular","weapon",0.02},
 			{"ItemRadio","weapon",0.05},
 			{"ItemFlashlightRed","military_bric",0.02},
 			{"ItemKnife","military_bric",0.01},
@@ -683,8 +683,7 @@ class CfgBuildingLoot {
 			{ "M16A2", "weapon", 0.03 },
 			{ "M16A2GL", "weapon", 0.01 },
 			{ "M249", "weapon", 0.01 },
-			{ "M9SD", "weapon", 0.02 },
-			{ "Pecheneg", "weapon", 0.02 },
+			{ "M9SD", "weapon", 0.04 },
 			{ "PK", "weapon", 0.01 },
 			{ "AK_74", "weapon", 0.02 },
 			{ "M4A1_Aim", "weapon", 0.01 },
