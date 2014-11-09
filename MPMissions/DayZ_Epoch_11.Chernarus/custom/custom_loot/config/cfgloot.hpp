@@ -240,6 +240,10 @@ class CfgLoot {
 		,{"ItemSledgeHead",0.02}
 		,{"ItemDocument",0.01}
 	};
+	hunter_clothes[] = {
+        {"Skin_Camo1_DZ",0.9}
+        ,{"Skin_Sniper1_DZ",0.1}
+    };
 	clothes[] = {
 		{"Skin_RU_Policeman_DZ",0.11}
 		,{"Skin_Pilot_EP1_DZ",0.1}
@@ -256,10 +260,8 @@ class CfgLoot {
 		,{"Skin_INS_Worker2_DZ",0.02}
 	};
 	militaryclothes[] = {
-		{"Skin_Camo1_DZ",0.09}
-		,{"Skin_Sniper1_DZ",0.08}
-		,{"Skin_Rocket_DZ",0.05}
-		,{"Skin_Soldier1_DZ",0.5}
+		{"Skin_Rocket_DZ",0.14}
+		,{"Skin_Soldier1_DZ",0.58}
 		,{"Skin_Drake_Light_DZ",0.07}
 		,{"Skin_Soldier_TL_PMC_DZ",0.07}
 		,{"Skin_Soldier_Sniper_PMC_DZ",0.05}
@@ -439,17 +441,23 @@ class CfgLoot {
 		,{"100Rnd_556x45_BetaCMag", 0.08}
 	};
 	assaultrifles_bric[] = {
-		{"AKS_74_kobra",0.05}
-		,{"AKS_74_U",0.20}
-		,{"AKS_GOLD",0.01}
-		,{"AK_47_M",0.10}
-		,{"AK_74",0.2}
-		,{"Sa58P_EP1",0.20}
-		,{"Sa58V_CCO_EP1",0.08}
-		,{"Sa58V_EP1",0.16}
-		,{"Sa58V_RCO_EP1",0.08}
+	    {"AKS_74_U",0.4}
+		,{"AK_74",0.38}
 		,{"RPK_74",0.02}
+		,{"AKS_74_kobra",0.1}
+		,{"Sa58P_EP1",0.02}
+		,{"Sa58V_EP1",0.02}
+		,{"AK_47_M",0.06}
 	};
+    assaultrifles_bric_high[] = {
+        {"AKS_GOLD",0.01}
+        ,{"AK_47_M",0.24}
+        ,{"Sa58V_RCO_EP1",0.05}
+        ,{"Sa58V_CCO_EP1",0.1}
+        ,{"RPK_74",0.1}
+        ,{"Sa58P_EP1",0.25}
+        ,{"Sa58V_EP1",0.25}
+    };
 	assaultrifleammo_bric[] = {
 		{"30Rnd_762x39_SA58",0.05}
 		,{"30Rnd_762x39_AK47",0.40}
@@ -473,8 +481,7 @@ class CfgLoot {
 	};
 	machineguns_bric[] = {
 		{"RPK_74",0.8}
-		,{"Pecheneg",0.03}
-		,{"PK",0.17}
+		,{"PK",0.2}
 	};
 	machinegunammo_bric[] = {
 		{"75Rnd_545x39_RPK",0.90}

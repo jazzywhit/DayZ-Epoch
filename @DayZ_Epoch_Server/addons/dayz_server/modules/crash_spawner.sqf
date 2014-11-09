@@ -39,7 +39,6 @@ _heliModel = [
 			"AH1Z",
 			"AV8B",
 			"Su25_TK_EP1",
-			"C130J",
 			"Su34"
 			] call BIS_fnc_selectRandom;
 _crashModel    		= "UH1Wreck_DZ";    //The type of Crash model used after the heli crashes
@@ -92,6 +91,7 @@ if(_heliModel == "Ka52Black") then {
 
 if(_heliModel == "Mi17_DZ") then {
 	_lootTable    = "MilitarySpecial";
+	_lootMultiplier = 2;
     _crashModel     = "Mi8Wreck";
 };
 
@@ -114,6 +114,7 @@ if(_heliModel == "GNT_C185") then {
 
 if(_heliModel == "MV22") then {
     _lootTable    = "PlaneCrash";
+    _lootMultiplier = 2;
     _crashModel     = "MV22Wreck";
     _plane         = true;
 };

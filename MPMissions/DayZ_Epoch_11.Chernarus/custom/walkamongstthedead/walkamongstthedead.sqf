@@ -34,9 +34,9 @@
 		[] spawn sand_cleanCheck;
 		if !(DZ_IGNORESHOTSFIRED) then {
 			_EH_Fired = player addEventHandler ["Fired", {
-				cutText [format["You fired your weapon. Zombies are aware of you now."], "PLAIN DOWN"];
-				_txt = "Get out of combat for the effect to return.";
-				systemChat ("Zombie ninja: "+str _txt+"");
+				//cutText [format["You fired your weapon. Zombies are aware of you now."], "PLAIN DOWN"];
+				//_txt = "Get out of combat for the effect to return.";
+				//systemChat ("Zombie ninja: "+str _txt+"");
 				hasGutsOnHim = false;
 			}];
 		};
@@ -44,8 +44,8 @@
 		// Lose camo if player changes clothes
 		if (typeOf player != sand_SkinType) then {
 			[] spawn {
-				_txt = "Skin change detected! You just lost your camo...";
-				systemChat ("Zombie ninja: "+str _txt+"");
+				//_txt = "Skin change detected! You just lost your camo...";
+				//systemChat ("Zombie ninja: "+str _txt+"");
 				sleep 0.1;
 				call sand_endScript;
 				//waitUntil {!sand_washed};
@@ -60,9 +60,9 @@
 };
 
 sand_shieldON = {
-	private ["_txt"];
-	_txt = "Zombies think you are one of them.";
-	systemChat ("Zombie ninja: "+str _txt+"");
+	//private ["_txt"];
+	//_txt = "Zombies think you are one of them.";
+	//systemChat ("Zombie ninja: "+str _txt+"");
 	//cutText [_txt,"PLAIN DOWN"];
 	player_zombieCheck = {};
 	player_zombieAttack = {};
@@ -70,9 +70,9 @@ sand_shieldON = {
 };
 
 sand_shieldOFF = {
-	private ["_txt"];
-	_txt = "Zombies are aware of you now.";
-	systemChat ("Zombie ninja: "+str _txt+"");
+	//private ["_txt"];
+	//_txt = "Zombies are aware of you now.";
+	//systemChat ("Zombie ninja: "+str _txt+"");
 	//cutText [_txt,"PLAIN DOWN"];
 	player_zombieCheck = compile preprocessFileLineNumbers '\z\addons\dayz_code\compile\player_zombieCheck.sqf';
 	player_zombieAttack = compile preprocessFileLineNumbers '\z\addons\dayz_code\compile\player_zombieAttack.sqf';
@@ -94,7 +94,7 @@ sand_makeSounds = {
 		if ((round(random _chance) == _chance) or (_chance == 0)) then {
 			_sound = "z_" + _plsound;
 			[nil,player,rSAY,[_sound, 10]] call RE;
-			if (isNil "showNotificationOnce") then {systemChat ("Zombie ninja: You will be making random zombie sounds like this one."); showNotificationOnce = false;};
+			//if (isNil "showNotificationOnce") then {systemChat ("Zombie ninja: You will be making random zombie sounds like this one."); showNotificationOnce = false;};
 			sleep 1;
 		};
 		if (!DZ_ZCAMO_DEFAULT) then {

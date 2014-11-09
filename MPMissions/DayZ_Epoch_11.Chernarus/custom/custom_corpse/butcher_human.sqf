@@ -54,8 +54,9 @@ if (!_isBuried) then {
         clearMagazineCargoGlobal _box;
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
-        _box addMagazineCargoGlobal ["FoodSteakRaw",1]; //Add Food
+        _box addMagazineCargoGlobal ["FoodbaconRaw",1]; //Add Food
 		if (_isPlayer) then {
+		    cutText ["You have documented your kill, someone will want to see this...", "PLAIN DOWN"];
 			_box addWeaponCargoGlobal ["Kostey_notebook",1]; //Add Kill Record
 		};
 		

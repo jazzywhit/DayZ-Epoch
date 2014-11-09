@@ -1685,14 +1685,6 @@ if (true) then
   _this setPos [4893.8208, 9561.4746, 3.0517578e-005];
 };
 
-_vehicle_804 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Hanged", [4886.4512, 9580.0186, -6.1035156e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_804 = _this;
-  _this setPos [4886.4512, 9580.0186, -6.1035156e-005];
-};
-
 _vehicle_808 = objNull;
 if (true) then
 {
@@ -1716,15 +1708,6 @@ if (true) then
   _vehicle_811 = _this;
   _this setDir -30.353226;
   _this setPos [4529.6191, 9854.7646, -3.0517578e-005];
-};
-
-_vehicle_818 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Sign_sphere10cm_EP1", [4895.0903, 9566.0762, 3.1082542], [], 0, "CAN_COLLIDE"];
-  _vehicle_818 = _this;
-  _this setVehicleInit "BIS_Effects_Burn = compile preprocessFile ""\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf""; nul = [this, 4, time, false, false] spawn BIS_Effects_Burn";
-  _this setPos [4895.0903, 9566.0762, 3.1082542];
 };
 
 _vehicle_826 = objNull;

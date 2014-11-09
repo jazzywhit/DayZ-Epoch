@@ -2,6 +2,15 @@
 if(DZE_ActionInProgress) exitWith { cutText [(localize "str_epoch_player_40") , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
 
+/////////////////////////////////////////////
+// Check locally if there is a city or town and cancel building
+// NO building in cities or towns (if you don't mind people building in Villages, remove "NameVillage" etc)
+private ["_nearestCity"];
+_nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage", "Airport"],700];
+// No building in Cities or Towns
+if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 700m of a Capital, City, Village, or Airport!");};
+///////////////////////////////////////////
+
 private ["_itemConfig","_classname","_classnametmp","_require","_text","_ghost","_lockable","_requireplot","_isAllowedUnderGround","_offset","_isPole","_isLandFireDZ","_hasRequired","_hasrequireditem","_reason","_buildObject","_location1","_object","_objectHelper","_position","_controls","_cancel","_dir"];
 
 /*Basic Defines*/

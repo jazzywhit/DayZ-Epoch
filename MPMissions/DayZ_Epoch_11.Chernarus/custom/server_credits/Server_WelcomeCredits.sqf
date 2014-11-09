@@ -23,12 +23,9 @@ _onScreenTime = 8; 		//how long one role should stay on screen. Use value from 0
 waitUntil {!isNil "dayz_animalCheck"}; //remove this line completely to make it work in ArmA 3. Yes you read that correctly.
 sleep 10; //Wait in seconds before the credits start after player IS ingame
 
-//introSong
-playsound "introSong";
-
 
 _role1 = "Bolt Action Hardcore";
-_role1names = ["Narrow Minded Gaming", "narrowmindedgaming.com"];
+_role1names = ["Narrow Minded Gaming", "narrowmindedgaming.com", "@narrowmgaming", "/r/nmg/"];
 _role2 = "Supported Mods";
 _role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
 _role3 = "True Hardcore";

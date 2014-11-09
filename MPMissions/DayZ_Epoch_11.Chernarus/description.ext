@@ -202,7 +202,7 @@ class RscTitles
 
 class CfgSounds
 {
-	sounds[] ={z_wzombie1,z_wzombie2,introSong};
+	sounds[] ={z_wzombie1,z_wzombie2};
 	
 	
 	class z_wzombie1 {
@@ -214,12 +214,7 @@ class CfgSounds
 	class z_wzombie2 : z_wzombie1 {
 		sound[] = {"custom\walkamongstthedead\dayz_sfx\femalezombie_spotted_01.ogg",0.3,1,40};
 	};
-	
-	class introSong {
-		name="introSong";
-		sound[]={"custom\server_credits\introSong.ogg",0.9,1};
-		titles[] = {};
-    };
+
 };
 
 //change safe code

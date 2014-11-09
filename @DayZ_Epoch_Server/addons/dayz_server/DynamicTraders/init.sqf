@@ -6,25 +6,25 @@ You will need to go into each file in the traders file and change the model/skin
 Look in server_traders.sqf in the mission pbo for more information.
 
 */
-private ["_trader_base_config", "_static_trader_base_config", "_markers"];
+private ["_trader_base_config", "_static_trader_base_config", "_markers", "_hide_markers"];
 
 DT_fnc_ObjectsMapper = compile preprocessFileLineNumbers "\z\addons\dayz_server\DynamicTraders\objectMapper.sqf";
 DT_fnc_CreateTrader = compile preprocessFileLineNumbers "\z\addons\dayz_server\DynamicTraders\createTrader.sqf";
 
 _trader_base_config = [
-	[1, "general.sqf", 		"General/Building Traders", 	"ColorBlack"],
+	[3, "general.sqf", 		"General/Building Traders", 	"ColorBlack"],
 	[1, "medical.sqf", 		"Medical Trader", 				"ColorBlack"],
-	[1, "weapons.sqf", 		"Weapons Trader", 				"ColorBlack"],
-	[1, "wholesaler.sqf", 	"Wholesaler", 					"ColorBlack"],
-	[2, "boat.sqf", 		"Boat", 						"ColorBlack"]
+	[2, "weapons.sqf", 		"Weapons Trader", 				"ColorBlack"],
+	[2, "wholesaler.sqf", 	"Wholesaler", 					"ColorBlack"],
+	[3, "boat.sqf", 		"Boat", 						"ColorBlack"]
 ];
 
 _static_trader_base_config = [
-	[[8989.61,7769.91, 1.81754], "hemp.sqf", 			"Hemp Trader", 						"ColorGreen"],
-	[[5134.57, 2344.57, 0.0016], "aircraft.sqf", 		"Balota Aircraft Trader", 			"ColorBlack"],
-	[[4141.11, 10729.4, 0.0016], "aircraft.sqf", 		"NW Aircraft Trader", 				"ColorBlack"]
+	[[5134.57, 2344.57, 0.0016], "static_aircraft.sqf", 		"Balota Aircraft Trader", 			"ColorBlack"],
+	[[4138.92, 10728.7, 0.0016], "static_aircraft.sqf", 		"NW Aircraft Trader", 				"ColorBlack"]
 ];
 
+_hide_markers = true;
 _markers = [];
 waitUntil { sleep 1; !isNil "sm_done" };
 
@@ -95,6 +95,11 @@ BlackMarketTrader = ["GUE_Woodlander2", [0,0], (135.159-180)] call DT_fnc_Create
 	};
 	true
 } count _trader_base_config;
+
+// Reset all of the current markers for the dynamic traders if _hide_markers
+if (_hide_markers) then {
+    _markers = [];
+};
 
 //////////////////////////////////////////////
 //Loop through all of the Static Traders w/mission files

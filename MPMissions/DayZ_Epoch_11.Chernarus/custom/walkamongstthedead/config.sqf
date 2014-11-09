@@ -1,7 +1,7 @@
 //Defining variables
 hasGutsOnHim = false;
 /* Amount of time it takes (in seconds) until the zombie camo wears off. (Default: 30min. Set to 0 to always have zombie camo ON when applied, until you wash it off) */
-DZ_ZCAMO_USE_TIME = 1800;
+DZ_ZCAMO_USE_TIME = 600;
 
 /* Set this to true to NOT have humanity or blood loss under the zombie camo effect. */
 /* Setting it to true will ignore all humanity/blood values bellow no matter what you put there. */

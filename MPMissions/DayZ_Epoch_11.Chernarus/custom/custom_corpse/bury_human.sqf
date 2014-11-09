@@ -51,13 +51,14 @@ if (!_isBuried) then {
 			_backpackMag = getMagazineCargo unitBackpack _corpse;
 		};
 		
-		_box = createVehicle ["Foodbox0", _position, [], 0, "CAN_COLLIDE"];
+		_box = createVehicle ["USBasicAmmunitionBox", _position, [], 0, "CAN_COLLIDE"];
         _box setpos [(getposATL _box select 0),(getposATL _box select 1)+1.2, 0];
         clearWeaponCargoGlobal _box;
         clearMagazineCargoGlobal _box;
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
 		if (_isPlayer) then {
+		    cutText ["Take what you can back to the hero camp...", "PLAIN DOWN"];
 			_box addWeaponCargoGlobal ["EvDogTags",1]; //Add Dog Tags to the body, use them for currency
 		};
 		

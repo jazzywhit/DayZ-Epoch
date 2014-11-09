@@ -137,9 +137,9 @@ class CfgBuildingLoot {
 			{"ItemToolbox","weapon",0.06},
 			{"ItemCrowbar","weapon",0.05},
 			{"ItemWire","magazine",0.04},
-			{"ItemTankTrap","magazine",0.04},
+			{"ItemTankTrap","magazine",0.05},
 			{"ItemKeyKit","weapon",0.01},
-			{"CinderBlocks","magazine",0.02},
+			{"CinderBlocks","magazine",0.01},
 			{ "PartPlywoodPack", "magazine", 0.05},
 			{ "PartPlankPack", "magazine", 0.05 }
 		};
@@ -540,12 +540,12 @@ class CfgBuildingLoot {
 		lootChance = 0.4;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles_bric", "cfglootweapon", 0.16 },
+			{ "assaultrifles_bric_high", "cfglootweapon", 0.16 },
 			{ "machineguns_bric", "cfglootweapon", 0.08 },
 			{ "pistols_bric", "cfglootweapon", 0.1 },
 			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
-			{"AmmoBoxSmall_762","object",0.02},
-			{"Binocular","weapon",0.01},
+			{"AmmoBoxSmall_762","object",0.01},
+			{"Binocular","weapon",0.02},
 			{"ItemRadio","weapon",0.05},
 			{"ItemFlashlightRed","military_bric",0.02},
 			{"ItemKnife","military_bric",0.01},
@@ -581,23 +581,25 @@ class CfgBuildingLoot {
 		lootChance = 1;
 		lootPos[] = {};
 		lootType[] = {
-			{"ItemMap","weapon",0.02},
-			{"ItemFlashlight","generic",0.01},
-			{"ItemKnife","generic",0.01},
-			{"ItemMatchbox_DZE","generic",0.03},
-			{"farmweapons", "cfglootweapon", 0.25 },
-			{"WeaponHolder_ItemMachete","object",0.02},
-			{"huntingrifle", "weapon", 0.17},
+			{"ItemMap","weapon",0.05},
+			{"ItemFlashlight","generic",0.05},
+			{"ItemKnife","generic",0.05},
+			{"ItemMatchbox_DZE","generic",0.05},
+			{"farmweapons", "cfglootweapon", 0.4 },
+			{"WeaponHolder_ItemMachete","object",0.05},
+			{"huntingrifle", "weapon", 0.1},
+			{"pistols_bric", "cfglootweapon", 0.15},
+			{"", "hunter_clothes", 0.05 },
 			{"","hunter",0.5}
 		};
 		lootTypeSmall[] =	{
-			{"ItemMap","weapon",0.02},
+			{"ItemMap","weapon",0.06},
 			{"ItemFlashlight","weapon",0.02},
 			{"ItemKnife","weapon",0.02},
 			{"ItemMatchbox_DZE","weapon",0.04},
 			{"","military_bric",0.4},
 			{"5x_22_LR_17_HMR","weapon", 0.08},
-			{"","hunter",0.5}
+			{"","hunter",0.4}
 		};
 	};
 	class DynamicDebris: Default
@@ -681,8 +683,7 @@ class CfgBuildingLoot {
 			{ "M16A2", "weapon", 0.03 },
 			{ "M16A2GL", "weapon", 0.01 },
 			{ "M249", "weapon", 0.01 },
-			{ "M9SD", "weapon", 0.02 },
-			{ "Pecheneg", "weapon", 0.02 },
+			{ "M9SD", "weapon", 0.04 },
 			{ "PK", "weapon", 0.01 },
 			{ "AK_74", "weapon", 0.02 },
 			{ "M4A1_Aim", "weapon", 0.01 },
