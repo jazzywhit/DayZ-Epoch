@@ -6,7 +6,7 @@ DZE_ActionInProgress = true;
 // Check locally if there is a city or town and cancel building
 // NO building in cities or towns (if you don't mind people building in Villages, remove "NameVillage" etc)
 private ["_nearestCity"];
-_nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage", "Airport"],2000];
+_nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage", "Airport"],700];
 // No building in Cities or Towns
 if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 2km of a Capital, City, Village, or Airport!");};
 ///////////////////////////////////////////
