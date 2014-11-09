@@ -133,7 +133,7 @@ DZMSConTools = [
 	"ItemCrowbar",
 	"ItemKnife",
 	"ItemEtool",
-	"ItemHatchet_DZE"
+	"ItemHatchet"
 	];
 
 DZMSConSupply = [

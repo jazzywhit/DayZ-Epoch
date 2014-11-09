@@ -20,9 +20,9 @@ DZAI_Backpacks2New = ["DZ_CompactPack_EP1","DZ_GunBag_EP1"]; //Added: DZ_Compact
 DZAI_Backpacks3New = ["DZ_GunBag_EP1","DZ_LargeGunBag_EP1"]; //Added: DZ_GunBag_EP1, DZ_LargeGunBag_EP1
 
 //Do not edit below lines. Replaces standard hatchet and matchbox classnames with Epoch versions.
-(DZAI_tools0 select 3) set [0,"ItemHatchet_DZE"];
+(DZAI_tools0 select 3) set [0,"ItemHatchet"];
 (DZAI_tools0 select 7) set [0,"ItemMatchbox_DZE"];
-(DZAI_tools1 select 3) set [0,"ItemHatchet_DZE"];
+(DZAI_tools1 select 3) set [0,"ItemHatchet"];
 (DZAI_tools1 select 7) set [0,"ItemMatchbox_DZE"];
 
 diag_log "[DZAI] Epoch classnames loaded.";

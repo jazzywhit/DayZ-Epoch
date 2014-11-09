@@ -1261,7 +1261,7 @@ class CfgWeight
 			weight = 1;
 		};
 		
-		class ItemHatchet_DZE  
+		class ItemHatchet
 		{
 			weight = 1;
 		};
