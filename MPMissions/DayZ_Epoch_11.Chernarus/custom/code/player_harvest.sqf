@@ -48,7 +48,11 @@ if (_ammo isKindOf "Hatchet_Swing_Ammo" || _ammo isKindOf "Chainsaw_Swing_Ammo")
 				if (round(random 1) > 0.5) then {
 
 					_countOut = 1;
-					_itemOut = "PartWoodLumber";
+					if (round(random 1) > 0.5) then {
+					    _itemOut = "PartWoodLumber";
+                    } else {
+                        _itemOut = "PartWoodPile";
+                    };
 
 					_nearByPile= nearestObjects [getPosATL player, ["WeaponHolder"],2];
 					if (count _nearByPile == 0) then { 
