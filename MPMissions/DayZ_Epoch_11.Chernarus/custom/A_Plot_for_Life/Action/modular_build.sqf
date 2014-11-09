@@ -8,7 +8,7 @@ DZE_ActionInProgress = true;
 private ["_nearestCity"];
 _nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage", "Airport"],700];
 // No building in Cities or Towns
-if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 2km of a Capital, City, Village, or Airport!");};
+if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 700m of a Capital, City, Village, or Airport!");};
 ///////////////////////////////////////////
 
 private ["_itemConfig","_classname","_classnametmp","_require","_text","_ghost","_lockable","_requireplot","_isAllowedUnderGround","_offset","_isPole","_isLandFireDZ","_hasRequired","_hasrequireditem","_reason","_buildObject","_location1","_object","_objectHelper","_position","_controls","_cancel","_dir"];
