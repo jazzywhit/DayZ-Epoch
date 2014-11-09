@@ -98,8 +98,9 @@ class CfgLoot {
 	generic[] = {
 		{"ItemSodaEmpty",0.06}
 		,{"TrashJackDaniels",0.04}
+		,{"ItemNewspaper",0.04}
 		,{"ItemWaterbottleUnfilled",0.02}
-		,{"ItemBandage",0.15}
+		,{"ItemBandage",0.11}
 		,{"7Rnd_45ACP_1911",0.03}
 		,{"5x_22_LR_17_HMR",0.01}
 		,{"6Rnd_45ACP",0.08}

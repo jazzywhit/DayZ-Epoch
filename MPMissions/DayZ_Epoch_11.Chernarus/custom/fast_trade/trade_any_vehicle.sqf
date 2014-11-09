@@ -170,13 +170,6 @@ cutText [(localize "str_epoch_player_105"), "PLAIN DOWN"];
 					};
 				} forEach _hitpoints;
 
-				// find average tire damage
-				if(_tireDmg > 0 and _tires > 0) then {
-					if((_tireDmg / _tires) > 0.75) then {
-						_okToSell = false;
-					};
-				};
-
 				_objectID			= _obj getVariable ["ObjectID","0"];
 				_objectUID			= _obj getVariable ["ObjectUID","0"];
 				_objectCharacterId	= _obj getVariable ["CharacterID","0"];

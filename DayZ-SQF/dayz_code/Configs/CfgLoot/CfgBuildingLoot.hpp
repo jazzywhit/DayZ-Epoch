@@ -440,9 +440,7 @@ class CfgBuildingLoot {
 			{"","generic",0.25},
 			{"","military",0.07},
 			{"ItemEtool","weapon",0.03},
-			
 			{"ItemSandbag","magazine",0.02},
-
 			{"ItemFuelBarrelEmpty","magazine",0.03},
 			{"fuel_pump_kit","magazine",0.01},
 			{ "machineguns", "cfglootweapon", 0.01 }

@@ -8,16 +8,12 @@ class CfgBuildingLoot {
 		zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_suit1","z_suit2","z_worker1","z_worker2","z_worker3","z_villager1","z_villager2","z_villager3"};
 		lootChance = 0;
 		lootPos[] = {};
-
 		lootPosSmall[] = {};
 		lootPosZombie[] = {};
-		
 		itemType[] = {};
-
 		itemChance[] = {};
 		lootTypeSmall[] = {};
 		itemChanceSmall[] = {};
-
 		hangPos[] = {};
 		vehPos[] = {};
 	};
@@ -340,8 +336,8 @@ class CfgBuildingLoot {
 			{ "assaultrifles_bric", "cfglootweapon", 0.36 },
 			{ "submachinegun_bric", "cfglootweapon", 0.2 },
 			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
-			{ "machineguns_bric", "cfglootweapon", 0.06 },
-			{ "pistols_bric", "cfglootweapon", 0.05},
+			{ "machineguns_bric", "cfglootweapon", 0.01 },
+			{ "pistols_bric", "cfglootweapon", 0.1},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.06 },
 			{"","military_bric",0.15},
 			{"Igla","magazine",0.01},
@@ -422,9 +418,9 @@ class CfgBuildingLoot {
 			{"","medical",0.03},
 			{"","generic",0.1},
 			{"","military_bric",0.3},
-			{"ItemEtool","weapon",0.02},
-			{"ItemSandbag","magazine",0.02},
-			{ "machineguns_bric", "cfglootweapon", 0.03 }
+			{"ItemEtool","weapon",0.03},
+			{"ItemSandbag","magazine",0.03},
+			{ "machineguns_bric", "cfglootweapon", 0.01 }
 		};
 		lootTypeSmall[] = {
 			{ "Binocular", "weapon", 0.05 },
@@ -530,9 +526,9 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		lootType[] = {
 			{ "assaultrifles_bric_high", "cfglootweapon", 0.16 },
-			{ "machineguns_bric", "cfglootweapon", 0.08 },
-			{ "pistols_bric", "cfglootweapon", 0.1 },
-			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
+			{ "machineguns_bric", "cfglootweapon", 0.01 },
+			{ "pistols_bric", "cfglootweapon", 0.17 },
+			{"sniperrifles_bric", "cfglootweapon", 0.01 },
 			{"AmmoBoxSmall_762","object",0.01},
 			{"Binocular","weapon",0.02},
 			{"ItemRadio","weapon",0.05},
@@ -730,6 +726,5 @@ class CfgBuildingLoot {
 	#include "CfgBuildingPos.hpp"
 	//If you want to copypast your loottable to your mission w/o
 	//changing something on the lootPos then use the a include instead of copypasting the CfgBuildingPos.hpp
-
 	//#include "\dayz_epoch_b\CfgBuildingPos.hpp"
 };
