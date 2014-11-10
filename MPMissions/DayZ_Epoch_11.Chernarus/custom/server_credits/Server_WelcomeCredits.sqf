@@ -56,6 +56,5 @@ _role4names = ["Custom Missions/AI", "Custom Traders", "Custom Cities", "Realist
 	[_role1, _role1names],
 	[_role2, _role2names],
 	[_role3, _role3names],
-	[_role4, _role4names],
-	[_role5, _role5names]
+	[_role4, _role4names]
 ];
