@@ -56,6 +56,11 @@ if(isnil "MaxMineVeins") then {
 	MaxMineVeins = 50;
 };
 
+// Config trader instead of SQL
+if(isNil "DZE_ConfigTrader") then {
+	DZE_ConfigTrader = true;
+};
+
 //Plot for life and snap building
 DZE_APlotforLife = true;
 DZE_modularBuild = true;
