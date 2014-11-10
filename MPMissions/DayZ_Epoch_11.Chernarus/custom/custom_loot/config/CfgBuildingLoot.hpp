@@ -8,16 +8,12 @@ class CfgBuildingLoot {
 		zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_suit1","z_suit2","z_worker1","z_worker2","z_worker3","z_villager1","z_villager2","z_villager3"};
 		lootChance = 0;
 		lootPos[] = {};
-
 		lootPosSmall[] = {};
 		lootPosZombie[] = {};
-		
 		itemType[] = {};
-
 		itemChance[] = {};
 		lootTypeSmall[] = {};
 		itemChanceSmall[] = {};
-
 		hangPos[] = {};
 		vehPos[] = {};
 	};
@@ -26,24 +22,13 @@ class CfgBuildingLoot {
 		lootChance = 0.2;
 		lootPos[] = {};
 		lootType[] = {
-		//one spawn
-		//tools
-			//{"ItemMatchbox","weapon",0.01},
 			{"ItemKnife","weapon",0.01},
 			{"ItemMap","generic",0.01},
 			{"ItemCompass","weapon",0.01},
 			{"ItemFlashlight","weapon",0.01},
-		//weapons
-			{"ItemHatchet","object",0.01},
-		//special
+			{"ItemHatchet_DZE","object",0.01},
 			{"WeaponHolder_ItemTent","object",0.01},
-			//{"WeaponHolder_DomeTentStorage","object",0.01},
-		//mags special
 			{"PartWoodPile","magazine",0.04},
-		//bags
-			//{"DZ_Patrol_Pack_EP1","object",0.01},
-		//Multiple spawns
-			//{"","Residential",0.60},
 			{"","generic",0.40}
 		};
 	};
@@ -93,25 +78,24 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		lootType[] = {
 			{"ItemWatch","generic",0.04},
-			{"ItemFlashlight","generic",0.06},
-			{"","generic",0.32},
+			{"ItemFlashlight","generic",0.04},
 			{"","trash",0.2},
-			{"","office",0.08},
-			{"Binocular","weapon",0.02},
+			{"","office",0.32},
+			{"Binocular","weapon",0.05},
 			{"ItemRadio","weapon",0.01},
 			{"ItemCrowbar","object",0.04},
-			{"pistols_bric","cfglootweapon",0.13 },
-			{"shotgunsingleshot", "cfglootweapon", 0.1}
+			{"pistols_bric","cfglootweapon",0.15 },
+			{"shotgunsingleshot", "cfglootweapon", 0.15}
 		};
 		lootTypeSmall[] = {
-			{ "ItemWatch","weapon",0.07 },
-			{ "ItemCompass","weapon",0.06 },
+			{ "ItemWatch","weapon",0.05 },
+			{ "ItemCompass","weapon",0.05 },
 			{ "ItemMap","weapon",0.05 },
-			{ "ItemFlashlight","weapon",0.07 },
-			{ "","generic",0.4 },			
-			{ "","trash",0.28 },
-			{ "Binocular","weapon",0.04 },
-			{ "ItemDocument","magazine",0.03 }
+			{ "ItemFlashlight","weapon",0.05 },
+			{ "","generic",0.5 },
+			{ "","trash",0.2 },
+			{ "Binocular","weapon",0.06 },
+			{ "ItemDocument","magazine",0.04 }
 		};
 	};
 	class Industrial: Default {
@@ -351,8 +335,8 @@ class CfgBuildingLoot {
 			{ "assaultrifles_bric", "cfglootweapon", 0.36 },
 			{ "submachinegun_bric", "cfglootweapon", 0.2 },
 			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
-			{ "machineguns_bric", "cfglootweapon", 0.06 },
-			{ "pistols_bric", "cfglootweapon", 0.05},
+			{ "machineguns_bric", "cfglootweapon", 0.01 },
+			{ "pistols_bric", "cfglootweapon", 0.1},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.06 },
 			{"","military_bric",0.15},
 			{"Igla","magazine",0.01},
@@ -433,9 +417,9 @@ class CfgBuildingLoot {
 			{"","medical",0.03},
 			{"","generic",0.1},
 			{"","military_bric",0.3},
-			{"ItemEtool","weapon",0.02},
-			{"ItemSandbag","magazine",0.02},
-			{ "machineguns_bric", "cfglootweapon", 0.03 }
+			{"ItemEtool","weapon",0.03},
+			{"ItemSandbag","magazine",0.03},
+			{ "machineguns_bric", "cfglootweapon", 0.01 }
 		};
 		lootTypeSmall[] = {
 			{ "Binocular", "weapon", 0.05 },
@@ -541,9 +525,9 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		lootType[] = {
 			{ "assaultrifles_bric_high", "cfglootweapon", 0.16 },
-			{ "machineguns_bric", "cfglootweapon", 0.08 },
-			{ "pistols_bric", "cfglootweapon", 0.1 },
-			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
+			{ "machineguns_bric", "cfglootweapon", 0.01 },
+			{ "pistols_bric", "cfglootweapon", 0.17 },
+			{"sniperrifles_bric", "cfglootweapon", 0.01 },
 			{"AmmoBoxSmall_762","object",0.01},
 			{"Binocular","weapon",0.02},
 			{"ItemRadio","weapon",0.05},
@@ -741,6 +725,5 @@ class CfgBuildingLoot {
 	#include "CfgBuildingPos.hpp"
 	//If you want to copypast your loottable to your mission w/o
 	//changing something on the lootPos then use the a include instead of copypasting the CfgBuildingPos.hpp
-
 	//#include "\dayz_epoch_b\CfgBuildingPos.hpp"
 };

@@ -30,6 +30,11 @@ if(isNil "s_player_bury_human") then {
 	s_player_bury_human = -1;
 };
 
+// Change combination action
+if(isNil "s_player_ckc") then {
+	s_player_ckc = -1;
+};
+
 // Dynamic Vehicles Fuel Level
 if(isnil "DynamicVehicleFuelLow") then {
 	DynamicVehicleFuelLow = 0;

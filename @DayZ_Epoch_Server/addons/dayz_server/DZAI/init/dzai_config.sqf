@@ -487,9 +487,8 @@ DZAI_MiscItemL = ["ItemJerrycan", "PartWheel", "PartEngine", "PartFueltank", "Pa
 //Weapongrade level 0-1 AI will use DZAI_tools0 table, weapongrade level 2-3 AI will use DZAI_tools1 table. Custom-spawned AI will use DZAI_tools1 table.
 //NOTE: Do not delete any elements from this list, set its chance to zero intead. Only add elements to the end of the array, not in the middle.
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-DZAI_tools0 = [["ItemFlashlight",0.3],["ItemWatch",0.3],["ItemKnife",0.1],["ItemHatchet",0.1],["ItemCompass",0.3],["ItemMap",0.1],["ItemGPS",0.02],["ItemRadio",0.05]];
-//DZAI_tools1 = [["ItemFlashlight",0.75],["ItemWatch",0.75],["ItemKnife",0.75],["ItemHatchet",0.70],["ItemCompass",0.75],["ItemMap",0.70],["ItemToolbox",0.35],["ItemMatchbox",0.40],["ItemFlashlightRed",0.10],["ItemGPS",0.10],["ItemRadio",0.075],["ItemCrowbar",0.35]];
-DZAI_tools1 = [["ItemFlashlight",0.3],["ItemWatch",0.3],["ItemKnife",0.1],["ItemHatchet",0.1],["ItemCompass",0.3],["ItemMap",0.1],["ItemGPS",0.02],["ItemRadio",0.05]];
+DZAI_tools0 = [["ItemFlashlight",0.3],["ItemWatch",0.3],["ItemKnife",0.1],["ItemHatchet_DZE",0.1],["ItemCompass",0.3],["ItemMap",0.1],["ItemGPS",0.02],["ItemRadio",0.05]];
+DZAI_tools1 = [["ItemFlashlight",0.3],["ItemWatch",0.3],["ItemKnife",0.1],["ItemHatchet_DZE",0.1],["ItemCompass",0.3],["ItemMap",0.1],["ItemGPS",0.02],["ItemRadio",0.05]];
 
 
 //AI-useable toolbelt item types. These items are added to AI inventory at unit creation and may be used by AI. Format: [item classname, item probability]

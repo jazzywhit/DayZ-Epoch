@@ -166,7 +166,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 
 	_hasKnife = 	"ItemKnife" in _itemsPlayer;
 	_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
-	_canIgnite = (("ItemJerrycan" in _magazinesPlayer) || ("ItemFuelBarrel" in _magazinesPlayer))  && (("ItemMatchbox_DZE" in weapons player) || ("ItemMatchbox" in weapons player));
+	_canIgnite = (("ItemJerrycan" in _magazinesPlayer) || ("ItemFuelBarrel" in _magazinesPlayer))  && ("ItemMatchbox_DZE" in weapons player);
 
 	_isMan = _cursorTarget isKindOf "Man";
 	_traderType = _typeOfCursorTarget;
@@ -1041,10 +1041,13 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	s_player_maint_build = -1;
 	player removeAction s_player_downgrade_build;
 	s_player_downgrade_build = -1;
+	/////////////////////////////
+	// CKC
 	player removeAction s_player_ckc;
 	s_player_ckc = -1;
     player removeAction s_player_Safe_ckc;
     s_player_Safe_ckc = -1;
+	/////////////////////////////
 	player removeAction s_player_towing;
 	s_player_towing = -1;
 	player removeAction s_player_fuelauto;

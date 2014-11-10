@@ -31,9 +31,7 @@ _role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
 _role3 = "True Hardcore";
 _role3names = ["First Person", "No P2W", "No Safe Zones"];
 _role4 = "Server Mods";
-_role4names = ["Custom Missions/AI", "Custom traders", "Black Market Events", "Realistic Loot"];
-_role5 = "Admins";
-_role5names = ["Phobix", "Jesquik","Carbonoid","Nat","Neb"];
+_role4names = ["Custom Missions/AI", "Custom Traders", "Custom Cities", "Realistic Loot"];
 
 
 {
@@ -58,6 +56,5 @@ _role5names = ["Phobix", "Jesquik","Carbonoid","Nat","Neb"];
 	[_role1, _role1names],
 	[_role2, _role2names],
 	[_role3, _role3names],
-	[_role4, _role4names],
-	[_role5, _role5names]
+	[_role4, _role4names]
 ];

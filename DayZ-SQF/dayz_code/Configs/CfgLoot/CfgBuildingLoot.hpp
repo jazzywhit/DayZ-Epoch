@@ -30,7 +30,7 @@ class CfgBuildingLoot {
 			{"ItemMap","generic",0.01},
 			{"ItemCompass","weapon",0.01},
 			{"ItemFlashlight","weapon",0.01},
-			{"WeaponHolder_ItemHatchet","object",0.01},
+			{"WeaponHolder_ItemHatchet_DZE","object",0.01},
 			{"WeaponHolder_ItemTent","object",0.01},
 			{"PartWoodPile","magazine",0.04},
 			{"","generic",0.40},
@@ -440,9 +440,7 @@ class CfgBuildingLoot {
 			{"","generic",0.25},
 			{"","military",0.07},
 			{"ItemEtool","weapon",0.03},
-			
 			{"ItemSandbag","magazine",0.02},
-
 			{"ItemFuelBarrelEmpty","magazine",0.03},
 			{"fuel_pump_kit","magazine",0.01},
 			{ "machineguns", "cfglootweapon", 0.01 }
