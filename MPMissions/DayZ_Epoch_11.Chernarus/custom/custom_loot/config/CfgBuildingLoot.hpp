@@ -78,25 +78,24 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		lootType[] = {
 			{"ItemWatch","generic",0.04},
-			{"ItemFlashlight","generic",0.06},
-			{"","generic",0.32},
+			{"ItemFlashlight","generic",0.04},
 			{"","trash",0.2},
-			{"","office",0.08},
-			{"Binocular","weapon",0.02},
+			{"","office",0.32},
+			{"Binocular","weapon",0.05},
 			{"ItemRadio","weapon",0.01},
 			{"ItemCrowbar","object",0.04},
-			{"pistols_bric","cfglootweapon",0.13 },
-			{"shotgunsingleshot", "cfglootweapon", 0.1}
+			{"pistols_bric","cfglootweapon",0.15 },
+			{"shotgunsingleshot", "cfglootweapon", 0.15}
 		};
 		lootTypeSmall[] = {
-			{ "ItemWatch","weapon",0.07 },
-			{ "ItemCompass","weapon",0.06 },
+			{ "ItemWatch","weapon",0.05 },
+			{ "ItemCompass","weapon",0.05 },
 			{ "ItemMap","weapon",0.05 },
-			{ "ItemFlashlight","weapon",0.07 },
-			{ "","generic",0.4 },			
-			{ "","trash",0.28 },
-			{ "Binocular","weapon",0.04 },
-			{ "ItemDocument","magazine",0.03 }
+			{ "ItemFlashlight","weapon",0.05 },
+			{ "","generic",0.5 },
+			{ "","trash",0.2 },
+			{ "Binocular","weapon",0.06 },
+			{ "ItemDocument","magazine",0.04 }
 		};
 	};
 	class Industrial: Default {
