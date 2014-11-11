@@ -12,12 +12,10 @@ class CfgLoot {
 		,{"ItemSodaEmpty",0.1}
 		,{"8Rnd_9x18_Makarov",0.17}
 		,{"7Rnd_45ACP_1911",0.15}
+		,{"15Rnd_W1866_Slug",0.14}
 		,{"2Rnd_shotgun_74Slug",0.14}
-		,{"2Rnd_shotgun_74Pellets",0.14}
-		,{"ItemBandage",0.11}
+		,{"ItemBandage",0.13}
 		,{"ItemPainkiller",0.06}
-		,{"FoodBioMeat",0.01}
-		,{"8Rnd_9x18_MakarovSD",0.01}
 		,{"ItemDocument",0.03}
 	};
 	office2[] = {
@@ -29,9 +27,7 @@ class CfgLoot {
 		,{"2Rnd_shotgun_74Pellets",0.14}
 		,{"ItemBandage",0.11}
 		,{"ItemPainkiller",0.06}
-		,{"FoodBioMeat",0.01}
-		,{"8Rnd_9x18_MakarovSD",0.01}
-		,{"ItemBriefcaseEmpty",0.01}
+		,{"ItemBriefcaseEmpty",0.03}
 		,{"ItemDocument",0.02}
 	};
 	food_special[] = {
@@ -68,8 +64,8 @@ class CfgLoot {
 	food[] = {
 		{"TrashTinCan",0.1}
 		,{"TrashJackDaniels",0.2}
-		,{"ItemSodaEmpty",0.1}
-		,{"FoodCanUnlabeled",0.4}
+		,{"ItemSodaEmpty",0.4}
+		,{"FoodCanUnlabeled",0.1}
 		,{"ItemSodaCoke",0.05}
 		,{"ItemSodaPepsi",0.05}
 		,{"FoodCanBakedBeans",0.03}

@@ -71,7 +71,7 @@ DZAI_humanityGain = 0;
 DZAI_radioMsgs = true;
 
 //If enabled, last surviving unit of a group will be granted slightly boosted skills. No effect if unit is spawned alone (Default: false)
-DZAI_lastManStanding = false;
+DZAI_lastManStanding = true;
 
 
 /*DZAI client-side addon settings. 
@@ -147,17 +147,17 @@ DZAI_freshSpawnSafeArea = false;
 DZAI_maxHeliPatrols = 1;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
-DZAI_respawnTMinA = 300;
-DZAI_respawnTMaxA = 900;
+DZAI_respawnTMinA = 900;
+DZAI_respawnTMaxA = 1800;
 
 //Classnames of air vehicle types to use, with the maximum amount of each type to spawn. Default: [["UH1H_DZ",1]]
 DZAI_heliList = [["UH1H_DZ",1]];
 
 //Difficulty level of air vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
-DZAI_heliUnitLevel = 1;
+DZAI_heliUnitLevel = 3;
 
 //Maximum number of gunner units per air vehicle. Limited by actual number of available gunner positions. (Default: 2)
-DZAI_heliGunnerUnits = 3;
+DZAI_heliGunnerUnits = (floor(random 2)) + 1;
 
 //Specify vehicle weapon for air vehicles that are unarmed by default. DZAI will arm these air vehicles with the specified weapons upon spawning each vehicle.
 //Weapon classnames are verified. If the classname is invalid (banned or nonexistent), it will not be added to the vehicle.
@@ -418,7 +418,10 @@ DZAI_Pistols = [
 DZAI_Pistols0 = DZAI_Pistols;
 DZAI_Pistols1 = DZAI_Pistols;
 DZAI_Pistols2 = DZAI_Pistols;
-DZAI_Pistols3 = DZAI_Pistols;
+DZAI_Pistols3 = [
+		"UZI_EP1",
+		"UZI_SD_EP1"
+		];
 
 DZAI_Rifles = [
 		"AK_47_M",
@@ -439,7 +442,15 @@ DZAI_Rifles = [
 DZAI_Rifles0 = DZAI_Rifles;
 DZAI_Rifles1 = DZAI_Rifles;
 DZAI_Rifles2 = DZAI_Rifles;
-DZAI_Rifles3 = DZAI_Rifles;
+DZAI_Rifles3 = [
+		"AKS_GOLD",
+        "AK_47_M",
+        "Sa58V_RCO_EP1",
+        "Sa58V_CCO_EP1",
+        "RPK_74",
+        "Sa58P_EP1",
+        "Sa58V_EP1"
+		];
 
 /*
 	Custom rifle tables can be defined below this line (DZAI_Rifles4 - DZAI_Rifles9) for the corresponding custom weapongrade level using the same format above. 
@@ -467,7 +478,7 @@ DZAI_BanditTypes = ["Survivor2_DZ", "SurvivorW2_DZ", "Bandit1_DZ", "BanditW1_DZ"
 DZAI_Backpacks0 = ["DZ_Patrol_Pack_EP1","DZ_Assault_Pack_EP1"];
 DZAI_Backpacks1 = ["DZ_Patrol_Pack_EP1","DZ_Assault_Pack_EP1"];
 DZAI_Backpacks2 = ["DZ_Patrol_Pack_EP1","DZ_Assault_Pack_EP1"];
-DZAI_Backpacks3 = ["DZ_Patrol_Pack_EP1","DZ_Assault_Pack_EP1"];
+DZAI_Backpacks3 = ["DZ_British_ACU","DZ_CivilBackpack_EP1", "DZ_Backpack_EP1"];
 
 
 //AI Food/Medical item types. DZAI_Edibles: Drinkable and edible items. DZAI_Medicals1: List of common medical items to be added to AI inventory. DZAI_Medicals2: List of all medical items available only in hospitals to be added to AI backpack.
