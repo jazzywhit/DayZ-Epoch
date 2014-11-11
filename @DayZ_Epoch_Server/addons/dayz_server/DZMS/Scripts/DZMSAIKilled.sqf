@@ -73,6 +73,17 @@ if (isPlayer _player) then {
 	
 };
 
+if (DZMSCleanDeathEquip) then {
+	// REMOVE All EQUIPMENT
+	//Lets strip their gear
+	removeBackpack _unit;
+	removeAllWeapons _unit;
+	{
+		_unit removeMagazine _x
+	} forEach magazines _unit;
+};
+
+
 if (DZMSCleanDeath) then {
 	_unit call DZMSPurgeObject;
 	if (DZMSCleanDeath) exitWith {};

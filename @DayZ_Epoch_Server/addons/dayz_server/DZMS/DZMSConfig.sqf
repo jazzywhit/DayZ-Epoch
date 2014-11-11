@@ -24,6 +24,9 @@ DZMSCntBanditKls = false;
 // Do you want AI to disappear instantly when killed?
 DZMSCleanDeath = false;
 
+// Do you want AI equipment to disappear instantly when killed?
+DZMSCleanDeathEquip = true;
+
 // Do you want AI that players run over to not have gear?
 // (If DZMSCleanDeath is true, this doesn't matter)
 DZMSRunGear = false;
@@ -49,7 +52,7 @@ DZMSSceneryDespawnLoot = false;
 //////////////////////////////////////////////////////////////////////////////////////////
 // Do you want to use static coords for missions?
 // Leave this false unless you know what you are doing.
-DZMSStaticPlc = True;
+DZMSStaticPlc = false;
 
 // Array of static locations. X,Y,Z
 DZMSStatLocs = [
@@ -177,7 +180,7 @@ DZMSMinorMax = 900;
 // format: [[x,y,z],radius]
 // Ex: [[06325,07807,0],300] //Starry Sobor
 DZMSBlacklistZones = [
-	[[0,0,0],50]
+	[[06325,07807,0],2000]
 ];
 
 /*=============================================================================================*/
