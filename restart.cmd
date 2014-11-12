@@ -4,7 +4,7 @@ taskkill /im arma2oaserver.exe
 ping 127.0.0.1 -n 10 >NUL
 echo Pulling from GIT
 c:
-cd "c:\program files (x86)\git\bin"
+cd "C:\Users\Administrator\AppData\Local\GitHub\PortableGit_ed44d00daa128db527396557813e7b68709ed0e2\bin"
 git --git-dir=E:\DayZ-Epoch\.git pull origin master 
 echo Packing PBO!
 "C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe" -pack "E:\DayZ-Epoch\@DayZ_Epoch_Server\addons\dayz_server" "E:\DayZ-Epoch\@DayZ_Epoch_Server\addons\dayz_server.pbo"
