@@ -115,15 +115,24 @@ DZMSprimaryListNATO = [
 
 // Primary Rifles
 DZMSprimaryList = [
-		"AKS_GOLD",
 		"AK_74_GL",
 		"AK_74_GL_kobra",
 		"AKS_74_kobra",
-		"AKS_74_UN_Kobra",
-		"AKS_74_UN_Kobra",
 		"AK_107_Kobra",
 		"AK_107_GL_Kobra",
-		"Sa58V_CCO_EP1"
+		"AKS_74_UN_Kobra"
+		];
+
+// Primary Rifles
+DZMSprimaryListHigh = [
+		"AKS_GOLD",
+		"AK_47_M",
+		"AK_47_S",
+		"Sa58V_RCO_EP1",
+		"Sa58V_CCO_EP1",
+		"RPK_74",
+		"Sa58P_EP1",
+		"Sa58V_EP1"
 		];
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

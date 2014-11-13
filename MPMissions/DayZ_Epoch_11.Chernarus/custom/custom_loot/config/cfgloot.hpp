@@ -432,13 +432,13 @@ class CfgLoot {
 		,{"100Rnd_556x45_BetaCMag", 0.08}
 	};
 	assaultrifles_bric[] = {
-	    {"AKS_74_U",0.4}
-		,{"AK_74",0.38}
-		,{"RPK_74",0.02}
-		,{"AKS_74_kobra",0.1}
-		,{"Sa58P_EP1",0.02}
-		,{"Sa58V_EP1",0.02}
-		,{"AK_47_M",0.06}
+	    {"AKS_74_U",0.39}
+		,{"AK_74",0.28}
+		,{"AK_74_GL",0.05}
+		,{"AK_74_GL_kobra",0.16}
+		,{"AKS_74_kobra",0.07}
+		,{"AK_107_Kobra",0.07}
+		,{"AK_107_GL_Kobra",0.07}
 	};
     assaultrifles_bric_high[] = {
         {"AKS_GOLD",0.01}

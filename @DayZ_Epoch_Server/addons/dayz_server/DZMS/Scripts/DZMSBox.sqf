@@ -222,6 +222,74 @@ if (_type == "weapons") then {
 };
 
 ///////////////////////////////////////////////////////////////////
+// Weapon Crates High
+if (_type == "weapons_high") then {
+	// load grenades
+	_scount = count _gshellList;
+	for "_x" from 0 to 2 do {
+		_sSelect = floor(random _sCount);
+		_item = _gshellList select _sSelect;
+		_crate addMagazineCargoGlobal [_item,(round(random 2))];
+	};
+
+	// load packs
+	_scount = count _bpackList;
+	for "_x" from 0 to 1 do {
+		_sSelect = floor(random _sCount);
+		_item = _bpackList select _sSelect;
+		_crate addBackpackCargoGlobal [_item,1];
+	};
+
+	// load pistols
+	_scount = count DZMSpistolList;
+	for "_x" from 0 to 2 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSpistolList select _sSelect;
+		_crate addWeaponCargoGlobal [_item,1];
+		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+		if (count _ammo > 0) then {
+			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 8))];
+		};
+	};
+
+	//load sniper
+	_scount = count DZMSsniperList;
+	for "_x" from 0 to 1 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSsniperList select _sSelect;
+		_crate addWeaponCargoGlobal [_item,1];
+		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+		if (count _ammo > 0) then {
+			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 2))];
+		};
+	};
+
+	//load mg
+	_scount = count DZMSmgList;
+	for "_x" from 0 to 2 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSmgList select _sSelect;
+		_crate addWeaponCargoGlobal [_item,1];
+		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+		if (count _ammo > 0) then {
+			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 6))];
+		};
+	};
+
+	//load primary
+	_scount = count DZMSprimaryList;
+	for "_x" from 0 to 1 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSprimaryListHigh select _sSelect;
+		_crate addWeaponCargoGlobal [_item,1];
+		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+		if (count _ammo > 0) then {
+			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 4))];
+		};
+	};
+};
+
+///////////////////////////////////////////////////////////////////
 // Epoch Supply Crates
 if (_type == "supply") then {
 	// load tools

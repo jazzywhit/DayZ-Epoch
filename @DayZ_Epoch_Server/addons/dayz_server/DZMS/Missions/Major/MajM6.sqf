@@ -11,7 +11,7 @@ _missName = "Black Market";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"The Black Market Trader has set up shop!\n He won't be here long!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"The Black Market Trader has Arrived to Trade High Quality Equipment!\n Hurry, he won't be here long!", "PLAIN",10] call RE;
 
 //DZMSAddMinMarker is a simple script that adds a marker to the location
 [_coords,_missName] ExecVM DZMSAddMinMarker;
