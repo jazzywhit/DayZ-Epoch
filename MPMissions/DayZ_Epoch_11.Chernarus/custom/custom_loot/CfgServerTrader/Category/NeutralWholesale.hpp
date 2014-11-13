@@ -39,25 +39,10 @@ class Category_675 {
 		buy[] = {6,"ItemSilverBar10oz"};
 		sell[] = {6,"ItemSilverBar10oz"};
 	};
-	class CinderBlocks {
-		type = "trade_items";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {5,"ItemGoldBar"};
-	};
-	class PartPlywoodPack {
-		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
 	class MortarBucket {
 		type = "trade_items";
 		buy[] = {1,"ItemGoldBar10oz"};
 		sell[] = {5,"ItemGoldBar"};
-	};
-	class PartPlankPack {
-		type = "trade_items";
-		buy[] = {1,"ItemSilverBar10oz"};
-		sell[] = {5,"ItemSilverBar"};
 	};
 	class ItemFuelBarrelEmpty {
 		type = "trade_items";
@@ -106,25 +91,10 @@ class Category_636 {
 		buy[] = {6,"ItemSilverBar10oz"};
 		sell[] = {6,"ItemSilverBar10oz"};
 	};
-	class CinderBlocks {
-		type = "trade_items";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {5,"ItemGoldBar"};
-	};
-	class PartPlywoodPack {
-		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
 	class MortarBucket {
 		type = "trade_items";
 		buy[] = {1,"ItemGoldBar10oz"};
 		sell[] = {5,"ItemGoldBar"};
-	};
-	class PartPlankPack {
-		type = "trade_items";
-		buy[] = {1,"ItemSilverBar10oz"};
-		sell[] = {5,"ItemSilverBar"};
 	};
 	class ItemFuelBarrelEmpty {
 		type = "trade_items";
@@ -168,25 +138,10 @@ class Category_555 {
 		buy[] = {6,"ItemSilverBar10oz"};
 		sell[] = {6,"ItemSilverBar10oz"};
 	};
-	class CinderBlocks {
-		type = "trade_items";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {5,"ItemGoldBar"};
-	};
-	class PartPlywoodPack {
-		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
 	class MortarBucket {
 		type = "trade_items";
 		buy[] = {1,"ItemGoldBar10oz"};
 		sell[] = {5,"ItemGoldBar"};
-	};
-	class PartPlankPack {
-		type = "trade_items";
-		buy[] = {1,"ItemSilverBar10oz"};
-		sell[] = {5,"ItemSilverBar"};
 	};
 	class bulk_ItemWire {
 		type = "trade_items";

@@ -9,11 +9,6 @@ class Category_477 {
 		buy[] = {1,"ItemGoldBar10oz"};
 		sell[] = {5,"ItemGoldBar"};
 	};
-	class FN_FAL_ANPVS4 {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
-	};
 	class SCAR_H_LNG_Sniper_SD {
 		type = "trade_weapons";
 		buy[] = {2,"ItemGoldBar10oz"};

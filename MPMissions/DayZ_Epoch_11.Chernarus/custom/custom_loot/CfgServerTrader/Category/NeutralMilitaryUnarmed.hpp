@@ -19,11 +19,6 @@ class Category_658 {
 		buy[] = {4,"ItemGoldBar10oz"};
 		sell[] = {2,"ItemGoldBar10oz"};
 	};
-	class GAZ_Vodnik_MedEvac {
-		type = "trade_any_vehicle";
-		buy[] = {1,"ItemBriefcase100oz"};
-		sell[] = {5,"ItemGoldBar10oz"};
-	};
 	class HMMWV_DZ {
 		type = "trade_any_vehicle";
 		buy[] = {4,"ItemGoldBar10oz"};
@@ -60,11 +55,6 @@ class Category_598 {
 		type = "trade_any_vehicle";
 		buy[] = {4,"ItemGoldBar10oz"};
 		sell[] = {2,"ItemGoldBar10oz"};
-	};
-	class GAZ_Vodnik_MedEvac {
-		type = "trade_any_vehicle";
-		buy[] = {1,"ItemBriefcase100oz"};
-		sell[] = {5,"ItemGoldBar10oz"};
 	};
 	class HMMWV_DZ {
 		type = "trade_any_vehicle";
