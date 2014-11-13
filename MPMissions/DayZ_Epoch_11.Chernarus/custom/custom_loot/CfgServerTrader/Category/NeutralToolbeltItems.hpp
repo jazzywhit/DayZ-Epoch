@@ -34,7 +34,7 @@ class Category_663 {
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
 	};
-	class ItemHatchet {
+	class ItemHatchet_DZE {
 		type = "trade_weapons";
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
@@ -121,7 +121,7 @@ class Category_510 {
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
 	};
-	class ItemHatchet {
+	class ItemHatchet_DZE {
 		type = "trade_weapons";
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
