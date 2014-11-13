@@ -107,81 +107,82 @@ class CfgLoot {
 		,{"ItemHeatPack",0.04}
 	};
 	medical[] = {
-		{"ItemBandage",0.4}
+		{"ItemBandage",0.48}
 		,{"ItemPainkiller",0.15}
 		,{"ItemMorphine",0.2}
 		,{"ItemEpinephrine",0.1}
-		,{"ItemAntibiotic",0.1}
+		,{"ItemAntibiotic",0.02}
 		,{"ItemHeatPack",0.05}
 	};
 	hospital[] = {
-		{"ItemBandage",0.43},
-		{"ItemPainkiller",0.16},
-		{"ItemMorphine",0.18},
-		{"ItemEpinephrine",0.14},
-		{"ItemBloodbag",0.07},
-		{"ItemAntibiotic",0.02}
+		{"ItemBandage",0.47},
+		,{"ItemPainkiller",0.16}
+		,{"ItemMorphine",0.18}
+		,{"ItemEpinephrine",0.1}
+		,{"ItemBloodbag",0.07}
+		,{"ItemAntibiotic",0.02}
 	};
 	military[] = {
 		{"ItemSodaEmpty",0.11}
 		,{"ItemBandage",0.06}
-		,{"ItemAntibiotic",0.04}
 		,{"ItemPainkiller",0.04}
 		,{"ItemMorphine",0.01}
 		,{"30Rnd_556x45_Stanag",0.12}
 		,{"20Rnd_762x51_DMR",0.01}
 		,{"17Rnd_9x19_glock17",0.05}
 		,{"15Rnd_9x19_M9SD",0.01}
-		,{"15Rnd_9x19_M9",0.02}
+		,{"15Rnd_9x19_M9",0.04}
 		,{"5Rnd_762x51_M24",0.05}
-		,{"8Rnd_B_Beneli_74Slug",0.03}
-		,{"1Rnd_HE_M203",0.01}
-		,{"FlareWhite_M203",0.01}
-		,{"FlareGreen_M203",0.01}
-		,{"1Rnd_Smoke_M203",0.01}
+		,{"8Rnd_B_Beneli_74Slug",0.05}
 		,{"200Rnd_556x45_M249",0.01}
 		,{"HandGrenade_west",0.02}
 		,{"SmokeShell",0.04}
 		,{"SmokeShellRed",0.02}
 		,{"SmokeShellGreen",0.02}
+		,{"SmokeShellYellow",0.02}
+		,{"SmokeShellPurple",0.02}
+		,{"SmokeShellBlue",0.02}
+		,{"SmokeShellOrange",0.02}
 		,{"8Rnd_B_Beneli_Pellets",0.04}
 		,{"30Rnd_556x45_StanagSD",0.01}
-		,{"30Rnd_9x19_MP5",0.08}
+		,{"30Rnd_9x19_MP5",0.04}
 		,{"30Rnd_9x19_MP5SD",0.01}
 		,{"100Rnd_762x51_M240",0.01}
 		,{"HandChemGreen",0.02}
 		,{"HandChemBlue",0.02}
 		,{"HandChemRed",0.02}
-		,{"ItemHeatPack",0.04}
-		,{"FoodMRE",0.04}
+		,{"ItemHeatPack",0.07}
+		,{"FoodMRE",0.01}
 		,{"ItemDocument",0.01}
 	};
 	military_bric[] = {
 		{"ItemSodaEmpty",0.06}
 		,{"ItemBandage",0.2}
-		,{"ItemAntibiotic",0.04}
 		,{"ItemPainkiller",0.04}
 		,{"ItemMorphine",0.01}
 		,{"30Rnd_762x39_AK47",0.1}
-		,{"30Rnd_545x39_AK",0.16}
+		,{"30Rnd_545x39_AK",0.12}
 		,{"HandGrenade_east",0.03}
 		,{"SmokeShell",0.04}
 		,{"SmokeShellRed",0.02}
 		,{"SmokeShellGreen",0.02}
+        ,{"SmokeShellYellow",0.02}
+        ,{"SmokeShellPurple",0.02}
+        ,{"SmokeShellBlue",0.02}
+        ,{"SmokeShellOrange",0.02}
 		,{"HandChemGreen",0.04}
 		,{"HandChemBlue",0.02}
 		,{"HandChemRed",0.06}
-		,{"ItemHeatPack",0.05}
-		,{"FoodMRE",0.03}
-		,{"8Rnd_9x18_MakarovSD",0.01}
+		,{"ItemHeatPack",0.07}
+		,{"FoodMRE",0.01}
+		,{"8Rnd_9x18_MakarovSD",0.02}
 		,{"20Rnd_B_765x17_Ball",0.04}
 		,{"30Rnd_9x19_UZI_SD",0.01}
-		,{"ItemDocument",0.02}
+		,{"ItemDocument",0.01}
 	};
 	militarypilot[] = {
 		{"ItemSodaEmpty",0.04}
-		,{"ItemBandage",0.04}
-		,{"ItemAntibiotic",0.01}
+		,{"ItemBandage",0.05}
 		,{"ItemPainkiller",0.04}
 		,{"ItemMorphine",0.04}
 		,{"HandGrenade_west",0.01}
@@ -204,19 +205,16 @@ class CfgLoot {
 		,{"8Rnd_B_Beneli_Pellets",0.16}
 		,{"HandRoadFlare",0.12}
 		,{"8Rnd_9x18_MakarovSD",0.012}
-		,{"SmokeShell",0.04}
-		,{"FoodMRE",0.01}
+		,{"SmokeShell",0.05}
 		,{"ItemHotwireKit",0.01}
-		,{"ItemDocument",0.02}
-		,{"ItemLockbox",0.01}
+		,{"ItemDocument",0.03}
 	};
 	hunter[] = {
-		{"ItemBandage",0.4}
+		{"ItemBandage",0.6}
 		,{"ItemWaterbottleUnfilled",0.05}
 		,{"WoodenArrow",0.2}
 		,{"ItemHeatPack",0.03}
 		,{"FoodMRE",0.01}
-		,{"FoodNutmix",0.02}
 		,{"ItemDocument",0.01}
 		,{"5x_22_LR_17_HMR",0.05}
 	};
@@ -451,9 +449,12 @@ class CfgLoot {
         ,{"Sa58V_EP1",0.25}
     };
 	assaultrifleammo_bric[] = {
-		{"30Rnd_762x39_SA58",0.05}
-		,{"30Rnd_762x39_AK47",0.40}
-		,{"30Rnd_545x39_AK",0.55}
+		{"75Rnd_545x39_RPK",0.05}
+		,{"30Rnd_545x39_AK",0.95}
+	};
+	assaultrifleammo_bric_high[] = {
+		{"30Rnd_762x39_SA58",0.5}
+		,{"30Rnd_762x39_AK47",0.5}
 	};
 	machineguns[] = {
 		{"M8_SAW",0.2}
@@ -467,9 +468,9 @@ class CfgLoot {
 	};
 	machinegunammo[] = {
 		{"100Rnd_556x45_BetaCMag",0.5}
-		,{"100Rnd_556x45_M249",0.4}
-		,{"100Rnd_762x51_M240",0.05}
-		,{"200Rnd_556x45_M249",0.05}
+		,{"100Rnd_556x45_M249",0.2}
+		,{"100Rnd_762x51_M240",0.2}
+		,{"200Rnd_556x45_M249",0.1}
 	};
 	machineguns_bric[] = {
 		{"RPK_74",0.8}

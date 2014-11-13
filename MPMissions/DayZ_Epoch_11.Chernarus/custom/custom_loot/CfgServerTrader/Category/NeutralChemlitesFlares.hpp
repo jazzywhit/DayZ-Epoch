@@ -14,49 +14,27 @@ class Category_666 {
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
 	};
-	class FlareGreen_M203 {
-		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class FlareWhite_M203 {
-		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
 	class HandRoadFlare {
 		type = "trade_items";
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
 	};
-};
-class Category_669 {
-	class HandChemBlue {
+	class FlareWhite_GP25 {
 		type = "trade_items";
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
 	};
-	class HandChemGreen {
+	class FlareGreen_GP25 {
 		type = "trade_items";
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
 	};
-	class HandChemRed {
+	class FlareRed_GP25 {
 		type = "trade_items";
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
 	};
-	class FlareGreen_M203 {
-		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class FlareWhite_M203 {
-		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class HandRoadFlare {
+	class FlareYellow_GP25 {
 		type = "trade_items";
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
