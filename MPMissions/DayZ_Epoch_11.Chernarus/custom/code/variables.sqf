@@ -13,7 +13,7 @@ DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
 
 // Maximum percentage of gas that will be on a vehicle if it is sold
-MaxGasOnSale = 50;
+MaxGasOnSale = 25;
 MinGasOnSale = 15;
 
 // Pyromaniac
