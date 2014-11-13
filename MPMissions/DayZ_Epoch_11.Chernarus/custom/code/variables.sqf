@@ -12,10 +12,6 @@ DefaultWeapons = ["ItemFlashlight"];
 DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
 
-// Maximum percentage of gas that will be on a vehicle if it is sold
-MaxGasOnSale = 25;
-MinGasOnSale = 15;
-
 // Pyromaniac
 if(isNil "s_player_igniteVehicle") then {
 	s_player_igniteVehicle = -1;
@@ -44,8 +40,12 @@ if(isnil "DynamicVehicleFuelLow") then {
 	DynamicVehicleFuelLow = 0;
 };
 if(isnil "DynamicVehicleFuelHigh") then {
-	DynamicVehicleFuelHigh = 25;
+	DynamicVehicleFuelHigh = 35; // ~ 30% chance there will be some gas to siphon on a vehicle
 };
+
+// Maximum percentage of gas that will be on a vehicle if it is sold
+MaxGasOnSale = 25; // Also the point where you can no longer siphon fuel from vehicles
+MinGasOnSale = 15;
 
 // Dynamic Vehicle Damage
 if(isnil "DynamicVehicleDamageLow") then {
