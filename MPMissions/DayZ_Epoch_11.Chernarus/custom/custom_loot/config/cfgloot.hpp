@@ -31,45 +31,43 @@ class CfgLoot {
 		,{"ItemDocument",0.02}
 	};
 	food_special[] = {
-		{"ItemSodaMdew",0.01}
+	    {"ItemSodaEmpty",0.3}
+		,{"ItemSodaMdew",0.01}
 		,{"ItemSodaRbull",0.01}
 		,{"ItemSodaOrangeSherbet",0.01}
 		,{"ItemSodaDrwaste",0.1}
 		,{"ItemSodaRabbit",0.1}
-		,{"ItemSodaMtngreen",0.03}
-		,{"ItemSodaR4z0r",0.03}
-		,{"ItemSodaClays",0.03}
-		,{"ItemSodaSmasht",0.03}
-		,{"ItemSodaLemonade",0.03}
-		,{"ItemSodaLvg",0.03}
-		,{"ItemSodaMzly",0.03}
-		,{"FoodCanGriff",0.03}
-		,{"FoodCanBadguy",0.03}
-		,{"FoodCanBoneboy",0.03}
-		,{"FoodCanCorn",0.03}
-		,{"FoodCanCurgon",0.03}
-		,{"FoodCanDemon",0.03}
-		,{"FoodCanFraggleos",0.03}
-		,{"FoodCanHerpy",0.03}
-		,{"FoodCanOrlok",0.03}
-		,{"FoodCanPowell",0.03}
-		,{"FoodCanTylers",0.03}
-		,{"FoodCanPasta",0.07}
-		,{"FoodPistachio",0.07}
-		,{"FoodNutmix",0.03}
-		,{"FoodPumpkin",0.03}
-		,{"FoodSunFlowerSeed",0.03}
+		,{"ItemSodaMtngreen",0.04}
+		,{"ItemSodaR4z0r",0.04}
+		,{"ItemSodaClays",0.04}
+		,{"ItemSodaSmasht",0.04}
+		,{"ItemSodaLemonade",0.04}
+		,{"ItemSodaLvg",0.04}
+		,{"ItemSodaMzly",0.04}
+		,{"FoodCanGriff",0.01}
+		,{"FoodCanBadguy",0.01}
+		,{"FoodCanBoneboy",0.01}
+		,{"FoodCanCorn",0.01}
+		,{"FoodCanCurgon",0.01}
+		,{"FoodCanDemon",0.04}
+		,{"FoodCanFraggleos",0.04}
+		,{"FoodCanHerpy",0.04}
+		,{"FoodCanOrlok",0.04}
+		,{"FoodCanPowell",0.04}
+		,{"FoodCanTylers",0.04}
+		,{"FoodPumpkin",0.04}
+		,{"FoodSunFlowerSeed",0.04}
 	};
 	food[] = {
-		{"FoodCanUnlabeled",0.2}
-		,{"ItemSodaCoke",0.1}
-		,{"ItemSodaPepsi",0.1}
-		,{"FoodCanBakedBeans",0.1}
-		,{"FoodCanSardines",0.1}
-		,{"FoodCanFrankBeans",0.1}
-		,{"FoodCanPasta",0.1}
-		,{"FoodPistachio",0.1}
-		,{"FoodNutmix",0.1}
+		{"FoodCanUnlabeled",0.6}
+		,{"ItemSodaCoke",0.05}
+		,{"ItemSodaPepsi",0.05}
+		,{"FoodCanBakedBeans",0.05}
+		,{"FoodCanSardines",0.05}
+		,{"FoodCanFrankBeans",0.05}
+		,{"FoodCanPasta",0.05}
+		,{"FoodPistachio",0.05}
+		,{"FoodNutmix",0.05}
 	};
 	office[] = {
 		{"ItemSodaEmpty",0.31}
