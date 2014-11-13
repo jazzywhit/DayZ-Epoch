@@ -12,6 +12,10 @@ DefaultWeapons = ["ItemFlashlight"];
 DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
 
+// Maximum gas that will be on a vehicle if it is sold
+MaxGasOnSale = 0.5;
+MinGasOnSale = 0.15;
+
 // Pyromaniac
 if(isNil "s_player_igniteVehicle") then {
 	s_player_igniteVehicle = -1;

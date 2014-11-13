@@ -91,8 +91,8 @@ _key call server_hiveWrite;
 		_object setvehiclelock "locked";
 
 		// If vehicle can be locked, set the fuel
-		// Get a random fuel between 50 and 15 percent
-		_fuel = (random(50-15)+15) / 100;
+		// Get a random fuel between MinGasOnSale and MaxGasOnSale
+		_fuel = (random(MaxGasOnSale-MinGasOnSale)+MinGasOnSale) / 100;
 		_object setFuel _fuel;
 	};
 
