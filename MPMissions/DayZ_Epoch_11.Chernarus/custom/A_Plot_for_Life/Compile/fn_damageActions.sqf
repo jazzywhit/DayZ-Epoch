@@ -172,7 +172,7 @@ if (!isNull _menClose && _hasPatient && !r_drag_sqf && !r_action && !_inVehicle 
 			r_player_actions set [count r_player_actions,_action];
 		};
 		//CAN WE siphon fuel from THE OBJECT?
-		if ((fuel _unit > MaxGasOnSale) && (_hasJerryE || _hasBarrelE)) then {
+		if ((fuel _unit > (MaxGasOnSale/100)) && (_hasJerryE || _hasBarrelE)) then {
 			r_action = true;
 			_action = _unit addAction [format["Siphon fuel from %1",_typeVeh], "\z\addons\dayz_code\actions\siphonFuel.sqf",[], 0, true, true, "", ""];
 			r_player_actions set [count r_player_actions,_action];
