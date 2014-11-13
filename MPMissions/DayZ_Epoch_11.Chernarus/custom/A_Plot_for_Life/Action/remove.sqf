@@ -137,9 +137,9 @@ while {_isOk} do {
 
 	if(_finished) then {
 		_counter = _counter + 1;
-		// 10% chance to break a required tool each pass
+		// 20% chance to break a required tool each pass
 		if((_isDestructable || _isRemovable) && !_isOwnerOfObj) then {
-			if((random 10) <= 1) then {
+			if((random 1) <= 0.2) then {
 				_brokenTool = true;
 			};
 		};
@@ -191,7 +191,7 @@ if (_proceed) then {
 		_selectedRemoveOutput = [];
 		if(_isWreck) then {
 			// Find one random part to give back
-			_refundpart = ["PartEngine","PartGeneric","PartFueltank","PartWheel","PartGlass","ItemJerrycan"] call BIS_fnc_selectRandom;
+			_refundpart = ["PartEngine","PartGeneric","PartFueltank"] call BIS_fnc_selectRandom;
 			_selectedRemoveOutput set [count _selectedRemoveOutput,[_refundpart,1]];
 		} else {
 			if(_isWreckBuilding) then {
