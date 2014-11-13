@@ -110,7 +110,7 @@ class CfgBuildingLoot {
 			{"PartFueltank","magazine",0.02},
 			{"PartEngine","magazine",0.02},
 			{"PartGlass","magazine",0.04},
-			{"ItemJerrycan","magazine",0.04},
+			{"ItemJerrycanEmpty","magazine",0.04},
 			{"ItemHatchet","object",0.07},
 			{"ItemKnife","military_bric",0.07},
 			{"ItemToolbox","weapon",0.06},
@@ -146,7 +146,7 @@ class CfgBuildingLoot {
 			{"PartFueltank","magazine",0.02},
 			{"PartEngine","magazine",0.02},
 			{"PartGlass","magazine",0.04},
-			{"ItemJerrycan","magazine",0.04},
+			{"ItemJerrycanEmpty","magazine",0.04},
 			{"ItemHatchet","weapon",0.07},
 			{"ItemKnife","military_bric",0.07},
 			{"ItemToolbox","weapon",0.06},
@@ -166,7 +166,7 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{"ItemJerrycan","magazine",0.05},
+			{"ItemJerrycanEmpty","magazine",0.05},
 			{"","generic",0.3},
 			{"","trash",0.11},
 			{"PartPlankPack","magazine",0.06},
@@ -602,7 +602,7 @@ class CfgBuildingLoot {
 			{ "PartFueltank", "magazine", 0.03 },
 			{ "PartEngine", "magazine", 0.01 },
 			{ "PartGlass", "magazine", 0.08 },
-			{ "WeaponHolder_ItemJerrycan", "object", 0.03 }
+			{ "ItemJerrycanEmpty", "object", 0.03 }
 		};
 	};
 	class DynamicDebrisMilitary: Default
@@ -632,7 +632,7 @@ class CfgBuildingLoot {
 			{ "PartFueltank", "magazine", 0.03 },
 			{ "PartEngine", "magazine", 0.02 },
 			{ "PartGlass", "magazine", 0.03 },
-			{ "WeaponHolder_ItemJerrycan", "object", 0.03 }
+			{ "ItemJerrycanEmpty", "object", 0.03 }
 		};
 	};
 	class SupplyDrop: Default {
