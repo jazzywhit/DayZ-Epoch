@@ -11,7 +11,7 @@ _missName = "Helicopter Landing";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"A Supply Helicopter has been Forced to Land!\nStop the Bandits from Taking Control of it!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"A Supply Helicopter has been Forced to Land!\nStop the Bandits before they refuel!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;

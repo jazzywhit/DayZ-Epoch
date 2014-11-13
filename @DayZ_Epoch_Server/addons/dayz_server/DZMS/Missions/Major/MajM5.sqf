@@ -1,6 +1,7 @@
 /*
 	Weapon Truck Crash by lazyink (Full credit for code to TheSzerdi & TAW_Tonic)
 	Updated to new format by Vampire
+	Update for bandit gold mission by jesquik
 */
 private ["_missName","_coords","_crash","_crate","_crate1","_crate2"];
 
@@ -37,7 +38,7 @@ sleep 1;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Bandits Gold has been Secured by Survivors!", "PLAIN",6] call RE;
-diag_log text format["[DZMS]: Minor SM Bandit Gold Mission has Ended."];
+diag_log text format["[DZMS]: Major SM Bandit Gold Mission has Ended."];
 deleteMarker "DZMSMinMarker";
 deleteMarker "DZMSMinDot";
 

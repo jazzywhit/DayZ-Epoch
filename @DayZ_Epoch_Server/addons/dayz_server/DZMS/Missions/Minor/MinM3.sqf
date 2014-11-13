@@ -10,7 +10,7 @@ _missName = "Stash House";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have set up a Weapon Stash House!\nGo Empty it Out!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Survivors have set up a Weapon Stash House!\nGo Empty it Out!", "PLAIN",10] call RE;
 
 //DZMSAddMinMarker is a simple script that adds a marker to the location
 [_coords,_missName] ExecVM DZMSAddMinMarker;
@@ -44,9 +44,9 @@ _crate1 = createVehicle ["USBasicAmmunitionBox",[(_coords select 0) - 0.2387, (_
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 4.0796, (_coords select 1) - 11.709,0],4,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) - 4.0796, (_coords select 1) - 11.709,0],4,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 3;
-[[(_coords select 0) + 2.8872, (_coords select 1) + 18.964,0],4,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) + 2.8872, (_coords select 1) + 18.964,0],4,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 3;
 
 //Wait until the player is within 30 meters and also meets the kill req

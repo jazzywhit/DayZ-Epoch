@@ -11,7 +11,7 @@ _missName = "Supply Drop";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"An AN-2 with NATO Supplies is Flying In!\nBeat the Bandits to the Package!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"An AN-2 with NATO Supplies is Flying In!\nBandits have also intercepted the radio signal!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;

@@ -1,17 +1,17 @@
-/*
-	Medical Crate by lazyink (Full credit for original code to TheSzerdi & TAW_Tonic)
-	Updated to new format by Vampire
-*/
+/*																					//
+	Nato Weapons Cache Mission by lazyink (Original Full Code by TheSzerdi & TAW_Tonic)
+	New Mission Format by Vampire
+*/																					//
 
 private ["_missName","_coords","_net","_veh1","_veh2","_vehicle","_vehicle1","_crate"];
 
 //Name of the Mission
-_missName = "Medical Cache";
+_missName = "NATO Weapons Cache";
 
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have Taken Over a Survivor Medical Cache!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Bandits have Overrun a NATO Weapons Cache!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -31,27 +31,24 @@ _vehicle1 = createVehicle [_veh2,[(_coords select 0) - 6.2764, (_coords select 1
 [_vehicle1] call DZMSSetupVehicle;
 
 _crate = createVehicle ["USVehicleBox",_coords,[], 0, "CAN_COLLIDE"];
-_crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) - 3.7251,(_coords select 1) - 2.3614, 0],[], 0, "CAN_COLLIDE"];
 
 //DZMSBoxFill fills the box, DZMSProtectObj prevents it from disappearing
-[_crate,"medical"] ExecVM DZMSBoxSetup;
-[_crate1,"weapons"] ExecVM DZMSBoxSetup;
+[_crate,"weapons_nato"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
-[_crate1] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],2,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],2,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
 
 //Wait until the player is within 30 meters and also meets the kill req
-[_coords,"DZMSUnitsMinor"] call DZMSWaitMissionComp;
+[_coords,"DZMSUnitsMajor"] call DZMSWaitMissionComp;
 
 //Call DZMSSaveVeh to attempt to save the vehicles to the database
 //If saving is off, the script will exit.
@@ -59,8 +56,8 @@ sleep 5;
 [_vehicle1] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
-[nil,nil,rTitleText,"The Medical Cache is Under Survivor Control!", "PLAIN",6] call RE;
-diag_log text format["[DZMS]: Major SM6 Medical Cache Mission has Ended."];
+[nil,nil,rTitleText,"The Weapons Cache is Under Survivor Control!", "PLAIN",6] call RE;
+diag_log text format["[DZMS]: Major SM1 Weapon Cache Mission has Ended."];
 deleteMarker "DZMSMajMarker";
 deleteMarker "DZMSMajDot";
 

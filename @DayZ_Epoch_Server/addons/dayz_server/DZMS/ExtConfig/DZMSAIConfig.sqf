@@ -6,8 +6,43 @@
 */
 
 ///////////////////////////////////////////////
-// Array of skin classnames for the AI to use
-DZMSBanditSkins = ["Bandit1_DZ","BanditW1_DZ"];
+// Array of skin class names for the AI to use
+DZMSBanditSkins = [
+    "Bandit1_DZ",
+    "BanditW1_DZ"
+    ]; //For skill 2
+
+DZMSSurvivorSkins = [
+    "Skin_RU_Policeman_DZ",
+    "Skin_Pilot_EP1_DZ",
+    "Skin_Functionary1_EP1_DZ",
+    "Skin_Priest_DZ",
+    "Skin_Rocker1_DZ",
+    "Skin_Rocker2_DZ",
+    "Skin_Rocker3_DZ",
+    "Skin_Rocker4_DZ",
+    "Skin_SurvivorW3_DZ",
+    "Skin_SurvivorWpink_DZ",
+    "Skin_SurvivorWurban_DZ",
+    "Skin_INS_Bardak_DZ",
+    "Skin_INS_Worker2_DZ"
+    ]; // For skill 0,1
+
+DZMSNatoSkins = [
+    "Skin_Rocket_DZ",
+    "Skin_Soldier1_DZ",
+    "Skin_Drake_Light_DZ",
+    "Skin_Soldier_TL_PMC_DZ",
+    "Skin_Soldier_Sniper_PMC_DZ",
+    "Skin_Soldier_Bodyguard_AA12_PMC_DZ",
+    "Skin_CZ_Special_Forces_GL_DES_EP1_DZ",
+    "Skin_FR_OHara_DZ",
+    "Skin_FR_Rodriguez_DZ",
+    "Skin_CZ_Soldier_Sniper_EP1_DZ",
+    "Skin_Graves_Light_DZ",
+    "Skin_INS_Soldier_AR_DZ",
+    "Skin_INS_Soldier_CO_DZ"
+    ]; // For skill 3
 
 ////////////////////////
 // Array of AI Skills
@@ -69,23 +104,33 @@ DZMSSkills3 = [
 DZMS_Rifles = [
 		"AK_47_M",
 		"AK_47_S",
-		"Sa58P_EP1",
+		"Sa58V_RCO_EP1",
+		"Sa58V_CCO_EP1",
+		"RPK_74",
+		"AK_107_PSO",
+		"Sa58V_RCO_EP1",
 		"Sa58V_EP1",
-		"AK_74",
-		"AKS_74",
-		"AKS_74_U",
-		"Saiga12K",
-		"bizon"
+		"AKS_74_PSO",
+		"AK_107_GL_PSO",
+		"PK",
+		"SVD"
 		];
 
 DZMS_Rifles_NATO = [
 		"G36C",
-		"MP5A5",
-		"M16A2",
-		"M4A1",
+		"G36C_camo",
+		"G36K_camo",
+		"BAF_L85A2_RIS_Holo",
+		"BAF_L85A2_UGL_Holo",
+		"SCAR_L_CQC_Holo",
+		"SCAR_H_CQC_CCO",
+		"M4A1_HWS_GL_camo",
+		"FN_FAL",
 		"SCAR_L_CQC",
-		"m8_compact",
-		"M1014"
+		"m16a4_acg",
+		"m240_scoped_EP1",
+		"M4SPR",
+		"M24"
 		];
 
 DZMSWeps0 = DZMS_Rifles;
@@ -97,34 +142,31 @@ DZMSWeps3 = DZMS_Rifles_NATO; //More dangerous and NATO Weapons
 // These are gear sets that will be randomly given to the AI
 // They are all the same, but can be customized.
 DZMSGear0 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage"],
+["ItemFlashlight"]
 ];
 
 DZMSGear1 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage"],
+["ItemFlashlight"]
 ];
 
 DZMSGear2 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage"],
+["ItemFlashlight"]
 ];
 
 DZMSGear3 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage"],
+["ItemFlashlight"]
 ];
 
 DZMSGear4 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage"],
+["ItemFlashlight"]
 ];
 
 ////////////////////////////////////////////////////////////
 // These are the backpacks that can be assigned to AI units.
 DZMSPacklist = [
-"DZ_Patrol_Pack_EP1",
-"DZ_Assault_Pack_EP1",
-"DZ_Czech_Vest_Puch"
 ];

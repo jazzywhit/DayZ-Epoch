@@ -442,7 +442,8 @@ class CfgLoot {
 	};
     assaultrifles_bric_high[] = {
         {"AKS_GOLD",0.01}
-        ,{"AK_47_M",0.24}
+        ,{"AK_47_M",0.12}
+        ,{"AK_47_S",0.12}
         ,{"Sa58V_RCO_EP1",0.05}
         ,{"Sa58V_CCO_EP1",0.1}
         ,{"RPK_74",0.1}

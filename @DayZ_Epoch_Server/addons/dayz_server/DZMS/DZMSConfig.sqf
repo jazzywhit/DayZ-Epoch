@@ -155,9 +155,8 @@ Minor missions have less AI than Major missions, but have crates that reflect th
 Below is the array of mission file names and the minimum and maximum times they run.
 Do not edit the Arrays unless you know what you are doing.
 */
-//DZMSMajorArray = ["SM10"]; // black market
-DZMSMajorArray = ["SM1","SM2","SM3","SM4","SM5","SM6","EM1","SM8"];
-DZMSMinorArray = ["SM2","SM3","SM4","SM5","SM6","SM7","SM8"];
+DZMSMajorArray = ["MajM1","MajM2","MajM3","MajM4","MajM5","MajM6"];
+DZMSMinorArray = ["MinM1","MinM3","MinM4","MinM5","MinM6","MinM7","MinM8","MinM9"];
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // The Minimum time in seconds before a major mission will run.
@@ -170,11 +169,11 @@ DZMSMajorMax = 2700;
 
 // Time in seconds before a minor mission will run.
 // At least this much time will pass between minor missions. Default = 600 (10 Minutes)
-DZMSMinorMin = 600;
+DZMSMinorMin = 300; // 5 minutes
 
 // Maximum time in seconds before a minor mission will run.
 // A minor mission will always run before this much time has passed. Default = 990 (16.5 Minutes)
-DZMSMinorMax = 900;
+DZMSMinorMax = 900; // 15 minutes
 
 // Blacklist Zone Array -- missions will not spawn in these areas
 // format: [[x,y,z],radius]

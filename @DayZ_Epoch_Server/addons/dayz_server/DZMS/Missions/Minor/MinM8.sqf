@@ -41,17 +41,17 @@ _crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) - 3.7251,(_coords 
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,2,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],3,2,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],2,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],2,2,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],2,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],2,2,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
 
 //Wait until the player is within 30 meters and also meets the kill req
-[_coords,"DZMSUnitsMajor"] call DZMSWaitMissionComp;
+[_coords,"DZMSUnitsMinor"] call DZMSWaitMissionComp;
 
 //Call DZMSSaveVeh to attempt to save the vehicles to the database
 //If saving is off, the script will exit.
@@ -60,7 +60,7 @@ sleep 5;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Medical Cache is Under Survivor Control!", "PLAIN",6] call RE;
-diag_log text format["[DZMS]: Major SM6 Medical Cache Mission has Ended."];
+diag_log text format["[DZMS]: Minor Medical Cache Mission has Ended."];
 deleteMarker "DZMSMajMarker";
 deleteMarker "DZMSMajDot";
 
