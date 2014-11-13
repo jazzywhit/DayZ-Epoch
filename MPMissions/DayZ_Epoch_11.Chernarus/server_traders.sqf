@@ -3,7 +3,7 @@ serverTraders = ["UN_CDF_Soldier_SL_EP1","RU_Citizen3","Rocker4","Assistant","Ri
 // Hero Vendor
 menu_UN_CDF_Soldier_SL_EP1 = [
 	[["Ammunition",478],["Clothes",476],["Helicopter Armed",493],["Military Armed",562],["Trucks Armed",479],["Weapons",477]],
-	[["ItemGoldBar10oz","EvDogTags",1,1,"buy","Dog Tag","10 oz Gold Bars",101], ["ItemVault","EvDogTags",5,1,"buy","Dog Tags","Personal Safe",101]],
+	[["ItemGoldBar10oz","EvDogTags",1,1,"buy","Dog Tag","10 oz Gold Bars",101], ["ItemVault","EvDogTags",1,5,"buy","Dog Tags","Personal Safe",101]],
 	"hero"
 ];
 // Ammunition Friendly
