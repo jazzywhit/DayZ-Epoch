@@ -50,9 +50,4 @@ class Category_543 {
         buy[] = {2,"ItemSilverBar"};
         sell[] = {1,"ItemSilverBar"};
     };
-    class 1Rnd_SMOKEYELLOW_GP25 {
-        type = "trade_items";
-        buy[] = {2,"ItemSilverBar"};
-        sell[] = {1,"ItemSilverBar"};
-    };
 };
