@@ -108,4 +108,14 @@ class Category_627 {
         buy[] = {4,"ItemBriefcase100oz"};
         sell[] = {4,"ItemBriefcase100oz"};
     };
+    class M136 {
+        type = "trade_weapons";
+        buy[] = {4,"ItemBriefcase100oz"};
+        sell[] = {4,"ItemBriefcase100oz"};
+    };
+    class Stinger {
+        type = "trade_weapons";
+        buy[] = {4,"ItemBriefcase100oz"};
+        sell[] = {4,"ItemBriefcase100oz"};
+    };
 };
