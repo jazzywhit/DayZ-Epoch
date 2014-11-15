@@ -22,4 +22,4 @@ _camp = [
 
 [[_x, _y], 0, _camp] call DT_fnc_ObjectsMapper;
 
-["RU_Functionary1", [_x + 2.35327,_y + 3.38037], (115-180)] call DT_fnc_CreateTrader;
+["UN_CDF_Soldier_SL_EP1", [_x + 2.35327,_y + 3.38037], (115-180)] call DT_fnc_CreateTrader;

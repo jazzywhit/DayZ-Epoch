@@ -22,4 +22,4 @@ _camp = [
 
 [[_x, _y], 0, _camp] call DT_fnc_ObjectsMapper;
 
-["GUE_Soldier_MG", [_x + 5.92017,_y + 1.44458], (135.159-180)] call DT_fnc_CreateTrader;
+["Ins_Soldier_MG", [_x + 5.92017,_y + 1.44458], (135.159-180)] call DT_fnc_CreateTrader;
