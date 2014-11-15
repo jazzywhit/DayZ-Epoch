@@ -1,24 +1,4 @@
 class Category_675 {
-	class bulk_15Rnd_9x19_M9SD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_17Rnd_9x19_glock17 {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_30Rnd_556x45_StanagSD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_30Rnd_9x19_MP5SD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
 	class bulk_ItemSandbag {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar10oz"};
@@ -51,26 +31,6 @@ class Category_675 {
 	};
 };
 class Category_636 {
-	class bulk_15Rnd_9x19_M9SD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_17Rnd_9x19_glock17 {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_30Rnd_556x45_StanagSD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_30Rnd_9x19_MP5SD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
 	class bulk_ItemSandbag {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar10oz"};
@@ -103,26 +63,6 @@ class Category_636 {
 	};
 };
 class Category_555 {
-	class bulk_15Rnd_9x19_M9SD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_17Rnd_9x19_glock17 {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_30Rnd_556x45_StanagSD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class bulk_30Rnd_9x19_MP5SD {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
 	class bulk_ItemSandbag {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar10oz"};
