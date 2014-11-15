@@ -502,7 +502,7 @@ if (true) then
 _unit_74 = objNull;
 if (true) then
 {
-  _this = createAgent ["Woodlander3", [11445.326, 11318.381], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["Woodlander1", [11445.326, 11318.381], [], 0, "CAN_COLLIDE"];
   _unit_74 = _this;
   _this setDir 13.705423;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
@@ -1174,7 +1174,7 @@ if (true) then
 _unit_502 = objNull;
 if (true) then
 {
-  _this = createAgent ["Citizen3", [2846.2024, 6637.21, 0.93242466], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["RU_Citizen3", [2846.2024, 6637.21, 0.93242466], [], 0, "CAN_COLLIDE"];
   _unit_502 = _this;
   _this setDir 103.93983;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
