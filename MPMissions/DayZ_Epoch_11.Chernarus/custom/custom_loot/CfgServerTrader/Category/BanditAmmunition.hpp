@@ -4,6 +4,11 @@ class Category_577 {
 		buy[] = {4,"ItemSilverBar10oz"};
 		sell[] = {2,"ItemSilverBar10oz"};
 	};
+    class 100Rnd_762x54_PK {
+        type = "trade_items";
+        buy[] = {4,"ItemGoldBar"};
+        sell[] = {2,"ItemGoldBar"};
+    };
 	class 30Rnd_545x39_AK {
 		type = "trade_items";
 		buy[] = {4,"ItemGoldBar"};
