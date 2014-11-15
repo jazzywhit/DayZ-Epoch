@@ -3,7 +3,7 @@
 	Updated to new format by Vampire
 	Updated for Black Market Trader by jesquik
 */
-private ["_missName","_coords","_base1","_base2","_base3","_base4","_base5","_base6","_base7","_base8","_base9","_base10","_base11","_base12","_base13","_base14","_base15","_base16","_base17","_vehicle","_vehicle1","_crate","_crate2", "_orig_coords"];
+private ["_missName","_coords","_base1","_base2","_base3","_base4","_base7","_base8","_base9","_base10","_base11","_base12","_base13","_base14","_base15","_base16","_base17","_vehicle","_vehicle1","_crate","_crate2", "_orig_coords"];
 
 //Name of the Mission
 _missName = "Black Market";
@@ -40,13 +40,6 @@ _base4 setDir 59.42643;
 [_base4] call DZMSProtectObj;
 _base4 setVehicleLock "LOCKED";
 _base4 setPos [(_coords select 0) - 11.4253, (_coords select 1) - 7.628,0];
-
-_base5 = createVehicle ["MedBox0",[(_coords select 0) - 7.1519, (_coords select 1) + 1.8144,0],[], 0, "CAN_COLLIDE"];
-_base5 setDir -29.851013;
-[_base5] call DZMSProtectObj;
-
-_base6 = createVehicle ["MedBox0",[(_coords select 0) - 7.4116, (_coords select 1) + 2.5244,0],[], 0, "CAN_COLLIDE"];
-[_base6] call DZMSProtectObj;
 
 _base7 = createVehicle ["WeaponHolder_ItemToolbox",[(_coords select 0) - 7.7041, (_coords select 1) + 3.332,0],[], 0, "CAN_COLLIDE"];
 _base7 setDir -106.46461;
