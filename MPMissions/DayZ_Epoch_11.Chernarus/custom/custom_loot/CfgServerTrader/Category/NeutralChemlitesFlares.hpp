@@ -39,4 +39,9 @@ class Category_666 {
 		buy[] = {2,"ItemSilverBar"};
 		sell[] = {1,"ItemSilverBar"};
 	};
+    class 1Rnd_HE_GP25 {
+        type = "trade_items";
+        buy[] = {4,"ItemGoldBar"};
+        sell[] = {2,"ItemGoldBar"};
+    };
 };

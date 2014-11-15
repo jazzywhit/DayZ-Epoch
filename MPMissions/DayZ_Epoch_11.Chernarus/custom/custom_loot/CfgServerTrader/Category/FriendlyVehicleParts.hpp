@@ -29,7 +29,7 @@ class Category_677 {
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {5,"ItemSilverBar"};
 	};
-	class ItemFuelBarrel {
+	class ItemFuelBarrelEmpty {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
@@ -66,7 +66,7 @@ class Category_682 {
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {5,"ItemSilverBar"};
 	};
-	class ItemFuelBarrel {
+	class ItemFuelBarrelEmpty {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
@@ -103,7 +103,7 @@ class Category_531 {
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {5,"ItemSilverBar"};
 	};
-	class ItemFuelBarrel {
+	class ItemFuelBarrelEmpty {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
