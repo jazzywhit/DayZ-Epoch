@@ -29,6 +29,56 @@ class Category_526 {
         buy[] = {4,"ItemGoldBar"};
         sell[] = {2,"ItemGoldBar"};
     };
+    class M249_EP1 {
+        type = "trade_weapons";
+        buy[] = {1,"ItemGoldBar10oz"};
+        sell[] = {6,"ItemGoldBar"};
+    };
+    class M240 {
+        type = "trade_weapons";
+        buy[] = {1,"ItemGoldBar10oz"};
+        sell[] = {5,"ItemGoldBar"};
+    };
+    class Mk_48 {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class MG36_camo {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class M60A4_EP1 {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class MG36 {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class M249 {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class m240_scoped_EP1 {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class M249_m145_EP1 {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class M8_SAW {
+        type = "trade_weapons";
+        buy[] = {4,"ItemGoldBar"};
+        sell[] = {2,"ItemGoldBar"};
+    };
     class M16A4_ACG {
         type = "trade_weapons";
         buy[] = {4,"ItemGoldBar"};
@@ -73,59 +123,73 @@ class Category_526 {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class G36_C_SD_camo {
+    };
+    class G36_C_SD_camo {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class m16a4 {
+    };
+    class m16a4 {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class M16A4_GL {
+    };
+    class M16A4_GL {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class M4A1_Aim_camo {
+    };
+    class M4A1_Aim_camo {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class M4A1_AIM_SD_camo {
+    };
+    class M4A1_AIM_SD_camo {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class M4A1_HWS_GL {
+    };
+    class M4A1_HWS_GL {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class m8_compact {
+    };
+    class m8_compact {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class m8_carbineGL {
+    };
+    class m8_carbineGL {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class m8_holo_sd {
+    };
+    class m8_holo_sd {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class m8_carbine {
+    };
+    class m8_carbine {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class SCAR_L_CQC_Holo {
+    };
+    class SCAR_L_CQC_Holo {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class SCAR_L_CQC_CCO_SD {
+    };
+    class SCAR_L_CQC_CCO_SD {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class BAF_L85A2_UGL_Holo {
+    };
+    class BAF_L85A2_UGL_Holo {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
-    };class M4A1_HWS_GL_SD_Camo {
+    };
+    class M4A1_HWS_GL_SD_Camo {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};

@@ -98,4 +98,14 @@ class Category_477 {
         buy[] = {4,"ItemGoldBar10oz"};
         sell[] = {2,"ItemGoldBar10oz"};
     };
+    class RPG7V {
+        type = "trade_weapons";
+        buy[] = {2,"ItemBriefcase100oz"};
+        sell[] = {2,"ItemBriefcase100oz"};
+    };
+    class Igla {
+        type = "trade_weapons";
+        buy[] = {4,"ItemBriefcase100oz"};
+        sell[] = {4,"ItemBriefcase100oz"};
+    };
 };
