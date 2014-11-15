@@ -24,7 +24,7 @@ waitUntil {!isNil "dayz_animalCheck"}; //remove this line completely to make it 
 sleep 10; //Wait in seconds before the credits start after player IS ingame
 
 
-_role1 = "Bolt Action Hardcore v1.0.0";
+_role1 = "Bolt Action Hardcore v1.0.1";
 _role1names = ["Narrow Minded Gaming", "narrowmindedgaming.com", "@narrowmgaming", "/r/nmg/"];
 _role2 = "Supported Mods";
 _role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
