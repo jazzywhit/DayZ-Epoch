@@ -59,4 +59,14 @@ class Category_527 {
         buy[] = {2,"ItemSilverBar"};
         sell[] = {1,"ItemSilverBar"};
     };
+    class 8Rnd_B_Beneli_74Slug {
+        type = "trade_items";
+        buy[] = {2,"ItemSilverBar"};
+        sell[] = {1,"ItemSilverBar"};
+    };
+    class 8Rnd_B_Beneli_Pellets {
+        type = "trade_items";
+        buy[] = {2,"ItemSilverBar"};
+        sell[] = {1,"ItemSilverBar"};
+    };
 };
