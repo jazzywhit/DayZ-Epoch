@@ -9,6 +9,11 @@ class Category_527 {
 		buy[] = {1,"ItemSilverBar10oz"};
 		sell[] = {5,"ItemSilverBar"};
 	};
+    class 20Rnd_762x51_DMR {
+        type = "trade_items";
+        buy[] = {2,"ItemSilverBar10oz"};
+        sell[] = {1,"ItemSilverBar10oz"};
+    };
 	class 30Rnd_556x45_Stanag {
 		type = "trade_items";
 		buy[] = {5,"ItemSilverBar"};

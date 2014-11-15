@@ -204,4 +204,19 @@ class Category_526 {
         buy[] = {6,"ItemGoldBar"};
         sell[] = {3,"ItemGoldBar"};
     };
+    class M4SPR {
+        type = "trade_weapons";
+        buy[] = {1,"ItemGoldBar10oz"};
+        sell[] = {6,"ItemGoldBar"};
+    };
+    class M24 {
+        type = "trade_weapons";
+        buy[] = {1,"ItemGoldBar10oz"};
+        sell[] = {6,"ItemGoldBar"};
+    };
+    class M24_des_EP1 {
+        type = "trade_weapons";
+        buy[] = {1,"ItemGoldBar10oz"};
+        sell[] = {6,"ItemGoldBar"};
+    };
 };
