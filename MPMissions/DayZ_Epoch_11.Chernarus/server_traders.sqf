@@ -82,7 +82,7 @@ menu_RU_Citizen4 = [
 menu_RU_WorkWoman5 = [
 	[["Backpacks",632],["Drinks",633],["Packaged Food",635]],
 	[["ItemTinBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Tin Bar",101]],
-	"neutral"
+	"friendly"
 ];
 // West Wholesaler
 menu_RU_Citizen1 = [
