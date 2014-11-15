@@ -21,12 +21,12 @@ class WoodenArrowF : WeaponHolderBase {
 		init = "[(_this select 0),'cfgMagazines','WoodenArrow'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 	};
 };
-class WeaponHolder_ItemHatchet_DZE: WeaponHolderBase {
+class WeaponHolder_ItemHatchet: WeaponHolderBase {
 	scope = 2;
 	displayName = $STR_EQUIP_NAME_41;
 	model = "\dayz_equip\models\hatchet.p3d";
 	class eventHandlers {
-		init = "[(_this select 0),'cfgWeapons','ItemHatchet_DZE'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
+		init = "[(_this select 0),'cfgWeapons','ItemHatchet'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 	};
 };
 class WeaponHolder_ItemMachete: WeaponHolderBase {

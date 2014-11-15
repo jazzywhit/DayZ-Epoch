@@ -537,7 +537,7 @@ if(isNil "DZE_maintainRange") then {
 	DZE_maintainRange = ((DZE_PlotPole select 0)+20);
 };
 
-DZE_REPLACE_WEAPONS = [["Crossbow","ItemMatchbox","ItemHatchet"],["Crossbow_DZ","ItemMatchbox_DZE","ItemHatchet_DZE"]];
+DZE_REPLACE_WEAPONS = [["Crossbow","ItemMatchbox","ItemHatchet"],["Crossbow_DZ","ItemMatchbox_DZE","ItemHatchet"]];
 
 if(isNil "dayz_zedSpawnVehCount") then {
 	dayz_zedSpawnVehCount = dayz_maxLocalZombies / 2;

@@ -1,6 +1,7 @@
 /*
 	Hemp Farm Script
 	Example Code by Halv
+	Update for pot farm by jesquik
 */
 
 private ["_missName","_ai_coords","_hemp_coords","_boxFin"];

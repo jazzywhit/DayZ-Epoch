@@ -1,4 +1,4 @@
-class ItemHatchet_DZE : ItemCore {
+class ItemHatchet : ItemCore {
 		scope = 2;
 		displayName = $STR_EQUIP_NAME_41;
 		model = "\dayz_equip\models\hatchet.p3d";
@@ -12,7 +12,7 @@ class ItemHatchet_DZE : ItemCore {
 				script="spawn player_addToolbelt;";
 				use[]=
 				{
-					"ItemHatchet_DZE"
+					"ItemHatchet"
 				};
 				output[]=
 				{

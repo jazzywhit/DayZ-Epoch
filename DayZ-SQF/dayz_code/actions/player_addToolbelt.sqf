@@ -28,7 +28,7 @@ if (_item in ["MeleeHatchet_DZE","MeleeCrowbar","MeleeMachete","MeleeFishingPole
 	};
 };
 
-if (_item in ["ItemHatchet_DZE","ItemCrowbar","ItemMachete","ItemFishingPole","ItemSledge"]) then {
+if (_item in ["ItemHatchet","ItemCrowbar","ItemMachete","ItemFishingPole","ItemSledge"]) then {
 	switch (primaryWeapon player) do
 	{
 		case "MeleeHatchet_DZE": { "MeleeHatchet_DZE" call player_addToolbelt };

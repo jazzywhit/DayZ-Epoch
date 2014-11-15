@@ -1,6 +1,7 @@
 /*
 	Medical C-130 Crash by lazyink (Full credit for original code to TheSzerdi & TAW_Tonic)
 	Modified to new format by Vampire
+	Updated for patrol by jesquik
 */
 
 private ["_missName","_coords","_wreck","_trash","_trash1","_trash2","_trash3","_trash4","_trash5","_veh1","_veh2","_vehicle","_vehicle1","_crate","_crate1"];

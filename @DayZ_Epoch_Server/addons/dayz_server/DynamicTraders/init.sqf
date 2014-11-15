@@ -12,16 +12,17 @@ DT_fnc_ObjectsMapper = compile preprocessFileLineNumbers "\z\addons\dayz_server\
 DT_fnc_CreateTrader = compile preprocessFileLineNumbers "\z\addons\dayz_server\DynamicTraders\createTrader.sqf";
 
 _trader_base_config = [
-	[3, "general.sqf", 		"General/Building Traders", 	"ColorBlack"],
-	[1, "medical.sqf", 		"Medical Trader", 				"ColorBlack"],
+	[2, "general.sqf", 		"General/Building Traders", 	"ColorBlack"],
+	[2, "medical.sqf", 		"Medical Trader", 				"ColorBlack"],
 	[2, "weapons.sqf", 		"Weapons Trader", 				"ColorBlack"],
 	[2, "wholesaler.sqf", 	"Wholesaler", 					"ColorBlack"],
+	[1, "blackmarket.sqf", 	"Black Market", 			    "ColorBlack"],
 	[3, "boat.sqf", 		"Boat", 						"ColorBlack"]
 ];
 
 _static_trader_base_config = [
-	[[5134.57, 2344.57, 0.0016], "static_aircraft.sqf", 		"Balota Aircraft Trader", 			"ColorBlack"],
-	[[4138.92, 10728.7, 0.0016], "static_aircraft.sqf", 		"NW Aircraft Trader", 				"ColorBlack"]
+	[[5138, 2345, 0.0016], "static_aircraft.sqf", 		"Balota Aircraft Trader", 			"ColorBlack"],
+	[[4142, 10730, 0.0016], "static_aircraft.sqf", 		"NW Aircraft Trader", 				"ColorBlack"]
 ];
 
 _hide_markers = true;
@@ -29,7 +30,7 @@ _markers = [];
 waitUntil { sleep 1; !isNil "sm_done" };
 
 //Spawn the Black Market trader to be used for missions and make it available globally
-BlackMarketTrader = ["GUE_Woodlander2", [0,0], (135.159-180)] call DT_fnc_CreateTrader;
+BlackMarketTrader = ["GUE_Woodlander2", [15500,850], (135.159-180)] call DT_fnc_CreateTrader;
 
 //////////////////////////////////////////////
 //Loop through all of the Dynamic traders
@@ -69,7 +70,7 @@ BlackMarketTrader = ["GUE_Woodlander2", [0,0], (135.159-180)] call DT_fnc_Create
 				_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],750];
 				if (count _nearestCities == 0) then {
 					diag_log format["DynTrader: %1 was not a valid location for %2", _position, _x select 1];
-					_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],10000];
+					_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],5000];
 					_nearestCity = _nearestCities select 0;
 					_cityPos = position _nearestCity;
 					diag_log format["DynTrader: Looking near %1 for a valid location for %2", _cityPos, _x select 1];
@@ -78,10 +79,10 @@ BlackMarketTrader = ["GUE_Woodlander2", [0,0], (135.159-180)] call DT_fnc_Create
 				};
 			};
 
-            // Exit if there are more than 10 unsuccessful loops or position is found
-			if ((count _position) == 2 or _j > 10) then {
+            // Exit if there are more than 20 unsuccessful loops or position is found
+			if ((count _position) == 2 or _j > 20) then {
 				_found_position = true;
-				if (_j > 10) then {
+				if (_j > 20) then {
 					diag_log format["DynTrader: Bailed after %1 tries", _j];
 				}
 			};

@@ -40,8 +40,12 @@ if(isnil "DynamicVehicleFuelLow") then {
 	DynamicVehicleFuelLow = 0;
 };
 if(isnil "DynamicVehicleFuelHigh") then {
-	DynamicVehicleFuelHigh = 25;
+	DynamicVehicleFuelHigh = 35; // ~ 30% chance there will be some gas to siphon on a vehicle
 };
+
+// Maximum percentage of gas that will be on a vehicle if it is sold
+MaxGasOnSale = 25; // Also the point where you can no longer siphon fuel from vehicles
+MinGasOnSale = 15;
 
 // Dynamic Vehicle Damage
 if(isnil "DynamicVehicleDamageLow") then {
@@ -54,6 +58,11 @@ if(isnil "DynamicVehicleDamageHigh") then {
 // Setup maximum number of mine veins
 if(isnil "MaxMineVeins") then {
 	MaxMineVeins = 50;
+};
+
+// Config trader instead of SQL
+if(isNil "DZE_ConfigTrader") then {
+	DZE_ConfigTrader = true;
 };
 
 //Plot for life and snap building

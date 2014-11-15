@@ -31,49 +31,43 @@ class CfgLoot {
 		,{"ItemDocument",0.02}
 	};
 	food_special[] = {
-		{"ItemSodaMdew",0.01}
+	    {"ItemSodaEmpty",0.3}
+		,{"ItemSodaMdew",0.01}
 		,{"ItemSodaRbull",0.01}
 		,{"ItemSodaOrangeSherbet",0.01}
 		,{"ItemSodaDrwaste",0.1}
-		,{"ItemSodaRabbit",0.07}
-		,{"ItemSodaMtngreen",0.03}
-		,{"ItemSodaR4z0r",0.03}
-		,{"ItemSodaClays",0.03}
-		,{"ItemSodaSmasht",0.03}
-		,{"ItemSodaDrwaste",0.03}
-		,{"ItemSodaLemonade",0.03}
-		,{"ItemSodaLvg",0.03}
-		,{"ItemSodaMzly",0.03}
-		,{"FoodCanGriff",0.03}
-		,{"FoodCanBadguy",0.03}
-		,{"FoodCanBoneboy",0.03}
-		,{"FoodCanCorn",0.03}
-		,{"FoodCanCurgon",0.03}
-		,{"FoodCanDemon",0.03}
-		,{"FoodCanFraggleos",0.03}
-		,{"FoodCanHerpy",0.03}
-		,{"FoodCanOrlok",0.03}
-		,{"FoodCanPowell",0.03}
-		,{"FoodCanTylers",0.03}
-		,{"FoodCanPasta",0.07}
-		,{"FoodPistachio",0.07}
-		,{"FoodNutmix",0.03}
-		,{"FoodPumpkin",0.03}
-		,{"FoodSunFlowerSeed",0.03}
+		,{"ItemSodaRabbit",0.1}
+		,{"ItemSodaMtngreen",0.04}
+		,{"ItemSodaR4z0r",0.04}
+		,{"ItemSodaClays",0.04}
+		,{"ItemSodaSmasht",0.04}
+		,{"ItemSodaLemonade",0.04}
+		,{"ItemSodaLvg",0.04}
+		,{"ItemSodaMzly",0.04}
+		,{"FoodCanGriff",0.01}
+		,{"FoodCanBadguy",0.01}
+		,{"FoodCanBoneboy",0.01}
+		,{"FoodCanCorn",0.01}
+		,{"FoodCanCurgon",0.01}
+		,{"FoodCanDemon",0.04}
+		,{"FoodCanFraggleos",0.04}
+		,{"FoodCanHerpy",0.04}
+		,{"FoodCanOrlok",0.04}
+		,{"FoodCanPowell",0.04}
+		,{"FoodCanTylers",0.04}
+		,{"FoodPumpkin",0.04}
+		,{"FoodSunFlowerSeed",0.04}
 	};
 	food[] = {
-		{"TrashTinCan",0.1}
-		,{"TrashJackDaniels",0.2}
-		,{"ItemSodaEmpty",0.4}
-		,{"FoodCanUnlabeled",0.1}
+		{"FoodCanUnlabeled",0.6}
 		,{"ItemSodaCoke",0.05}
 		,{"ItemSodaPepsi",0.05}
-		,{"FoodCanBakedBeans",0.03}
-		,{"FoodCanSardines",0.01}
-		,{"FoodCanFrankBeans",0.01}
-		,{"FoodCanPasta",0.03}
-		,{"FoodPistachio",0.01}
-		,{"FoodNutmix",0.01}
+		,{"FoodCanBakedBeans",0.05}
+		,{"FoodCanSardines",0.05}
+		,{"FoodCanFrankBeans",0.05}
+		,{"FoodCanPasta",0.05}
+		,{"FoodPistachio",0.05}
+		,{"FoodNutmix",0.05}
 	};
 	office[] = {
 		{"ItemSodaEmpty",0.31}
@@ -89,7 +83,7 @@ class CfgLoot {
 		,{"ItemHeatPack",0.06}
 		,{"ItemDocument",0.02}
 		,{"ItemLockbox",0.01}
-		,{"ItemBriefcaseEmpty",0.01},
+		,{"ItemBriefcaseEmpty",0.01}
 	};
 	generic[] = {
 		{"ItemSodaEmpty",0.06}
@@ -113,81 +107,82 @@ class CfgLoot {
 		,{"ItemHeatPack",0.04}
 	};
 	medical[] = {
-		{"ItemBandage",0.4}
+		{"ItemBandage",0.48}
 		,{"ItemPainkiller",0.15}
 		,{"ItemMorphine",0.2}
 		,{"ItemEpinephrine",0.1}
-		,{"ItemAntibiotic",0.1}
+		,{"ItemAntibiotic",0.02}
 		,{"ItemHeatPack",0.05}
 	};
 	hospital[] = {
-		{"ItemBandage",0.43},
-		{"ItemPainkiller",0.16},
-		{"ItemMorphine",0.18},
-		{"ItemEpinephrine",0.14},
-		{"ItemBloodbag",0.07},
-		{"ItemAntibiotic",0.02}
+		{"ItemBandage",0.47}
+		,{"ItemPainkiller",0.16}
+		,{"ItemMorphine",0.18}
+		,{"ItemEpinephrine",0.1}
+		,{"ItemBloodbag",0.07}
+		,{"ItemAntibiotic",0.02}
 	};
 	military[] = {
 		{"ItemSodaEmpty",0.11}
 		,{"ItemBandage",0.06}
-		,{"ItemAntibiotic",0.04}
 		,{"ItemPainkiller",0.04}
 		,{"ItemMorphine",0.01}
 		,{"30Rnd_556x45_Stanag",0.12}
 		,{"20Rnd_762x51_DMR",0.01}
 		,{"17Rnd_9x19_glock17",0.05}
 		,{"15Rnd_9x19_M9SD",0.01}
-		,{"15Rnd_9x19_M9",0.02}
+		,{"15Rnd_9x19_M9",0.04}
 		,{"5Rnd_762x51_M24",0.05}
-		,{"8Rnd_B_Beneli_74Slug",0.03}
-		,{"1Rnd_HE_M203",0.01}
-		,{"FlareWhite_M203",0.01}
-		,{"FlareGreen_M203",0.01}
-		,{"1Rnd_Smoke_M203",0.01}
+		,{"8Rnd_B_Beneli_74Slug",0.05}
 		,{"200Rnd_556x45_M249",0.01}
 		,{"HandGrenade_west",0.02}
 		,{"SmokeShell",0.04}
 		,{"SmokeShellRed",0.02}
 		,{"SmokeShellGreen",0.02}
+		,{"SmokeShellYellow",0.02}
+		,{"SmokeShellPurple",0.02}
+		,{"SmokeShellBlue",0.02}
+		,{"SmokeShellOrange",0.02}
 		,{"8Rnd_B_Beneli_Pellets",0.04}
 		,{"30Rnd_556x45_StanagSD",0.01}
-		,{"30Rnd_9x19_MP5",0.08}
+		,{"30Rnd_9x19_MP5",0.04}
 		,{"30Rnd_9x19_MP5SD",0.01}
 		,{"100Rnd_762x51_M240",0.01}
 		,{"HandChemGreen",0.02}
 		,{"HandChemBlue",0.02}
 		,{"HandChemRed",0.02}
-		,{"ItemHeatPack",0.04}
-		,{"FoodMRE",0.04}
+		,{"ItemHeatPack",0.07}
+		,{"FoodMRE",0.01}
 		,{"ItemDocument",0.01}
 	};
 	military_bric[] = {
 		{"ItemSodaEmpty",0.06}
 		,{"ItemBandage",0.2}
-		,{"ItemAntibiotic",0.04}
 		,{"ItemPainkiller",0.04}
 		,{"ItemMorphine",0.01}
 		,{"30Rnd_762x39_AK47",0.1}
-		,{"30Rnd_545x39_AK",0.16}
+		,{"30Rnd_545x39_AK",0.12}
 		,{"HandGrenade_east",0.03}
 		,{"SmokeShell",0.04}
 		,{"SmokeShellRed",0.02}
 		,{"SmokeShellGreen",0.02}
+        ,{"SmokeShellYellow",0.02}
+        ,{"SmokeShellPurple",0.02}
+        ,{"SmokeShellBlue",0.02}
+        ,{"SmokeShellOrange",0.02}
 		,{"HandChemGreen",0.04}
 		,{"HandChemBlue",0.02}
 		,{"HandChemRed",0.06}
-		,{"ItemHeatPack",0.05}
-		,{"FoodMRE",0.03}
-		,{"8Rnd_9x18_MakarovSD",0.01}
+		,{"ItemHeatPack",0.07}
+		,{"FoodMRE",0.01}
+		,{"8Rnd_9x18_MakarovSD",0.02}
 		,{"20Rnd_B_765x17_Ball",0.04}
 		,{"30Rnd_9x19_UZI_SD",0.01}
-		,{"ItemDocument",0.02}
+		,{"ItemDocument",0.01}
 	};
 	militarypilot[] = {
 		{"ItemSodaEmpty",0.04}
-		,{"ItemBandage",0.04}
-		,{"ItemAntibiotic",0.01}
+		,{"ItemBandage",0.05}
 		,{"ItemPainkiller",0.04}
 		,{"ItemMorphine",0.04}
 		,{"HandGrenade_west",0.01}
@@ -210,19 +205,16 @@ class CfgLoot {
 		,{"8Rnd_B_Beneli_Pellets",0.16}
 		,{"HandRoadFlare",0.12}
 		,{"8Rnd_9x18_MakarovSD",0.012}
-		,{"SmokeShell",0.04}
-		,{"FoodMRE",0.01}
+		,{"SmokeShell",0.05}
 		,{"ItemHotwireKit",0.01}
-		,{"ItemDocument",0.02}
-		,{"ItemLockbox",0.01}
+		,{"ItemDocument",0.03}
 	};
 	hunter[] = {
-		{"ItemBandage",0.4}
+		{"ItemBandage",0.6}
 		,{"ItemWaterbottleUnfilled",0.05}
 		,{"WoodenArrow",0.2}
 		,{"ItemHeatPack",0.03}
 		,{"FoodMRE",0.01}
-		,{"FoodNutmix",0.02}
 		,{"ItemDocument",0.01}
 		,{"5x_22_LR_17_HMR",0.05}
 	};
@@ -438,17 +430,18 @@ class CfgLoot {
 		,{"100Rnd_556x45_BetaCMag", 0.08}
 	};
 	assaultrifles_bric[] = {
-	    {"AKS_74_U",0.4}
-		,{"AK_74",0.38}
-		,{"RPK_74",0.02}
-		,{"AKS_74_kobra",0.1}
-		,{"Sa58P_EP1",0.02}
-		,{"Sa58V_EP1",0.02}
-		,{"AK_47_M",0.06}
+	    {"AKS_74_U",0.39}
+		,{"AK_74",0.28}
+		,{"AK_74_GL",0.05}
+		,{"AK_74_GL_kobra",0.16}
+		,{"AKS_74_kobra",0.07}
+		,{"AK_107_Kobra",0.07}
+		,{"AK_107_GL_Kobra",0.07}
 	};
     assaultrifles_bric_high[] = {
         {"AKS_GOLD",0.01}
-        ,{"AK_47_M",0.24}
+        ,{"AK_47_M",0.12}
+        ,{"AK_47_S",0.12}
         ,{"Sa58V_RCO_EP1",0.05}
         ,{"Sa58V_CCO_EP1",0.1}
         ,{"RPK_74",0.1}
@@ -456,9 +449,12 @@ class CfgLoot {
         ,{"Sa58V_EP1",0.25}
     };
 	assaultrifleammo_bric[] = {
-		{"30Rnd_762x39_SA58",0.05}
-		,{"30Rnd_762x39_AK47",0.40}
-		,{"30Rnd_545x39_AK",0.55}
+		{"75Rnd_545x39_RPK",0.05}
+		,{"30Rnd_545x39_AK",0.95}
+	};
+	assaultrifleammo_bric_high[] = {
+		{"30Rnd_762x39_SA58",0.5}
+		,{"30Rnd_762x39_AK47",0.5}
 	};
 	machineguns[] = {
 		{"M8_SAW",0.2}
@@ -472,9 +468,9 @@ class CfgLoot {
 	};
 	machinegunammo[] = {
 		{"100Rnd_556x45_BetaCMag",0.5}
-		,{"100Rnd_556x45_M249",0.4}
-		,{"100Rnd_762x51_M240",0.05}
-		,{"200Rnd_556x45_M249",0.05}
+		,{"100Rnd_556x45_M249",0.2}
+		,{"100Rnd_762x51_M240",0.2}
+		,{"200Rnd_556x45_M249",0.1}
 	};
 	machineguns_bric[] = {
 		{"RPK_74",0.8}

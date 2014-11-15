@@ -426,17 +426,11 @@ DZAI_Pistols3 = [
 DZAI_Rifles = [
 		"AK_47_M",
 		"AK_47_S",
-		"AK_74",
-		"AK_74_GL",
 		"AKS_74_kobra",
-		"AKS_74_U",
 		"AK_107_Kobra",
 		"AK_107_GL_Kobra",
-		"M1014",
-		"Remington870_lamp",
 		"Sa58P_EP1",
-		"Sa58V_EP1",
-		"Saiga12K"
+		"Sa58V_EP1"
 		];
 
 DZAI_Rifles0 = DZAI_Rifles;

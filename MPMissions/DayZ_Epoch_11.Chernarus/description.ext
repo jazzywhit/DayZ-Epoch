@@ -3,6 +3,10 @@
 #include "custom\custom_loot\config\CfgBuildingLoot.hpp"
 
 ///////////////////////////////////
+// CFG Traders
+#include "custom\custom_loot\CfgServerTrader\cfgServerTrader.hpp"
+
+///////////////////////////////////
 // Default
 respawn = "BASE";
 respawndelay = 5;

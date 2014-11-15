@@ -110,7 +110,7 @@ class CfgBuildingLoot {
 			{"PartFueltank","magazine",0.02},
 			{"PartEngine","magazine",0.02},
 			{"PartGlass","magazine",0.04},
-			{"ItemJerrycan","magazine",0.04},
+			{"ItemJerrycanEmpty","magazine",0.04},
 			{"ItemHatchet_DZE","object",0.07},
 			{"ItemKnife","military_bric",0.07},
 			{"ItemToolbox","weapon",0.06},
@@ -146,7 +146,7 @@ class CfgBuildingLoot {
 			{"PartFueltank","magazine",0.02},
 			{"PartEngine","magazine",0.02},
 			{"PartGlass","magazine",0.04},
-			{"ItemJerrycan","magazine",0.04},
+			{"ItemJerrycanEmpty","magazine",0.04},
 			{"ItemHatchet_DZE","weapon",0.07},
 			{"ItemKnife","military_bric",0.07},
 			{"ItemToolbox","weapon",0.06},
@@ -166,7 +166,7 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{"ItemJerrycan","magazine",0.05},
+			{"ItemJerrycanEmpty","magazine",0.05},
 			{"","generic",0.3},
 			{"","trash",0.11},
 			{"PartPlankPack","magazine",0.06},
@@ -201,8 +201,8 @@ class CfgBuildingLoot {
 			{"","generic",0.20},
             { "Binocular","weapon",0.04 },
             { "ItemRadio","weapon",0.01 },
-			{ "","food",0.1 },
-			{ "","trash",0.09 },
+			{ "","food",0.04 },
+			{ "","trash",0.15 },
 			{ "tents","tents",0.01 },
 			{ "pistols_bric", "cfglootweapon", 0.16 },
 			{ "shotgunsingleshot", "cfglootweapon", 0.04 },
@@ -242,15 +242,16 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles", "cfglootweapon", 0.32 },
+			{ "assaultrifles", "cfglootweapon", 0.30 },
 			{ "submachinegun", "cfglootweapon", 0.15 },
 			{ "sniperrifles", "cfglootweapon", 0.01 },
 			{ "machineguns", "cfglootweapon", 0.04 },
 			{ "militaryshotguns", "cfglootweapon", 0.03 },
 			{ "pistols", "cfglootweapon", 0.05},
-			{"PartVRotor","magazine",0.05},
+			{"PartVRotor","magazine",0.04},
 			{"","military",0.20},
 			{"Stinger","magazine",0.01},
+			{"M136","magazine",0.03},
 			{"AmmoBoxSmall_556","object",0.05},
 			{"AmmoBoxSmall_762","object",0.02},
 			{"militaryclothes","militaryclothes",0.03},
@@ -264,15 +265,16 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles_bric", "cfglootweapon", 0.35 },
+			{ "assaultrifles_bric", "cfglootweapon", 0.33 },
 			{ "submachinegun_bric", "cfglootweapon", 0.15 },
 			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
 			{ "machineguns_bric", "cfglootweapon", 0.1 },
 			{ "pistols_bric", "cfglootweapon", 0.05},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.05 },
-			{"PartVRotor","magazine",0.05},
+			{"PartVRotor","magazine",0.04},
 			{"","military_bric",0.2},
-			{"Igla","magazine",0.01},
+			{"Strela","magazine",0.01},
+			{"PG7V","magazine",0.03},
 			{"militaryclothes","militaryclothes",0.03}
 		};
 	};
@@ -288,9 +290,10 @@ class CfgBuildingLoot {
 			{ "sniperrifles", "cfglootweapon", 0.01 },
 			{ "machineguns", "cfglootweapon", 0.06 },
 			{ "militaryshotguns", "cfglootweapon", 0.03 },
-			{ "pistols", "cfglootweapon", 0.12},
+			{ "pistols", "cfglootweapon", 0.09},
 			{"","military",0.1},
 			{"Stinger","magazine",0.01},
+			{"M136","magazine",0.03},
 			{"AmmoBoxSmall_556","object",0.05},
 			{"AmmoBoxSmall_762","object",0.03},
 			{"militaryclothes","militaryclothes",0.1},
@@ -310,9 +313,10 @@ class CfgBuildingLoot {
 			{ "sniperrifles", "cfglootweapon", 0.01 },
 			{ "machineguns", "cfglootweapon", 0.06 },
 			{ "militaryshotguns", "cfglootweapon", 0.03 },
-			{ "pistols", "cfglootweapon", 0.12},
+			{ "pistols", "cfglootweapon", 0.09},
 			{ "treasure","object", 0.1 },
 			{"Stinger","magazine",0.01},
+			{"M136","magazine",0.03},
 			{"AmmoBoxSmall_556","object",0.05},
 			{"AmmoBoxSmall_762","object",0.03},
 			{"militaryclothes","militaryclothes",0.1},
@@ -333,8 +337,9 @@ class CfgBuildingLoot {
 			{ "machineguns_bric", "cfglootweapon", 0.01 },
 			{ "pistols_bric", "cfglootweapon", 0.1},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.06 },
-			{"","military_bric",0.15},
-			{"Igla","magazine",0.01},
+			{"","military_bric",0.12},
+			{"Strela","magazine",0.01},
+			{"PG7V","magazine",0.03},
 			{"militaryclothes","militaryclothes",0.1},
 		};
 	};
@@ -371,6 +376,8 @@ class CfgBuildingLoot {
 			{"ItemKnife","military_bric",0.04},
 			{"ItemGPS","weapon",0.03},
 			{"ItemMap","military_bric",0.02},
+			{"militarybackpacks","militarybackpacks",0.05},
+			{"ItemHatchet_DZE","object",0.05},
 			{"","medical",0.03},
 			{"","generic",0.1},
 			{"ItemEtool","weapon",0.02},
@@ -600,7 +607,7 @@ class CfgBuildingLoot {
 			{ "PartFueltank", "magazine", 0.03 },
 			{ "PartEngine", "magazine", 0.01 },
 			{ "PartGlass", "magazine", 0.08 },
-			{ "WeaponHolder_ItemJerrycan", "object", 0.03 }
+			{ "ItemJerrycanEmpty", "object", 0.03 }
 		};
 	};
 	class DynamicDebrisMilitary: Default
@@ -630,7 +637,7 @@ class CfgBuildingLoot {
 			{ "PartFueltank", "magazine", 0.03 },
 			{ "PartEngine", "magazine", 0.02 },
 			{ "PartGlass", "magazine", 0.03 },
-			{ "WeaponHolder_ItemJerrycan", "object", 0.03 }
+			{ "ItemJerrycanEmpty", "object", 0.03 }
 		};
 	};
 	class SupplyDrop: Default {

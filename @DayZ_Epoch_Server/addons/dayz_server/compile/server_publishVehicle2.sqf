@@ -89,6 +89,11 @@ _key call server_hiveWrite;
 	if(!_donotusekey) then {
 		// Lock vehicle
 		_object setvehiclelock "locked";
+
+		// If vehicle can be locked, set the fuel
+		// Get a random fuel between MinGasOnSale and MaxGasOnSale
+		_fuel = (random(MaxGasOnSale-MinGasOnSale)+MinGasOnSale) / 100;
+		_object setFuel _fuel;
 	};
 
 	clearWeaponCargoGlobal  _object;

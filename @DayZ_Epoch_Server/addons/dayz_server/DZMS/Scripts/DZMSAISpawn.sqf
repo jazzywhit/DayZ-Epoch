@@ -27,7 +27,12 @@ if (!isServer) exitWith {};
 for "_x" from 1 to _unitcount do {
 
 	//Lets pick a skin from the array
-	_aiskin = DZMSBanditSkins call BIS_fnc_selectRandom;
+    switch (_skill) do {
+        case 0: {_aiskin = DZMSSurvivorSkins call BIS_fnc_selectRandom;};
+        case 1: {_aiskin = DZMSSurvivorSkins call BIS_fnc_selectRandom;};
+        case 2: {_aiskin = DZMSBanditSkins call BIS_fnc_selectRandom;};
+        case 3: {_aiskin = DZMSNatoSkins call BIS_fnc_selectRandom;};
+    };
 	
 	//Lets spawn the unit
 	_unit = _unitGroup createUnit [_aiskin, [(_position select 0),(_position select 1),(_position select 2)], [], 10, "PRIVATE"];
@@ -63,9 +68,6 @@ for "_x" from 1 to _unitcount do {
 	_aigear = _aigearArray call BIS_fnc_selectRandom;
 	_gearmagazines = _aigear select 0;
 	_geartools = _aigear select 1;
-	
-	//Gear the AI backpack
-	_aipack = DZMSPacklist call BIS_fnc_selectRandom;
 
 	//Lets add it to the Unit
 	for "_i" from 1 to 3 do {
@@ -73,8 +75,12 @@ for "_x" from 1 to _unitcount do {
 	};
 	_unit addWeapon _weapon;
 	_unit selectWeapon _weapon;
-	
-	_unit addBackpack _aipack;
+
+    //Gear the AI backpack
+    if (count DZMSPackList > 0) then {
+        _aipack = DZMSPacklist call BIS_fnc_selectRandom;
+	    _unit addBackpack _aipack;
+	};
 	
 	if (DZMSUseNVG) then {
 		_unit addWeapon "NVGoggles";
