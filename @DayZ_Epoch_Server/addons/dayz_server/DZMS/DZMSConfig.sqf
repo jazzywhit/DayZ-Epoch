@@ -25,7 +25,7 @@ DZMSCntBanditKls = false;
 DZMSCleanDeath = false;
 
 // Do you want AI equipment to disappear instantly when killed?
-DZMSCleanDeathEquip = true;
+DZMSCleanDeathEquip = false;
 
 // Do you want AI that players run over to not have gear?
 // (If DZMSCleanDeath is true, this doesn't matter)
