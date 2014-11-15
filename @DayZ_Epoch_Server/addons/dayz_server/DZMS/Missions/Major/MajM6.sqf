@@ -103,7 +103,7 @@ BlackMarketTrader setPos [(_coords select 0), (_coords select 1),0];
 [600,5] call DZMSSleep;
 
 //Move the trader back to the original position
-BlackMarketTrader setPos [0,0,0];
+BlackMarketTrader setPos [15500,850,0];
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Black Market Trader is Gone", "PLAIN",6] call RE;

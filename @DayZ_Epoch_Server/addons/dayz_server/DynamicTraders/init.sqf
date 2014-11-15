@@ -29,7 +29,7 @@ _markers = [];
 waitUntil { sleep 1; !isNil "sm_done" };
 
 //Spawn the Black Market trader to be used for missions and make it available globally
-BlackMarketTrader = ["GUE_Woodlander2", [0,0], (135.159-180)] call DT_fnc_CreateTrader;
+BlackMarketTrader = ["GUE_Woodlander2", [15500,850], (135.159-180)] call DT_fnc_CreateTrader;
 
 //////////////////////////////////////////////
 //Loop through all of the Dynamic traders

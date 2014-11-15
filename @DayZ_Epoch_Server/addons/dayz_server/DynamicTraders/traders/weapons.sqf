@@ -22,5 +22,5 @@ _camp = [
 
 [[_x, _y], 0, _camp] call DT_fnc_ObjectsMapper;
 
-["US_Soldier_Pilot_EP1", [_x + 0.322632,_y + 0.198853], (125-180)] call DT_fnc_CreateTrader;
-["GUE_Woodlander2", [_x + 1.67639,_y + 4.89258], (88-180)] call DT_fnc_CreateTrader;
+["CDF_Soldier_Light", [_x + 0.322632,_y + 0.198853], (125-180)] call DT_fnc_CreateTrader;
+["CDF_Commander", [_x + 1.67639,_y + 4.89258], (88-180)] call DT_fnc_CreateTrader;

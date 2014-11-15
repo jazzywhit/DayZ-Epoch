@@ -855,16 +855,6 @@ if (true) then
   _this setPos [11432.479, 11330.239];
 };
 
-_unit_132 = objNull;
-if (true) then
-{
-  _this = createAgent ["GUE_Woodlander2", [8208.5488, 6690.8569, 0.031460613], [], 0, "CAN_COLLIDE"];
-  _unit_132 = _this;
-  _this setDir 68;
-  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
-  _this setUnitAbility 0.60000002;
-  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
-
 _vehicle_769 = objNull;
 if (true) then
 {
