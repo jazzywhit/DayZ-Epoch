@@ -83,7 +83,7 @@ class CfgLoot {
 		,{"ItemHeatPack",0.06}
 		,{"ItemDocument",0.02}
 		,{"ItemLockbox",0.01}
-		,{"ItemBriefcaseEmpty",0.01},
+		,{"ItemBriefcaseEmpty",0.01}
 	};
 	generic[] = {
 		{"ItemSodaEmpty",0.06}
@@ -115,7 +115,7 @@ class CfgLoot {
 		,{"ItemHeatPack",0.05}
 	};
 	hospital[] = {
-		{"ItemBandage",0.47},
+		{"ItemBandage",0.47}
 		,{"ItemPainkiller",0.16}
 		,{"ItemMorphine",0.18}
 		,{"ItemEpinephrine",0.1}
