@@ -24,14 +24,14 @@ waitUntil {!isNil "dayz_animalCheck"}; //remove this line completely to make it 
 sleep 10; //Wait in seconds before the credits start after player IS ingame
 
 
-_role1 = "Bolt Action Hardcore v1.0.1";
-_role1names = ["Narrow Minded Gaming", "narrowmindedgaming.com", "@narrowmgaming", "/r/nmg/"];
-_role2 = "Supported Mods";
-_role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
-_role3 = "True Hardcore";
-_role3names = ["First Person", "No P2W", "No Safe Zones"];
-_role4 = "Server Mods";
-_role4names = ["Custom Missions/AI", "Custom Traders", "Custom Cities", "Realistic Loot"];
+_role1 = "Narrow Minded Gaming";
+_role1names = ["#www narrowmindedgaming.com", "#twitter @narrowmgaming", "#reddit /r/nmg/"];
+_role2 = "Bolt Action Hardcore v1.0.1";
+_role2names = ["DayZ Epoch 1.0.5.1", "Trader Tiers: Common -> Bandit/Hero -> Black Market"];
+_role3 = "Supported Community Mods";
+_role3names = ["JSRS", "LandTex", "Blastcore"];
+_role4 = "True Hardcore";
+_role4names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders", "Custom Cities", "Realistic Loot"];
 
 
 {

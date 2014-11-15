@@ -14,6 +14,11 @@ class Category_478 {
 		buy[] = {4,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
+	class 30Rnd_545x39_AKSD {
+		type = "trade_items";
+		buy[] = {4,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
+	};
 	class 30Rnd_762x39_SA58 {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
