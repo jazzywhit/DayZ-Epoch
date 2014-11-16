@@ -23,4 +23,4 @@ _camp = [
 
 [[_x, _y], 0, _camp] call DT_fnc_ObjectsMapper;
 
-["Worker2", [_x + -2.84399,_y + 6.00989], (222.252-180)] call DT_fnc_CreateTrader;
+["Worker2", [_x + -2.84399,_y + 6.00989], (158.416)] call DT_fnc_CreateTrader;
