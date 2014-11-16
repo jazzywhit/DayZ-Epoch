@@ -91,6 +91,11 @@ class Category_508 {
 		buy[] = {1,"ItemSilverBar10oz"};
 		sell[] = {5,"ItemSilverBar"};
 	};
+    class ItemCanvas {
+        type = "trade_items";
+        buy[] = {1,"ItemSilverBar10oz"};
+        sell[] = {5,"ItemSilverBar"};
+    };
 	class ItemVault {
 		type = "trade_items";
 		buy[] = {3,"ItemBriefcase100oz"};

@@ -49,7 +49,7 @@ if (_ammo isKindOf "Hatchet_Swing_Ammo" || _ammo isKindOf "Chainsaw_Swing_Ammo")
 
 					_countOut = 1;
 					_itemOut = "PartWoodPile";
-					if (round(random 1) > 0.5) then {
+					if (round(random 1) > 0.7) then {
 					    _itemOut = "PartWoodLumber";
                     };
 

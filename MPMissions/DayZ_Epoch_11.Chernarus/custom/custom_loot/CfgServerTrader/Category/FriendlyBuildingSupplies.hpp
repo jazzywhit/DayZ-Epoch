@@ -44,6 +44,11 @@ class Category_678 {
 		buy[] = {1,"ItemSilverBar10oz"};
 		sell[] = {5,"ItemSilverBar"};
 	};
+	class ItemCanvas {
+		type = "trade_items";
+		buy[] = {1,"ItemSilverBar10oz"};
+		sell[] = {5,"ItemSilverBar"};
+	};
 	class ItemTentDomed {
 		type = "trade_items";
 		buy[] = {6,"ItemSilverBar10oz"};
@@ -111,6 +116,11 @@ class Category_680 {
 		buy[] = {1,"ItemSilverBar10oz"};
 		sell[] = {5,"ItemSilverBar"};
 	};
+    class ItemCanvas {
+        type = "trade_items";
+        buy[] = {1,"ItemSilverBar10oz"};
+        sell[] = {5,"ItemSilverBar"};
+    };
 	class ItemTentDomed {
 		type = "trade_items";
 		buy[] = {6,"ItemSilverBar10oz"};
@@ -178,6 +188,11 @@ class Category_530 {
 		buy[] = {1,"ItemSilverBar10oz"};
 		sell[] = {5,"ItemSilverBar"};
 	};
+    class ItemCanvas {
+        type = "trade_items";
+        buy[] = {1,"ItemSilverBar10oz"};
+        sell[] = {5,"ItemSilverBar"};
+    };
 	class ItemTentDomed {
 		type = "trade_items";
 		buy[] = {6,"ItemSilverBar10oz"};

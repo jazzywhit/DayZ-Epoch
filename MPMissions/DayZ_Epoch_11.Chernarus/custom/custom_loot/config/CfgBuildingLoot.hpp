@@ -45,7 +45,8 @@ class CfgBuildingLoot {
 			{"ItemMatchbox_DZE","generic",0.02},
 			{"","generic",0.32},
 			{"backpacks","backpacks",0.1},
-			{"","trash",0.2},
+			{"","trash",0.16},
+			{"ItemCanvas","generic",0.04},
 			{"ItemDocument", "generic",0.02},
 			{"Binocular","weapon",0.02},
 			{"clothes","clothes",0.06},
@@ -124,7 +125,9 @@ class CfgBuildingLoot {
 		};
 		lootTypeSmall[] = {
 			{ "","generic",0.5 },
-			{ "","trash",0.28 },
+			{ "","trash",0.20 },
+			{ "ItemCanvas","generic",0.04 },
+			{ "ItemPole","generic",0.04 },
 			{ "","military_bric",0.14 },
 			{ "ItemKnife","weapon",0.07 }
 		};
