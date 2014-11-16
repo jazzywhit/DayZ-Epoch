@@ -84,6 +84,11 @@ diag_log ("dayz_maxCurrentZeds: " +str(dayz_maxCurrentZeds) + "/" +str(dayz_maxZ
 
 };
 
+// Check for nearby buildings
+_nearby = _position nearObjects ["building",_radius];
+_nearbyCount = count _nearby;
+if (_nearbyCount < 1) exitwith {};
+
 {
 	_type = typeOf _x;
 	_config = 		configFile >> "CfgBuildingLoot" >> _type;
