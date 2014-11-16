@@ -32,7 +32,7 @@ if (true) then
 _unit_58 = objNull;
 if (true) then
 {
-  _this = createAgent ["RU_WorkWoman5", [4071.9915, 11676.731, 0.54440308], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["Rita_Ensler_EP1", [4071.9915, 11676.731, 0.54440308], [], 0, "CAN_COLLIDE"];
   _unit_58 = _this;
   _this setDir 566.81744;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
