@@ -6,6 +6,7 @@ instance_11_chernaurus/*
 /Keys/bi.bikey
 /Keys/bi2.bikey
 !.gitignore
+!/Images/
 !/@DayZ_Epoch_Server/
 !/@DayZ_Epoch_Server/addons/dayz_server
 !/Battleye/
