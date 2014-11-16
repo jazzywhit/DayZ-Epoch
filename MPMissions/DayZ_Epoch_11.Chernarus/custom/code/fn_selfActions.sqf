@@ -225,7 +225,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 			_allowed = [_owner];    
 			_allowed = [_owner] + _adminList + _fuid;
 			if(_owner == dayz_characterID || (getPlayerUID player) in _allowed)then{            
-			s_player_plotManagement = player addAction ["<t color='#0059FF'>Manage Plot</t>", "plotManagement\initPlotManagement.sqf", [], 5, false];
+			s_player_plotManagement = player addAction ["<t color='#0059FF'>Manage Plot</t>", "custom\plotManagement\initPlotManagement.sqf", [], 5, false];
 			};
 		};
 		 if (s_player_maintain_area < 0) then {
