@@ -38,4 +38,18 @@ if (!isDedicated) then {
 
 	// custom harvest to allow lumber to come from trees
 	player_harvest =	compile preprocessFileLineNumbers "custom\code\player_harvest.sqf";
+	
+	//Snap build pro
+	
+	player_build = compile preprocessFileLineNumbers "custom\snap_pro\player_build.sqf";
+	snap_build = compile preprocessFileLineNumbers "custom\snap_pro\snap_build.sqf";
+	dayz_spaceInterrupt = compile preprocessFileLineNumbers "custom\code\dayz_spaceInterrupt.sqf";
+	
+	//Plot management
+	PlotGetFriends      = compile preprocessFileLineNumbers "custom\plotManagement\plotGetFriends.sqf";
+	PlotNearbyHumans    = compile preprocessFileLineNumbers "custom\plotManagement\plotNearbyHumans.sqf";
+	PlotAddFriend       = compile preprocessFileLineNumbers "custom\plotManagement\plotAddFriend.sqf";
+	PlotRemoveFriend    = compile preprocessFileLineNumbers "custom\plotManagement\plotRemoveFriend.sqf";
+	/*Plot Management End*/
+
 };

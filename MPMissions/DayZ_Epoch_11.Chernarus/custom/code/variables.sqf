@@ -3,6 +3,9 @@ if(isNil "DZE_MissionLootTable") then {
 	DZE_MissionLootTable = true;
 };
 
+//Plot management
+s_player_plotManagement = -1;
+
 //drink water
 s_player_drinkWater = -1;
 

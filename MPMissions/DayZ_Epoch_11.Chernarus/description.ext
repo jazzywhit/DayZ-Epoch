@@ -231,3 +231,7 @@ class CfgSounds
 
 //snap building
 #include "custom\snap_pro\snappoints.hpp"
+
+//Plot management
+#include "custom\plotManagement\defines.hpp"
+#include "custom\plotManagement\plotManagement.hpp"
