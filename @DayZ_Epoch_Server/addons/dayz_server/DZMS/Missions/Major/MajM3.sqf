@@ -3,7 +3,7 @@
 	Updated to New Mission Format by Vampire
 */
 
-private ["_missName","_coords","_base1","_base2","_base3","_base4","_base5","_base6","_base7","_base8","_base9","_base10","_base11","_base12","_base13","_base14","_base15","_base16","_base17","_veh1","_vehicle","_crate"];
+private ["_missName","_coords","_base1","_base2","_base3","_base4","_base8","_base9","_base10","_base11","_base12","_base13","_base14","_base15","_base16","_base17","_veh1","_vehicle","_crate","_crate2"];
 
 //Name of the Mission
 _missName = "Bandit Medical Camp";
@@ -40,17 +40,6 @@ _base4 setDir 59.42643;
 [_base4] call DZMSProtectObj;
 _base4 setVehicleLock "LOCKED";
 _base4 setPos [(_coords select 0) - 11.4253, (_coords select 1) - 7.628,0];
-
-_base5 = createVehicle ["MedBox0",[(_coords select 0) - 7.1519, (_coords select 1) + 1.8144,0],[], 0, "CAN_COLLIDE"];
-_base5 setDir -29.851013;
-[_base5] call DZMSProtectObj;
-
-_base6 = createVehicle ["MedBox0",[(_coords select 0) - 7.4116, (_coords select 1) + 2.5244,0],[], 0, "CAN_COLLIDE"];
-[_base6] call DZMSProtectObj;
-
-_base7 = createVehicle ["WeaponHolder_ItemToolbox",[(_coords select 0) - 7.7041, (_coords select 1) + 3.332,0],[], 0, "CAN_COLLIDE"];
-_base7 setDir -106.46461;
-[_base7] call DZMSProtectObj;
 
 _base8 = createVehicle ["Land_CamoNetVar_EAST",[(_coords select 0) + 4.1738, (_coords select 1) - 7.9112],[], 0, "CAN_COLLIDE"];
 _base8 setDir -27.004126;
@@ -100,6 +89,11 @@ _vehicle = createVehicle [_veh1,[(_coords select 0) - 17.5078, (_coords select 1
 _crate = createVehicle ["USLaunchersBox",[(_coords select 0) - 6.8277, (_coords select 1) + 5.6748,0],[], 0, "CAN_COLLIDE"];
 [_crate,"medical"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
+
+//Create the loot
+_crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 7.7041, (_coords select 1) + 3.332,0],[], 0, "CAN_COLLIDE"];
+[_crate2,"medical"] ExecVM DZMSBoxSetup;
+[_crate2] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
