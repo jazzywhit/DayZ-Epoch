@@ -85,16 +85,6 @@ diag_log ("dayz_maxCurrentZeds: " +str(dayz_maxCurrentZeds) + "/" +str(dayz_maxZ
 };
 
 
-_nearby = _position nearObjects ["building",_radius];
-_nearbyCount = count _nearby;
-if (_nearbyCount < 1) exitwith
-{
-	if ((dayz_spawnZombies < _maxWildZombies) && !_inVehicle)  then {
-		[_position] call wild_spawnZombies;
-	};
-};
-
-
 {
 	_type = typeOf _x;
 	_config = 		configFile >> "CfgBuildingLoot" >> _type;
