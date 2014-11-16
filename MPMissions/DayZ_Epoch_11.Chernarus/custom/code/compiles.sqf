@@ -14,7 +14,7 @@ if (!isDedicated) then {
 	
 	//instant trade
 	if (DZE_ConfigTrader) then {
-	    call compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_traderMenuConfig.sqf";
+	    call compile preprocessFileLineNumbers "custom\fast_trade\player_traderMenuConfig.sqf";
 	} else {
 	    call compile preprocessFileLineNumbers "custom\fast_trade\player_traderMenuHive.sqf";
 	};
