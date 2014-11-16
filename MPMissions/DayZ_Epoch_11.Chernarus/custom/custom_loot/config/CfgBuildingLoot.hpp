@@ -268,10 +268,10 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles_bric", "cfglootweapon", 0.33 },
-			{ "submachinegun_bric", "cfglootweapon", 0.15 },
+			{ "assaultrifles_bric_high", "cfglootweapon", 0.33 },
+			{ "submachinegun_bric", "cfglootweapon", 0.05 },
 			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
-			{ "machineguns_bric", "cfglootweapon", 0.1 },
+			{ "machineguns_bric", "cfglootweapon", 0.2 },
 			{ "pistols_bric", "cfglootweapon", 0.05},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.05 },
 			{"PartVRotor","magazine",0.04},
@@ -334,10 +334,10 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles_bric", "cfglootweapon", 0.36 },
-			{ "submachinegun_bric", "cfglootweapon", 0.2 },
+			{ "assaultrifles_bric_high", "cfglootweapon", 0.36 },
+			{ "submachinegun_bric", "cfglootweapon", 0.1 },
 			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
-			{ "machineguns_bric", "cfglootweapon", 0.01 },
+			{ "machineguns_bric", "cfglootweapon", 0.11 },
 			{ "pistols_bric", "cfglootweapon", 0.1},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.06 },
 			{"","military_bric",0.12},
