@@ -14,8 +14,8 @@ private ["_nearestCity"];
 _nearestCity = nearestLocations [getPos player, ["NameCityCapital", "Airport"],1000];
 if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 1000m of a Capital or Airport!");};
 
-_nearestCity = nearestLocations [getPos player, ["NameCity"],500];
-if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 500m of a City!");};
+_nearestCity = nearestLocations [getPos player, ["NameCity", "mil_circle", "mil_dot"],500];
+if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 500m of a City or a Trader!");};
 
 _nearestCity = nearestLocations [getPos player, ["NameVillage"],250];
 if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 250m of a Village!");};
