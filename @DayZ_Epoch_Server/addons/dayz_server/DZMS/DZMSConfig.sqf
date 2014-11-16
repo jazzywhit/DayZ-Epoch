@@ -52,7 +52,7 @@ DZMSSceneryDespawnLoot = false;
 //////////////////////////////////////////////////////////////////////////////////////////
 // Do you want to use static coords for missions?
 // Leave this false unless you know what you are doing.
-DZMSStaticPlc = false;
+DZMSStaticPlc = true;
 
 // Array of static locations. X,Y,Z
 DZMSStatLocs = [
@@ -169,7 +169,7 @@ DZMSMajorMax = 2700;
 
 // Time in seconds before a minor mission will run.
 // At least this much time will pass between minor missions. Default = 600 (10 Minutes)
-DZMSMinorMin = 300; // 5 minutes
+DZMSMinorMin = 600; // 5 minutes
 
 // Maximum time in seconds before a minor mission will run.
 // A minor mission will always run before this much time has passed. Default = 990 (16.5 Minutes)
@@ -179,7 +179,7 @@ DZMSMinorMax = 900; // 15 minutes
 // format: [[x,y,z],radius]
 // Ex: [[06325,07807,0],300] //Starry Sobor
 DZMSBlacklistZones = [
-	[[06325,07807,0],2000]
+	[[0,0,0],50]
 ];
 
 /*=============================================================================================*/

@@ -111,9 +111,7 @@ DZMS_Rifles = [
 		"Sa58V_RCO_EP1",
 		"Sa58V_EP1",
 		"AKS_74_PSO",
-		"AK_107_GL_PSO",
-		"PK",
-		"SVD"
+		"AK_107_GL_PSO"
 		];
 
 DZMS_Rifles_NATO = [
@@ -128,9 +126,7 @@ DZMS_Rifles_NATO = [
 		"FN_FAL",
 		"SCAR_L_CQC",
 		"m16a4_acg",
-		"m240_scoped_EP1",
-		"M4SPR",
-		"M24"
+		"M4SPR"
 		];
 
 DZMSWeps0 = DZMS_Rifles;
