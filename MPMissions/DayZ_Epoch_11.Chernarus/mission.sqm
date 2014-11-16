@@ -1251,7 +1251,7 @@ class Mission
 			name="Klen";
 			text="Trader City Klen";
 			type="mil_circle";
-			colorName="ColorGreen";
+			colorName="ColorBlack";
 		};
 		class Item11
 		{
@@ -1259,7 +1259,7 @@ class Mission
 			name="TradercityBash";
 			text="Trader City Bash";
 			type="mil_circle";
-			colorName="ColorGreen";
+			colorName="ColorBlack";
 		};
 		class Item12
 		{
@@ -1291,7 +1291,7 @@ class Mission
 			name="Tradercitysosnovy";
 			text="Trader City Sosnovy";
 			type="mil_circle";
-			colorName="ColorGreen";
+			colorName="ColorBlack";
 		};
 	};
 	class Sensors
