@@ -71,11 +71,6 @@ class Category_615 {
 		buy[] = {8,"ItemGoldBar"};
 		sell[] = {4,"ItemGoldBar"};
 	};
-	class AKS_74_PSO {
-		type = "trade_weapons";
-		buy[] = {4,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
 	class AK_107_Kobra {
 		type = "trade_weapons";
 		buy[] = {4,"ItemGoldBar"};
