@@ -65,16 +65,16 @@ BlackMarketTrader = ["GUE_Woodlander2", [15500,850], (135.159-180)] call DT_fnc_
 				true
 			} count _markers;
 
-			// Ensure that the dynamic traders are within 750 meters of a city for non boat traders
+			// Ensure that the dynamic traders are within 500 meters of a city for non boat traders
 			if ((count _position) == 2 and (_x select 1) != "boat.sqf") then {
-				_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],750];
+				_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],500];
 				if (count _nearestCities == 0) then {
 					diag_log format["DynTrader: %1 was not a valid location for %2", _position, _x select 1];
 					_nearestCities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"],5000];
 					_nearestCity = _nearestCities select 0;
 					_cityPos = position _nearestCity;
 					diag_log format["DynTrader: Looking near %1 for a valid location for %2", _cityPos, _x select 1];
-					_position = [[_cityPos select 0, _cityPos select 1, 0],0,750,20,0,2000,0] call BIS_fnc_findSafePos;
+					_position = [[_cityPos select 0, _cityPos select 1, 0],0,500,20,0,2000,0] call BIS_fnc_findSafePos;
 					diag_log format["DynTrader: %1 was used instead for %2", _position, _x select 1];
 				};
 			};
