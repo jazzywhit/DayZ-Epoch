@@ -54,6 +54,11 @@ class Category_662 {
 		buy[] = {6,"ItemGoldBar"};
 		sell[] = {3,"ItemGoldBar"};
 	};
+    class MortarBucket {
+        type = "trade_items";
+        buy[] = {1,"ItemGoldBar10oz"};
+        sell[] = {5,"ItemGoldBar"};
+    };
 };
 class Category_508 {
 	class ItemSandbag {
@@ -126,4 +131,9 @@ class Category_508 {
 		buy[] = {6,"ItemGoldBar"};
 		sell[] = {3,"ItemGoldBar"};
 	};
+    class MortarBucket {
+        type = "trade_items";
+        buy[] = {1,"ItemGoldBar10oz"};
+        sell[] = {5,"ItemGoldBar"};
+    };
 };
