@@ -5,7 +5,7 @@
 //	Credits for original script: Bohemia Interactive http://bistudio.com
 
 //	========== SCRIPT CONFIG ============
-_onScreenTime = 8; 		//how long one role should stay on screen. Use value from 0 to 10 where 0 is almost instant transition to next role 
+_onScreenTime = 10; 		//how long one role should stay on screen. Use value from 0 to 10 where 0 is almost instant transition to next role
 	//NOTE: Above value is not in seconds. It is percentage. Default: 6
 
 //	==== CUSTOMIZING THE CREDITS ===
@@ -25,13 +25,11 @@ sleep 10; //Wait in seconds before the credits start after player IS ingame
 
 
 _role1 = "Narrow Minded Gaming";
-_role1names = ["#www narrowmindedgaming.com", "#twitter @narrowmgaming", "#reddit /r/nmg/"];
+_role1names = ["narrowmindedgaming.com #www", "@narrowmgaming #twitter", "/r/nmg/ #reddit"];
 _role2 = "Bolt Action Hardcore v1.0.1";
-_role2names = ["DayZ Epoch 1.0.5.1", "Trader Tiers: Common -> Bandit/Hero -> Black Market"];
-_role3 = "Supported Community Mods";
-_role3names = ["JSRS", "LandTex", "Blastcore"];
-_role4 = "True Hardcore";
-_role4names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders", "Custom Cities", "Realistic Loot"];
+_role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
+_role3 = "True Hardcore";
+_role3names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders", "Custom Cities", "Realistic Loot"];
 
 
 {
@@ -55,6 +53,5 @@ _role4names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders", "Cus
 	//The list below should have exactly the same amount of roles as the list above
 	[_role1, _role1names],
 	[_role2, _role2names],
-	[_role3, _role3names],
-	[_role4, _role4names]
+	[_role3, _role3names]
 ];
