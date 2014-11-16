@@ -2,7 +2,7 @@ private ["_type","_inVehicle","_dateNow","_maxWildZombies","_age","_radius","_po
 //_t1 = diag_tickTime;
 
 _type = _this select 0;
-_inVehicle = (vehicle player != player);
+_inVehicle = false;
 _onTheMove = (speed (vehicle player) > 10);
 _dateNow = (DateToNumber date);
 _maxWildZombies = 3;
@@ -83,17 +83,6 @@ diag_log ("GlobalZombies: " +str(dayz_CurrentZombies) + "/" +str(dayz_maxGlobalZ
 diag_log ("dayz_maxCurrentZeds: " +str(dayz_maxCurrentZeds) + "/" +str(dayz_maxZeds));
 
 };
-
-
-_nearby = _position nearObjects ["building",_radius];
-_nearbyCount = count _nearby;
-if (_nearbyCount < 1) exitwith
-{
-	if ((dayz_spawnZombies < _maxWildZombies) && !_inVehicle)  then {
-		[_position] call wild_spawnZombies;
-	};
-};
-
 
 {
 	_type = typeOf _x;
