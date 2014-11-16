@@ -13,35 +13,35 @@ DZMSBanditSkins = [
     ]; //For skill 2
 
 DZMSSurvivorSkins = [
-    "Skin_RU_Policeman_DZ",
-    "Skin_Pilot_EP1_DZ",
-    "Skin_Functionary1_EP1_DZ",
-    "Skin_Priest_DZ",
-    "Skin_Rocker1_DZ",
-    "Skin_Rocker2_DZ",
-    "Skin_Rocker3_DZ",
-    "Skin_Rocker4_DZ",
-    "Skin_SurvivorW3_DZ",
-    "Skin_SurvivorWpink_DZ",
-    "Skin_SurvivorWurban_DZ",
-    "Skin_INS_Bardak_DZ",
-    "Skin_INS_Worker2_DZ"
+    "RU_Policeman_DZ",
+    "Pilot_EP1_DZ",
+    "Functionary1_EP1_DZ",
+    "Priest_DZ",
+    "Rocker1_DZ",
+    "Rocker2_DZ",
+    "Rocker3_DZ",
+    "Rocker4_DZ",
+    "SurvivorW3_DZ",
+    "SurvivorWpink_DZ",
+    "SurvivorWurban_DZ",
+    "INS_Bardak_DZ",
+    "INS_Worker2_DZ"
     ]; // For skill 0,1
 
 DZMSNatoSkins = [
-    "Skin_Rocket_DZ",
-    "Skin_Soldier1_DZ",
-    "Skin_Drake_Light_DZ",
-    "Skin_Soldier_TL_PMC_DZ",
-    "Skin_Soldier_Sniper_PMC_DZ",
-    "Skin_Soldier_Bodyguard_AA12_PMC_DZ",
-    "Skin_CZ_Special_Forces_GL_DES_EP1_DZ",
-    "Skin_FR_OHara_DZ",
-    "Skin_FR_Rodriguez_DZ",
-    "Skin_CZ_Soldier_Sniper_EP1_DZ",
-    "Skin_Graves_Light_DZ",
-    "Skin_INS_Soldier_AR_DZ",
-    "Skin_INS_Soldier_CO_DZ"
+    "Rocket_DZ",
+    "Soldier1_DZ",
+    "Drake_Light_DZ",
+    "Soldier_TL_PMC_DZ",
+    "Soldier_Sniper_PMC_DZ",
+    "Soldier_Bodyguard_AA12_PMC_DZ",
+    "CZ_Special_Forces_GL_DES_EP1_DZ",
+    "FR_OHara_DZ",
+    "FR_Rodriguez_DZ",
+    "CZ_Soldier_Sniper_EP1_DZ",
+    "Graves_Light_DZ",
+    "INS_Soldier_AR_DZ",
+    "INS_Soldier_CO_DZ"
     ]; // For skill 3
 
 ////////////////////////
