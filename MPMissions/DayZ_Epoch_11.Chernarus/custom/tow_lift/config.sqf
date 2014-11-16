@@ -82,6 +82,8 @@ LOG_CFG_CANTOW=[
 	"armoredsuv_pmc",
 	"armoredsuv_pmc_dz",
 	"armoredsuv_pmc_dze",
+    "ikarus",
+    "ikarus_tk_civ_ep1",
 	"av8b",
 	"av8b2",
 	"baf_atv_d",
@@ -549,7 +551,9 @@ LOG_CFG_ISTOWABLE_HEAVY=[
 	"warfaresupplytruck_gue",
 	"warfaresupplytruck_ins",
 	"warfaresupplytruck_ru",
-	"warfaresupplytruck_usmc"
+	"warfaresupplytruck_usmc",
+    "ikarus",
+    "ikarus_tk_civ_ep1"
 ];
 
 LOG_CFG_ISTOWABLE=[	
@@ -587,8 +591,6 @@ LOG_CFG_ISTOWABLE=[
 	"hilux1_civil_2_covered",
 	"hilux1_civil_3_open",
 	"hilux1_civil_3_open_ep1",
-	"ikarus",
-	"ikarus_tk_civ_ep1",
 	"jetskiyanahui_blue",
 	"jetskiyanahui_green",
 	"jetskiyanahui_red",
