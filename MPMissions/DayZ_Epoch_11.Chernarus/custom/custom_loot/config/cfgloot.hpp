@@ -25,9 +25,8 @@ class CfgLoot {
 		,{"7Rnd_45ACP_1911",0.15}
 		,{"2Rnd_shotgun_74Slug",0.14}
 		,{"2Rnd_shotgun_74Pellets",0.14}
-		,{"ItemBandage",0.11}
+		,{"ItemBandage",0.14}
 		,{"ItemPainkiller",0.06}
-		,{"ItemBriefcaseEmpty",0.03}
 		,{"ItemDocument",0.02}
 	};
 	food_special[] = {
@@ -81,9 +80,8 @@ class CfgLoot {
 		,{"HandChemBlue",0.03}
 		,{"HandChemRed",0.03}
 		,{"ItemHeatPack",0.06}
-		,{"ItemDocument",0.02}
+		,{"ItemDocument",0.03}
 		,{"ItemLockbox",0.01}
-		,{"ItemBriefcaseEmpty",0.01}
 	};
 	generic[] = {
 		{"ItemSodaEmpty",0.06}
