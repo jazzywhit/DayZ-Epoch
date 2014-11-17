@@ -16,8 +16,8 @@ class Category_623 {
 	};
 	class 10x_303 {
 		type = "trade_items";
-		buy[] = {1,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] = {5,"ItemSilverBar10oz"};
+		sell[] = {5,"ItemSilverBar10oz"};
 	};
 };
 class Category_573 {
@@ -38,7 +38,7 @@ class Category_573 {
 	};
 	class 10x_303 {
 		type = "trade_items";
-		buy[] = {1,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] = {5,"ItemSilverBar10oz"};
+		sell[] = {5,"ItemSilverBar10oz"};
 	};
 };
