@@ -5,7 +5,6 @@ _build = 3;
 if(isNil "DZE_CLICK_ACTIONS_BUILD") then {
     diag_log text "CLICK ACTIONS: loading...";
     call compile preprocessFileLineNumbers "custom\rightclickoptions\config.sqf";
-    player_selectSlot = compile preprocessFileLineNumbers "\custom\code\ui_selectSlot.sqf";
     DZE_CLICK_ACTIONS_BUILD = _build;
 } else {
     if(_build != DZE_CLICK_ACTIONS_BUILD) then {
