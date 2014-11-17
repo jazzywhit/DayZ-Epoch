@@ -65,7 +65,7 @@ _object_inventory = {
 		if (typeOf (_object) == "Plastic_Pole_EP1_DZ") then{
     _inventory = _object getVariable ["plotfriends", []]; //We're replacing the inventory with UIDs for this item
 } else {
-    _if (typeOf (_object) == "Plastic_Pole_EP1_DZ") then{
+     if (typeOf (_object) == "Plastic_Pole_EP1_DZ") then{
     _inventory = _object getVariable ["plotfriends", []]; //We're replacing the inventory with UIDs for this item
 } else {
     _inventory = [

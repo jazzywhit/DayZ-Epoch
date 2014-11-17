@@ -139,7 +139,7 @@ if (isServer && isNil "sm_done") then {
 			_object setVariable ["lastUpdate",time];
 			_object setVariable ["ObjectID", _idKey, true];
 			if (typeOf (_object) == "Plastic_Pole_EP1_DZ") then {
-				_object setVariable ["plotfriends", _intentory, true];
+				_object setVariable ["plotfriends", _inventory, true];
 					};
 			_object setVariable ["OwnerPUID", _ownerPUID, true];
 
