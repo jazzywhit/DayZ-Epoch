@@ -95,7 +95,7 @@ if(_isPZombie) then {
 			if (s_player_pzombiesfeed < 0) then {
 				s_player_pzombiesfeed = player addAction [localize "STR_EPOCH_ACTIONS_FEED", "\z\addons\dayz_code\actions\pzombie\pz_feed.sqf",cursorTarget, 3, true, false, "",""];
 			};
-		} else {
+		} else {
 			player removeAction s_player_pzombiesfeed;
 			s_player_pzombiesfeed = -1;
 		};
