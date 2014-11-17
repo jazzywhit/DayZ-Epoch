@@ -1,7 +1,3 @@
-	"BAF_L86A2_ACOG",
-	"SCAR_H_CQC_CCO",
-	"SCAR_H_CQC_CCO_SD"
-
 class Category_526 {
     class G36A {
         type = "trade_weapons";
@@ -224,6 +220,16 @@ class Category_526 {
         sell[] = {6,"ItemGoldBar"};
     };
     class SCAR_L_CQC_Holo {
+        type = "trade_weapons";
+        buy[] = {9,"ItemGoldBar10oz"};
+        sell[] = {6,"ItemGoldBar"};
+    };
+    class SCAR_H_CQC_CCO {
+        type = "trade_weapons";
+        buy[] = {9,"ItemGoldBar10oz"};
+        sell[] = {6,"ItemGoldBar"};
+    };
+    class SCAR_H_CQC_CCO_SD {
         type = "trade_weapons";
         buy[] = {9,"ItemGoldBar10oz"};
         sell[] = {6,"ItemGoldBar"};
