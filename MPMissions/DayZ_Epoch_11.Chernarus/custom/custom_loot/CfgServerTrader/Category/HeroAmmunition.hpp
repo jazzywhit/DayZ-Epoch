@@ -17,7 +17,7 @@ class Category_478 {
 	class 30Rnd_545x39_AKSD {
 		type = "trade_items";
 		buy[] = {6,"ItemSilverBar10oz"};
-		buy[] = {6,"ItemSilverBar10oz"};
+		sell[] = {6,"ItemSilverBar10oz"};
 	};
 	class 30Rnd_762x39_SA58 {
 		type = "trade_items";
