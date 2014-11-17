@@ -50,6 +50,11 @@ if (!isDedicated) then {
 	PlotNearbyHumans    = compile preprocessFileLineNumbers "custom\plotManagement\plotNearbyHumans.sqf";
 	PlotAddFriend       = compile preprocessFileLineNumbers "custom\plotManagement\plotAddFriend.sqf";
 	PlotRemoveFriend    = compile preprocessFileLineNumbers "custom\plotManagement\plotRemoveFriend.sqf";
-	/*Plot Management End*/
+	
+	//Mystery Brief
+	call compile preprocessFileLineNumbers "custom\mysterybrief\config.sqf";
+	
+	//right click options
+	call compile preprocessFileLineNumbers "custom\rightclickoptions\init.sqf";
 
 };
