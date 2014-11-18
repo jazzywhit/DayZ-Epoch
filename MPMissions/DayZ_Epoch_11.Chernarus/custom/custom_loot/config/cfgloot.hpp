@@ -429,7 +429,8 @@ class CfgLoot {
 	};
 	assaultrifles_bric[] = {
 	    {"AKS_74_U",0.39}
-		,{"AK_74",0.28}
+		,{"AK_74",0.23}
+		,{"AKS_74_kobra",0.05}
 		,{"AK_74_GL",0.05}
 		,{"AK_74_GL_kobra",0.16}
 		,{"AKS_74_kobra",0.07}

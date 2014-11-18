@@ -711,6 +711,7 @@ LOG_CFG_CANLIFT=[
 	"m6_ep1",
 	"mi17_civilian_dz",
 	"mi17_dze",
+	"mi17_dz",
 	"mv22_dz"
 ];
 

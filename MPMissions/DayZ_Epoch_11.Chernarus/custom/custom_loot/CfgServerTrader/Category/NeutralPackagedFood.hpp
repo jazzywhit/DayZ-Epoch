@@ -52,7 +52,7 @@ class Category_687 {
 	class FoodNutmix {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {1,"ItemSilverBar10oz"};
 	};
     class FoodCanDemon {
         type = "trade_items";
@@ -87,12 +87,12 @@ class Category_687 {
     class FoodPumpkin {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemGoldBar"};
+        sell[] = {2,"ItemSilverBar10oz"};
     };
     class FoodSunFlowerSeed {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemGoldBar"};
+        sell[] = {2,"ItemSilverBar10oz"};
     };
 };
 class Category_579 {
@@ -149,7 +149,7 @@ class Category_579 {
 	class FoodNutmix {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {1,"ItemSilverBar10oz"};
 	};
     class FoodCanDemon {
         type = "trade_items";
@@ -184,12 +184,12 @@ class Category_579 {
     class FoodPumpkin {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemGoldBar"};
+        sell[] = {2,"ItemSilverBar10oz"};
     };
     class FoodSunFlowerSeed {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemGoldBar"};
+        sell[] = {2,"ItemSilverBar10oz"};
     };
 };
 class Category_635 {
@@ -246,7 +246,7 @@ class Category_635 {
 	class FoodNutmix {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {1,"ItemSilverBar10oz"};
 	};
     class FoodCanDemon {
         type = "trade_items";
@@ -281,11 +281,11 @@ class Category_635 {
     class FoodPumpkin {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemGoldBar"};
+        sell[] = {2,"ItemSilverBar10oz"};
     };
     class FoodSunFlowerSeed {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemGoldBar"};
+        sell[] = {2,"ItemSilverBar10oz"};
     };
 };
