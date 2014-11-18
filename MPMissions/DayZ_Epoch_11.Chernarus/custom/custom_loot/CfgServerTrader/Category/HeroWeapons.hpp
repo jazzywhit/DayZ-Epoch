@@ -1,5 +1,4 @@
 class Category_477 {
-
 	class AKS_74_U {
 		type = "trade_weapons";
 		buy[] = {2,"ItemGoldBar"};
@@ -40,23 +39,6 @@ class Category_477 {
 		buy[] = {9,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
-    class AK_107_PSO {
-        type = "trade_weapons";
-        buy[] = {2,"ItemGoldBar10oz"};
-        sell[] = {4,"ItemGoldBar"};
-    };
-    class AKS_74_PSO {
-        type = "trade_weapons";
-        buy[] = {2,"ItemGoldBar10oz"};
-        sell[] = {4,"ItemGoldBar"};
-    };
-    class AK_107_GL_PSO {
-        type = "trade_weapons";
-        buy[] = {2,"ItemGoldBar10oz"};
-        sell[] = {4,"ItemGoldBar"};
-    };
-
-	//Higher tier
 	class AKS_GOLD {
 		type = "trade_weapons";
 		buy[] = {3,"ItemGoldBar10oz"};
