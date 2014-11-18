@@ -41,8 +41,8 @@ class Category_477 {
 	};
 	class AKS_GOLD {
 		type = "trade_weapons";
-		buy[] = {3,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
+		buy[] = {2,"ItemGoldBar10oz"};
+		sell[] = {2,"ItemGoldBar10oz"};
 	};
 	class AK_47_M {
 		type = "trade_weapons";
@@ -96,8 +96,8 @@ class Category_477 {
     };
     class AK_107_GL_PSO {
         type = "trade_weapons";
-        buy[] = {2,"ItemGoldBar10oz"};
-        sell[] = {4,"ItemGoldBar"};
+        buy[] = {3,"ItemGoldBar10oz"};
+        sell[] = {6,"ItemGoldBar"};
     };
     class RPG7V {
         type = "trade_weapons";

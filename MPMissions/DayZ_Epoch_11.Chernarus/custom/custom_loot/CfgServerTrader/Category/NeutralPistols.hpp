@@ -6,8 +6,8 @@ class Category_606 {
 	};
 	class revolver_gold_EP1 {
 		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {4,"ItemSilverBar10oz"};
+		buy[] = {1,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
 	};
 	class Makarov {
 		type = "trade_weapons";
@@ -28,8 +28,8 @@ class Category_674 {
 	};
 	class revolver_gold_EP1 {
 		type = "trade_weapons";
-		buy[] = {3,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
+		buy[] = {1,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
 	};
 	class Makarov {
 		type = "trade_weapons";
