@@ -97,7 +97,7 @@ if (count(_findNearestTree) >= 1) then {
 		_invResult = false;
 		_i = 0;
 		for "_x" from 1 to _countOut do {
-            if (random 1 > 0.2) then {
+            if (random 1 < 0.1) then {
                 _invResult = [player,_itemOut] call BIS_fnc_invAdd;
             };
 		    _i = _i + 1;
@@ -106,13 +106,17 @@ if (count(_findNearestTree) >= 1) then {
 		_text = getText (configFile >> "CfgMagazines" >> _itemOut >> "displayName");
 		
 		if(_i != 0) then {
-			// chop down tree
-			if("" == typeOf _tree) then {
-				_tree setDamage 1;
-			};
-			//diag_log format["DEBUG TREE DAMAGE: %1", _tree];
-		
-			cutText [format[(localize "str_epoch_player_154"), _i,_text], "PLAIN DOWN"];
+		    if (_i == 0) then {
+		        cutText [format[(localize "str_epoch_player_143"), _i,_text], "PLAIN DOWN"];
+		    } else {
+                // chop down tree
+                if("" == typeOf _tree) then {
+                    _tree setDamage 1;
+                };
+                //diag_log format["DEBUG TREE DAMAGE: %1", _tree];
+
+                cutText ["Something got to this before you and picked it clean..., "PLAIN DOWN"];
+            };
 		} else {
 			cutText [format[(localize "str_epoch_player_143"), _i,_text], "PLAIN DOWN"];
 		};
@@ -124,8 +128,6 @@ if (count(_findNearestTree) >= 1) then {
 		};
 		cutText [(localize "str_epoch_player_73"), "PLAIN DOWN"];
 	};
-
-	
 
 } else {
 	cutText [(localize "str_epoch_player_74"), "PLAIN DOWN"];
