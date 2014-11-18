@@ -39,6 +39,21 @@ class Category_485 {
 		buy[] = {9,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
+    class AK_107_PSO {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {4,"ItemGoldBar"};
+    };
+    class AKS_74_PSO {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {4,"ItemGoldBar"};
+    };
+    class AK_107_GL_PSO {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {4,"ItemGoldBar"};
+    };
 };
 class Category_615 {
 	class AKS_74_U {
@@ -81,4 +96,19 @@ class Category_615 {
 		buy[] = {9,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
+    class AK_107_PSO {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {4,"ItemGoldBar"};
+    };
+    class AKS_74_PSO {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {4,"ItemGoldBar"};
+    };
+    class AK_107_GL_PSO {
+        type = "trade_weapons";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {4,"ItemGoldBar"};
+    };
 };
