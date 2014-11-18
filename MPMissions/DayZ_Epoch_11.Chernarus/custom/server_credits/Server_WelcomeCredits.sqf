@@ -26,7 +26,7 @@ sleep 10; //Wait in seconds before the credits start after player IS ingame
 
 _role1 = "Narrow Minded Gaming";
 _role1names = ["www.narrowmindedgaming.com", "@narrowmgaming #twitter", "/r/nmg/ #reddit"];
-_role2 = "Bolt Action Hardcore v1.0.2";
+_role2 = "Bolt Action Hardcore v1.0.3";
 _role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
 _role3 = "True Hardcore";
 _role3names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders", "Custom Cities", "Realistic Loot"];
