@@ -16,8 +16,8 @@ class Category_574 {
 	};
 	class LeeEnfield {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {1,"ItemGoldBar10oz"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 };
 class Category_620 {
@@ -38,7 +38,7 @@ class Category_620 {
 	};
 	class LeeEnfield {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {1,"ItemGoldBar10oz"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 };
