@@ -8,6 +8,20 @@ private ["_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_
 if(DZE_ActionInProgress) exitWith { cutText [(localize "str_epoch_player_40") , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
 
+/////////////////////////////////////////////
+// Check locally if there is a city or town and cancel building
+// NO building in cities or towns (if you don't mind people building in Villages, remove "NameVillage" etc)
+private ["_nearestCity"];
+_nearestCity = nearestLocations [getPos player, ["NameCityCapital", "Airport"],1000];
+if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 1000m of a Capital or Airport!");};
+
+_nearestCity = nearestLocations [getPos player, ["NameCity", "mil_circle", "mil_dot"],500];
+if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 500m of a City or a Trader!");};
+
+_nearestCity = nearestLocations [getPos player, ["NameVillage"],250];
+if (count _nearestCity > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 250m of a Village!");};
+///////////////////////////////////////////
+
 //snap vars -- temporary fix for errors so variables.sqf can be skipped
 if (isNil "snapProVariables") then {
 	if (isNil "DZE_snapExtraRange") then {
