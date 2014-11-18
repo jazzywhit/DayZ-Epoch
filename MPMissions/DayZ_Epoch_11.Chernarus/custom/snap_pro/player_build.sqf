@@ -23,9 +23,6 @@ if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; system
 _nearestViolation = nearestLocations [_playerPos, ["NameVillage"],250];
 if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 250m of a Village!");};
 
-_nearestViolation = nearestBuilding [_playerPos, ["House"],100];
-if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 100m of a Building!");};
-
 //////////// START Check Near Objects ////////////////////
 //_stopBuild = false;
 _buildOk = ["Land_Misc_deerstand"];
