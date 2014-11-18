@@ -45,11 +45,11 @@ if (_ammo isKindOf "Hatchet_Swing_Ammo" || _ammo isKindOf "Chainsaw_Swing_Ammo")
 
 				//diag_log ("DAMAGE: " + str(damage _tree)); 
 
-				if (round(random 1) > 0.5) then {
+				if (random 1 > 0.5) then {
 
 					_countOut = 1;
 					_itemOut = "PartWoodPile";
-					if (round(random 1) > 0.7) then {
+					if (random 1 > 0.7) then {
 					    _itemOut = "PartWoodLumber";
                     };
 

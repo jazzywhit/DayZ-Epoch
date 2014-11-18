@@ -57,4 +57,7 @@ if (!isDedicated) then {
 	//right click options
 	call compile preprocessFileLineNumbers "custom\rightclickoptions\init.sqf";
 
+	//Custom Harves Plant
+	player_harvestPlant =		compile preprocessFileLineNumbers "custom\code\player_harvestPlant.sqf";
+
 };
