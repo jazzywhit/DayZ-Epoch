@@ -1,6 +1,11 @@
 class Category_527 {
 	class 20Rnd_762x51_SB_SCAR {
 		type = "trade_items";
+		buy[] = {8,"ItemGoldBar"};
+		sell[] = {8,"ItemGoldBar"};
+	};
+	class 20Rnd_762x51_B_SCAR {
+		type = "trade_items";
 		buy[] = {4,"ItemGoldBar"};
 		sell[] = {4,"ItemGoldBar"};
 	};
