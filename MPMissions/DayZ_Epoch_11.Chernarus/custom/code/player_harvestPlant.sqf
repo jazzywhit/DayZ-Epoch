@@ -117,6 +117,11 @@ if (count(_findNearestTree) >= 1) then {
                 cutText [format[(localize "str_epoch_player_143"), _i,_text], "PLAIN DOWN"];
             };
         } else {
+            if("" == typeOf _tree) then {
+                _tree setDamage 1;
+            };
+            //diag_log format["DEBUG TREE DAMAGE: %1", _tree];
+
             cutText ["Something got to this before you and picked it clean...", "PLAIN DOWN"];
         }
 	} else {
@@ -127,9 +132,6 @@ if (count(_findNearestTree) >= 1) then {
 		};
 		cutText [(localize "str_epoch_player_73"), "PLAIN DOWN"];
 	};
-
-	
-
 } else {
 	cutText [(localize "str_epoch_player_74"), "PLAIN DOWN"];
 };
