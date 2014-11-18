@@ -11,18 +11,31 @@ DZE_ActionInProgress = true;
 /////////////////////////////////////////////
 // Check locally if there is a city or town and cancel building
 // NO building in cities or towns (if you don't mind people building in Villages, remove "NameVillage" etc)
-private ["_nearestViolation"];
-_nearestViolation = nearestLocations [getPos player, ["NameCityCapital", "Airport"],1000];
+private ["_nearestViolation, _playerPos"];
+_playerPos = getPosATL player;
+
+_nearestViolation = nearestLocations [_playerPos, ["NameCityCapital", "Airport"],1000];
 if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 1000m of a Capital or Airport!");};
 
-_nearestViolation = nearestLocations [getPos player, ["NameCity"],500];
+_nearestViolation = nearestLocations [_playerPos, ["NameCity"],500];
 if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 500m of a City!");};
 
-_nearestViolation = nearestLocations [getPos player, ["NameVillage"],250];
+_nearestViolation = nearestLocations [_playerPos, ["NameVillage"],250];
 if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 250m of a Village!");};
 
-_nearestViolation = nearestBuilding [getPos player, ["House"],100];
+_nearestViolation = nearestBuilding [_playerPos, ["House"],100];
 if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 100m of a Building!");};
+
+//////////// START Check Near Objects ////////////////////
+//_stopBuild = false;
+_buildOk = ["Land_Misc_deerstand"];
+{
+    if (!(typeOf _x in _buildOk)) then {
+        if ((["Land_",(typeOf _x),false] call fnc_inString)) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 100m of a Building!")};
+    };
+} forEach nearestObjects [_playerPos, ["House"], 100];
+
+//if (_stopBuild) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build within 100m of a Building!"); _stopBuild = true;};
 ///////////////////////////////////////////
 
 //snap vars -- temporary fix for errors so variables.sqf can be skipped
