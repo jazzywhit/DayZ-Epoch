@@ -8,6 +8,10 @@ private ["_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_
 if(DZE_ActionInProgress) exitWith { cutText [(localize "str_epoch_player_40") , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
 
+// Get classname and determine if a plot pole before doing distance check
+_classname = 	getText (configFile >> "CfgMagazines" >> _item >> "ItemActions" >> "Build" >> "create");
+_isPole = (_classname == "Plastic_Pole_EP1_DZ");
+
 /////////////////////////////////////////////
 // Check locally if there is a city or town and cancel building
 // Only do this for plot poles
@@ -145,7 +149,7 @@ if(_abort) exitWith {
 	DZE_ActionInProgress = false;
 };
 
-_classname = 	getText (configFile >> "CfgMagazines" >> _item >> "ItemActions" >> "Build" >> "create");
+
 _classnametmp = _classname;
 _require =  getArray (configFile >> "cfgMagazines" >> _this >> "ItemActions" >> "Build" >> "require");
 _text = 		getText (configFile >> "CfgVehicles" >> _classname >> "displayName");
@@ -171,7 +175,6 @@ if((count _offset) <= 0) then {
 	_offset = [0,1.5,0];
 };
 
-_isPole = (_classname == "Plastic_Pole_EP1_DZ");
 _isLandFireDZ = (_classname == "Land_Fire_DZ");
 
 _distance = DZE_PlotPole select 0;
