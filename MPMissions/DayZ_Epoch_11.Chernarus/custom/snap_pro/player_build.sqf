@@ -430,28 +430,6 @@ if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {
 			deleteVehicle _objectHelper;
 		};
 
-
-		// Check for nearby plot pole after the user tries to place the object (2 meters).
-        _findNearestPoles = nearestObjects [[_object] call FNC_GetPos, ["Plastic_Pole_EP1_DZ"], 2];
-        _findNearestPole = [];
-        {
-        	if (alive _x) then {
-        		_findNearestPole set [(count _findNearestPole),_x];
-        	};
-        } count _findNearestPoles;
-
-        _IsNearPlot = count (_findNearestPole);
-        // If item is within 2m of plot pole
-        if(_IsNearPlot > 0) exitWith exitWith {
-            _isOk = false;
-            _cancel = true;
-            _reason = "You cannot build within 2 m of the plot pole";
-            detach _object;
-            deleteVehicle _object;
-            detach _objectHelper;
-            deleteVehicle _objectHelper;
-        };
-
         if(_location1 distance _location2 > 10) exitWith {
             _isOk = false;
             _cancel = true;
@@ -507,6 +485,21 @@ if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {
 	if (!DZE_BuildOnRoads) then {
 		if (isOnRoad _position) then { _cancel = true; _reason = "Cannot build on a road."; };
 	};
+
+	/////////////////////////////
+    // Check for nearby plot pole after the user tries to place the object (2 meters).
+    _findNearestPoles = nearestObjects [_location call FNC_GetPos, ["Plastic_Pole_EP1_DZ"], 2];
+    _findNearestPole = [];
+    {
+        if (alive _x) then {
+            _findNearestPole set [(count _findNearestPole),_x];
+        };
+    } count _findNearestPoles;
+
+    _IsNearPlot = count (_findNearestPole);
+    // If item is within 2m of plot pole
+    if(_IsNearPlot > 0) then { _cancel = true; _reason = "You cannot build within 2 m of the plot pole"; };
+    /////////////////////////////
 
 	// No building in trader zones
 	if(!canbuild) then { _cancel = true; _reason = "Cannot build in a trader zone."; };
