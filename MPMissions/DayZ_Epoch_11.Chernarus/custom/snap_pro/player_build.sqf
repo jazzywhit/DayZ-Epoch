@@ -8,39 +8,6 @@ private ["_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_
 if(DZE_ActionInProgress) exitWith { cutText [(localize "str_epoch_player_40") , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
 
-// Get classname and determine if a plot pole before doing distance check
-_classname = 	getText (configFile >> "CfgMagazines" >> _item >> "ItemActions" >> "Build" >> "create");
-_isPole = (_classname == "Plastic_Pole_EP1_DZ");
-
-/////////////////////////////////////////////
-// Check locally if there is a city or town and cancel building
-// Only do this for plot poles
-if (_isPole) then {
-    private ["_nearestViolation, _playerPos"];
-    _playerPos = getPosATL player;
-
-    _nearestViolation = nearestLocations [_playerPos, ["NameCityCapital", "Airport"],1000];
-    if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build a plot pole within 1000m of a Capital or Airport!");};
-
-    _nearestViolation = nearestLocations [_playerPos, ["NameCity"],500];
-    if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build a plot pole within 500m of a City!");};
-
-    _nearestViolation = nearestLocations [_playerPos, ["NameVillage"],250];
-    if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build a plot pole within 250m of a Village!");};
-
-    // Check for Near Objects
-    _stopBuild = false;
-    //_buildOk = ["TentStorage","TentStorageDomed","TentStorageDomed2", "VaultStorageLocked", "Hedgehog_DZ", "Sandbag1_DZ","BagFenceRound_DZ","TrapBear","Fort_RazorWire","WoodGate_DZ","Land_HBarrier1_DZ","Land_HBarrier3_DZ","Land_HBarrier5_DZ","Fence_corrugated_DZ","M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ","Generator_DZ","StickFence_DZ","LightPole_DZ","FuelPump_DZ","DesertCamoNet_DZ","ForestCamoNet_DZ","DesertLargeCamoNet_DZ","ForestLargeCamoNet_DZ","SandNest_DZ","DeerStand_DZ","MetalPanel_DZ","WorkBench_DZ","WoodFloor_DZ","WoodLargeWall_DZ","WoodLargeWallDoor_DZ","WoodLargeWallWin_DZ","WoodSmallWall_DZ","WoodSmallWallWin_DZ","WoodSmallWallDoor_DZ","LockboxStorageLocked","WoodFloorHalf_DZ","WoodFloorQuarter_DZ","WoodStairs_DZ","WoodStairsSans_DZ","WoodStairsRails_DZ","WoodSmallWallThird_DZ","WoodLadder_DZ","Land_DZE_GarageWoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_WoodDoor","Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallHalf_DZ","CinderWall_DZ","CinderWallDoorway_DZ","CinderWallDoor_DZ","CinderWallDoorLocked_DZ","CinderWallSmallDoorway_DZ","CinderWallDoorSmall_DZ","CinderWallDoorSmallLocked_DZ","MetalFloor_DZ","WoodRamp_DZ","GunRack_DZ","FireBarrel_DZ","WoodCrate_DZ","Scaffolding_DZ","MBG_Killhouse_1_InEditor","MBG_Killhouse_2_InEditor","MBG_Killhouse_3_InEditor","MBG_Killhouse_4_InEditor","MBG_Killhouse_5_InEditor","MBG_Killhouse_1_InEditor","MBG_Warehouse_InEditor","Land_MBG_ATC_Segment","MAP_leseni4x","MAP_leseni2x","WarfareBCamp","HeliHCivil","Land_fortified_nest_big_EP1","Land_Fire_barrel_burning","Land_CncBlock_Stripes","Land_Ind_TankSmall2_EP1","ASC_runway_YellowlightB","ASC_runway_BluelightB","Land_Campfire_burning"];
-    _buildOk = ["Land_Misc_deerstand"];
-    {
-        if (!(typeOf _x in _buildOk)) then {
-            if ((["Land_",(typeOf _x),false] call fnc_inString)) then { _stopBuild = true;};
-        };
-    } forEach nearestObjects [_playerPos, ["House"], 100];
-    if (_stopBuild) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build a plot pole within 100m of a Building!");};
-};
-///////////////////////////////////////////
-
 //snap vars -- temporary fix for errors so variables.sqf can be skipped
 if (isNil "snapProVariables") then {
 	if (isNil "DZE_snapExtraRange") then {
@@ -149,7 +116,7 @@ if(_abort) exitWith {
 	DZE_ActionInProgress = false;
 };
 
-
+_classname = 	getText (configFile >> "CfgMagazines" >> _item >> "ItemActions" >> "Build" >> "create");
 _classnametmp = _classname;
 _require =  getArray (configFile >> "cfgMagazines" >> _this >> "ItemActions" >> "Build" >> "require");
 _text = 		getText (configFile >> "CfgVehicles" >> _classname >> "displayName");
@@ -175,6 +142,7 @@ if((count _offset) <= 0) then {
 	_offset = [0,1.5,0];
 };
 
+_isPole = (_classname == "Plastic_Pole_EP1_DZ");
 _isLandFireDZ = (_classname == "Land_Fire_DZ");
 
 _distance = DZE_PlotPole select 0;
@@ -198,6 +166,35 @@ _IsNearPlot = count (_findNearestPole);
 
 // If item is plot pole && another one exists within 45m
 if(_isPole && _IsNearPlot > 0) exitWith {  DZE_ActionInProgress = false; cutText [(localize "str_epoch_player_44") , "PLAIN DOWN"]; };
+
+/////////////////////////////////////////////
+// Check locally if there is a city or town and cancel building
+// Only do this for plot poles
+if (_isPole) then {
+    private ["_nearestViolation, _playerPos"];
+    _playerPos = getPosATL player;
+
+    _nearestViolation = nearestLocations [_playerPos, ["NameCityCapital", "Airport"],1000];
+    if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build a plot pole within 1000m of a Capital or Airport!");};
+
+    _nearestViolation = nearestLocations [_playerPos, ["NameCity"],500];
+    if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build a plot pole within 500m of a City!");};
+
+    _nearestViolation = nearestLocations [_playerPos, ["NameVillage"],250];
+    if (count _nearestViolation > 0) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build a plot pole within 250m of a Village!");};
+
+    // Check for Near Objects
+    _stopBuild = false;
+    //_buildOk = ["TentStorage","TentStorageDomed","TentStorageDomed2", "VaultStorageLocked", "Hedgehog_DZ", "Sandbag1_DZ","BagFenceRound_DZ","TrapBear","Fort_RazorWire","WoodGate_DZ","Land_HBarrier1_DZ","Land_HBarrier3_DZ","Land_HBarrier5_DZ","Fence_corrugated_DZ","M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ","Generator_DZ","StickFence_DZ","LightPole_DZ","FuelPump_DZ","DesertCamoNet_DZ","ForestCamoNet_DZ","DesertLargeCamoNet_DZ","ForestLargeCamoNet_DZ","SandNest_DZ","DeerStand_DZ","MetalPanel_DZ","WorkBench_DZ","WoodFloor_DZ","WoodLargeWall_DZ","WoodLargeWallDoor_DZ","WoodLargeWallWin_DZ","WoodSmallWall_DZ","WoodSmallWallWin_DZ","WoodSmallWallDoor_DZ","LockboxStorageLocked","WoodFloorHalf_DZ","WoodFloorQuarter_DZ","WoodStairs_DZ","WoodStairsSans_DZ","WoodStairsRails_DZ","WoodSmallWallThird_DZ","WoodLadder_DZ","Land_DZE_GarageWoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_WoodDoor","Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallHalf_DZ","CinderWall_DZ","CinderWallDoorway_DZ","CinderWallDoor_DZ","CinderWallDoorLocked_DZ","CinderWallSmallDoorway_DZ","CinderWallDoorSmall_DZ","CinderWallDoorSmallLocked_DZ","MetalFloor_DZ","WoodRamp_DZ","GunRack_DZ","FireBarrel_DZ","WoodCrate_DZ","Scaffolding_DZ","MBG_Killhouse_1_InEditor","MBG_Killhouse_2_InEditor","MBG_Killhouse_3_InEditor","MBG_Killhouse_4_InEditor","MBG_Killhouse_5_InEditor","MBG_Killhouse_1_InEditor","MBG_Warehouse_InEditor","Land_MBG_ATC_Segment","MAP_leseni4x","MAP_leseni2x","WarfareBCamp","HeliHCivil","Land_fortified_nest_big_EP1","Land_Fire_barrel_burning","Land_CncBlock_Stripes","Land_Ind_TankSmall2_EP1","ASC_runway_YellowlightB","ASC_runway_BluelightB","Land_Campfire_burning"];
+    _buildOk = ["Land_Misc_deerstand"];
+    {
+        if (!(typeOf _x in _buildOk)) then {
+            if ((["Land_",(typeOf _x),false] call fnc_inString)) then { _stopBuild = true;};
+        };
+    } forEach nearestObjects [_playerPos, ["House"], 100];
+    if (_stopBuild) exitWith { DZE_ActionInProgress = false; systemChat ("You cannot build a plot pole within 100m of a Building!");};
+};
+///////////////////////////////////////////
 
 if(_IsNearPlot == 0) then {
 
