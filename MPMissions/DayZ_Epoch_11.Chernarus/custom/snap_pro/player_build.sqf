@@ -488,7 +488,7 @@ if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {
 
 	/////////////////////////////
     // Check for nearby plot pole after the user tries to place the object (2 meters).
-    _findNearestPoles = nearestObjects [_location call FNC_GetPos, ["Plastic_Pole_EP1_DZ"], 2];
+    _findNearestPoles = nearestObjects [_location, ["Plastic_Pole_EP1_DZ"], 2];
     _findNearestPole = [];
     {
         if (alive _x) then {
@@ -498,7 +498,7 @@ if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {
 
     _IsNearPlot = count (_findNearestPole);
     // If item is within 2m of plot pole
-    if(_IsNearPlot > 0) then { _cancel = true; _reason = "You cannot build within 2 m of the plot pole"; };
+    if(_IsNearPlot > 0) then { _cancel = true; _reason = "Cannot build within 2 m of a plot pole"; };
     /////////////////////////////
 
 	// No building in trader zones
