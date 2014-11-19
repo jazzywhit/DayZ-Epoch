@@ -114,5 +114,5 @@ execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
     waitUntil {(!isNull Player) and (alive Player) and (player == player)};
     waituntil {!(isNull (findDisplay 46))};
     5 cutRsc ["wm_disp","PLAIN"];
-    ((uiNamespace getVariable "wm_disp") displayCtrl 1) ctrlSetText "NMG - Bolt Action Hardcore";
+    ((uiNamespace getVariable "wm_disp") displayCtrl 1) ctrlSetText "NMG";
 };
