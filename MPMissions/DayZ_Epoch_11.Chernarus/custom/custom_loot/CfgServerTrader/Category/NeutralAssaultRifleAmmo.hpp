@@ -51,7 +51,7 @@ class Category_609 {
         buy[] = {2,"ItemGoldBar10oz"};
         sell[] = {2,"ItemGoldBar10oz"};
     };
-    
+
     class 30Rnd_762x39_SA58 {
         type = "trade_items";
         buy[] = {9,"ItemSilverBar10oz"};
