@@ -1,0 +1,235 @@
+﻿15:16:27 : Rcon client logging in
+﻿15:16:27 : RCon admin #0 (127.0.0.1:53736) logged in
+﻿15:19:23 : Rcon client logging in
+﻿15:19:23 : RCon admin #0 (127.0.0.1:64526) logged in
+﻿15:20:44 : Player #0 Carbonoid (66.30.112.69:3335) connected
+﻿15:20:45 : Player #0 Carbonoid - GUID: 972fa863a0555009a12bd329b177b181 (unverified)
+﻿15:20:46 : Verified GUID (972fa863a0555009a12bd329b177b181) of player #0 Carbonoid
+﻿15:20:47 : Player #0 Carbonoid - Legacy GUID: d0998e822d3a3466c43f64fbaefb64c4
+﻿15:21:45 : Player #1 powr46 (75.109.150.143:2174) connected
+﻿15:21:45 : Player #1 powr46 - GUID: 054cde128f096fbc6ea8f84c58c8ec0b (unverified)
+﻿15:21:45 : Player #1 powr46 (054cde128f096fbc6ea8f84c58c8ec0b) has been kicked by BattlEye: Admin Kick (BEC : Your player name can not contain any of the chars:[]{}()01)
+﻿15:22:24 : Player #1 Ben (82.45.36.210:2304) connected
+﻿15:22:25 : Player #1 Ben - GUID: 5bf4327b174f63c3fcce14efa48d0d3c (unverified)
+﻿15:22:25 : Verified GUID (5bf4327b174f63c3fcce14efa48d0d3c) of player #1 Ben
+﻿15:22:26 : Player #1 Ben - Legacy GUID: eb87f77c8855c9cd5434b81ead3bfdf6
+﻿15:30:23 : Player #0 Carbonoid disconnected
+﻿15:31:40 : Player #0 Carbonoid (66.30.112.69:3335) connected
+﻿15:31:41 : Player #0 Carbonoid - GUID: 972fa863a0555009a12bd329b177b181 (unverified)
+﻿15:31:41 : Verified GUID (972fa863a0555009a12bd329b177b181) of player #0 Carbonoid
+﻿15:31:42 : Player #0 Carbonoid - Legacy GUID: d0998e822d3a3466c43f64fbaefb64c4
+﻿15:47:16 : RCon admin #0: (To Carbonoid) BEC : You have about 60 seconds left to join the mission.
+﻿15:47:47 : RCon admin #0: (To Carbonoid) BEC : You have about 30 seconds left to join the mission.
+﻿15:48:01 : RCon admin #0: (To Carbonoid) BEC : You have about 15 seconds left to join the mission.
+﻿15:48:15 : Player #0 Carbonoid (972fa863a0555009a12bd329b177b181) has been kicked by BattlEye: Admin Kick (BEC : Lobby idling to long)
+﻿15:48:23 : Player #0 Carbonoid (66.30.112.69:3335) connected
+﻿15:48:24 : Player #0 Carbonoid - GUID: 972fa863a0555009a12bd329b177b181 (unverified)
+﻿15:48:24 : Verified GUID (972fa863a0555009a12bd329b177b181) of player #0 Carbonoid
+﻿15:48:25 : Player #0 Carbonoid - Legacy GUID: d0998e822d3a3466c43f64fbaefb64c4
+﻿15:49:50 : Player #0 Carbonoid disconnected
+﻿15:50:04 : Player #0 Carbonoid (66.30.112.69:3335) connected
+﻿15:50:05 : Player #0 Carbonoid - GUID: 972fa863a0555009a12bd329b177b181 (unverified)
+﻿15:50:05 : Verified GUID (972fa863a0555009a12bd329b177b181) of player #0 Carbonoid
+﻿15:50:06 : Player #0 Carbonoid - Legacy GUID: d0998e822d3a3466c43f64fbaefb64c4
+﻿16:23:03 : Player #0 Carbonoid disconnected
+﻿16:24:10 : Player #1 Ben disconnected
+﻿16:36:39 : Lost Connection!
+﻿16:36:39 : Closing socket & exiting!
+﻿16:40:01 : Rcon client logging in
+﻿16:40:01 : RCon admin #0 (127.0.0.1:56222) logged in
+﻿16:40:02 : Player #0 Ben (82.45.36.210:2304) connected
+﻿16:42:57 : Player #1 jesquik (66.31.45.174:2304) connected
+﻿16:43:34 : Player #1 jesquik disconnected
+﻿16:44:25 : Player #1 jesquik (66.31.45.174:2304) connected
+﻿16:44:47 : Player #2 Carbonoid (66.30.112.69:3335) connected
+﻿16:45:19 : Player #2 Carbonoid (-) has been kicked by BattlEye: Client not responding
+﻿17:13:09 : Player #2 Carbonoid (66.30.112.69:2304) connected
+﻿17:55:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 5 MINUTES
+﻿17:57:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 3 MINUTES
+﻿17:59:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 1 MINUTE
+﻿17:59:30 : RCon admin #0: (Global) AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR
+﻿18:00:01 : Lost Connection!
+﻿18:00:01 : Closing socket & exiting!
+﻿18:00:33 : Rcon client logging in
+﻿18:00:33 : RCon admin #0 (127.0.0.1:63610) logged in
+﻿18:01:57 : Player #0 jesquik (66.31.45.174:2304) connected
+﻿18:01:58 : Player #0 jesquik - GUID: 3c96bf37ad015cb45df0628318a128d4 (unverified)
+﻿18:01:58 : Verified GUID (3c96bf37ad015cb45df0628318a128d4) of player #0 jesquik
+﻿18:01:58 : Player #0 jesquik - Legacy GUID: 6eb27d76b28885f2c56fe9c7469de086
+﻿18:02:38 : Player #1 NcA (66.31.45.174:1025) connected
+﻿18:02:38 : Player #1 NcA - GUID: 004e52e117c4353b9126ff8cae92894b (unverified)
+﻿18:02:39 : Verified GUID (004e52e117c4353b9126ff8cae92894b) of player #1 NcA
+﻿18:02:40 : Player #1 NcA - Legacy GUID: 0b47253664861c70f6399123e9106d52
+﻿18:05:10 : Player #1 NcA - Legacy GUID: 0b47253664861c70f6399123e9106d52
+﻿18:05:12 : RCon admin #0: (To NcA) BEC : You have about 30 seconds left to join the mission.
+﻿18:05:26 : RCon admin #0: (To NcA) BEC : You have about 15 seconds left to join the mission.
+﻿18:05:43 : Player #1 NcA (004e52e117c4353b9126ff8cae92894b) has been kicked by BattlEye: Admin Kick (BEC : Lobby idling to long)
+﻿18:06:24 : Player #1 NcA (66.31.45.174:1025) connected
+﻿18:06:25 : Player #1 NcA - GUID: 004e52e117c4353b9126ff8cae92894b (unverified)
+﻿18:06:25 : Verified GUID (004e52e117c4353b9126ff8cae92894b) of player #1 NcA
+﻿18:06:26 : Player #1 NcA - Legacy GUID: 0b47253664861c70f6399123e9106d52
+﻿18:14:17 : Player #2 Devin (216.164.56.45:2304) connected
+﻿18:14:18 : Player #2 Devin - GUID: 70d0226d5fe225de9b766952171301bb (unverified)
+﻿18:14:18 : Verified GUID (70d0226d5fe225de9b766952171301bb) of player #2 Devin
+﻿18:14:19 : Player #2 Devin - Legacy GUID: 493138e0bd15927af73605234a5a90a5
+﻿18:17:19 : Player #3 Carbonoid (66.30.112.69:2304) connected
+﻿18:17:20 : Player #3 Carbonoid - GUID: 972fa863a0555009a12bd329b177b181 (unverified)
+﻿18:17:20 : Verified GUID (972fa863a0555009a12bd329b177b181) of player #3 Carbonoid
+﻿18:17:21 : Player #3 Carbonoid - Legacy GUID: d0998e822d3a3466c43f64fbaefb64c4
+﻿18:48:20 : Player #1 NcA disconnected
+﻿18:50:06 : Player #1 NcA (66.31.45.174:1025) connected
+﻿18:50:06 : Player #1 NcA - GUID: 004e52e117c4353b9126ff8cae92894b (unverified)
+﻿18:50:07 : Verified GUID (004e52e117c4353b9126ff8cae92894b) of player #1 NcA
+﻿18:50:08 : Player #1 NcA - Legacy GUID: 0b47253664861c70f6399123e9106d52
+﻿18:59:25 : Player #1 NcA disconnected
+﻿19:00:47 : Player #1 NcA (66.31.45.174:1025) connected
+﻿19:00:47 : Player #1 NcA - GUID: 004e52e117c4353b9126ff8cae92894b (unverified)
+﻿19:00:48 : Verified GUID (004e52e117c4353b9126ff8cae92894b) of player #1 NcA
+﻿19:00:49 : Player #1 NcA - Legacy GUID: 0b47253664861c70f6399123e9106d52
+﻿19:02:09 : Player #3 Carbonoid disconnected
+﻿19:08:11 : Player #3 Carbonoid (66.30.112.69:2304) connected
+﻿19:08:12 : Player #3 Carbonoid - GUID: 972fa863a0555009a12bd329b177b181 (unverified)
+﻿19:08:12 : Verified GUID (972fa863a0555009a12bd329b177b181) of player #3 Carbonoid
+﻿19:08:13 : Player #3 Carbonoid - Legacy GUID: d0998e822d3a3466c43f64fbaefb64c4
+﻿19:10:14 : RCon admin #0: (To Carbonoid) BEC : You have about 60 seconds left to join the mission.
+﻿19:11:36 : Player #0 jesquik disconnected
+﻿19:11:42 : Player #3 Carbonoid disconnected
+﻿19:11:57 : Lost Connection!
+﻿19:11:57 : Closing socket & exiting!
+﻿19:26:51 : Rcon client logging in
+﻿19:26:52 : RCon admin #0 (127.0.0.1:60965) logged in
+﻿19:27:47 : Player #1 Carbonoid (66.30.112.69:2304) connected
+﻿19:35:57 : Player #2 Ben (82.45.36.210:2304) connected
+﻿19:36:19 : Player #3 Devin (216.164.56.45:2304) connected
+﻿20:03:33 : Player #1 Carbonoid disconnected
+﻿20:04:17 : Player #3 Devin disconnected
+﻿20:07:45 : Lost Connection!
+﻿20:07:45 : Closing socket & exiting!
+﻿20:08:14 : Rcon client logging in
+﻿20:08:14 : RCon admin #0 (127.0.0.1:52413) logged in
+﻿20:08:15 : Player #0 Carbonoid (66.30.112.69:2304) connected
+﻿20:09:09 : Lost Connection!
+﻿20:09:09 : Closing socket & exiting!
+﻿20:12:07 : Rcon client logging in
+﻿20:12:07 : RCon admin #0 (127.0.0.1:51532) logged in
+﻿20:13:55 : Player #3 NcA (66.31.45.174:1025) connected
+﻿20:17:07 : Player #4 jesquik (66.31.45.174:2304) connected
+﻿20:55:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 5 MINUTES
+﻿20:57:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 3 MINUTES
+﻿20:57:51 : Player #4 jesquik disconnected
+﻿20:58:16 : Player #2 Devin disconnected
+﻿20:59:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 1 MINUTE
+﻿20:59:30 : RCon admin #0: (Global) AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR
+﻿20:59:52 : Player #1 Ben disconnected
+﻿20:59:53 : Player #3 NcA disconnected
+﻿21:00:02 : Lost Connection!
+﻿21:00:02 : Closing socket & exiting!
+﻿21:00:34 : Rcon client logging in
+﻿21:00:34 : RCon admin #0 (127.0.0.1:53403) logged in
+﻿21:00:36 : Player #0 NcA (66.31.45.174:1025) connected
+﻿21:00:37 : Player #0 NcA - GUID: 004e52e117c4353b9126ff8cae92894b (unverified)
+﻿21:00:37 : Verified GUID (004e52e117c4353b9126ff8cae92894b) of player #0 NcA
+﻿21:00:37 : Player #0 NcA - Legacy GUID: 0b47253664861c70f6399123e9106d52
+﻿21:01:50 : Player #1 Carbonoid (66.30.112.69:2304) connected
+﻿21:01:51 : Player #1 Carbonoid - GUID: 972fa863a0555009a12bd329b177b181 (unverified)
+﻿21:01:51 : Verified GUID (972fa863a0555009a12bd329b177b181) of player #1 Carbonoid
+﻿21:01:52 : Player #1 Carbonoid - Legacy GUID: d0998e822d3a3466c43f64fbaefb64c4
+﻿21:03:06 : Player #2 Ben (82.45.36.210:2304) connected
+﻿21:03:07 : Player #2 Ben - GUID: 5bf4327b174f63c3fcce14efa48d0d3c (unverified)
+﻿21:03:07 : Verified GUID (5bf4327b174f63c3fcce14efa48d0d3c) of player #2 Ben
+﻿21:03:08 : Player #2 Ben - Legacy GUID: eb87f77c8855c9cd5434b81ead3bfdf6
+﻿21:04:35 : Player #3 iConnorN (108.18.107.95:2304) connected
+﻿21:04:36 : Player #3 iConnorN - GUID: e38ca0239fe347ee94010856ee3d349f (unverified)
+﻿21:04:37 : Verified GUID (e38ca0239fe347ee94010856ee3d349f) of player #3 iConnorN
+﻿21:04:37 : Player #3 iConnorN disconnected
+﻿21:06:08 : Player #3 iConnorN (108.18.107.95:2304) connected
+﻿21:06:09 : Player #3 iConnorN - GUID: e38ca0239fe347ee94010856ee3d349f (unverified)
+﻿21:06:09 : Verified GUID (e38ca0239fe347ee94010856ee3d349f) of player #3 iConnorN
+﻿21:06:10 : Player #3 iConnorN - Legacy GUID: 013c22835fcd45c286edd9a006ea863a
+﻿21:08:45 : Player #4 Devin (216.164.56.45:2304) connected
+﻿21:08:46 : Player #4 Devin - GUID: 70d0226d5fe225de9b766952171301bb (unverified)
+﻿21:08:46 : Verified GUID (70d0226d5fe225de9b766952171301bb) of player #4 Devin
+﻿21:08:47 : Player #4 Devin - Legacy GUID: 493138e0bd15927af73605234a5a90a5
+﻿21:17:07 : Player #5 jesquik (66.31.45.174:2304) connected
+﻿21:17:08 : Player #5 jesquik - GUID: 3c96bf37ad015cb45df0628318a128d4 (unverified)
+﻿21:17:08 : Verified GUID (3c96bf37ad015cb45df0628318a128d4) of player #5 jesquik
+﻿21:17:09 : Player #5 jesquik - Legacy GUID: 6eb27d76b28885f2c56fe9c7469de086
+﻿21:27:12 : Player #6 Mrblump (98.216.237.181:2304) connected
+﻿21:27:13 : Player #6 Mrblump - GUID: 9232225ff25c1b535e9fa21c9fd53b31 (unverified)
+﻿21:27:14 : Verified GUID (9232225ff25c1b535e9fa21c9fd53b31) of player #6 Mrblump
+﻿21:27:14 : Player #6 Mrblump - Legacy GUID: bd760dc2f849eac30b714f4e6a61770e
+﻿21:27:14 : Player #6 Mrblump disconnected
+﻿21:32:37 : Player #6 Noodlehax (60.242.154.121:2304) connected
+﻿21:32:39 : Player #6 Noodlehax - GUID: 1b58aaf79339b864cacd93c0d565e46c (unverified)
+﻿21:32:39 : Verified GUID (1b58aaf79339b864cacd93c0d565e46c) of player #6 Noodlehax
+﻿21:32:40 : Player #6 Noodlehax - Legacy GUID: 7498d2df99c4cc9ab84f52fb07c0a8dd
+﻿21:34:43 : Player #7 Mist (122.106.162.172:2304) connected
+﻿21:34:44 : Player #7 Mist - GUID: d43966d0a56434cc4e46dcbd390ce9dd (unverified)
+﻿21:34:44 : Verified GUID (d43966d0a56434cc4e46dcbd390ce9dd) of player #7 Mist
+﻿21:34:45 : Player #7 Mist - Legacy GUID: 120f1d0d1e0c3868438416a1512268b7
+﻿21:36:25 : Player #8 Mrblump (98.216.237.181:2304) connected
+﻿21:36:26 : Player #8 Mrblump - GUID: 9232225ff25c1b535e9fa21c9fd53b31 (unverified)
+﻿21:36:27 : Verified GUID (9232225ff25c1b535e9fa21c9fd53b31) of player #8 Mrblump
+﻿21:36:28 : Player #8 Mrblump - Legacy GUID: bd760dc2f849eac30b714f4e6a61770e
+﻿21:36:28 : Player #8 Mrblump disconnected
+﻿21:37:15 : Player #7 Mist (d43966d0a56434cc4e46dcbd390ce9dd) has been kicked by BattlEye: Failed to update
+﻿21:37:37 : Player #7 Mist (122.106.162.172:2304) connected
+﻿21:37:38 : Player #7 Mist - GUID: d43966d0a56434cc4e46dcbd390ce9dd (unverified)
+﻿21:37:39 : Verified GUID (d43966d0a56434cc4e46dcbd390ce9dd) of player #7 Mist
+﻿21:37:47 : Player #7 Mist disconnected
+﻿21:39:54 : Player #7 Mist (122.106.162.172:2304) connected
+﻿21:39:56 : Player #7 Mist - GUID: d43966d0a56434cc4e46dcbd390ce9dd (unverified)
+﻿21:39:56 : Verified GUID (d43966d0a56434cc4e46dcbd390ce9dd) of player #7 Mist
+﻿21:39:56 : Player #7 Mist - Legacy GUID: 120f1d0d1e0c3868438416a1512268b7
+﻿21:53:10 : Player #8 Vauhs (50.149.183.163:2304) connected
+﻿21:53:10 : Player #8 Vauhs - GUID: 5318c7a7bd9bb08f5997e78a4370cf0b (unverified)
+﻿21:53:11 : Verified GUID (5318c7a7bd9bb08f5997e78a4370cf0b) of player #8 Vauhs
+﻿21:53:12 : Player #8 Vauhs - Legacy GUID: e0eef6951810bb850142a85511c73cd6
+﻿22:31:33 : Player #9 Justice (49.147.170.88:26761) connected
+﻿22:31:37 : Player #9 Justice - GUID: 7d94d2ad11c9e100d165ecb7338f6641 (unverified)
+﻿22:31:37 : Verified GUID (7d94d2ad11c9e100d165ecb7338f6641) of player #9 Justice
+﻿22:31:38 : Player #9 Justice - Legacy GUID: 0caad0393f0de84927b41e7970cb03a7
+﻿22:31:38 : Player #9 Justice disconnected
+﻿22:32:02 : Player #9 Justice (49.147.170.88:26760) connected
+﻿22:32:03 : Player #9 Justice - GUID: 7d94d2ad11c9e100d165ecb7338f6641 (unverified)
+﻿22:32:03 : Verified GUID (7d94d2ad11c9e100d165ecb7338f6641) of player #9 Justice
+﻿22:32:04 : Player #9 Justice disconnected
+﻿22:33:45 : Player #6 Noodlehax disconnected
+﻿22:37:49 : Player #6 Justice (49.147.170.88:26867) connected
+﻿22:37:50 : Player #6 Justice - GUID: 7d94d2ad11c9e100d165ecb7338f6641 (unverified)
+﻿22:37:50 : Verified GUID (7d94d2ad11c9e100d165ecb7338f6641) of player #6 Justice
+﻿22:37:51 : Player #6 Justice - Legacy GUID: 0caad0393f0de84927b41e7970cb03a7
+﻿22:38:29 : Player #4 Devin disconnected
+﻿22:40:22 : Player #6 Justice - Legacy GUID: 0caad0393f0de84927b41e7970cb03a7
+﻿22:43:31 : Player #4 Mrblump (98.216.237.181:2304) connected
+﻿22:43:32 : Player #4 Mrblump - GUID: 9232225ff25c1b535e9fa21c9fd53b31 (unverified)
+﻿22:43:32 : Verified GUID (9232225ff25c1b535e9fa21c9fd53b31) of player #4 Mrblump
+﻿22:43:33 : Player #4 Mrblump disconnected
+﻿22:46:50 : Player #4 Mrblump (98.216.237.181:2304) connected
+﻿22:46:51 : Player #4 Mrblump - GUID: 9232225ff25c1b535e9fa21c9fd53b31 (unverified)
+﻿22:46:51 : Verified GUID (9232225ff25c1b535e9fa21c9fd53b31) of player #4 Mrblump
+﻿22:47:11 : Player #4 Mrblump disconnected
+﻿22:47:52 : Player #6 Justice (7d94d2ad11c9e100d165ecb7338f6641) has been kicked by BattlEye: Ping too high (375)
+﻿22:49:19 : Player #4 Justice (49.147.170.88:26867) connected
+﻿22:49:20 : Player #4 Justice - GUID: 7d94d2ad11c9e100d165ecb7338f6641 (unverified)
+﻿22:49:20 : Verified GUID (7d94d2ad11c9e100d165ecb7338f6641) of player #4 Justice
+﻿22:49:21 : Player #4 Justice - Legacy GUID: 0caad0393f0de84927b41e7970cb03a7
+﻿23:01:41 : Player #6 m00se (65.94.244.178:2304) connected
+﻿23:01:41 : Player #6 m00se - GUID: 8e3ce5a2ef9d761c74b74dcb4457d75c (unverified)
+﻿23:01:42 : Player #6 m00se (8e3ce5a2ef9d761c74b74dcb4457d75c) has been kicked by BattlEye: Admin Kick (BEC : Your player name can not contain any of the chars:[]{}()01)
+﻿23:29:21 : Player #8 Vauhs disconnected
+﻿23:49:24 : Player #6 Luisao (87.211.42.107:2304) connected
+﻿23:49:25 : Player #6 Luisao - GUID: 447878f71784d8ce2384caec9bf1d6cb (unverified)
+﻿23:49:26 : Verified GUID (447878f71784d8ce2384caec9bf1d6cb) of player #6 Luisao
+﻿23:49:26 : Player #6 Luisao - Legacy GUID: ec1cacb900627c5139cfde5fe413e229
+﻿23:55:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 5 MINUTES
+﻿23:57:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 3 MINUTES
+﻿23:57:41 : Player #7 Mist disconnected
+﻿23:58:05 : Player #5 jesquik disconnected
+﻿23:58:41 : RCon admin #0: (To Carbonoid) BEC : You have about 60 seconds left to join the mission.
+﻿23:59:00 : RCon admin #0: (Global) AUTO SERVER RESTART IN 1 MINUTE
+﻿23:59:12 : Player #1 Carbonoid disconnected
+﻿23:59:30 : RCon admin #0: (Global) AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR
+﻿23:59:39 : Player #2 Ben disconnected
+﻿23:59:58 : Lost Connection!
+﻿23:59:58 : Closing socket & exiting!

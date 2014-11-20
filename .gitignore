@@ -13,10 +13,11 @@ instance_11_chernaurus/*
 !/Config-Examples/
 !/Keys/
 !/Installs/
-!/MPMissions/
+!/MPMissions/Config/Config.cfg
 !/SQL/
 !/Tools/
 !/DayZ-SQF/
+!/BEC/
 !Readme.txt
 !restart.cmd
 !timechange.vbs
