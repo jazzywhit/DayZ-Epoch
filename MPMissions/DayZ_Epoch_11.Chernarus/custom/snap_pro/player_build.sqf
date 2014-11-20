@@ -488,7 +488,7 @@ if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {
 
 	/////////////////////////////
     // Check for nearby plot pole after the user tries to place the object (2 meters).
-    _findNearestPoles = nearestObjects [_location, ["Plastic_Pole_EP1_DZ"], 2];
+    _findNearestPoles = nearestObjects [_position, ["Plastic_Pole_EP1_DZ"], 2];
     _findNearestPole = [];
     {
         if (alive _x) then {
