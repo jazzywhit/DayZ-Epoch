@@ -2,8 +2,8 @@
 	DayZ Base Building
 	Made for DayZ Epoch please ask permission to use/edit/distrubute email vbawol@veteranbastards.com.
 */
-private ["_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_canDo", "_pos", "_cnt",
-"_location","_dir","_classname","_item","_hasrequireditem","_missing","_hastoolweapon","_cancel","_reason","_started","_finished","_animState","_isMedic","_dis","_sfx","_hasbuilditem","_tmpbuilt","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_limit","_proceed","_num_removed","_position","_object","_canBuildOnPlot","_friendlies","_nearestPole","_ownerID","_findNearestPoles","_findNearestPole","_distance","_classnametmp","_ghost","_isPole","_needText","_lockable","_zheightchanged","_rotate","_combination_1","_combination_2","_combination_3","_combination_4","_combination","_combination_1_Display","_combinationDisplay","_zheightdirection","_abort","_isNear","_need","_needNear","_vehicle","_inVehicle","_requireplot","_objHDiff","_isLandFireDZ","_isTankTrap"];
+private ["_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_canDo", "_pos", "_cnt", "_violationRange",
+"_location","_dir","_classname","_item","_hasrequireditem","_missing","_hastoolweapon","_cancel","_reason","_started","_finished","_animState","_isMedic","_dis","_sfx","_hasbuilditem","_tmpbuilt","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_limit","_proceed","_num_removed","_position","_object","_canBuildOnPlot","_friendlies","_nearestPole","_ownerID","_findNearestPoles","_findNearestPole","_distance","_classnametmp","_ghost","_isPole","_isSafe","_needText","_lockable","_zheightchanged","_rotate","_combination_1","_combination_2","_combination_3","_combination_4","_combination","_combination_1_Display","_combinationDisplay","_zheightdirection","_abort","_isNear","_need","_needNear","_vehicle","_inVehicle","_requireplot","_objHDiff","_isLandFireDZ","_isTankTrap"];
 
 if(DZE_ActionInProgress) exitWith { cutText [(localize "str_epoch_player_40") , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
@@ -143,6 +143,7 @@ if((count _offset) <= 0) then {
 };
 
 _isPole = (_classname == "Plastic_Pole_EP1_DZ");
+_isSafe = (_classname == "ItemVault");
 _isLandFireDZ = (_classname == "Land_Fire_DZ");
 
 _distance = DZE_PlotPole select 0;
@@ -487,18 +488,33 @@ if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {
 	};
 
 	/////////////////////////////
-    // Check for nearby plot pole after the user tries to place the object (2 meters).
-    _findNearestPoles = nearestObjects [_position, ["Plastic_Pole_EP1_DZ"], 2];
-    _findNearestPole = [];
-    {
-        if (alive _x) then {
-            _findNearestPole set [(count _findNearestPole),_x];
-        };
-    } count _findNearestPoles;
+    // Check for nearby plot pole after the user tries to place a vault (2 meters).
+    _violationRange = 2;
+    if (_isSafe) then {
+        _findNearestPoles = nearestObjects [_position, ["Plastic_Pole_EP1_DZ"], _violationRange];
+        _findNearestPole = [];
+        {
+            if (alive _x) then {
+                _findNearestPole set [(count _findNearestPole),_x];
+            };
+        } count _findNearestPoles;
 
-    _IsNearPlot = count (_findNearestPole);
-    // If item is within 2m of plot pole
-    if(_IsNearPlot > 0) then { _cancel = true; _reason = "Cannot build within 2 m of a plot pole"; };
+        _IsNearPlot = count (_findNearestPole);
+        if(_IsNearPlot > 0) then { _cancel = true; _reason = "Cannot build within 2 m of a plot pole"; };
+    };
+    // Check for nearby vault after the user tries to place a plot pole (2 meters).
+    if (_isPole) then {
+        _findNearestPoles = nearestObjects [_position, ["ItemVault"], _violationRange];
+        _findNearestPole = [];
+        {
+            if (alive _x) then {
+                _findNearestPole set [(count _findNearestPole),_x];
+            };
+        } count _findNearestPoles;
+
+        _IsNearPlot = count (_findNearestPole);
+        if(_IsNearPlot > 0) then { _cancel = true; _reason = "Cannot build within 2 m of a vault"; };
+    };
     /////////////////////////////
 
 	// No building in trader zones
