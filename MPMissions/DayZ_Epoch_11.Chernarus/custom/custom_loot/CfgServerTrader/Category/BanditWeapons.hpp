@@ -1,5 +1,4 @@
 class Category_627 {
-
 	class AKS_74_U {
 		type = "trade_weapons";
 		buy[] = {4,"ItemGoldBar"};
