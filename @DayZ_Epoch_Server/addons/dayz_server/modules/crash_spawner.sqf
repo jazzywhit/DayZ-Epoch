@@ -29,7 +29,7 @@ _lootMultiplier = 1;
 _heliModel = [
 			"UH1H_DZE",
 			"MV22",
-			"Mi17_DZ",
+			"Mi17_DZE",
 			"UH60M_EP1",
 			"UH1H_TK_EP1",
 			"UH60M_MEV_EP1",
@@ -90,7 +90,7 @@ if(_heliModel == "Ka52Black") then {
 	_lootTable        = "HeliCrash_BRIC";
 };
 
-if(_heliModel == "Mi17_DZ") then {
+if(_heliModel == "Mi17_DZE") then {
 	_lootTable    = "MilitarySpecial";
 	_lootMultiplier = 2;
     _crashModel     = "Mi8Wreck";
