@@ -26,3 +26,4 @@ instance_11_chernaurus/*
 @DayZ_Epoch_Server/addons/dayz_server.pbo
 *.bak
 readme.txt
+!/MPMissions/DayZ_Epoch_11.Chernarus/custom/custom_death/

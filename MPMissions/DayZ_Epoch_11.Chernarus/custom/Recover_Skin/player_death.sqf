@@ -109,7 +109,7 @@ _body setVariable["combattimeout", 0, true];
 //["dayzFlies",player] call broadcastRpcCallAll;
 sleep 2;
 
-1 cutRsc ["DeathScreen","BLACK OUT",3];
+1 cutRsc ["customdeath","BLACK OUT",3];
 
 playMusic "dayz_track_death_1";
 
