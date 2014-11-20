@@ -143,7 +143,7 @@ if((count _offset) <= 0) then {
 };
 
 _isPole = (_classname == "Plastic_Pole_EP1_DZ");
-_isSafe = (_classname == "ItemVault");
+_isSafe = (_classname == "ItemVault" || _classname == "VaultStorageLocked" || _classname == "VaultStorage");
 _isLandFireDZ = (_classname == "Land_Fire_DZ");
 
 _distance = DZE_PlotPole select 0;
@@ -281,9 +281,9 @@ if (_hasrequireditem) then {
 	
 	_objHDiff = 0;
 
-if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {	
-	["","","",["Init",_object,_classname,_objectHelper]] spawn snap_build;
-};
+    if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {
+        ["","","",["Init",_object,_classname,_objectHelper]] spawn snap_build;
+    };
 	
 	while {_isOk} do {
 
@@ -504,7 +504,7 @@ if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {
     };
     // Check for nearby vault after the user tries to place a plot pole (2 meters).
     if (_isPole) then {
-        _findNearestPoles = nearestObjects [_position, ["ItemVault"], _violationRange];
+        _findNearestPoles = nearestObjects [_position, ["ItemVault", "VaultStorageLocked", "VaultStorage"], _violationRange];
         _findNearestPole = [];
         {
             if (alive _x) then {

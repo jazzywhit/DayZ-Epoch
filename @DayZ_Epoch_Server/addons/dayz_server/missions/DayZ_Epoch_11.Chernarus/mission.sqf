@@ -1134,7 +1134,7 @@ if (true) then
  _unit_402 = objNull;
 if (true) then
 {
-  _this = createAgent ["Assistant", [7180.2007, 2217.5576, -4.7683716e-007], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["RU_Profiteer4", [7180.2007, 2217.5576, -4.7683716e-007], [], 0, "CAN_COLLIDE"];
   _unit_402 = _this;
   _this setDir -98.079002;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
@@ -1144,7 +1144,7 @@ if (true) then
  _unit_403 = objNull;
 if (true) then
 {
-  _this = createAgent ["Assistant", [13133.771, 10273.223, 0.00010442734], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["RU_Profiteer4", [13133.771, 10273.223, 0.00010442734], [], 0, "CAN_COLLIDE"];
   _unit_403 = _this;
   _this setDir -69.458427;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";

@@ -6,18 +6,6 @@ menu_UN_CDF_Soldier_SL_EP1 = [
 	[["ItemGoldBar10oz","EvDogTags",1,1,"buy","Dog Tag","10 oz Gold Bars",101], ["ItemVault","EvDogTags",1,5,"buy","Dog Tags","Personal Safe",101]],
 	"hero"
 ];
-// Ammunition Friendly
-menu_RU_Citizen3 = [
-	[["Assault Rifle Ammo",480],["Light Machine Gun Ammo",481],["Pistol Ammo",484],["Shotguns and Single-shot Ammo",573],["Sniper Rifle Ammo",482],["Submachine Gun Ammo",483]],
-	[],
-	"friendly"
-];
-// Weapons Friendly
-menu_Rocker4 = [
-	[["Assault Rifle",485],["Light Machine Gun",486],["Pistols",489],["Shotguns and Single-shot",574],["Sniper Rifle",487],["Submachine Guns",488]],
-	[],
-	"friendly"
-];
 // Weapons neutral
 menu_CIV_EuroMan01_EP1 = [
 	[["Assault Rifle",602],["Light Machine Gun",603],["Pistols",606],["Shotguns and Single-shot",607],["Sniper Rifle",605],["Submachine Guns",604]],
@@ -54,35 +42,11 @@ menu_Worker3 = [
 	[],
 	"neutral"
 ];
-// Friendly Building/Parts
-menu_Woodlander1 = [
-	[["Building Supplies",530],["Toolbelt Items",532],["Vehicle Parts",531]],
-	[],
-	"friendly"
-];
-// Friendly Vehicles 2
-menu_UN_CDF_Soldier_Pilot_EP1 = [
-	[["Bikes and ATV",536],["Buses and Vans",592],["Cargo Trucks",570],["Fuel Trucks",595],["Military Unarmed",599],["Trucks Unarmed",535],["Used Cars",600],["Utility Vehicles",568]],
-	[],
-	"friendly"
-];
-// Medical Supplies
-menu_Dr_Annie_Baker_EP1 = [
-	[["Chem-lites/Flares",542],["Medical Supplies",541],["Smoke Grenades",543]],
-	[["FoodBioMeat","ItemZombieParts",1,1,"buy","Zombie Parts","Bio Meat",101]],
-	"friendly"
-];
 // East Wholesaler
 menu_RU_Citizen4 = [
 	[["Wholesale",555]],
 	[],
 	"neutral"
-];
-// General Store 3
-menu_RU_WorkWoman5 = [
-	[["Backpacks",632],["Drinks",633],["Packaged Food",635]],
-	[["ItemTinBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Tin Bar",101]],
-	"friendly"
 ];
 // West Wholesaler
 menu_RU_Citizen1 = [
@@ -95,12 +59,6 @@ menu_RU_Villager3 = [
 	[["Boats Armed",558],["Boats Unarmed",557]],
 	[],
 	"neutral"
-];
-// Vehicles / low tier
-menu_Assistant = [
-	[["Bikes and ATV",608],["Used Cars",585]],
-	[],
-	"friendly"
 ];
 // General Store / low tier
 menu_RU_WorkWoman1 = [
