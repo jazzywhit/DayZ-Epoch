@@ -249,7 +249,7 @@ class RscTitles
         name="customdeath";
         controls[]={"Picture"};
             class Picture {
-            x = safezoneX; y = safezoneY; w = safezoneW; h = safezoneH;
+            x = safezoneX; y = safezoneY; w = 2048; h = 1024;
             text="custom\custom_death\DeathScr.jpg";
             sizeEx = -1;
             type=0;
