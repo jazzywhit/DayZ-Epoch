@@ -71,3 +71,37 @@ if (_ammo isKindOf "Hatchet_Swing_Ammo" || _ammo isKindOf "Chainsaw_Swing_Ammo")
 		};
 	};
 };
+//Random breaking chance on swinging
+private ["_item","_iPos","_weapon","_primaryWeapon","_iItem","_removed","_radius","_dropPrimary","_buildableNearby","_breakChance"];
+_buildableNearby = false;
+_breakChance = 0.1;
+if (_ammo isKindOf "Machete_Swing_Ammo") then {
+    _breakChance = 1;
+};
+if (_ammo isKindOf "Sledge_Swing_Ammo") then {
+    _breakChance = 0.01;
+};
+if (_ammo isKindOf "Crowbar_Swing_Ammo") then {
+    _breakChance = 0.05;
+};
+if (_ammo isKindOf "Fishing_Swing_Ammo") then {
+    _breakChance = 50;
+};
+if (_ammo isKindOf "Hatchet_Swing_Ammo" or _ammo isKindOf "Machete_Swing_Ammo" or _ammo isKindOf "Sledge_Swing_Ammo" or _ammo isKindOf "Crowbar_Swing_Ammo" or _ammo isKindOf "Fishing_Swing_Ammo") then {
+    {
+        if ((_x isKindOf "ModularItems") or (_x isKindOf "Land_DZE_WoodDoor_Base") or (_x isKindOf "CinderWallDoor_DZ_Base")) then {
+            if (alive _x) then {
+                _buildableNearby = true;
+            };
+        };
+    } foreach nearestObjects [getPosATL player, [], 6];
+    if(_buildableNearby) then {
+        if(random 100 <= _breakChance) then {
+            _primaryWeapon = primaryWeapon player;
+            cutText ["\n\nYour Melee-Weapon broke on this object. Get a stronger one", "PLAIN DOWN"];
+            player removeWeapon _primaryWeapon;
+        } else {
+            cutText [format["\n\nYour Melee-Weapon has a %1%2 chance to break while smashing this object, some are stronger then others",_breakChance,"%"], "PLAIN DOWN"];
+        };
+    };
+};
