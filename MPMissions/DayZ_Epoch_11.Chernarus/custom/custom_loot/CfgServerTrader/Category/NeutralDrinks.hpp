@@ -6,7 +6,7 @@ class Category_684 {
 	};
 	class ItemSodaPepsi {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
+		buy[] = {2,"ItemGoldBar"};
 		sell[] = {5,"ItemSilverBar10oz"};
 	};
 	class ItemSodaMdew {
@@ -150,7 +150,7 @@ class Category_633 {
 	};
 	class ItemSodaPepsi {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
+		buy[] = {2,"ItemGoldBar"};
 		sell[] = {5,"ItemSilverBar10oz"};
 	};
 	class ItemSodaMdew {
