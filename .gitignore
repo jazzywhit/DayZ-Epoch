@@ -1,11 +1,14 @@
 *.*
 ./**
 .idea/
+*.bak
 !.gitignore
 !Images/**
 !@DayZ_Epoch_Server/addons/dayz_server/**
 !Battleye/**
 !Keys/**
+/Keys/bi.bikey
+/Keys/bi2.bikey
 !Installs/**
 !MPMissions/**
 !SQL/**
@@ -14,8 +17,3 @@
 !BEC/**
 !restart.cmd
 !timechange.vbs
-!instance_11_chernarus/HiveExt.ini
-!instance_11_chernarus/*.cfg
-/Keys/bi.bikey
-/Keys/bi2.bikey
-*.bak
