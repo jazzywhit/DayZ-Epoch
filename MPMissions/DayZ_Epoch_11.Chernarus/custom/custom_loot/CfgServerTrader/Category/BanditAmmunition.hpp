@@ -31,7 +31,7 @@ class Category_577 {
 	};
     class 5Rnd_86x70_L115A1 {
         type = "trade_items";
-        buy[] = {2,"ItemGoldBar"};
-        sell[] = {2,"ItemGoldBar"};
+        buy[] = {5,"ItemGoldBar"};
+        sell[] = {5,"ItemGoldBar"};
     };
 };
