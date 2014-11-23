@@ -1,4 +1,4 @@
-private["_corpse","_type","_isBuried","_mound","_cross","_gun"];
+private["_corpse","_type","_isBuried","_mound","_cross","_gun","_humanity_value"];
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't perform burial rites right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
@@ -9,6 +9,7 @@ _type = typeOf _corpse;
 _isBuried = _corpse getVariable["isBuried",false];
 _hasHarvested = _corpse getVariable["meatHarvested",false];
 _name = _corpse getVariable["bodyName","unknown"];
+_humanity_value = 100;
 
 //Check if the corpse was a player
 _corpseID = _corpse getVariable ["CharacterID", "0"];
@@ -60,6 +61,7 @@ if (!_isBuried) then {
 		if (_isPlayer) then {
 		    cutText ["Take what you can back to the hero camp...", "PLAIN DOWN"];
 			_box addWeaponCargoGlobal ["EvDogTags",1]; //Add Dog Tags to the body, use them for currency
+			_humanity_value = 500;
 		};
 		
 		//Delete Body
@@ -99,7 +101,7 @@ if (!_isBuried) then {
 
         _deathMessage = format["Rest in Peace, %1...",_name];
         cutText [_deathMessage, "PLAIN DOWN"];
-        [player,100] call player_humanityChange;
+        [player,_humanity_value] call player_humanityChange;
         _id = [player,50,true,(getPosATL player)] spawn player_alertZombies;
         player playMove "AmovPercMstpSlowWrflDnon_Salute";
 		

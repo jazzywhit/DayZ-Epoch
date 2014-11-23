@@ -1,4 +1,4 @@
-private["_corpse","_type","_isBuried", "_hasHarvested", "_name", "_rnd", "_mound","_cross","_gun", "_position", "_dir"];
+private["_corpse","_type","_isBuried", "_hasHarvested", "_name", "_rnd", "_mound","_cross","_gun", "_position", "_dir","_humanity_value"];
 
 if(DZE_ActionInProgress) exitWith { cutText ["You cannot butcher this man right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
@@ -7,6 +7,7 @@ _corpse = _this select 3;
 _type = typeOf _corpse;
 _isBuried = _corpse getVariable["isBuried",false];
 _hasHarvested = _corpse getVariable["meatHarvested",false];
+_humanity_value = -100;
 
 //Check if the corpse was a player
 _corpseID = _corpse getVariable ["CharacterID", "0"];
@@ -58,6 +59,7 @@ if (!_isBuried) then {
 		if (_isPlayer) then {
 		    cutText ["You have documented your kill, someone will want to see this...", "PLAIN DOWN"];
 			_box addWeaponCargoGlobal ["Kostey_notebook",1]; //Add Kill Record
+			_humanity_value = -500;
 		};
 		
         // Delete Body
@@ -94,7 +96,7 @@ if (!_isBuried) then {
         _box setVariable ["permaLoot", true];
 
         cutText ["You have gutted a human and your hands are covered with blood", "PLAIN DOWN"];
-        [player,-500] call player_humanityChange;
+        [player,_humanity_value] call player_humanityChange;
         _id = [player,50,true,(getPosATL player)] spawn player_alertZombies;
     } else {
         cutText ["The worms have already had their fill", "PLAIN DOWN"];
