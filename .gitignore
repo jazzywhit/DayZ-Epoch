@@ -1,7 +1,6 @@
 *.*
 ./**
 .idea/
-*.bak
 !.gitignore
 !Images/**
 !@DayZ_Epoch_Server/addons/dayz_server/**
@@ -17,3 +16,6 @@
 !BEC/**
 !restart.cmd
 !timechange.vbs
+.bak
+.DS_Store
+*.pbo
