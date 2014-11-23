@@ -250,7 +250,7 @@ class RscTitles
         controls[]={"Picture"};
             class Picture {
             x = safezoneX; y = safezoneY; w = safezoneW; h = safezoneH;
-            text="custom\custom_death\DeathScr.paa";
+            text="custom\custom_splash\deathscreen.jpg";
             sizeEx = -1;
             type=0;
             idc=-1;
