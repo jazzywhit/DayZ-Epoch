@@ -25,7 +25,7 @@ sleep 10; //Wait in seconds before the credits start after player IS ingame
 
 private ["_role1","_role1names","_role2","_role2names","_role3","_role3names","_role4","_role4names","_role5","_role5names"];
 _role1 = "Narrow Minded Gaming";
-_role1names = ["www.narrowmindedgaming.com", "@narrowmgaming #twitter", "/r/nmg/ #reddit"];
+_role1names = ["www.narrowmindedgaming.com", "twitter.com/narrowmgaming", "reddit.com/r/nmg/"];
 _role2 = "Bolt Action Hardcore v1.0.5";
 _role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
 _role3 = "True Hardcore";
