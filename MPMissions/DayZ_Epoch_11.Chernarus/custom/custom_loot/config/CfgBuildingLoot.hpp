@@ -571,8 +571,8 @@ class CfgBuildingLoot {
 			{"ItemMatchbox_DZE","generic",0.05},
 			{"farmweapons", "cfglootweapon", 0.4 },
 			{"WeaponHolder_ItemMachete","object",0.05},
-			{"","military_bric",0.09},
-			{"huntingrifle", "weapon", 0.01},
+			{"","military_bric",0.07},
+			{"huntingrifle", "weapon", 0.03},
 			{"pistols_bric", "cfglootweapon", 0.15},
 			{"", "hunter_clothes", 0.05 },
 			{"","hunter",0.5}

@@ -80,7 +80,8 @@ class CfgLoot {
 		,{"HandChemBlue",0.03}
 		,{"HandChemRed",0.03}
 		,{"ItemHeatPack",0.06}
-		,{"ItemDocument",0.03}
+		,{"ItemDocument",0.02}
+		,{"ItemComboLock",0.01}
 		,{"ItemLockbox",0.01}
 	};
 	generic[] = {
