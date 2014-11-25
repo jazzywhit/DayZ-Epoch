@@ -29,6 +29,8 @@ DZMSpistolList = [
 DZMSsniperListNATO = [
 	"m16a4_acg",
 	"M16A4_ACG_GL",
+    "G36a",
+    "G36A_camo",
 	"M4SPR",
 	"M40A3",
 	"m8_sharpshooter",
@@ -56,20 +58,12 @@ DZMSsniperList = [
 // SMG NATO
 DZMSmgListNATO = [
 	"MP5A5",
-	"MP5A5",
-	"MP5A5",
-	"MP5A5",
-	"MP5A5",
 	"MP5SD"
 	];
 
 // SMG
 DZMSmgList = [
 	"bizon_silenced",
-	"bizon",
-	"bizon",
-	"bizon",
-	"bizon",
 	"bizon"
 	];
 
@@ -78,13 +72,11 @@ DZMSprimaryListNATO = [
         "G36K",
         "G36K_camo",
         "m8_SAW",
-		"G36a",
-		"G36A_camo",
 		"G36C_camo",
 		"G36_C_SD_eotech",
 		"G36_C_SD_camo",
-		"MG36_Large",
-		"MG36_camo_Large",
+		"MG36",
+		"MG36_camo",
 		"M16A2GL",
 		"m16a4",
 		"M16A4_GL",
