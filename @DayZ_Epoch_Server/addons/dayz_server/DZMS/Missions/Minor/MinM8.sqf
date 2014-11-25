@@ -13,8 +13,8 @@ _coords = call DZMSFindPos;
 
 [nil,nil,rTitleText,"Bandits have Taken Over a Survivor Medical Cache!", "PLAIN",10] call RE;
 
-//DZMSAddMajMarker is a simple script that adds a marker to the location
-[_coords,_missname] ExecVM DZMSAddMajMarker;
+//DZMSAddMinMarker is a simple script that adds a marker to the location
+[_coords,_missname] ExecVM DZMSAddMinMarker;
 
 //Lets add the scenery
 _net = createVehicle ["Land_CamoNetB_NATO",[(_coords select 0) - 0.0649, (_coords select 1) + 0.6025,0],[], 0, "CAN_COLLIDE"];
@@ -61,8 +61,8 @@ sleep 5;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Medical Cache is Under Survivor Control!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Minor Medical Cache Mission has Ended."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
+deleteMarker "DZMSMinMarker";
+deleteMarker "DZMSMinDot";
 
 //Let the timer know the mission is over
-DZMSMajDone = true;
+DZMSMinDone = true;

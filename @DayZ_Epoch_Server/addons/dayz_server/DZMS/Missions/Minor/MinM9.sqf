@@ -13,8 +13,8 @@ _coords = call DZMSFindPos;
 
 [nil,nil,rTitleText,"Bandits have Ambushed a Ural Carrying Supplies!", "PLAIN",10] call RE;
 
-//DZMSAddMajMarker is a simple script that adds a marker to the location
-[_coords,_missname] ExecVM DZMSAddMajMarker;
+//DZMSAddMinMarker is a simple script that adds a marker to the location
+[_coords,_missname] ExecVM DZMSAddMinMarker;
 
 //We create the scenery
 _crash = createVehicle ["UralWreck",_coords,[], 0, "CAN_COLLIDE"];
@@ -62,24 +62,24 @@ _crate3 setDir -27.93351;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 6.9458,(_coords select 1) - 3.5352, 0],4,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 6.9458,(_coords select 1) - 3.5352, 0],4,2,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],4,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],4,2,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],4,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],4,2,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
 
 //Wait until the player is within 30 meters and also meets the kill req
-[_coords,"DZMSUnitsMajor"] call DZMSWaitMissionComp;
+[_coords,"DZMSUnitsMinor"] call DZMSWaitMissionComp;
 
 //Call DZMSSaveVeh to attempt to save the vehicles to the database
 //If saving is off, the script will exit.
 [_vehicle] ExecVM DZMSSaveVeh;
 
 [nil,nil,rTitleText,"The Ural Supplies have been Secured by Survivors!", "PLAIN",6] call RE;
-diag_log text format["[DZMS]: Major SM5 Ural Ambush Mission has Ended."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
+diag_log text format["[DZMS]: Minor Ural Ambush Mission has Ended."];
+deleteMarker "DZMSMinMarker";
+deleteMarker "DZMSMinDot";
 
 //Let the timer know the mission is over
-DZMSMajDone = true;
+DZMSMinDone = true;

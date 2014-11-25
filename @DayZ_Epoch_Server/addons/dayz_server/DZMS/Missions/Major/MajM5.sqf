@@ -13,8 +13,8 @@ _coords = call DZMSFindPos;
 
 [nil,nil,rTitleText,"Bandits have been seen hoarding gold! Go find it!", "PLAIN",10] call RE;
 
-//DZMSAddMinMarker is a simple script that adds a marker to the location
-[_coords,_missName] ExecVM DZMSAddMinMarker;
+//DZMSAddMajMarker is a simple script that adds a marker to the location
+[_coords,_missName] ExecVM DZMSAddMajMarker;
 
 //Add and fill the boxes
 _crate = createVehicle ["USVehicleBox",[(_coords select 0) + 3, _coords select 1,0],[], 0, "CAN_COLLIDE"];
@@ -39,8 +39,8 @@ sleep 1;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Bandits Gold has been Secured by Survivors!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major SM Bandit Gold Mission has Ended."];
-deleteMarker "DZMSMinMarker";
-deleteMarker "DZMSMinDot";
+deleteMarker "DZMSMajMarker";
+deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
-DZMSMinDone = true;
+DZMSMajDone = true;

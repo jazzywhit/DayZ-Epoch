@@ -13,8 +13,8 @@ _coords = call DZMSFindPos;
 
 [nil,nil,rTitleText,"The Black Market Trader has Arrived to Trade High Quality Equipment!\n Hurry, he won't be here long!", "PLAIN",10] call RE;
 
-//DZMSAddMinMarker is a simple script that adds a marker to the location
-[_coords,_missName] ExecVM DZMSAddMinMarker;
+//DZMSAddMajMarker is a simple script that adds a marker to the location
+[_coords,_missName] ExecVM DZMSAddMajMarker;
 
 //Create the scenery
 _base1 = createVehicle ["Land_fort_artillery_nest",[(_coords select 0) - 5.939,(_coords select 1) + 10.0459,0],[], 0, "CAN_COLLIDE"];
@@ -101,8 +101,8 @@ BlackMarketTrader setPos [15500,850,0];
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Black Market Trader is Gone", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major Black Market Trader Mission has Ended."];
-deleteMarker "DZMSMinMarker";
-deleteMarker "DZMSMinDot";
+deleteMarker "DZMSMajMarker";
+deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
-DZMSMinDone = true;
+DZMSMajDone = true;
