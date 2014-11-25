@@ -31,13 +31,7 @@ DZMSsniperListNATO = [
 	"M16A4_ACG_GL",
 	"M4SPR",
 	"M40A3",
-	"G36K",
-	"G36K_camo",
-	"G36A",
-	"G36A_camo",
-	"m8_carbine",
 	"m8_sharpshooter",
-	"m8_SAW",
 	"M24_des_EP1",
 	"M4A3_RCO_GL_EP1",
 	"M24",
@@ -53,15 +47,9 @@ DZMSsniperListNATO = [
 
 // Sniper Rifles
 DZMSsniperList = [
-	"AK_107_PSO",
-	"Sa58V_RCO_EP1",
 	"Sa58V_RCO_EP1",
 	"AKS_74_PSO",
 	"AK_107_PSO",
-	"AK_107_PSO",
-	"Sa58V_RCO_EP1",
-	"AKS_74_PSO",
-	"AK_107_GL_PSO",
 	"AK_107_GL_PSO"
 	];
 
@@ -87,6 +75,11 @@ DZMSmgList = [
 
 // Primary Rifles
 DZMSprimaryListNATO = [
+        "G36K",
+        "G36K_camo",
+        "m8_SAW",
+		"G36a",
+		"G36A_camo",
 		"G36C_camo",
 		"G36_C_SD_eotech",
 		"G36_C_SD_camo",
@@ -103,14 +96,13 @@ DZMSprimaryListNATO = [
 		"M4A1_HWS_GL",
 		"M4A3_CCO_EP1",
 		"m8_holo_sd",
+        "m8_carbine",
 		"m8_carbineGL",
 		"BAF_L85A2_RIS_Holo",
 		"BAF_L85A2_UGL_Holo",
 		"M4A1_HWS_GL_SD_Camo",
 		"SCAR_L_CQC_Holo",
-		"SCAR_L_CQC_CCO_SD",
-		"Remington870_lamp",
-		"M1014"
+		"SCAR_L_CQC_CCO_SD"
 		];
 
 // Primary Rifles

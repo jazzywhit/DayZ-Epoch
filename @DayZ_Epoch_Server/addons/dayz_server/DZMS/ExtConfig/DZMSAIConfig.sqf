@@ -108,24 +108,16 @@ DZMS_Rifles = [
 		"Sa58V_CCO_EP1",
 		"RPK_74",
 		"AK_107_PSO",
-		"Sa58V_RCO_EP1",
 		"Sa58V_EP1",
-		"AKS_74_PSO",
-		"AK_107_GL_PSO"
+		"AKS_74_PSO"
 		];
 
 DZMS_Rifles_NATO = [
 		"G36C",
-		"G36C_camo",
-		"G36K_camo",
-		"BAF_L85A2_RIS_Holo",
-		"BAF_L85A2_UGL_Holo",
-		"SCAR_L_CQC_Holo",
-		"SCAR_H_CQC_CCO",
-		"M4A1_HWS_GL_camo",
-		"FN_FAL",
 		"SCAR_L_CQC",
 		"m16a4_acg",
+		"M249",
+		"MG36",
 		"M4SPR"
 		];
 
