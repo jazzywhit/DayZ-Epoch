@@ -9,12 +9,14 @@ if (dayz_combat == 1) exitWith {cutText [format["You are in Combat and cannot bu
 _ctGrenade = {_x == "HandGrenade_West"} count magazines player;
 _ctCan = {_x == "TrashTinCan"} count magazines player;
 _ctWater = {_x == "ItemWaterbottleUnfilled"} count magazines player;
-if ((_ctGrenade >= 2)&&(_ctCan >= 1)&&(_ctWater >= 1)) then {
+if ((_ctGrenade >= 4)&&(_ctCan >= 1)&&(_ctWater >= 1)) then {
  
         player playActionNow "Medic";
         r_interrupt = false;
         player removeMagazine "HandGrenade_West";
         player removeMagazine "HandGrenade_West";
+player removeMagazine "HandGrenade_West";
+player removeMagazine "HandGrenade_West";
         player removeMagazine "TrashTinCan";
         player removeMagazine "ItemWaterbottleUnfilled";
         _dis=10;
