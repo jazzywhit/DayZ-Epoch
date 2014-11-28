@@ -9,11 +9,6 @@ class Category_650 {
 		buy[] = {4,"ItemSilverBar"};
 		sell[] = {2,"ItemSilverBar"};
 	};
-	class MMT_Civ {
-		type = "trade_any_bicycle";
-		buy[] = {4,"ItemSilverBar"};
-		sell[] = {2,"ItemSilverBar"};
-	};
 	class MMT_USMC {
 		type = "trade_any_bicycle";
 		buy[] = {4,"ItemSilverBar"};
@@ -87,11 +82,6 @@ class Category_587 {
 		sell[] = {2,"ItemSilverBar"};
 	};
 	class Old_bike_TK_INS_EP1 {
-		type = "trade_any_bicycle";
-		buy[] = {4,"ItemSilverBar"};
-		sell[] = {2,"ItemSilverBar"};
-	};
-	class MMT_Civ {
 		type = "trade_any_bicycle";
 		buy[] = {4,"ItemSilverBar"};
 		sell[] = {2,"ItemSilverBar"};
