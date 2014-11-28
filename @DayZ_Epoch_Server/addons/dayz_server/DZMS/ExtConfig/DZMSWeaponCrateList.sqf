@@ -69,24 +69,28 @@ DZMSmgList = [
 
 // Primary Rifles
 DZMSprimaryListNATO = [
-        "G36K",
-        "G36K_camo",
-        "m8_SAW",
-		"G36C_camo",
-		"G36_C_SD_eotech",
-		"G36_C_SD_camo",
-		"MG36",
-		"MG36_camo",
+        "G36C_camo",
+        "G36_C_SD_eotech",
+        "G36_C_SD_camo",
 		"M16A2GL",
 		"m16a4",
 		"M16A4_GL",
 		"M4A1_Aim",
 		"M4A1_Aim_camo",
 		"M4A1_AIM_SD_camo",
+		"M4A3_CCO_EP1"
+		];
+
+// Primary Rifles
+DZMSprimaryListNATOHigh = [
+        "G36K",
+        "G36K_camo",
+		"G36C_camo",
+		"G36_C_SD_eotech",
+		"G36_C_SD_camo",
 		"M4A1_HWS_GL_SD_camo",
 		"M4A1_HWS_GL_camo",
 		"M4A1_HWS_GL",
-		"M4A3_CCO_EP1",
 		"m8_holo_sd",
         "m8_carbine",
 		"m8_carbineGL",
@@ -96,6 +100,17 @@ DZMSprimaryListNATO = [
 		"SCAR_L_CQC_Holo",
 		"SCAR_L_CQC_CCO_SD"
 		];
+		
+// NATO Machine Guns
+DZMSmachinegunListNATO = [
+        "M8_SAW",
+        "MG36_camo",
+        "M60A4_EP1",
+        "MG36",
+        "M249",
+        "M240",
+        "M249_m145_EP1"
+        ];
 
 // Primary Rifles
 DZMSprimaryList = [
@@ -114,9 +129,14 @@ DZMSprimaryListHigh = [
 		"AK_47_S",
 		"Sa58V_RCO_EP1",
 		"Sa58V_CCO_EP1",
-		"RPK_74",
 		"Sa58P_EP1",
 		"Sa58V_EP1"
+		];
+
+// Machine Guns BRIC
+DZMSmachinegunList = [
+		"PK",
+		"RPK_74"
 		];
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

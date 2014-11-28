@@ -33,7 +33,7 @@ _vehicle1 = createVehicle [_veh2,[(_coords select 0) - 6.2764, (_coords select 1
 _crate = createVehicle ["USVehicleBox",_coords,[], 0, "CAN_COLLIDE"];
 
 //DZMSBoxFill fills the box, DZMSProtectObj prevents it from disappearing
-[_crate,"weapons_nato"] ExecVM DZMSBoxSetup;
+[_crate,"weapons_nato_high"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.

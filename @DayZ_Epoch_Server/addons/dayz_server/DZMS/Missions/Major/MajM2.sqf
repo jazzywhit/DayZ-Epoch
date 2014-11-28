@@ -147,7 +147,7 @@ deletevehicle _chute;
 clearWeaponCargoGlobal _boxFin;
 clearMagazineCargoGlobal _boxFin;
 clearBackpackCargoGlobal _boxFin;
-[_boxFin,"weapons_nato"] ExecVM DZMSBoxSetup;
+[_boxFin,"weapons_nato_high"] ExecVM DZMSBoxSetup;
 [_boxFin] call DZMSProtectObj;
 
 //Wait until the player is within 30 meters and also meets the kill req
