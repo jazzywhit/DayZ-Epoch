@@ -42,9 +42,7 @@ DynamicVehicleDamageHigh = 100;
 MaxMineVeins = 50;
 
 // Config trader instead of SQL
-if(isNil "DZE_ConfigTrader") then {
-	DZE_ConfigTrader = true;
-};
+DZE_ConfigTrader = true;
 
 //Plot for life and snap building
 DZE_APlotforLife = true;
@@ -52,4 +50,5 @@ DZE_modularBuild = true;
 
 // Removable and Wreck classes
 DZE_isRemovable = ["Fence_corrugated_DZ","M240Nest_DZ","ParkBench_DZ","Plastic_Pole_EP1_DZ","FireBarrel_DZ","Scaffolding_DZ"];
-DZE_isWreck = ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1","Rubbish2"];
+DZE_isWreck = ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1"];
+DZE_isGarbage = ["Land_Misc_Garb_Heap_EP1","Rubbish2"];

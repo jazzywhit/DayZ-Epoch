@@ -2,7 +2,7 @@
 delete object from db with extra waiting by [VB]AWOL
 parameters: _obj
 */
-private ["_activatingPlayer","_obj","_objectID","_objectUID","_started","_finished","_animState","_isMedic","_isOk","_proceed","_counter","_limit","_objType","_sfx","_dis","_itemOut","_countOut","_selectedRemoveOutput","_friendlies","_nearestPole","_ownerID","_refundpart","_isWreck","_findNearestPoles","_findNearestPole","_IsNearPlot","_brokenTool","_removeTool","_isDestructable","_isRemovable","_objOwnerID","_isOwnerOfObj","_preventRefund","_ipos","_item","_radius","_isWreckBuilding","_nameVehicle","_isModular"];
+private ["_activatingPlayer","_obj","_objectID","_objectUID","_started","_finished","_animState","_isMedic","_isOk","_proceed","_counter","_limit","_objType","_sfx","_dis","_itemOut","_countOut","_selectedRemoveOutput","_friendlies","_nearestPole","_ownerID","_refundpart","_isWreck","_isGarbage", "_findNearestPoles","_findNearestPole","_IsNearPlot","_brokenTool","_removeTool","_isDestructable","_isRemovable","_objOwnerID","_isOwnerOfObj","_preventRefund","_ipos","_item","_radius","_isWreckBuilding","_nameVehicle","_isModular"];
 
 if(DZE_ActionInProgress) exitWith { cutText [(localize "str_epoch_player_88") , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
@@ -30,12 +30,13 @@ _objType = typeOf _obj;
 // Chance to break tools
 _isDestructable = _obj isKindOf "BuiltItems";
 _isWreck = _objType in DZE_isWreck;
+_isGarbage = _objType in DZE_isGarbage;
 _isRemovable = _objType in DZE_isRemovable;
 _isWreckBuilding = _objType in DZE_isWreckBuilding;
 _isMine = _objType in ["Land_iron_vein_wreck","Land_silver_vein_wreck","Land_gold_vein_wreck"];
 _isModular = _obj isKindOf "ModularItems";
 
-_limit = 3;
+_limit = 2;
 if (DZE_StaticConstructionCount > 0) then {
 	_limit = DZE_StaticConstructionCount;
 }
@@ -57,6 +58,8 @@ if(_IsNearPlot >= 1) then {
 
 	// Find owner
 	_ownerID = _nearestPole getVariable["CharacterID","0"];
+
+	diag_log format["PlotFriends: %1,(call PlotGetFriends)];
 
 	// check if friendly to owner
 	if(dayz_characterID != _ownerID) then {
@@ -130,9 +133,12 @@ while {_isOk} do {
 
 	if(_finished) then {
 		_counter = _counter + 1;
-		// 10% chance to break a required tool each pass
+		// 25% chance to break a required tool each pass
+		// 75% chance to succeed
+		// - on an enemy plot pole (6 tries) that is .75^6 ~ 18% chance of success
+		// - on a std item (2 tries) that is .75^2 ~ 56% chance of success
 		if((_isDestructable || _isRemovable) && !_isOwnerOfObj) then {
-			if((random 10) <= 1) then {
+			if(random 1 < 0.25) then {
 				_brokenTool = true;
 			};
 		};
@@ -148,10 +154,12 @@ while {_isOk} do {
 		_isOk = false;
 		_proceed = true;
 	};
-
 };
 
-
+// Can't break a tool on garbage
+if (_isGarbage) then {
+    _brokenTool = false;
+};
 
 if(_brokenTool) then {
 	if(_isWreck) then {
@@ -184,18 +192,22 @@ if (_proceed) then {
 		_preventRefund = false;
 
 		_selectedRemoveOutput = [];
-		if(_isWreck) then {
-			// Find one random part to give back
-			_refundpart = ["PartEngine","PartGeneric","PartFueltank","PartWheel"] call BIS_fnc_selectRandom;
-			_selectedRemoveOutput set [count _selectedRemoveOutput,[_refundpart,1]];
+		if(_isGarbage) then {
+		    _refundpart = ["ItemSodaCoke"] call BIS_fnc_selectRandom;
+            _selectedRemoveOutput set [count _selectedRemoveOutput,[_refundpart,1]];
 		} else {
-			if(_isWreckBuilding) then {
-				_selectedRemoveOutput = getArray (configFile >> "CfgVehicles" >> _objType >> "removeoutput");
-			} else {
-				_selectedRemoveOutput = getArray (configFile >> "CfgVehicles" >> _objType >> "removeoutput");
-				_preventRefund = (_objectID == "0" && _objectUID == "0");
-
-			};
+            if(_isWreck) then {
+                // Find one random part to give back
+                _refundpart = ["PartEngine","PartGeneric","PartFueltank","PartWheel"] call BIS_fnc_selectRandom;
+                _selectedRemoveOutput set [count _selectedRemoveOutput,[_refundpart,1]];
+            } else {
+                if(_isWreckBuilding) then {
+                    _selectedRemoveOutput = getArray (configFile >> "CfgVehicles" >> _objType >> "removeoutput");
+                } else {
+                    _selectedRemoveOutput = getArray (configFile >> "CfgVehicles" >> _objType >> "removeoutput");
+                    _preventRefund = (_objectID == "0" && _objectUID == "0");
+                };
+            };
 		};
 
 		if((count _selectedRemoveOutput) <= 0) then {
@@ -209,7 +221,7 @@ if (_proceed) then {
 		_radius = 1;
 
 		if (_isMine) then {
-			if((random 10) <= 4) then {
+			if(random 1 < 0.4) then {
 				_gems = ["ItemTopaz","ItemObsidian","ItemSapphire","ItemAmethyst","ItemEmerald","ItemCitrine","ItemRuby"];
 				_gem = _gems select (floor(random (count _gems)));
 				_selectedRemoveOutput set [(count _selectedRemoveOutput),[_gem,1]];
@@ -229,15 +241,12 @@ if (_proceed) then {
 			} count _selectedRemoveOutput;
 
 			_item setposATL _iPos;
-
 			player reveal _item;
-
 			player action ["Gear", _item];
 		};
 	} else {
 		cutText [(localize "str_epoch_player_91"), "PLAIN DOWN"];
 	};
-
 } else {
 	r_interrupt = false;
 	if (vehicle player == player) then {
@@ -245,5 +254,6 @@ if (_proceed) then {
 		player playActionNow "stop";
 	};
 };
+
 DZE_ActionInProgress = false;
 s_player_deleteBuild = -1;

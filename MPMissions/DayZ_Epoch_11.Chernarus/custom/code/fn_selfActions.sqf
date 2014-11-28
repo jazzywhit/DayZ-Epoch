@@ -176,6 +176,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_isZombie = _cursorTarget isKindOf "zZombie_base";
 	_isDestructable = _cursorTarget isKindOf "BuiltItems";
 	_isWreck = _typeOfCursorTarget in DZE_isWreck;
+	_isGarbage = _typeOfCursorTarget in DZE_isGarbage;
 	_isWreckBuilding = _typeOfCursorTarget in DZE_isWreckBuilding;
 	_isModular = _cursorTarget isKindOf "ModularItems";
 	_isModularDoor = _typeOfCursorTarget in ["Land_DZE_WoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_GarageWoodDoor","CinderWallDoor_DZ","CinderWallDoorSmall_DZ"];
@@ -250,6 +251,11 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 				_player_deleteBuild = true;
 			};
 		};
+
+		//Allow player to search garbage
+        if(_isGarbage) then {
+            _player_deleteBuild = true;
+        };
 		
 		///Allow owners to delete modulars (Changed for Plot management)
 if(_isModular) then {
