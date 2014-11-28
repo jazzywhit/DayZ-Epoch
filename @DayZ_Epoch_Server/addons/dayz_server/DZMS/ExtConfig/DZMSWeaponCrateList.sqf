@@ -152,6 +152,7 @@ DZMSConSupply = [
 	"ItemTankTrap",
 	"PartGeneric",
 	"ItemPole",
+	"ItemCanvas",
 	"PartPlywoodPack",
 	"PartPlankPack",
 	"PartPlywoodPack",
@@ -166,9 +167,12 @@ DZMSConSupply = [
 
 DZMSConLock = ["ItemComboLock"];
 
-DZMSBuildingSupply = [
+DZMSConSupplyHigh = [
 	"PartPlywoodPack",
-	"ItemPole",
 	"PartPlankPack",
+	"bulk_PartGeneric",
+	"bulk_ItemSandbag",
+	"bulk_ItemTankTrap",
+	"bulk_ItemWire",
 	"CinderBlocks"
 	];

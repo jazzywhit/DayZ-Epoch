@@ -421,10 +421,10 @@ if (_type == "supply_high") then {
 	};
 
 	// load high end construction supply
-	_scount = count DZMSBuildingSupply;
+	_scount = count DZMSConSupplyHigh;
 	for "_x" from 0 to 15 do {
 		_sSelect = floor(random _sCount);
-		_item = DZMSBuildingSupply select _sSelect;
+		_item = DZMSConSupplyHigh select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
 	};
 
