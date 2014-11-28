@@ -25,7 +25,29 @@ if (_button == 1) then {
     _cfgActions = _conf >> "ItemActions";
     _numActions = (count _cfgActions);
     _height = 0;
-    
+//Custom code for ied crafting
+    if (_item == "HandGrenade_West") then {
+		_menu = _parent displayCtrl (1600);
+		_menu ctrlShow true;
+		_type = "Craft IED";
+		_script = "custom\IED\ied.sqf";
+		_height = _height + (0.025 * safezoneH);
+		_compile = format["_id = '%2' execVM '%1';closeDialog 0;",_script,_item];
+		uiNamespace setVariable ['uiControl', _control];
+		_menu ctrlSetText format[_type,_name];
+		_menu ctrlSetEventHandler ["ButtonClick",_compile];
+	};	
+	if (_item == "BAF_ied_v1") then {	
+		_menu = _parent displayCtrl (1600);
+		_menu ctrlShow true;
+		_type = "Craft Large IED";
+		_script = "custom\IED\ied_large.sqf";
+		_height = _height + (0.025 * safezoneH);
+		_compile = format["_id = '%2' execVM '%1';closeDialog 0;",_script,_item];
+		uiNamespace setVariable ['uiControl', _control];
+		_menu ctrlSetText format[_type,_name];
+		_menu ctrlSetEventHandler ["ButtonClick",_compile];
+	};
     //Populate Menu
     for "_i" from 0 to (_numActions - 1) do 
     {
