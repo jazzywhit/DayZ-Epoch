@@ -4024,15 +4024,6 @@ if (true) then
   _this setPos [4787.0259, 2418.1208];
 };
 
-_vehicle_475 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Barrels", [4784.5728, 2420.6174, -1.9073486e-006], [], 0, "CAN_COLLIDE"];
-  _vehicle_475 = _this;
-  _this setDir 55.660072;
-  _this setPos [4784.5728, 2420.6174, -1.9073486e-006];
-};
-
 _vehicle_476 = objNull;
 if (true) then
 {
@@ -4825,15 +4816,6 @@ if (true) then
   _this = createVehicle ["ASC_runway_BluelightB", [4624.6963, 2543.7241, 3.7193298e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_565 = _this;
   _this setPos [4624.6963, 2543.7241, 3.7193298e-005];
-};
-
-_vehicle_566 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Barrels", [4650.9814, 2465.8159], [], 0, "CAN_COLLIDE"];
-  _vehicle_566 = _this;
-  _this setDir 27.149609;
-  _this setPos [4650.9814, 2465.8159];
 };
 
 _vehicle_567 = objNull;
