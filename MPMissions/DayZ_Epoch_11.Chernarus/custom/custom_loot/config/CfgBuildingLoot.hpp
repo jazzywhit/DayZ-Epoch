@@ -678,7 +678,6 @@ class CfgBuildingLoot {
 			{ "M24", "weapon", 0.01 },
 			{ "SVD_CAMO", "weapon", 0.01 },
 			{ "M1014", "weapon", 0.02 },
-			{ "BAF_LRR_scoped", "weapon", 0.01 },
 			{ "M4SPR", "weapon", 0.01 },
 			{ "M4A1", "weapon", 0.01 },
 			{ "M14_EP1", "weapon", 0.02 },
@@ -715,9 +714,7 @@ class CfgBuildingLoot {
 			{ "", "militaryclothes", 0.05 },
 			{ "WeaponHolder_ItemMachete", "object", 0.02 },
 			{ "SCAR_H_LNG_Sniper_SD", "weapon", 0.01 },
-			{ "2000Rnd_762x51_M134", "magazine", 0.01 },
-			{ "KSVK", "weapon", 0.01 },
-			{ "m240_scoped_EP1", "weapon", 0.01 }
+			{ "2000Rnd_762x51_M134", "magazine", 0.01 }
 		};
 	};
 

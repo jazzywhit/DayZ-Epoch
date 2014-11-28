@@ -74,11 +74,6 @@ class Category_526 {
         buy[] = {2,"ItemGoldBar10oz"};
         sell[] = {4,"ItemGoldBar"};
     };
-    class m240_scoped_EP1 {
-        type = "trade_weapons";
-        buy[] = {1,"ItemBriefcase100oz"};
-        sell[] = {2,"ItemGoldBar10oz"};
-    };
     class M249_m145_EP1 {
         type = "trade_weapons";
         buy[] = {4,"ItemGoldBar10oz"};
