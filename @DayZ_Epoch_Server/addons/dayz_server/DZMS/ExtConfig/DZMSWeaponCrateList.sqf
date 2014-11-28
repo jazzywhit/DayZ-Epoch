@@ -127,7 +127,6 @@ DZMSprimaryListHigh = [
 		"AKS_GOLD",
 		"AK_47_M",
 		"AK_47_S",
-		"Sa58V_RCO_EP1",
 		"Sa58V_CCO_EP1",
 		"Sa58P_EP1",
 		"Sa58V_EP1"

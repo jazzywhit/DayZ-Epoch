@@ -104,7 +104,6 @@ DZMSSkills3 = [
 DZMS_Rifles = [
 		"AK_47_M",
 		"AK_47_S",
-		"Sa58V_RCO_EP1",
 		"Sa58V_CCO_EP1",
 		"RPK_74",
 		"AK_107_PSO",
