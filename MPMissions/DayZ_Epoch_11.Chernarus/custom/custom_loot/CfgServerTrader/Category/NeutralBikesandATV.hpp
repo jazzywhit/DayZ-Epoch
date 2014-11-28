@@ -9,7 +9,27 @@ class Category_650 {
 		buy[] = {4,"ItemSilverBar"};
 		sell[] = {2,"ItemSilverBar"};
 	};
+	class MMT_Civ {
+		type = "trade_any_bicycle";
+		buy[] = {4,"ItemSilverBar"};
+		sell[] = {2,"ItemSilverBar"};
+	};
+	class MMT_USMC {
+		type = "trade_any_bicycle";
+		buy[] = {4,"ItemSilverBar"};
+		sell[] = {2,"ItemSilverBar"};
+	};
+	class Old_bike_TK_Civ_EP1 {
+		type = "trade_any_bicycle";
+		buy[] = {4,"ItemSilverBar"};
+		sell[] = {2,"ItemSilverBar"};
+	};
 	class TT650_Civ {
+		type = "trade_any_vehicle";
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
+	};
+	class TT650_Gue {
 		type = "trade_any_vehicle";
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
@@ -39,6 +59,11 @@ class Category_650 {
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
 	};
+    class M1030 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar"};
+        sell[] = {1,"ItemGoldBar"};
+    };
 	class Old_moto_TK_Civ_EP1 {
 		type = "trade_any_vehicle";
 		buy[] = {2,"ItemGoldBar"};
@@ -46,8 +71,13 @@ class Category_650 {
 	};
 	class tractor {
 		type = "trade_any_vehicle";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		buy[] = {4,"ItemGoldBar"};
+		sell[] = {4,"ItemGoldBar"};
+	};
+	class tractorold {
+		type = "trade_any_vehicle";
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 };
 class Category_587 {
@@ -61,7 +91,27 @@ class Category_587 {
 		buy[] = {4,"ItemSilverBar"};
 		sell[] = {2,"ItemSilverBar"};
 	};
+	class MMT_Civ {
+		type = "trade_any_bicycle";
+		buy[] = {4,"ItemSilverBar"};
+		sell[] = {2,"ItemSilverBar"};
+	};
+	class MMT_USMC {
+		type = "trade_any_bicycle";
+		buy[] = {4,"ItemSilverBar"};
+		sell[] = {2,"ItemSilverBar"};
+	};
+	class Old_bike_TK_Civ_EP1 {
+		type = "trade_any_bicycle";
+		buy[] = {4,"ItemSilverBar"};
+		sell[] = {2,"ItemSilverBar"};
+	};
 	class TT650_Civ {
+		type = "trade_any_vehicle";
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
+	};
+	class TT650_Gue {
 		type = "trade_any_vehicle";
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
@@ -91,6 +141,11 @@ class Category_587 {
 		buy[] = {2,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
 	};
+	class M1030 {
+		type = "trade_any_vehicle";
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
+	};
 	class Old_moto_TK_Civ_EP1 {
 		type = "trade_any_vehicle";
 		buy[] = {2,"ItemGoldBar"};
@@ -98,7 +153,12 @@ class Category_587 {
 	};
 	class tractor {
 		type = "trade_any_vehicle";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		buy[] = {4,"ItemGoldBar"};
+		sell[] = {4,"ItemGoldBar"};
+	};
+	class tractorold {
+		type = "trade_any_vehicle";
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 };

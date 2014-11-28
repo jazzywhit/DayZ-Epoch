@@ -38,7 +38,7 @@ menu_Worker2 = [
 ];
 // Vehicles Neutral
 menu_Worker3 = [
-	[["Bikes and ATV",587],["Buses and Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591]],
+	[["Bikes and ATV",587],["Buses and Vans",588],["Cargo Trucks",586],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591]],
 	[],
 	"neutral"
 ];
@@ -86,7 +86,7 @@ menu_CDF_Soldier_Light = [
 ];
 // Vehicles Neutral / mid tier
 menu_RU_Profiteer4 = [
-	[["Bikes and ATV",650],["Buses and Vans",651],["Cargo Trucks",653],["Fuel Trucks",655],["Military Unarmed",658],["Trucks",659],["Used Cars",660],["Utility Vehicles",661]],
+	[["Bikes and ATV",650],["Buses and Vans",651],["Cargo Trucks",653],["Military Unarmed",658],["Trucks",659],["Used Cars",660],["Utility Vehicles",661]],
 	[],
 	"neutral"
 ];
