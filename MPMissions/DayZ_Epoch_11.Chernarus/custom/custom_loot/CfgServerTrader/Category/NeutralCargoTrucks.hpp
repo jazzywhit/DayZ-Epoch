@@ -4,11 +4,6 @@ class Category_653 {
 		buy[] = {2,"ItemGoldBar10oz"};
 		sell[] = {1,"ItemGoldBar10oz"};
 	};
-	class V3S_Refuel_TK_GUE_EP1_DZ {
-		type = "trade_any_vehicle";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
-	};
 	class Ural_INS {
 		type = "trade_any_vehicle";
 		buy[] = {2,"ItemGoldBar10oz"};
@@ -79,6 +74,81 @@ class Category_653 {
 		buy[] = {2,"ItemGoldBar10oz"};
 		sell[] = {1,"ItemGoldBar10oz"};
 	};
+    class uralopen_cdf {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralopen_ins {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralreammo_cdf {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralreammo_ins {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralreammo_tk_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralrepair_cdf {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralrepair_ins {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_tk_gue_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralrepair_tk_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralsalvage_tk_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralsupply_tk_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_gue {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_reammo_tk_gue_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_salvage_tk_gue_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_supply_tk_gue_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
 };
 class Category_586 {
 	class Ural_CDF {
@@ -86,11 +156,6 @@ class Category_586 {
 		buy[] = {2,"ItemGoldBar10oz"};
 		sell[] = {1,"ItemGoldBar10oz"};
 	};
-	class V3S_Refuel_TK_GUE_EP1_DZ {
-		type = "trade_any_vehicle";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
-	};
 	class Ural_INS {
 		type = "trade_any_vehicle";
 		buy[] = {2,"ItemGoldBar10oz"};
@@ -161,4 +226,79 @@ class Category_586 {
 		buy[] = {2,"ItemGoldBar10oz"};
 		sell[] = {1,"ItemGoldBar10oz"};
 	};
+    class uralopen_cdf {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralopen_ins {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralreammo_cdf {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralreammo_ins {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralreammo_tk_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralrepair_cdf {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralrepair_ins {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_tk_gue_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralrepair_tk_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralsalvage_tk_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class uralsupply_tk_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_gue {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_reammo_tk_gue_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_salvage_tk_gue_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
+    class v3s_supply_tk_gue_ep1 {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemGoldBar10oz"};
+        sell[] = {1,"ItemGoldBar10oz"};
+    };
 };
