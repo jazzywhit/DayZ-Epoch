@@ -230,8 +230,11 @@ class CfgLoot {
 		,{"ItemDocument",0.01}
 	};
 	hunter_clothes[] = {
-        {"Skin_Camo1_DZ",0.9}
-        ,{"Skin_Sniper1_DZ",0.1}
+        {"Skin_Sniper1_DZ",0.3}
+        ,{"Skin_GUE_Soldier_Sniper_DZ",0.3}
+        ,{"Soldier_Sniper_PMC_DZ",0.2}
+        ,{"Skin_TK_Soldier_Sniper_EP1_DZ",0.1}
+        ,{"Skin_CZ_Soldier_Sniper_EP1_DZ", 0.1}
     };
 	clothes[] = {
 		{"Skin_RU_Policeman_DZ",0.11}
@@ -258,7 +261,6 @@ class CfgLoot {
 		,{"Skin_CZ_Special_Forces_GL_DES_EP1_DZ",0.08}
 		,{"Skin_FR_OHara_DZ",0.08}
 		,{"Skin_FR_Rodriguez_DZ",0.09}
-		,{"Skin_CZ_Soldier_Sniper_EP1_DZ",0.04}
 		,{"Skin_Graves_Light_DZ",0.09}
 		,{"Skin_INS_Soldier_AR_DZ",0.05}
 		,{"Skin_INS_Soldier_CO_DZ",0.04}
@@ -275,14 +277,12 @@ class CfgLoot {
 		,{"Skin_SurvivorWcombat_DZ",0.08}
 		,{"Skin_SurvivorWdesert_DZ",0.08}
 		,{"Skin_GUE_Soldier_MG_DZ",0.05}
-		,{"Skin_GUE_Soldier_Sniper_DZ",0.04}
 		,{"Skin_GUE_Soldier_Crew_DZ",0.04}
 		,{"Skin_GUE_Soldier_CO_DZ",0.04}
 		,{"Skin_GUE_Soldier_2_DZ",0.04}
-		,{"Skin_TK_Special_Forces_MG_EP1_DZ",0.02}
-		,{"Skin_TK_Soldier_Sniper_EP1_DZ",0.02}
-		,{"Skin_TK_Commander_EP1_DZ",0.02}
-		,{"Skin_RU_Soldier_Crew_DZ",0.02}
+		,{"Skin_TK_Special_Forces_MG_EP1_DZ",0.04}
+		,{"Skin_TK_Commander_EP1_DZ",0.04}
+		,{"Skin_RU_Soldier_Crew_DZ",0.04}
 		,{"Skin_INS_Lopotev_DZ",0.02}
 	};
 	tents[] = {

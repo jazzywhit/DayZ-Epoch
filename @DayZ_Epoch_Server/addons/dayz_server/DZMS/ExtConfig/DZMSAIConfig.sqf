@@ -38,7 +38,6 @@ DZMSNatoSkins = [
     "CZ_Special_Forces_GL_DES_EP1_DZ",
     "FR_OHara_DZ",
     "FR_Rodriguez_DZ",
-    "CZ_Soldier_Sniper_EP1_DZ",
     "Graves_Light_DZ",
     "INS_Soldier_AR_DZ",
     "INS_Soldier_CO_DZ"
@@ -129,31 +128,18 @@ DZMSWeps3 = DZMS_Rifles_NATO; //More dangerous and NATO Weapons
 // These are gear sets that will be randomly given to the AI
 // They are all the same, but can be customized.
 DZMSGear0 = [
-["ItemBandage"],
-["ItemFlashlight"]
+['ItemBandage', 'ItemCompass', 'ItemHatchet_DZE', 'ItemKnife', 'Itemmatchbox_DZE', 'ItemRadio', 'Itemetool', 'Itemtoolbox', 'ItemWatch', 'ItemGPS'],
+['ItemBandage', 'ItemHatchet_DZE', 'ItemKnife', 'Itemetool', 'Itemtoolbox', 'ItemWatch', 'ItemGPS'],
+['ItemBandage', 'ItemCompass', 'ItemHatchet_DZE', 'ItemKnife', 'Itemmatchbox_DZE', 'Itemtoolbox', 'ItemWatch', 'ItemGPS'],
+['ItemBandage', 'ItemCompass', 'Itemmatchbox_DZE', 'ItemRadio', 'Itemetool', 'Itemtoolbox', 'ItemGPS'],
+['ItemBandage', 'ItemCompass', 'Itemmatchbox_DZE', 'ItemRadio', 'Itemetool', 'Itemtoolbox']
 ];
 
-DZMSGear1 = [
-["ItemBandage"],
-["ItemFlashlight"]
-];
-
-DZMSGear2 = [
-["ItemBandage"],
-["ItemFlashlight"]
-];
-
-DZMSGear3 = [
-["ItemBandage"],
-["ItemFlashlight"]
-];
-
-DZMSGear4 = [
-["ItemBandage"],
-["ItemFlashlight"]
-];
+DZMSGear1 = DZMSGear0;
+DZMSGear2 = DZMSGear0;
+DZMSGear3 = DZMSGear0;
+DZMSGear4 = DZMSGear0;
 
 ////////////////////////////////////////////////////////////
 // These are the backpacks that can be assigned to AI units.
-DZMSPacklist = [
-];
+DZMSPacklist = [];

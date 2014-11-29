@@ -581,8 +581,8 @@ class CfgBuildingLoot {
 			{"","military_bric",0.07},
 			{"huntingrifle", "weapon", 0.03},
 			{"pistols_bric", "cfglootweapon", 0.15},
-			{"", "hunter_clothes", 0.05 },
-			{"","hunter",0.5}
+			{"", "hunter_clothes", 0.1 },
+			{"","hunter",0.45}
 		};
 		lootTypeSmall[] =	{
 			{"ItemMap","weapon",0.06},
