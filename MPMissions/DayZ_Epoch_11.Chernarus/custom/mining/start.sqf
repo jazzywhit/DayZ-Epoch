@@ -23,33 +23,34 @@ if (_currentWeapon == "MeleeSledge") then {																//
 		systemChat(_mining_message);
 		[10,10] call dayz_HungerThirst;
 		
-		//set up quick loop that swings the sledge and if player moves it breaks out of the mining action 					//
-		while {_Mining_Counter > 0} do {																					//
+		//set up quick loop that swings the sledge and if player moves it breaks out of the mining action
+		[player,"tentunpack",0,false] call dayz_zombieSpeak; // Play sound for the mining action
+		while {_Mining_Counter > 0} do {
 			_cursorTarget = cursorTarget;
 			if((r_interrupt)) exitWith { isMining=false };
 			if ((currentWeapon player)!="MeleeSledge") exitWith {
 				isMining = false;
 				systemChat("Sledgehammer must be the current weapon.");
 			};
-			player playActionNow "GestureSwing";																			//	hogscraper
-			sleep 1;																										//
-			_Mining_Counter = _Mining_Counter - 1;																			//
-			closeDialog 0;																									//
-		};																													//
+			player playActionNow "GestureSwing";
+			sleep 10;
+			_Mining_Counter = _Mining_Counter - 1;
+			closeDialog 0;
+		};
 
 		if (isMining) then {
 			private ["_rand","_randGem"];
-			_rand = floor(random 100);
+			_rand = random 1;
 			
-			if (_rand <= 50) then {
+			if (_rand <= 0.5) then {
 				_has_free_space=[player,"PartOre",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Iron ore.";
 			};
-			if (_rand <= 85 && _rand > 50) then {
+			if (_rand <= 0.85 && _rand > 0.50) then {
 				_has_free_space=[player,"PartOreSilver",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Silver ore.";
 			};
-			if (_rand <= 88 && _rand > 85) then {
+			if (_rand <= 0.88 && _rand > 0.85) then {
 				_randGem = floor(random 7);
 				
 				switch (_randGem) do {  
@@ -90,7 +91,7 @@ if (_currentWeapon == "MeleeSledge") then {																//
 					};
 				};
 			};
-			if (_rand <= 100 && _rand > 88) then {
+			if (_rand <= 1 && _rand > 0.88) then {
 				_has_free_space=[player,"PartOreGold",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Gold ore.";
 			};
