@@ -63,4 +63,7 @@ if (!isDedicated) then {
 	//Custom Remove Object
 	player_removeObject =			compile preprocessFileLineNumbers "custom\code\remove.sqf";
 
+	//Custom Spawn Check
+	player_spawnCheck = 			compile preprocessFileLineNumbers "custom\code\player_spawnCheck.sqf";
+
 };
