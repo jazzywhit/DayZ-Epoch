@@ -82,7 +82,7 @@ if (!isDedicated) then {
 	//server credits
     [] execVM "custom\server_credits\Server_WelcomeCredits.sqf";
 	
-//fixed point mining
+    //fixed point mining
 	[] execVM 'custom\mining\init.sqf
 
 	//Conduct map operations
