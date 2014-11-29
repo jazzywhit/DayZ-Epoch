@@ -65,8 +65,8 @@ _trash5 setDir -28.122475;
 [_trash5] call DZMSProtectObj;
 
 //We create the mission vehicles
-_veh1 = ["small"] call DZMSGetVeh;
-_veh2 = ["small"] call DZMSGetVeh;
+_veh1 = ["small_nato"] call DZMSGetVeh;
+_veh2 = ["large_nato"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) + 14.1426, (_coords select 1) - 0.6202,0],[], 0, "CAN_COLLIDE"];
 _vehicle1 = createVehicle [_veh2,[(_coords select 0) - 6.541, (_coords select 1) - 11.5557,0],[], 0, "CAN_COLLIDE"];
 

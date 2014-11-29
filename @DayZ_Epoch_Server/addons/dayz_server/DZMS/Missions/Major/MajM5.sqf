@@ -21,6 +21,15 @@ _crate = createVehicle ["USVehicleBox",[(_coords select 0) + 3, _coords select 1
 [_crate,"money"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
 
+private ["_veh1", "_vehicle", "_veh2", "_vehicle2"];
+//Create the vehicles
+_veh1 = ["small_bandit"] call DZMSGetVeh;
+_vehicle = createVehicle [_veh1,[(_coords select 0) - 17.5078, (_coords select 1) + 5.2578,0],[], 0, "CAN_COLLIDE"];
+[_vehicle] call DZMSSetupVehicle;
+
+_veh2 = ["large_bandit"] call DZMSGetVeh;
+_vehicle2 = createVehicle [_veh2,[(_coords select 0) + 17.5078, (_coords select 1) - 5.2578,0],[], 0, "CAN_COLLIDE"];
+[_vehicle2] call DZMSSetupVehicle;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
@@ -35,6 +44,11 @@ sleep 1;
 
 //Wait until the player is within 30 meters and also meets the kill req
 [_coords,"DZMSUnitsMajor"] call DZMSWaitMissionComp;
+
+//Call DZMSSaveVeh to attempt to save the vehicles to the database
+//If saving is off, the script will exit.
+[_vehicle] ExecVM DZMSSaveVeh;
+[_vehicle2] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Bandits Gold has been Secured by Survivors!", "PLAIN",6] call RE;

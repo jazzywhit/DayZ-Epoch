@@ -14,11 +14,6 @@ class Category_493 {
 		buy[] = {2,"ItemBriefcase100oz"};
 		sell[] = {1,"ItemBriefcase100oz"};
 	};
-	class Mi17_UN_CDF_EP1_DZE {
-		type = "trade_any_vehicle";
-		buy[] = {2,"ItemBriefcase100oz"};
-		sell[] = {1,"ItemBriefcase100oz"};
-	};
 	class UH60M_EP1_DZE {
 		type = "trade_any_vehicle";
 		buy[] = {2,"ItemBriefcase100oz"};

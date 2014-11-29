@@ -21,8 +21,8 @@ _net = createVehicle ["Land_CamoNetB_NATO",[(_coords select 0) - 0.0649, (_coord
 [_net] call DZMSProtectObj;
 
 //We create the vehicles like normal
-_veh1 = ["small"] call DZMSGetVeh;
-_veh2 = ["large"] call DZMSGetVeh;
+_veh1 = ["small_bandit"] call DZMSGetVeh;
+_veh2 = ["large_nato"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) + 10.0303, (_coords select 1) - 12.2979,10],[], 0, "CAN_COLLIDE"];
 _vehicle1 = createVehicle [_veh2,[(_coords select 0) - 6.2764, (_coords select 1) - 14.086,10],[], 0, "CAN_COLLIDE"];
 

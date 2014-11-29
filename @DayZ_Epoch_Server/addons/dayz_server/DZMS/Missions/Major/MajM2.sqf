@@ -46,6 +46,16 @@ _pilot addWeapon 'ItemMap';
 _pilot addWeapon 'ItemGPS';
 sleep 5;
 
+private ["_veh1", "_vehicle", "_veh2", "_vehicle2"];
+//Create the vehicles
+_veh1 = ["small_bandit"] call DZMSGetVeh;
+_vehicle = createVehicle [_veh1,[(_coords select 0) - 17.5078, (_coords select 1) + 5.2578,0],[], 0, "CAN_COLLIDE"];
+[_vehicle] call DZMSSetupVehicle;
+
+_veh2 = ["large_bandit"] call DZMSGetVeh;
+_vehicle2 = createVehicle [_veh2,[(_coords select 0) + 17.5078, (_coords select 1) - 5.2578,0],[], 0, "CAN_COLLIDE"];
+[_vehicle2] call DZMSSetupVehicle;
+
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
 [_coords,3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
@@ -152,6 +162,11 @@ clearBackpackCargoGlobal _boxFin;
 
 //Wait until the player is within 30 meters and also meets the kill req
 [position _boxFin,"DZMSUnitsMajor"] call DZMSWaitMissionComp;
+
+//Call DZMSSaveVeh to attempt to save the vehicles to the database
+//If saving is off, the script will exit.
+[_vehicle] ExecVM DZMSSaveVeh;
+[_vehicle2] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The AN2 Cargo has been Secured by Survivors!", "PLAIN",6] call RE;
