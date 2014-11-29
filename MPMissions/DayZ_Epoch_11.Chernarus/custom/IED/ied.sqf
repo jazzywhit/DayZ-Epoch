@@ -21,7 +21,7 @@ if ((_nGrenade >= _reqExplosives) && (_nCanvas >= 1) && (_nPole >= 1) && _hasRad
         _explosivesConsumed = 0;
         _alertDistance = 50;
 
-        while (_explosivesConsumed < _reqExplosives) do {
+        while {_explosivesConsumed < _reqExplosives} do {
             {
                 if (_x in magazines player && _explosivesConsumed < _reqExplosives) then {
                     player removeMagazine _x;
