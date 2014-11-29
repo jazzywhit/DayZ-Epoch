@@ -33,7 +33,7 @@ if (_currentWeapon == "MeleeSledge") then {
 				systemChat("Sledgehammer must be the current weapon.");
 			};
 			player playActionNow "GestureSwing";
-			sleep 10;
+			sleep 1;
 			_Mining_Counter = _Mining_Counter - 1;
 			closeDialog 0;
 		};
