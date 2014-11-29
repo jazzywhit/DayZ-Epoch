@@ -31,5 +31,5 @@ player removeMagazine "BAF_ied_v1";
         player switchMove "";
         player playActionNow "stop";
 } else {
-cutText [format["You need 3 Small IED's to craft a Large IED"], "PLAIN DOWN"];      
+cutText [format["You need 6 Small IED's to craft a Large IED"], "PLAIN DOWN"];      
 };
