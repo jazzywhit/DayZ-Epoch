@@ -116,7 +116,33 @@ DZMSFindPos = {
     };
 	
 	if (DZMSStaticPlc) then {
-		_pos = DZMSStatLocs call BIS_fnc_selectRandom;
+
+        //We need to loop findSafePos until it doesn't return the map center
+        _findRun = true;
+        while {_findRun} do
+        {
+            _pos = DZMSStatLocs call BIS_fnc_selectRandom;
+
+            //Lets check for minimum mission separation distance
+            _disMaj = (_pos distance DZMSMajCoords);
+            _disMin = (_pos distance DZMSMinCoords);
+            _okDis = ((_disMaj > 100) AND (_disMin > 100));
+
+            //make sure the point is not blacklisted
+            _isBlack = false;
+            {
+                if ((_pos distance (_x select 0)) <= (_x select 1)) then {_isBlack = true;};
+            } forEach DZMSBlacklistZones;
+
+            //Lets combine all our checks to possibly end the loop
+            if (_noWater AND _okDis AND !_isBlack) then {
+                _findRun = false;
+            };
+
+            // If the missions never spawn after running, use this to debug the loop. noWater=true / Dis > 1000 / TaviHeight <= 185
+            //diag_log text format ["[DZMS]: DEBUG: Pos:[%1,%2] / noWater?:%3 / okDistance?:%4 / TaviHeight:%5 / BlackListed?:%6", _posX, _posY, _noWater, _okDis, _tavHeight, _isBlack];
+            sleep 2;
+        };
 	};
    
     _fin = [(_pos select 0), (_pos select 1), 0];

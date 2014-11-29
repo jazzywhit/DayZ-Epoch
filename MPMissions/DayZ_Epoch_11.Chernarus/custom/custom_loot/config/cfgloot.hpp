@@ -416,7 +416,8 @@ class CfgLoot {
 		,{"m8_holo_sd",0.02}
 		,{"m8_carbine",0.03}
 		,{"FN_FAL", 0.02}
-		,{"SCAR_L_CQC_Holo",0.05}
+		,{"SCAR_L_CQC_Holo",0.03}
+		,{"SCAR_L_STD_HOLO",0.02}
 		,{"SCAR_L_CQC_CCO_SD",0.05}
 		,{"BAF_L85A2_UGL_Holo",0.02}
 		,{"BAF_L85A2_RIS_Holo",0.01}

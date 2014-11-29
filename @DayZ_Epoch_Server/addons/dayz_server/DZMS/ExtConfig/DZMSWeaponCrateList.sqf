@@ -98,9 +98,11 @@ DZMSprimaryListNATOHigh = [
 		"BAF_L85A2_UGL_Holo",
 		"M4A1_HWS_GL_SD_Camo",
 		"SCAR_L_CQC_Holo",
-		"SCAR_L_CQC_CCO_SD"
+		"SCAR_L_CQC_CCO_SD",
+		"SCAR_L_STD_HOLO",
+		"SCAR_L_CQC"
 		];
-		
+
 // NATO Machine Guns
 DZMSmachinegunListNATO = [
         "M8_SAW",

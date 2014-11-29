@@ -11,7 +11,7 @@ _missName = "Ural Ambush";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have Ambushed a Ural Carrying Supplies!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Bandits have Ambushed a Ural Carrying Medical Supplies and Weapons!", "PLAIN",10] call RE;
 
 //DZMSAddMinMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMinMarker;
