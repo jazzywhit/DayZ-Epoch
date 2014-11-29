@@ -188,21 +188,9 @@ if (_type == "weapons_nato_high") then {
 		};
 	};
 
-	//load mg
-	_scount = count DZMSmgListNATO;
-	for "_x" from 0 to 2 do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSmgListNATO select _sSelect;
-		_crate addWeaponCargoGlobal [_item,1];
-		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
-		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 4))];
-		};
-	};
-
 	//load primary
 	_scount = count DZMSprimaryListNATOHigh;
-	for "_x" from 0 to 2 do {
+	for "_x" from 0 to 3 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSprimaryListNATOHigh select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
@@ -332,21 +320,9 @@ if (_type == "weapons_high") then {
 		};
 	};
 
-	//load mg
-	_scount = count DZMSmgList;
-	for "_x" from 0 to 2 do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSmgList select _sSelect;
-		_crate addWeaponCargoGlobal [_item,1];
-		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
-		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 6))];
-		};
-	};
-
 	//load primary
 	_scount = count DZMSprimaryListHigh;
-	for "_x" from 0 to 2 do {
+	for "_x" from 0 to 3 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSprimaryListHigh select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
@@ -374,7 +350,7 @@ if (_type == "weapons_high") then {
 if (_type == "supply") then {
 	// load tools
 	_scount = count DZMSConTools;
-	for "_x" from 0 to 2 do {
+	for "_x" from 0 to 4 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConTools select _sSelect;
 		_crate addWeaponCargoGlobal [_item, 1];
@@ -406,7 +382,7 @@ if (_type == "supply") then {
 if (_type == "supply_high") then {
 	// load tools
 	_scount = count DZMSConTools;
-	for "_x" from 0 to 3 do {
+	for "_x" from 0 to 6 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConTools select _sSelect;
 		_crate addWeaponCargoGlobal [_item, 1];
@@ -414,7 +390,7 @@ if (_type == "supply_high") then {
 
 	// load construction
 	_scount = count DZMSConSupply;
-	for "_x" from 0 to 15 do {
+	for "_x" from 0 to 25 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConSupply select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
@@ -431,7 +407,7 @@ if (_type == "supply_high") then {
 	// load locks
 	_spawnChance = 30;
 	_scount = count DZMSConLock;
-	for "_x" from 0 to 1 do {
+	for "_x" from 0 to 2 do {
 		_spawnRoll = floor(random(100)+1);
 		if (_spawnRoll <= _spawnChance) then
 		{

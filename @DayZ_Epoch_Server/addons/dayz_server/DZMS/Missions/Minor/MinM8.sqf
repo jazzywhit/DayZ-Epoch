@@ -30,13 +30,13 @@ _vehicle1 = createVehicle [_veh2,[(_coords select 0) - 6.2764, (_coords select 1
 [_vehicle] call DZMSSetupVehicle;
 [_vehicle1] call DZMSSetupVehicle;
 
-_crate = createVehicle ["USVehicleBox",_coords,[], 0, "CAN_COLLIDE"];
-_crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) - 3.7251,(_coords select 1) - 2.3614, 0],[], 0, "CAN_COLLIDE"];
-
 //DZMSBoxFill fills the box, DZMSProtectObj prevents it from disappearing
+_crate = createVehicle ["USVehicleBox",_coords,[], 0, "CAN_COLLIDE"];
 [_crate,"medical"] ExecVM DZMSBoxSetup;
-[_crate1,"weapons"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
+
+_crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) - 3.7251,(_coords select 1) - 2.3614, 0],[], 0, "CAN_COLLIDE"];
+[_crate1,"weapons"] ExecVM DZMSBoxSetup;
 [_crate1] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.

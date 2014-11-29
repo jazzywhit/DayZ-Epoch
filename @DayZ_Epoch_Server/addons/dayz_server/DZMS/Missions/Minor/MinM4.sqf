@@ -2,7 +2,7 @@
 	Bandit Heli Down! by lazyink (Full credit for code to TheSzerdi & TAW_Tonic)
 	Updated to new format by Vampire
 */
-private ["_missName","_coords","_crash","_crate"];
+private ["_missName","_coords","_crash","_crate", "_crate1"];
 
 //Name of the Mission
 _missName = "Helicopter Crash";
@@ -25,6 +25,10 @@ _crash = createVehicle ["UH60Wreck_DZ", _coords,[], 0, "CAN_COLLIDE"];
 _crate = createVehicle ["USLaunchersBox",[(_coords select 0) - 6, _coords select 1,0],[], 0, "CAN_COLLIDE"];
 [_crate,"weapons"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
+
+_crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) + 6, _coords select 1,0],[], 0, "CAN_COLLIDE"];
+[_crate1,"weapons"] ExecVM DZMSBoxSetup;
+[_crate1] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]

@@ -2,7 +2,7 @@
 	Weapon Truck Crash by lazyink (Full credit for code to TheSzerdi & TAW_Tonic)
 	Updated to new format by Vampire
 */
-private ["_missName","_coords","_crash","_crate","_crate1","_crate2"];
+private ["_missName","_coords","_crash","_crate","_crate1"];
 
 //Name of the Mission
 _missName = "Weapons Truck";
@@ -26,13 +26,9 @@ _crate = createVehicle ["USLaunchersBox",[(_coords select 0) + 3, _coords select
 [_crate,"weapons"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
 
-_crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) - 3, _coords select 1,0],[], 0, "CAN_COLLIDE"];
+_crate1 = createVehicle ["RULaunchersBox",[(_coords select 0) - 3, _coords select 1,0],[], 0, "CAN_COLLIDE"];
 [_crate1,"weapons"] ExecVM DZMSBoxSetup;
 [_crate1] call DZMSProtectObj;
-
-_crate2 = createVehicle ["RULaunchersBox",[(_coords select 0) - 6, _coords select 1,0],[], 0, "CAN_COLLIDE"];
-[_crate2,"weapons"] ExecVM DZMSBoxSetup;
-[_crate2] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]

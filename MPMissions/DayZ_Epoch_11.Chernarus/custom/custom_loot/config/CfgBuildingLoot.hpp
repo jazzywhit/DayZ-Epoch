@@ -63,7 +63,8 @@ class CfgBuildingLoot {
 			{ "ItemFlashlight","weapon",0.09 },
 			{ "ItemKnife","weapon",0.04 },
 			{ "ItemMatchbox_DZE","weapon",0.05 },
-			{ "","generic",0.38 },
+			{ "","food",0.04 },
+			{ "","generic",0.34 },
 			{ "","trash",0.29 },
 			{ "Binocular","weapon",0.02 },
 			{ "clothes","single",0.04},
@@ -210,13 +211,11 @@ class CfgBuildingLoot {
 			{"","generic",0.13},
             { "Binocular","weapon",0.04 },
             { "ItemRadio","weapon",0.01 },
-			{ "","food",0.04 },
 			{ "","trash",0.1 },
 			{"ItemFishingPole","weapon",0.05},
 			{ "tents","tents",0.03 },
 			{ "pistols_bric", "cfglootweapon", 0.16 },
 			{ "shotgunsingleshot", "cfglootweapon", 0.04 },
-			{ "","food_special",0.01 },
 			{ "PartPlywoodPack", "magazine", 0.02 },
 			{ "PartPlankPack", "magazine", 0.02 }
 		};
@@ -228,7 +227,8 @@ class CfgBuildingLoot {
 			{ "ItemKnife","weapon",0.04 },
 			{ "ItemMatchbox_DZE","weapon",0.08 },
 			{ "","generic",0.21 },
-			{ "","trash",0.16 },
+			{ "","food_special",0.01 },
+			{ "","trash",0.15 },
 			{ "Binocular","weapon",0.02 }
 		};
 	};

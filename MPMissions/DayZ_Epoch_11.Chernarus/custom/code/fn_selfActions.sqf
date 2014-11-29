@@ -509,7 +509,7 @@ if(_isModularDoor) then {
 			if(_isZombie) then {
 				s_player_butcher = player addAction [localize "STR_EPOCH_ACTIONS_GUTZOM", "\z\addons\dayz_code\actions\gather_zparts.sqf",_cursorTarget, 0, true, true, "", ""];
 			} else {
-				s_player_butcher = player addAction [localize "str_actions_self_04", "\z\addons\dayz_code\actions\gather_meat.sqf",_cursorTarget, 3, true, true, "", ""];
+				s_player_butcher = player addAction [localize "str_actions_self_04", "custom\gather_meat.sqf",_cursorTarget, 3, true, true, "", ""];
 			};
 		};
 	} else {
