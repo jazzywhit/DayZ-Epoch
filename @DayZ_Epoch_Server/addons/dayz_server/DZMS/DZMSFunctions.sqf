@@ -131,11 +131,8 @@ DZMSFindPos = {
                 if ((_pos distance (_x select 0)) <= (_x select 1)) then {_isBlack = true;};
             } forEach DZMSBlacklistZones;
 
-            //Water Check
-            _noWater = (!surfaceIsWater _pos && !surfaceIsWater _feel1 && !surfaceIsWater _feel2 && !surfaceIsWater _feel3 && !surfaceIsWater _feel4);
-
             //Lets combine all our checks to possibly end the loop
-            if (_noWater AND _okDis AND !_isBlack) then {
+            if (_okDis AND !_isBlack) then {
                 _findRun = false;
             };
 
