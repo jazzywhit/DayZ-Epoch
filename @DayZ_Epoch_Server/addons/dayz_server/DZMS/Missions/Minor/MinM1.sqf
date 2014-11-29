@@ -10,7 +10,7 @@ _missName = "Medical Outpost";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have established a Medical Outpost!\nGo Secure their Medical Supplies!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Survivors have established a Medical Outpost!\nGo Secure their Medical Supplies!", "PLAIN",10] call RE;
 
 //DZMSAddMinMarker is a simple script that adds a marker to the location
 [_coords,_missName] ExecVM DZMSAddMinMarker;
@@ -28,7 +28,7 @@ _base3 = createVehicle ["MASH_EP1",[(_coords select 0) - 10, (_coords select 1) 
 [_base3] call DZMSProtectObj;
 
 //We create the vehicles
-_veh1 = ["small_bandit"] call DZMSGetVeh;
+_veh1 = ["small_survivor"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) + 10, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
 
 //DZMSSetupVehicle prevents the vehicle from disappearing and sets fuel and such
@@ -48,13 +48,13 @@ _crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 8, _coords selec
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 20, (_coords select 1) - 15,0],2,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) - 20, (_coords select 1) - 15,0],2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 3;
-[[(_coords select 0) + 10, (_coords select 1) + 15,0],2,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) + 10, (_coords select 1) + 15,0],2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 3;
-[[(_coords select 0) - 10, (_coords select 1) - 15,0],2,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) - 10, (_coords select 1) - 15,0],2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 3;
-[[(_coords select 0) + 20, (_coords select 1) + 15,0],2,2,"DZMSUnitsMinor"] call DZMSAISpawn;
+[[(_coords select 0) + 20, (_coords select 1) + 15,0],2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 3;
 
 //Wait until the player is within 30 meters and also meets the kill req

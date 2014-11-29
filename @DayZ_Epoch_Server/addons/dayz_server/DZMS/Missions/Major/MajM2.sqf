@@ -11,7 +11,7 @@ _missName = "Supply Drop";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"An AN-2 with UN Supplies is Flying In!\nBandits have also intercepted the radio signal!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"An AN-2 with UN Supplies is Flying In!\nSurvivors have also intercepted the radio signal!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -48,21 +48,23 @@ sleep 5;
 
 private ["_veh1", "_vehicle", "_veh2", "_vehicle2"];
 //Create the vehicles
-_veh1 = ["small_bandit"] call DZMSGetVeh;
+_veh1 = ["small_survivor"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) - 17.5078, (_coords select 1) + 5.2578,0],[], 0, "CAN_COLLIDE"];
 [_vehicle] call DZMSSetupVehicle;
 
-_veh2 = ["large_bandit"] call DZMSGetVeh;
+_veh2 = ["large_survivor"] call DZMSGetVeh;
 _vehicle2 = createVehicle [_veh2,[(_coords select 0) + 17.5078, (_coords select 1) - 5.2578,0],[], 0, "CAN_COLLIDE"];
 [_vehicle2] call DZMSSetupVehicle;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[_coords,3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[_coords,3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[_coords,2,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+sleep 5;
+[_coords,2,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
 
 _loop = true;

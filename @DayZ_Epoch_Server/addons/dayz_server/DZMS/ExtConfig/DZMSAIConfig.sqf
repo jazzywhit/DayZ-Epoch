@@ -83,6 +83,7 @@ DZMSSkills2 = [
 	["commanding",0.70,0.90],
 	["general",0.70,0.90]
 ];
+DZMSSkills1 = DZMSSkills2; //Make Survivors as difficult as bandits
 
 DZMSSkills3 = [	
 	["aimingAccuracy",0.20,0.25],
