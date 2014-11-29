@@ -56,8 +56,8 @@ class Category_602 {
 	};
 	class Sa58V_RCO_EP1 {
 		type = "trade_weapons";
-		buy[] = {6,"ItemGoldBar10oz"};
-		sell[] = {2,"ItemGoldBar10oz"};
+		buy[] = {60,"ItemGoldBar"};
+		sell[] = {12,"ItemGoldBar"};
 	};
 	class Sa58V_CCO_EP1 {
 		type = "trade_weapons";
