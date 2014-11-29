@@ -1293,6 +1293,22 @@ class Mission
 			type="mil_circle";
 			colorName="ColorBlack";
 		};
+		class Item16
+		{
+			position[]={ 3893.9448, 0, 11426.449};
+                        name="Mine1";
+                        text="Mining Node";
+                        type="mil_dot";
+                        colorName="ColorBlack";
+		};
+		class Item17
+		{
+			position[]={ 13273.093, 0, 6099.0747};
+                        name="Mine2";
+                        text="Mining Node";
+                        type="mil_dot";
+                        colorName="ColorBlack";
+		};
 	};
 	class Sensors
 	{
