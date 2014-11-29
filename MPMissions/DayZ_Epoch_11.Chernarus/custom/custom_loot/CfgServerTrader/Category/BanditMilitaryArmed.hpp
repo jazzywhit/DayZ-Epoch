@@ -19,4 +19,14 @@ class Category_569 {
 		buy[] = {4,"ItemBriefcase100oz"};
 		sell[] = {2,"ItemBriefcase100oz"};
 	};
+	class GAZ_Vodnik {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemBriefcase100oz"};
+        sell[] = {1,"ItemBriefcase100oz"};
+    };
+    class GAZ_Vodnik_MedEvac {
+        type = "trade_any_vehicle";
+        buy[] = {2,"ItemBriefcase100oz"};
+        sell[] = {1,"ItemBriefcase100oz"};
+    };
 };
