@@ -67,6 +67,34 @@ class CfgLootSmall {
 		{"FoodPistachio",0.05},
 		{"FoodNutmix",0.04}
 	};
+	food_special[] = {
+	    {"ItemSodaEmpty",0.3}
+		,{"ItemSodaMdew",0.01}
+		,{"ItemSodaRbull",0.01}
+		,{"ItemSodaOrangeSherbet",0.01}
+		,{"ItemSodaDrwaste",0.1}
+		,{"ItemSodaRabbit",0.1}
+		,{"ItemSodaMtngreen",0.04}
+		,{"ItemSodaR4z0r",0.04}
+		,{"ItemSodaClays",0.04}
+		,{"ItemSodaSmasht",0.04}
+		,{"ItemSodaLemonade",0.04}
+        ,{"FoodCanGriff",0.01}
+        ,{"FoodCanBadguy",0.01}
+        ,{"FoodCanBoneboy",0.01}
+        ,{"FoodCanCorn",0.01}
+        ,{"FoodCanCurgon",0.01}
+		,{"ItemSodaLvg",0.04}
+		,{"ItemSodaMzly",0.04}
+		,{"FoodCanDemon",0.04}
+		,{"FoodCanFraggleos",0.04}
+		,{"FoodCanHerpy",0.04}
+		,{"FoodCanOrlok",0.04}
+		,{"FoodCanPowell",0.04}
+		,{"FoodCanTylers",0.04}
+		,{"FoodPumpkin",0.04}
+		,{"FoodSunFlowerSeed",0.04}
+	};
 	office[] = {
 		{"ItemSodaEmpty",0.06},
 		{"TrashJackDaniels",0.04},

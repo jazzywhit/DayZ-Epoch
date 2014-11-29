@@ -342,7 +342,7 @@ if (_type == "weapons_high") then {
 
 	// load packs
 	_scount = count _bpackList;
-	for "_x" from 0 to (floor(random 2)) {
+	for "_x" from 0 to 1 do {
 		_sSelect = floor(random _sCount);
 		_item = _bpackList select _sSelect;
 		_crate addBackpackCargoGlobal [_item,1];

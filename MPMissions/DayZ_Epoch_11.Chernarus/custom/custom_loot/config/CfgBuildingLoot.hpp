@@ -241,8 +241,8 @@ class CfgBuildingLoot {
 		lootType[] = {
 			{"","hospital",0.60},
 			{"MedBox0","object",0.1},
-			{ "pistols_bric", "cfglootweapon", 0.05},
-			{ "","food_special",0.25}
+			{"pistols_bric", "cfglootweapon", 0.05},
+			{"","food_special",0.25}
 		};
 	};
 	class HeliCrash: Default {
