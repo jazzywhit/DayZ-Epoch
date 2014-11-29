@@ -2,7 +2,7 @@
 	Bandit Heli Down! by lazyink (Full credit for code to TheSzerdi & TAW_Tonic)
 	Updated to new format by Vampire
 */
-private ["_missName","_coords","_crash","_crate", "_crate1"];
+private ["_missName","_coords","_crash","_crate", "_crate1", "_veh1", "_vehicle"];
 
 //Name of the Mission
 _missName = "Helicopter Crash";
@@ -17,6 +17,10 @@ _coords = call DZMSFindPos;
 
 //Add the scenery
 _crash = createVehicle ["UH60Wreck_DZ", _coords,[], 0, "CAN_COLLIDE"];
+
+//We create the vehicles
+_veh1 = ["small_bandit"] call DZMSGetVeh;
+_vehicle = createVehicle [_veh1,[(_coords select 0) - 10.6206, (_coords select 1) - 0.49,0],[], 0, "CAN_COLLIDE"];
 
 //DZMSProtectObj prevents it from disappearing
 [_crash] call DZMSProtectObj;
@@ -41,6 +45,10 @@ sleep 1;
 
 //Wait until the player is within 30 meters and also meets the kill req
 [_coords,"DZMSUnitsMinor"] call DZMSWaitMissionComp;
+
+//Call DZMSSaveVeh to attempt to save the vehicles to the database
+//If saving is off, the script will exit.
+[_vehicle] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Helicopter Crash has been Secured by Survivors!", "PLAIN",6] call RE;

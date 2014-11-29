@@ -19,4 +19,14 @@ class Category_519 {
 		buy[] = {2,"ItemBriefcase100oz"};
 		sell[] = {1,"ItemBriefcase100oz"};
 	};
+	class CH53_DZE {
+		type = "trade_any_vehicle";
+		buy[] = {2,"ItemBriefcase100oz"};
+		sell[] = {1,"ItemBriefcase100oz"};
+	};
+	class Ka137_PMC {
+		type = "trade_any_vehicle";
+		buy[] = {1,"ItemGoldBar10oz"};
+		sell[] = {1,"ItemGoldBar10oz"};
+	};
 };

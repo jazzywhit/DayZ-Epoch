@@ -2,7 +2,7 @@
 	Medical Outpost by lazyink (Full credit for code to TheSzerdi & TAW_Tonic)
 	Updated to new format by Vampire
 */
-private ["_missName","_coords","_base","_base1","_base2","_base3","_veh1","_veh2","_vehicle","_vehicle1","_crate","_crate2"];
+private ["_missName","_coords","_base","_base1","_base2","_base3","_veh1","_vehicle","_crate","_crate2"];
 
 //Name of the Mission
 _missName = "Medical Outpost";
@@ -28,10 +28,8 @@ _base3 = createVehicle ["MASH_EP1",[(_coords select 0) - 10, (_coords select 1) 
 [_base3] call DZMSProtectObj;
 
 //We create the vehicles
-_veh1 = ["small"] call DZMSGetVeh;
-_veh2 = ["small"] call DZMSGetVeh;
+_veh1 = ["small_bandit"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) + 10, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
-_vehicle1 = createVehicle [_veh2,[(_coords select 0) + 15, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
 
 //DZMSSetupVehicle prevents the vehicle from disappearing and sets fuel and such
 [_vehicle] call DZMSSetupVehicle;
@@ -65,7 +63,6 @@ sleep 3;
 //Call DZMSSaveVeh to attempt to save the vehicles to the database
 //If saving is off, the script will exit.
 [_vehicle] ExecVM DZMSSaveVeh;
-[_vehicle1] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Medical Outpost is under Survivor Control!", "PLAIN",6] call RE;

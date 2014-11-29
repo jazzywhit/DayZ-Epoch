@@ -136,14 +136,29 @@ DZMSSaveVehicles = false;
 // These are arrays of vehicle classnames for the missions.
 // Adjust to your liking.
 
-//Armed Choppers (Huey)
-DZMSChoppers = ["UH1H_DZE","Mi17_DZE"];
+//Armed Choppers
+DZMSChoppersArmed = ["CH_47F_EP1_DZE","UH1H_DZE", "Mi17_DZE", "Mi17_UN_CDF_EP1_DZE", "UH60M_EP1_DZE", "UH1Y_DZE", "MH60S_DZE"];
 
-//Small Vehicles (Humvees)
-DZMSSmallVic = ["hilux1_civil_3_open_EP1","SUV_TK_CIV_EP1","HMMWV_DZ","UAZ_Unarmed_UN_EP1"];
+//Unarmed Choppers
+DZMSChoppers = ["Mi17_Civilian_DZ","AH6X_DZ", "MH6J_DZ", "BAF_Merlin_DZE", "CH53_DZE"];
+
+//Small Vehicles (NATO)
+DZMSSmallVicNATO = ["SUV_TK_CIV_EP1","HMMWV_DZ","HMMWV_DES_EP1", "HMMWV_Ambulance_CZ_DES_EP1", "HMMWV_Ambulance","UAZ_Unarmed_UN_EP1"];
+
+//Small Vehicles (Bandit)
+DZMSSmallVicBandit = ["Pickup_PK_TK_GUE_EP1_DZE","Pickup_PK_GUE_DZE","datsun1_civil_2_covered","hilux1_civil_3_open_EP1"];
+
+//Small Vehicles (Survivor)
+DZMSSmallVicSurvivor = ["hilux1_civil_3_open_EP1", "datsun1_civil_2_covered", "hilux1_civil_1_open", "VWGolf"];
 
 //Large Vehicles (Urals)
-DZMSLargeVic = ["Ural_TK_CIV_EP1","Ural_INS"];
+DZMSLargeVicNATO = ["MTVR_DES_EP1","MTVR", "mtvrreammo", "mtvrreammo_des_ep1", "mtvrsalvage_des_ep1", "mtvrsupply_des_ep1", "Ural_UN_EP1"];
+
+//Large Vehicles (Urals)
+DZMSLargeVicBandit = ["Ural_CDF","Ural_TK_CIV_EP1", "KamazOpen_DZE", "Kamaz", "kamazreammo", "kamazrepair"];
+
+//Large Vehicles (Urals)
+DZMSLargeVicSurvivor = ["Ural_INS","uralrepair_cdf", "uralsalvage_tk_ep1", "v3s_gue", "v3s_reammo_tk_gue_ep1", "v3s_supply_tk_gue_ep1"];
 
 /*///////////////////////////////////////////////////////////////////////////////////////////
 There are two types of missions that run simultaneously on a the server.
@@ -156,7 +171,7 @@ Below is the array of mission file names and the minimum and maximum times they 
 Do not edit the Arrays unless you know what you are doing.
 */
 DZMSMajorArray = ["MajM1","MajM2","MajM3","MajM4","MajM5","MajM6"];
-DZMSMinorArray = ["MinM1","MinM3","MinM4","MinM5","MinM6","MinM7","MinM8","MinM9"];
+DZMSMinorArray = ["MinM1","MinM2","MinM3","MinM4","MinM5","MinM6","MinM7","MinM8","MinM9"];
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // The Minimum time in seconds before a major mission will run.

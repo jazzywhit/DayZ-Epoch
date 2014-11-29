@@ -239,8 +239,13 @@ DZMSGetVeh = {
 	
 	switch (_type) do {
 		case "heli": {_vehArray = DZMSChoppers;};
-		case "small": {_vehArray = DZMSSmallVic;};
-		case "large": {_vehArray = DZMSLargeVic;};
+		case "heli_armed": {_vehArray = DZMSChoppersArmed;};
+		case "small_nato": {_vehArray = DZMSSmallVicNATO;};
+		case "small_bandit": {_vehArray = DZMSSmallVicBandit;};
+		case "small_survivor": {_vehArray = DZMSSmallVicSurvivor;};
+		case "large_nato": {_vehArray = DZMSLargeVicNATO;};
+		case "large_bandit": {_vehArray = DZMSLargeVicBandit;};
+		case "large_survivor": {_vehArray = DZMSLargeVicSurvivor;};
 	};
 	
 	_choseVic = _vehArray call BIS_fnc_selectRandom;

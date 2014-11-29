@@ -2,7 +2,7 @@
 	Weapon Truck Crash by lazyink (Full credit for code to TheSzerdi & TAW_Tonic)
 	Updated to new format by Vampire
 */
-private ["_missName","_coords","_crash","_crate","_crate1"];
+private ["_missName","_coords","_crash","_crate","_crate1","_veh1", "_vehicle"];
 
 //Name of the Mission
 _missName = "Repair Truck";
@@ -17,6 +17,11 @@ _coords = call DZMSFindPos;
 
 //Add scenery
 _crash = createVehicle ["UralWreck",_coords,[], 0, "CAN_COLLIDE"];
+
+//We create the vehicles like normal
+_veh1 = ["small_survivor"] call DZMSGetVeh;
+_vehicle = createVehicle [_veh1,[(_coords select 0) + 10.0303, (_coords select 1) - 12.2979,10],[], 0, "CAN_COLLIDE"];
+[_vehicle] call DZMSSetupVehicle;
 
 //DZMSProtectObj prevents it from disappearing
 [_crash] call DZMSProtectObj;
@@ -39,6 +44,10 @@ sleep 1;
 
 //Wait until the player is within 30 meters and also meets the kill req
 [_coords,"DZMSUnitsMinor"] call DZMSWaitMissionComp;
+
+//Call DZMSSaveVeh to attempt to save the vehicles to the database
+//If saving is off, the script will exit.
+[_vehicle] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Repair Truck has been Secured by Survivors!", "PLAIN",6] call RE;
