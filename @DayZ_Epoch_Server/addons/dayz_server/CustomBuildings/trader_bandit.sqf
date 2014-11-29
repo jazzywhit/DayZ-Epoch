@@ -28,16 +28,6 @@ if (true) then
   _this setPos [2174.8289, 12854.168, 0.00012207031];
 };
 
-_vehicle_15 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Land_Ind_TankSmall", [2163.4688, 12844.447, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_15 = _this;
-  _this setDir 48.538067;
-  _this setVehicleInit "this setVectorUp [0 ,0 ,1 ]";
-  _this setPos [2163.4688, 12844.447, -3.0517578e-005];
-};
-
 _vehicle_16 = objNull;
 if (true) then
 {

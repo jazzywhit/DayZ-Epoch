@@ -32,7 +32,7 @@ if (true) then
 _vehicle_4 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Mil_Barracks", [12237.829, 12582.515, 0.00015938655], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Mil_Barracks_i", [12237.829, 12582.515, 0.00015938655], [], 0, "CAN_COLLIDE"];
   _vehicle_4 = _this;
   _this setDir 650.49579;
   _this setVehicleInit "this setvectorup [0,0,1]";

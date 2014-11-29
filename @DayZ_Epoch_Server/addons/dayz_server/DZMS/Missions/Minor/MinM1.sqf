@@ -30,10 +30,7 @@ _base3 = createVehicle ["MASH_EP1",[(_coords select 0) - 10, (_coords select 1) 
 //We create the vehicles
 _veh1 = ["small_survivor"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) + 10, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
-
-//DZMSSetupVehicle prevents the vehicle from disappearing and sets fuel and such
 [_vehicle] call DZMSSetupVehicle;
-[_vehicle1] call DZMSSetupVehicle;
 
 //We create and fill the crates
 _crate = createVehicle ["USVehicleBox",[(_coords select 0) - 3, _coords select 1,0],[], 0, "CAN_COLLIDE"];
