@@ -26,7 +26,7 @@ class Category_519 {
 	};
 	class Ka137_PMC {
 		type = "trade_any_vehicle";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		buy[] = {4,"ItemGoldBar10oz"};
+		sell[] = {2,"ItemGoldBar10oz"};
 	};
 };
