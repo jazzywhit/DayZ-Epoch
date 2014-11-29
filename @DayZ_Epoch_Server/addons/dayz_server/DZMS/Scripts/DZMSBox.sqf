@@ -528,7 +528,7 @@ if (_type == "hemp") then {
             _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 3))];
         };
     };
-`
+
     //load primary
     _scount = count DZMSprimaryListHigh;
     for "_x" from 0 to 2 do {
