@@ -33,7 +33,7 @@ _role3names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders", "Cus
 _role4 = "Game Design / Operations";
 _role4names = ["Carbonoid","jesquik","NcA","Neb","Phobix"];
 _role5 = "Community Support";
-_role5names = ["twitch.tv/mistydayz","twitch.tv/iconnorn"];
+_role5names = ["youtube.com/themistydayz","twitch.tv/iconnorn"];
 
 
 {
