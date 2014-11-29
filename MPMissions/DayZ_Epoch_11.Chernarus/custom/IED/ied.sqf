@@ -9,6 +9,7 @@ if (!_hasToolbox) exitWith { cutText [format["You need a tool box to Craft an IE
 if (dayz_combat == 1) exitWith { cutText [format["You are in Combat and cannot build an IED"], "PLAIN DOWN"]; };
 
 _reqExplosives = 4;
+// TODO add "Laserbatteries" as a required component?
 _explosiveClasses = ["1Rnd_HE_GP25","1Rnd_HE_M203","HandGrenade_East","HandGrenade_West"];
 _nGrenade = {_x in _explosiveClasses} count magazines player;
 _nCanvas = {_x == "ItemCanvas"} count magazines player;
@@ -30,7 +31,7 @@ if ((_nGrenade >= _reqExplosives) && (_nCanvas >= 1) && (_nPole >= 1) && _hasRad
             } forEach _explosiveClasses;
         };
 
-        player removeMagazine "ItemRadio";
+        player removeWeapon "ItemRadio";
         player removeMagazine "ItemCanvas";
         player removeMagazine "ItemPole";
 
