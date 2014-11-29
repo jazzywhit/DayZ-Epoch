@@ -29,7 +29,9 @@ class CfgBuildingLoot {
 			{"ItemHatchet_DZE","object",0.01},
 			{"WeaponHolder_ItemTent","object",0.01},
 			{"PartWoodPile","magazine",0.04},
-			{"","generic",0.40}
+			{"pistols_bric", "cfglootweapon", 0.1 },
+			{"submachinegun_bric", "cfglootweapon", 0.1 },
+			{"","generic",0.2}
 		};
 	};
 	class Residential: Default {
@@ -43,7 +45,8 @@ class CfgBuildingLoot {
 			{"ItemFlashlight","generic",0.02},
 			{"ItemKnife","generic",0.02},
 			{"ItemMatchbox_DZE","generic",0.02},
-			{"","generic",0.32},
+			{"","generic",0.25},
+			{"ItemFishingPole","weapon",0.07},
 			{"backpacks","backpacks",0.1},
 			{"","trash",0.16},
 			{"ItemCanvas","generic",0.04},
@@ -52,7 +55,8 @@ class CfgBuildingLoot {
 			{"clothes","clothes",0.06},
 			{"specialclothes","specialclothes",0.04},
 			{"pistols_bric", "cfglootweapon", 0.06 },
-			{"shotgunsingleshot", "cfglootweapon", 0.1 }
+			{"WeaponHolder_ItemMachete","generic",0.02},
+			{"shotgunsingleshot", "cfglootweapon", 0.08 }
 		};
 		lootTypeSmall[] = {
 			{ "ItemWatch","weapon",0.05 },
@@ -103,7 +107,7 @@ class CfgBuildingLoot {
 		lootType[] = {
 			{"ItemGenerator","magazine",0.01},
 			{"ItemFuelBarrelEmpty","magazine",0.01},
-			{"","generic",0.17},
+			{"","generic",0.12},
 			{"","trash",0.10},
 			{"","military_bric",0.04},
 			{"PartGeneric","magazine",0.04},
@@ -116,6 +120,7 @@ class CfgBuildingLoot {
 			{"ItemKnife","military_bric",0.07},
 			{"ItemToolbox","weapon",0.06},
 			{"ItemCrowbar","weapon",0.05},
+			{"WeaponHolder_ItemMachete","generic",0.05},
 			{"ItemWire","magazine",0.04},
 			{"ItemTankTrap","magazine",0.05},
 			{"ItemKeyKit","weapon",0.01},
@@ -170,13 +175,13 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		lootType[] = {
 			{"ItemJerrycanEmpty","magazine",0.05},
-			{"","generic",0.3},
+			{"","generic",0.25},
 			{"","trash",0.11},
 			{"PartPlankPack","magazine",0.06},
 			{"ItemHatchet_DZE","weapon",0.05},
 			{"ItemFuelBarrelEmpty","magazine",0.01},
 			{"WeaponHolder_ItemMachete","object",0.03},
-			{"ItemFishingPole","weapon",0.02},
+			{"ItemFishingPole","weapon",0.07},
 			{"ItemLightBulb","magazine",0.02},
 			{"ItemSledgeHandle","magazine",0.02},
 			{"farmweapons","cfglootweapon", 0.15}
@@ -201,12 +206,14 @@ class CfgBuildingLoot {
 			{"ItemKnife","generic",0.05},
 			{"ItemMatchbox_DZE","generic",0.05},
 			{"ItemHatchet_DZE","generic",0.05},
-			{"","generic",0.20},
+			{"WeaponHolder_ItemMachete","generic",0.05},
+			{"","generic",0.13},
             { "Binocular","weapon",0.04 },
             { "ItemRadio","weapon",0.01 },
 			{ "","food",0.04 },
-			{ "","trash",0.15 },
-			{ "tents","tents",0.01 },
+			{ "","trash",0.1 },
+			{"ItemFishingPole","weapon",0.05},
+			{ "tents","tents",0.03 },
 			{ "pistols_bric", "cfglootweapon", 0.16 },
 			{ "shotgunsingleshot", "cfglootweapon", 0.04 },
 			{ "","food_special",0.01 },

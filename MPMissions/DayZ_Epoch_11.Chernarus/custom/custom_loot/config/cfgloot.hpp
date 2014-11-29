@@ -79,8 +79,9 @@ class CfgLoot {
 		,{"HandChemGreen",0.01}
 		,{"HandChemBlue",0.03}
 		,{"HandChemRed",0.03}
-		,{"ItemHeatPack",0.06}
-		,{"ItemDocument",0.02}
+		,{"ItemHeatPack",0.04}
+		,{"ItemDocument",0.03}
+		,{"ItemPlotDeed",0.01}
 		,{"ItemComboLock",0.01}
 		,{"ItemLockbox",0.01}
 	};
