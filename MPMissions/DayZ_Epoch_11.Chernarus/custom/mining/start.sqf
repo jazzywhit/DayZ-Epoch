@@ -10,12 +10,12 @@ systemChat("Mining Started");
 player removeAction s_player_mine;
 s_player_mining = -1;
 
-//checks player's current weapon and exist with message if they do not have a sledge equipped			//
-//adds eventhandler so that if the player looks away from the rock they break out of the mining action	//
-_currentWeapon = primaryWeapon player;																	//	hogscraper
-																										//
-if (_currentWeapon == "MeleeSledge") then {																//
-	r_interrupt=false;																					//
+//checks player's current weapon and exist with message if they do not have a sledge equipped
+//adds eventhandler so that if the player looks away from the rock they break out of the mining action
+_currentWeapon = primaryWeapon player;
+
+if (_currentWeapon == "MeleeSledge") then {
+	r_interrupt=false;
 	
 	while {isMining} do {
 		_inventory = magazines player;
