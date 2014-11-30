@@ -10,7 +10,7 @@ systemChat("Mining Started");
 player removeAction s_player_mine;
 s_player_mining = -1;
 
-//checks player's current weapon and exist with message if they do not have a sledge equipped
+//checks player's current weapon and exit with message if they do not have a sledge equipped
 //adds eventhandler so that if the player looks away from the rock they break out of the mining action
 _currentWeapon = primaryWeapon player;
 
@@ -19,23 +19,25 @@ if (_currentWeapon == "MeleeSledge") then {
 	
 	while {isMining} do {
 		_inventory = magazines player;
-		_Mining_Counter=6;
+		_Mining_Counter = 6; // Mine for 6 seconds and collect for 4 seconds
 		systemChat(_mining_message);
 		
 		//set up quick loop that swings the sledge and if player moves it breaks out of the mining action
 		[player,"tentunpack",0,false] call dayz_zombieSpeak; // Play sound for the mining action
 		while {_Mining_Counter > 0} do {
 			_cursorTarget = cursorTarget;
-			[10,10] call dayz_HungerThirst;
+
 			if((r_interrupt)) exitWith { isMining=false };
 			if ((currentWeapon player)!="MeleeSledge") exitWith {
 				isMining = false;
 				systemChat("Sledgehammer must be the current weapon.");
 			};
+
 			player playActionNow "GestureSwing";
+			[10,10] call dayz_HungerThirst; // Each swing causes you to get hungry/thirsty
+
 			sleep 1;
 			_Mining_Counter = _Mining_Counter - 1;
-			closeDialog 0;
 		};
 
 		if (isMining) then {
@@ -107,6 +109,9 @@ if (_currentWeapon == "MeleeSledge") then {
 			s_player_mine = -1;
 			systemChat ("Your inventory is full.");
 		};
+
+		// Gather the ore you hit off
+		player playActionNow "Medic";
 		sleep 4; // Sleep some time before starting again
 	};
 } else {
