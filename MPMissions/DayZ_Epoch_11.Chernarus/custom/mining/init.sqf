@@ -14,9 +14,9 @@ while {true} do {
 	_hasSledge = false;
 	
 	//Check for sledge in hand
-	if ((_currentWeapon == "MeleeSledge") || ("ItemSledge" in _inventory)) then {					//	hogscraper
-		_hasSledge=true;																			//
-	};																								//
+	if ((_currentWeapon == "MeleeSledge") || ("ItemSledge" in _inventory)) then {
+		_hasSledge=true;
+	};
 
 	if (_inRange) then {
 		if (!notified) then {

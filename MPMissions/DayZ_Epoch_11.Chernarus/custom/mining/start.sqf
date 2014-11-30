@@ -113,6 +113,7 @@ if (_currentWeapon == "MeleeSledge") then {
 		// Gather the ore you hit off
 		player playActionNow "Medic";
 		sleep 4; // Sleep some time before starting again
+		player switchMove ""; // Cancel animations
 	};
 } else {
 	systemChat("You must have your Sledgehammer equipped to mine!");
