@@ -114,7 +114,7 @@ if (_currentWeapon == "MeleeSledge") then {
 		player playActionNow "Medic";
 		sleep 6;
 		[objNull, player, rSwitchMove,""] call RE;
-		player playActionNow "PlayerStand";
+		player playActionNow "stop";
 	};
 } else {
 	systemChat("You must have your Sledgehammer equipped to mine!");
