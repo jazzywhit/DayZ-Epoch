@@ -7,14 +7,10 @@
 //	2: Lowered quality of the snoring for smaller file size
 //
 // Animation references - http://community.bistudio.com/wiki/ArmA2:_Moves
+//
+// Snoring sound added by jesquik from http://www.freesfx.co.uk
 
 private ["_timeLeft", "_totalSleepTime","_i","_bloodAmount","_sleepCooldown","_sleepTime"];
-
-
-
-
-
-
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -22,7 +18,7 @@ private ["_timeLeft", "_totalSleepTime","_i","_bloodAmount","_sleepCooldown","_s
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // This script in its current state is set up perfectly for 45 seconds changing it can yield some wierd results!
-_totalSleepTime = 45; // Total ammount of time it takes before you wake up
+_totalSleepTime = 60; // Total ammount of time it takes before you wake up
 
 _bloodAmount = 1000; // Total amount of blood to give back to player on sleep (12000 is the max life for a player)
 
@@ -31,15 +27,6 @@ _sleepCooldown = 60; // This is how long in seconds before you can sleep again
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Config Area End																					//
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -66,6 +53,8 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 	sleep 3;
 
 	cutText [format["You begin sleeping. %1 seconds left.",_timeLeft], "BLACK OUT"]; // Text displayed when starting to sleep
+
+	//First Snore (16s)
 	_nul = [objNull, player, rSAY, "playerSnoring"] call RE; // This is a RPC sound call for the snoring
 
 	for "_i" from 0 to _totalSleepTime do { // For loop for counting down sleep timers and changing animations
@@ -74,9 +63,12 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 		
 		if (_timeLeft > 0) then {
 			cutText [format["You are sleeping. %1 seconds left.",_timeLeft], "BLACK FADED"]; // Display sleep countdown while sleeping
-		} else {cutText [format["You are beginning to wake up!"], "BLACK FADED"];}; // This is a fix for when timer reaches zero... displays text
+		} else {
+		    cutText [format["You are beginning to wake up!"], "BLACK FADED"]; // This is a fix for when timer reaches zero... displays text
+		};
 		
 		if (_timeLeft == 40) then {
+		    _nul = [objNull, player, rSAY, "playerSnoring"] call RE; // This is a RPC sound call for the snoring
 			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep2"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
 		};
 		
@@ -86,6 +78,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 		};
 		
 		if (_timeLeft == 20) then {
+		    _nul = [objNull, player, rSAY, "playerSnoring"] call RE; // This is a RPC sound call for the snoring
 			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep2"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
 		};
 		
@@ -109,6 +102,8 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 		if(r_player_blood > 12000) then {
 			r_player_blood = 12000; // If players blood is greater then max amount allowed set it to max allowed (this check keeps an error at bay)
 		};
+
+		//TODO add chance to escape infection
 		
 		r_player_lowblood = false;	// Set lowblood to false
 		10 fadeSound 1; // Fades sound in over time
@@ -117,7 +112,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 		r_player_lowblood = false; // Just double checking players blood isnt low
 		player setVariable["USEC_BloodQty",r_player_blood,true]; // Save this blood ammount to the database
 
-		cutText [format["You are awake and fully rested!"], "PLAIN DOWN"]; // Text displayed on wakeup!
+		cutText [format["You awake from your nap feeling healthier"], "PLAIN DOWN"]; // Text displayed on wakeup!
 		disableUserInput false; // Give players input controls back
 		
 		sleepTimer = time; // Set public cooldown variable

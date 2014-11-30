@@ -264,7 +264,12 @@ class RscTitles
 
 class CfgSounds
 {
-	sounds[] ={z_wzombie1,z_wzombie2,Brief_Open_Sound};
+	sounds[] ={
+	    z_wzombie1,
+	    z_wzombie2,
+	    Brief_Open_Sound,
+	    playerSnoring
+	};
 	
 	
 	class z_wzombie1 {
@@ -276,12 +281,20 @@ class CfgSounds
 	class z_wzombie2 : z_wzombie1 {
 		sound[] = {"custom\walkamongstthedead\dayz_sfx\femalezombie_spotted_01.ogg",0.3,1,40};
 	};
+
 	class Brief_Open_Sound
 	{
 		name = "Brief_Open_Sound";
 		sound[] = {custom\mysterybrief\brief_open.ogg,0.4,1};
 		titles[] = {};
 	};
+
+	class playerSnoring
+    {
+        name="playerSnoring";
+        sound[]={sounds\snoring.ogg,0.9,1};
+        titles[] = {};
+    };
 };
 
 //change safe code
