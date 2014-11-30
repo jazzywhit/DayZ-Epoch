@@ -1,5 +1,5 @@
 //Mining Start
-private ["_Mining_Counter","_rand","_randGem","_hasSledge","_hasToolbox","_inventory","_currentWeapon","_mining_message","_has_free_space","_cursorTarget"];
+private ["_Mining_Counter","_rand","_randGem","_hasSledge","_inventory","_currentWeapon","_mining_message","_has_free_space","_cursorTarget"];
 
 isMining = true;
 _has_free_space = true;
@@ -19,14 +19,14 @@ if (_currentWeapon == "MeleeSledge") then {
 	
 	while {isMining} do {
 		_inventory = magazines player;
-		_Mining_Counter=10;
+		_Mining_Counter=6;
 		systemChat(_mining_message);
-		[10,10] call dayz_HungerThirst;
 		
 		//set up quick loop that swings the sledge and if player moves it breaks out of the mining action
 		[player,"tentunpack",0,false] call dayz_zombieSpeak; // Play sound for the mining action
 		while {_Mining_Counter > 0} do {
 			_cursorTarget = cursorTarget;
+			[10,10] call dayz_HungerThirst;
 			if((r_interrupt)) exitWith { isMining=false };
 			if ((currentWeapon player)!="MeleeSledge") exitWith {
 				isMining = false;
@@ -106,7 +106,8 @@ if (_currentWeapon == "MeleeSledge") then {
 			player removeAction s_player_mining;
 			s_player_mine = -1;
 			systemChat ("Your inventory is full.");
-		}; 
+		};
+		sleep 4; // Sleep some time before starting again
 	};
 } else {
 	systemChat("You must have your Sledgehammer equipped to mine!");
