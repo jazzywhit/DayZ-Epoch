@@ -110,10 +110,11 @@ if (_currentWeapon == "MeleeSledge") then {
 			systemChat ("Your inventory is full.");
 		};
 
-		// Gather the ore you hit off
+		// Gather the ore you mined
 		player playActionNow "Medic";
-		sleep 4; // Sleep some time before starting again
-		player switchMove ""; // Cancel animations
+		sleep 6;
+		[objNull, player, rSwitchMove,""] call RE;
+		player playActionNow "stop";
 	};
 } else {
 	systemChat("You must have your Sledgehammer equipped to mine!");
