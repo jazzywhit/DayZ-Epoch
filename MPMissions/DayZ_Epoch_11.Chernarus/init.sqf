@@ -19,6 +19,9 @@ enableRadio false;
 // May prevent "how are you civillian?" messages from NPC
 enableSentences false;
 
+// Set loot tables to be loaded from mission file
+DZE_MissionLootTable = true;
+
 // DayZ Epoch config
 spawnShoremode = 1; // Default = 1 (on shore)
 spawnArea= 1500; // Default = 1500
