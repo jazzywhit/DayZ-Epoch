@@ -130,7 +130,7 @@ if (_hasTool) then {
 		};
 	};
 } else {
-	systemChat("You Must have a Sledgehammer Equipped to Mine!");
+	systemChat("You Must have a Sledgehammer or Crowbar Equipped to Mine!");
 	isMining = false;
 	player removeAction s_player_mining;
 	s_player_mine = -1;		
