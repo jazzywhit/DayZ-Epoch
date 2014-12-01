@@ -471,9 +471,10 @@ class CfgBuildingLoot {
 			{ "ItemFlashlightRed", "weapon", 0.03 },
 			{ "ItemKnife", "weapon", 0.04 },
 			{ "ItemGPS", "weapon", 0.02 },
+			{ "","militaryclothes",0.05},
 			{ "", "medical", 0.12 },
 			{ "", "generic", 0.22 },
-			{ "", "military_bric", 0.49 },
+			{ "", "military_bric", 0.44 },
 			{ "ItemEtool", "weapon", 0.03 }
 		};
 	};
