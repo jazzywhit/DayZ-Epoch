@@ -1,5 +1,5 @@
 //Mining Start
-private ["_mining_steps", "_step_cnt","_rand","_randGem","_hasSledge","_inventory","_currentWeapon","_mining_message","_has_free_space","_cursorTarget"];
+private ["_mining_steps", "_step_cnt","_remainder","_rand","_randGem","_hasSledge","_inventory","_currentWeapon","_mining_message","_has_free_space","_cursorTarget"];
 
 isMining = true;
 _has_free_space = true;
@@ -20,7 +20,7 @@ if (_currentWeapon == "MeleeSledge" || _currentWeapon == "MeleeCrowbar") then {
 	
 	while {isMining} do {
 		_inventory = magazines player;
-		
+
 		if (_currentWeapon == "MeleeCrowbar") then {
 		    _step_cnt = _mining_steps * 2;
         } else {
@@ -40,7 +40,8 @@ if (_currentWeapon == "MeleeSledge" || _currentWeapon == "MeleeCrowbar") then {
 			};
 
             // Play the mining noise at appropriate times
-            if ((_step_cnt mod _mining_steps) == 0) then {
+            _remainder = _step_cnt mod _mining_steps;
+            if (_remainder == 0) then {
                 [player,"tentunpack",0,false] call dayz_zombieSpeak; // Play sound for the mining action
             };
 
