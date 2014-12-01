@@ -88,6 +88,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 
         // Fix blood state
 		player setVariable["USEC_BloodQty",r_player_blood,true]; // Save this blood ammount to the database
+		player setVariable["medForceUpdate",true];
 
         // Chance to escape infection
 		if (r_player_infected) {

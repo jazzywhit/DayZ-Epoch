@@ -1,4 +1,4 @@
-private ["_onLadder","_itemorignal","_hasdrinkitem","_hasoutput","_config","_text","_sfx","_dis","_itemtodrop","_nearByPile","_item","_display","_invehicle"];
+private ["_onLadder","_itemorignal","_hasdrinkitem","_hasoutput","_config","_text","_sfx","_alert_distance","_itemtodrop","_nearByPile","_item","_display","_invehicle"];
 
 disableserialization;
 call gear_ui_init;
@@ -6,16 +6,10 @@ call gear_ui_init;
 _onLadder =     (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 if (_onLadder) exitWith {cutText [(localize "str_player_21") , "PLAIN DOWN"]};
 
-//if (vehicle player != player) exitWith {cutText ["\n\nYou may not drink while in a vehicle", "PLAIN DOWN"]};
-
-//Force players to wait 3 mins to drink again
-//if (dayz_lastDrink < 180) exitWith {cutText ["You may not drink, your not thirsty", "PLAIN DOWN"]};
-
 _itemorignal = _this;
 _hasdrinkitem = _itemorignal in magazines player;
 _hasoutput = _itemorignal in drink_with_output;
 _invehicle = false;
-
 _config = configFile >> "CfgMagazines" >> _itemorignal;
 _text = getText (_config >> "displayName");
 
@@ -35,17 +29,15 @@ if (vehicle player != player) then {
 sleep 1;
 
 if (["ItemWaterbottle",_itemorignal] call fnc_inString) then {
-    //low alert && sound radius
-    _dis=5;
-    [player,_sfx,0,false,_dis] call dayz_zombieSpeak;
-    [player,_dis,true,(getPosATL player)] spawn player_alertZombies;
+    _alert_distance = 5; //low alert && sound radius
+    [player,_sfx,0,false,_alert_distance] call dayz_zombieSpeak;
+    [player,_alert_distance,true,(getPosATL player)] spawn player_alertZombies;
     player addMagazine "ItemWaterbottleUnfilled";
 };
 if (["ItemSoda",_itemorignal] call fnc_inString) then {
-    //higher alert && sound radius
-    _dis=10;
-    [player,_sfx,0,false,_dis] call dayz_zombieSpeak;
-    [player,_dis,true,(getPosATL player)] spawn player_alertZombies;
+    _alert_distance = 10; //higher alert && sound radius
+    [player,_sfx,0,false,_alert_distance] call dayz_zombieSpeak;
+    [player,_alert_distance,true,(getPosATL player)] spawn player_alertZombies;
 };
 
 if (_hasoutput) then{
@@ -72,7 +64,6 @@ if (_hasoutput) then{
 		sleep 2;
 		(vehicle player) addMagazineCargoGlobal [_itemtodrop,1];
 	};
-
 };
 
 //add infection chance for "ItemWaterbottle",
@@ -84,7 +75,7 @@ if ((random 15 < 1) && (_itemorignal == "ItemWaterbottle")) then {
 player setVariable ["messing",[dayz_hunger,dayz_thirst],true];
 
 dayz_lastDrink = time;
-dayz_thirst = 0;
+dayz_thirst = max(dayz_thirst - DrinkThirstValue, 0);
 
 //Ensure Control is visible
 _display = uiNamespace getVariable 'DAYZ_GUI_display';
