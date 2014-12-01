@@ -54,12 +54,10 @@ class CfgBuildingLoot {
 			{"","trash",0.16},
 			{"ItemCanvas","magazine",0.04},
 			{"ItemDocument", "magazine",0.02},
-			{"Binocular","weapon",0.02},
-			{"","clothes",0.06},
-			{"","specialclothes",0.04},
+			{"Binocular","weapon",0.04},
 			{"pistols_bric", "cfglootweapon", 0.06 },
-			{"ItemMachete","weapon",0.02},
-			{"shotgunsingleshot", "cfglootweapon", 0.08 }
+			{"ItemMachete","weapon",0.05},
+			{"shotgunsingleshot", "cfglootweapon", 0.13 }
 		};
 		lootTypeSmall[] = {
 			{ "ItemWatch","weapon",0.05 },
@@ -332,7 +330,7 @@ class CfgBuildingLoot {
 			{"M136","magazine",0.03},
 			{"AmmoBoxSmall_556","magazine",0.05},
 			{"AmmoBoxSmall_762","magazine",0.03},
-			{"militaryclothes","militaryclothes",0.1},
+			{"","militaryclothes",0.1},
 			{"","militaryammo",0.02}
 		};
 	};
@@ -389,7 +387,7 @@ class CfgBuildingLoot {
 			{"ItemKnife","weapon",0.04},
 			{"ItemGPS","weapon",0.03},
 			{"ItemMap","weapon",0.02},
-			{"militarybackpacks","militarybackpacks",0.05},
+			{"","militarybackpacks",0.05},
 			{"ItemHatchet_DZE","weapon",0.05},
 			{"","medical",0.03},
 			{"","generic",0.1},
@@ -543,24 +541,24 @@ class CfgBuildingLoot {
 			{"ItemRadio","weapon",0.05},
 			{"ItemFlashlightRed","weapon",0.02},
 			{"ItemKnife","weapon",0.01},
-			{"ItemGPS","weapon",0.01},
+			{"ItemGPS","weapon",0.06},
 			{"ItemMap","weapon",0.01},
 			{"Binocular_Vector","weapon",0.01},
 			{"","militarybackpacks",0.04},
 			{"","medical",0.05},
 			{"","generic",0.3},
 			{"","military_bric",0.01},
-			{"","machinegunammo_bric",0.05},
-			{"","militaryclothes",0.05}
+			{"","machinegunammo_bric",0.05}
 		};
 		lootTypeSmall[] = {
 			{ "","assaultrifleammo_bric",0.04 },
-			{ "Binocular","weapon",0.12 },
+			{ "Binocular","weapon",0.07 },
 			{ "ItemFlashlightRed","weapon",0.01 },
 			{ "ItemKnife","weapon",0.02 },
 			{ "ItemGPS","weapon",0.02 },
 			{ "ItemMap","weapon",0.06 },
 			{ "Binocular_Vector","weapon",0.03},
+            { "","militaryclothes",0.05},
 			{ "","medical",0.08},
 			{ "","generic",0.22},
 			{ "","military_bric",0.38 },
@@ -580,12 +578,11 @@ class CfgBuildingLoot {
             {"ItemKnife","weapon",0.05},
             {"ItemMatchbox_DZE","weapon",0.05},
             {"ItemMachete","weapon",0.05},
-            {"huntingrifle", "weapon", 0.03},
-            {"Crossbow_DZ","weapon", 0.1},
+            {"huntingrifle", "weapon", 0.05},
+            {"Crossbow_DZ","weapon", 0.15},
             {"farmweapons", "cfglootweapon", 0.3 },
-            {"pistols_bric", "cfglootweapon", 0.15},
+            {"pistols_bric", "cfglootweapon", 0.18},
             {"","military_bric",0.07},
-            {"", "hunter_clothes", 0.1 },
             {"", "hunter",0.45}
 		};
 		lootTypeSmall[] =	{
@@ -593,9 +590,10 @@ class CfgBuildingLoot {
 			{"ItemFlashlight","weapon",0.02},
 			{"ItemKnife","weapon",0.06},
 			{"ItemMatchbox_DZE","weapon",0.06},
+			{"", "hunter_clothes", 0.1 },
 			{"","military_bric",0.3},
 			{"5x_22_LR_17_HMR","magazine", 0.12},
-			{"","hunter",0.4}
+			{"","hunter",0.3}
 		};
 	};
 	class DynamicDebris: Default
