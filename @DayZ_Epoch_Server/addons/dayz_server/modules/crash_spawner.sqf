@@ -9,7 +9,7 @@ Modified for custom functionality by jesquik
 private["_index1","_index2","_itemTypes","_timeAdjust","_timeToSpawn","_spawnRoll","_crash","_hasAdjustment","_newHeight","_adjustedPos","_useStatic","_crashDamage","_lootRadius","_preWaypoints","_preWaypointPos","_endTime","_startTime","_safetyPoint","_heliStart","_deadBody","_exploRange","_heliModel","_lootPos","_list","_craters","_dummy","_wp2","_wp3","_landingzone","_aigroup","_wp","_helipilot","_crash","_crashwreck","_smokerand","_staticcoords","_pos","_dir","_position","_num","_config","_itemType","_itemChance","_weights","_index","_iArray","_crashModel","_lootTable","_guaranteedLoot","_randomizedLoot","_frequency","_variance","_spawnChance","_spawnMarker","_spawnRadius","_spawnFire","_permanentFire","_crashName"];
 //############### //Config Start\\ ###############\\
 _SpawnMax        = 15;                //Maximum percent chance of spawning a crash number between 0 - 100
-_SpawnMin        = 35;                //Minimum percent chance of spawning a crash number between 0 - 100
+_SpawnMin        = 15;                //Minimum percent chance of spawning a crash number between 0 - 100
 _guaranteedLoot = 6;                //Guaranteed Loot Spawns
 _randomizedLoot = 6;                //Random number of loot piles aswell as the guaranteed ones
 _spawnFire      = true;                //Spawn Smoke/Fire at the helicrash
@@ -35,9 +35,6 @@ _heliModel = [
 			"UH60M_MEV_EP1",
 			"A10",
 			"GNT_C185",
-			"GNT_C185U",
-			"GNT_C185R",
-			"GNT_C185C",
 			"Ka52Black",
 			"Mi24_D",
 			"AH1Z",
@@ -111,26 +108,8 @@ if(_heliModel == "A10") then {
 };
 
 if(_heliModel == "GNT_C185") then {
-    _lootTable    = "PlaneCrash_BRIC";
-    _crashModel    = "A10Wreck";
-    _plane         = true;
-};
-
-if(_heliModel == "GNT_C185U") then {
-    _lootTable    = "PlaneCrash_BRIC";
-    _crashModel    = "A10Wreck";
-    _plane         = true;
-};
-
-if(_heliModel == "GNT_C185R") then {
-    _lootTable    = "PlaneCrash_BRIC";
-    _crashModel    = "A10Wreck";
-    _plane         = true;
-};
-
-if(_heliModel == "GNT_C185C") then {
-    _lootTable    = "PlaneCrash_BRIC";
-    _crashModel    = "A10Wreck";
+    _lootTable    = "MedicalCrash";
+    _crashModel    = "SU25Wreck";
     _plane         = true;
 };
 
@@ -150,10 +129,10 @@ if(_heliModel == "C130J") then {
 };
 
 if(_heliModel == "UH60M_MEV_EP1") then {
-    _lootTable    = "PlaneCrash";
+    _lootTable    = "MedicalCrash";
     _crashModel     = "UH60Wreck_DZ";
 };
-
+ 
  // Loot Radius
 _maxLootRadius = _maxLootRadius - _minLootRadius;
 _spawnRadius = HeliCrashArea;
