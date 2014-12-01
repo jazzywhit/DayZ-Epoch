@@ -13,14 +13,14 @@ while {true} do {
 	_currentWeapon = primaryWeapon player;
 	_hasSledge = false;
 	
-	//Check for sledge in hand
-	if ((_currentWeapon == "MeleeSledge") || ("ItemSledge" in _inventory)) then {
+	//Check for sledge/crowbar in hand
+	if (((_currentWeapon == "MeleeSledge") || ("ItemSledge" in _inventory)) || ((_currentWeapon == "MeleeCrowbar") || ("ItemCrowbar" in _inventory))) then {
 		_hasSledge=true;
 	};
 
 	if (_inRange) then {
 		if (!notified) then {
-			cutText ['Mining Area: To mine you must equip a Sledgehammer, then pick start mining from your scroll menu.', 'PLAIN'];
+			cutText ['Mining Area: To mine you must equip a Sledgehammer or crowbar, then pick start mining from your scroll menu. Sledgehammers work much better', 'PLAIN'];
 			notified = true;
 		};
 	} else { notified = false; };
