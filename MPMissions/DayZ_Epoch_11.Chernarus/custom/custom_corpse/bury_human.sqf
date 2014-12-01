@@ -13,7 +13,7 @@ _humanity_value = 100;
 
 //Check if the corpse was a player
 _corpseID = _corpse getVariable ["CharacterID", "0"];
-_corpseHumanity = corpse getVariable ["humanity", 0];
+_corpseHumanity = _corpse getVariable ["humanity", 0];
 _isPlayer = true;
 if (_corpseID == "0") then { _isPlayer = false };
 diag_log(format["bury_human.sqf - CorpseID: %1", _corpseID]);
