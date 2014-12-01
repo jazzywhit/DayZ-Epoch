@@ -119,6 +119,11 @@ class Category_627 {
         buy[] = {5,"ItemBriefcase100oz"};
         sell[] = {1,"ItemBriefcase100oz"};
     };
+    class M79_EP1 {
+        type = "trade_weapons";
+        buy[] = {25,"ItemGoldBar"};
+        sell[] = {5,"ItemGoldBar"};
+    };
     class BAF_LRR_scoped {
         type = "trade_weapons";
         buy[] = {5,"ItemBriefcase100oz"};

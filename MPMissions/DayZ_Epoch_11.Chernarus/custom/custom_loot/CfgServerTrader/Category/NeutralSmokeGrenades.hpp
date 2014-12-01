@@ -1,5 +1,4 @@
 class Category_668 {
-    // Smoke Hand Grenades
 	class SmokeShell {
 		type = "trade_items";
 		buy[] = {2,"ItemSilverBar"};
@@ -52,7 +51,6 @@ class Category_668 {
     };
 };
 class Category_671 {
-    // Smoke Hand Grenades
 	class SmokeShell {
 		type = "trade_items";
 		buy[] = {2,"ItemSilverBar"};

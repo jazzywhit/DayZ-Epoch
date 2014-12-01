@@ -34,4 +34,14 @@ class Category_478 {
         buy[] = {5,"ItemGoldBar"};
         sell[] = {5,"ItemGoldBar"};
     };
+    class HandGrenade_east {
+        type = "trade_items";
+        buy[] = {4,"ItemGoldBar"};
+        sell[] = {2,"ItemGoldBar"};
+    };
+    class 1Rnd_HE_GP25 {
+        type = "trade_items";
+        buy[] = {4,"ItemGoldBar"};
+        sell[] = {2,"ItemGoldBar"};
+    };
 };
