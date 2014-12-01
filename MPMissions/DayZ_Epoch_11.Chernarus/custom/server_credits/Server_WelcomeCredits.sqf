@@ -31,7 +31,7 @@ _role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
 _role3 = "True Hardcore";
 _role3names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders", "Custom Cities", "Realistic Loot"];
 _role4 = "Game Design / Operations";
-_role4names = ["Carbonoid","jesquik","NcA","Neb","Phobix"];
+_role4names = ["Carbonoid","jesquik","NcA","Neb","Phobix","Mist"];
 _role5 = "Community Support";
 _role5names = ["youtube.com/themistydayz","twitch.tv/iconnorn"];
 
