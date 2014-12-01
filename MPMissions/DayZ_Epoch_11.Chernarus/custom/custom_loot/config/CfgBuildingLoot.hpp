@@ -414,8 +414,8 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		lootType[] = {
 			{ "pistols_bric", "cfglootweapon", 0.26},
-			{ "militaryshotguns_bric", "cfglootweapon", 0.06 },
-			{ "submachinegun_bric", "cfglootweapon", 0.05 },
+			{ "militaryshotguns_bric", "cfglootweapon", 0.15 },
+			{ "submachinegun_bric", "cfglootweapon", 0.13 },
 			{"Binocular","weapon",0.05},
 			{"ItemRadio","weapon",0.04},
 			{"ItemFlashlightRed","weapon",0.04},
@@ -435,7 +435,8 @@ class CfgBuildingLoot {
 			{ "ItemGPS", "weapon", 0.02 },
 			{ "", "medical", 0.12 },
 			{ "", "generic", 0.22 },
-			{ "", "military_bric", 0.49 },
+			{ "", "military_bric", 0.47 },
+			{ "","militaryclothes",0.02},
 			{ "ItemEtool", "weapon", 0.03 }
 		};
 	};
