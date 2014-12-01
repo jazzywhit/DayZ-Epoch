@@ -36,15 +36,10 @@ switch (_iClass) do {
                 "hospital",
                 "military",
                 "military_bric",
-                "militaryclothes",
-                "militarybackpacks",
                 "militaryammo",
                 "assaultrifleammo_bric",
                 "machinegunammo_bric",
                 "machinegunammoexpl",
-                "hunter_clothes",
-                "specialclothes",
-                "clothes",
                 "militarypilot",
                 "policeman",
                 "hunter",
@@ -159,6 +154,24 @@ switch (_iClass) do {
 
 		_item = createVehicle [_iItem, _iPos, [], _radius, "CAN_COLLIDE"];
 	};
+    case "backpack":
+    {
+        //Item is single backpack
+        _itemTypes = [];
+        if (DZE_MissionLootTable) then {
+            _itemTypes = ((getArray (missionConfigFile >> "cfgLoot" >> _iItem)) select 0);
+        } else {
+            _itemTypes = ((getArray (configFile >> "cfgLoot" >> _iItem)) select 0);
+        };
+        _index = dayz_CLBase find _iItem;
+        _weights = dayz_CLChances select _index;
+        _cntWeights = count _weights;
+        _index = floor(random _cntWeights);
+        _index = _weights select _index;
+        _iItem = _itemTypes select _index;
+
+        _item = createVehicle [_iItem, _iPos, [], _radius, "CAN_COLLIDE"];
+    };
 	case "cfglootweapon":
 	{
 		_itemTypes = [];
