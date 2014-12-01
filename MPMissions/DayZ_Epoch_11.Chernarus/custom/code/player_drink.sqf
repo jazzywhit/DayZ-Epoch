@@ -76,6 +76,7 @@ player setVariable ["messing",[dayz_hunger,dayz_thirst],true];
 
 dayz_lastDrink = time;
 dayz_thirst = max(dayz_thirst - DrinkThirstValue, 0);
+systemChat(format["Thirst:  %1", dayz_thirst]);
 
 //Ensure Control is visible
 _display = uiNamespace getVariable 'DAYZ_GUI_display';

@@ -39,7 +39,7 @@ DynamicVehicleDamageLow = 75;
 DynamicVehicleDamageHigh = 100;
 
 // Setup maximum number of mine veins
-MaxMineVeins = 50;
+MaxMineVeins = 0;
 
 // Config trader instead of SQL
 DZE_ConfigTrader = true;
@@ -54,5 +54,5 @@ DZE_isWreck = ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck
 DZE_isGarbage = ["Land_Misc_Garb_Heap_EP1","Rubbish2"];
 
 // Drink / Food Values
-DrinkThirstValue = 25;
-FoodHungerValue = 25;
+DrinkThirstValue = 100;
+FoodHungerValue = 100;

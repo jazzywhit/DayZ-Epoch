@@ -70,6 +70,7 @@ publicVariableServer "PVDZE_plr_Save";
 
 dayz_lastMeal =	time;
 dayz_hunger = max(dayz_hunger - FoodHungerValue, 0);
+systemChat(format["Hunger:  %1", dayz_hunger]);
 
 //Ensure Control is visible
 _display = uiNamespace getVariable 'DAYZ_GUI_display';
