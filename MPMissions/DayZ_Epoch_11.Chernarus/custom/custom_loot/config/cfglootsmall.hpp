@@ -51,8 +51,7 @@ class CfgLootSmall {
 		{"FoodBioMeat",0.01},
 		{"8Rnd_9x18_MakarovSD",0.01}
 	};
-	food[] = {	
-		//trash
+	food[] = {
 		{"TrashTinCan",0.09},
 		{"TrashJackDaniels",0.12},
 		{"ItemSodaEmpty",0.12},
@@ -63,7 +62,6 @@ class CfgLootSmall {
 		{"FoodCanFrankBeans",0.07},
 		{"FoodCanPasta",0.07},
 		{"FoodCanUnlabeled",0.1},
-		// food Bags
 		{"FoodPistachio",0.05},
 		{"FoodNutmix",0.04}
 	};
