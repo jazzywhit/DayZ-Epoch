@@ -38,7 +38,7 @@ if (_canDrink) then {
     dayz_lastDrink = time;
     dayz_thirst = dayz_thirst - DrinkThirstValue;
 
-    if ((random 1) < _infectionChance)) then {
+    if ((random 1) < _infectionChance) then {
         // Infect the player
         r_player_infected = true;
         player setVariable["USEC_infected",true,true];
