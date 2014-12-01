@@ -75,7 +75,7 @@ if ((random 15 < 1) && (_itemorignal == "ItemWaterbottle")) then {
 // Set Thirst levels
 player setVariable ["messing",[dayz_hunger,dayz_thirst],true];
 dayz_lastDrink = time;
-dayz_thirst = max(dayz_thirst - round(SleepWater/3), 0);
+dayz_thirst = 0 max (dayz_thirst - round(SleepWater/3));
 
 //Ensure Control is visible
 _display = uiNamespace getVariable 'DAYZ_GUI_display';
