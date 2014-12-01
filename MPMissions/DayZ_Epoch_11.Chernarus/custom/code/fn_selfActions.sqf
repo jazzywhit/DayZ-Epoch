@@ -649,19 +649,16 @@ if(_isModularDoor) then {
 	_unlockedVault = ["VaultStorage"];
 
 	if(typeOf(cursortarget) in _unlockedVault && _ownerID != "0" && (player distance _cursorTarget < 2)) then {
-	
-	if (s_player_Safe_ckc < 0) then {
-	if ((typeOf(cursortarget) == "VaultStorage") &&(_ownerID == dayz_combination || _ownerID == dayz_playerUID)  ) then {
-     
-				
-			s_player_Safe_ckc = player addaction["Set new Code", "custom\ckc\ckc_startSafeUI.sqf","",1,false,true,"", ""];
-		};
+        if (s_player_Safe_ckc < 0) then {
+            if ((typeOf(cursortarget) == "VaultStorage") &&(_ownerID == dayz_combination || _ownerID == dayz_playerUID)  ) then {
+                s_player_Safe_ckc = player addaction["Set new Code", "custom\ckc\ckc_startSafeUI.sqf","",1,false,true,"", ""];
+            };
 		};
 	} else {
 		player removeAction s_player_Safe_ckc;
 		s_player_Safe_ckc = -1;
-
 	};
+
 	//Allow owner to unlock vault
 	if((_typeOfCursorTarget in DZE_LockableStorage) && _ownerID != "0" && (player distance _cursorTarget < 3)) then {
 		if (s_player_unlockvault < 0) then {

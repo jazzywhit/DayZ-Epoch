@@ -25,9 +25,7 @@ while {true} do {
 		};
 	} else { notified = false; };
 
-
 	if (_inRange && _hasTool) then {
-	
 		if (s_player_mine < 0 && !isMining) then { s_player_mine = player addaction [("<t color=""#0074E8"">" + ("Start Mining") +"</t>"),"custom\mining\start.sqf","",5,false,true,"",""]; };
 		if (s_player_mining < 0 && isMining) then {	s_player_mining = player addaction [("<t color=""#0074E8"">" + ("Stop Mining") +"</t>"),"custom\mining\stop.sqf","",5,false,true,"",""]; };
 	} else {

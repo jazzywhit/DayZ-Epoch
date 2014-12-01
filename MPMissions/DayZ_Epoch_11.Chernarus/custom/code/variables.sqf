@@ -56,3 +56,10 @@ DZE_isGarbage = ["Land_Misc_Garb_Heap_EP1","Rubbish2"];
 // Drink / Food Values
 DrinkThirstValue = 100;
 FoodHungerValue = 100;
+
+// Mining
+s_player_mining = -1;
+s_player_mine = -1;
+
+//Safe Change Combination
+s_player_Safe_ckc = -1;
