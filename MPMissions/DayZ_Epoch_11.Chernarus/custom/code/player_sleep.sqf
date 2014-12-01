@@ -24,7 +24,11 @@ _sleepCooldown = 60; // This is how long in seconds before you can sleep again
 ////////////////////////////////////////////////////////////////////////////////////
 // Everything below here need not be modified unless you know what you are doing! //
 ////////////////////////////////////////////////////////////////////////////////////
-_sleepTime = time - sleepTimer; // Variable used for easy reference in determining the sleep cooldown
+if (isNil "sleepTimer") then {
+    _sleepTime = time;
+} else {
+    _sleepTime = time - sleepTimer;
+};
 
 if(_sleepTime < _sleepCooldown) exitWith { // If cooldown is not done then exit script
 	cutText [format["You are too well rested to take a nap, try again in %1 seconds!",(abs (round(_sleepTime - _sleepCooldown)))], "PLAIN DOWN"]; //display text at bottom center of screen when players cooldown is not done
@@ -44,7 +48,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 	_snoreResult = [objNull, player, rSAY, "playerSnoring"] call RE; // First Snore (16s)
 	for "_i" from 0 to _totalSleepTime do { // For loop for counting down sleep timers and changing animations
 		sleep 1;
-		_timeLeft = _timeLeft - 1; // Minus _timeLeft by one every second
+		_timeLeft = _FtimeLeft - 1; // Minus _timeLeft by one every second
 		
 		if (_timeLeft > 0) then {
 			cutText [format["You are sleeping. %1 seconds left.",_timeLeft], "BLACK FADED"]; // Display sleep countdown while sleeping
