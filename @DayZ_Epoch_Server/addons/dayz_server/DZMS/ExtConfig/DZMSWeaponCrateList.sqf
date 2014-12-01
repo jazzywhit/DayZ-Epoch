@@ -170,8 +170,6 @@ DZMSConSupply = [
 DZMSConLock = ["ItemComboLock"];
 
 DZMSConSupplyHigh = [
-	"PartPlywoodPack",
-	"PartPlankPack",
 	"bulk_PartGeneric",
 	"bulk_ItemSandbag",
 	"bulk_ItemTankTrap",

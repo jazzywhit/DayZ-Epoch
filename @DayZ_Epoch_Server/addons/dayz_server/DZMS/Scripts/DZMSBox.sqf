@@ -398,7 +398,7 @@ if (_type == "supply") then {
 	
 	// load construction
 	_scount = count DZMSConSupply;
-	for "_x" from 0 to 15 do {
+	for "_x" from 0 to 25 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConSupply select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
@@ -407,7 +407,7 @@ if (_type == "supply") then {
 	// load locks
 	_spawnChance = 30;
 	_scount = count DZMSConLock;
-	for "_x" from 0 to 1 do {
+	for "_x" from 0 to 2 do {
 		_spawnRoll = floor(random(100)+1);
 		if (_spawnRoll <= _spawnChance) then {
 			_sSelect = floor(random _sCount);
@@ -430,7 +430,7 @@ if (_type == "supply_high") then {
 
 	// load construction
 	_scount = count DZMSConSupply;
-	for "_x" from 0 to 25 do {
+	for "_x" from 0 to 35 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConSupply select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
@@ -438,7 +438,7 @@ if (_type == "supply_high") then {
 
 	// load high end construction supply
 	_scount = count DZMSConSupplyHigh;
-	for "_x" from 0 to 15 do {
+	for "_x" from 0 to 10 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConSupplyHigh select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
@@ -447,7 +447,7 @@ if (_type == "supply_high") then {
 	// load locks
 	_spawnChance = 30;
 	_scount = count DZMSConLock;
-	for "_x" from 0 to 2 do {
+	for "_x" from 0 to 3 do {
 		_spawnRoll = floor(random(100)+1);
 		if (_spawnRoll <= _spawnChance) then
 		{
