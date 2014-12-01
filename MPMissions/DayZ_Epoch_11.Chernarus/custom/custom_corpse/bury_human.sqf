@@ -1,4 +1,4 @@
-private["_corpse","_type","_isBuried","_mound","_cross","_gun","_humanity_value"];
+private["_corpse","_type","_isBuried","_mound","_cross","_gun","_humanity_value", "_corpseHumanity"];
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't perform burial rites right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
@@ -13,6 +13,7 @@ _humanity_value = 100;
 
 //Check if the corpse was a player
 _corpseID = _corpse getVariable ["CharacterID", "0"];
+_corpseHumanity = corpse getVariable ["humanity", 0];
 _isPlayer = true;
 if (_corpseID == "0") then { _isPlayer = false };
 diag_log(format["bury_human.sqf - CorpseID: %1", _corpseID]);
@@ -59,8 +60,13 @@ if (!_isBuried) then {
         { _box addWeaponCargoGlobal [_x, 1] } forEach weapons _corpse;
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
 		if (_isPlayer) then {
-		    cutText ["Take what you can back to the hero camp...", "PLAIN DOWN"];
-			_box addWeaponCargoGlobal ["EvDogTags",1]; //Add Dog Tags to the body, use them for currency
+		    if (_corpseHumanity > 0) then {
+		        cutText ["Take the evidence back to the bandit camp...", "PLAIN DOWN"];
+			    _box addWeaponCargoGlobal ["EvDogTags",1];
+            } else {
+                cutText ["Take the evidence back to the hero camp...", "PLAIN DOWN"];
+                _box addWeaponCargoGlobal ["CDF_dogtags",1];
+            };
 			_humanity_value = 500;
 		};
 		

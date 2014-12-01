@@ -3,7 +3,7 @@ serverTraders = ["UN_CDF_Soldier_SL_EP1","RU_Citizen3","Rocker4","Assistant","Ri
 // Hero Vendor
 menu_UN_CDF_Soldier_SL_EP1 = [
 	[["Ammunition",478],["Helicopter Armed",493],["Military Armed",562],["Trucks Armed",479],["Weapons",477]],
-	[["ItemGoldBar10oz","EvDogTags",1,1,"buy","Dog Tag","10 oz Gold Bars",101], ["ItemVault","EvDogTags",1,5,"buy","Dog Tags","Personal Safe",101]],
+	[],
 	"hero"
 ];
 // Weapons neutral
@@ -27,7 +27,7 @@ menu_TK_GUE_Soldier_5_EP1 = [
 // Bandit Trader
 menu_Ins_Soldier_MG = [
 	[["Ammunition",577],["Helicopter Armed",512],["Military Armed",569],["Trucks Armed",534],["Weapons",627]],
-	[["ItemGoldBar10oz","Kostey_notebook",1,1,"buy","Kill Record","Bounty",101]],
+	[],
 	"hostile"
 ];
 // Aircraft Dealer
