@@ -72,6 +72,41 @@ class CfgBuildingLoot {
 			{ "","specialclothes",0.04 }
 		};
 	};
+    class Church: Default {
+        zombieChance = 0.3;
+        maxRoaming = 2;
+        zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_villager1","z_villager2","z_villager3"};
+        lootChance = 0.4;
+        lootPos[] = {};
+        lootType[] = {
+            {"ItemWatch","weapon",0.02},
+            {"ItemFlashlight","weapon",0.02},
+            {"ItemKnife","weapon",0.02},
+            {"ItemMatchbox_DZE","weapon",0.02},
+            {"ItemFishingPole","weapon",0.07},
+            {"","backpacks",0.1},
+            {"","generic",0.25},
+            {"","trash",0.16},
+            {"ItemCanvas","magazine",0.04},
+            {"ItemDocument", "magazine",0.02},
+            {"Binocular","weapon",0.04},
+            {"pistols_bric", "cfglootweapon", 0.06 },
+            {"ItemMachete","weapon",0.05},
+            {"shotgunsingleshot", "cfglootweapon", 0.13 }
+        };
+        lootTypeSmall[] = {
+            { "ItemWatch","weapon",0.05 },
+            { "ItemFlashlight","weapon",0.09 },
+            { "ItemKnife","weapon",0.04 },
+            { "ItemMatchbox_DZE","weapon",0.05 },
+            { "","food",0.04 },
+            { "","generic",0.34 },
+            { "","trash",0.29 },
+            { "Binocular","weapon",0.02 },
+            { "","clothes",0.04},
+            { "","specialclothes",0.04 }
+        };
+    };
 	class Office: Default {
 		maxRoaming = 3;
 		zombieClass[] = {"z_suit1","z_suit2"};
