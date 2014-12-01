@@ -3,7 +3,7 @@ private ["_iItem","_iClass","_iPos","_radius","_item","_itemTypes","_index","_we
 
 _iItem = 	_this select 0;
 _iClass = 	_this select 1;
-diag_log format["DEBUG spawn loot class: %1", _iClass];
+//diag_log format["DEBUG spawn loot class: %1", _iClass];
 _iPos =		_this select 2;
 _radius =	_this select 3;
 
@@ -113,10 +113,7 @@ switch (_iClass) do
 	};
 	case "object":
 	{
-        _item = createVehicle [_iItem, _iPos, [], _radius, "CAN_COLLIDE"];
-        if ((count _iPos) > 2) then {
-            _item setPosATL _iPos;
-        };
+        //do nothing for now
 	};
 };
 if (!isNull(_item)) then{
