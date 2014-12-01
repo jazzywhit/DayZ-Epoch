@@ -1,9 +1,9 @@
 //Mining Actions
 notified = false;
-_hasSledge =  false;
+_hasTool =  false;
 
 while {true} do {
-	private ["_pos","_mineNodes","_inRange","_trigger","_hasSledge","_inventory","_currentWeapon"];
+	private ["_pos","_mineNodes","_inRange","_trigger","_hasTool","_inventory","_currentWeapon"];
 	
 	_trigger = ["BeltBuckle_DZE"];
 	_pos = getPosATL player;
@@ -11,11 +11,11 @@ while {true} do {
 	_inRange = count _mineNodes > 0;
 	_inventory = items player;
 	_currentWeapon = primaryWeapon player;
-	_hasSledge = false;
+	_hasTool = false;
 	
 	//Check for sledge/crowbar in hand
 	if (((_currentWeapon == "MeleeSledge") || ("ItemSledge" in _inventory)) || ((_currentWeapon == "MeleeCrowbar") || ("ItemCrowbar" in _inventory))) then {
-		_hasSledge=true;
+		_hasTool=true;
 	};
 
 	if (_inRange) then {
@@ -26,7 +26,7 @@ while {true} do {
 	} else { notified = false; };
 
 
-	if (_inRange && _hasSledge) then {
+	if (_inRange && _hasTool) then {
 	
 		if (s_player_mine < 0 && !isMining) then { s_player_mine = player addaction [("<t color=""#0074E8"">" + ("Start Mining") +"</t>"),"custom\mining\start.sqf","",5,false,true,"",""]; };
 		if (s_player_mining < 0 && isMining) then {	s_player_mining = player addaction [("<t color=""#0074E8"">" + ("Stop Mining") +"</t>"),"custom\mining\stop.sqf","",5,false,true,"",""]; };

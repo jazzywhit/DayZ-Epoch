@@ -87,7 +87,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
         "colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];"colorCorrections" ppEffectCommit 5; // Give player their color back
 
         // Fix blood state
-		player setVariable["USEC_BloodQty",r_player_blood,true]; // Save this blood ammount to the database
+		player setVariable["USEC_BloodQty",r_player_blood,true]; // Save this blood amount to the database
 		player setVariable["medForceUpdate",true];
 
 		// Update hunger/thirst
@@ -99,7 +99,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 
         // Chance to escape infection
 		if (r_player_infected) then {
-		    if ((random 1) > 0.50) then {
+		    if ((random 1) < 0.50) then {
                 r_player_infected = false;
                 player setVariable["USEC_infected",false,true];
                 cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you no longer have a fever!"], "PLAIN DOWN"];
