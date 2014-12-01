@@ -42,7 +42,7 @@ if (_currentWeapon == "MeleeSledge" || _currentWeapon == "MeleeCrowbar") then {
             // Play the mining noise at appropriate times
             if ((_step_cnt mod _mining_steps) == 0) then {
                 [player,"tentunpack",0,false] call dayz_zombieSpeak; // Play sound for the mining action
-            }
+            };
 
             // Swing the weapon and take hunger/thirst
 			player playActionNow "GestureSwing";
