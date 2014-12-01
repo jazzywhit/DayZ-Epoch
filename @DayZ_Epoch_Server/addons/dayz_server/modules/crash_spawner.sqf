@@ -35,6 +35,9 @@ _heliModel = [
 			"UH60M_MEV_EP1",
 			"A10",
 			"GNT_C185",
+			"GNT_C185U",
+			"GNT_C185R",
+			"GNT_C185C",
 			"Ka52Black",
 			"Mi24_D",
 			"AH1Z",
@@ -108,6 +111,24 @@ if(_heliModel == "A10") then {
 };
 
 if(_heliModel == "GNT_C185") then {
+    _lootTable    = "MedicalCrash";
+    _crashModel    = "SU25Wreck";
+    _plane         = true;
+};
+
+if(_heliModel == "GNT_C185U") then {
+    _lootTable    = "MedicalCrash";
+    _crashModel    = "SU25Wreck";
+    _plane         = true;
+};
+
+if(_heliModel == "GNT_C185R") then {
+    _lootTable    = "MedicalCrash";
+    _crashModel    = "SU25Wreck";
+    _plane         = true;
+};
+
+if(_heliModel == "GNT_C185C") then {
     _lootTable    = "MedicalCrash";
     _crashModel    = "SU25Wreck";
     _plane         = true;
