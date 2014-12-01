@@ -12,7 +12,7 @@ s_player_mining = -1;
 //checks player's current weapon and exit with message if they do not have a sledge equipped
 //adds eventhandler so that if the player looks away from the rock they break out of the mining action
 _currentWeapon = primaryWeapon player;
-If (_currentWeapon == ("MeleeSledge" || "MeleeCrowbar")) then {
+if ((_currentWeapon == "MeleeSledge") || (_currentWeapon == "MeleeCrowbar")) then {
 
 if (_currentWeapon == "MeleeSledge") then {
 	r_interrupt=false;
