@@ -480,14 +480,9 @@ class CfgLoot {
 		,{"100Rnd_762x54_PK",0.10}
 	};
 	machinegunammoexpl[] = {
-		{"100Rnd_556x45_BetaCMag",0.2}
-		,{"75Rnd_545x39_RPK",0.2}
-		,{"100Rnd_556x45_M249",0.15}
-		,{"100Rnd_762x51_M240",0.15}
-		,{"100Rnd_762x54_PK",0.14}
-		,{"200Rnd_556x45_M249",0.14}
-		,{"M_Stinger_AA",0.01}
-		,{"M_Igla_AA",0.01}
+		{"75Rnd_545x39_RPK",0.8}
+		,{"100Rnd_762x54_PK",0.18}
+		,{"M_Igla_AA",0.02}
 	};
 	militaryshotguns[] = {
 		{"Remington870_lamp",0.35}

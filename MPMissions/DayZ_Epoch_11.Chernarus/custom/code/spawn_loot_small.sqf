@@ -113,7 +113,10 @@ switch (_iClass) do
 	};
 	case "object":
 	{
-		//do nothing for now
+        _item = createVehicle [_iItem, _iPos, [], _radius, "CAN_COLLIDE"];
+        if ((count _iPos) > 2) then {
+            _item setPosATL _iPos;
+        };
 	};
 };
 if (!isNull(_item)) then{
