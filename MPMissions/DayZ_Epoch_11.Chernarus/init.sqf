@@ -41,7 +41,12 @@ dayz_fullMoonNights = true;
 DZE_SelfTransfuse = true;
 
 // Set up when crash events happen
-EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
+EpochEvents = [
+    ["any","any","any","any",15,"crash_spawner"],
+    ["any","any","any","any",30,"crash_spawner"],
+    ["any","any","any","any",45,"crash_spawner"],
+    ["any","any","any","any",0,"crash_spawner"]
+    ];
 
 // - Variables
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initialize the Variables (IMPORTANT: Must happen very early)
