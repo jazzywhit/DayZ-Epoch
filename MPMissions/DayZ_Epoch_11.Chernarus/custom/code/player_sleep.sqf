@@ -99,7 +99,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 
         // Chance to escape infection
 		if (r_player_infected) then {
-		    if ((random 1) < 0.50) then {
+		    if ((random 1) < 0.30) then {
                 r_player_infected = false;
                 player setVariable["USEC_infected",false,true];
                 cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you no longer have a fever!"], "PLAIN DOWN"];

@@ -20,7 +20,7 @@ while {true} do {
 
 	if (_inRange) then {
 		if (!notified) then {
-			cutText ['Mining Area: To mine you must equip a Sledgehammer or crowbar, then pick start mining from your scroll menu. Sledgehammers work much better', 'PLAIN'];
+			cutText ['Mining Area: To mine you must equip a Sledgehammer or Crowbar, then pick start mining from your scroll menu. Sledgehammers work much better', 'PLAIN'];
 			notified = true;
 		};
 	} else { notified = false; };

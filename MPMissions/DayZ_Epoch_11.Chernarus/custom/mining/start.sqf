@@ -23,6 +23,8 @@ if (_currentWeapon == "MeleeSledge" || _currentWeapon == "MeleeCrowbar") then {
 		
 		if (_currentWeapon == "MeleeCrowbar") then {
 		    _step_cnt = _mining_steps * 2;
+        } else {
+            _step_cnt = _mining_steps;
         };
 		systemChat(_mining_message);
 		
