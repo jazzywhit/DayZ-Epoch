@@ -111,26 +111,26 @@ if(_heliModel == "A10") then {
 };
 
 if(_heliModel == "GNT_C185") then {
-    _lootTable    = "MedicalCrash";
-    _crashModel    = "SU25Wreck";
+    _lootTable    = "PlaneCrash_BRIC";
+    _crashModel    = "A10Wreck";
     _plane         = true;
 };
 
 if(_heliModel == "GNT_C185U") then {
-    _lootTable    = "MedicalCrash";
-    _crashModel    = "SU25Wreck";
+    _lootTable    = "PlaneCrash_BRIC";
+    _crashModel    = "A10Wreck";
     _plane         = true;
 };
 
 if(_heliModel == "GNT_C185R") then {
-    _lootTable    = "MedicalCrash";
-    _crashModel    = "SU25Wreck";
+    _lootTable    = "PlaneCrash_BRIC";
+    _crashModel    = "A10Wreck";
     _plane         = true;
 };
 
 if(_heliModel == "GNT_C185C") then {
-    _lootTable    = "MedicalCrash";
-    _crashModel    = "SU25Wreck";
+    _lootTable    = "PlaneCrash_BRIC";
+    _crashModel    = "A10Wreck";
     _plane         = true;
 };
 
@@ -150,10 +150,10 @@ if(_heliModel == "C130J") then {
 };
 
 if(_heliModel == "UH60M_MEV_EP1") then {
-    _lootTable    = "MedicalCrash";
+    _lootTable    = "PlaneCrash";
     _crashModel     = "UH60Wreck_DZ";
 };
- 
+
  // Loot Radius
 _maxLootRadius = _maxLootRadius - _minLootRadius;
 _spawnRadius = HeliCrashArea;
