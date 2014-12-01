@@ -166,12 +166,15 @@ _findNearestPole = [];
 _IsNearPlot = count (_findNearestPole);
 
 // If item is plot pole && another one exists within 45m
-if(_isPole && _IsNearPlot > 0) exitWith {  DZE_ActionInProgress = false; cutText [(localize "str_epoch_player_44") , "PLAIN DOWN"]; };
+if(_isPole && _IsNearPlot > 0) exitWith {
+    DZE_ActionInProgress = false;
+    cutText [(localize "str_epoch_player_44"), "PLAIN DOWN"];
+};
 
 /////////////////////////////////////////////
 // Check locally if there is a city or town and cancel building
 // Only do this for plot poles
-private ["_stopBuild", "stopBuildMsg"];
+private ["_stopBuild", "_stopBuildMsg"];
 _stopBuild = false;
 _stopBuildMsg = "";
 if (_isPole) then {
