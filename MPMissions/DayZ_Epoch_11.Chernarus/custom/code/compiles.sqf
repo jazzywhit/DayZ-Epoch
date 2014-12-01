@@ -70,4 +70,7 @@ if (!isDedicated) then {
 	player_eat =				compile preprocessFileLineNumbers "custom\code\player_eat.sqf";
 	player_drink =				compile preprocessFileLineNumbers "custom\code\player_drink.sqf";
 
+	// JSRS Fix
+	world_surfaceNoise =		compile preprocessFileLineNumbers "custom\code\fn_surfaceNoise.sqf";
+
 };
