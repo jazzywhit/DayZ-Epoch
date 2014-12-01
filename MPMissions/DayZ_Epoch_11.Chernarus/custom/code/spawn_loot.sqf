@@ -52,6 +52,7 @@ switch (_iClass) do {
         ]) then {
 			_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 			while {_qty < _max} do {
+			    diag_log format["DEBUG dayz_CLBase: %1", dayz_CLBase];
 				_index = dayz_CLBase find _iClass;
 				_weights = dayz_CLChances select _index;
 				_cntWeights = count _weights;
@@ -114,7 +115,7 @@ switch (_iClass) do {
 				};
 			};
 		};
-		
+
 	};
 	case "single":
 	{
