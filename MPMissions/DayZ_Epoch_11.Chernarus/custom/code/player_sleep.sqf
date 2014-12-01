@@ -27,7 +27,7 @@ _sleepCooldown = 60; // This is how long in seconds before you can sleep again
 _sleepTime = time - sleepTimer; // Variable used for easy reference in determining the sleep cooldown
 
 if(_sleepTime < _sleepCooldown) exitWith { // If cooldown is not done then exit script
-	cutText [format["You are too well rested to take a nap, try again in %1 seconds!",(abs(round(_sleepTime - _sleepCooldown))], "PLAIN DOWN"]; //display text at bottom center of screen when players cooldown is not done
+	cutText [format["You are too well rested to take a nap, try again in %1 seconds!",(abs (round(_sleepTime - _sleepCooldown)))], "PLAIN DOWN"]; //display text at bottom center of screen when players cooldown is not done
 };
 
 if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to sleep in combat but the check is here anyway)

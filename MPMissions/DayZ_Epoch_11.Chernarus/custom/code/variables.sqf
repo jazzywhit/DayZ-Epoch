@@ -53,10 +53,6 @@ DZE_isRemovable = ["Fence_corrugated_DZ","M240Nest_DZ","ParkBench_DZ","Plastic_P
 DZE_isWreck = ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1"];
 DZE_isGarbage = ["Land_Misc_Garb_Heap_EP1","Rubbish2"];
 
-// Drink / Food Values
-DrinkThirstValue = 100;
-FoodHungerValue = 100;
-
 // Mining
 s_player_mining = -1;
 s_player_mine = -1;
