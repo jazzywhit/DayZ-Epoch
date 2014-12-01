@@ -7896,9 +7896,9 @@ if (true) then
 _vehicle_1365 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Mil_Barracks_L", [12125.696, 12620.979, -0.19695772], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Mil_Barracks_i", [12125.696, 12620.979, -0.19695772], [], 0, "CAN_COLLIDE"];
   _vehicle_1365 = _this;
-  _this setDir -69.649071;
+  _this setDir 650.49579;
   _this setVehicleInit "this setvectorup [0,0,1]";
   _this setPos [12125.696, 12620.979, -0.19695772];
 };

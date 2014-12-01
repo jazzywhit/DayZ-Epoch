@@ -52,17 +52,17 @@ switch (_iClass) do {
         ]) then {
 			_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 			while {_qty < _max} do {
-			    diag_log format["DEBUG dayz_CLBase: %1", dayz_CLBase];
+			    //diag_log format["DEBUG dayz_CLBase: %1", dayz_CLBase];
 				_index = dayz_CLBase find _iClass;
 				_weights = dayz_CLChances select _index;
 				_cntWeights = count _weights;
 
-				diag_log ("dayz_CLChances: " + str(dayz_CLChances));
+				//diag_log ("dayz_CLChances: " + str(dayz_CLChances));
 
 				_index = floor(random _cntWeights);
 				_index = _weights select _index;
 
-				diag_log ("dayz_CLChances: " + str(_itemTypes));
+				//diag_log ("dayz_CLChances: " + str(_itemTypes));
 				
 				_canType = _itemTypes select _index;
 				_tQty = round(random 1) + 1;
@@ -82,11 +82,11 @@ switch (_iClass) do {
 				_item addWeaponCargoGlobal [_iItem,1];
 			};
 		} else {
-			diag_log format["DEBUG dayz_CLBase: %1", dayz_CLBase];
+			//diag_log format["DEBUG dayz_CLBase: %1", dayz_CLBase];
 			_index = dayz_CLBase find _iClass;
 			if (_index > 0) then {
 				_weights = dayz_CLChances select _index;
-				diag_log format["DEBUG dayz_CLChances: %1", dayz_CLChances];
+				//diag_log format["DEBUG dayz_CLChances: %1", dayz_CLChances];
 				_cntWeights = count _weights;
 				_index = floor(random _cntWeights);
 				_index = _weights select _index;

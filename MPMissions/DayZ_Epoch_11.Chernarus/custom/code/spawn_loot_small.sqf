@@ -5,7 +5,7 @@ _iItem = 	_this select 0;
 _iClass = 	_this select 1;
 _iPos =		_this select 2;
 _radius =	_this select 3;
-diag_log (format["spawn_loot_small.sqf: Pos: %1, LootType: %2/%3,",_iPos,_iItem,_iClass]);
+//diag_log (format["spawn_loot_small.sqf: Pos: %1, LootType: %2/%3,",_iPos,_iItem,_iClass]);
 
 _item = objNull;
 
@@ -81,7 +81,7 @@ switch (_iClass) do
 		_weights = dayzE_CLSChances select _index;
 		_cntWeights = count _weights;
 	
-		diag_log("_itemTypes small:" + str(_itemTypes));
+		//diag_log("_itemTypes small:" + str(_itemTypes));
 
 	    _index = floor(random _cntWeights);
 		_index = _weights select _index;
