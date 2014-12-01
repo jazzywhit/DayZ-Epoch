@@ -1,8 +1,3 @@
-class Church: Residential {
-	minRoaming = 1;
-	maxRoaming = 3;
-	zombieClass[] = {"z_priest","z_priest","z_priest"};
-};
 class Land_HouseV_1I4: Residential {
 	lootPos[] = {{0.222168,3.90839,-2.73031},{-1.82983,-1.81403,-2.76768}};
 	lootPosZombie[] = {{-0.329834,-5.01025,-1.89261},{-1.30762,1.8324,-1.85249}};
