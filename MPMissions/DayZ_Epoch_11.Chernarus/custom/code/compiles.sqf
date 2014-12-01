@@ -33,14 +33,10 @@ if (!isDedicated) then {
 	ckc_upddoor    =    compile preprocessFileLineNumbers "custom\ckc\ckc_upddoor.sqf";
 	ckc_updSafe    =    compile preprocessFileLineNumbers "custom\ckc\ckc_updSafe.sqf";
 
-	// custom fire making (can use lumber)
-	player_makeFire =	compile preprocessFileLineNumbers "custom\code\player_makefire.sqf";
-
 	// custom harvest to allow lumber to come from trees
 	player_harvest =	compile preprocessFileLineNumbers "custom\code\player_harvest.sqf";
 	
 	//Snap build pro
-	
 	player_build = compile preprocessFileLineNumbers "custom\snap_pro\player_build.sqf";
 	snap_build = compile preprocessFileLineNumbers "custom\snap_pro\snap_build.sqf";
 	dayz_spaceInterrupt = compile preprocessFileLineNumbers "custom\code\dayz_spaceInterrupt.sqf";
