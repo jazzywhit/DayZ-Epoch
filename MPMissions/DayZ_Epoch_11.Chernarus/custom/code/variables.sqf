@@ -52,3 +52,7 @@ DZE_modularBuild = true;
 DZE_isRemovable = ["Fence_corrugated_DZ","M240Nest_DZ","ParkBench_DZ","Plastic_Pole_EP1_DZ","FireBarrel_DZ","Scaffolding_DZ"];
 DZE_isWreck = ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1"];
 DZE_isGarbage = ["Land_Misc_Garb_Heap_EP1","Rubbish2"];
+
+// Drink / Food Values
+DrinkThirstValue = 25;
+FoodHungerValue = 25;

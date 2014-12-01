@@ -5,7 +5,6 @@ isMining = true;
 _has_free_space = true;
 _cursorTarget = cursorTarget;
 _mining_message = "";
-systemChat("Mining Started");
 
 player removeAction s_player_mine;
 s_player_mining = -1;
@@ -16,10 +15,11 @@ _currentWeapon = primaryWeapon player;
 
 if (_currentWeapon == "MeleeSledge") then {
 	r_interrupt=false;
+	systemChat("You have Started Mining");
 	
 	while {isMining} do {
 		_inventory = magazines player;
-		_Mining_Counter = 6; // Mine for 6 seconds and collect for 4 seconds
+		_Mining_Counter = 5; // Mine for 5 seconds and collect for 10 seconds
 		systemChat(_mining_message);
 		
 		//set up quick loop that swings the sledge and if player moves it breaks out of the mining action
@@ -93,31 +93,32 @@ if (_currentWeapon == "MeleeSledge") then {
 					};
 				};
 			};
-			if (_rand <= 1 && _rand > 0.88) then {
+			if (_rand > 0.88) then {
 				_has_free_space=[player,"PartOreGold",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Gold ore.";
 			};
+
+			// If there is no room in inventory, exit
+            if (!_has_free_space) exitWith {
+                isMining = false;
+                player removeAction s_player_mining;
+                s_player_mine = -1;
+                systemChat ("Your inventory is full.");
+            };
+
+            // Gather the ore you mined
+            player playActionNow "Medic";
+            sleep 10;
+            player switchMove "";
+            player playActionNow "stop";
 		} else {
-			systemChat("Mining Cycle Cancelled");
-			player removeAction s_player_mining;
-			s_player_mine = -1;		
-		};
-		
-		if (!_has_free_space) exitWith {
-			isMining = false;
+			systemChat("You have Stopped Mining");
 			player removeAction s_player_mining;
 			s_player_mine = -1;
-			systemChat ("Your inventory is full.");
 		};
-
-		// Gather the ore you mined
-		player playActionNow "Medic";
-		sleep 6;
-		[objNull, player, rSwitchMove,""] call RE;
-		player playActionNow "stop";
 	};
 } else {
-	systemChat("You must have your Sledgehammer equipped to mine!");
+	systemChat("You Must have a Sledgehammer Equipped to Mine!");
 	isMining = false;
 	player removeAction s_player_mining;
 	s_player_mine = -1;		

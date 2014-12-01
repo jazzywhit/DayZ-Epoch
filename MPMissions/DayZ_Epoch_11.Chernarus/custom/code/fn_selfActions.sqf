@@ -856,7 +856,7 @@ if(_isModularDoor) then {
     //Sleep
 	if(_isTent && _ownerID == dayz_characterID) then {
 		if ((s_player_sleep < 0) && (player distance _cursorTarget < 3)) then {
-			s_player_sleep = player addAction [localize "str_actions_self_sleep", "custom\sleep\player_sleep.sqf",_cursorTarget, 0, false, true, "",""];
+			s_player_sleep = player addAction [localize "str_actions_self_sleep", "custom\code\player_sleep.sqf",_cursorTarget, 0, false, true, "",""];
 		};
 	} else {
 		player removeAction s_player_sleep;

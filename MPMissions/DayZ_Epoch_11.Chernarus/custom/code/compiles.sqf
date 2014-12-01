@@ -66,4 +66,8 @@ if (!isDedicated) then {
 	//Custom Spawn Check
 	player_spawnCheck = 			compile preprocessFileLineNumbers "custom\code\player_spawnCheck.sqf";
 
+	//Custom Drink/Eat
+	player_eat =				compile preprocessFileLineNumbers "custom\code\player_eat.sqf";
+	player_drink =				compile preprocessFileLineNumbers "custom\code\player_drink.sqf";
+
 };
