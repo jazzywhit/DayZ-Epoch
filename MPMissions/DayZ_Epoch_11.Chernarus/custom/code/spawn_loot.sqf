@@ -156,8 +156,6 @@ switch (_iClass) do {
 		_index = _weights select _index;
 		_iItem = _itemTypes select _index;
 
-		diag_log(format["CntWeights: %1; Weights: %2; ItemTypes %3",_cntWeights, _weights, _itemTypes]);
-
 		if (_iItem == "Chainsaw") then {
 			_iItem = ["ChainSaw","ChainSawB","ChainSawG","ChainSawP","ChainSawR"] call BIS_fnc_selectRandom;
 		};

@@ -576,12 +576,13 @@ class CfgBuildingLoot {
 			{"ItemFlashlight","generic",0.05},
 			{"ItemKnife","generic",0.05},
 			{"ItemMatchbox_DZE","generic",0.05},
-			{"farmweapons", "cfglootweapon", 0.4 },
+			{"farmweapons", "cfglootweapon", 0.3 },
 			{"WeaponHolder_ItemMachete","object",0.05},
+            {"Crossbow_DZ","cfglootweapon", 0.5},
 			{"","military_bric",0.07},
 			{"huntingrifle", "weapon", 0.03},
-			{"pistols_bric", "cfglootweapon", 0.15},
-			{"", "hunter_clothes", 0.1 },
+			{"pistols_bric", "cfglootweapon", 0.1},
+			{"", "hunter_clothes", 0.2 },
 			{"","hunter",0.45}
 		};
 		lootTypeSmall[] =	{

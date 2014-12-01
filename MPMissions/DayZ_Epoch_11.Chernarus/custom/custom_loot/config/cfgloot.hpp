@@ -322,15 +322,13 @@ class CfgLoot {
 		,{"revolver_gold_EP1",0.01}
 	};
 	shotgunsingleshot[] = {
-		{"Winchester1866",0.5}
+		{"Winchester1866",0.7}
 		,{"MR43",0.3}
-		,{"Crossbow_DZ",0.2}
 	};
 	farmweapons[] = {
 		{"Winchester1866",0.25}
-		,{"LeeEnfield",0.23}
-		,{"MR43",0.4}
-		,{"Crossbow_DZ",0.12}
+		,{"LeeEnfield",0.25}
+		,{"MR43",0.5}
 	};
 	sniperrifles[] = {
 		{"m16a4_acg",0.05}
