@@ -1,24 +1,24 @@
 class Category_603 {
 	class RPK_74 {
 		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {4,"ItemGoldBar"};
+		buy[] = {15,"ItemGoldBar"};
+		sell[] = {5,"ItemGoldBar"};
 	};
     class PK {
-        type = "trade_weapons";
-        buy[] = {4,"ItemGoldBar10oz"};
-        sell[] = {8,"ItemGoldBar"};
-    };
+		type = "trade_weapons";
+		buy[] = {4,"ItemGoldBar10oz"};
+		sell[] = {15,"ItemGoldBar"};
+	};
 };
 class Category_638 {
 	class RPK_74 {
 		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {4,"ItemGoldBar"};
+		buy[] = {15,"ItemGoldBar"};
+		sell[] = {5,"ItemGoldBar"};
 	};
     class PK {
-        type = "trade_weapons";
-        buy[] = {4,"ItemGoldBar10oz"};
-        sell[] = {8,"ItemGoldBar"};
-    };
+		type = "trade_weapons";
+		buy[] = {4,"ItemGoldBar10oz"};
+		sell[] = {15,"ItemGoldBar"};
+	};
 };
