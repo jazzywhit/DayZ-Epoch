@@ -18,7 +18,7 @@ private ["_timeLeft", "_totalSleepTime","_i","_bloodAmount","_sleepCooldown","_s
 
 // This script in its current state is set up perfectly for 45 seconds changing it can yield some wierd results!
 _totalSleepTime = 60; // Total ammount of time it takes before you wake up
-_bloodAmount = 1500; // Total amount of blood to give back to player on sleep (12000 is the max life for a player)
+_bloodAmount = 1000; // Total amount of blood to give back to player on sleep (12000 is the max life for a player)
 _sleepCooldown = 60; // This is how long in seconds before you can sleep again
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -90,17 +90,24 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 		player setVariable["USEC_BloodQty",r_player_blood,true]; // Save this blood ammount to the database
 		player setVariable["medForceUpdate",true];
 
+		// Update hunger/thirst
+		[round(SleepFood/4),round(SleepWater/4)] call dayz_HungerThirst; // Each time you sleep you will lose 1/4 of the max food/drink
+
+		//Ensure Control is visible
+        _display = uiNamespace getVariable 'DAYZ_GUI_display';
+        (_display displayCtrl 1301) ctrlShow true;
+
         // Chance to escape infection
-		if (r_player_infected) {
-		    if ((random 1) > 0.75) {
+		if (r_player_infected) then {
+		    if ((random 1) > 0.75) then {
                 r_player_infected = false;
                 player setVariable["USEC_infected",false,true];
-                cutText [format["After your nap you no longer feel sick"], "PLAIN DOWN"];
+                cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you no longer have a fever!"], "PLAIN DOWN"];
             } else {
-                cutText [format["You awake from your nap feeling stronger, but you still feel sick"], "PLAIN DOWN"];
-            }
+                cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you still have a fever!"], "PLAIN DOWN"];
+            };
         } else {
-            cutText [format["You awake from your nap feeling stronger"], "PLAIN DOWN"];
+            cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty!"], "PLAIN DOWN"];
         };
 
         // Finish Up
