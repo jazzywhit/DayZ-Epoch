@@ -27,7 +27,7 @@ _sleepCooldown = 60; // This is how long in seconds before you can sleep again
 _sleepTime = time - sleepTimer; // Variable used for easy reference in determining the sleep cooldown
 
 if(_sleepTime < _sleepCooldown) exitWith { // If cooldown is not done then exit script
-	cutText [format["You are not tired yet please wait %1!",(_sleepTime - _sleepCooldown)], "PLAIN DOWN"]; //display text at bottom center of screen when players cooldown is not done
+	cutText [format["You are too well rested to take a nap, try again in %1 seconds!",(abs(round(_sleepTime - _sleepCooldown))], "PLAIN DOWN"]; //display text at bottom center of screen when players cooldown is not done
 };
 
 if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to sleep in combat but the check is here anyway)
@@ -99,7 +99,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 
         // Chance to escape infection
 		if (r_player_infected) then {
-		    if ((random 1) > 0.75) then {
+		    if ((random 1) > 0.50) then {
                 r_player_infected = false;
                 player setVariable["USEC_infected",false,true];
                 cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you no longer have a fever!"], "PLAIN DOWN"];
