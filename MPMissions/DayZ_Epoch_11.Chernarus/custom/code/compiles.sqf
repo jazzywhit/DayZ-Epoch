@@ -69,4 +69,7 @@ if (!isDedicated) then {
 	// JSRS Fix
 	world_surfaceNoise =		compile preprocessFileLineNumbers "custom\code\fn_surfaceNoise.sqf";
 
+	// Spawn Loot to find bug
+	spawn_loot =				compile preprocessFileLineNumbers "custom\code\spawn_loot.sqf";
+
 };
