@@ -1295,7 +1295,7 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={ 3893.9448, 0, 11426.449};
+			position[]={ 1944.09, 0, 9136.59};
             name="Mine1";
             text="Mining Node";
             type="mil_dot";
