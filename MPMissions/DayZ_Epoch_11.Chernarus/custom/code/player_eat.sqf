@@ -64,13 +64,10 @@ if (_badfood && ((random 1)  < 0.75)) then {
 	player setVariable["USEC_infected",true,true];
 };
 
+// Set hunger levels
 player setVariable ["messing",[dayz_hunger,dayz_thirst],true];
-PVDZE_plr_Save = [player,[],true,true];
-publicVariableServer "PVDZE_plr_Save";
-
 dayz_lastMeal =	time;
-dayz_hunger = max(dayz_hunger - FoodHungerValue, 0);
-systemChat(format["Hunger:  %1", dayz_hunger]);
+dayz_hunger = max(dayz_hunger - round(SleepFood/3), 0);
 
 //Ensure Control is visible
 _display = uiNamespace getVariable 'DAYZ_GUI_display';
