@@ -1,5 +1,5 @@
 //Mining Start
-private ["_mining_steps", "_step_cnt","_remainder","_rand","_randGem","_hasSledge","_inventory","_currentWeapon","_mining_message","_has_free_space","_cursorTarget"];
+private ["_mining_steps", "_step_cnt","_remainder","_rand","_randGem","_hasTool","_inventory","_currentWeapon","_mining_message","_has_free_space","_cursorTarget"];
 
 isMining = true;
 _has_free_space = true;
@@ -13,8 +13,13 @@ s_player_mining = -1;
 //checks player's current weapon and exit with message if they do not have a sledge equipped
 //adds eventhandler so that if the player looks away from the rock they break out of the mining action
 _currentWeapon = primaryWeapon player;
-
 if (_currentWeapon == "MeleeSledge" || _currentWeapon == "MeleeCrowbar") then {
+    _hasTool = true;
+} else {
+    _hasTool = false;
+};
+
+if (_hasTool) then {
 	r_interrupt=false;
 	systemChat("You have Started Mining");
 	
@@ -33,11 +38,8 @@ if (_currentWeapon == "MeleeSledge" || _currentWeapon == "MeleeCrowbar") then {
 		while {_step_cnt > 0} do {
 			_cursorTarget = cursorTarget;
 
+            // Interrupt if the player moves
 			if((r_interrupt)) exitWith { isMining=false };
-			if ((currentWeapon player)!="MeleeSledge") exitWith {
-				isMining = false;
-				systemChat("Sledgehammer must be the current weapon.");
-			};
 
             // Play the mining noise at appropriate times
             _remainder = _step_cnt mod _mining_steps;
