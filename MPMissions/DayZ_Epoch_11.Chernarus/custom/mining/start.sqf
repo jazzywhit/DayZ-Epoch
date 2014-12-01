@@ -43,6 +43,10 @@ if (_currentWeapon == "MeleeSledge") then {
 		if (isMining) then {
 			private ["_rand","_randGem"];
 			_rand = random 1;
+
+            // Gather the ore that you mined
+            player playActionNow "Medic";
+            sleep 9;
 			
 			if (_rand <= 0.5) then {
 				_has_free_space=[player,"PartOre",false] call BIS_fnc_invAdd;
@@ -105,12 +109,6 @@ if (_currentWeapon == "MeleeSledge") then {
                 s_player_mine = -1;
                 systemChat ("Your inventory is full.");
             };
-
-            // Gather the ore you mined
-            player playActionNow "Medic";
-            sleep 10;
-            player switchMove "";
-            player playActionNow "stop";
 		} else {
 			systemChat("You have Stopped Mining");
 			player removeAction s_player_mining;
