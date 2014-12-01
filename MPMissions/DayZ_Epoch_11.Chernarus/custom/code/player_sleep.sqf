@@ -48,7 +48,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 	_snoreResult = [objNull, player, rSAY, "playerSnoring"] call RE; // First Snore (16s)
 	for "_i" from 0 to _totalSleepTime do { // For loop for counting down sleep timers and changing animations
 		sleep 1;
-		_timeLeft = _FtimeLeft - 1; // Minus _timeLeft by one every second
+		_timeLeft = _timeLeft - 1; // Minus _timeLeft by one every second
 		
 		if (_timeLeft > 0) then {
 			cutText [format["You are sleeping. %1 seconds left.",_timeLeft], "BLACK FADED"]; // Display sleep countdown while sleeping
