@@ -54,7 +54,7 @@ class CfgBuildingLoot {
 			{"","trash",0.16},
 			{"ItemCanvas","magazine",0.04},
 			{"ItemDocument", "magazine",0.02},
-			{"Binocular","magazine",0.02},
+			{"Binocular","weapon",0.02},
 			{"","clothes",0.06},
 			{"","specialclothes",0.04},
 			{"pistols_bric", "cfglootweapon", 0.06 },
@@ -69,7 +69,7 @@ class CfgBuildingLoot {
 			{ "","food",0.04 },
 			{ "","generic",0.34 },
 			{ "","trash",0.29 },
-			{ "Binocular","magazine",0.02 },
+			{ "Binocular","weapon",0.02 },
 			{ "","clothes",0.04},
 			{ "","specialclothes",0.04 }
 		};
@@ -85,7 +85,7 @@ class CfgBuildingLoot {
 			{"ItemFlashlight","weapon",0.04},
 			{"","trash",0.2},
 			{"","office",0.32},
-			{"Binocular","magazine",0.05},
+			{"Binocular","weapon",0.05},
 			{"ItemRadio","weapon",0.01},
 			{"ItemCrowbar","weapon",0.04},
 			{"pistols_bric","cfglootweapon",0.15 },
@@ -98,7 +98,7 @@ class CfgBuildingLoot {
 			{ "ItemFlashlight","weapon",0.05 },
 			{ "","generic",0.5 },
 			{ "","trash",0.2 },
-			{ "Binocular","magazine",0.06 },
+			{ "Binocular","weapon",0.06 },
 			{ "ItemDocument","magazine",0.04 }
 		};
 	};
@@ -212,7 +212,7 @@ class CfgBuildingLoot {
 			{"ItemHatchet_DZE","weapon",0.05},
 			{"ItemMachete","weapon",0.05},
 			{"","generic",0.13},
-            { "Binocular","magazine",0.04 },
+            { "Binocular","weapon",0.04 },
             { "ItemRadio","weapon",0.01 },
 			{ "","trash",0.1 },
 			{"ItemFishingPole","weapon",0.05},
@@ -232,7 +232,7 @@ class CfgBuildingLoot {
 			{ "","generic",0.21 },
 			{ "","food_special",0.01 },
 			{ "","trash",0.15 },
-			{ "Binocular","magazine",0.02 }
+			{ "Binocular","weapon",0.02 }
 		};
 	};
 	class MedicalCrash: Default {
@@ -383,7 +383,7 @@ class CfgBuildingLoot {
 			{ "pistols_bric", "cfglootweapon", 0.26},
 			{ "militaryshotguns_bric", "cfglootweapon", 0.06 },
 			{ "submachinegun_bric", "cfglootweapon", 0.02 },
-			{"Binocular","magazine",0.05},
+			{"Binocular","weapon",0.05},
 			{"ItemRadio","weapon",0.04},
 			{"ItemFlashlightRed","weapon",0.04},
 			{"ItemKnife","weapon",0.04},
@@ -476,7 +476,7 @@ class CfgBuildingLoot {
 			{ "machineguns_bric", "cfglootweapon", 0.01 }
 		};
 		lootTypeSmall[] = {
-			{ "Binocular", "magazine", 0.05 },
+			{ "Binocular", "weapon", 0.05 },
 			{ "ItemFlashlightRed", "weapon", 0.03 },
 			{ "ItemKnife", "weapon", 0.04 },
 			{ "ItemGPS", "weapon", 0.02 },
@@ -501,7 +501,7 @@ class CfgBuildingLoot {
 			{ "PartGeneric", "magazine", 0.03 },
 			{"PartGeneric","magazine",0.03},
 			{"PartWheel","magazine",0.02},
-			{"Binocular","magazine",0.01},
+			{"Binocular","weapon",0.01},
 			{"ItemRadio","weapon",0.01},
 			{"ItemFlashlightRed","weapon",0.03},
 			{"ItemKnife","weapon",0.06},
@@ -517,7 +517,7 @@ class CfgBuildingLoot {
 			{ "machineguns_bric", "cfglootweapon", 0.01 }
 		};
 		lootTypeSmall[] = {
-			{ "Binocular", "magazine", 0.05 },
+			{ "Binocular", "weapon", 0.05 },
 			{ "ItemFlashlightRed", "weapon", 0.03 },
 			{ "ItemKnife", "weapon", 0.04 },
 			{ "ItemGPS", "weapon", 0.02 },
@@ -539,13 +539,13 @@ class CfgBuildingLoot {
 			{ "machineguns_bric", "cfglootweapon", 0.02 },
 			{ "pistols_bric", "cfglootweapon", 0.17 },
 			{"sniperrifles_bric", "cfglootweapon", 0.01 },
-			{"Binocular","magazine",0.02},
+			{"Binocular","weapon",0.02},
 			{"ItemRadio","weapon",0.05},
 			{"ItemFlashlightRed","weapon",0.02},
 			{"ItemKnife","weapon",0.01},
 			{"ItemGPS","weapon",0.01},
 			{"ItemMap","weapon",0.01},
-			{"Binocular_Vector","magazine",0.01},
+			{"Binocular_Vector","weapon",0.01},
 			{"","militarybackpacks",0.04},
 			{"","medical",0.05},
 			{"","generic",0.3},
@@ -555,12 +555,12 @@ class CfgBuildingLoot {
 		};
 		lootTypeSmall[] = {
 			{ "","assaultrifleammo_bric",0.04 },
-			{ "Binocular","magazine",0.12 },
+			{ "Binocular","weapon",0.12 },
 			{ "ItemFlashlightRed","weapon",0.01 },
 			{ "ItemKnife","weapon",0.02 },
 			{ "ItemGPS","weapon",0.02 },
 			{ "ItemMap","weapon",0.06 },
-			{ "Binocular_Vector","magazine",0.03},
+			{ "Binocular_Vector","weapon",0.03},
 			{ "","medical",0.08},
 			{ "","generic",0.22},
 			{ "","military_bric",0.38 },

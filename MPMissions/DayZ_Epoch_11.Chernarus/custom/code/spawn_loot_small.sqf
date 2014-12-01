@@ -3,9 +3,9 @@ private ["_iItem","_iClass","_iPos","_radius","_item","_itemTypes","_index","_we
 
 _iItem = 	_this select 0;
 _iClass = 	_this select 1;
-//diag_log format["DEBUG spawn loot class: %1", _iClass];
 _iPos =		_this select 2;
 _radius =	_this select 3;
+diag_log (format["spawn_loot_small.sqf: Pos: %1, LootType: %2/%3,",_iPos,_iItem,_iClass]);
 
 _item = objNull;
 
