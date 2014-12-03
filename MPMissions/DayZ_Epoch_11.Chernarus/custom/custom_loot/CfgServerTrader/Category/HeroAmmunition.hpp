@@ -1,8 +1,8 @@
 class Category_478 {
 	class 75Rnd_545x39_RPK {
 		type = "trade_items";
-		buy[] = {8,"ItemSilverBar10oz"};
-		sell[] = {8,"ItemSilverBar10oz"};
+		buy[] = {3, "itemGoldBar"};
+		sell[] = {1, "itemGoldBar"};
 	};
     class 100Rnd_762x54_PK {
         type = "trade_items";

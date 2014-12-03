@@ -11,13 +11,13 @@ class Category_643 {
 	};
     class 30Rnd_762x39_SA58 {
         type = "trade_items";
-        buy[] = {9,"ItemSilverBar10oz"};
-        sell[] = {9,"ItemSilverBar10oz"};
+        buy[] = {8,"ItemSilverBar10oz"};
+        sell[] = {8,"ItemSilverBar10oz"};
     };
     class 30Rnd_762x39_AK47 {
         type = "trade_items";
-        buy[] = {9,"ItemSilverBar10oz"};
-        sell[] = {9,"ItemSilverBar10oz"};
+        buy[] = {8,"ItemSilverBar10oz"};
+        sell[] = {8,"ItemSilverBar10oz"};
     };
 };
 class Category_609 {
@@ -33,12 +33,12 @@ class Category_609 {
 	};
     class 30Rnd_762x39_SA58 {
         type = "trade_items";
-        buy[] = {9,"ItemSilverBar10oz"};
-        sell[] = {9,"ItemSilverBar10oz"};
+        buy[] = {8,"ItemSilverBar10oz"};
+        sell[] = {8,"ItemSilverBar10oz"};
     };
     class 30Rnd_762x39_AK47 {
         type = "trade_items";
-        buy[] = {9,"ItemSilverBar10oz"};
-        sell[] = {9,"ItemSilverBar10oz"};
+        buy[] = {8,"ItemSilverBar10oz"};
+        sell[] = {8,"ItemSilverBar10oz"};
     };
 };
