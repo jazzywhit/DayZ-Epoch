@@ -1,6 +1,7 @@
 class CfgLootSmall {
 	trash[] = {		
-		{"TrashTinCan",0.06},
+		{"TrashTinCan",0.16},
+		{"TrashJackDaniels",0.1},
 		{"FoodCanGriffEmpty",0.04},
 		{"FoodCanBadguyEmpty",0.04},
 		{"FoodCanBoneboyEmpty",0.04},
@@ -23,9 +24,7 @@ class CfgLootSmall {
 		{"ItemSodaLemonadeEmpty",0.02},
 		{"ItemSodaLvgEmpty",0.02},
 		{"ItemSodaMzlyEmpty",0.02},
-		{"ItemSodaRabbitEmpty",0.02},
-		{"ItemTrashToiletpaper",0.1},
-		{"ItemTrashRazor",0.1}
+		{"ItemSodaRabbitEmpty",0.02}
 	};
 	civilian[] = {
 		{"TrashJackDaniels",0.09},
@@ -113,23 +112,22 @@ class CfgLootSmall {
 		{"ItemHeatPack",0.03}
 	};
 	generic[] = {
-		{"ItemSodaEmpty",0.06},
-		{"TrashJackDaniels",0.04},
-		{"ItemWaterbottleUnfilled",0.02},
-		{"ItemBandage",0.11},
-		{"7Rnd_45ACP_1911",0.07},
-		{"6Rnd_45ACP",0.08},
-		{"2Rnd_shotgun_74Slug",0.05},
-		{"2Rnd_shotgun_74Pellets",0.05},
-		{"8Rnd_9x18_Makarov",0.09},
-		{"15Rnd_W1866_Slug",0.08},
-		{"WoodenArrow",0.1},
-		{"HandRoadFlare",0.07},
-		{"ItemPainkiller",0.02},
-		{"HandChemGreen",0.05},
-		{"HandChemBlue",0.03},
-		{"HandChemRed",0.03},
-		{"ItemHeatPack",0.04}
+		{"ItemNewspaper",0.04}
+		,{"ItemWaterbottleUnfilled",0.02}
+		,{"ItemBandage",0.14}
+		,{"ItemLetter",0.02}
+		,{"ItemBook1",0.02}
+		,{"ItemBook2",0.02}
+		,{"ItemBook3",0.02}
+		,{"ItemBook4",0.02}
+		,{"ItemTrashToiletpaper",0.06}
+		,{"ItemTrashRazor",0.04}
+		,{"HandRoadFlare",0.11}
+		,{"ItemPainkiller",0.08}
+		,{"HandChemGreen",0.12}
+		,{"HandChemBlue",0.12}
+		,{"HandChemRed",0.12}
+		,{"ItemHeatPack",0.04}
 	};
 	medical[] = {
 		{"ItemBandage",0.4},

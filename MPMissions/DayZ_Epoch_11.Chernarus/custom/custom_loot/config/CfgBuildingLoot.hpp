@@ -48,10 +48,9 @@ class CfgBuildingLoot {
 			{"ItemFlashlight","weapon",0.02},
 			{"ItemKnife","weapon",0.02},
 			{"ItemMatchbox_DZE","weapon",0.02},
-			{"ItemFishingPole","weapon",0.07},
 			{"","backpacks",0.1},
 			{"","generic",0.25},
-			{"","trash",0.16},
+			{"","trash",0.23},
 			{"ItemCanvas","magazine",0.04},
 			{"ItemDocument", "magazine",0.02},
 			{"Binocular","weapon",0.04},
@@ -64,9 +63,11 @@ class CfgBuildingLoot {
 			{ "ItemFlashlight","weapon",0.09 },
 			{ "ItemKnife","weapon",0.04 },
 			{ "ItemMatchbox_DZE","weapon",0.05 },
+			{ "ItemFishingPole","weapon",0.05 },
+			{ "ItemShovel","weapon",0.05 },
 			{ "","food",0.04 },
-			{ "","generic",0.34 },
-			{ "","trash",0.29 },
+			{ "","generic",0.29 },
+			{ "","trash",0.24 },
 			{ "Binocular","weapon",0.02 },
 			{ "","clothes",0.04},
 			{ "","specialclothes",0.04 }
@@ -83,10 +84,9 @@ class CfgBuildingLoot {
             {"ItemFlashlight","weapon",0.02},
             {"ItemKnife","weapon",0.02},
             {"ItemMatchbox_DZE","weapon",0.02},
-            {"ItemFishingPole","weapon",0.07},
             {"","backpacks",0.1},
             {"","generic",0.25},
-            {"","trash",0.16},
+            {"","trash",0.23},
             {"ItemCanvas","magazine",0.04},
             {"ItemDocument", "magazine",0.02},
             {"Binocular","weapon",0.04},
@@ -166,11 +166,13 @@ class CfgBuildingLoot {
 			{"PartPlankPack", "magazine", 0.05}
 		};
 		lootTypeSmall[] = {
-			{ "","generic",0.5 },
-			{ "","trash",0.20 },
+			{ "","generic",0.41 },
+			{ "","trash",0.2 },
 			{ "ItemCanvas","magazine",0.04 },
 			{ "ItemPole","magazine",0.04 },
 			{ "","military_bric",0.14 },
+            { "ItemSledgeHead","magazine",0.05},
+            { "ItemSledgeHandle","magazine",0.05},
 			{ "ItemKnife","weapon",0.07 }
 		};
 	};
@@ -212,22 +214,26 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		lootType[] = {
 			{"ItemJerrycanEmpty","magazine",0.05},
-			{"","generic",0.25},
+			{"","generic",0.38},
 			{"","trash",0.11},
+			{"ItemShovel","weapon",0.05},
 			{"PartPlankPack","magazine",0.06},
 			{"ItemHatchet_DZE","weapon",0.05},
 			{"ItemFuelBarrelEmpty","magazine",0.01},
-			{"ItemMachete","weapon",0.03},
+			{"ItemMachete","weapon",0.05},
 			{"ItemFishingPole","weapon",0.07},
 			{"ItemLightBulb","magazine",0.02},
-			{"ItemSledgeHandle","magazine",0.02},
 			{"farmweapons","cfglootweapon", 0.15}
 		};
 		lootTypeSmall[] = {
-			{ "","generic", 0.79},
+			{ "ItemShovel","weapon", 0.1},
+			{ "ItemHatchet_DZE","weapon", 0.1},
+			{ "ItemMachete","weapon", 0.1},
+			{ "","generic", 0.39},
 			{ "","trash",0.14 },
 			{ "","military_bric",0.05},
-			{ "ItemSledgeHead","magazine",0.02}
+			{ "ItemSledgeHead","magazine",0.05},
+			{ "ItemSledgeHandle","magazine",0.05}
 		};
 	};
 	class Supermarket: Default {
@@ -237,19 +243,20 @@ class CfgBuildingLoot {
 		zombieChance = 0.3;
 		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2"};
 		lootType[] = {
-			{"ItemCompass","weapon",0.05},
-			{"ItemMap","weapon",0.05},
-			{"ItemFlashlight","weapon",0.05},
-			{"ItemKnife","weapon",0.05},
-			{"ItemMatchbox_DZE","weapon",0.05},
-			{"ItemHatchet_DZE","weapon",0.05},
-			{"ItemMachete","weapon",0.05},
+			{"ItemCompass","weapon",0.04},
+			{"ItemMap","weapon",0.04},
+			{"ItemFlashlight","weapon",0.04},
+			{"ItemKnife","weapon",0.04},
+			{"ItemMatchbox_DZE","weapon",0.04},
+			{"ItemHatchet_DZE","weapon",0.04},
+			{"ItemMachete","weapon",0.04},
 			{"","generic",0.13},
             { "Binocular","weapon",0.04 },
             { "ItemRadio","weapon",0.01 },
-			{ "","trash",0.1 },
-			{"ItemFishingPole","weapon",0.05},
-			{ "","tents",0.09 },
+			{ "","trash",0.2 },
+			{"ItemFishingPole","weapon",0.04},
+			{"ItemShovel","weapon",0.04},
+			{ "","tents",0.08 },
 			{ "pistols_bric", "cfglootweapon", 0.1 },
 			{ "shotgunsingleshot", "cfglootweapon", 0.04 },
 			{ "PartPlywoodPack", "magazine", 0.02 },
@@ -262,7 +269,8 @@ class CfgBuildingLoot {
 			{ "ItemFlashlight","weapon",0.11 },
 			{ "ItemKnife","weapon",0.04 },
 			{ "ItemMatchbox_DZE","weapon",0.08 },
-			{ "","generic",0.21 },
+			{ "","generic",0.11 },
+			{ "ItemShovel","weapon",0.1 },
 			{ "","food_special",0.01 },
 			{ "","trash",0.15 },
 			{ "Binocular","weapon",0.02 }

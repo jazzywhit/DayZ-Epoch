@@ -1,11 +1,31 @@
 #include "CfgLootSmall.hpp"
 class CfgLoot {
 	trash[] = {
-		{"TrashTinCan",0.5}
-		,{"TrashJackDaniels",0.05}
-		,{"ItemSodaEmpty",0.25}
-		,{"ItemTrashToiletpaper",0.1}
-		,{"ItemTrashRazor",0.1}
+		{"TrashTinCan",0.16},
+		{"TrashJackDaniels",0.1},
+		{"FoodCanGriffEmpty",0.04},
+		{"FoodCanBadguyEmpty",0.04},
+		{"FoodCanBoneboyEmpty",0.04},
+		{"FoodCanCornEmpty",0.04},
+		{"FoodCanCurgonEmpty",0.04},
+		{"FoodCanDemonEmpty",0.04},
+		{"FoodCanFraggleosEmpty",0.04},
+		{"FoodCanHerpyEmpty",0.04},
+		{"FoodCanOrlokEmpty",0.04},
+		{"FoodCanPowellEmpty",0.04},
+		{"FoodCanTylersEmpty",0.04},
+		{"TrashJackDaniels",0.05},
+		{"ItemSodaEmpty",0.05},
+		{"ItemSodaMdewEmpty",0.02},
+		{"ItemSodaMtngreenEmpty",0.02},
+		{"ItemSodaR4z0rEmpty",0.02},
+		{"ItemSodaClaysEmpty",0.02},
+		{"ItemSodaSmashtEmpty",0.02},
+		{"ItemSodaDrwasteEmpty",0.02},
+		{"ItemSodaLemonadeEmpty",0.02},
+		{"ItemSodaLvgEmpty",0.02},
+		{"ItemSodaMzlyEmpty",0.02},
+		{"ItemSodaRabbitEmpty",0.02}
 	};
 	civilian[] = {
 		{"TrashJackDaniels",0.08}
@@ -72,8 +92,7 @@ class CfgLoot {
 		{"ItemSodaEmpty",0.31}
 		,{"TrashJackDaniels",0.26}
 		,{"ItemWaterbottleUnfilled",0.02}
-		,{"ItemBandage",0.11}
-		,{"WoodenArrow",0.04}
+		,{"ItemBandage",0.15}
 		,{"HandRoadFlare",0.07}
 		,{"ItemPainkiller",0.02}
 		,{"HandChemGreen",0.01}
@@ -83,27 +102,25 @@ class CfgLoot {
 		,{"ItemDocument",0.03}
 		,{"ItemPlotDeed",0.01}
 		,{"ItemComboLock",0.01}
+		,{"ItemHotwireKit",0.01}
 		,{"ItemLockbox",0.01}
 	};
 	generic[] = {
-		{"ItemSodaEmpty",0.06}
-		,{"TrashJackDaniels",0.04}
-		,{"ItemNewspaper",0.04}
+		{"ItemNewspaper",0.04}
 		,{"ItemWaterbottleUnfilled",0.02}
-		,{"ItemBandage",0.11}
-		,{"7Rnd_45ACP_1911",0.03}
-		,{"5x_22_LR_17_HMR",0.01}
-		,{"6Rnd_45ACP",0.08}
-		,{"2Rnd_shotgun_74Slug",0.1}
-		,{"2Rnd_shotgun_74Pellets",0.1}
-		,{"8Rnd_9x18_Makarov",0.09}
-		,{"15Rnd_W1866_Slug",0.02}
-		,{"WoodenArrow",0.04}
-		,{"HandRoadFlare",0.07}
+		,{"ItemBandage",0.14}
+		,{"ItemLetter",0.02}
+		,{"ItemBook1",0.02}
+		,{"ItemBook2",0.02}
+		,{"ItemBook3",0.02}
+		,{"ItemBook4",0.02}
+		,{"ItemTrashToiletpaper",0.06}
+		,{"ItemTrashRazor",0.04}
+		,{"HandRoadFlare",0.11}
 		,{"ItemPainkiller",0.08}
-		,{"HandChemGreen",0.01}
-		,{"HandChemBlue",0.03}
-		,{"HandChemRed",0.03}
+		,{"HandChemGreen",0.12}
+		,{"HandChemBlue",0.12}
+		,{"HandChemRed",0.12}
 		,{"ItemHeatPack",0.04}
 	};
 	medical[] = {
@@ -194,8 +211,7 @@ class CfgLoot {
 		,{"HandChemBlue",0.02}
 		,{"HandChemRed",0.02}
 		,{"ItemHeatPack",0.04}
-		,{"FoodMRE",0.03}
-		,{"ItemHotwireKit",0.01}
+		,{"FoodMRE",0.04}
 	};
 	policeman[] = {
 		{"ItemBandage",0.3}
@@ -214,20 +230,16 @@ class CfgLoot {
 		,{"ItemWaterbottleUnfilled",0.05}
 		,{"WoodenArrow",0.2}
 		,{"ItemHeatPack",0.03}
-		,{"FoodMRE",0.01}
-		,{"ItemDocument",0.01}
+		,{"FoodMRE",0.02}
 		,{"5x_22_LR_17_HMR",0.05}
 	};
 	worker[] = {
 		{"TrashJackDaniels",0.09}
-		,{"ItemSodaEmpty",0.34}
-		,{"ItemBandage",0.3}
+		,{"ItemSodaEmpty",0.35}
+		,{"ItemBandage",0.31}
 		,{"ItemPainkiller",0.15}
 		,{"ItemWire",0.05}
-		,{"ItemTankTrap",0.03}
-		,{"ItemComboLock",0.01}
-		,{"ItemSledgeHead",0.02}
-		,{"ItemDocument",0.01}
+		,{"ItemTankTrap",0.05}
 	};
 	hunter_clothes[] = {
         {"Skin_Sniper1_DZ",0.3}
