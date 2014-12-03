@@ -6,13 +6,13 @@ class Category_519 {
 	};
 	class AH6X_DZ {
 		type = "trade_any_vehicle";
-		buy[] = {6,"ItemGoldBar10oz"};
-		sell[] = {3,"ItemGoldBar10oz"};
+		buy[] = {9,"ItemGoldBar10oz"};
+		sell[] = {4,"ItemGoldBar10oz"};
 	};
 	class MH6J_DZ {
 		type = "trade_any_vehicle";
-		buy[] = {8,"ItemGoldBar10oz"};
-		sell[] = {4,"ItemGoldBar10oz"};
+		buy[] = {1,"ItemBriefcase100oz"};
+		sell[] = {5,"ItemGoldBar10oz"};
 	};
 	class BAF_Merlin_DZE {
 		type = "trade_any_vehicle";
@@ -26,7 +26,7 @@ class Category_519 {
 	};
 	class Ka137_PMC {
 		type = "trade_any_vehicle";
-		buy[] = {4,"ItemGoldBar10oz"};
-		sell[] = {2,"ItemGoldBar10oz"};
+		buy[] = {5,"ItemGoldBar10oz"};
+		sell[] = {3,"ItemGoldBar10oz"};
 	};
 };

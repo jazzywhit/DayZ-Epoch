@@ -62,60 +62,38 @@ if (_hasTool) then {
             player playActionNow "Medic";
             sleep 9;
 			
-			if (_rand <= 0.5) then {
+			if (_rand <= 0.3) then {
 				_has_free_space=[player,"PartOre",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Iron ore.";
 			};
-			if (_rand <= 0.85 && _rand > 0.50) then {
+			if (_rand <= 0.50 && _rand > 0.30) then {
 				_has_free_space=[player,"PartOreSilver",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Silver ore.";
 			};
-			if (_rand <= 0.88 && _rand > 0.85) then {
-				_randGem = floor(random 7);
-				
-				switch (_randGem) do {  
-					case 0:
-					{
-						_has_free_space=[player,"ItemTopaz",false] call BIS_fnc_invAdd;
-						_mining_message="Mined 1 Topaz.";
-					};
-					case 1:
-					{
-						_has_free_space=[player,"ItemObsidian",false] call BIS_fnc_invAdd;
-						_mining_message="Mined 1 Obsidian.";
-					};
-					case 2:
-					{
-						_has_free_space=[player,"ItemSapphire",false] call BIS_fnc_invAdd;
-						_mining_message="Mined 1 Sapphire.";
-					};
-					case 3:
-					{
-						_has_free_space=[player,"ItemAmethyst",false] call BIS_fnc_invAdd;
-						_mining_message="Mined 1 Amethyst.";
-					};
-					case 4:
-					{
-						_has_free_space=[player,"ItemEmerald",false] call BIS_fnc_invAdd;
-						_mining_message="Mined 1 Emerald.";
-					};
-					case 5:
-					{
-						_has_free_space=[player,"ItemCitrine",false] call BIS_fnc_invAdd;
-						_mining_message="Mined 1 Citrine.";
-					};
-					case 6:
-					{
-						_has_free_space=[player,"ItemRuby",false] call BIS_fnc_invAdd;
-						_mining_message="Mined 1 Ruby.";
-					};
-				};
+			if (_rand <= 0.68 && _rand > 0.50) then {
+				_has_free_space=[player,"ItemTopaz",false] call BIS_fnc_invAdd;
+				_mining_message="Mined 1 Topaz.";				
 			};
-			if (_rand > 0.88) then {
-				_has_free_space=[player,"PartOreGold",false] call BIS_fnc_invAdd;
-				_mining_message="Mined 1 Gold ore.";
+			if (_rand <= 0.86 && _rand > 0.68) then {
+				_has_free_space=[player,"ItemCitrine",false] call BIS_fnc_invAdd;
+				_mining_message="Mined 1 Citrine.";				
 			};
-
+			if (_rand <= 0.91 && _rand > 0.86) then {
+				_has_free_space=[player,"ItemAmethyst",false] call BIS_fnc_invAdd;
+				_mining_message="Mined 1 Amethyst.";				
+			};
+			if (_rand <= 0.95 && _rand > 0.91) then {
+				_has_free_space=[player,"ItemSapphire",false] call BIS_fnc_invAdd;
+				_mining_message="Mined 1 Sapphire.";				
+			};
+			if (_rand <= 0.98 && _rand > 0.95) then {
+				_has_free_space=[player,"ItemObsidian",false] call BIS_fnc_invAdd;
+				_mining_message="Mined 1 Obsidian.";				
+			};
+			if (_rand > 0.98) then {
+				_has_free_space=[player,"ItemRuby",false] call BIS_fnc_invAdd;
+				_mining_message="Mined 1 Ruby.";				
+			};
 			// If there is no room in inventory, exit
             if (!_has_free_space) exitWith {
                 isMining = false;
@@ -130,7 +108,7 @@ if (_hasTool) then {
 		};
 	};
 } else {
-	systemChat("You Must have a Sledgehammer Equipped to Mine!");
+	systemChat("You Must have a Sledgehammer or Crowbar Equipped to Mine!");
 	isMining = false;
 	player removeAction s_player_mining;
 	s_player_mine = -1;		
