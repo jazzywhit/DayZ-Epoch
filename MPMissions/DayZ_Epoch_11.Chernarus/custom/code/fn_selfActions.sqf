@@ -4,7 +4,7 @@ scriptName "Functions\misc\fn_selfActions.sqf";
 	- Function
 	- [] call fnc_usec_selfActions;
 ************************************************************/
-private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasRazor","_hasToolbox","_canIgnite","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isBuilding","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
+private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasRazor","_hasToolbox","_canIgnite","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isBuilding","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_hasShovel","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
 
 if (DZE_ActionInProgress) exitWith {}; // Do not allow if any script is running.
 
@@ -148,6 +148,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_hasFuelBarrelE = 	"ItemFuelBarrelEmpty" in _magazinesPlayer;
 	_hasHotwireKit = 	"ItemHotwireKit" in _magazinesPlayer;
 	_hasETool = "ItemEtool" in items player;
+	_hasShovel = "ItemShovel" in items player;
 	
 	_itemsPlayer = items player;
 	
@@ -896,7 +897,7 @@ if(_isModularDoor) then {
     };
 	
 	// Bury Body
-	if (!_isAlive and !_isZombie and !_isAnimal and _hasETool and _isMan and _canDo) then {
+	if (!_isAlive and !_isZombie and !_isAnimal and (_hasETool || _hasShovel) and _isMan and _canDo) then {
         if (s_player_bury_human < 0) then {
             s_player_bury_human = player addAction [format["<t color='#0071c5'>Bury Body%1</t>"], "custom\custom_corpse\bury_human.sqf",cursorTarget, 0, false, true, "", ""];
         }
