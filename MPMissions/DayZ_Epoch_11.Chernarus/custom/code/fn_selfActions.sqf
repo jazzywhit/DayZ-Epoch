@@ -4,7 +4,7 @@ scriptName "Functions\misc\fn_selfActions.sqf";
 	- Function
 	- [] call fnc_usec_selfActions;
 ************************************************************/
-private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasRazor","_hasToolbox","_canIgnite","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isBuilding","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
+private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasRazor","_hasEtool","_hasScrap","_hasRuby","_hasCrowbar","_hasPole","_hasToolbox","_canIgnite","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isBuilding","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_breakin","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
 
 if (DZE_ActionInProgress) exitWith {}; // Do not allow if any script is running.
 
@@ -167,6 +167,12 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_hasKnife = 	"ItemKnife" in _itemsPlayer;
 	_hasRazor = 	"ItemTrashRazor" in _magazinesPlayer;
 	_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
+	_hasRuby =	"ItemRuby" in _magazinesPlayer; //Added items for mist breakin
+	_hasPole =	"ItemPole" in _magazinesPlayer;
+	_hasCrowbar =	"ItemCrowbar" in _itemsPlayer;
+	_hasScrap =	"PartGeneric" in _magazinesPlayer;
+	_hasEtool =	"ItemEtool" in _itemsPlayer;
+
 	_canIgnite = (("ItemJerrycan" in _magazinesPlayer) || ("ItemFuelBarrel" in _magazinesPlayer))  && ("ItemMatchbox_DZE" in weapons player);
 
 	_isMan = _cursorTarget isKindOf "Man";
@@ -667,6 +673,9 @@ if(_isModularDoor) then {
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_OPEN",_text], "\z\addons\dayz_code\actions\vault_unlock.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				} else {
+					if(_cursorTarget isKindOf "ItemLockbox" && _hasRuby && _hasPole && _hasCrowbar && _hasScrap && _hasEtool && _hasRazor && _hasKnife && _hasToolbox) then {	//Mist lockbox breakin				
+						_breakin = player addAction ["<t color='#FF0000'>Break in</t>", "custom\Lockboxcrack\breakin.sqf",_cursorTarget, 0, false, true, "",""];
+					}
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_UNLOCK",_text], "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				};
