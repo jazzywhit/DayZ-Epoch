@@ -2,7 +2,7 @@
 	Hummer Wreck by lazyink (Full credit for code to TheSzerdi & TAW_Tonic)
 	Updated to new format by Vampire
 */
-private ["_missName","_coords","_crash","_crate"];
+private ["_missName","_coords","_crash","_crate", "_crate1"];
 
 //Name of the Mission
 _missName = "Humvee Crash";
@@ -25,6 +25,10 @@ _crash = createVehicle ["HMMWVwreck",_coords,[], 0, "CAN_COLLIDE"];
 _crate = createVehicle ["RULaunchersBox",[(_coords select 0) - 14, _coords select 1,0],[], 0, "CAN_COLLIDE"];
 [_crate,"weapons_nato"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
+
+_crate1 = createVehicle ["RULaunchersBox",[(_coords select 0) + 14, _coords select 1,0],[], 0, "CAN_COLLIDE"];
+[_crate1,"medical"] ExecVM DZMSBoxSetup;
+[_crate1] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]

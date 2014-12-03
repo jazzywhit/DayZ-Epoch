@@ -1,7 +1,5 @@
 // Custom Loot
-if(isNil "DZE_MissionLootTable") then {
-	DZE_MissionLootTable = true;
-};
+DZE_MissionLootTable = true;
 
 //Plot management
 s_player_plotManagement = -1;
@@ -16,58 +14,48 @@ DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
 
 // Pyromaniac
-if(isNil "s_player_igniteVehicle") then {
-	s_player_igniteVehicle = -1;
-};
-if(isNil "s_player_igniteBuilding") then {
-	s_player_igniteBuilding = -1;
-};
+s_player_igniteVehicle = -1;
+s_player_igniteBuilding = -1;
 
 // Cannibalism
-if(isNil "s_player_butcher_human") then {
-	s_player_butcher_human = -1;
-};
+s_player_butcher_human = -1;
 
 // Bury Corpse
-if(isNil "s_player_bury_human") then {
-	s_player_bury_human = -1;
-};
+s_player_bury_human = -1;
 
 // Change combination action
-if(isNil "s_player_ckc") then {
-	s_player_ckc = -1;
-};
+s_player_ckc = -1;
 
 // Dynamic Vehicles Fuel Level
-if(isnil "DynamicVehicleFuelLow") then {
-	DynamicVehicleFuelLow = 0;
-};
-if(isnil "DynamicVehicleFuelHigh") then {
-	DynamicVehicleFuelHigh = 35; // ~ 30% chance there will be some gas to siphon on a vehicle
-};
+DynamicVehicleFuelLow = 0;
+DynamicVehicleFuelHigh = 35; // ~ 30% chance there will be some gas to siphon on a vehicle
 
 // Maximum percentage of gas that will be on a vehicle if it is sold
 MaxGasOnSale = 25; // Also the point where you can no longer siphon fuel from vehicles
 MinGasOnSale = 15;
 
 // Dynamic Vehicle Damage
-if(isnil "DynamicVehicleDamageLow") then {
-	DynamicVehicleDamageLow = 75;
-};
-if(isnil "DynamicVehicleDamageHigh") then {
-	DynamicVehicleDamageHigh = 100;
-};
+DynamicVehicleDamageLow = 75;
+DynamicVehicleDamageHigh = 100;
 
 // Setup maximum number of mine veins
-if(isnil "MaxMineVeins") then {
-	MaxMineVeins = 50;
-};
+MaxMineVeins = 0;
 
 // Config trader instead of SQL
-if(isNil "DZE_ConfigTrader") then {
-	DZE_ConfigTrader = true;
-};
+DZE_ConfigTrader = true;
 
 //Plot for life and snap building
 DZE_APlotforLife = true;
 DZE_modularBuild = true;
+
+// Removable and Wreck classes
+DZE_isRemovable = ["Fence_corrugated_DZ","M240Nest_DZ","ParkBench_DZ","Plastic_Pole_EP1_DZ","FireBarrel_DZ","Scaffolding_DZ"];
+DZE_isWreck = ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1"];
+DZE_isGarbage = ["Land_Misc_Garb_Heap_EP1","Rubbish2"];
+
+// Mining
+s_player_mining = -1;
+s_player_mine = -1;
+
+//Safe Change Combination
+s_player_Safe_ckc = -1;

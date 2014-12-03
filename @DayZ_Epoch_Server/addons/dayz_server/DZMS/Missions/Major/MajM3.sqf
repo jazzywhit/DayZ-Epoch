@@ -3,7 +3,7 @@
 	Updated to New Mission Format by Vampire
 */
 
-private ["_missName","_coords","_base1","_base2","_base3","_base4","_base8","_base9","_base10","_base11","_base12","_base13","_base14","_base15","_base16","_base17","_veh1","_vehicle","_crate","_crate2"];
+private ["_missName","_coords","_base1","_base2","_base3","_base4","_base8","_base9","_base10","_base11","_base12","_base13","_base14","_base15","_base16","_base17","_veh1","_veh2","_vehicle","_vehicle2","_crate","_crate1","_crate2"];
 
 //Name of the Mission
 _missName = "Bandit Medical Camp";
@@ -11,7 +11,7 @@ _missName = "Bandit Medical Camp";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have Opened a Medical Camp!\nStop Them from Re-Supplying the Region!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Survivors have Opened a Medical Camp!\nHelp the Bandits by wiping them out!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -81,29 +81,36 @@ _base17 setDir 55.969147;
 [_base17] call DZMSProtectObj;
 
 //Create the vehicles
-_veh1 = ["small"] call DZMSGetVeh;
+_veh1 = ["small_survivor"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) - 17.5078, (_coords select 1) + 5.2578,0],[], 0, "CAN_COLLIDE"];
 [_vehicle] call DZMSSetupVehicle;
+
+_veh2 = ["large_survivor"] call DZMSGetVeh;
+_vehicle2 = createVehicle [_veh2,[(_coords select 0) + 17.5078, (_coords select 1) - 5.2578,0],[], 0, "CAN_COLLIDE"];
+[_vehicle2] call DZMSSetupVehicle;
 
 //Create the loot
 _crate = createVehicle ["USLaunchersBox",[(_coords select 0) - 6.8277, (_coords select 1) + 5.6748,0],[], 0, "CAN_COLLIDE"];
 [_crate,"medical"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
 
-//Create the loot
-_crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 7.7041, (_coords select 1) + 3.332,0],[], 0, "CAN_COLLIDE"];
-[_crate2,"medical"] ExecVM DZMSBoxSetup;
+_crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) - 7.7041, (_coords select 1) + 3.332,0],[], 0, "CAN_COLLIDE"];
+[_crate1,"medical"] ExecVM DZMSBoxSetup;
+[_crate1] call DZMSProtectObj;
+
+_crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 7.2, (_coords select 1) + 4.5,0],[], 0, "CAN_COLLIDE"];
+[_crate2,"weapons_high"] ExecVM DZMSBoxSetup;
 [_crate2] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],2,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],2,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],2,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],2,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
 
 
 //Wait until the player is within 30 meters and also meets the kill req
@@ -112,6 +119,7 @@ sleep 5;
 //Call DZMSSaveVeh to attempt to save the vehicles to the database
 //If saving is off, the script will exit.
 [_vehicle] ExecVM DZMSSaveVeh;
+[_vehicle2] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"Survivors have Taken Control of the Camp and Medical Supplies.", "PLAIN",6] call RE;

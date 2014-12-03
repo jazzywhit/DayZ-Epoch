@@ -1,4 +1,4 @@
-private["_playerPos","_canDrink","_isPond","_isWell","_pondPos","_objectsWell","_objectsPond","_display"];
+private["_playerPos","_canDrink","_isPond","_isWell","_pondPos","_objectsWell","_objectsPond","_display","_infectionChance"];
 
 call gear_ui_init;
 _playerPos = getPosATL player;
@@ -7,6 +7,7 @@ _isPond = false;
 _isWell = false;
 _pondPos = [];
 _objectsWell = [];
+_infectionChance = 0.05; // Drinking from a well has a low chance of infection
 
 if (!_canDrink) then {
 	_objectsWell = nearestObjects [_playerPos, [], 4];
@@ -26,40 +27,28 @@ if (!_canDrink) then {
 			_pondPos = (_x worldToModel _playerPos) select 2;
 			if (_pondPos < 0) then {
 				_canDrink = true;
+				_infectionChance = 0.5; // Ponds should have a high chance of infection
 			};
 		};
 	} forEach _objectsPond;
 };
 
 if (_canDrink) then {
+    player playActionNow "PutDown";
+    dayz_lastDrink = time;
+    dayz_thirst = 0 max (dayz_thirst - round(SleepWater/3));
 
-		if ((floor (random 100) < 25)) then {
-		
-			player playActionNow "PutDown";
-			r_player_infected = true;
-			player setVariable["USEC_infected",true,true];
-			player setVariable ["messing",[dayz_hunger,dayz_thirst],true];
+    if ((random 1) < _infectionChance) then {
+        // Infect the player
+        r_player_infected = true;
+        player setVariable["USEC_infected",true,true];
+        player setVariable ["messing",[dayz_hunger,dayz_thirst],true];
+        cutText ["The water quenches your thirst but tastes strange; you begin to feel feverish.", "PLAIN DOWN"];
+    } else {
+        cutText ["The water quenches your thirst and you feel refreshed.", "PLAIN DOWN"];
+    };
 
-			dayz_lastDrink = time;
-			dayz_thirst = 0;
-
-			//Ensure Control is visible
-			_display = uiNamespace getVariable 'DAYZ_GUI_display';
-			(_display displayCtrl 1302) ctrlShow true;
-			//cutText ["Das Wasser ist lauwarm und schmeckt irgendwie komisch, aber dein Durst ist gestillt.", "PLAIN DOWN"];
-			cutText ["The water is warm and tastes kinda strange, but your thirst is quenched.", "PLAIN DOWN"];
-			
-		} else {
-			
-			player playActionNow "PutDown";
-			dayz_lastDrink = time;
-			dayz_thirst = 0;
-
-			//Ensure Control is visible
-			_display = uiNamespace getVariable 'DAYZ_GUI_display';
-			(_display displayCtrl 1302) ctrlShow true;
-			//cutText ["Das Wasser ist kühl und schmeckt etwas schal, aber dein Durst ist gestillt.", "PLAIN DOWN"];
-			cutText ["The water is cool and tastes a bit stale, but your thirst is quenched.", "PLAIN DOWN"];
-		};
-
+    //Ensure Control is visible
+    _display = uiNamespace getVariable 'DAYZ_GUI_display';
+    (_display displayCtrl 1302) ctrlShow true;
 };

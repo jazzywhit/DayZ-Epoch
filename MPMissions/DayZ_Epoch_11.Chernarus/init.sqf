@@ -19,50 +19,58 @@ enableRadio false;
 // May prevent "how are you civillian?" messages from NPC
 enableSentences false;
 
+// Set loot tables to be loaded from mission file
+DZE_MissionLootTable = true;
+
 // DayZ Epoch config
 spawnShoremode = 1; // Default = 1 (on shore)
 spawnArea= 1500; // Default = 1500
-
 MaxVehicleLimit = 150; // Default = 50
-MaxDynamicDebris = 100; // Default = 100
+MaxDynamicDebris = 20; // Default = 100
 dayz_MapArea = 14000; // Default = 10000
 dayz_maxLocalZombies = 30; // Default = 30 
-
 dayz_paraSpawn = false;
-
-dayz_minpos = -1; 
+dayz_minpos = -1;
 dayz_maxpos = 16000;
-
 dayz_sellDistance_vehicle = 10;
 dayz_sellDistance_boat = 30;
 dayz_sellDistance_air = 40;
-
-dayz_maxAnimals = 8; // Default: 8
+dayz_maxAnimals = 2; // Default: 8
 dayz_tameDogs = true;
 DZE_BuildOnRoads = false; // Default: False
+dayz_fullMoonNights = true;
 
 //self bloodbag
 DZE_SelfTransfuse = true;
 
-EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
-dayz_fullMoonNights = true;
+// Set up when crash events happen
+EpochEvents = [
+    ["any","any","any","any",15,"crash_spawner"],
+    ["any","any","any","any",30,"crash_spawner"],
+    ["any","any","any","any",45,"crash_spawner"],
+    ["any","any","any","any",0,"crash_spawner"]
+    ];
 
-///////////////////////////////////
-// Load in custom variables
-// complete before dayz_code to ensure custom variables are written first
-call compile preprocessFileLineNumbers "custom\code\variables.sqf";				//Initialize the Variables (IMPORTANT: Must happen very early)
-
-///////////////////////////////////
-//Load in compiled functions
+// - Variables
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initialize the Variables (IMPORTANT: Must happen very early)
+call compile preprocessFileLineNumbers "custom\code\variables.sqf";				//Initialize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;
+
+// - Event Handler
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";				//Initialize the publicVariable event handlers
 progressLoadingScreen 0.2;
+
+// - Medical Client
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
+
+// - Compiles
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";			//Compile regular functions
-call compile preprocessFileLineNumbers "custom\code\compiles.sqf"; 								//custom compiles for our own scripts
 progressLoadingScreen 0.5;
+call compile preprocessFileLineNumbers "custom\code\compiles.sqf"; 								//custom compiles for our own scripts
+progressLoadingScreen 0.7;
+
+// - Traders
 call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
 progressLoadingScreen 1.0;
 
@@ -81,29 +89,22 @@ if (!isDedicated) then {
 
 	//server credits
     [] execVM "custom\server_credits\Server_WelcomeCredits.sqf";
-
+	
+    //fixed point mining
+	[] execVM "custom\mining\init.sqf";
 
 	//Conduct map operations
 	0 fadeSound 0;
 	waitUntil {!isNil "dayz_loadScreenMsg"};
 	dayz_loadScreenMsg = (localize "STR_AUTHENTICATING");
 	
-	//Run the player monitor  ***Changing to add intro song
+	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
 	
-	//anti Hack *commented out for infistar*
-	//[] execVM "\z\addons\dayz_code\system\antihack.sqf";
-
-	//Lights
-	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
-	
 };
 
-//commented out for infistar
-//#include "\z\addons\dayz_code\system\REsec.sqf"
-
-//Start Dynamic Weather *commented out for custom time mod*
+//Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 //BIS Effects init

@@ -25,15 +25,15 @@ sleep 10; //Wait in seconds before the credits start after player IS ingame
 
 private ["_role1","_role1names","_role2","_role2names","_role3","_role3names","_role4","_role4names","_role5","_role5names"];
 _role1 = "Narrow Minded Gaming";
-_role1names = ["www.narrowmindedgaming.com", "twitter.com/narrowmgaming", "reddit.com/r/nmg/"];
-_role2 = "Bolt Action Hardcore v1.0.5";
+_role1names = ["narrowmindedgaming.com", "twitter.com/narrowmgaming", "reddit.com/r/nmg/"];
+_role2 = "Bolt Action Hardcore v1.0.7";
 _role2names = ["DayZ Epoch 1.0.5.1", "JSRS", "LandTex", "Blastcore"];
 _role3 = "True Hardcore";
 _role3names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders", "Custom Cities", "Realistic Loot"];
 _role4 = "Game Design / Operations";
-_role4names = ["Carbonoid","jesquik","NcA","Neb","Phobix"];
+_role4names = ["Carbonoid","jesquik","NcA","Neb","Phobix","Mist"];
 _role5 = "Community Support";
-_role5names = ["twitch.tv/mistydayz","twitch.tv/iconnorn"];
+_role5names = ["youtube.com/themistydayz","twitch.tv/iconnorn"];
 
 
 {

@@ -88,15 +88,30 @@ _base17 setDir 55.969147;
 // TODO get position before move in order to return them
 BlackMarketTrader setPos [(_coords select 0), (_coords select 1),0];
 
-// Wait 15 minutes and then warn player about impending departure
-[900,5] call DZMSSleep; // sleep 15 minutes
+private ["_veh1", "_vehicle", "_veh2", "_vehicle2"];
+//Create the vehicles
+_veh1 = ["small_nato"] call DZMSGetVeh;
+_vehicle = createVehicle [_veh1,[(_coords select 0) - 17.5078, (_coords select 1) + 5.2578,0],[], 0, "CAN_COLLIDE"];
+[_vehicle] call DZMSSetupVehicle;
 
-// Wait 10 minutes and then take the mission away
+_veh2 = ["large_nato"] call DZMSGetVeh;
+_vehicle2 = createVehicle [_veh2,[(_coords select 0) + 17.5078, (_coords select 1) - 5.2578,0],[], 0, "CAN_COLLIDE"];
+[_vehicle2] call DZMSSetupVehicle;
+
+// Wait 15 minutes and then warn player about impending departure
+[1800,5] call DZMSSleep; // sleep 30 minutes
+
+// Wait 15 minutes and then take the mission away
 [nil,nil,rTitleText,"The Black Market Trader is Packing Up Shop", "PLAIN",6] call RE;
-[600,5] call DZMSSleep;
+[900,5] call DZMSSleep;
 
 //Move the trader back to the original position
 BlackMarketTrader setPos [15500,850,0];
+
+//Call DZMSSaveVeh to attempt to save the vehicles to the database
+//If saving is off, the script will exit.
+[_vehicle] ExecVM DZMSSaveVeh;
+[_vehicle2] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Black Market Trader is Gone", "PLAIN",6] call RE;

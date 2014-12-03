@@ -20,7 +20,6 @@ _bpackList = [
     ];
 
 _gshellList = [
-	"HandGrenade_East",
 	"FlareWhite_GP25",
 	"FlareGreen_GP25",
 	"FlareRed_GP25",
@@ -29,7 +28,6 @@ _gshellList = [
 	"1Rnd_SMOKERED_GP25",
 	"1Rnd_SMOKEGREEN_GP25",
 	"1Rnd_SMOKEYELLOW_GP25",
-	"1Rnd_HE_GP25",
 	"SmokeShell",
 	"SmokeShellYellow",
 	"SmokeShellRed",
@@ -40,12 +38,10 @@ _gshellList = [
 	];
 
 _gshellListNATO = [
-	"HandGrenade_West",
 	"FlareWhite_M203",
 	"FlareGreen_M203",
 	"FlareRed_M203",
 	"FlareYellow_M203",
-	"1Rnd_HE_M203",
 	"1Rnd_Smoke_M203",
 	"1Rnd_SmokeRed_M203",
 	"1Rnd_SmokeGreen_M203",
@@ -80,7 +76,7 @@ if (_type == "medical") then {
 	for "_x" from 0 to 20 do {
 		_sSelect = floor(random _sCount);
 		_item = _medical select _sSelect;
-		_crate addMagazineCargoGlobal [_item,(round(random 2))];
+		_crate addMagazineCargoGlobal [_item,(floor(random 3))];
 	};
 };
 
@@ -93,8 +89,12 @@ if (_type == "weapons_nato") then {
 	for "_x" from 0 to 2 do {
 		_sSelect = floor(random _sCount);
 		_item = _gshellListNATO select _sSelect;
-		_crate addMagazineCargoGlobal [_item,(round(random 2))];
+		_crate addMagazineCargoGlobal [_item,(floor(random 7))];
 	};
+
+	// load grenades
+    _crate addMagazineCargoGlobal ["HandGrenade_West",(floor(random 3))];
+    _crate addMagazineCargoGlobal ["1Rnd_HE_M203",(floor(random 3))];
 
 	// load packs
 	_scount = count _bpackList;
@@ -112,8 +112,56 @@ if (_type == "weapons_nato") then {
 		_crate addWeaponCargoGlobal [_item,1];
 		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
 		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 8))];
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 9))];
 		};
+	};
+
+	//load SMG
+	_scount = count DZMSmgListNATO;
+	for "_x" from 0 to 1 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSmgListNATO select _sSelect;
+		_crate addWeaponCargoGlobal [_item,1];
+		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+		if (count _ammo > 0) then {
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
+		};
+	};
+
+	//load primary
+	_scount = count DZMSprimaryListNATO;
+	for "_x" from 0 to 2 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSprimaryListNATO select _sSelect;
+		_crate addWeaponCargoGlobal [_item,1];
+		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+		if (count _ammo > 0) then {
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
+		};
+	};
+};
+
+///////////////////////////////////////////////////////////////////
+// Weapon Crates NATO
+if (_type == "weapons_nato_high") then {
+	// load grenades
+	_scount = count _gshellListNATO;
+	for "_x" from 0 to 2 do {
+		_sSelect = floor(random _sCount);
+		_item = _gshellListNATO select _sSelect;
+		_crate addMagazineCargoGlobal [_item,(floor(random 9))];
+	};
+
+	// load grenades
+    _crate addMagazineCargoGlobal ["HandGrenade_West",(floor(random 5))];
+    _crate addMagazineCargoGlobal ["1Rnd_HE_M203",(floor(random 5))];
+
+	// load packs
+	_scount = count _bpackList;
+	for "_x" from 0 to 1 do {
+		_sSelect = floor(random _sCount);
+		_item = _bpackList select _sSelect;
+		_crate addBackpackCargoGlobal [_item,2];
 	};
 
 	//load sniper
@@ -124,33 +172,97 @@ if (_type == "weapons_nato") then {
 		_crate addWeaponCargoGlobal [_item,1];
 		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
 		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 2))];
-		};
-	};
-
-	//load mg
-	_scount = count DZMSmgListNATO;
-	for "_x" from 0 to 2 do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSmgListNATO select _sSelect;
-		_crate addWeaponCargoGlobal [_item,1];
-		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
-		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 6))];
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 3))];
 		};
 	};
 
 	//load primary
-	_scount = count DZMSprimaryListNATO;
-	for "_x" from 0 to 1 do {
+	_scount = count DZMSprimaryListNATOHigh;
+	for "_x" from 0 to 3 do {
 		_sSelect = floor(random _sCount);
-		_item = DZMSprimaryListNATO select _sSelect;
+		_item = DZMSprimaryListNATOHigh select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
 		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
 		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 4))];
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
 		};
 	};
+
+	//load primary
+	_scount = count DZMSmachinegunListNATO;
+	for "_x" from 0 to 1 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSmachinegunListNATO select _sSelect;
+		_crate addWeaponCargoGlobal [_item,1];
+		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+		if (count _ammo > 0) then {
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 3))];
+		};
+	};
+};
+
+///////////////////////////////////////////////////////////////////
+// Weapon Crates NATO
+// Use for drops where there will be a single box
+// Only use for Major Missions
+if (_type == "weapons_nato_drop") then {
+    for "_x" from 0 to 3 do {
+        // load grenades
+        _scount = count _gshellListNATO;
+        for "_x" from 0 to 2 do {
+            _sSelect = floor(random _sCount);
+            _item = _gshellListNATO select _sSelect;
+            _crate addMagazineCargoGlobal [_item,(floor(random 9))];
+        };
+
+        // load grenades
+        _crate addMagazineCargoGlobal ["HandGrenade_West",(floor(random 5))];
+        _crate addMagazineCargoGlobal ["1Rnd_HE_M203",(floor(random 5))];
+
+        // load packs
+        _scount = count _bpackList;
+        for "_x" from 0 to 1 do {
+            _sSelect = floor(random _sCount);
+            _item = _bpackList select _sSelect;
+            _crate addBackpackCargoGlobal [_item,2];
+        };
+
+        //load sniper
+        _scount = count DZMSsniperListNATO;
+        for "_x" from 0 to 1 do {
+            _sSelect = floor(random _sCount);
+            _item = DZMSsniperListNATO select _sSelect;
+            _crate addWeaponCargoGlobal [_item,1];
+            _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+            if (count _ammo > 0) then {
+                _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 3))];
+            };
+        };
+
+        //load primary
+        _scount = count DZMSprimaryListNATOHigh;
+        for "_x" from 0 to 3 do {
+            _sSelect = floor(random _sCount);
+            _item = DZMSprimaryListNATOHigh select _sSelect;
+            _crate addWeaponCargoGlobal [_item,1];
+            _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+            if (count _ammo > 0) then {
+                _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
+            };
+        };
+
+        //load primary
+        _scount = count DZMSmachinegunListNATO;
+        for "_x" from 0 to 1 do {
+            _sSelect = floor(random _sCount);
+            _item = DZMSmachinegunListNATO select _sSelect;
+            _crate addWeaponCargoGlobal [_item,1];
+            _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+            if (count _ammo > 0) then {
+                _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 3))];
+            };
+        };
+    };
 };
 
 ///////////////////////////////////////////////////////////////////
@@ -161,8 +273,12 @@ if (_type == "weapons") then {
 	for "_x" from 0 to 2 do {
 		_sSelect = floor(random _sCount);
 		_item = _gshellList select _sSelect;
-		_crate addMagazineCargoGlobal [_item,(round(random 2))];
+		_crate addMagazineCargoGlobal [_item,(floor(random 7))];
 	};
+
+    // load grenades
+    _crate addMagazineCargoGlobal ["HandGrenade_East",(floor(random 3))];
+    _crate addMagazineCargoGlobal ["1Rnd_HE_GP25",(floor(random 3))];
    
 	// load packs
 	_scount = count _bpackList;
@@ -180,43 +296,31 @@ if (_type == "weapons") then {
 		_crate addWeaponCargoGlobal [_item,1];
 		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
 		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 8))];
-		};
-	};
-
-	//load sniper
-	_scount = count DZMSsniperList;
-	for "_x" from 0 to 1 do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSsniperList select _sSelect;
-		_crate addWeaponCargoGlobal [_item,1];
-		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
-		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 2))];
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 9))];
 		};
 	};
 
 	//load mg
 	_scount = count DZMSmgList;
-	for "_x" from 0 to 2 do {
+	for "_x" from 0 to 1 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSmgList select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
 		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
 		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 6))];
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 7))];
 		};
 	};
 
 	//load primary
 	_scount = count DZMSprimaryList;
-	for "_x" from 0 to 1 do {
+	for "_x" from 0 to 3 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSprimaryList select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
 		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
 		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 4))];
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
 		};
 	};
 };
@@ -229,8 +333,12 @@ if (_type == "weapons_high") then {
 	for "_x" from 0 to 2 do {
 		_sSelect = floor(random _sCount);
 		_item = _gshellList select _sSelect;
-		_crate addMagazineCargoGlobal [_item,(round(random 2))];
+		_crate addMagazineCargoGlobal [_item,(floor(random 7))];
 	};
+
+    // load grenades
+    _crate addMagazineCargoGlobal ["HandGrenade_East",(floor(random 3))];
+    _crate addMagazineCargoGlobal ["1Rnd_HE_GP25",(floor(random 3))];
 
 	// load packs
 	_scount = count _bpackList;
@@ -238,18 +346,6 @@ if (_type == "weapons_high") then {
 		_sSelect = floor(random _sCount);
 		_item = _bpackList select _sSelect;
 		_crate addBackpackCargoGlobal [_item,1];
-	};
-
-	// load pistols
-	_scount = count DZMSpistolList;
-	for "_x" from 0 to 2 do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSpistolList select _sSelect;
-		_crate addWeaponCargoGlobal [_item,1];
-		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
-		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 8))];
-		};
 	};
 
 	//load sniper
@@ -260,31 +356,31 @@ if (_type == "weapons_high") then {
 		_crate addWeaponCargoGlobal [_item,1];
 		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
 		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 2))];
-		};
-	};
-
-	//load mg
-	_scount = count DZMSmgList;
-	for "_x" from 0 to 2 do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSmgList select _sSelect;
-		_crate addWeaponCargoGlobal [_item,1];
-		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
-		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 6))];
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 3))];
 		};
 	};
 
 	//load primary
-	_scount = count DZMSprimaryList;
-	for "_x" from 0 to 1 do {
+	_scount = count DZMSprimaryListHigh;
+	for "_x" from 0 to 3 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSprimaryListHigh select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
 		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
 		if (count _ammo > 0) then {
-			_crate addMagazineCargoGlobal [(_ammo select 0),(round(random 4))];
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
+		};
+	};
+
+	//load primary
+	_scount = count DZMSmachinegunList;
+	for "_x" from 0 to 1 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSmachinegunList select _sSelect;
+		_crate addWeaponCargoGlobal [_item,1];
+		_ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+		if (count _ammo > 0) then {
+			_crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
 		};
 	};
 };
@@ -294,7 +390,7 @@ if (_type == "weapons_high") then {
 if (_type == "supply") then {
 	// load tools
 	_scount = count DZMSConTools;
-	for "_x" from 0 to 2 do {
+	for "_x" from 0 to 4 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConTools select _sSelect;
 		_crate addWeaponCargoGlobal [_item, 1];
@@ -302,7 +398,7 @@ if (_type == "supply") then {
 	
 	// load construction
 	_scount = count DZMSConSupply;
-	for "_x" from 0 to 15 do {
+	for "_x" from 0 to 25 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConSupply select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
@@ -311,7 +407,7 @@ if (_type == "supply") then {
 	// load locks
 	_spawnChance = 30;
 	_scount = count DZMSConLock;
-	for "_x" from 0 to 1 do {
+	for "_x" from 0 to 2 do {
 		_spawnRoll = floor(random(100)+1);
 		if (_spawnRoll <= _spawnChance) then {
 			_sSelect = floor(random _sCount);
@@ -326,7 +422,7 @@ if (_type == "supply") then {
 if (_type == "supply_high") then {
 	// load tools
 	_scount = count DZMSConTools;
-	for "_x" from 0 to 3 do {
+	for "_x" from 0 to 6 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConTools select _sSelect;
 		_crate addWeaponCargoGlobal [_item, 1];
@@ -334,24 +430,24 @@ if (_type == "supply_high") then {
 
 	// load construction
 	_scount = count DZMSConSupply;
-	for "_x" from 0 to 15 do {
+	for "_x" from 0 to 35 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConSupply select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
 	};
 
 	// load high end construction supply
-	_scount = count DZMSBuildingSupply;
-	for "_x" from 0 to 15 do {
+	_scount = count DZMSConSupplyHigh;
+	for "_x" from 0 to 10 do {
 		_sSelect = floor(random _sCount);
-		_item = DZMSBuildingSupply select _sSelect;
+		_item = DZMSConSupplyHigh select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
 	};
 
 	// load locks
 	_spawnChance = 30;
 	_scount = count DZMSConLock;
-	for "_x" from 0 to 1 do {
+	for "_x" from 0 to 3 do {
 		_spawnRoll = floor(random(100)+1);
 		if (_spawnRoll <= _spawnChance) then
 		{
@@ -372,6 +468,42 @@ if (_type == "money") then {
 		_item = _money select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
 	};
+
+    //load sniper
+    _scount = count DZMSsniperList;
+    for "_x" from 0 to 1 do {
+        _sSelect = floor(random _sCount);
+        _item = DZMSsniperList select _sSelect;
+        _crate addWeaponCargoGlobal [_item,1];
+        _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+        if (count _ammo > 0) then {
+            _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 3))];
+        };
+    };
+
+    //load primary
+    _scount = count DZMSprimaryListHigh;
+    for "_x" from 0 to 2 do {
+        _sSelect = floor(random _sCount);
+        _item = DZMSprimaryListHigh select _sSelect;
+        _crate addWeaponCargoGlobal [_item,1];
+        _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+        if (count _ammo > 0) then {
+            _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
+        };
+    };
+
+    //load primary
+    _scount = count DZMSmachinegunList;
+    for "_x" from 0 to 1 do {
+        _sSelect = floor(random _sCount);
+        _item = DZMSmachinegunList select _sSelect;
+        _crate addWeaponCargoGlobal [_item,1];
+        _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+        if (count _ammo > 0) then {
+            _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
+        };
+    };
 };
 
 ///////////////////////////////////////////////////////////////////
@@ -384,4 +516,40 @@ if (_type == "hemp") then {
 		_item = _hemp select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
 	};
+
+    //load sniper
+    _scount = count DZMSsniperList;
+    for "_x" from 0 to 1 do {
+        _sSelect = floor(random _sCount);
+        _item = DZMSsniperList select _sSelect;
+        _crate addWeaponCargoGlobal [_item,1];
+        _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+        if (count _ammo > 0) then {
+            _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 3))];
+        };
+    };
+
+    //load primary
+    _scount = count DZMSprimaryListHigh;
+    for "_x" from 0 to 2 do {
+        _sSelect = floor(random _sCount);
+        _item = DZMSprimaryListHigh select _sSelect;
+        _crate addWeaponCargoGlobal [_item,1];
+        _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+        if (count _ammo > 0) then {
+            _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
+        };
+    };
+
+    //load primary
+    _scount = count DZMSmachinegunList;
+    for "_x" from 0 to 1 do {
+        _sSelect = floor(random _sCount);
+        _item = DZMSmachinegunList select _sSelect;
+        _crate addWeaponCargoGlobal [_item,1];
+        _ammo = [] + getArray (configFile >> "cfgWeapons" >> _item >> "magazines");
+        if (count _ammo > 0) then {
+            _crate addMagazineCargoGlobal [(_ammo select 0),(floor(random 5))];
+        };
+    };
 };

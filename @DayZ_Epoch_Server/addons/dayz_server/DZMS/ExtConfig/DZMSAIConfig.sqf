@@ -38,7 +38,6 @@ DZMSNatoSkins = [
     "CZ_Special_Forces_GL_DES_EP1_DZ",
     "FR_OHara_DZ",
     "FR_Rodriguez_DZ",
-    "CZ_Soldier_Sniper_EP1_DZ",
     "Graves_Light_DZ",
     "INS_Soldier_AR_DZ",
     "INS_Soldier_CO_DZ"
@@ -84,6 +83,7 @@ DZMSSkills2 = [
 	["commanding",0.70,0.90],
 	["general",0.70,0.90]
 ];
+DZMSSkills1 = DZMSSkills2; //Make Survivors as difficult as bandits
 
 DZMSSkills3 = [	
 	["aimingAccuracy",0.20,0.25],
@@ -104,7 +104,6 @@ DZMSSkills3 = [
 DZMS_Rifles = [
 		"AK_47_M",
 		"AK_47_S",
-		"Sa58V_RCO_EP1",
 		"Sa58V_CCO_EP1",
 		"RPK_74",
 		"AK_107_PSO",

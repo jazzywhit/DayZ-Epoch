@@ -139,16 +139,6 @@ if (true) then
   _this setPos [983.76953, 2129.5732, 0.10398678];
 };
 
-_vehicle_76 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Mi17_UN_CDF_EP1", [996.953, 2092.9392, -0.11845342], [], 0, "CAN_COLLIDE"];
-  _vehicle_76 = _this;
-  _this setDir 17.301561;
-  _this setVehicleLock "LOCKED";
-  _this setPos [996.953, 2092.9392, -0.11845342];
-};
-
 _vehicle_81 = objNull;
 if (true) then
 {

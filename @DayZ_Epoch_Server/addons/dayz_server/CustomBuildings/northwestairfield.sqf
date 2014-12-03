@@ -639,15 +639,6 @@ if (true) then
   _this setPos [4655.1284, 9592.1992];
 };
 
-_vehicle_338 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Barrels", [4658.3291, 9591.7637], [], 0, "CAN_COLLIDE"];
-  _vehicle_338 = _this;
-  _this setDir 10.566526;
-  _this setPos [4658.3291, 9591.7637];
-};
-
 _vehicle_343 = objNull;
 if (true) then
 {
@@ -793,15 +784,6 @@ if (true) then
   _vehicle_386 = _this;
   _this setDir 59.024704;
   _this setPos [4640.8291, 10462.85, 6.1035156e-005];
-};
-
-_vehicle_387 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Barrels", [4641.3379, 10489.758, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_387 = _this;
-  _this setDir 19.212036;
-  _this setPos [4641.3379, 10489.758, -3.0517578e-005];
 };
 
 _vehicle_388 = objNull;

@@ -69,24 +69,28 @@ DZMSmgList = [
 
 // Primary Rifles
 DZMSprimaryListNATO = [
-        "G36K",
-        "G36K_camo",
-        "m8_SAW",
-		"G36C_camo",
-		"G36_C_SD_eotech",
-		"G36_C_SD_camo",
-		"MG36",
-		"MG36_camo",
+        "G36C_camo",
+        "G36_C_SD_eotech",
+        "G36_C_SD_camo",
 		"M16A2GL",
 		"m16a4",
 		"M16A4_GL",
 		"M4A1_Aim",
 		"M4A1_Aim_camo",
 		"M4A1_AIM_SD_camo",
+		"M4A3_CCO_EP1"
+		];
+
+// Primary Rifles
+DZMSprimaryListNATOHigh = [
+        "G36K",
+        "G36K_camo",
+		"G36C_camo",
+		"G36_C_SD_eotech",
+		"G36_C_SD_camo",
 		"M4A1_HWS_GL_SD_camo",
 		"M4A1_HWS_GL_camo",
 		"M4A1_HWS_GL",
-		"M4A3_CCO_EP1",
 		"m8_holo_sd",
         "m8_carbine",
 		"m8_carbineGL",
@@ -94,8 +98,21 @@ DZMSprimaryListNATO = [
 		"BAF_L85A2_UGL_Holo",
 		"M4A1_HWS_GL_SD_Camo",
 		"SCAR_L_CQC_Holo",
-		"SCAR_L_CQC_CCO_SD"
+		"SCAR_L_CQC_CCO_SD",
+		"SCAR_L_STD_HOLO",
+		"SCAR_L_CQC"
 		];
+
+// NATO Machine Guns
+DZMSmachinegunListNATO = [
+        "M8_SAW",
+        "MG36_camo",
+        "M60A4_EP1",
+        "MG36",
+        "M249",
+        "M240",
+        "M249_m145_EP1"
+        ];
 
 // Primary Rifles
 DZMSprimaryList = [
@@ -112,11 +129,15 @@ DZMSprimaryListHigh = [
 		"AKS_GOLD",
 		"AK_47_M",
 		"AK_47_S",
-		"Sa58V_RCO_EP1",
 		"Sa58V_CCO_EP1",
-		"RPK_74",
 		"Sa58P_EP1",
 		"Sa58V_EP1"
+		];
+
+// Machine Guns BRIC
+DZMSmachinegunList = [
+		"PK",
+		"RPK_74"
 		];
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -133,6 +154,7 @@ DZMSConSupply = [
 	"ItemTankTrap",
 	"PartGeneric",
 	"ItemPole",
+	"ItemCanvas",
 	"PartPlywoodPack",
 	"PartPlankPack",
 	"PartPlywoodPack",
@@ -147,9 +169,10 @@ DZMSConSupply = [
 
 DZMSConLock = ["ItemComboLock"];
 
-DZMSBuildingSupply = [
-	"PartPlywoodPack",
-	"ItemPole",
-	"PartPlankPack",
+DZMSConSupplyHigh = [
+	"bulk_PartGeneric",
+	"bulk_ItemSandbag",
+	"bulk_ItemTankTrap",
+	"bulk_ItemWire",
 	"CinderBlocks"
 	];

@@ -33,14 +33,10 @@ if (!isDedicated) then {
 	ckc_upddoor    =    compile preprocessFileLineNumbers "custom\ckc\ckc_upddoor.sqf";
 	ckc_updSafe    =    compile preprocessFileLineNumbers "custom\ckc\ckc_updSafe.sqf";
 
-	// custom fire making (can use lumber)
-	player_makeFire =	compile preprocessFileLineNumbers "custom\code\player_makefire.sqf";
-
 	// custom harvest to allow lumber to come from trees
 	player_harvest =	compile preprocessFileLineNumbers "custom\code\player_harvest.sqf";
 	
 	//Snap build pro
-	
 	player_build = compile preprocessFileLineNumbers "custom\snap_pro\player_build.sqf";
 	snap_build = compile preprocessFileLineNumbers "custom\snap_pro\snap_build.sqf";
 	dayz_spaceInterrupt = compile preprocessFileLineNumbers "custom\code\dayz_spaceInterrupt.sqf";
@@ -57,7 +53,25 @@ if (!isDedicated) then {
 	//right click options
 	call compile preprocessFileLineNumbers "custom\rightclickoptions\init.sqf";
 
-	//Custom Harves Plant
+	//Custom Harvest Plant
 	player_harvestPlant =		compile preprocessFileLineNumbers "custom\code\player_harvestPlant.sqf";
+
+	//Custom Remove Object
+	player_removeObject =			compile preprocessFileLineNumbers "custom\code\remove.sqf";
+
+	//Custom Spawn Check
+	player_spawnCheck = 			compile preprocessFileLineNumbers "custom\code\player_spawnCheck.sqf";
+
+	//Custom Drink/Eat
+	player_eat =				compile preprocessFileLineNumbers "custom\code\player_eat.sqf";
+	player_drink =				compile preprocessFileLineNumbers "custom\code\player_drink.sqf";
+
+	// JSRS Fix
+	world_surfaceNoise =		compile preprocessFileLineNumbers "custom\code\fn_surfaceNoise.sqf";
+
+	// Spawn Loot
+	spawn_loot =				compile preprocessFileLineNumbers "custom\code\spawn_loot.sqf";
+	building_spawnLoot =	    compile preprocessFileLineNumbers "custom\code\building_spawnLoot.sqf";
+	spawn_loot_small =          compile preprocessFileLineNumbers "custom\code\spawn_loot_small.sqf";
 
 };

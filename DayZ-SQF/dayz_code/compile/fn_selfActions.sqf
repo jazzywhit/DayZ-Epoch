@@ -714,7 +714,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 
 
     //Sleep
-	if(_isTent && _ownerID == dayz_characterID) then {
+	if(_isTent) then {
 		if ((s_player_sleep < 0) && (player distance _cursorTarget < 3)) then {
 			s_player_sleep = player addAction [localize "str_actions_self_sleep", "\z\addons\dayz_code\actions\player_sleep.sqf",_cursorTarget, 0, false, true, "",""];
 		};

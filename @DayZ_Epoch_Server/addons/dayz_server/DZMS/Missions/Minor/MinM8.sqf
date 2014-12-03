@@ -3,7 +3,7 @@
 	Updated to new format by Vampire
 */
 
-private ["_missName","_coords","_net","_veh1","_veh2","_vehicle","_vehicle1","_crate"];
+private ["_missName","_coords","_net","_veh1","_vehicle","_crate","_crate1"];
 
 //Name of the Mission
 _missName = "Medical Cache";
@@ -21,22 +21,17 @@ _net = createVehicle ["Land_CamoNetB_NATO",[(_coords select 0) - 0.0649, (_coord
 [_net] call DZMSProtectObj;
 
 //We create the vehicles like normal
-_veh1 = ["small"] call DZMSGetVeh;
-_veh2 = ["large"] call DZMSGetVeh;
+_veh1 = ["small_bandit"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) + 10.0303, (_coords select 1) - 12.2979,10],[], 0, "CAN_COLLIDE"];
-_vehicle1 = createVehicle [_veh2,[(_coords select 0) - 6.2764, (_coords select 1) - 14.086,10],[], 0, "CAN_COLLIDE"];
-
-//DZMSSetupVehicle prevents the vehicle from disappearing and sets fuel and such
 [_vehicle] call DZMSSetupVehicle;
-[_vehicle1] call DZMSSetupVehicle;
-
-_crate = createVehicle ["USVehicleBox",_coords,[], 0, "CAN_COLLIDE"];
-_crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) - 3.7251,(_coords select 1) - 2.3614, 0],[], 0, "CAN_COLLIDE"];
 
 //DZMSBoxFill fills the box, DZMSProtectObj prevents it from disappearing
+_crate = createVehicle ["USVehicleBox",_coords,[], 0, "CAN_COLLIDE"];
 [_crate,"medical"] ExecVM DZMSBoxSetup;
-[_crate1,"weapons"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
+
+_crate1 = createVehicle ["USLaunchersBox",[(_coords select 0) - 3.7251,(_coords select 1) - 2.3614, 0],[], 0, "CAN_COLLIDE"];
+[_crate1,"weapons"] ExecVM DZMSBoxSetup;
 [_crate1] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
@@ -56,7 +51,6 @@ sleep 5;
 //Call DZMSSaveVeh to attempt to save the vehicles to the database
 //If saving is off, the script will exit.
 [_vehicle] ExecVM DZMSSaveVeh;
-[_vehicle1] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Medical Cache is Under Survivor Control!", "PLAIN",6] call RE;

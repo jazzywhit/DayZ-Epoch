@@ -6,18 +6,18 @@ class Category_662 {
 	};
 	class ItemTankTrap {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 	class ItemTentOld {
 		type = "trade_items";
-		buy[] = {4,"ItemSilverBar10oz"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		buy[] = {1,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
 	};
 	class ItemWire {
 		type = "trade_items";
-		buy[] = {6,"ItemSilverBar"};
-		sell[] = {3,"ItemSilverBar"};
+		buy[] = {1,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
 	};
 	class 30m_plot_kit {
 		type = "trade_items";
@@ -32,17 +32,17 @@ class Category_662 {
     class ItemLockbox {
         type = "trade_items";
         buy[] = {1,"ItemBriefcase100oz"};
-        sell[] = {5,"ItemGoldBar"};
+        sell[] = {1,"ItemBriefcase100oz"};
     };
 	class ItemTentDomed {
 		type = "trade_items";
-		buy[] = {6,"ItemSilverBar10oz"};
-		sell[] = {3,"ItemSilverBar10oz"};
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 	class ItemTentDomed2 {
 		type = "trade_items";
-		buy[] = {6,"ItemSilverBar10oz"};
-		sell[] = {3,"ItemSilverBar10oz"};
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 	class ItemLightBulb {
 		type = "trade_items";
@@ -68,39 +68,24 @@ class Category_508 {
 	};
 	class ItemTankTrap {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 	class ItemTentOld {
 		type = "trade_items";
-		buy[] = {4,"ItemSilverBar10oz"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		buy[] = {1,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
 	};
 	class ItemWire {
 		type = "trade_items";
-		buy[] = {6,"ItemSilverBar"};
-		sell[] = {3,"ItemSilverBar"};
+		buy[] = {1,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
 	};
 	class 30m_plot_kit {
 		type = "trade_items";
 		buy[] = {6,"ItemGoldBar10oz"};
 		sell[] = {6,"ItemGoldBar10oz"};
 	};
-	class ItemCorrugated {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class ItemPole {
-		type = "trade_items";
-		buy[] = {1,"ItemSilverBar10oz"};
-		sell[] = {5,"ItemSilverBar"};
-	};
-    class ItemCanvas {
-        type = "trade_items";
-        buy[] = {1,"ItemSilverBar10oz"};
-        sell[] = {5,"ItemSilverBar"};
-    };
 	class ItemVault {
 		type = "trade_items";
 		buy[] = {3,"ItemBriefcase100oz"};
@@ -109,17 +94,17 @@ class Category_508 {
     class ItemLockbox {
         type = "trade_items";
         buy[] = {1,"ItemBriefcase100oz"};
-        sell[] = {5,"ItemGoldBar"};
+        sell[] = {1,"ItemBriefcase100oz"};
     };
 	class ItemTentDomed {
 		type = "trade_items";
-		buy[] = {6,"ItemSilverBar10oz"};
-		sell[] = {3,"ItemSilverBar10oz"};
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 	class ItemTentDomed2 {
 		type = "trade_items";
-		buy[] = {6,"ItemSilverBar10oz"};
-		sell[] = {3,"ItemSilverBar10oz"};
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 	class ItemLightBulb {
 		type = "trade_items";

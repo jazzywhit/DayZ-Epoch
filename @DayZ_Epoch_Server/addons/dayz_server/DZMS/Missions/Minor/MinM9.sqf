@@ -3,7 +3,7 @@
 	Updated to New Format by Vampire
 */
 
-private ["_missName","_coords","_crash","_body","_body1","_body2","_body3","_veh1","_vehicle","_vehicle1","_crate","_crate2"];
+private ["_missName","_coords","_crash","_body","_body1","_body2","_body3","_veh1","_vehicle","_crate","_crate2"];
 
 //Name of the Mission
 _missName = "Ural Ambush";
@@ -11,7 +11,7 @@ _missName = "Ural Ambush";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have Ambushed a Ural Carrying Supplies!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Bandits have Ambushed a Ural Carrying Medical Supplies and Weapons!", "PLAIN",10] call RE;
 
 //DZMSAddMinMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMinMarker;
@@ -38,10 +38,8 @@ _body3 setDir 23.664057;
 [_body3] call DZMSProtectObj;
 
 //We create the vehicles like normal
-_veh1 = ["small"] call DZMSGetVeh;
+_veh1 = ["small_bandit"] call DZMSGetVeh;
 _vehicle = createVehicle [_veh1,[(_coords select 0) + 5.7534, (_coords select 1) - 9.2149,0],[], 0, "CAN_COLLIDE"];
-
-//DZMSSetupVehicle prevents the vehicle from disappearing and sets fuel and such
 [_vehicle] call DZMSSetupVehicle;
 
 //DZMSBoxFill fills the box, DZMSProtectObj prevents it from disappearing
@@ -51,14 +49,9 @@ _crate = createVehicle ["USBasicWeaponsBox",[(_coords select 0) + 2.6778,(_coord
 _crate setDir -28.85478;
 
 _crate2 = createVehicle ["USBasicWeaponsBox",[(_coords select 0) + 1.4805,(_coords select 1) - 3.7432,0],[], 0, "CAN_COLLIDE"];
-[_crate2,"medical"] ExecVM DZMSBoxSetup;
+[_crate2,"weapons"] ExecVM DZMSBoxSetup;
 [_crate2] call DZMSProtectObj;
 _crate2 setDir 62.744293;
-
-_crate3 = createVehicle ["USBasicAmmunitionBox",[(_coords select 0) + 2.5405,(_coords select 1) - 4.1612,0],[], 0, "CAN_COLLIDE"];
-[_crate3,"weapons"] ExecVM DZMSBoxSetup;
-[_crate3] call DZMSProtectObj;
-_crate3 setDir -27.93351;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]

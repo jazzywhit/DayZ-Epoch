@@ -1178,7 +1178,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=16;
+		items=18;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1292,6 +1292,22 @@ class Mission
 			text="Trader City Sosnovy";
 			type="mil_circle";
 			colorName="ColorBlack";
+		};
+		class Item16
+		{
+			position[]={ 1944.09, 0, 9136.59};
+            name="Mine1";
+            text="Mining Node";
+            type="mil_dot";
+            colorName="ColorBlack";
+		};
+		class Item17
+		{
+			position[]={ 13273.093, 0, 6099.0747};
+            name="Mine2";
+            text="Mining Node";
+            type="mil_dot";
+            colorName="ColorBlack";
 		};
 	};
 	class Sensors

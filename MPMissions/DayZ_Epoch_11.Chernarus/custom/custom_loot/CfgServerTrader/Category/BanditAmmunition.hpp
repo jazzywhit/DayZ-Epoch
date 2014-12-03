@@ -1,8 +1,8 @@
 class Category_577 {
 	class 75Rnd_545x39_RPK {
 		type = "trade_items";
-		buy[] = {8,"ItemSilverBar10oz"};
-		sell[] = {8,"ItemSilverBar10oz"};
+		buy[] = {3, "itemGoldBar"};
+		sell[] = {1, "itemGoldBar"};
 	};
     class 100Rnd_762x54_PK {
         type = "trade_items";
@@ -33,5 +33,15 @@ class Category_577 {
         type = "trade_items";
         buy[] = {5,"ItemGoldBar"};
         sell[] = {5,"ItemGoldBar"};
+    };
+    class HandGrenade_east {
+        type = "trade_items";
+        buy[] = {4,"ItemGoldBar"};
+        sell[] = {2,"ItemGoldBar"};
+    };
+    class 1Rnd_HE_GP25 {
+        type = "trade_items";
+        buy[] = {4,"ItemGoldBar"};
+        sell[] = {2,"ItemGoldBar"};
     };
 };

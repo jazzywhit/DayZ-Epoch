@@ -57,8 +57,6 @@ if (!_isBuried) then {
         { _box addMagazineCargoGlobal [_x ,1] } forEach magazines _corpse;
         _box addMagazineCargoGlobal ["FoodbaconRaw",1]; //Add Food
 		if (_isPlayer) then {
-		    cutText ["You have documented your kill, someone will want to see this...", "PLAIN DOWN"];
-			_box addWeaponCargoGlobal ["Kostey_notebook",1]; //Add Kill Record
 			_humanity_value = -500;
 		};
 		

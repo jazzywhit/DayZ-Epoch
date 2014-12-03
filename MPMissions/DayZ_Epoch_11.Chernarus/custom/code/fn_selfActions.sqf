@@ -4,7 +4,7 @@ scriptName "Functions\misc\fn_selfActions.sqf";
 	- Function
 	- [] call fnc_usec_selfActions;
 ************************************************************/
-private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasToolbox","_canIgnite","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isBuilding","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
+private ["_isWreckBuilding","_temp_keys","_magazinesPlayer","_isPZombie","_vehicle","_inVehicle","_hasFuelE","_hasRawMeat","_hasKnife","_hasRazor","_hasEtool","_hasScrap","_hasRuby","_hasCrowbar","_hasPole","_hasToolbox","_canIgnite","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isBuilding","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_playersNear","_findNearestGens","_findNearestGen","_IsNearRunningGen","_cursorTarget","_isnewstorage","_itemsPlayer","_ownerKeyId","_typeOfCursorTarget","_hasKey","_oldOwner","_combi","_breakin","_key_colors","_player_deleteBuild","_player_flipveh","_player_lockUnlock_crtl","_player_butcher","_player_studybody","_player_cook","_player_boil","_hasFuelBarrelE","_hasHotwireKit","_hasETool","_player_SurrenderedGear","_isSurrendered","_isModular","_isModularDoor","_ownerKeyName","_temp_keys_names","_hasAttached","_allowTow","_liftHeli","_found","_posL","_posC","_height","_liftHelis","_attached"];
 
 if (DZE_ActionInProgress) exitWith {}; // Do not allow if any script is running.
 
@@ -51,7 +51,7 @@ if (DZE_HeliLift) then {
 };
 
 if(DZE_HaloJump) then {
-	if(_inVehicle && (_vehicle isKindOf "Air") && ((([_vehicle] call FNC_getPos) select 2) > 400)) then {
+	if(_inVehicle && (_vehicle isKindOf "Air") && ((([_vehicle] call FNC_getPos) select 2) > 250)) then {
 		if (s_halo_action < 0) then {
 			DZE_myHaloVehicle = _vehicle;
 			s_halo_action = DZE_myHaloVehicle addAction [localize "STR_EPOCH_ACTIONS_HALO","\z\addons\dayz_code\actions\halo_jump.sqf",[],2,false,true,"",""];
@@ -165,7 +165,14 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	} count _itemsPlayer;
 
 	_hasKnife = 	"ItemKnife" in _itemsPlayer;
+	_hasRazor = 	"ItemTrashRazor" in _magazinesPlayer;
 	_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
+	_hasRuby =	"ItemRuby" in _magazinesPlayer; //Added items for mist breakin
+	_hasPole =	"ItemPole" in _magazinesPlayer;
+	_hasCrowbar =	"ItemCrowbar" in _itemsPlayer;
+	_hasScrap =	"PartGeneric" in _magazinesPlayer;
+	_hasEtool =	"ItemEtool" in _itemsPlayer;
+
 	_canIgnite = (("ItemJerrycan" in _magazinesPlayer) || ("ItemFuelBarrel" in _magazinesPlayer))  && ("ItemMatchbox_DZE" in weapons player);
 
 	_isMan = _cursorTarget isKindOf "Man";
@@ -176,6 +183,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_isZombie = _cursorTarget isKindOf "zZombie_base";
 	_isDestructable = _cursorTarget isKindOf "BuiltItems";
 	_isWreck = _typeOfCursorTarget in DZE_isWreck;
+	_isGarbage = _typeOfCursorTarget in DZE_isGarbage;
 	_isWreckBuilding = _typeOfCursorTarget in DZE_isWreckBuilding;
 	_isModular = _cursorTarget isKindOf "ModularItems";
 	_isModularDoor = _typeOfCursorTarget in ["Land_DZE_WoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_GarageWoodDoor","CinderWallDoor_DZ","CinderWallDoorSmall_DZ"];
@@ -250,6 +258,11 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 				_player_deleteBuild = true;
 			};
 		};
+
+		//Allow player to search garbage
+        if(_isGarbage) then {
+            _player_deleteBuild = true;
+        };
 		
 		///Allow owners to delete modulars (Changed for Plot management)
 if(_isModular) then {
@@ -472,7 +485,7 @@ if(_isModularDoor) then {
 	if (!_isAlive) then {
 
 		// Gut animal/zed
-		if((_isAnimal || _isZombie) && _hasKnife) then {
+		if((_isAnimal || _isZombie) && ( _hasKnife || _hasRazor )) then {
 			_isHarvested = _cursorTarget getVariable["meatHarvested",false];
 			if (!_isHarvested) then {
 				_player_butcher = true;
@@ -502,7 +515,7 @@ if(_isModularDoor) then {
 			if(_isZombie) then {
 				s_player_butcher = player addAction [localize "STR_EPOCH_ACTIONS_GUTZOM", "\z\addons\dayz_code\actions\gather_zparts.sqf",_cursorTarget, 0, true, true, "", ""];
 			} else {
-				s_player_butcher = player addAction [localize "str_actions_self_04", "\z\addons\dayz_code\actions\gather_meat.sqf",_cursorTarget, 3, true, true, "", ""];
+				s_player_butcher = player addAction [localize "str_actions_self_04", "custom\code\gather_meat.sqf",_cursorTarget, 3, true, true, "", ""];
 			};
 		};
 	} else {
@@ -642,19 +655,16 @@ if(_isModularDoor) then {
 	_unlockedVault = ["VaultStorage"];
 
 	if(typeOf(cursortarget) in _unlockedVault && _ownerID != "0" && (player distance _cursorTarget < 2)) then {
-	
-	if (s_player_Safe_ckc < 0) then {
-	if ((typeOf(cursortarget) == "VaultStorage") &&(_ownerID == dayz_combination || _ownerID == dayz_playerUID)  ) then {
-     
-				
-			s_player_Safe_ckc = player addaction["Set new Code", "custom\ckc\ckc_startSafeUI.sqf","",1,false,true,"", ""];
-		};
+        if (s_player_Safe_ckc < 0) then {
+            if ((typeOf(cursortarget) == "VaultStorage") &&(_ownerID == dayz_combination || _ownerID == dayz_playerUID)  ) then {
+                s_player_Safe_ckc = player addaction["Set new Code", "custom\ckc\ckc_startSafeUI.sqf","",1,false,true,"", ""];
+            };
 		};
 	} else {
 		player removeAction s_player_Safe_ckc;
 		s_player_Safe_ckc = -1;
-
 	};
+
 	//Allow owner to unlock vault
 	if((_typeOfCursorTarget in DZE_LockableStorage) && _ownerID != "0" && (player distance _cursorTarget < 3)) then {
 		if (s_player_unlockvault < 0) then {
@@ -663,6 +673,9 @@ if(_isModularDoor) then {
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_OPEN",_text], "\z\addons\dayz_code\actions\vault_unlock.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				} else {
+					if(_cursorTarget isKindOf "ItemLockbox") && _hasRuby && _hasPole && _hasCrowbar && _hasScrap && _hasEtool && _hasRazor && _hasKnife && _hasToolbox then {	//Mist lockbox breakin				
+						_breakin = player addAction ["<t color='#FF0000'>Break in</t>", "custom\Lockboxcrack\breakin.sqf",_cursorTarget, 0, false, true, "",""];
+					}
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_UNLOCK",_text], "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				};
@@ -849,7 +862,7 @@ if(_isModularDoor) then {
     //Sleep
 	if(_isTent && _ownerID == dayz_characterID) then {
 		if ((s_player_sleep < 0) && (player distance _cursorTarget < 3)) then {
-			s_player_sleep = player addAction [localize "str_actions_self_sleep", "\z\addons\dayz_code\actions\player_sleep.sqf",_cursorTarget, 0, false, true, "",""];
+			s_player_sleep = player addAction [localize "str_actions_self_sleep", "custom\code\player_sleep.sqf",_cursorTarget, 0, false, true, "",""];
 		};
 	} else {
 		player removeAction s_player_sleep;

@@ -1,6 +1,6 @@
 /* ********************************************************************************* */
 /* *******************Developer : infiSTAR (infiSTAR23@gmail.com)******************* */
-/* ******************Copyright © 2014 infiSTAR all rights reserved****************** */
+/* ******************Copyright ï¿½ 2014 infiSTAR all rights reserved****************** */
 /* *********************************www.infiSTAR.de********************************* */
 /* ********************************************************************************* */
 /*  infiSTAR.de .dll path */  infiSTAR_DLL_PATH = "";    /* "" == empty == arma2oa directory */
@@ -141,7 +141,7 @@ _dayzActions =
 	"s_player_lockunlock","s_vehicle_lockunlock","s_player_toggleSnap","s_player_toggleSnapSelect","s_player_toggleSnapSelectPoint",
 	"s_player_evacCall","s_player_makeEvacChopper","s_player_clearEvacChopper",
 	"s_player_deploybike2","s_player_deploymoped","s_player_deploymoped2","s_player_deploymozzie","s_player_deploymozzie2",
-	"s_player_bury_human", "s_player_igniteVehicle", "s_player_igniteBuilding"
+	"s_player_bury_human", "s_player_igniteVehicle", "s_player_igniteBuilding", "s_player_mining", "s_player_mine", "s_player_Safe_ckc"
 ];
 /* ********************************************************************************* */
 	//	NEW (EXPERIMENTAL):
@@ -185,5 +185,5 @@ _dayzActions =
 	_FRC =  true;	/* true or false */
 /* ********************************************************************************* */
 /* *******************Developer : infiSTAR (infiSTAR23@gmail.com)******************* */
-/* ******************Copyright © 2014 infiSTAR all rights reserved****************** */
+/* ******************Copyright ï¿½ 2014 infiSTAR all rights reserved****************** */
 /* *********************************www.infiSTAR.de********************************* */

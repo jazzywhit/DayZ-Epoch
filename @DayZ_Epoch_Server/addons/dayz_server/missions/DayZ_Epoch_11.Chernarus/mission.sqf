@@ -680,7 +680,7 @@ if (true) then
 _unit_108 = objNull;
 if (true) then
 {
-  _this = createAgent ["INS_Soldier_MG", [2187.6755, 12753.201, 0.9907096], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["INS_Soldier_MG", [2187.6755, 12753.201, 1.28], [], 0, "CAN_COLLIDE"];
   _unit_108 = _this;
   _this setDir 16.362495;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
@@ -742,6 +742,15 @@ if (true) then
   _this = createVehicle ["HeliHEmpty", [2199.9131, 12784.863, -0.00015258789], [], 0, "CAN_COLLIDE"];
   _vehicle_659 = _this;
   _this setDir -150.28558;
+  _this setPos [2199.9131, 12784.863, -0.00015258789];
+};
+
+_vehicle_83 = objNull;
+if (true) then
+{
+  _this = createVehicle ["HeliHCivil", [2199.9131, 12784.863, -0.00015258789], [], 0, "CAN_COLLIDE"];
+  _vehicle_83 = _this;
+  _this setDir -65.398354;
   _this setPos [2199.9131, 12784.863, -0.00015258789];
 };
 
@@ -876,10 +885,10 @@ if (true) then
 _vehicle_792 = objNull;
 if (true) then
 {
-  _this = createVehicle ["HeliHEmpty", [1011.2622, 2138.1982], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["HeliHEmpty", [998.36597, 2097.8013], [], 0, "CAN_COLLIDE"];
   _vehicle_792 = _this;
   _this setDir -69.30452;
-  _this setPos [1011.2622, 2138.1982];
+  _this setPos [998.36597, 2097.8013];
 };
 
 _vehicle_1329 = objNull;

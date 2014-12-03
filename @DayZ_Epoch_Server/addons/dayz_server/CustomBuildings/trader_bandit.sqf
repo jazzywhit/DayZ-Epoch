@@ -28,16 +28,6 @@ if (true) then
   _this setPos [2174.8289, 12854.168, 0.00012207031];
 };
 
-_vehicle_15 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Land_Ind_TankSmall", [2163.4688, 12844.447, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_15 = _this;
-  _this setDir 48.538067;
-  _this setVehicleInit "this setVectorUp [0 ,0 ,1 ]";
-  _this setPos [2163.4688, 12844.447, -3.0517578e-005];
-};
-
 _vehicle_16 = objNull;
 if (true) then
 {
@@ -859,22 +849,6 @@ if (true) then
   _this = createVehicle ["MAP_t_picea1s", [2212.7163, 12738.136, -0.00018310547], [], 0, "CAN_COLLIDE"];
   _vehicle_283 = _this;
   _this setPos [2212.7163, 12738.136, -0.00018310547];
-};
-
-_vehicle_285 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Barrels", [2143.6899, 12840.852], [], 0, "CAN_COLLIDE"];
-  _vehicle_285 = _this;
-  _this setPos [2143.6899, 12840.852];
-};
-
-_vehicle_287 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Barrels", [2156.6301, 12844.428, 0.00033569336], [], 0, "CAN_COLLIDE"];
-  _vehicle_287 = _this;
-  _this setPos [2156.6301, 12844.428, 0.00033569336];
 };
 
 _vehicle_290 = objNull;

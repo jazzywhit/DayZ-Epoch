@@ -32,7 +32,7 @@ if (true) then
 _vehicle_4 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Mil_Barracks", [12237.829, 12582.515, 0.00015938655], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Mil_Barracks_i", [12237.829, 12582.515, 0.00015938655], [], 0, "CAN_COLLIDE"];
   _vehicle_4 = _this;
   _this setDir 650.49579;
   _this setVehicleInit "this setvectorup [0,0,1]";
@@ -2284,15 +2284,6 @@ if (true) then
   _vehicle_262 = _this;
   _this setDir 19.311409;
   _this setPos [12205.09, 12736.87, 6.1035156e-005];
-};
-
-_vehicle_263 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Barrels", [12203.606, 12733.148, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_263 = _this;
-  _this setDir 19.265869;
-  _this setPos [12203.606, 12733.148, -3.0517578e-005];
 };
 
 _vehicle_264 = objNull;
@@ -7367,15 +7358,6 @@ if (true) then
   _this setPos [11929.328, 12842.249, -1.5258789e-005];
 };
 
-_vehicle_1161 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Barrels", [11928.487, 12839.863, 0.074447632], [], 0, "CAN_COLLIDE"];
-  _vehicle_1161 = _this;
-  _this setDir 21.855392;
-  _this setPos [11928.487, 12839.863, 0.074447632];
-};
-
 _vehicle_1165 = objNull;
 if (true) then
 {
@@ -7914,9 +7896,9 @@ if (true) then
 _vehicle_1365 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Mil_Barracks_L", [12125.696, 12620.979, -0.19695772], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Mil_Barracks_i", [12125.696, 12620.979, -0.19695772], [], 0, "CAN_COLLIDE"];
   _vehicle_1365 = _this;
-  _this setDir -69.649071;
+  _this setDir 650.49579;
   _this setVehicleInit "this setvectorup [0,0,1]";
   _this setPos [12125.696, 12620.979, -0.19695772];
 };

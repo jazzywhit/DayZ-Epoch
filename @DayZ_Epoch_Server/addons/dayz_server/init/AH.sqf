@@ -4271,19 +4271,9 @@ publicVariable '"+_randvar28+"';
 			[] spawn fnc_debugX0;
 		};
 	};
-	[] spawn {
-		uiSleep 5;
-		["+str _TopOfESC+","+str _LowerTop+","+str _LowerBottom+"] spawn BIS_fnc_infoText;
-		if !("+str _UIM+") then
-		{
-			uiSleep 5;
-			['AntiHack &','AdminTools by','infiSTAR.de'] spawn BIS_fnc_infoText;
-		};
-	};
+
 	if !("+str _UIM+") then
 	{
-		systemChat '<infiSTAR.de>: Successfully Loaded In.';
-		if ("+str _DMS+") then {systemChat '<infiSTAR.de>: -END- key toggles the debugmonitor';};
 		diag_log format['infiSTAR.de - 15102014IAHAT336 - Successfully Loaded on Client ID960 (%1)',time];
 	}
 	else

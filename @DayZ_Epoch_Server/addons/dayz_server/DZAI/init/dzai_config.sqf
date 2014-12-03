@@ -183,8 +183,10 @@ DZAI_respawnTMaxL = 1200;
 
 //Classnames of land vehicle types to use, with the maximum amount of each type to spawn. Default: [["UAZ_Unarmed_TK_EP1",1]]
 DZAI_vehList = [["TT650_Gue", 1],
-				["datsun1_civil_2_covered_DZE1", 1],
-				["datsun1_civil_3_open", 1],
+				["hilux1_civil_2_covered", 1],
+				["hilux1_civil_1_open", 1],
+				["datsun1_civil_2_covered", 1],
+				["datsun1_civil_1_open", 1],
 				["Old_moto_TK_Civ_EP1", 1],
 				["TT650_Civ", 1],
 				["ATV_CZ_EP1", 1],

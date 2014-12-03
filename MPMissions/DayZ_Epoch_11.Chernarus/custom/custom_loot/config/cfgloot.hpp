@@ -41,13 +41,13 @@ class CfgLoot {
 		,{"ItemSodaClays",0.04}
 		,{"ItemSodaSmasht",0.04}
 		,{"ItemSodaLemonade",0.04}
+        ,{"FoodCanGriff",0.01}
+        ,{"FoodCanBadguy",0.01}
+        ,{"FoodCanBoneboy",0.01}
+        ,{"FoodCanCorn",0.01}
+        ,{"FoodCanCurgon",0.01}
 		,{"ItemSodaLvg",0.04}
 		,{"ItemSodaMzly",0.04}
-		,{"FoodCanGriff",0.01}
-		,{"FoodCanBadguy",0.01}
-		,{"FoodCanBoneboy",0.01}
-		,{"FoodCanCorn",0.01}
-		,{"FoodCanCurgon",0.01}
 		,{"FoodCanDemon",0.04}
 		,{"FoodCanFraggleos",0.04}
 		,{"FoodCanHerpy",0.04}
@@ -79,8 +79,9 @@ class CfgLoot {
 		,{"HandChemGreen",0.01}
 		,{"HandChemBlue",0.03}
 		,{"HandChemRed",0.03}
-		,{"ItemHeatPack",0.06}
-		,{"ItemDocument",0.02}
+		,{"ItemHeatPack",0.04}
+		,{"ItemDocument",0.03}
+		,{"ItemPlotDeed",0.01}
 		,{"ItemComboLock",0.01}
 		,{"ItemLockbox",0.01}
 	};
@@ -114,11 +115,11 @@ class CfgLoot {
 		,{"ItemHeatPack",0.05}
 	};
 	hospital[] = {
-		{"ItemBandage",0.47}
-		,{"ItemPainkiller",0.16}
-		,{"ItemMorphine",0.18}
-		,{"ItemEpinephrine",0.1}
-		,{"ItemBloodbag",0.07}
+		{"ItemBandage",0.5}
+		,{"ItemPainkiller",0.17}
+		,{"ItemMorphine",0.13}
+		,{"ItemEpinephrine",0.13}
+		,{"ItemBloodbag",0.05}
 		,{"ItemAntibiotic",0.02}
 	};
 	military[] = {
@@ -229,8 +230,11 @@ class CfgLoot {
 		,{"ItemDocument",0.01}
 	};
 	hunter_clothes[] = {
-        {"Skin_Camo1_DZ",0.9}
-        ,{"Skin_Sniper1_DZ",0.1}
+        {"Skin_Sniper1_DZ",0.3}
+        ,{"Skin_GUE_Soldier_Sniper_DZ",0.3}
+        ,{"Soldier_Sniper_PMC_DZ",0.2}
+        ,{"Skin_TK_Soldier_Sniper_EP1_DZ",0.1}
+        ,{"Skin_CZ_Soldier_Sniper_EP1_DZ", 0.1}
     };
 	clothes[] = {
 		{"Skin_RU_Policeman_DZ",0.11}
@@ -257,7 +261,6 @@ class CfgLoot {
 		,{"Skin_CZ_Special_Forces_GL_DES_EP1_DZ",0.08}
 		,{"Skin_FR_OHara_DZ",0.08}
 		,{"Skin_FR_Rodriguez_DZ",0.09}
-		,{"Skin_CZ_Soldier_Sniper_EP1_DZ",0.04}
 		,{"Skin_Graves_Light_DZ",0.09}
 		,{"Skin_INS_Soldier_AR_DZ",0.05}
 		,{"Skin_INS_Soldier_CO_DZ",0.04}
@@ -274,14 +277,12 @@ class CfgLoot {
 		,{"Skin_SurvivorWcombat_DZ",0.08}
 		,{"Skin_SurvivorWdesert_DZ",0.08}
 		,{"Skin_GUE_Soldier_MG_DZ",0.05}
-		,{"Skin_GUE_Soldier_Sniper_DZ",0.04}
 		,{"Skin_GUE_Soldier_Crew_DZ",0.04}
 		,{"Skin_GUE_Soldier_CO_DZ",0.04}
 		,{"Skin_GUE_Soldier_2_DZ",0.04}
-		,{"Skin_TK_Special_Forces_MG_EP1_DZ",0.02}
-		,{"Skin_TK_Soldier_Sniper_EP1_DZ",0.02}
-		,{"Skin_TK_Commander_EP1_DZ",0.02}
-		,{"Skin_RU_Soldier_Crew_DZ",0.02}
+		,{"Skin_TK_Special_Forces_MG_EP1_DZ",0.04}
+		,{"Skin_TK_Commander_EP1_DZ",0.04}
+		,{"Skin_RU_Soldier_Crew_DZ",0.04}
 		,{"Skin_INS_Lopotev_DZ",0.02}
 	};
 	tents[] = {
@@ -321,15 +322,13 @@ class CfgLoot {
 		,{"revolver_gold_EP1",0.01}
 	};
 	shotgunsingleshot[] = {
-		{"Winchester1866",0.5}
+		{"Winchester1866",0.7}
 		,{"MR43",0.3}
-		,{"Crossbow_DZ",0.2}
 	};
 	farmweapons[] = {
 		{"Winchester1866",0.25}
-		,{"LeeEnfield",0.23}
-		,{"MR43",0.4}
-		,{"Crossbow_DZ",0.12}
+		,{"LeeEnfield",0.25}
+		,{"MR43",0.5}
 	};
 	sniperrifles[] = {
 		{"m16a4_acg",0.05}
@@ -416,7 +415,8 @@ class CfgLoot {
 		,{"m8_holo_sd",0.02}
 		,{"m8_carbine",0.03}
 		,{"FN_FAL", 0.02}
-		,{"SCAR_L_CQC_Holo",0.05}
+		,{"SCAR_L_CQC_Holo",0.03}
+		,{"SCAR_L_STD_HOLO",0.02}
 		,{"SCAR_L_CQC_CCO_SD",0.05}
 		,{"BAF_L85A2_UGL_Holo",0.02}
 		,{"BAF_L85A2_RIS_Holo",0.01}
@@ -461,9 +461,8 @@ class CfgLoot {
 		,{"MG36_camo",0.2}
 		,{"M60A4_EP1",0.1}
 		,{"MG36",0.1}
-		,{"M249",0.1}
-		,{"m240_scoped_EP1",0.05}
-		,{"M240",0.1}
+		,{"M249",0.15}
+		,{"M240",0.15}
 		,{"M249_m145_EP1",0.05}
 	};
 	machinegunammo[] = {
@@ -481,14 +480,9 @@ class CfgLoot {
 		,{"100Rnd_762x54_PK",0.10}
 	};
 	machinegunammoexpl[] = {
-		{"100Rnd_556x45_BetaCMag",0.2}
-		,{"75Rnd_545x39_RPK",0.2}
-		,{"100Rnd_556x45_M249",0.15}
-		,{"100Rnd_762x51_M240",0.15}
-		,{"100Rnd_762x54_PK",0.14}
-		,{"200Rnd_556x45_M249",0.14}
-		,{"M_Stinger_AA",0.01}
-		,{"M_Igla_AA",0.01}
+		{"75Rnd_545x39_RPK",0.8}
+		,{"100Rnd_762x54_PK",0.18}
+		,{"M_Igla_AA",0.02}
 	};
 	militaryshotguns[] = {
 		{"Remington870_lamp",0.35}

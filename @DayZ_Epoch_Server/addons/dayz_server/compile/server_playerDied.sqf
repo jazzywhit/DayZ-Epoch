@@ -63,10 +63,10 @@ if ((typeName _killer) != "STRING") then
 	PlayerDeaths set [count PlayerDeaths,_death_record];
 
 	// Cleanup
-	_victim setVariable["AttackedBy", "nil", true];
-	_victim setVariable["AttackedByName", "nil", true];
-	_victim setVariable["AttackedByWeapon", "nil", true];
-	_victim setVariable["AttackedFromDistance", "nil", true];
+	_victim setVariable["AttackedBy", "nil", false];
+	_victim setVariable["AttackedByName", "nil", false];
+	_victim setVariable["AttackedByWeapon", "nil", false];
+	_victim setVariable["AttackedFromDistance", "nil", false];
 };
 
 // Might not be the best way...
