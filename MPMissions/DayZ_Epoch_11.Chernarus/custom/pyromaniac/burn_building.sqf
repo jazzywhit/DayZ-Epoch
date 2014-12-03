@@ -35,9 +35,6 @@ _fuelBarrels = [];
 } count magazines player;
 _qty_fuelBarrels = count _fuelBarrels;
 
-//TODO
-// Check what type of building it is
-
 // Exit if there isn't enough fuel
 if(_qty_fuelCans == 0) exitWith { cutText ["You need some fuel to start the fire!", "PLAIN DOWN"]; s_player_igniteBuilding = -1; DZE_ActionInProgress = false;};
 
@@ -58,6 +55,19 @@ if(([player, _fuelSource] call BIS_fnc_invRemove) == 1) then {
 // Player should be done and should be able to complete other actions now
 s_player_igniteBuilding = -1;
 DZE_ActionInProgress = false;
+
+//TODO Update so message is broadcast to all players
+//Spawns flies on AI corpse
+//DZAI_deathFlies = {
+//	private ["_soundFlies"];
+//	_soundFlies = createSoundSource ["Sound_Flies",ASLtoATL getPosASL _this,[],0];
+//	_soundFlies attachTo [_this,[0,0,0]];
+//	_this setVariable ["sound_flies",_soundFlies];
+//	waitUntil {sleep 5; (speed (vehicle _this)) == 0};
+//	_this enableSimulation false;
+//};
+//["dayzFlies",player] call broadcastRpcCallAll;
+// Check what type of building it is
 
 // Start a small fire with only smoke
 PVDZ_obj_Fire = [_ent,3,time,false,true];

@@ -48,8 +48,11 @@ if (!_isBuried) then {
 			_backpackWpn = getWeaponCargo unitBackpack _corpse;
 			_backpackMag = getMagazineCargo unitBackpack _corpse;
 		};
-		
+
+		// Create bone site and add flies
 		_box = createVehicle ["GraveDZE", _position, [], 0, "CAN_COLLIDE"];
+		["dayzFlies",_box] call broadcastRpcCallAll;
+
         _box setpos [(getposATL _box select 0),(getposATL _box select 1)+1.2, 0];
         clearWeaponCargoGlobal _box;
         clearMagazineCargoGlobal _box;

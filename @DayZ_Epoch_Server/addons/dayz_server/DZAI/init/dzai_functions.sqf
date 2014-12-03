@@ -183,16 +183,6 @@ DZAI_setSkills = {
 	} forEach _skillArray;
 };
 
-//Spawns flies on AI corpse
-DZAI_deathFlies = {
-	private ["_soundFlies"];
-	_soundFlies = createSoundSource ["Sound_Flies",ASLtoATL getPosASL _this,[],0];
-	_soundFlies attachTo [_this,[0,0,0]];
-	_this setVariable ["sound_flies",_soundFlies];
-	waitUntil {sleep 5; (speed (vehicle _this)) == 0};
-	_this enableSimulation false;
-};
-
 //Convert server uptime in seconds to formatted time (days/hours/minutes/seconds)
 DZAI_getUptime = {
 	private ["_iS","_oS","_oM","_oH","_oD"];
