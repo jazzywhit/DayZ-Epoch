@@ -3694,14 +3694,14 @@ if (true) then
   _this setPos [9008.0596, 7828.4712, 0.0010070801];
 };
 
-_vehicle_11143 = objNull;
-if (true) then
-{
-  _this = createVehicle ["SearchLight_US_EP1", [9004.6514, 7824.0044, 1.2739944], [], 0, "CAN_COLLIDE"];
-  _vehicle_11143 = _this;
-  _this setDir 51.196358;
-  _this setPos [9004.6514, 7824.0044, 1.2739944];
-};
+//_vehicle_11143 = objNull;
+//if (true) then
+//{
+  //_this = createVehicle ["SearchLight_US_EP1", [9004.6514, 7824.0044, 1.2739944], [], 0, "CAN_COLLIDE"];
+  //_vehicle_11143 = _this;
+  //_this setDir 51.196358;
+  //_this setPos [9004.6514, 7824.0044, 1.2739944];
+//};
 
 _vehicle_11149 = objNull;
 if (true) then
