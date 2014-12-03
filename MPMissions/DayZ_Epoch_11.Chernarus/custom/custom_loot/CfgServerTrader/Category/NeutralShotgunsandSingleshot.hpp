@@ -1,13 +1,13 @@
 class Category_607 {
 	class Winchester1866 {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {4,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 	class MR43 {
 		type = "trade_weapons";
-		buy[] = {1,"ItemSilverBar10oz"};
-		sell[] = {8,"ItemSilverBar"};
+		buy[] = {1,"ItemGoldBar"};
+		sell[] = {5,"ItemSilverBar10oz"};
 	};
 	class Crossbow_DZ {
 		type = "trade_weapons";
@@ -16,20 +16,20 @@ class Category_607 {
 	};
 	class LeeEnfield {
 		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
+		buy[] = {5,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
 };
 class Category_641 {
 	class Winchester1866 {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {4,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
 	class MR43 {
 		type = "trade_weapons";
-		buy[] = {1,"ItemSilverBar10oz"};
-		sell[] = {8,"ItemSilverBar"};
+		buy[] = {1,"ItemGoldBar"};
+		sell[] = {5,"ItemSilverBar10oz"};
 	};
 	class Crossbow_DZ {
 		type = "trade_weapons";
@@ -38,7 +38,7 @@ class Category_641 {
 	};
 	class LeeEnfield {
 		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
+		buy[] = {5,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
 };
