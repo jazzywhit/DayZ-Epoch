@@ -31,11 +31,6 @@ while {true} do {
 						//diag_log "DZAI Cleanup Debug: Timer complete, checking for nearby players";
 						if (({isPlayer _x} count (_x nearEntities [["CAManBase","AllVehicles"],30])) == 0) then {
 							//diag_log "DZAI Cleanup Debug: No nearby players. Deleting unit";
-							_soundflies = _x getVariable "sound_flies";
-							if (!isNil "_soundflies") then {
-								detach _soundflies;
-								deleteVehicle _soundflies;
-							};
 							_x call DZAI_purgeEH;
 							//diag_log format ["DEBUG :: Deleting object %1 (type: %2).",_x,typeOf _x];
 							deleteVehicle _x;

@@ -15,10 +15,6 @@ _body = player;
 _playerID = getPlayerUID player;
 
 disableUserInput true;
-//add weapon on back to player...
-//if (dayz_onBack != "") then {
-//	_body addWeapon dayz_onBack;
-//};
 
 _infected = 0;
 if (r_player_infected && DZE_PlayerZed) then {
@@ -85,7 +81,6 @@ r_player_dead = true;
 
 // Begin adding skin to player body
 call compile preprocessFileLineNumbers "custom\Recover_Skin\Recoverskin.sqf";
-// End adding skin to player body
 
 //Player is Dead!
 3 fadeSound 0;
@@ -97,16 +92,11 @@ addSwitchableUnit dayz_originalPlayer;
 setPlayable dayz_originalPlayer;
 selectPlayer dayz_originalPlayer;
 
-//_myGroup = group _body;
-//[_body] joinSilent dayz_firstGroup;
-//deleteGroup _myGroup;
-
 3 cutRsc ["default", "PLAIN",3];
 4 cutRsc ["default", "PLAIN",3];
 
 _body setVariable["combattimeout", 0, true];
 
-//["dayzFlies",player] call broadcastRpcCallAll;
 sleep 2;
 
 1 cutRsc ["customdeath","BLACK OUT",3];

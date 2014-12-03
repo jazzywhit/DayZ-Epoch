@@ -91,7 +91,6 @@ if (_okSkin) then {
 //Script end
 
 
-//_victim spawn DZAI_deathFlies;
 _victim setVariable ["bodyName",_victim getVariable ["bodyName","unknown"],true];		//Broadcast the unit's name (was previously a private variable).
 _victim setVariable ["deathType",_deathType,true];
 _victim setVariable ["DZAI_deathTime",(time + DZAI_cleanupDelay)];
