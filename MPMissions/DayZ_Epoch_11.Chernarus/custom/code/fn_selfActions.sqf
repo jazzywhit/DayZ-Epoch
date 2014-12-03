@@ -675,7 +675,7 @@ if(_isModularDoor) then {
 				} else {
 					if(_cursorTarget isKindOf "ItemLockbox" && _hasRuby && _hasPole && _hasCrowbar && _hasScrap && _hasEtool && _hasRazor && _hasKnife && _hasToolbox) then {	//Mist lockbox breakin				
 						_breakin = player addAction ["<t color='#FF0000'>Break in</t>", "custom\Lockboxcrack\breakin.sqf",_cursorTarget, 0, false, true, "",""];
-					}
+					};
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_UNLOCK",_text], "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				};
