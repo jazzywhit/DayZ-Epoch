@@ -969,5 +969,7 @@ execVM "\z\addons\dayz_server\CustomBuildings\trader_bandit.sqf";
 execVM "\z\addons\dayz_server\CustomBuildings\stary_tents.sqf";
 execVM "\z\addons\dayz_server\CustomBuildings\GOC_LM_wlcr.sqf";
 
+//Shipwreck
+execVM "\z\addons\dayz_server\CustomBuildings\shipwrecked.sqf";
 //Mines
 execVM "\z\addons\dayz_server\CustomBuildings\mining.sqf";
