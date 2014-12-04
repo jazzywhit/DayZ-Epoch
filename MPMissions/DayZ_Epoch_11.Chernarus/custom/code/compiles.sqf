@@ -9,6 +9,9 @@ if (!isDedicated) then {
 	//take clothes
 	player_death = compile preprocessFileLineNumbers "custom\Recover_Skin\player_death.sqf";
 
+	//ore fix
+	player_craftItem =    compile preprocessFileLineNumbers "custom\code\player_craftItem.sqf";
+
 	//dynamic traders
 	execVM "custom\dynamic_traders\player_tradermarkers.sqf";
 	
