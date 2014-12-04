@@ -16,7 +16,7 @@ class Category_648 {
 	};
 	class 30Rnd_9x19_UZI_SD {
 		type = "trade_items";
-		buy[] = {1,"ItemGoldBar};
+		buy[] = {1,"ItemGoldBar"};
 		sell[] = {5,"ItemSilverBar10oz"};
 	};
 	class 20Rnd_B_765x17_Ball {
@@ -43,7 +43,7 @@ class Category_612 {
 	};
 	class 30Rnd_9x19_UZI_SD {
 		type = "trade_items";
-		buy[] = {1,"ItemGoldBar};
+		buy[] = {1,"ItemGoldBar"};
 		sell[] = {5,"ItemSilverBar10oz"};
 	};
 	class 20Rnd_B_765x17_Ball {

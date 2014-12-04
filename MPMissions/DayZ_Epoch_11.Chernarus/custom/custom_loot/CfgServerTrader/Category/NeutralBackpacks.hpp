@@ -11,11 +11,6 @@ class Category_685 {
 	};
 	class DZ_ALICE_Pack_EP1 {
 		type = "trade_backpacks";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
-	};
-	class DZ_ALICE_Pack_EP1 {
-		type = "trade_backpacks";
 		buy[] = {6,"ItemGoldBar"};
 		sell[] = {3,"ItemGoldBar"};
 	};
