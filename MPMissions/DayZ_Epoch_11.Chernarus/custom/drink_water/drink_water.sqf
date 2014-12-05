@@ -7,7 +7,7 @@ _isPond = false;
 _isWell = false;
 _pondPos = [];
 _objectsWell = [];
-_infectionChance = 0.05; // Drinking from a well has a low chance of infection
+_infectionChance = InfectionWaterClean; // Drinking from a well has a low chance of infection
 
 if (!_canDrink) then {
 	_objectsWell = nearestObjects [_playerPos, [], 4];
@@ -27,7 +27,7 @@ if (!_canDrink) then {
 			_pondPos = (_x worldToModel _playerPos) select 2;
 			if (_pondPos < 0) then {
 				_canDrink = true;
-				_infectionChance = 0.5; // Ponds should have a high chance of infection
+				_infectionChance = InfectionWaterUnclean; // Ponds should have a high chance of infection
 			};
 		};
 	} forEach _objectsPond;
@@ -38,7 +38,7 @@ if (_canDrink) then {
     dayz_lastDrink = time;
     dayz_thirst = 0 max (dayz_thirst - round(SleepWater/3));
 
-    if ((random 1) < _infectionChance) then {
+    if (random 1 < _infectionChance) then {
         // Infect the player
         r_player_infected = true;
         player setVariable["USEC_infected",true,true];

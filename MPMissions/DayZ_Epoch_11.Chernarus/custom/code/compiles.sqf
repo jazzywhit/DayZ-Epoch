@@ -77,4 +77,7 @@ if (!isDedicated) then {
 	building_spawnLoot =	    compile preprocessFileLineNumbers "custom\code\building_spawnLoot.sqf";
 	spawn_loot_small =          compile preprocessFileLineNumbers "custom\code\spawn_loot_small.sqf";
 
+	// Custom Water Filling
+	player_fillWater = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\water_fill.sqf";
+
 };
