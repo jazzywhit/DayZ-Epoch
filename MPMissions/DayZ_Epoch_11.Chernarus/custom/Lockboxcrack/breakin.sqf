@@ -14,7 +14,7 @@ if (_rand > 0.6) then {
 	//player removeMagazine "ItemTrashRazor";
 	_obj = _this select 3;
 	_obj spawn player_unlockVault;
-	cutText ['You managed to crack the lockbox open at the expense of your tools', 'PLAIN'];
+	cutText ['You were able to break the lockbox open!', 'PLAIN'];
 };
 if (_rand <= 0.6) then {
 	//player removeWeapon "ItemCrowbar";
@@ -23,5 +23,5 @@ if (_rand <= 0.6) then {
 	//player removeMagazine "PartGeneric";
 	//player removeWeapon "ItemEtool";
 	//player removeMagazine "ItemTrashRazor";
-	cutText ['You were unable to break in and broke most of your tools', 'PLAIN'];
+	cutText ['You were unable to break into the locked box!', 'PLAIN'];
 };

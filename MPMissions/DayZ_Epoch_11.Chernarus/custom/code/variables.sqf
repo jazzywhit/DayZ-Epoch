@@ -59,3 +59,8 @@ s_player_mine = -1;
 
 //Safe Change Combination
 s_player_Safe_ckc = -1;
+
+//Survival Variables
+SleepFood =				2160; //minutes (48 hours)
+SleepWater =			1440; //minutes (24 hours)
+SleepTemperatur	= 		90 / 100;	//Firs Value = Minutes untill Player reaches the coldest Point at night (without other effects! night factor expected to be -1)			//TeeChange
