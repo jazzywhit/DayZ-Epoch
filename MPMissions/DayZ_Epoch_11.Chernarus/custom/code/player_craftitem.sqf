@@ -234,6 +234,7 @@ if (_canDo) then {
                                 if (_itemOut == "ItemWaterbottleUnfilled") then {
 
                                     if (_waterLevel > 0) then {
+                                        //TODO Look at using part of the water bottle when drinking it
                                         _itemOut = format["ItemWaterbottle%1oz",_waterLevel];
                                     };
 
