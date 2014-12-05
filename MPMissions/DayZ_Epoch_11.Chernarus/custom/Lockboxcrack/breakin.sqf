@@ -2,7 +2,8 @@
 private ["_obj","_rand"];
 _rand = random 1;
 player playActionNow "Medic";
-sleep 9;
+sleep 10;
+
 if (_rand > 0.6) then {
 	//player removeWeapon "ItemCrowbar";
 	//player removeMagazine "ItemRuby";

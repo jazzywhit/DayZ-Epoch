@@ -1178,7 +1178,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=18;
+		items=19;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1305,6 +1305,14 @@ class Mission
 		{
 			position[]={ 13273.093, 0, 6099.0747};
             name="Mine2";
+            text="Mining Node";
+            type="mil_dot";
+            colorName="ColorBlack";
+		};
+		class Item18
+		{
+			position[]={ 13673.6, 0, 12307.3};
+            name="Mine3";
             text="Mining Node";
             type="mil_dot";
             colorName="ColorBlack";
