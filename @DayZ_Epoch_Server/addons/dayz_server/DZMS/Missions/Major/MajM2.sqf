@@ -96,7 +96,7 @@ while {_loop} do {
 		
 		//Update the location
 		[_coords,"AN2 Wreck"] ExecVM DZMSAddMajMarker;
-		[nil,nil,rTitleText,"The AN2 was shot down by UN Peacekeepers!\nGo Find the Supplies!", "PLAIN",10] call RE;
+		[nil,nil,rTitleText,"The AN2 was shot down!\nGo Find the Supplies!", "PLAIN",10] call RE;
 		
 		_chute = createVehicle ["ParachuteMediumEast", [(_newPos select 0),(_newPos select 1),200], [], 0, "FLY"];
 		[_chute] call DZMSProtectObj;
