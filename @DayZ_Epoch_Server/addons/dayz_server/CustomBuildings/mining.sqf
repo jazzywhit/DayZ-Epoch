@@ -35,15 +35,15 @@ if (isServer) then {
 	if (true) then
 	{
 	  _this = createVehicle ["BeltBuckle_DZE", [13673.6, 12307.3, 0], [], 0, "CAN_COLLIDE"];
-	  _vehicle_2110 = _this;
-	  _this setPos [1944.09, 9136.59, 0.00012207031];
+	  _vehicle_3110 = _this;
+	  _this setPos [13673.6, 12307.3, 0.00012207031];
 	};
 
 	_vehicle_3111 = objNull;
 	if (true) then
 	{
 	  _this = createVehicle ["MAP_R2_RockTower", [13673.6, 12307.3, 0], [], 0, "CAN_COLLIDE"];
-	  _vehicle_2111 = _this;
-	  _this setPos [1944.09, 9136.59, -0.00024414063];
+	  _vehicle_3111 = _this;
+	  _this setPos [13673.6, 12307.3, -0.00024414063];
 	};
 };
