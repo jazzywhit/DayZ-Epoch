@@ -2,7 +2,7 @@
 	Bandit Stash House by lazyink (Full credit for code to TheSzerdi & TAW_Tonic)
 	Updated to new format by Vampire
 */
-private ["_missName","_coords","_base","_baseCoords","_veh1","_vehicle","_crate","_crate1"];
+private ["_missName","_coords","_base","_veh1","_vehicle","_crate","_crate1"];
 
 //Name of the Mission
 _missName = "Stash House";
@@ -19,7 +19,6 @@ _coords = call DZMSFindPos;
 _base = createVehicle ["Land_HouseV_1L2",_coords,[], 0, "CAN_COLLIDE"];
 _base setDir 152.66766;
 _base setPos _coords;
-_baseCoords = getPos _base;
 
 //DZMSProtectObj prevents it from disappearing
 [_base] call DZMSProtectObj;
@@ -32,11 +31,10 @@ _vehicle = createVehicle [_veh1,[(_coords select 0) - 10.6206, (_coords select 1
 [_vehicle] call DZMSSetupVehicle;
 
 //We create and fill the crate
-//{-2.58887,-4.8584,-0.789368},{-2.37646,0.373047,-0.799377}
-_crate = createVehicle ["USBasicAmmunitionBox",[(_baseCoords select 0) - 2.59, (_baseCoords select 1) - -4.86, (_baseCoords select 2) - 0.79],[], 0, "CAN_COLLIDE"];
+_crate = createVehicle ["USBasicAmmunitionBox",[(_coords select 0) - 16, (_coords select 1) - 5, 0],[], 0, "CAN_COLLIDE"];
 [_crate,"weapons"] ExecVM DZMSBoxSetup;
 [_crate] call DZMSProtectObj;
-_crate1 = createVehicle ["USBasicAmmunitionBox",[(_baseCoords select 0) - 2.38, (_baseCoords select 1) + 0.37, (_baseCoords select 2) - 0.8],[], 0, "CAN_COLLIDE"];
+_crate1 = createVehicle ["USBasicAmmunitionBox",[(_coords select 0) - 16, (_coords select 1) - 7, 0],[], 0, "CAN_COLLIDE"];
 [_crate1,"weapons"] ExecVM DZMSBoxSetup;
 [_crate1] call DZMSProtectObj;
 
