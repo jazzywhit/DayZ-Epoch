@@ -217,9 +217,7 @@ class CfgLootSmall {
 		{"TrashJackDaniels",0.28},
 		{"ItemSodaEmpty",0.13},
 		{"ItemBandage",0.24},
-		{"ItemPainkiller",0.28},
-		{"ItemComboLock",0.01},
-		{"ItemSledgeHead",0.02}
+		{"ItemPainkiller",0.31}
 	};
 	clothes[] = {
 		{"Skin_RU_Policeman_DZ",0.13},
