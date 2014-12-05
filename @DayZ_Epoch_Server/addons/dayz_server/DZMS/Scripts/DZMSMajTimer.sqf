@@ -27,6 +27,7 @@ while {_run} do
 	//Lets pick a mission
 	_ranMis = floor (random _cntMis);
 	_varName = DZMSMajorArray select _ranMis;
+	DZMSMajorArray = DZMSMajorArray - _varName;
     
     // clean up all the existing units before starting a new one
     {if (alive _x) then {_x call DZMSPurgeObject;};} forEach DZMSUnitsMajor;
