@@ -67,4 +67,4 @@ SleepTemperatur	= 		90 / 100;	//Firs Value = Minutes untill Player reaches the c
 
 //Infection Chances
 InfectionWaterUnclean = 0.75;
-InfectionWaterClean = 0.05;
+InfectionWaterClean = 0;

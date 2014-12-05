@@ -44,7 +44,7 @@ _wp setWaypointType "MOVE";
 _wp setWaypointBehaviour "CARELESS";
 _wp_pos = waypointPosition [_aiGrp,1];
 
-sleep 360;
+sleep 240;
 
 // Begin Landing
 deleteWaypoint [group _plane, 0]; // Delete waypoint to start a landing
@@ -73,7 +73,7 @@ else
 
 _loop = true;
 _counter = 0;
-while {_loop && _counter < 90} do {
+while {_loop && _counter < 90 && Alive _plane} do {
 	if (_moveComplete) then {
 	    [nil,nil,rTitleText,"I got the signal!", "PLAIN",6] call RE;
 	    _loop = false;
@@ -82,15 +82,17 @@ while {_loop && _counter < 90} do {
 	_counter = _counter + 1;
 };
 
-sleep 300;
-[nil,nil,rTitleText,"The C130 is taking off!", "PLAIN",6] call RE;
+if (Alive _plane) then {
+    sleep 240;
+    [nil,nil,rTitleText,"The C130 is taking off!", "PLAIN",6] call RE;
 
-_wp = _aiGrp addWaypoint [[0,0,150], 0];
-_wp setWaypointType "MOVE";
-_wp setWaypointBehaviour "CARELESS";
-_wp_pos = waypointPosition [_aiGrp,1];
+    _wp = _aiGrp addWaypoint [[0,0,150], 0];
+    _wp setWaypointType "MOVE";
+    _wp setWaypointBehaviour "CARELESS";
+    _wp_pos = waypointPosition [_aiGrp,1];
 
-sleep 300;
+    sleep 240;
+};
 
 diag_log text format["[DZMS]: Major EM2 C130 J landing mission is over."];
 deleteMarker "DZMSMajMarker";
