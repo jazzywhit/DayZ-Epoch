@@ -12,7 +12,7 @@ _coords = call DZMSFindPos;
 
 [nil,nil,rTitleText,"C130 Mission Begin", "PLAIN",10] call RE;
 
-DZMSAddMajMarker is a simple script that adds a marker to the location
+//DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
 
 
