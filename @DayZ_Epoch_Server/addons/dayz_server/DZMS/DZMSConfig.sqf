@@ -140,7 +140,7 @@ DZMSSaveVehicles = false;
 DZMSChoppersArmed = ["CH_47F_EP1_DZE","UH1H_DZE", "Mi17_DZE", "Mi17_UN_CDF_EP1_DZE", "UH60M_EP1_DZE", "UH1Y_DZE", "MH60S_DZE"];
 
 //Unarmed Choppers
-DZMSChoppers = ["Mi17_Civilian_DZ","AH6X_DZ", "MH6J_DZ", "BAF_Merlin_DZE", "CH53_DZE"];
+DZMSChoppers = ["AH6X_DZ", "MH6J_DZ"];
 
 //Small Vehicles (NATO)
 DZMSSmallVicNATO = ["SUV_TK_CIV_EP1","HMMWV_DZ","HMMWV_DES_EP1", "HMMWV_Ambulance_CZ_DES_EP1", "HMMWV_Ambulance","UAZ_Unarmed_UN_EP1"];
