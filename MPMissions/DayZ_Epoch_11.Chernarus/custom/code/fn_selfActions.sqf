@@ -675,9 +675,9 @@ if(_isModularDoor) then {
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_OPEN",_text], "\z\addons\dayz_code\actions\vault_unlock.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				} else {
-					if(_cursorTarget isKindOf "LockboxStorageLocked" && _hasCrowbar) then { //mist
-						_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf",_cursorTarget, 0, false, true, "",""];
-					};
+					//if(_cursorTarget isKindOf "LockboxStorageLocked" && _hasCrowbar) then {
+					//	_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf",_cursorTarget, 0, false, true, "",""];
+					//};
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_UNLOCK",_text], "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				};
@@ -692,8 +692,6 @@ if(_isModularDoor) then {
 		};
 	} else {
 		{player removeAction _x} count s_player_combi;s_player_combi = [];
-		player removeAction _breakin;
-		_breakin = -1;
 		s_player_unlockvault = -1;
 	};
 
