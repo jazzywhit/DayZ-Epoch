@@ -17,9 +17,8 @@ MBT_DIALOG_NOTE = "* After claiming your prize the reward crate will disappear i
 		Everything that has to do with the prize you get from the briefcase
 */
 
-// Junk
-_junk_group = ["HandRoadFlare","TrashTinCan","FoodCanUnlabeled","HandChemBlue","HandChemRed","HandChemGreen","ItemBook3","ItemBook4","ItemSodaR4z0rEmpty","ItemSodaDrwasteEmpty","ItemSodaLemonadeEmpty","ItemSodaLvgEmpty","ItemSodaMzlyEmpty","ItemSodaRabbitEmpty","ItemSodaClaysEmpty","TrashJackDaniels","TrashTinCan","ItemLetter","ItemBook1","ItemBook2","ItemTrashRazor","FoodCanOrlokEmpty","FoodCanDemonEmpty","FoodCanTylersEmpty","FoodCanCornEmpty","FoodCanBoneboyEmpty","FoodCanBadguyEmpty","FoodCanGriffEmpty","FoodCanPowellEmpty","FoodCanHerpyEmpty","FoodCanUnlabeledEmpty","FoodCanCurgonEmpty","FoodCanFraggleosEmpty","ItemTrashToiletpaper"];
-_food_group = ["ItemWaterbottle","FoodNutmix","FoodPistachio","FoodMRE","ItemSodaOrangeSherbet","ItemSodaRbull","ItemSodaR4z0r","ItemSodaMdew","ItemSodaPepsi","ItemSodaCoke","FoodbaconCooked","FoodCanBakedBeans","FoodCanFrankBeans","FoodCanPasta","FoodCanSardines","FoodchickenCooked","FoodmuttonCooked","FoodrabbitCooked","ItemTroutCooked","ItemTunaCooked","ItemSeaBassCooked","FoodCanGriff","FoodCanTylers","FoodCanDemon","FoodCanPowell","FoodCanCorn","FoodCanOrlok","FoodCanHerpy","FoodCanBadguy","FoodCanBoneboy","FoodCanCurgon","FoodCanFraggleos","ItemSodaRabbit","ItemSodaMtngreenEmpty","ItemSodaSmashtEmpty","ItemSodaMtngreen","ItemSodaDrwaste","ItemSodaSmasht","ItemSodaClays","ItemSodaLemonade","ItemSodaLvg"];
+// Food
+_food_group = ["FoodNutmix","FoodPistachio","FoodMRE","ItemSodaOrangeSherbet","ItemSodaRbull","ItemSodaR4z0r","ItemSodaMdew","ItemSodaPepsi","ItemSodaCoke","FoodbaconCooked","FoodCanBakedBeans","FoodCanFrankBeans","FoodCanPasta","FoodCanSardines","FoodchickenCooked","FoodmuttonCooked","FoodrabbitCooked","ItemTroutCooked","ItemTunaCooked","ItemSeaBassCooked","FoodCanGriff","FoodCanTylers","FoodCanDemon","FoodCanPowell","FoodCanCorn","FoodCanOrlok","FoodCanHerpy","FoodCanBadguy","FoodCanBoneboy","FoodCanCurgon","FoodCanFraggleos","ItemSodaRabbit","ItemSodaMtngreenEmpty","ItemSodaSmashtEmpty","ItemSodaMtngreen","ItemSodaDrwaste","ItemSodaSmasht","ItemSodaClays","ItemSodaLemonade","ItemSodaLvg"];
 
 // Common
 _military_group = ["FlareWhite_M203","FlareGreen_M203","1Rnd_Smoke_M203","HandGrenade_west","HandGrenade_east","SmokeShell","SmokeShellRed","SmokeShellGreen","FoodMRE","Skin_Camo1_DZ","Skin_Rocket_DZ","Skin_Soldier1_DZ","Skin_Drake_Light_DZ"];
@@ -27,18 +26,76 @@ _medical_group = ["ItemAntibiotic","ItemBloodbag","ItemEpinephrine","ItemHeatPac
 _vehicle_repair_group = ["PartEngine","PartFueltank","PartGeneric","PartGlass","PartVRotor","PartWheel"];
 _tools_group = ["ItemKeyKit","Binocular","Binocular_Vector","ItemCompass","ItemCrowbar","ItemEtool","ItemFishingPole","ItemFlashlightRed","ItemGPS","ItemHatchet_DZE","ItemKnife","ItemMachete","ItemMatchbox_DZE","ItemToolbox","NVGoggles"];
 
-_common_group = ["ItemPlotDeed","ItemComboLock","ItemSledgeHead","ItemSledgeHandle","Skin_Sniper1_DZ","bulk_ItemSandbag"];
-_assault_group = ["M16A4_ACG","Sa58V_RCO_EP1","SCAR_L_STD_Mk4CQT","M8_sharpshooter","M4A1_HWS_GL_camo","SCAR_L_STD_HOLO","M4A3_CCO_EP1","M4A1_AIM_SD_camo","M16A4","m8_carbine","BAF_L85A2_RIS_Holo","Sa58P_EP1","Sa58V_CCO_EP1","Sa58V_EP1","AKS_74_kobra","AKS_74_U","AKS_GOLD","AK_47_M","AK_74","FN_FAL","FN_FAL_ANPVS4","m8_compact","G36A_camo","G36C","m8_holo_sd","G36C_camo","G36K_camo","G36_C_SD_camo","M16A2","M16A2GL","M4A1","M4A1_Aim"];
-_lmg_group = ["RPK_74","M249_EP1_DZ","M249_DZ","M240_DZ","m240_scoped_EP1_DZE","M249_m145_EP1_DZE","M60A4_EP1_DZE"];
-_sniper_group = ["M14_EP1","SVD_CAMO","SVD","VSS_Vintorez","DMR_DZ","M40A3","M24","M24_des_EP1","SVD_des_EP1"];
+_common_group = [
+        "ItemTankTrap",
+        "PartGeneric",
+        "ItemPole",
+        "ItemCanvas",
+        "PartPlywoodPack",
+        "PartPlankPack",
+        "PartPlywoodPack",
+        "PartPlankPack",
+        "ItemTentOld",
+        "ItemTentDomed",
+        "ItemTentDomed2",
+        "ItemSandbag",
+        "ItemWire",
+        "ItemGenerator"
+        ];
+_assault_group = [
+        "G36K",
+        "G36K_camo",
+        "G36C_camo",
+        "G36_C_SD_eotech",
+        "G36_C_SD_camo",
+        "M4A1_HWS_GL_SD_camo",
+        "M4A1_HWS_GL_camo",
+        "M4A1_HWS_GL",
+        "m8_holo_sd",
+        "m8_carbine",
+        "m8_carbineGL",
+        "BAF_L85A2_RIS_Holo",
+        "BAF_L85A2_UGL_Holo",
+        "M4A1_HWS_GL_SD_Camo",
+        "SCAR_L_CQC_Holo",
+        "SCAR_L_CQC_CCO_SD",
+        "SCAR_L_STD_HOLO",
+        "SCAR_L_CQC"
+        ];
+_lmg_group = [
+         "M8_SAW",
+         "MG36_camo",
+         "M60A4_EP1",
+         "MG36",
+         "M249",
+         "M240",
+         "M249_m145_EP1"
+         ];
+_sniper_group = [
+        "m16a4_acg",
+        "M16A4_ACG_GL",
+        "G36a",
+        "G36A_camo",
+        "M4SPR",
+        "m8_sharpshooter",
+        "M4A3_RCO_GL_EP1",
+        "SCAR_L_STD_Mk4CQT",
+        "SCAR_L_STD_EGLM_RCO",
+        "M14_EP1",
+        "BAF_L85A2_RIS_ACOG",
+        "BAF_L85A2_UGL_ACOG",
+        "BAF_L86A2_ACOG",
+        "SCAR_H_CQC_CCO",
+        "SCAR_H_CQC_CCO_SD"
+        ];
 _chainbullets_group = ["2000Rnd_762x51_M134","200Rnd_762x51_M240","100Rnd_127x99_M2","150Rnd_127x107_DSHKM"];
 
 // Rares
-_rares_group = ["ItemVault","ItemBriefcase100oz","ItemLockbox","30m_plot_kit"];
-_rare_weapons_group = ["KSVK_DZE","MK_48_DZ","Pecheneg_DZ","M110_NVG_EP1","SCAR_H_LNG_Sniper_SD","M107_DZ","BAF_LRR_scoped"];
+_rares_group = ["ItemVault","ItemLockbox","30m_plot_kit"];
+_rare_weapons_group = ["MK_48","BAF_LRR_scoped","M24", "M24_des_EP1", "M40A3"];
 
 // Legendaries
-_legend_group = ["PipeBomb","ItemHotwireKit"];
+_legend_group = ["BAF_ied_v2"];
 _chainsaw_group = ["Chainsaw","ChainsawB","ChainsawG","ChainsawP"];
 _gem_group = ["ItemObsidian","ItemCitrine","ItemTopaz","ItemRuby","ItemSapphire","ItemEmerald","ItemAmathyst"]; //You can use this if your server uses gems as currency
 
@@ -63,18 +120,17 @@ MBC_REWARDLIST = [
 	
 
 	// Bad luck (junk items with low possibility)
-	 ["group_mag",_junk_group,1,1,2]
-	,["group_mag",_food_group,1,1,2]
+	["group_mag",_food_group,5,1,2]
 	
 	// Common
 	,["group_wep",_assault_group,1,1,10]
 	,["group_wep",_lmg_group,1,1,10]
 	,["group_wep",_sniper_group,1,2,9]
-	,["group_mag",_common_group,1,2,12]
-	,["group_mag",_military_group,1,2,2]
-	,["group_mag",_medical_group,2,2,2]
+	,["group_mag",_common_group,10,2,12]
+	,["group_mag",_military_group,10,2,2]
+	,["group_mag",_medical_group,10,2,2]
 	,["group_mag",_vehicle_repair_group,2,2,2]
-	,["group_wep",_tools_group,0,2,6]
+	,["group_wep",_tools_group,2,2,6]
 	,["magazine","ItemGoldBar10oz",5,2,4]
 	,["magazine","PartPlywoodPack",15,2,5]
 	,["magazine","PartPlankPack",15,2,5]
@@ -82,19 +138,17 @@ MBC_REWARDLIST = [
 	// Rare
 	,["group_wep",_rare_weapons_group,1,3,5]
 	,["group_mag",_rares_group,1,3,5]
-	,["magazine","ItemGoldBar10oz",10,3,3]
-	,["magazine","CinderBlocks",15,3,2]
+	,["magazine","ItemBriefcase100oz",1,3,3]
+	,["magazine","BAF_ied_v1",1,3,3]
+	,["magazine","ItemHotwireKit",1,3,3]
+	,["magazine","CinderBlocks",6,3,2]
 	,["magazine","PartPlywoodPack",30,3,2]
 	,["magazine","PartPlankPack",30,3,3]
-	,["magazine","ItemPole",30,3,2]
-	,["group_mag",_chainbullets_group,2,3,1]
 	
 	// Legendary
-	,["group_wep",_chainsaw_group,0,4,1]
+	,["group_wep",_chainsaw_group,1,4,1]
 	,["group_mag",_legend_group,1,4,1]
-	,["magazine","ItemBriefcase_Base",1,4,1]
-	,["magazine","CinderBlocks",30,4,1]
-	// If you have the Single Currency script here's an example of coins as a reward:
-	//	,["coins","Coins",25000,2,10] //25000 being the amount of coins rewarded
-	
+	,["magazine","CinderBlocks",15,4,1]
+	,["group_mag",_chainbullets_group,1,4,1]
+
 ];
