@@ -1,5 +1,5 @@
 //breakin by Mist currently untested
-private ["_obj","_rand"];
+private ["_obj","_rand","_ownerID"];
 _rand = random 1;
 player playActionNow "Medic";
 sleep 10;
@@ -13,6 +13,10 @@ if (_rand > 0.6) then {
 	//player removeWeapon "ItemToolbox";
 	//player removeWeapon "ItemKnife";
 	//player removeMagazine "ItemTrashRazor";
+	
+_ownerID = cursorTarget getVariable ["CharacterID","0"]
+	dayz_selectedVault = _this select 3;
+	dayz_combination = "_ownerID";
 	_obj = _this select 3;
 	_obj spawn player_unlockVault;
 	cutText ['You were able to break the lockbox open!', 'PLAIN'];
