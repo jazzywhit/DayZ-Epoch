@@ -96,6 +96,7 @@ _rare_weapons_group = ["MK_48","BAF_LRR_scoped","M24", "M24_des_EP1", "M40A3"];
 
 // Legendaries
 _legend_group = ["BAF_ied_v2"];
+_rocket_weapons_group = ["RPG7V"];
 _chainsaw_group = ["Chainsaw","ChainsawB","ChainsawG","ChainsawP"];
 _gem_group = ["ItemObsidian","ItemCitrine","ItemTopaz","ItemRuby","ItemSapphire","ItemEmerald","ItemAmathyst"]; //You can use this if your server uses gems as currency
 
@@ -136,7 +137,7 @@ MBC_REWARDLIST = [
 	,["magazine","PartPlankPack",15,2,5]
 	
 	// Rare
-	,["group_wep",_rare_weapons_group,1,3,5]
+	,["group_wep",_rare_weapons_group,1,3,2]
 	,["group_mag",_rares_group,1,3,5]
 	,["magazine","ItemBriefcase100oz",1,3,3]
 	,["magazine","BAF_ied_v1",1,3,3]
@@ -146,6 +147,7 @@ MBC_REWARDLIST = [
 	,["magazine","PartPlankPack",30,3,3]
 	
 	// Legendary
+	,["group_wep",_rocket_weapons_group,1,4,1]
 	,["group_wep",_chainsaw_group,1,4,1]
 	,["group_mag",_legend_group,1,4,1]
 	,["magazine","CinderBlocks",15,4,1]
