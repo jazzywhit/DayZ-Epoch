@@ -14,8 +14,9 @@
 !Tools/**
 !DayZ-SQF/**
 !BEC/**
+BEC/Log/**
 !restart.cmd
 !timechange.vbs
-.bak
+*.bak
 .DS_Store
 *.pbo
