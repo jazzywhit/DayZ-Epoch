@@ -1297,25 +1297,25 @@ class Mission
 		{
 			position[]={ 1944.09, 0, 9136.59};
             name="Mine1";
-            text="Mining Node";
+            text="Lagunas Norte Gold Mine";
             type="mil_dot";
-            colorName="ColorBlack";
+            colorName="ColorYellow";
 		};
 		class Item17
 		{
 			position[]={ 13273.093, 0, 6099.0747};
             name="Mine2";
-            text="Mining Node";
+            text="Yanacocha Gold Mine";
             type="mil_dot";
-            colorName="ColorBlack";
+            colorName="ColorYellow";
 		};
 		class Item18
 		{
 			position[]={ 13673.6, 0, 12307.3};
             name="Mine3";
-            text="Mining Node";
+            text="Muruntau Gold Mine";
             type="mil_dot";
-            colorName="ColorBlack";
+            colorName="ColorYellow";
 		};
 	};
 	class Sensors
