@@ -3,6 +3,7 @@
 .idea/
 !.gitignore
 !Images/**
+!@DayZ_Epoch/**
 !@DayZ_Epoch_Server/addons/dayz_server/**
 !Battleye/**
 !Keys/**
@@ -14,6 +15,9 @@
 !Tools/**
 !DayZ-SQF/**
 !BEC/**
+steamcmd/**
+!steamcmd/steamcmd.exe
+!steamcmd/install_arma2.bat
 !restart.cmd
 !timechange.vbs
 .bak
