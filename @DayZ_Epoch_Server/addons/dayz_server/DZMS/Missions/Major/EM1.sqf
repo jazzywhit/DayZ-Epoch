@@ -4,7 +4,7 @@
 	Updated for patrol by jesquik
 */
 
-private ["_missName","_coords","_wreck","_trash","_trash1","_trash2","_trash3","_trash4","_trash5","_veh1","_veh2","_vehicle","_vehicle1","_crate","_crate1"];
+private ["_missName","_coords","_wreck","_trash1","_trash2","_trash3","_trash4","_trash5","_veh1","_veh2","_vehicle","_vehicle1","_crate","_crate1"];
 
 //Name of the Mission
 _missName = "C130J Crash";
@@ -41,10 +41,6 @@ _wreck addEventHandler ["GetIn",{
 		(_this select 0) removeAllEventHandlers "GetIn";
 	};
 }];
-
-_trash = createVehicle ["Barrels",[(_coords select 0) - 7.4511, (_coords select 1) + 3.8544,0],[], 0, "NONE"];
-_trash setDir 61.911976;
-[_trash] call DZMSProtectObj;
 
 _trash1 = createVehicle ["Misc_palletsfoiled",[(_coords select 0) + 4.062, (_coords select 1) + 4.7216,0],[], 0, "NONE"];
 _trash1 setDir -29.273479;
