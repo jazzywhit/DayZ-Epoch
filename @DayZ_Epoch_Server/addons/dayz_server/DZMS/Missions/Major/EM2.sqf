@@ -73,7 +73,7 @@ else
 
 _loop = true;
 _counter = 0;
-while {_loop && _counter < 24 && Alive _plane} do {
+while {_loop && _counter < 24 && Alive _plane && Alive _pilot} do {
 	if (_moveComplete) then {
 	    [nil,nil,rTitleText,"I got the signal!", "PLAIN",6] call RE;
 	    _loop = false;
@@ -82,7 +82,7 @@ while {_loop && _counter < 24 && Alive _plane} do {
 	_counter = _counter + 1;
 };
 
-if (Alive _plane) then {
+if (Alive _plane && Alive _pilot) then {
     [nil,nil,rTitleText,"The C130 is going to take off!", "PLAIN",6] call RE;
     _wp = _aiGrp addWaypoint [[0,0,150], 0];
     _wp setWaypointType "MOVE";
@@ -92,6 +92,7 @@ if (Alive _plane) then {
     sleep 240;
 };
 
+[nil,nil,rTitleText,"The C130 mission is over!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major EM2 C130 J landing mission is over."];
 deleteMarker "DZMSMajMarker";
 deleteMarker "DZMSMajDot";
