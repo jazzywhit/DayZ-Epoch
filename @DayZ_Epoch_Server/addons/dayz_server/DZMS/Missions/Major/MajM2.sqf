@@ -1,6 +1,7 @@
 /*
-	AN-2 Bandit Supply Drop by Vampire
+	MV22 Bandit Supply Drop by Vampire
 	Example Code by Halv
+	Updated by jesquik
 */
 
 private ["_missName","_coords","_plane","_aiGrp","_pilot","_wp","_wp_pos","_loop","_half","_newPos","_plane2","_chute","_box","_dropDir","_wp2","_fallCount","_boxFin"];
@@ -11,13 +12,13 @@ _missName = "Supply Drop";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"An AN-2 with UN Supplies is Flying In!\nSurvivors have also intercepted the radio signal!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"An MV22 with UN Supplies is Flying In!\nSurvivors have also intercepted the radio signal!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
 
-//Lets get the AN2 Flying
-_plane = createVehicle ["AN2_DZ", [0,0,500], [], 0, "FLY"];
+//Lets get the MV22 Flying
+_plane = createVehicle ["MV22", [0,0,500], [], 0, "FLY"];
 [_plane] call DZMSProtectObj;
 _plane engineOn true;
 _plane flyInHeight 150;
@@ -86,7 +87,7 @@ while {_loop} do {
 		};
 		
 		//Create the plane and kill it
-		_plane2 = createVehicle ["AN2_DZ", [(_newPos select 0),(_newPos select 1),200], [], 0, "FLY"];
+		_plane2 = createVehicle ["MV22", [(_newPos select 0),(_newPos select 1),200], [], 0, "FLY"];
 		[_plane2] call DZMSProtectObj;
 		_plane2 engineOn true;
 		_plane2 flyInHeight 150;
@@ -95,8 +96,8 @@ while {_loop} do {
 		_plane2 setDamage 1;
 		
 		//Update the location
-		[_coords,"AN2 Wreck"] ExecVM DZMSAddMajMarker;
-		[nil,nil,rTitleText,"The AN2 was shot down!\nGo Find the Supplies!", "PLAIN",10] call RE;
+		[_coords,"MV22 Wreck"] ExecVM DZMSAddMajMarker;
+		[nil,nil,rTitleText,"The MV22 was shot down!\nGo Find the Supplies!", "PLAIN",10] call RE;
 		
 		_chute = createVehicle ["ParachuteMediumEast", [(_newPos select 0),(_newPos select 1),200], [], 0, "FLY"];
 		[_chute] call DZMSProtectObj;
@@ -108,7 +109,7 @@ while {_loop} do {
 	};
 	
 	if ((Alive _plane) AND (Alive _pilot) AND ((_plane distance _wp_pos) <= 1200) AND (!(_half))) then {
-		[nil,nil,rTitleText,"The AN2 is only 1200m out from the drop point!", "PLAIN",10] call RE;
+		[nil,nil,rTitleText,"The MV22 is only 1200m out from the drop point!", "PLAIN",10] call RE;
 		
 		//Keep on truckin'
 		_plane forceSpeed 175;
@@ -123,7 +124,7 @@ while {_loop} do {
 		_dropDir = getDir _plane;
 		_newPos = [(getPosATL _plane select 0) - 15*sin(_dropDir), (getPosATL _plane select 1) - 15*cos(_dropDir), (getPosATL _plane select 2) - 10];
 
-		[nil,nil,rTitleText,"The AN2 has reached the location and dropped the cargo!", "PLAIN",10] call RE;
+		[nil,nil,rTitleText,"The MV22 has reached the location and dropped the cargo!", "PLAIN",10] call RE;
 		
 		_chute = createVehicle ["ParachuteMediumEast", _newPos, [], 0, "FLY"];
 		[_chute] call DZMSProtectObj;
@@ -155,7 +156,7 @@ _box setpos [(getpos _box select 0), (getpos _box select 1), 0];
 _boxFin = createVehicle ["USVehicleBox",[(getpos _box select 0),(getpos _box select 1), 0],[],0,"CAN_COLLIDE"];
 deletevehicle _box;
 deletevehicle _chute;
-[[(getpos _boxFin select 0), (getpos _boxFin select 1), 0],"AN2 Cargo"] ExecVM DZMSAddMajMarker;
+[[(getpos _boxFin select 0), (getpos _boxFin select 1), 0],"MV22 Cargo"] ExecVM DZMSAddMajMarker;
 clearWeaponCargoGlobal _boxFin;
 clearMagazineCargoGlobal _boxFin;
 clearBackpackCargoGlobal _boxFin;
@@ -171,8 +172,8 @@ clearBackpackCargoGlobal _boxFin;
 [_vehicle2] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
-[nil,nil,rTitleText,"The AN2 Cargo has been Secured by Survivors!", "PLAIN",6] call RE;
-diag_log text format["[DZMS]: Major SM2 AN2 Drop Mission has Ended."];
+[nil,nil,rTitleText,"The MV22 Cargo has been Secured by Survivors!", "PLAIN",6] call RE;
+diag_log text format["[DZMS]: Major SM2 MV22 Drop Mission has Ended."];
 deleteMarker "DZMSMajMarker";
 deleteMarker "DZMSMajDot";
 

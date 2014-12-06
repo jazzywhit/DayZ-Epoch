@@ -7,18 +7,18 @@
 private ["_missName","_coords","_wreck","_trash","_trash1","_trash2","_trash3","_trash4","_trash5","_veh1","_veh2","_vehicle","_vehicle1","_crate","_crate1"];
 
 //Name of the Mission
-_missName = "MV22 Crash";
+_missName = "C130J Crash";
 
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"A MV22 Carrying Building Supplies and Weapons has Crashed!\nThe UN is Securing the Cargo!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"A C130 Carrying Building Supplies and Weapons has Crashed!\nThe UN is Securing the Cargo!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
 
 //We create the mission scenery
-_wreck = createVehicle ["MV22Wreck",[(_coords select 0) - 8.8681, (_coords select 1) + 15.3554,0],[], 0, "NONE"];
+_wreck = createVehicle ["C130JWreck",[(_coords select 0) - 8.8681, (_coords select 1) + 15.3554,0],[], 0, "NONE"];
 _wreck setDir -30.165445;
 [_wreck] call DZMSProtectObj;
 
@@ -107,7 +107,7 @@ sleep 5;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Crash Site has been Secured by Survivors!", "PLAIN",6] call RE;
-diag_log text format["[DZMS]: Major EM1 MV22Wreck Mission has Ended."];
+diag_log text format["[DZMS]: Major EM1 C130J crash Mission has Ended."];
 deleteMarker "DZMSMajMarker";
 deleteMarker "DZMSMajDot";
 
