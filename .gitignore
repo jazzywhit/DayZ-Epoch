@@ -3,6 +3,7 @@
 .idea/
 !.gitignore
 !Images/**
+!@DayZ_Epoch/**
 !@DayZ_Epoch_Server/addons/dayz_server/**
 !Battleye/**
 !Keys/**
