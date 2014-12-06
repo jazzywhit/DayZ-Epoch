@@ -68,7 +68,7 @@ if (_hasoutput) then{
 
 //add infection chance for "ItemWaterbottle",
 if (_itemorignal == "ItemWaterbottle") then {
-    if (random 1 < InfectionWaterUnclean) then {
+    if (random 1 < 0.05) then {
         r_player_infected = true;
         player setVariable["USEC_infected",true,true];
     };
