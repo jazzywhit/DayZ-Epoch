@@ -170,7 +170,7 @@ Minor missions have less AI than Major missions, but have crates that reflect th
 Below is the array of mission file names and the minimum and maximum times they run.
 Do not edit the Arrays unless you know what you are doing.
 */
-DZMSMajorArray = ["MajM1","MajM2","MajM3","MajM4","MajM5","MajM6"];
+DZMSMajorArray = ["EM1","MajM1","MajM2","MajM3","MajM4","MajM5","MajM6"];
 DZMSMinorArray = ["MinM1","MinM2","MinM3","MinM4","MinM5","MinM6","MinM7","MinM8","MinM9"];
 
 /////////////////////////////////////////////////////////////////////////////////////////////
