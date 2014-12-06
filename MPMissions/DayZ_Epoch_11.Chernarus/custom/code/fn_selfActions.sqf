@@ -693,7 +693,7 @@ if(_isModularDoor) then {
 	} else {
 		{player removeAction _x} count s_player_combi;s_player_combi = [];
 		player removeAction _breakin;
-		_breakin = -1
+		_breakin = -1;
 		s_player_unlockvault = -1;
 	};
 
