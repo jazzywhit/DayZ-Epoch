@@ -65,7 +65,7 @@ else
     //2 = Airport SouthWest close to Balota
     //3 = Nearest Airport
     //Planes approach all airports from South East
-    _plane landAt floor(random 3); // Pick a random airport to land at
+    _plane landAt 0; // Pick a random airport to land at
 
 	//Add a LandedStopped Eventhandler to the plane to catch when the AI will stop their plane
 	_plane addEventHandler ["LandedStopped", {_moveComplete = true;}];
