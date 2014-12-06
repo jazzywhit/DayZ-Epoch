@@ -73,7 +73,7 @@ else
 
 _loop = true;
 _counter = 0;
-while {_loop && _counter < 90 && Alive _plane} do {
+while {_loop && _counter < 24 && Alive _plane} do {
 	if (_moveComplete) then {
 	    [nil,nil,rTitleText,"I got the signal!", "PLAIN",6] call RE;
 	    _loop = false;
@@ -83,9 +83,7 @@ while {_loop && _counter < 90 && Alive _plane} do {
 };
 
 if (Alive _plane) then {
-    sleep 240;
-    [nil,nil,rTitleText,"The C130 is taking off!", "PLAIN",6] call RE;
-
+    [nil,nil,rTitleText,"The C130 is going to take off!", "PLAIN",6] call RE;
     _wp = _aiGrp addWaypoint [[0,0,150], 0];
     _wp setWaypointType "MOVE";
     _wp setWaypointBehaviour "CARELESS";
