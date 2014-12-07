@@ -6,7 +6,6 @@ class CfgTraderCategory {
 	#include "Category\HeroAmmunition.hpp"
 	#include "Category\HeroHelicopterArmed.hpp"
 	#include "Category\HeroMilitaryArmed.hpp"
-	#include "Category\HeroTrucksArmed.hpp"
 	#include "Category\HeroWeapons.hpp"
 	#include "Category\NeutralAirplanes.hpp"
 	#include "Category\NeutralAssaultRifle.hpp"
