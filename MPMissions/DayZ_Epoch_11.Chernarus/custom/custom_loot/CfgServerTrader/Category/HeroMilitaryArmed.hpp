@@ -14,16 +14,16 @@ class Category_562 {
 		buy[] = {4,"ItemBriefcase100oz"};
 		sell[] = {3,"ItemBriefcase100oz"};
 	};
+    class Offroad_DSHKM_Gue_DZE {
+        type = "trade_any_vehicle";
+        buy[] = {8,"ItemGoldBar10oz"};
+        sell[] = {4,"ItemGoldBar10oz"};
+    };
 	class UAZ_MG_TK_EP1_DZE {
 		type = "trade_any_vehicle";
 		buy[] = {2,"ItemBriefcase100oz"};
 		sell[] = {2,"ItemBriefcase100oz"};
 	};
-	class GAZ_Vodnik {
-        type = "trade_any_vehicle";
-        buy[] = {2,"ItemBriefcase100oz"};
-        sell[] = {1,"ItemBriefcase100oz"};
-    };
     class GAZ_Vodnik_MedEvac {
         type = "trade_any_vehicle";
         buy[] = {2,"ItemBriefcase100oz"};
