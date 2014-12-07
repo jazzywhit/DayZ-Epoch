@@ -45,4 +45,5 @@ class CfgTraderCategory {
 	#include "Category\NeutralUtilityVehicles.hpp"
 	#include "Category\NeutralVehicleParts.hpp"
 	#include "Category\NeutralWholesale.hpp"
+	#include "Category\NeutralGems.hpp"
 };

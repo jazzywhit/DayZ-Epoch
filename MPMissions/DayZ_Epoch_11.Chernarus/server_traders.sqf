@@ -62,13 +62,13 @@ menu_RU_Villager3 = [
 ];
 // General Store / low tier
 menu_RU_WorkWoman1 = [
-	[["Backpacks",538],["Drinks",601],["Packaged Food",629]],
+	[["Backpacks",538],["Drinks",601],["Packaged Food",629],["Gems", 623]],
 	[["ItemTinBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Tin Bar",101]],
 	"neutral"
 ];
 // General Store / mid tier
 menu_Rita_Ensler_EP1 = [
-	[["Backpacks",496],["Drinks",498],["Packaged Food",579]],
+	[["Backpacks",496],["Drinks",498],["Packaged Food",579]["Gems",623]],
 	[["ItemTinBar","TrashJackDaniels",1,1,"buy","Empty Whiskey Bottle","Tin Bar",101]],
 	"neutral"
 ];
