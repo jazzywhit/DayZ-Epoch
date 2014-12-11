@@ -214,6 +214,9 @@ if (!isDedicated) then {
 		_ctrlDogWaterBorder ctrlShow false;
 		_ctrlDogWater = _display displayCtrl 1702;
 		_ctrlDogWater ctrlShow false
+
+		_ctrlEar ctrlShow false;
+		_ctrlEye ctrlShow false;
 	};
 
 	dayz_losCheck = {
