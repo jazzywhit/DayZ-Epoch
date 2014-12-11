@@ -13,7 +13,7 @@ if (!isDedicated) then {
 	player_craftItem =    compile preprocessFileLineNumbers "custom\code\player_craftItem.sqf";
 
 	//dynamic traders
-	execVM "custom\dynamic_traders\player_tradermarkers.sqf";
+	execVM "custom\player_markers\player_tradermarkers.sqf";
 	
 	//instant trade
 	if (DZE_ConfigTrader) then {
@@ -30,7 +30,7 @@ if (!isDedicated) then {
 	
 	//tow and lift
 	call compile preprocessFileLineNumbers "custom\tow_lift\init.sqf";
-	
+
 	//change safe code (ckc)
 	ckc_button     =	compile preprocessFileLineNumbers "custom\ckc\ckc_button.sqf";
 	ckc_upddoor    =    compile preprocessFileLineNumbers "custom\ckc\ckc_upddoor.sqf";

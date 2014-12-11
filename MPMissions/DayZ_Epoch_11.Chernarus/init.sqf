@@ -32,10 +32,10 @@ dayz_maxLocalZombies = 30; // Default = 30
 dayz_paraSpawn = false;
 dayz_minpos = -1;
 dayz_maxpos = 16000;
-dayz_sellDistance_vehicle = 10;
+dayz_sellDistance_vehicle = 30;
 dayz_sellDistance_boat = 30;
-dayz_sellDistance_air = 40;
-dayz_maxAnimals = 2; // Default: 8
+dayz_sellDistance_air = 50;
+dayz_maxAnimals = 6; // Default: 8
 dayz_tameDogs = true;
 DZE_BuildOnRoads = false; // Default: False
 dayz_fullMoonNights = true;
@@ -92,6 +92,9 @@ if (!isDedicated) then {
 	
     //fixed point mining
 	[] execVM "custom\mining\init.sqf";
+
+	// Mission Markers
+	"PlayerMissionMarker" addPublicVariableEventHandler { PlayerMissionMarker execVM 'custom\player_missionmarkers.sqf'; };
 
 	//Conduct map operations
 	0 fadeSound 0;
