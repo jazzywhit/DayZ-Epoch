@@ -152,13 +152,13 @@ DZMSSmallVicBandit = ["Pickup_PK_TK_GUE_EP1_DZE","Pickup_PK_GUE_DZE","datsun1_ci
 DZMSSmallVicSurvivor = ["hilux1_civil_3_open_EP1", "datsun1_civil_2_covered", "hilux1_civil_1_open", "VWGolf"];
 
 //Large Vehicles (Urals)
-DZMSLargeVicNATO = ["MTVR_DES_EP1","MTVR", "mtvrreammo", "mtvrreammo_des_ep1", "mtvrsalvage_des_ep1", "mtvrsupply_des_ep1", "Ural_UN_EP1"];
+DZMSLargeVicNATO = ["MTVR_DES_EP1"];
 
 //Large Vehicles (Urals)
-DZMSLargeVicBandit = ["Ural_CDF","Ural_TK_CIV_EP1", "KamazOpen_DZE", "Kamaz", "kamazreammo", "kamazrepair"];
+DZMSLargeVicBandit = ["Ural_CDF","Ural_TK_CIV_EP1", "KamazOpen_DZE", "Kamaz"];
 
 //Large Vehicles (Urals)
-DZMSLargeVicSurvivor = ["Ural_INS","uralrepair_cdf", "uralsalvage_tk_ep1", "v3s_gue", "v3s_reammo_tk_gue_ep1", "v3s_supply_tk_gue_ep1"];
+DZMSLargeVicSurvivor = ["Ural_CDF","UralCivil_DZE" ,"UralCivil_DZE", "V3S_Civ","V3S_RA_TK_GUE_EP1_DZE"];
 
 /*///////////////////////////////////////////////////////////////////////////////////////////
 There are two types of missions that run simultaneously on a the server.
@@ -200,4 +200,6 @@ DZMSBlacklistZones = [
 /*=============================================================================================*/
 // Do Not Edit Below This Line
 /*=============================================================================================*/
+DZMSVersion = "1.1FIN";
+=*/
 DZMSVersion = "1.1FIN";
