@@ -18,5 +18,5 @@ DZE_CLICK_ACTIONS = [
     ["ItemBriefcase_Base","Open Mystery Briefcase","execVM ""custom\mysterybrief\open_brief.sqf"";","true"],
 	["ItemZombieParts","Smear Guts on you","[] execVM ""custom\walkamongstthedead\smear_guts.sqf"";","true"],
 	["ItemWaterbottle","Wash zombie guts","[] execVM ""custom\walkamongstthedead\usebottle.sqf"";","true"]
-
+	["ItemNewspaper","Whats going on?","[] execVM ""custom\newspaperinfo\info.sqf"";","true"]
 ];
