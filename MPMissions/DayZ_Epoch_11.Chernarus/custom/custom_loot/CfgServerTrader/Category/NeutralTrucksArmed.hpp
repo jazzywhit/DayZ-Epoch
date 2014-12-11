@@ -14,9 +14,4 @@ class Category_534 {
 		buy[] = {4,"ItemGoldBar10oz"};
 		sell[] = {2,"ItemGoldBar10oz"};
 	};
-	class Offroad_DSHKM_Gue_DZE {
-		type = "trade_any_vehicle";
-		buy[] = {8,"ItemGoldBar10oz"};
-		sell[] = {4,"ItemGoldBar10oz"};
-	};
 };

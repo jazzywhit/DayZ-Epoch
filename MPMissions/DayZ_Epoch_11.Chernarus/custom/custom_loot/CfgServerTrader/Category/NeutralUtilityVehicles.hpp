@@ -51,8 +51,8 @@ class Category_661 {
 	};
 	class SUV_Camo {
 		type = "trade_any_vehicle";
-		buy[] = {25,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		buy[] = {30,"ItemGoldBar"};
+		sell[] = {15,"ItemGoldBar"};
 	};
 	class UAZ_CDF {
 		type = "trade_any_vehicle";
@@ -138,8 +138,8 @@ class Category_591 {
 	};
 	class SUV_Camo {
 		type = "trade_any_vehicle";
-		buy[] = {25,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		buy[] = {30,"ItemGoldBar"};
+		sell[] = {15,"ItemGoldBar"};
 	};
 	class UAZ_CDF {
 		type = "trade_any_vehicle";

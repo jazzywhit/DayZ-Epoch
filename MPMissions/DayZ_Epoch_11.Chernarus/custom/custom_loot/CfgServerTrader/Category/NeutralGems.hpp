@@ -1,5 +1,4 @@
-//not hooked up
-class Category_xxx {
+class Category_623 {
 	class PartOre {
 		type = "trade_items";
 		buy[] = {1,"ItemSilverBar10oz"}; //should remove buy option if possible to avoid people buying instead of scrap metal for 2 gold and to farm gold
@@ -41,5 +40,3 @@ class Category_xxx {
 		sell[] = {1,"ItemGoldBar10oz"};
 	};
 };
-
-//Rarity Ore 30% Silverore 20% Topaz 18% Citrine 18% Amethyst 5% Sapphire 4% Obsidian 3% Ruby 1%

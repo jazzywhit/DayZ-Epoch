@@ -15,11 +15,12 @@
 !Tools/**
 !DayZ-SQF/**
 !BEC/**
+BEC/Log/**
 steamcmd/**
 !steamcmd/steamcmd.exe
 !steamcmd/install_arma2.bat
 !restart.cmd
 !timechange.vbs
-.bak
+*.bak
 .DS_Store
 *.pbo

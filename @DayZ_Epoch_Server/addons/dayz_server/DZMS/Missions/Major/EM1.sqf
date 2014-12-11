@@ -4,21 +4,21 @@
 	Updated for patrol by jesquik
 */
 
-private ["_missName","_coords","_wreck","_trash","_trash1","_trash2","_trash3","_trash4","_trash5","_veh1","_veh2","_vehicle","_vehicle1","_crate","_crate1"];
+private ["_missName","_coords","_wreck","_trash1","_trash2","_trash3","_trash4","_trash5","_veh1","_veh2","_vehicle","_vehicle1","_crate","_crate1"];
 
 //Name of the Mission
-_missName = "C130 Crash";
+_missName = "C130J Crash";
 
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"A C130 Carrying Building Supplies has Crashed!\nThe UN is Securing the Cargo!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"A C130 Carrying Building Supplies and Weapons has Crashed!\nThe UN is Securing the Cargo!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
 
 //We create the mission scenery
-_wreck = createVehicle ["C130J",[(_coords select 0) - 8.8681, (_coords select 1) + 15.3554,0],[], 0, "NONE"];
+_wreck = createVehicle ["C130JWreck",[(_coords select 0) - 8.8681, (_coords select 1) + 15.3554,0],[], 0, "NONE"];
 _wreck setDir -30.165445;
 [_wreck] call DZMSProtectObj;
 
@@ -41,10 +41,6 @@ _wreck addEventHandler ["GetIn",{
 		(_this select 0) removeAllEventHandlers "GetIn";
 	};
 }];
-
-_trash = createVehicle ["Barrels",[(_coords select 0) - 7.4511, (_coords select 1) + 3.8544,0],[], 0, "NONE"];
-_trash setDir 61.911976;
-[_trash] call DZMSProtectObj;
 
 _trash1 = createVehicle ["Misc_palletsfoiled",[(_coords select 0) + 4.062, (_coords select 1) + 4.7216,0],[], 0, "NONE"];
 _trash1 setDir -29.273479;
@@ -83,7 +79,7 @@ _crate1 = createVehicle ["USVehicleBox",[(_coords select 0) + 0.3428,(_coords se
 [_crate1,"supply_high"] ExecVM DZMSBoxSetup;
 [_crate1] call DZMSProtectObj;
 
-_crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) + 1,(_coords select 1) - 1.8985,0],[], 0, "CAN_COLLIDE"];
+_crate2 = createVehicle ["USVehicleBox",[(_coords select 0) + 3,(_coords select 1) - 2.34,0],[], 0, "CAN_COLLIDE"];
 [_crate2,"weapons_nato_high"] ExecVM DZMSBoxSetup;
 [_crate2] call DZMSProtectObj;
 
@@ -107,7 +103,7 @@ sleep 5;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Crash Site has been Secured by Survivors!", "PLAIN",6] call RE;
-diag_log text format["[DZMS]: Major EM1 C130 Mission has Ended."];
+diag_log text format["[DZMS]: Major EM1 C130J crash Mission has Ended."];
 deleteMarker "DZMSMajMarker";
 deleteMarker "DZMSMajDot";
 

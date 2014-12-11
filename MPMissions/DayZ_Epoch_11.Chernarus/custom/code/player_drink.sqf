@@ -67,9 +67,11 @@ if (_hasoutput) then{
 };
 
 //add infection chance for "ItemWaterbottle",
-if ((random 15 < 1) && (_itemorignal == "ItemWaterbottle")) then {
-    r_player_infected = true;
-    player setVariable["USEC_infected",true,true];
+if (_itemorignal == "ItemWaterbottle") then {
+    if (random 1 < 0.05) then {
+        r_player_infected = true;
+        player setVariable["USEC_infected",true,true];
+    };
 };
 
 // Set Thirst levels

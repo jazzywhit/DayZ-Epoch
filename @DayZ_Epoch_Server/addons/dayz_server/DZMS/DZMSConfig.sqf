@@ -100,7 +100,7 @@ DZMSStatLocs = [
 [5005.91,5264.97,0],
 [7072.33,5358.28,0],
 [8024.24,5131.75,0],
-[6710.3,3645.9,0],
+[6740.6,3647.5,0],
 [5511.76,2642.89,0],
 [5379.05,3978.64,0],
 [9221.6,4071.89,0],
@@ -170,7 +170,7 @@ Minor missions have less AI than Major missions, but have crates that reflect th
 Below is the array of mission file names and the minimum and maximum times they run.
 Do not edit the Arrays unless you know what you are doing.
 */
-DZMSMajorArray = ["MajM1","MajM2","MajM3","MajM4","MajM5","MajM6"];
+DZMSMajorArray = ["EM1","MajM1","MajM2","MajM3","MajM4","MajM5","MajM6"];
 DZMSMinorArray = ["MinM1","MinM2","MinM3","MinM4","MinM5","MinM6","MinM7","MinM8","MinM9"];
 
 /////////////////////////////////////////////////////////////////////////////////////////////

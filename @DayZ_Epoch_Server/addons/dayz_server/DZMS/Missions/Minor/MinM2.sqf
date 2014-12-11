@@ -3,7 +3,7 @@
 	New Mission Format by Vampire
 */
 
-private ["_missName","_coords","_ranChopper","_chopper","_truck","_trash","_trash2","_crate","_crate2","_crate3"];
+private ["_missName","_coords","_ranChopper","_chopper","_veh1", "_vehicle","_trash","_trash2","_crate","_crate2","_crate3"];
 
 //Name of the Mission
 _missName = "Helicopter Landing";
@@ -19,10 +19,13 @@ _coords = call DZMSFindPos;
 //We create the vehicles like normal
 _ranChopper = ["heli"] call DZMSGetVeh;
 _chopper = createVehicle [_ranChopper,_coords,[], 0, "NONE"];
-
-//DZMSSetupVehicle prevents the vehicle from disappearing and sets fuel and such
 [_chopper] call DZMSSetupVehicle;
 _chopper setDir -36.279881;
+
+//We create the vehicles
+_veh1 = ["small_survivor"] call DZMSGetVeh;
+_vehicle = createVehicle [_veh1,[(_coords select 0) + 10, (_coords select 1) - 5,0],[], 0, "CAN_COLLIDE"];
+[_vehicle] call DZMSSetupVehicle;
 
 //Lets add the scenery
 _trash = createVehicle ["Body1",[(_coords select 0) - 3.0185,(_coords select 1) - 0.084,0],[], 0, "CAN_COLLIDE"];
@@ -56,7 +59,7 @@ sleep 5;
 //Call DZMSSaveVeh to attempt to save the vehicles to the database
 //If saving is off, the script will exit.
 [_chopper] ExecVM DZMSSaveVeh;
-[_truck] ExecVM DZMSSaveVeh;
+[_vehicle] ExecVM DZMSSaveVeh;
 
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Helicopter has been Taken by Survivors!", "PLAIN",6] call RE;
