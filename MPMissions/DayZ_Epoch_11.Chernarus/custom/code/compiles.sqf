@@ -28,9 +28,6 @@ if (!isDedicated) then {
 	//Self Actions
 	fnc_usec_selfActions = compile preprocessFileLineNumbers "custom\code\fn_selfActions.sqf";
 	
-	//tow and lift
-	call compile preprocessFileLineNumbers "custom\tow_lift\init.sqf";
-	
 	//change safe code (ckc)
 	ckc_button     =	compile preprocessFileLineNumbers "custom\ckc\ckc_button.sqf";
 	ckc_upddoor    =    compile preprocessFileLineNumbers "custom\ckc\ckc_upddoor.sqf";
@@ -79,5 +76,8 @@ if (!isDedicated) then {
 
 	// Custom Water Filling
 	player_fillWater = 			compile preprocessFileLineNumbers "custom\code\water_fill.sqf";
+
+	// Custom Lock/Unlock for Towing
+	local_lockUnlock =			compile preprocessFileLineNumbers "custom\code\local_lockUnlock.sqf";
 
 };

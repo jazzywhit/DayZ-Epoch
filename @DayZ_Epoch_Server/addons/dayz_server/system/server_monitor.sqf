@@ -263,6 +263,7 @@ if (isServer && isNil "sm_done") then {
 					
 					if(_ownerID != "0" && !(_object isKindOf "Bicycle")) then {
 						_object setvehiclelock "locked";
+						_object setVariable ["MF_Tow_Cannot_Tow",true,true];
 					};
 					
 					_totalvehicles = _totalvehicles + 1;

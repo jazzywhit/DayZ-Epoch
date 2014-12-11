@@ -89,6 +89,7 @@ _key call server_hiveWrite;
 	if(!_donotusekey) then {
 		// Lock vehicle
 		_object setvehiclelock "locked";
+		_object setVariable ["MF_Tow_Cannot_Tow",true,true];
 
 		// If vehicle can be locked, set the fuel
 		// Get a random fuel between MinGasOnSale and MaxGasOnSale
