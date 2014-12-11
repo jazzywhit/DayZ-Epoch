@@ -80,4 +80,7 @@ if (!isDedicated) then {
 	// Custom Water Filling
 	player_fillWater = 			compile preprocessFileLineNumbers "custom\code\water_fill.sqf";
 
+	// Custom GUI
+	player_updateGui =			compile preprocessFileLineNumbers "custom\code\player_updateGui.sqf";
+
 };
