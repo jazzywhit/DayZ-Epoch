@@ -65,8 +65,6 @@ sleep 5;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Weapons Cache is Under Survivor Control!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major SM1 Weapon Cache Mission has Ended."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
 DZMSMajDone = true;

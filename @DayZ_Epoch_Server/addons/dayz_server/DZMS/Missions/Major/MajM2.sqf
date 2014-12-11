@@ -174,8 +174,6 @@ clearBackpackCargoGlobal _boxFin;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The MV22 Cargo has been Secured by Survivors!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major SM2 MV22 Drop Mission has Ended."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
 DZMSMajDone = true;

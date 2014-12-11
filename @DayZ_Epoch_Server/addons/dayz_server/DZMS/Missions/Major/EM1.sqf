@@ -104,8 +104,6 @@ sleep 5;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Crash Site has been Secured by Survivors!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major EM1 C130J crash Mission has Ended."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
 DZMSMajDone = true;

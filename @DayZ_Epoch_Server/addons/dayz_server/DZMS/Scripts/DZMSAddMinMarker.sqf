@@ -1,18 +1,29 @@
 /*
-	Adds a marker for Major Missions. Only runs once.
-	DZMSMarkerLoop.sqf keeps this marker updated.
+	Adds a marker for Minor Missions. Only runs once.
 	Usage: [coordinates,missionname]
 */
-private["_nul","_nil"];
 DZMSMinCoords = _this select 0;
 DZMSMinName = _this select 1;
 
-_nul = createMarker ["DZMSMinMarker", DZMSMinCoords];
-"DZMSMinMarker" setMarkerColor "ColorYellow";
-"DZMSMinMarker" setMarkerShape "ELLIPSE";
-"DZMSMinMarker" setMarkerBrush "Grid";
-"DZMSMinMarker" setMarkerSize [150,150];
-_nil = createMarker ["DZMSMinDot", DZMSMinCoords];
-"DZMSMinDot" setMarkerColor "ColorBlack";
-"DZMSMinDot" setMarkerType "Vehicle";
-"DZMSMinDot" setMarkerText DZMSMinName;
+if(!isServer) exitWith {};
+
+private ["_units"];
+_units = [];
+PlayerMissionMarker = [DZMSMinCoords, DZMSMinName];
+
+while {DZMSMinRun} do {
+    _units = [];
+       if ((side _x) == West) then {
+            if("ItemRadio" in weapons _x) then {
+                _units set [count _units, _x];
+            };
+       };
+    } forEach allUnits;
+
+    // Send the markers to the players
+    {
+        (owner _x) publicVariableClient "PlayerMissionMarker"
+    } foreach _units;
+
+    uiSleep 30;
+};

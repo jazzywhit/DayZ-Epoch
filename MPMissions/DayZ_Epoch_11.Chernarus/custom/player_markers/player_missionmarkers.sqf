@@ -19,6 +19,6 @@ _dot setMarkerColorLocal "ColorBlack";
 _dot setMarkerTypeLocal "mil_dot";
 _dot setMarkerTextLocal _name;
 
-uiSleep 120; //Change time here again - makes sure that the Marker gets reset every 2 minutes, if you put the Weapon/Item down, the Marker will be removed after max. x seconds
+uiSleep 30;
 deleteMarkerLocal _Marker;
 deleteMarkerLocal _dot;

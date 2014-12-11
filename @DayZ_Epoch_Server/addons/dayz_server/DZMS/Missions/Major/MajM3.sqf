@@ -124,8 +124,6 @@ sleep 5;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"Survivors have Taken Control of the Camp and Medical Supplies.", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major SM3 Medical Camp Mission has Ended."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
 DZMSMajDone = true;
