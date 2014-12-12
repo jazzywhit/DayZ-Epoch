@@ -17,6 +17,6 @@ DZE_CLICK_ACTIONS = [
     ["ItemGPS","Range Down" ,"if(isNil 'DZE_CLICK_ACTIONS_GPS_RANGE') then {DZE_CLICK_ACTIONS_GPS_RANGE = 1500;};DZE_CLICK_ACTIONS_GPS_RANGE = (DZE_CLICK_ACTIONS_GPS_RANGE - 100) max 1000;  cutText[format['GPS RANGE: %1',DZE_CLICK_ACTIONS_GPS_RANGE],'PLAIN DOWN'];","true"],
     ["ItemBriefcase_Base","Open Mystery Briefcase","execVM ""custom\mysterybrief\open_brief.sqf"";","true"],
 	["ItemZombieParts","Smear Guts on you","[] execVM ""custom\walkamongstthedead\smear_guts.sqf"";","true"],
-	["ItemWaterbottle","Wash zombie guts","[] execVM ""custom\walkamongstthedead\usebottle.sqf"";","true"]
+	["ItemWaterbottle","Wash zombie guts","[] execVM ""custom\walkamongstthedead\usebottle.sqf"";","true"],
 	["ItemLetter","Where am I?","[] execVM ""custom\newspaperinfo\info.sqf"";","true"]
 ];
