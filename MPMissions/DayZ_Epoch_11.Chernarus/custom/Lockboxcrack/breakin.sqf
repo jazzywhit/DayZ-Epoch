@@ -16,8 +16,8 @@ sleep 9;
 	systemChat("Checkpoint1");
 	_object = nearestObject [player, "VaultStorage"];
 	_first = _object getVariable ["CharacterID", "0"];
-	dayz_combination = _first
-	dayz_selectedVault = _this select 3
+	dayz_combination = _first;
+	dayz_selectedVault = _this select 3;
 	dayz_selectedVault spawn player_unlockVault;
 	cutText ['You were able to break the lockbox open!', 'PLAIN'];
 	systemChat("Checkpoint2");
