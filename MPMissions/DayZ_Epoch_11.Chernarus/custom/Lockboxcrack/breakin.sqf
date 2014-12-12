@@ -26,7 +26,7 @@ If ( _hasKnife && _hasRazor && _hasToolbox && _hasRuby && _hasPole && _hasCrowba
 		dayz_selectedVault = _this select 3;
 		dayz_combination = _first;
 		dayz_selectedVault spawn player_unlockVault;
-		cutText ['You were able to break the lockbox open!', 'PLAIN'];
+		//cutText ['You were able to break the lockbox open!', 'PLAIN']; removed due to double message from lockbox unlock
 		systemChat("Checkpoint2");
 	};
 	if (_rand <= 0.6) then {
