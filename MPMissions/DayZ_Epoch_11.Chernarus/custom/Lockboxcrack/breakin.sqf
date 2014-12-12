@@ -29,7 +29,7 @@ If ( _hasKnife && _hasRazor && _hasToolbox && _hasRuby && _hasPole && _hasCrowba
 	};
 	if (_rand <= 0.6) then {
 		player playActionNow "Medic";
-		[player,"tentunpack",0,false] call dayz_zombieSpeak;
+		[player,"repair",0,false] call dayz_zombieSpeak;
 		sleep 9;
 		player removeWeapon "ItemCrowbar";
 		player removeMagazine "ItemRuby";
