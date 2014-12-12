@@ -2,6 +2,8 @@
         YOU CAN EDIT HERE
         Make sure to edit in the >xxxx<
 */
+call gear_ui_init;
+closeDialog 1;
 "The Epoch Times" hintC parseText format ["
 <t size='1.25' shadow='1'align='left' color='#ff8800'>Welcome to NMG</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
