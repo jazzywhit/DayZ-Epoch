@@ -12,7 +12,10 @@ _units = [];
 PlayerMissionMarker = [DZMSMajCoords, DZMSMajName];
 
 while {DZMSMajRun} do {
+
+    // Check radio on all units
     _units = [];
+    {
        if ((side _x) == West) then {
             if("ItemRadio" in weapons _x) then {
                 _units set [count _units, _x];
