@@ -8,7 +8,7 @@ s_player_plotManagement = -1;
 s_player_drinkWater = -1;
 
 //Default Loadout
-DefaultMagazines = ["ItemBandage"];["ItemLetter"];
+DefaultMagazines = ["ItemBandage","ItemLetter"];
 DefaultWeapons = ["ItemFlashlight"];
 DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
