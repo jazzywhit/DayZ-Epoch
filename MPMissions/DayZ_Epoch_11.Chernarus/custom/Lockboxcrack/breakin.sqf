@@ -14,9 +14,9 @@ sleep 10;
 	//player removeWeapon "ItemKnife";
 	//player removeMagazine "ItemTrashRazor";
 	systemChat("Checkpoint1");
-	//_ownerID = cursorTarget getVariable ["CharacterID","0"]
+	_ownerID = cursorTarget getVariable ["CharacterID","0"];
 	//dayz_selectedVault = _this select 3;
-	//dayz_combination = "_ownerID";
+	dayz_combination = "_ownerID";
 	_obj = _this select 3;
 	_obj spawn player_unlockVault;
 	cutText ['You were able to break the lockbox open!', 'PLAIN'];
