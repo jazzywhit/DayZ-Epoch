@@ -3,23 +3,33 @@ DZMSMinName = _this select 1;
 
 if(!isServer) exitWith {};
 
+private ["_units"];
+_units = [];
 PlayerMissionMarkerMinor = [DZMSMinCoords, DZMSMinName];
 PlayerMissionMarkerMinorClear = [];
 
 while {DZMSMinRun} do {
 
     // Check radio on all units
+    _units = [];
     {
        if ((side _x) == West) then {
             if("ItemRadio" in weapons _x) then {
-                (owner _x) publicVariableClient "PlayerMissionMarkerMinor"
+                _units set [count _units, _x];
             };
        };
+       (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear"
     } forEach allUnits;
-    uiSleep 30;
 
-    // Clear the markers
+    // Send the markers to the players
     {
-        (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear"
-    } forEach allUnits;
+        (owner _x) publicVariableClient "PlayerMissionMarkerMinor"
+    } foreach _units;
+
+    uiSleep 30;
 };
+
+// Do a final clear of all the mission markers
+{
+    (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear"
+} forEach allUnits;
