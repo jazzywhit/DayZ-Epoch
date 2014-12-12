@@ -32,3 +32,8 @@ while {DZMSMajRun} do {
 
     uiSleep 30;
 };
+
+// Do a final clear of all the mission markers
+{
+    (owner _x) publicVariableClient "PlayerMissionMarkerMajorClear"
+} forEach allUnits;
