@@ -9,6 +9,7 @@ private ["_obj","_rand","_first","_object","_hasKnife","_hasRazor","_hasToolbox"
 	_hasScrap =	"PartGeneric" in _magazinesPlayer;
 _rand = random 1;
 player playActionNow "Medic";
+[player,"tentunpack",0,false] call dayz_zombieSpeak;
 sleep 9;
 If ( _hasKnife && _hasRazor && _hasToolbox && _hasRuby && _hasPole && _hasCrowbar && _hasScrap) then {
 	if (_rand > 0.6) then {
