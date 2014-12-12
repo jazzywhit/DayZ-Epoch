@@ -18,18 +18,19 @@ while {DZMSMinRun} do {
                 _units set [count _units, _x];
             };
        };
-       (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear"
     } forEach allUnits;
 
     // Send the markers to the players
     {
-        (owner _x) publicVariableClient "PlayerMissionMarkerMinor"
+        (owner _x) publicVariableClient "PlayerMissionMarkerMinor";
     } foreach _units;
-
     uiSleep 30;
+    {
+        (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear";
+    } foreach _units;
 };
 
 // Do a final clear of all the mission markers
 {
-    (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear"
+    (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear";
 } forEach allUnits;
