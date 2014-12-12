@@ -94,7 +94,8 @@ if (!isDedicated) then {
 	[] execVM "custom\mining\init.sqf";
 
 	// Mission Markers
-	"PlayerMissionMarker" addPublicVariableEventHandler { PlayerMissionMarker execVM 'custom\player_markers\player_missionmarkers.sqf'; };
+	"PlayerMissionMarkerMajor" addPublicVariableEventHandler { PlayerMissionMarkerMajor execVM 'custom\player_markers\player_missionmarkers_maj.sqf'; };
+	"PlayerMissionMarkerMinor" addPublicVariableEventHandler { PlayerMissionMarkerMinor execVM 'custom\player_markers\player_missionmarkers_min.sqf'; };
 
 	//Conduct map operations
 	0 fadeSound 0;

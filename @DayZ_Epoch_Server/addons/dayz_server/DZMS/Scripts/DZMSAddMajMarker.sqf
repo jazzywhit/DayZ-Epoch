@@ -9,7 +9,7 @@ if(!isServer) exitWith {};
 
 private ["_units"];
 _units = [];
-PlayerMissionMarker = [DZMSMajCoords, DZMSMajName];
+PlayerMissionMarkerMajor = [DZMSMajCoords, DZMSMajName];
 
 while {DZMSMajRun} do {
 
@@ -25,7 +25,7 @@ while {DZMSMajRun} do {
 
     // Send the markers to the players
     {
-        (owner _x) publicVariableClient "PlayerMissionMarker"
+        (owner _x) publicVariableClient "PlayerMissionMarkerMajor"
     } foreach _units;
 
     uiSleep 30;

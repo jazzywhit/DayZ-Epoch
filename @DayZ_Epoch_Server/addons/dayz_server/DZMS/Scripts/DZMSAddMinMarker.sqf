@@ -9,7 +9,7 @@ if(!isServer) exitWith {};
 
 private ["_units"];
 _units = [];
-PlayerMissionMarker = [DZMSMinCoords, DZMSMinName];
+PlayerMissionMarkerMinor = [DZMSMinCoords, DZMSMinName];
 
 while {DZMSMinRun} do {
 
@@ -25,7 +25,7 @@ while {DZMSMinRun} do {
 
     // Send the markers to the players
     {
-        (owner _x) publicVariableClient "PlayerMissionMarker"
+        (owner _x) publicVariableClient "PlayerMissionMarkerMinor"
     } foreach _units;
 
     uiSleep 30;
