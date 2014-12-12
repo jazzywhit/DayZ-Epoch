@@ -671,8 +671,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_OPEN",_text], "\z\addons\dayz_code\actions\vault_unlock.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				} else {
-					if(_cursorTarget isKindOf "LockboxStorageLocked" && _hasCrowbar) then {
-						_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf",_cursorTarget, 0, false, true, "",""]; //mist breakin
+					if(_cursorTarget isKindOf "LockboxStorageLocked" && _hasCrowbar && _hasKnife && _hasRazor && _hasToolbox && _hasRuby && _hasPole && _hasScrap) then {
+						_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf", _cursorTarget, 0, false, true, "",""]; //mist breakin
 					};
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_UNLOCK",_text], "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
@@ -688,8 +688,6 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		};
 	} else {
 		{player removeAction _x} count s_player_combi;s_player_combi = [];
-		player removeAction _breakin;
-		_breakin = -1;
 		s_player_unlockvault = -1;
 	};
 
