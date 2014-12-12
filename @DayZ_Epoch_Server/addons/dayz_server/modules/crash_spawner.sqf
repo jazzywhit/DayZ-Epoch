@@ -31,71 +31,26 @@ _heliModel = [
 			"MV22",
 			"Mi17_DZE",
 			"UH60M_EP1",
-			"UH1H_TK_EP1",
 			"UH60M_MEV_EP1",
-			"A10",
 			"GNT_C185",
 			"GNT_C185U",
 			"GNT_C185R",
 			"GNT_C185C",
-			"Ka52Black",
-			"Mi24_D",
-			"AH1Z",
-			"AV8B",
-			"Su25_TK_EP1",
-			"Su34"
+			"An2_1_TK_CIV_EP1",
+			"An2_2_TK_CIV_EP1"
 			] call BIS_fnc_selectRandom;
 _crashModel    		= "UH1Wreck_DZ";    //The type of Crash model used after the heli crashes
 _plane            	= false;
 _massGraveSite     = false;
 _patrolCrash		= false;
 
-if(_heliModel == "Su25_TK_EP1") then {
-    _crashModel    = "SU25Wreck";
-	_lootTable        = "PlaneCrash_BRIC";
-    _plane         = true;
-};
-
-if(_heliModel == "Su34") then {
-    _crashModel    = "SU25Wreck";
-	_lootTable        = "PlaneCrash_BRIC";
-    _plane         = true;
-};
-
-if(_heliModel == "AV8B") then {
-    _lootTable    = "PlaneCrash";
-    _crashModel    = "AV8BWreck";
-    _plane         = true;
-};
-
-if(_heliModel == "UH1H_TK_EP1") then {
-	_lootTable    = "HeliCrash";
-    _crashModel     = "UH1Wreck_DZ";
-};
-
 if(_heliModel == "UH1H_DZE") then {
 	_lootTable    = "HeliCrash";
     _crashModel     = "UH1Wreck_DZ";
 };
 
-if(_heliModel == "AH1Z") then {
-	_lootTable    = "HeliCrash";
-    _crashModel     = "AH1ZWreck";
-};
-
-if(_heliModel == "Mi24_D") then {
-    _crashModel     = "Mi24Wreck";
-	_lootTable        = "HeliCrash_BRIC";
-};
-
-if(_heliModel == "Ka52Black") then {
-    _crashModel     = "Ka52Wreck";
-	_lootTable        = "HeliCrash_BRIC";
-};
-
 if(_heliModel == "Mi17_DZE") then {
-	_lootTable    = "MilitarySpecial";
-	_lootMultiplier = 2;
+	_lootTable    = "HeliCrash_BRIC";
     _crashModel     = "Mi8Wreck";
 };
 
@@ -104,40 +59,50 @@ if(_heliModel == "UH60M_EP1") then {
     _crashModel     = "UH60Wreck_DZ";
 };
 
-if(_heliModel == "A10") then {
-    _lootTable    = "PlaneCrash";
-    _crashModel    = "A10Wreck";
-    _plane         = true;
-};
-
 if(_heliModel == "GNT_C185") then {
-    _lootTable    = "MedicalCrash";
+    _lootTable    = "MilitarySpecial";
+    _lootMultiplier = 4;
     _crashModel    = "SU25Wreck";
     _plane         = true;
 };
 
 if(_heliModel == "GNT_C185U") then {
     _lootTable    = "MedicalCrash";
+    _lootMultiplier = 4;
     _crashModel    = "SU25Wreck";
     _plane         = true;
 };
 
 if(_heliModel == "GNT_C185R") then {
-    _lootTable    = "MedicalCrash";
+    _lootTable    = "PlaneCrash_BRIC";
     _crashModel    = "SU25Wreck";
     _plane         = true;
 };
 
 if(_heliModel == "GNT_C185C") then {
-    _lootTable    = "MedicalCrash";
+    _lootTable    = "PlaneCrash_BRIC";
     _crashModel    = "SU25Wreck";
+    _plane         = true;
+};
+
+if(_heliModel == "An2_1_TK_CIV_EP1") then {
+    _lootTable    = "PlaneCrash_BRIC";
+    _crashModel    = "SU25Wreck";
+    _lootMultiplier = 2;
+    _plane         = true;
+};
+
+if(_heliModel == "An2_2_TK_CIV_EP1") then {
+    _lootTable    = "PlaneCrash_BRIC";
+    _crashModel    = "SU25Wreck";
+    _lootMultiplier = 2;
     _plane         = true;
 };
 
 if(_heliModel == "MV22") then {
     _lootTable    = "PlaneCrash";
-    _lootMultiplier = 2;
     _crashModel     = "MV22Wreck";
+    _lootMultiplier = 3;
     _plane         = true;
 };
 
@@ -151,6 +116,7 @@ if(_heliModel == "C130J") then {
 
 if(_heliModel == "UH60M_MEV_EP1") then {
     _lootTable    = "MedicalCrash";
+    _lootMultiplier = 8;
     _crashModel     = "UH60Wreck_DZ";
 };
  
@@ -183,16 +149,16 @@ if (_spawnRoll <= _spawnChance) then
 		
 		if (_plane) then
 		{
-			_crashwreck flyInHeight 250;
-			_crashwreck forceSpeed 150;
 			_crashwreck setspeedmode "NORMAL";
+			_crashwreck flyInHeight 75;
+			_crashwreck forceSpeed 80;
 			_exploRange = 360;
 		}
 		else
 		{
-			_crashwreck flyInHeight 150;
-			_crashwreck forceSpeed 100;
 			_crashwreck setspeedmode "NORMAL";
+			_crashwreck flyInHeight 75;
+			_crashwreck forceSpeed 80;
 		};
 		
 		_crashwreck setspeedmode "NORMAL";
@@ -228,19 +194,19 @@ if (_spawnRoll <= _spawnChance) then
 				_wp setWaypointType "MOVE";
 				_wp setWaypointBehaviour "CARELESS";
 				
-				if (_plane) then
-				{
-					_crashwreck flyInHeight 300;
-					_crashwreck forceSpeed 150;
-					_crashwreck setspeedmode "NORMAL";
-					_exploRange = 360;
-				}
-				else
-				{
-					_crashwreck flyInHeight 200;
-					_crashwreck forceSpeed 100;
-					_crashwreck setspeedmode "NORMAL";
-				};
+                if (_plane) then
+                {
+                    _crashwreck setspeedmode "NORMAL";
+                    _crashwreck flyInHeight 75;
+                    _crashwreck forceSpeed 80;
+                    _exploRange = 360;
+                }
+                else
+                {
+                    _crashwreck setspeedmode "NORMAL";
+                    _crashwreck flyInHeight 75;
+                    _crashwreck forceSpeed 80;
+                };
 				
 				sleep 60;
 				waituntil {(_crashwreck distance _heliStart) <= 1000 || not alive _crashwreck || (getPosATL _crashwreck select 2) < 15 || (damage _crashwreck) >= _crashDamage};
