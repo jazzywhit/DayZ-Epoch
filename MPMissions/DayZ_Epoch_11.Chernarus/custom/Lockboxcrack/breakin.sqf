@@ -19,7 +19,7 @@ If ( _hasKnife && _hasRazor && _hasToolbox && _hasRuby && _hasPole && _hasCrowba
 		player removeWeapon "ItemToolbox";
 		player removeWeapon "ItemKnife";
 		player removeMagazine "ItemTrashRazor";
-		systemChat("Checkpoint1");
+		//systemChat("Checkpoint1");
 		_object = nearestObject [player, "LockboxStorageLocked"];
 		_first = _object getVariable ["CharacterID", "0"];
 		dayz_combination = "";
@@ -27,7 +27,7 @@ If ( _hasKnife && _hasRazor && _hasToolbox && _hasRuby && _hasPole && _hasCrowba
 		dayz_combination = _first;
 		dayz_selectedVault spawn player_unlockVault;
 		//cutText ['You were able to break the lockbox open!', 'PLAIN']; removed due to double message from lockbox unlock
-		systemChat("Checkpoint2");
+		//systemChat("Checkpoint2");
 	};
 	if (_rand <= 0.6) then {
 		player removeWeapon "ItemCrowbar";
@@ -35,10 +35,10 @@ If ( _hasKnife && _hasRazor && _hasToolbox && _hasRuby && _hasPole && _hasCrowba
 		player removeMagazine "ItemPole";
 		player removeMagazine "PartGeneric";
 		player removeMagazine "ItemTrashRazor";
-		systemChat("Checkpoint4");
+		//systemChat("Checkpoint4");
 		cutText ['You were unable to break into the locked box!', 'PLAIN'];
 	};
 } else {
 cutText ['You need a Razor,Toolbox, Ruby, Pole, Crowbar and Scrap metal to break in', 'PLAIN'];
 };
-systemChat("Checkpoint3");
+//systemChat("Checkpoint3");
