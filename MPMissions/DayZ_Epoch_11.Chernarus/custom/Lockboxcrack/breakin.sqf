@@ -2,7 +2,7 @@
 private ["_obj","_rand","_ownerID"];
 //_rand = random 1;
 player playActionNow "Medic";
-sleep 10;
+sleep 9;
 
 //if (_rand > 0.6) then {
 	//player removeWeapon "ItemCrowbar";
@@ -14,7 +14,13 @@ sleep 10;
 	//player removeWeapon "ItemKnife";
 	//player removeMagazine "ItemTrashRazor";
 	systemChat("Checkpoint1");
+
 	_ownerID = cursorTarget getVariable ["CharacterID","0"];
+if(_ownerID != "0") then {
+cutText [format["The Code is: %1",_ownerID], "PLAIN DOWN"];
+} else {
+cutText [format["Not a valid target.",_ownerID], "PLAIN DOWN"];
+};
 	//dayz_selectedVault = _this select 3;
 	dayz_combination = "_ownerID";
 	_obj = _this select 3;
