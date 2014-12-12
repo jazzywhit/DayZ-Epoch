@@ -10,10 +10,10 @@ systemChat _text;
 deleteMarkerLocal "MissionMinorCircle";
 deleteMarkerLocal "MissionMinorDot";
 
-_Marker = createMarkerLocal ["MissionMinorCircle", [(_position select 0) + (random 150), (position select 1) + (random 150)]];
+_Marker = createMarkerLocal ["MissionMinorCircle", _position];
 _Marker setMarkerColorLocal "ColorYellow";
 _Marker setMarkerShapeLocal "ELLIPSE";
-_Marker setMarkerBrushLocal "Solid";
+_Marker setMarkerBrushLocal "Grid";
 _Marker setMarkerSizeLocal [300,300];
 _Marker setMarkerTextLocal _name;
 
