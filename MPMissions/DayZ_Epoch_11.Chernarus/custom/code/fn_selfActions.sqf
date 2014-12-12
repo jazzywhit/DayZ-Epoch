@@ -673,6 +673,9 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 				} else {
 					if(_cursorTarget isKindOf "LockboxStorageLocked") then {
 						s_player_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf", _cursorTarget, 0, false, true, "",""]; //mist breakin
+					} else {
+						player removeAction s_player_breakin;
+						s_player_breakin = -1;
 					};
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_UNLOCK",_text], "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
