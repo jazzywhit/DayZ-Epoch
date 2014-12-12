@@ -96,6 +96,8 @@ if (!isDedicated) then {
 	// Mission Markers
 	"PlayerMissionMarkerMajor" addPublicVariableEventHandler { PlayerMissionMarkerMajor execVM 'custom\player_markers\player_missionmarkers_maj.sqf'; };
 	"PlayerMissionMarkerMinor" addPublicVariableEventHandler { PlayerMissionMarkerMinor execVM 'custom\player_markers\player_missionmarkers_min.sqf'; };
+	"PlayerMissionMarkerMajorClear" addPublicVariableEventHandler { PlayerMissionMarkerMajorClear execVM 'custom\player_markers\player_missionmarkers_maj_clear.sqf'; };
+	"PlayerMissionMarkerMinorClear" addPublicVariableEventHandler { PlayerMissionMarkerMinorClear execVM 'custom\player_markers\player_missionmarkers_min_clear.sqf'; };
 
 	//Conduct map operations
 	0 fadeSound 0;

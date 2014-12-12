@@ -10,6 +10,7 @@ if(!isServer) exitWith {};
 private ["_units"];
 _units = [];
 PlayerMissionMarkerMinor = [DZMSMinCoords, DZMSMinName];
+PlayerMissionMarkerMinorClear = [];
 
 while {DZMSMinRun} do {
 
@@ -21,6 +22,7 @@ while {DZMSMinRun} do {
                 _units set [count _units, _x];
             };
        };
+       (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear"
     } forEach allUnits;
 
     // Send the markers to the players

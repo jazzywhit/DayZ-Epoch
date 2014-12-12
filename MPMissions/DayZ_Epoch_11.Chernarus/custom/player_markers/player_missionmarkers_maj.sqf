@@ -1,4 +1,3 @@
-//WAI MissionMarker Addon by *hs-s.com | waTTe - www.banditparty.de	
 private["_position","_name","_text","_Marker","_dot"];
 _position = _this select 0;
 _name = _this select 1;
@@ -13,6 +12,3 @@ _Marker setMarkerShapeLocal "ELLIPSE";
 _Marker setMarkerBrushLocal "Grid";
 _Marker setMarkerSizeLocal [300,300];
 _Marker setMarkerTextLocal _name;
-
-uiSleep 30;
-deleteMarkerLocal "MissionMajorCircle";
