@@ -1,12 +1,13 @@
 // Break In Script by Mist and jesquik
 // Allow users to break into  
-private ["_obj","_rand","_object","_hasToolbox","_hasCrowbar","_tool_cost"];
+private ["_obj","_rand","_object","_itemsPlayer","_hasToolbox","_hasCrowbar","_tool_cost"];
 _object = _this select 3;
 dayz_combination = "";
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't break into this right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
 
+_itemsPlayer = items player;
 _hasToolbox = 	"ItemToolbox" in _itemsPlayer;
 _hasCrowbar =	"ItemCrowbar" in _itemsPlayer;
 
