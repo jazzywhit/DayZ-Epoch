@@ -62,31 +62,31 @@ if (_hasTool) then {
             player playActionNow "Medic";
             sleep 9;
 			
-			if (_rand <= 0.3) then {
+			if (_rand <= 0.4) then {
 				_has_free_space=[player,"PartOre",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Iron ore.";
 			};
-			if (_rand <= 0.50 && _rand > 0.30) then {
+			if (_rand <= 0.70 && _rand > 0.40) then {
 				_has_free_space=[player,"PartOreSilver",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Silver ore.";
 			};
-			if (_rand <= 0.68 && _rand > 0.50) then {
+			if (_rand <= 0.88 && _rand > 0.70) then {
 				_has_free_space=[player,"ItemTopaz",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Topaz.";				
 			};
-			if (_rand <= 0.86 && _rand > 0.68) then {
+			if (_rand <= 0.93 && _rand > 0.88) then {
 				_has_free_space=[player,"ItemCitrine",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Citrine.";				
 			};
-			if (_rand <= 0.91 && _rand > 0.86) then {
+			if (_rand <= 0.95 && _rand > 0.93) then {
 				_has_free_space=[player,"ItemAmethyst",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Amethyst.";				
 			};
-			if (_rand <= 0.95 && _rand > 0.91) then {
+			if (_rand <= 0.97 && _rand > 0.95) then {
 				_has_free_space=[player,"ItemSapphire",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Sapphire.";				
 			};
-			if (_rand <= 0.98 && _rand > 0.95) then {
+			if (_rand <= 0.98 && _rand > 0.97) then {
 				_has_free_space=[player,"ItemObsidian",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Obsidian.";				
 			};
