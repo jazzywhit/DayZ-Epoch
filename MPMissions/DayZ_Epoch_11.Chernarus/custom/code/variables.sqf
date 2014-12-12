@@ -60,6 +60,9 @@ s_player_mine = -1;
 //Safe Change Combination
 s_player_Safe_ckc = -1;
 
+//Lockbox breakin
+s_player_breakin = -1;
+
 //Survival Variables
 SleepFood =				2160; //minutes (48 hours)
 SleepWater =			1440; //minutes (24 hours)
