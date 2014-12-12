@@ -1,10 +1,10 @@
 //breakin by Mist currently untested
-private ["_obj","_rand"];
-_rand = random 1;
+private ["_obj","_rand","_first","_object"];
+//_rand = random 1;
 player playActionNow "Medic";
-sleep 10;
+sleep 9;
 
-if (_rand > 0.6) then {
+//if (_rand > 0.6) then {
 	//player removeWeapon "ItemCrowbar";
 	//player removeMagazine "ItemRuby";
 	//player removeMagazine "ItemPole";
@@ -13,16 +13,24 @@ if (_rand > 0.6) then {
 	//player removeWeapon "ItemToolbox";
 	//player removeWeapon "ItemKnife";
 	//player removeMagazine "ItemTrashRazor";
-	_obj = _this select 3;
-	_obj spawn player_unlockVault;
+	systemChat("Checkpoint1");
+	_object = nearestObject [player, "LockboxStorageLocked"];
+	_first = _object getVariable ["CharacterID", "0"];
+	dayz_combination = "";
+	dayz_selectedVault = _this select 3;
+	dayz_combination = _first;
+	dayz_selectedVault spawn player_unlockVault;
 	cutText ['You were able to break the lockbox open!', 'PLAIN'];
-};
-if (_rand <= 0.6) then {
+	systemChat("Checkpoint2");
+//};
+//if (_rand <= 0.6) then {
 	//player removeWeapon "ItemCrowbar";
 	//player removeMagazine "ItemRuby";
 	//player removeMagazine "ItemPole";
 	//player removeMagazine "PartGeneric";
 	//player removeWeapon "ItemEtool";
 	//player removeMagazine "ItemTrashRazor";
-	cutText ['You were unable to break into the locked box!', 'PLAIN'];
-};
+	//systemChat("Checkpoint4");
+	//cutText ['You were unable to break into the locked box!', 'PLAIN'];
+//};
+systemChat("Checkpoint3");
