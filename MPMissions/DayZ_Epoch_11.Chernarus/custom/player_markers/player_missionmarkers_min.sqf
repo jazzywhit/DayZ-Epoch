@@ -14,11 +14,5 @@ _Marker setMarkerBrushLocal "Grid";
 _Marker setMarkerSizeLocal [300,300];
 _Marker setMarkerTextLocal _name;
 
-_dot = createMarkerLocal ["MissionMinorDot", _position];
-_dot setMarkerColorLocal "ColorBlack";
-_dot setMarkerTypeLocal "mil_dot";
-_dot setMarkerTextLocal _name;
-
 uiSleep 30;
 deleteMarkerLocal "MissionMinorCircle";
-deleteMarkerLocal "MissionMinorDot";
