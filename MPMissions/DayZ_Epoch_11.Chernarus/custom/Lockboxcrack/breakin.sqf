@@ -1,5 +1,5 @@
 //breakin by Mist currently untested
-private ["_obj","_rand","_ownerID"];
+private ["_obj","_rand","_first","_object"];
 //_rand = random 1;
 player playActionNow "Medic";
 sleep 9;
@@ -14,8 +14,11 @@ sleep 9;
 	//player removeWeapon "ItemKnife";
 	//player removeMagazine "ItemTrashRazor";
 	systemChat("Checkpoint1");
-	_obj = _this select 3;
-	_obj spawn player_unlockVault;
+	_object = nearestObject [player, "VaultStorage"];
+	_first = _object getVariable ["CharacterID", "0"];
+	dayz_combination = _first
+	dayz_selectedVault = _this select 3
+	dayz_selectedVault spawn player_unlockVault;
 	cutText ['You were able to break the lockbox open!', 'PLAIN'];
 	systemChat("Checkpoint2");
 //};
