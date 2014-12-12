@@ -109,3 +109,7 @@ DZMSMajRun = false;
 DZMSMajDone = false;
 DZMSMinRun = false;
 DZMSMinDone = false;
+
+//Lets define these
+if (isNil "DZMSMajCoords")then{DZMSMajCoords = [0,0,0];};
+if (isNil "DZMSMinCoords")then{DZMSMinCoords = [0,0,0];};
