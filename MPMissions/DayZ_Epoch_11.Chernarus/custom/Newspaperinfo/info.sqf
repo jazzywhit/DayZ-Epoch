@@ -3,7 +3,7 @@
         Make sure to edit in the >xxxx<
 */
 "The Epoch Times" hintC parseText format ["
-<t size='1.25' shadow='1'align='left' color='#ff8800'>Welcome to %1</t><br/>
+<t size='1.25' shadow='1'align='left' color='#ff8800'>Welcome to NMG</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
 <t size='1.1' shadow='1'align='left' color='#FFFFFF'>This is not a normal epoch server</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
@@ -13,7 +13,7 @@
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
 <t size='1.1' shadow='1'align='left' color='#FFFFFF'>Missions require a radio to be seen</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>xBases are of course destructible</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>Bases are of course destructible</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
 <t size='1.1' shadow='1'align='left' color='#FFFFFF'>There are no safezones and prices are higher</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
