@@ -22,6 +22,8 @@ cutText [format["The Code is: %1",_ownerID], "PLAIN DOWN"];
 cutText [format["Not a valid target.",_ownerID], "PLAIN DOWN"];
 };
 	//dayz_selectedVault = _this select 3;
+	
+cutText [format["The Code is: %1",_ownerID], "PLAIN DOWN"];
 	dayz_combination = "_ownerID";
 	_obj = _this select 3;
 	_obj spawn player_unlockVault;
