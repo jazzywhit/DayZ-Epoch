@@ -4,6 +4,7 @@ DZMSMajName = _this select 1;
 if(!isServer) exitWith {};
 
 private ["_players","_players_ok","_notified_units"];
+_players = [];
 _players_ok = [];
 _notified_units = [];
 PlayerMissionMarkerMajor = [DZMSMajCoords, DZMSMajName];

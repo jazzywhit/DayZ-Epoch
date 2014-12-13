@@ -4,6 +4,7 @@ DZMSMinName = _this select 1;
 if(!isServer) exitWith {};
 
 private ["_players","_players_ok","_notified_units"];
+_players = [];
 _players_ok = [];
 _notified_units = [];
 PlayerMissionMarkerMinor = [DZMSMinCoords, DZMSMinName];
@@ -38,12 +39,11 @@ while {DZMSMinRun} do {
     // Send the markers to the players
     {
         (owner _x) publicVariableClient "PlayerMissionMarkerMinor";
-    } foreach _players_ok;
+    } foreach _players_okreach _units;
 
-    uiSleep 30;
+30  uiSleep 10;
 };
 
 // Do a final clear of all the mission markers
 {
-    (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear";
-} forEach _notified_units;
+    (owner _x) publicVariableClient "PlayerMissionMarkerMinorClear"_notified_uforEach allUnits;
