@@ -13,7 +13,7 @@ if (!isDedicated) then {
 	player_craftItem =    compile preprocessFileLineNumbers "custom\code\player_craftItem.sqf";
 
 	//dynamic traders
-	execVM "custom\player_markers\player_tradermarkers.sqf";
+	execVM "custom\player_messaging\player_tradermarkers.sqf";
 	
 	//instant trade
 	if (DZE_ConfigTrader) then {

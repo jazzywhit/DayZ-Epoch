@@ -1,28 +1,18 @@
 class Category_623 {
-	class PartOre {
-		type = "trade_items";
-		buy[] = {1,"ItemSilverBar10oz"}; //should remove buy option if possible to avoid people buying instead of scrap metal for 2 gold and to farm gold
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
-	class PartOreSilver {
-		type = "trade_items";
-		buy[] = {3,"ItemSilverBar10oz"};
-		sell[] = {3,"ItemSilverBar10oz"};
-	};
 	class ItemTopaz {
-		type = "trade_items";
-		buy[] = {5,"ItemSilverBar10oz"};
-		sell[] = {5,"ItemSilverBar10oz"};
-	};
-	class ItemCitrine {
 		type = "trade_items";
 		buy[] = {1,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
 	};
+	class ItemCitrine {
+		type = "trade_items";
+		buy[] = {3,"ItemGoldBar"};
+		sell[] = {3,"ItemGoldBar"};
+	};
 	class ItemAmethyst {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
+		buy[] = {4,"ItemGoldBar"};
+		sell[] = {4,"ItemGoldBar"};
 	};
 	class ItemSapphire {
 		type = "trade_items";
@@ -36,7 +26,7 @@ class Category_623 {
 	};
 	class ItemRuby {
 		type = "trade_items";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		buy[] = {15,"ItemGoldBar"};
+		sell[] = {15,"ItemGoldBar"};
 	};
 };

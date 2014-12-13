@@ -1,45 +1,36 @@
-//breakin by Mist currently untested
-private ["_obj","_rand","_first","_object","_hasKnife","_hasRazor","_hasToolbox","_hasRuby","_hasPole","_hasCrowbar","_hasScrap"];
-	_hasKnife = 	"ItemKnife" in _itemsPlayer;
-	_hasRazor = 	"ItemTrashRazor" in _magazinesPlayer;
-	_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
-	_hasRuby =	"ItemRuby" in _magazinesPlayer; //Added items for mist breakin
-	_hasPole =	"ItemPole" in _magazinesPlayer;
-	_hasCrowbar =	"ItemCrowbar" in _itemsPlayer;
-	_hasScrap =	"PartGeneric" in _magazinesPlayer;
+// Break In Script by Mist and jesquik
+// Allow users to break into  
+private ["_obj","_rand","_object","_itemsPlayer","_hasToolbox","_hasCrowbar","_tool_cost"];
+_object = _this select 3;
+dayz_combination = "";
+
+if(DZE_ActionInProgress) exitWith { cutText ["You can't break into this right now", "PLAIN DOWN"]; };
+DZE_ActionInProgress = true;
+
+_itemsPlayer = items player;
+_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
+_hasCrowbar =	"ItemCrowbar" in _itemsPlayer;
+
 _rand = random 1;
-If ( _hasKnife && _hasRazor && _hasToolbox && _hasRuby && _hasPole && _hasCrowbar && _hasScrap) then {
+If (_hasToolbox && _hasCrowbar) then {
 	if (_rand > 0.6) then {
 		player removeWeapon "ItemCrowbar";
-		player removeMagazine "ItemRuby";
-		player removeMagazine "ItemPole";
-		player removeMagazine "PartGeneric";
 		player removeWeapon "ItemToolbox";
-		player removeWeapon "ItemKnife";
-		player removeMagazine "ItemTrashRazor";
-		//systemChat("Checkpoint1");
-		_object = nearestObject [player, "LockboxStorageLocked"];
-		_first = _object getVariable ["CharacterID", "0"];
-		dayz_combination = "";
 		dayz_selectedVault = _this select 3;
-		dayz_combination = _first;
+		dayz_combination = _object getVariable ["CharacterID", "0"];
 		dayz_selectedVault spawn player_unlockVault;
-		//cutText ['You were able to break the lockbox open!', 'PLAIN']; removed due to double message from lockbox unlock
-		//systemChat("Checkpoint2");
 	};
 	if (_rand <= 0.6) then {
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
 		sleep 9;
-		player removeWeapon "ItemCrowbar";
-		player removeMagazine "ItemRuby";
-		player removeMagazine "ItemPole";
-		player removeMagazine "PartGeneric";
-		player removeMagazine "ItemTrashRazor";
-		//systemChat("Checkpoint4");
-		cutText ['You were unable to break into the locked box!', 'PLAIN'];
+		_tool_cost = ["ItemCrowbar", "itemToolbox"] call BIS_fnc_selectRandom;
+		player removeWeapon _tool_cost;
+		cutText ['You were unable to break into the locked box and you broke a tool!', 'PLAIN'];
 	};
 } else {
-cutText ['You need a Razor,Toolbox, Ruby, Pole, Crowbar and Scrap metal to break in', 'PLAIN'];
+cutText ['You need a Toolbox and Crowbar to break in', 'PLAIN'];
 };
-//systemChat("Checkpoint3");
+
+s_player_igniteVehicle = -1;
+DZE_ActionInProgress = false;
