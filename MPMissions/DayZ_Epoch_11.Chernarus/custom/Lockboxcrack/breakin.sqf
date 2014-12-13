@@ -1,12 +1,13 @@
 // Break In Script by Mist and jesquik
 // Allow users to break into  
-private ["_obj","_rand","_object","_itemsPlayer","_hasToolbox","_hasCrowbar","_tool_cost","_magazinesPlayer","_hasKnife","_hasRazor","_hasRuby","_hasPole","_magazine_cost","_cursortarget","_hasSledge","_hasEtool","_hasObsidian"];
+private ["_obj","_rand","_object","_itemsPlayer","_hasToolbox","_hasCrowbar","_tool_cost","_magazinesPlayer","_hasKnife","_hasRazor","_hasRuby","_hasPole","_magazine_cost","_cursortarget","_hasSledge","_weaponsplayer","_hasEtool","_hasObsidian"];
 dayz_combination = "";
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't break into this right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
 
 _itemsPlayer = items player;
+_weaponsplayer = weapons player;
 _magazinesPlayer = magazines player;
 _cursorTarget = cursorTarget;
 	_hasKnife = 	"ItemKnife" in _itemsPlayer;
@@ -14,8 +15,8 @@ _cursorTarget = cursorTarget;
 	_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
 	_hasRuby =	"ItemRuby" in _magazinesPlayer;
 	_hasPole =	"ItemPole" in _magazinesPlayer;
-	_hasCrowbar =	"MeleeCrowbar" in _magazinesPlayer;
-	_hasSledge = 	"MeleeSledge" in _magazinesPlayer;
+	_hasCrowbar =	"MeleeCrowbar" in _weaponsPlayer;
+	_hasSledge = 	"MeleeSledge" in _weaponsPlayer;
 	_hasEtool = 	"ItemEtool" in _magazinesPlayer;
 	_hasObsidian = 	"ItemObsidian" in _magazinesPlayer;
 _tool_cost = -1;
