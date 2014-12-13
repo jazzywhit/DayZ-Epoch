@@ -37,6 +37,7 @@ dayz_sellDistance_boat = 30;
 dayz_sellDistance_air = 50;
 dayz_maxAnimals = 6; // Default: 8
 dayz_tameDogs = true;
+DZE_BuildingLimit = 500;
 DZE_BuildOnRoads = false; // Default: False
 dayz_fullMoonNights = true;
 
