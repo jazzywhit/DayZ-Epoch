@@ -668,6 +668,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 				if(_ownerID == dayz_combination || _ownerID == dayz_characterID) then {
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_OPEN",_text], "\z\addons\dayz_code\actions\vault_unlock.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
+					player removeAction s_player_breakin;
 				} else {
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_UNLOCK",_text], "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
