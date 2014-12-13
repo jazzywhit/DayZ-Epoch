@@ -39,6 +39,7 @@ dayz_maxAnimals = 2; // Default: 8
 dayz_tameDogs = true;
 DZE_BuildOnRoads = false; // Default: False
 dayz_fullMoonNights = true;
+DZE_BuildingLimit = 500;
 
 //self bloodbag
 DZE_SelfTransfuse = true;
