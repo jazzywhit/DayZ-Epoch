@@ -168,8 +168,6 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_hasKnife = 	"ItemKnife" in _itemsPlayer;
 	_hasRazor = 	"ItemTrashRazor" in _magazinesPlayer;
 	_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
-	_hasRuby =	"ItemRuby" in _magazinesPlayer; //Added items for mist breakin
-	_hasPole =	"ItemPole" in _magazinesPlayer;
 	_hasCrowbar =	"ItemCrowbar" in _itemsPlayer;
 	_hasScrap =	"PartGeneric" in _magazinesPlayer;
 	_hasEtool =	"ItemEtool" in _itemsPlayer;
@@ -671,7 +669,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_OPEN",_text], "\z\addons\dayz_code\actions\vault_unlock.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 				} else {
-					if(_cursorTarget isKindOf "LockboxStorageLocked") then {
+					if(_cursorTarget isKindOf DZE_LockedStorage) then {
 						s_player_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf", _cursorTarget, 0, false, true, "",""]; //mist breakin
 					} else {
 						player removeAction s_player_breakin;
