@@ -1,7 +1,6 @@
 // Break In Script by Mist and jesquik
 // Allow users to break into  
 private ["_obj","_rand","_object","_itemsPlayer","_hasToolbox","_hasCrowbar","_tool_cost","_magazinesPlayer","_hasKnife","_hasRazor","_hasRuby","_hasPole","_magazine_cost","_cursortarget","_hasSledge","_weaponsplayer","_first","_hasEtool","_hasObsidian"];
-dayz_combination = "";
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't break into this right now", "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
