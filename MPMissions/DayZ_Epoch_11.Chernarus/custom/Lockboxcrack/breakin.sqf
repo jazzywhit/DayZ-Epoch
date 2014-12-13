@@ -23,7 +23,6 @@ _magazine_cost = -1;
 _rand = random 1;
 
 If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPole) && (_cursorTarget isKindOf "LockboxStorageLocked")) then {
-		_rand = random 1;
 		cutText ['You attempt to pry open the lockbox..', 'PLAIN'];
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
@@ -60,7 +59,6 @@ If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPol
 };
 
 If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole && _hasObsidian && _hasEtool) && (_cursorTarget isKindOf "VaultStorageLocked")) then {
-		_rand = random 1;
 		cutText ['You attempt to pry open the Safe..', 'PLAIN'];
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
