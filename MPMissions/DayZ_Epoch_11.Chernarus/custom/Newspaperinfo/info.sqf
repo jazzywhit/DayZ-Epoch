@@ -2,7 +2,6 @@
         YOU CAN EDIT HERE
         Make sure to edit in the >xxxx<
 */
-call gear_ui_init;
 closeDialog 1;
 "-= The Narrow Minded Times =-" hintC parseText format ["
 <t size='1.25' shadow='1'align='left' color='#ff8800'>Welcome to Bolt Action Hardcore!</t><br/>
