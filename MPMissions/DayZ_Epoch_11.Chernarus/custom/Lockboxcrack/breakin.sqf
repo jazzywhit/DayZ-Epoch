@@ -1,6 +1,6 @@
 // Break In Script by Mist and jesquik
 // Allow users to break into  
-private ["_obj","_rand","_object","_itemsPlayer","_hasToolbox","_hasCrowbar","_tool_cost","_magazinesPlayer","_hasKnife","_hasRazor","_hasRuby","_hasPole","_magazine_cost","_cursortarget","_hasSledge","_weaponsplayer","_hasEtool","_hasObsidian"];
+private ["_obj","_rand","_object","_itemsPlayer","_hasToolbox","_hasCrowbar","_tool_cost","_magazinesPlayer","_hasKnife","_hasRazor","_hasRuby","_hasPole","_magazine_cost","_cursortarget","_hasSledge","_weaponsplayer","_first","_hasEtool","_hasObsidian"];
 dayz_combination = "";
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't break into this right now", "PLAIN DOWN"]; };
@@ -34,8 +34,10 @@ If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPol
 		player removeWeapon _tool_cost;
 		player removeMagazine _magazine_cost;
 		_object = nearestObject [player, "LockboxStorageLocked"];
+		_first = _object getVariable ["CharacterID", "0"];
+		dayz_combination = "";
 		dayz_selectedVault = _this select 3;
-		dayz_combination = _object getVariable ["CharacterID", "0"];
+		dayz_combination = _first;
 		dayz_selectedVault spawn player_unlockVault;
 	};
 	if (_rand <= 0.5) then {
@@ -60,8 +62,10 @@ If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole
 		player removeWeapon _tool_cost;
 		player removeMagazine _magazine_cost;
 		_object = nearestObject [player, "VaultStorageLocked"];
+		_first = _object getVariable ["CharacterID", "0"];
+		dayz_combination = "";
 		dayz_selectedVault = _this select 3;
-		dayz_combination = _object getVariable ["CharacterID", "0"];
+		dayz_combination = _first;
 		dayz_selectedVault spawn player_unlockVault;
 	};
 	if (_rand <= 0.5) then {
