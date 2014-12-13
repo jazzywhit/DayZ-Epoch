@@ -18,5 +18,5 @@ DZE_CLICK_ACTIONS = [
     ["ItemBriefcase_Base","Unlock Mystery Briefcase","execVM ""custom\mysterybrief\open_brief.sqf"";","true"],
 	["ItemZombieParts","Smear Zombie Parts on Yourself","[] execVM ""custom\walkamongstthedead\smear_guts.sqf"";","true"],
 	["ItemWaterbottle","Wash Yourself","[] execVM ""custom\walkamongstthedead\usebottle.sqf"";","true"],
-	["ItemLetter","Read the Narrow Minded Times","[] execVM ""custom\Newspaperinfo\info.sqf"";","true"]
+	["ItemLetter","Read the Letter","[] execVM ""custom\Newspaperinfo\info.sqf"";","true"]
 ];

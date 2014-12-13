@@ -178,7 +178,7 @@ if (_type == "weapons_nato_high") then {
 
 	//load primary
 	_scount = count DZMSprimaryListNATOHigh;
-	for "_x" from 0 to 3 do {
+	for "_x" from 0 to 2 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSprimaryListNATOHigh select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
@@ -241,7 +241,7 @@ if (_type == "weapons_nato_drop") then {
 
         //load primary
         _scount = count DZMSprimaryListNATOHigh;
-        for "_x" from 0 to 3 do {
+        for "_x" from 0 to 2 do {
             _sSelect = floor(random _sCount);
             _item = DZMSprimaryListNATOHigh select _sSelect;
             _crate addWeaponCargoGlobal [_item,1];
@@ -362,7 +362,7 @@ if (_type == "weapons_high") then {
 
 	//load primary
 	_scount = count DZMSprimaryListHigh;
-	for "_x" from 0 to 3 do {
+	for "_x" from 0 to 2 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSprimaryListHigh select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];

@@ -319,10 +319,10 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles_bric_high", "cfglootweapon", 0.33 },
+			{ "assaultrifles_bric_high", "cfglootweapon", 0.13 },
 			{ "submachinegun_bric", "cfglootweapon", 0.05 },
-			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
-			{ "machineguns_bric", "cfglootweapon", 0.2 },
+			{ "sniperrifles_bric", "cfglootweapon", 0.21 },
+			{ "machineguns_bric_high", "cfglootweapon", 0.2 },
 			{ "pistols_bric", "cfglootweapon", 0.05},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.05 },
 			{"PartVRotor","magazine",0.04},
@@ -385,10 +385,10 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles_bric_high", "cfglootweapon", 0.36 },
+			{ "assaultrifles_bric_high", "cfglootweapon", 0.16 },
 			{ "submachinegun_bric", "cfglootweapon", 0.1 },
-			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
-			{ "machineguns_bric", "cfglootweapon", 0.11 },
+			{ "sniperrifles_bric", "cfglootweapon", 0.21 },
+			{ "machineguns_bric_high", "cfglootweapon", 0.11 },
 			{ "pistols_bric", "cfglootweapon", 0.1},
 			{ "", "assaultrifleammo_bric", 0.06 },
 			{ "","military_bric",0.12},
@@ -494,25 +494,25 @@ class CfgBuildingLoot {
 		lootChance = 0.4;
 		lootPos[] = {};
 		lootType[] = {
-			{ "pistols_bric", "cfglootweapon", 0.02 },
-			{ "assaultrifles_bric", "cfglootweapon", 0.06 },
-			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
+			{ "pistols_bric", "cfglootweapon", 0.07 },
+			{ "assaultrifles_bric", "cfglootweapon", 0.09 },
+			{ "sniperrifles_bric", "cfglootweapon", 0.05 },
 			{ "militaryshotguns_bric", "cfglootweapon", 0.06 },
-			{ "submachinegun_bric", "cfglootweapon", 0.05 },
-			{ "PartGeneric", "magazine", 0.03 },
-			{"PartGeneric","magazine",0.03},
-			{"PartWheel","magazine",0.02},
-			{"Binocular","weapon",0.01},
-			{"ItemRadio","weapon",0.01},
-			{"ItemFlashlightRed","weapon",0.03},
-			{"ItemKnife","weapon",0.05},
-			{"","medical",0.05},
-			{"","generic",0.37},
-			{"","military_bric",0.07},
-			{"ItemEtool","weapon",0.03},
-			{"ItemSandbag","magazine",0.02},
-			{"ItemFuelBarrelEmpty","magazine",0.03},
-			{"fuel_pump_kit","magazine",0.01},
+			{ "submachinegun_bric", "cfglootweapon", 0.06 },
+			{ "PartGeneric","magazine",0.03 },
+			{ "PartWheel","magazine",0.02 },
+			{ "Binocular","weapon",0.01 },
+			{ "ItemRadio","weapon",0.02 },
+			{ "ItemFlashlightRed","weapon",0.03 },
+			{ "ItemKnife","weapon",0.06 },
+			{ "PartFueltank","magazine",0.03 },
+			{ "PartEngine","magazine",0.04 },
+			{ "PartGlass","magazine",0.05 },
+			{ "ItemEtool","weapon",0.03 },
+			{ "ItemSandbag","magazine",0.02 },
+			{ "","medical",0.05 },
+			{ "","generic",0.25 },
+			{ "","military_bric",0.07 },
 			{ "machineguns_bric", "cfglootweapon", 0.01 }
 		};
 		lootTypeSmall[] = {
@@ -533,26 +533,25 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "pistols_bric", "cfglootweapon", 0.02 },
+			{ "pistols_bric", "cfglootweapon", 0.07 },
 			{ "assaultrifles_bric", "cfglootweapon", 0.09 },
-			{ "sniperrifles_bric", "cfglootweapon", 0.01 },
+			{ "sniperrifles_bric", "cfglootweapon", 0.05 },
 			{ "militaryshotguns_bric", "cfglootweapon", 0.06 },
 			{ "submachinegun_bric", "cfglootweapon", 0.06 },
-			{ "PartGeneric", "magazine", 0.03 },
-			{"PartGeneric","magazine",0.03},
-			{"PartWheel","magazine",0.02},
-			{"Binocular","weapon",0.01},
-			{"ItemRadio","weapon",0.02},
-			{"ItemFlashlightRed","weapon",0.03},
-			{"ItemKnife","weapon",0.06},
-			{"PartFueltank","magazine",0.03},
-			{"PartEngine","magazine",0.04},
-			{"PartGlass","magazine",0.05},
-			{"ItemEtool","weapon",0.03},
-			{"ItemSandbag","magazine",0.02},
-			{"","medical",0.05},
-			{"","generic",0.25},
-			{"","military_bric",0.07},
+			{ "PartGeneric","magazine",0.03 },
+			{ "PartWheel","magazine",0.02 },
+			{ "Binocular","weapon",0.01 },
+			{ "ItemRadio","weapon",0.02 },
+			{ "ItemFlashlightRed","weapon",0.03 },
+			{ "ItemKnife","weapon",0.06 },
+			{ "PartFueltank","magazine",0.03 },
+			{ "PartEngine","magazine",0.04 },
+			{ "PartGlass","magazine",0.05 },
+			{ "ItemEtool","weapon",0.03 },
+			{ "ItemSandbag","magazine",0.02 },
+			{ "","medical",0.05 },
+			{ "","generic",0.25 },
+			{ "","military_bric",0.07 },
 			{ "machineguns_bric", "cfglootweapon", 0.01 }
 		};
 		lootTypeSmall[] = {
@@ -575,20 +574,20 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		lootType[] = {
 			{ "assaultrifles_bric_high", "cfglootweapon", 0.16 },
-			{ "machineguns_bric", "cfglootweapon", 0.02 },
+			{ "machineguns_bric_high", "cfglootweapon", 0.03 },
 			{ "pistols_bric", "cfglootweapon", 0.17 },
-			{"sniperrifles_bric", "cfglootweapon", 0.01 },
-			{"Binocular","weapon",0.02},
-			{"ItemRadio","weapon",0.05},
-			{"ItemFlashlightRed","weapon",0.02},
-			{"ItemKnife","weapon",0.04},
-			{"ItemMap","weapon",0.04},
-			{"Binocular_Vector","weapon",0.01},
-			{"","militarybackpacks",0.04},
-			{"","medical",0.05},
-			{"","generic",0.3},
-			{"","military_bric",0.01},
-			{"","machinegunammo_bric",0.05}
+			{ "sniperrifles_bric", "cfglootweapon", 0.11 },
+			{ "Binocular","weapon",0.02},
+			{ "ItemRadio","weapon",0.05},
+			{ "ItemFlashlightRed","weapon",0.02},
+			{ "ItemKnife","weapon",0.04},
+			{ "ItemMap","weapon",0.04},
+			{ "Binocular_Vector","weapon",0.01},
+			{ "","militarybackpacks",0.04},
+			{ "","medical",0.05},
+			{ "","generic",0.2},
+			{ "","military_bric",0.01},
+			{ "","machinegunammo_bric",0.05}
 		};
 		lootTypeSmall[] = {
 			{ "","assaultrifleammo_bric",0.04 },
