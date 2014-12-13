@@ -668,10 +668,11 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 				if(_ownerID == dayz_combination || _ownerID == dayz_characterID) then {
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_OPEN",_text], "\z\addons\dayz_code\actions\vault_unlock.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
+					player removeAction s_player_breakin;
 				} else {
-					s_player_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf", _cursorTarget, 0, false, true, "",""]; //mist breakin
 					_combi = player addAction [format[localize "STR_EPOCH_ACTIONS_UNLOCK",_text], "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
+					s_player_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf", _cursorTarget, 0, false, true, "",""]; //mist breakin
 				};
 				s_player_unlockvault = 1;
 			} else {
@@ -681,6 +682,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 					s_player_unlockvault = 1;
 					s_player_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf", _cursorTarget, 0, false, true, "",""]; //mist breakin
 				};
+				player removeAction s_player_breakin;
 			};
 		};
 	} else {
@@ -1108,6 +1110,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	s_player_packvault = -1;
 	player removeAction s_player_lockvault;
 	s_player_lockvault = -1;
+	player removeaction s_player_breakin;
+	s_player_breakin = -1;
 
 	player removeAction s_player_information;
 	s_player_information = -1;
