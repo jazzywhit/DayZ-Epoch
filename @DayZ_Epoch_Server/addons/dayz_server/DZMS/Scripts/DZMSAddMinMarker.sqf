@@ -20,7 +20,7 @@ while {DZMSMinRun} do {
 
     // Check to make sure a player will get the message if they logoff and then back on
     {
-        if (!(_x in _players) then {
+        if (!(_x in _players)) then {
             _notified_units = _notified_units - [_x];
         };
     } forEach _notified_units;
