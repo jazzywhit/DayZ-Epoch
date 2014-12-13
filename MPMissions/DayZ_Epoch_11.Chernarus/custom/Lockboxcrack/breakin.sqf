@@ -16,7 +16,7 @@ _cursorTarget = cursorTarget;
 	_hasPole =	"ItemPole" in _magazinesPlayer;
 	_hasCrowbar =	"MeleeCrowbar" in _weaponsPlayer;
 	_hasSledge = 	"MeleeSledge" in _weaponsPlayer;
-	_hasEtool = 	"ItemEtool" in _magazinesPlayer;
+	_hasEtool = 	"ItemEtool" in _itemsPlayer;
 	_hasObsidian = 	"ItemObsidian" in _magazinesPlayer;
 _tool_cost = -1;
 _magazine_cost = -1;
@@ -24,12 +24,17 @@ _rand = random 1;
 
 If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPole) && (_cursorTarget isKindOf "LockboxStorageLocked")) then {
 		cutText ['You attempt to pry open the lockbox..', 'PLAIN'];
-		_tool_cost = ["MeleeCrowbar", "itemToolbox", "itemKnife"];
-		_magazine_cost = ["ItemTrashRazor", "ItemRuby", "ItemPole"];
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
 		sleep 9;
 	if (_rand > 0.5) then {
+		player removeweapon "MeleeCrowbar";
+		player removeMagazine "ItemRuby";
+		player removeMagazine "ItemPole";
+		player removeweapon "itemToolbox";
+		player removeweapon "itemKnife";
+		player removeMagazine "ItemTrashRazor";
+		player removeMagazine "ItemObsidian";
 		_object = nearestObject [player, "LockboxStorageLocked"];
 		_first = _object getVariable ["CharacterID", "0"];
 		dayz_combination = "";
@@ -39,8 +44,9 @@ If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPol
 	};
 	if (_rand <= 0.5) then {
 		_tool_cost = ["MeleeCrowbar", "itemToolbox", "itemKnife"] call BIS_fnc_selectRandom;
+		_magazine_cost = ["ItemTrashRazor", "ItemRuby", "ItemPole"] call BIS_fnc_selectRandom;
 		player removeWeapon _tool_cost;
-		cutText ['You were unable to break into the lockbox and you broke a tool!', 'PLAIN'];
+		cutText ['You were unable to break into the lockbox and you broke a tool and item!', 'PLAIN'];
 	};
 } else {
 	if (_cursorTarget isKindOf "LockboxStorageLocked") then {
@@ -50,14 +56,17 @@ If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPol
 
 If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole && _hasObsidian && _hasEtool) && (_cursorTarget isKindOf "VaultStorageLocked")) then {
 		cutText ['You attempt to pry open the Safe..', 'PLAIN'];
-		_tool_cost = ["MeleeSledge", "itemToolbox", "itemKnife", "itemEtool"];
-		_magazine_cost = ["ItemTrashRazor", "ItemRuby", "ItemPole", "ItemObsidian"];
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
 		sleep 9;
 	if (_rand > 0.5) then {
-		player removeWeapon _tool_cost;
-		player removeMagazine _magazine_cost;
+		player removeweapon "MeleeSledge";
+		player removeMagazine "ItemRuby";
+		player removeMagazine "ItemPole";
+		player removeweapon "itemToolbox";
+		player removeweapon "itemKnife";
+		player removeMagazine "ItemTrashRazor";
+		player removeMagazine "ItemObsidian";
 		_object = nearestObject [player, "VaultStorageLocked"];
 		_first = _object getVariable ["CharacterID", "0"];
 		dayz_combination = "";
@@ -67,8 +76,10 @@ If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole
 	};
 	if (_rand <= 0.5) then {
 		_tool_cost = ["MeleeSledge", "itemToolbox", "itemKnife", "itemEtool"] call BIS_fnc_selectRandom;
+		_magazine_cost = ["ItemTrashRazor", "ItemRuby", "ItemPole", "ItemObsidian"] call BIS_fnc_selectRandom;
 		player removeWeapon _tool_cost;
-		cutText ['You were unable to break into the Safe and you broke a tool!', 'PLAIN'];
+		player removeMagazine _magazine_cost;
+		cutText ['You were unable to break into the Safe and you broke a tool and item!', 'PLAIN'];
 	};
 } else {
 	if (_cursorTarget isKindOf "VaultStorageLocked") then {
