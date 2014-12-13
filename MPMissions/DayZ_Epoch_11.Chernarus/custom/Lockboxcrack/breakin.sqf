@@ -38,7 +38,8 @@ If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPol
 		_object = nearestObject [player, "LockboxStorageLocked"];
 		_first = _object getVariable ["CharacterID", "0"];
 		dayz_combination = "";
-		dayz_selectedVault = _this select 3;
+		//dayz_selectedVault = _this select 3;
+		dayz_selectedVault = _object;
 		dayz_combination = _first;
 		dayz_selectedVault spawn player_unlockVault;
 	};
@@ -70,7 +71,7 @@ If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole
 		_object = nearestObject [player, "VaultStorageLocked"];
 		_first = _object getVariable ["CharacterID", "0"];
 		dayz_combination = "";
-		dayz_selectedVault = _this select 3;
+		dayz_selectedVault = _object;
 		dayz_combination = _first;
 		dayz_selectedVault spawn player_unlockVault;
 	};
