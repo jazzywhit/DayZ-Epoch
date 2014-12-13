@@ -682,6 +682,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 					s_player_unlockvault = 1;
 					s_player_breakin = player addAction ["<t color='#FF0000'>Break In</t>", "custom\Lockboxcrack\breakin.sqf", _cursorTarget, 0, false, true, "",""]; //mist breakin
 				};
+				player removeAction s_player_breakin;
 			};
 		};
 	} else {
