@@ -95,5 +95,4 @@ If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole
 };
 
 s_player_igniteVehicle = -1;
-s_player_breakin = -1;
 DZE_ActionInProgress = false;
