@@ -23,6 +23,7 @@ _magazine_cost = -1;
 _rand = random 1;
 
 If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPole) && (_cursorTarget isKindOf "LockboxStorageLocked")) then {
+		_rand = random 1;
 		cutText ['You attempt to pry open the lockbox..', 'PLAIN'];
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
@@ -42,20 +43,24 @@ If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPol
 		dayz_selectedVault = _object;
 		dayz_combination = _first;
 		dayz_selectedVault spawn player_unlockVault;
+		player removeaction s_player_breakin
 	};
 	if (_rand <= 0.5) then {
 		_tool_cost = ["MeleeCrowbar", "itemToolbox", "itemKnife"] call BIS_fnc_selectRandom;
 		_magazine_cost = ["ItemTrashRazor", "ItemRuby", "ItemPole"] call BIS_fnc_selectRandom;
 		player removeWeapon _tool_cost;
 		cutText ['You were unable to break into the lockbox and you broke a tool and item!', 'PLAIN'];
+		player removeaction s_player_breakin
 	};
 } else {
 	if (_cursorTarget isKindOf "LockboxStorageLocked") then {
 		cutText ['You need a Toolbox,Razor,Knife,Ruby,Pole and Crowbar equiped (in hands) to attempt a break in', 'PLAIN'];
+		player removeaction s_player_breakin
 	};
 };
 
 If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole && _hasObsidian && _hasEtool) && (_cursorTarget isKindOf "VaultStorageLocked")) then {
+		_rand = random 1;
 		cutText ['You attempt to pry open the Safe..', 'PLAIN'];
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
@@ -74,6 +79,7 @@ If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole
 		dayz_selectedVault = _object;
 		dayz_combination = _first;
 		dayz_selectedVault spawn player_unlockVault;
+		player removeaction s_player_breakin
 	};
 	if (_rand <= 0.5) then {
 		_tool_cost = ["MeleeSledge", "itemToolbox", "itemKnife", "itemEtool"] call BIS_fnc_selectRandom;
@@ -81,10 +87,12 @@ If ((_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole
 		player removeWeapon _tool_cost;
 		player removeMagazine _magazine_cost;
 		cutText ['You were unable to break into the Safe and you broke a tool and item!', 'PLAIN'];
+		player removeaction s_player_breakin
 	};
 } else {
 	if (_cursorTarget isKindOf "VaultStorageLocked") then {
 		cutText ['You need a Toolbox,Razor,Knife,Ruby,Obsidian,Etool,Pole and Sledgehammer equiped (in hands) to attempt a break in', 'PLAIN'];
+		player removeaction s_player_breakin
 	};
 };
 
