@@ -31,8 +31,6 @@ If ((_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPol
 		[player,"repair",0,false] call dayz_zombieSpeak;
 		sleep 9;
 	if (_rand > 0.5) then {
-		player removeWeapon _tool_cost;
-		player removeMagazine _magazine_cost;
 		_object = nearestObject [player, "LockboxStorageLocked"];
 		_first = _object getVariable ["CharacterID", "0"];
 		dayz_combination = "";
