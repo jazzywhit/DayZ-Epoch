@@ -30,7 +30,7 @@ If (_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPole
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
 		sleep 9;
-	if (_rand > 0.6) then {
+	if (_rand > 0.5) then {
 		player removeWeapon _tool_cost;
 		player removeMagazine _magazine_cost;
 		_object = nearestObject [player, "LockboxStorageLocked"];
@@ -38,7 +38,7 @@ If (_hasToolbox && _hasCrowbar && _hasKnife && _hasRazor && _hasRuby && _hasPole
 		dayz_combination = _object getVariable ["CharacterID", "0"];
 		dayz_selectedVault spawn player_unlockVault;
 	};
-	if (_rand <= 0.6) then {
+	if (_rand <= 0.5) then {
 		_tool_cost = ["MeleeCrowbar", "itemToolbox", "itemKnife"] call BIS_fnc_selectRandom;
 		player removeWeapon _tool_cost;
 		cutText ['You were unable to break into the lockbox and you broke a tool!', 'PLAIN'];
@@ -56,7 +56,7 @@ If (_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole 
 		player playActionNow "Medic";
 		[player,"repair",0,false] call dayz_zombieSpeak;
 		sleep 9;
-	if (_rand > 0.8) then {
+	if (_rand > 0.5) then {
 		player removeWeapon _tool_cost;
 		player removeMagazine _magazine_cost;
 		_object = nearestObject [player, "VaultStorageLocked"];
@@ -64,7 +64,7 @@ If (_hasToolbox && _hasSledge && _hasKnife && _hasRazor && _hasRuby && _hasPole 
 		dayz_combination = _object getVariable ["CharacterID", "0"];
 		dayz_selectedVault spawn player_unlockVault;
 	};
-	if (_rand <= 0.8) then {
+	if (_rand <= 0.5) then {
 		_tool_cost = ["MeleeSledge", "itemToolbox", "itemKnife", "itemEtool"] call BIS_fnc_selectRandom;
 		player removeWeapon _tool_cost;
 		cutText ['You were unable to break into the Safe and you broke a tool!', 'PLAIN'];
