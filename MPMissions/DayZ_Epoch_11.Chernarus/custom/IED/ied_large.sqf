@@ -7,11 +7,10 @@ if (dayz_combat == 1) exitWith {cutText [format["You are in Combat and cannot bu
 _cnt_ied_small = {_x == "BAF_ied_v1"} count magazines player;
 _cnt_hotwire = {_x == "ItemHotwireKit"} count magazines player;
 
-if (_cnt_ied_small >= 6 && _cnt_hotwire > 1) then {
+if (_cnt_ied_small >= 5 && _cnt_hotwire > 1) then {
  
     player playActionNow "Medic";
     r_interrupt = false;
-    player removeMagazine "BAF_ied_v1";
     player removeMagazine "BAF_ied_v1";
     player removeMagazine "BAF_ied_v1";
     player removeMagazine "BAF_ied_v1";
