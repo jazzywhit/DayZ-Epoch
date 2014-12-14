@@ -1,5 +1,5 @@
 // Break In Script by Mist and jesquik
-// Allow users to break into  
+// Allow users to break into safes/lockboxes
 private ["_obj","_rand","_object","_hasToolbox","_hasCrowbar","_meleeCrowbar","_tool_cost","_magazinesPlayer","_cursortarget","_meleeSledge","_weaponsplayer","_combination","_hasCobaltFile"];
 
 if(DZE_ActionInProgress) exitWith { cutText ["You can't break into this right now", "PLAIN DOWN"]; };
@@ -46,7 +46,7 @@ if (_cursorTarget isKindOf "LockboxStorageLocked") then {
 
 if (_cursorTarget isKindOf "VaultStorageLocked") then {
     If (_hasToolbox && _meleeSledge && _hasCrowbar && _hasCobaltFile) then {
-        cutText ['You attempt to break open the Safe..', 'PLAIN'];
+        cutText ['You attempt to break open the Safe...', 'PLAIN'];
         player playActionNow "Medic";
         [player,"repair",0,false] call dayz_zombieSpeak;
         sleep 9;
@@ -68,7 +68,7 @@ if (_cursorTarget isKindOf "VaultStorageLocked") then {
             player removeWeapon "MeleeSledge"; // Always lose the sledge hammer on failure
             _tool_cost = ["ItemToolbox", "ItemCrowbar"] call BIS_fnc_selectRandom;
             player removeWeapon _tool_cost;
-            cutText ['You broke the sledgehammer and a tool broke before you could finish!', 'PLAIN'];
+            cutText ['You broke the sledgehammer and another tool before you could finish!', 'PLAIN'];
         };
     } else {
         cutText ['You need a Toolbox, Crowbar, the Cobalt File, and an equipped Sledgehammer (in hands) to attempt a break in', 'PLAIN'];
