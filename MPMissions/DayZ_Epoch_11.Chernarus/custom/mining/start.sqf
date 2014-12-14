@@ -49,7 +49,7 @@ if (_hasTool) then {
 
             // Swing the weapon and take hunger/thirst
 			player playActionNow "GestureSwing";
-			[10,10] call dayz_HungerThirst; // Each swing causes you to get hungry/thirsty
+			[20,30] call dayz_HungerThirst; // Each swing causes you to get hungry/thirsty
 			sleep 1;
 			_step_cnt = _step_cnt - 1;
 		};
@@ -61,43 +61,44 @@ if (_hasTool) then {
             // Gather the ore that you mined
             player playActionNow "Medic";
             sleep 9;
-			
-			if (_rand <= 0.15) then {
+
+			if (_rand <= 0.2) then {
 				_has_free_space=[player,"PartOre",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Iron ore.";
 			};
-			if (_rand <= 0.30 && _rand > 0.15) then {
+			if (_rand <= 0.4 && _rand > 0.2) then {
 				_has_free_space=[player,"PartOreSilver",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Silver ore.";
 			};
-			if (_rand <= 0.60 && _rand > 0.30) then {
-				_has_free_space=[player,"PartOreGold",false] call BIS_fnc_invAdd;
-				_mining_message="Mined 1 Silver ore.";
-			};
-			if (_rand <= 0.65 && _rand > 0.60) then {
+            if (_rand <= 0.70 && _rand > 0.40) then {
+                _has_free_space=[player,"PartOreGold",false] call BIS_fnc_invAdd;
+                _mining_message="Mined 1 Silver ore.";
+            };
+			if (_rand <= 0.85 && _rand > 0.70) then { // Gems have 30% chance of being mined 15/30 = 50% chance of ItemTopaz
 				_has_free_space=[player,"ItemTopaz",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Topaz.";				
 			};
-			if (_rand <= 0.70 && _rand > 0.65) then {
+			if (_rand <= 0.90 && _rand > 0.85) then { // Gems have 30% chance of being mined 5/30 = 17% chance of ItemCitrine
 				_has_free_space=[player,"ItemCitrine",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Citrine.";				
 			};
-			if (_rand <= 0.75 && _rand > 0.70) then {
+			if (_rand <= 0.94 && _rand > 0.90) then { // Gems have 30% chance of being mined 4/30 = 13% chance of ItemAmethyst
 				_has_free_space=[player,"ItemAmethyst",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Amethyst.";				
 			};
-			if (_rand <= 0.80 && _rand > 0.75) then {
+			if (_rand <= 0.97 && _rand > 0.94) then { // Gems have 30% chance of being mined 3/30 = 10% chance of ItemSapphire
 				_has_free_space=[player,"ItemSapphire",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Sapphire.";				
 			};
-			if (_rand <= 0.95 && _rand > 0.80) then {
+			if (_rand <= 0.99 && _rand > 0.97) then { // Gems have 30% chance of being mined 2/30 = 7% chance of ItemObsidian
 				_has_free_space=[player,"ItemObsidian",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Obsidian.";				
 			};
-			if (_rand > 0.95) then {
+			if (_rand > 0.99) then { // Gems have 30% chance of being mined 1/30 = 3% chance of ItemRuby
 				_has_free_space=[player,"ItemRuby",false] call BIS_fnc_invAdd;
 				_mining_message="Mined 1 Ruby.";				
 			};
+
 			// If there is no room in inventory, exit
             if (!_has_free_space) exitWith {
                 isMining = false;

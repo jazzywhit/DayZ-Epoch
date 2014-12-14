@@ -10,20 +10,16 @@ s_player_lockUnlock_crtl = 1;
 _removed = ([player,"ItemHotwireKit",1] call BIS_fnc_invRemove);
 
 if (_removed == 1) then {
-
-	if((random 10) <= 7.5) then {
-
+	if(random 1 < 1) then {
 		PVDZE_veh_Lock = [_vehicle,false];
 		if(player distance _vehicle < 10) then {
-			
+
 			if (local _vehicle) then {
 				PVDZE_veh_Lock spawn local_lockUnlock
 			} else {
 				publicVariable "PVDZE_veh_Lock";
 			};
 		};
-	} else {
-		cutText [(localize "str_epoch_player_33") , "PLAIN DOWN"];
 	};
 };
 

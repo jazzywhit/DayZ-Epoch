@@ -55,8 +55,6 @@ sleep 5;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Medical Cache is Under Survivor Control!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Minor Medical Cache Mission has Ended."];
-deleteMarker "DZMSMinMarker";
-deleteMarker "DZMSMinDot";
 
 //Let the timer know the mission is over
 DZMSMinDone = true;

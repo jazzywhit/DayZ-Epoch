@@ -53,8 +53,6 @@ sleep 1;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Bandits Gold has been Secured by Survivors!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major SM Bandit Gold Mission has Ended."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
 DZMSMajDone = true;

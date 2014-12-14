@@ -105,8 +105,11 @@ DZMSUnitsMajor = [];
 // Let's get the clocks running!
 [] ExecVM DZMSMajTimer;
 [] ExecVM DZMSMinTimer;
+DZMSMajRun = false;
 DZMSMajDone = false;
+DZMSMinRun = false;
 DZMSMinDone = false;
 
-// Let's get the Marker Re-setter running for JIPs to stay updated
-[] ExecVM DZMSMarkerLoop;
+//Lets define these
+if (isNil "DZMSMajCoords")then{DZMSMajCoords = [0,0,0];};
+if (isNil "DZMSMinCoords")then{DZMSMinCoords = [0,0,0];};

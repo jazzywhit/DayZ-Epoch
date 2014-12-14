@@ -36,10 +36,12 @@ while {_run} do
     DZMSUnitsMajor = [];
     
 	//Let's Run the Mission
+	DZMSMajRun = true;
 	[] execVM format ["\z\addons\dayz_server\DZMS\Missions\Major\%1.sqf",_varName];
 	diag_log text format ["[DZMS]: Running Major Mission %1.",_varName];
 	
 	//Let's wait for it to finish or timeout
 	waitUntil {DZMSMajDone};
+	DZMSMajRun = false;
 	DZMSMajDone = false;
 };

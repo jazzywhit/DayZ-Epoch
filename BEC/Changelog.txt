@@ -1,4 +1,16 @@
-﻿*** V 1.602 ***
+﻿*** V 1.605 ***
+- Added: Version check on file: Bec.lib. if the exe & lib file has a version mismatch Bec will not startup. its added because people tend to only update the exe file.
+- Added: command "exit" to the scheduler. when used it will terminate Bec
+- Added: Display a warning if a scheduler job used loadbans with no files defined and BeCustomBanFiles is in use.
+
+*** V 1.604 ***
+- Fixed: seconds in the scheduler using the hh:mm:ss format had a bug after last update!.
+
+*** V 1.603 ***
+- Fixed: A bug when the time in the scheduler was set to 24:00:00 instead of 00:00:00
+- FIxed: A Bug in Commands.xml file. if _name_ or _time_ was not set for the ban commands, no reason was given.
+
+*** V 1.602 ***
 - Improved: Auto remove starting and ending spaces from the tags in the xml files.
 - Fixed: A typo in the code making WhiteListKickMsg not work unless it was spelled wrong.
 - Added: New setting to [Misc] -> BeCustomBanFiles, define custom banfiles which will do a (loadbans file) if the file(s) gets changed.

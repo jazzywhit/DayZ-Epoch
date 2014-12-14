@@ -52,8 +52,6 @@ sleep 1;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Repair Truck has been Secured by Survivors!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Minor SM7 Repair Truck Mission has Ended."];
-deleteMarker "DZMSMinMarker";
-deleteMarker "DZMSMinDot";
 
 //Let the timer know the mission is over
 DZMSMinDone = true;

@@ -8,7 +8,7 @@ s_player_plotManagement = -1;
 s_player_drinkWater = -1;
 
 //Default Loadout
-DefaultMagazines = ["ItemBandage"];
+DefaultMagazines = ["ItemBandage","ItemLetter"];
 DefaultWeapons = ["ItemFlashlight"];
 DefaultBackpack = "CZ_VestPouch_EP1";
 DefaultBackpackWeapon = "";
@@ -59,6 +59,9 @@ s_player_mine = -1;
 
 //Safe Change Combination
 s_player_Safe_ckc = -1;
+
+//Lockbox breakin
+s_player_breakin = -1;
 
 //Survival Variables
 SleepFood =				2160; //minutes (48 hours)

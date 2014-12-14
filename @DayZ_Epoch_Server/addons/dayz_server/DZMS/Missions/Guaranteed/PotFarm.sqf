@@ -42,8 +42,6 @@ clearBackpackCargoGlobal _boxFin;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Harvest has Been Stolen by Survivors!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major PF1 Harvest Mission is over."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
 DZMSMajDone = true;

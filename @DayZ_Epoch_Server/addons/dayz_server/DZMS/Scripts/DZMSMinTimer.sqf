@@ -36,10 +36,12 @@ while {_run} do
     DZMSUnitsMinor = [];
     
 	//Let's Run the Mission
+	DZMSMinRun = true;
 	[] execVM format ["\z\addons\dayz_server\DZMS\Missions\Minor\%1.sqf",_varName];
 	diag_log text format ["[DZMS]: Running Minor Mission %1.",_varName];
 	
 	//Let's wait for it to finish or timeout
 	waitUntil {DZMSMinDone};
+	DZMSMinRun = false;
 	DZMSMinDone = false;
 };

@@ -27,12 +27,17 @@ class Category_662 {
 	class ItemVault {
 		type = "trade_items";
 		buy[] = {3,"ItemBriefcase100oz"};
-		sell[] = {3,"ItemBriefcase100oz"};
+		sell[] = {6,"ItemGoldBar10oz"};
+	};
+	class Cobalt_File {
+		type = "trade_items";
+		buy[] = {1,"ItemBriefcase100oz"};
+		sell[] = {2,"ItemGoldBar10oz"};
 	};
     class ItemLockbox {
         type = "trade_items";
         buy[] = {1,"ItemBriefcase100oz"};
-        sell[] = {1,"ItemBriefcase100oz"};
+        sell[] = {2,"ItemGoldBar10oz"};
     };
 	class ItemTentDomed {
 		type = "trade_items";
@@ -89,12 +94,17 @@ class Category_508 {
 	class ItemVault {
 		type = "trade_items";
 		buy[] = {3,"ItemBriefcase100oz"};
-		sell[] = {3,"ItemBriefcase100oz"};
+		sell[] = {6,"ItemGoldBar10oz"};
+	};
+	class Cobalt_File {
+		type = "trade_items";
+		buy[] = {1,"ItemBriefcase100oz"};
+		sell[] = {1,"ItemBriefcase100oz"};
 	};
     class ItemLockbox {
         type = "trade_items";
         buy[] = {1,"ItemBriefcase100oz"};
-        sell[] = {1,"ItemBriefcase100oz"};
+        sell[] = {2,"ItemGoldBar10oz"};
     };
 	class ItemTentDomed {
 		type = "trade_items";

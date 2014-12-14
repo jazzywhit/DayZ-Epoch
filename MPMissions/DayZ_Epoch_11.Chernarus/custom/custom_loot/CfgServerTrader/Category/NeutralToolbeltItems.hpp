@@ -56,8 +56,8 @@ class Category_663 {
 	};
 	class ItemWatch {
 		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		buy[] = {1,"ItemSilverBar10oz"};
+		sell[] = {2,"ItemSilverBar"};
 	};
 	class NVGoggles {
 		type = "trade_weapons";
@@ -66,8 +66,8 @@ class Category_663 {
 	};
 	class ItemCrowbar {
 		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {6,"ItemSilverBar10oz"};
+		buy[] = {5,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
 	};
 	class ItemMachete {
 		type = "trade_weapons";
@@ -81,7 +81,7 @@ class Category_663 {
 	};
     class ItemRadio {
         type = "trade_weapons";
-        buy[] = {4,"ItemGoldBar"};
+        buy[] = {10,"ItemGoldBar"};
         sell[] = {2,"ItemGoldBar"};
     };
 };
@@ -143,8 +143,8 @@ class Category_510 {
 	};
 	class ItemWatch {
 		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		buy[] = {1,"ItemSilverBar10oz"};
+		sell[] = {2,"ItemSilverBar"};
 	};
 	class NVGoggles {
 		type = "trade_weapons";
@@ -153,8 +153,8 @@ class Category_510 {
 	};
 	class ItemCrowbar {
 		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {6,"ItemSilverBar10oz"};
+		buy[] = {5,"ItemGoldBar"};
+		sell[] = {1,"ItemGoldBar"};
 	};
 	class ItemMachete {
 		type = "trade_weapons";
@@ -168,7 +168,7 @@ class Category_510 {
 	};
     class ItemRadio {
         type = "trade_weapons";
-        buy[] = {4,"ItemGoldBar"};
+        buy[] = {10,"ItemGoldBar"};
         sell[] = {2,"ItemGoldBar"};
     };
 };

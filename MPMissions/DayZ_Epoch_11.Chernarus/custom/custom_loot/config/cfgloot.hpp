@@ -484,8 +484,11 @@ class CfgLoot {
 		,{"200Rnd_556x45_M249",0.1}
 	};
 	machineguns_bric[] = {
-		{"RPK_74",0.8}
-		,{"PK",0.2}
+		{"RPK_74",1}
+	};
+	machineguns_bric_high[] = {
+		{"RPK_74",0.4}
+		,{"PK",0.6}
 	};
 	machinegunammo_bric[] = {
 		{"75Rnd_545x39_RPK",0.90}

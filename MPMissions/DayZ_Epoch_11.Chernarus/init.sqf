@@ -32,11 +32,12 @@ dayz_maxLocalZombies = 30; // Default = 30
 dayz_paraSpawn = false;
 dayz_minpos = -1;
 dayz_maxpos = 16000;
-dayz_sellDistance_vehicle = 10;
+dayz_sellDistance_vehicle = 30;
 dayz_sellDistance_boat = 30;
-dayz_sellDistance_air = 40;
-dayz_maxAnimals = 2; // Default: 8
+dayz_sellDistance_air = 50;
+dayz_maxAnimals = 6; // Default: 8
 dayz_tameDogs = true;
+DZE_BuildingLimit = 500;
 DZE_BuildOnRoads = false; // Default: False
 dayz_fullMoonNights = true;
 DZE_BuildingLimit = 500;
@@ -84,6 +85,8 @@ if (isServer) then {
 	// Add trader citys
 	_nil = [] execVM "\z\addons\dayz_server\missions\DayZ_Epoch_11.Chernarus\mission.sqf";
 	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
+
+	
 };
 
 if (!isDedicated) then {
@@ -93,6 +96,12 @@ if (!isDedicated) then {
 	
     //fixed point mining
 	[] execVM "custom\mining\init.sqf";
+
+	// Mission Markers
+	"PlayerMissionMarkerMajor" addPublicVariableEventHandler { PlayerMissionMarkerMajor execVM 'custom\player_messaging\player_missionmarkers_maj.sqf'; };
+	"PlayerMissionMarkerMinor" addPublicVariableEventHandler { PlayerMissionMarkerMinor execVM 'custom\player_messaging\player_missionmarkers_min.sqf'; };
+	"PlayerMissionMarkerMajorClear" addPublicVariableEventHandler { PlayerMissionMarkerMajorClear execVM 'custom\player_messaging\player_missionmarkers_maj_clear.sqf'; };
+	"PlayerMissionMarkerMinorClear" addPublicVariableEventHandler { PlayerMissionMarkerMinorClear execVM 'custom\player_messaging\player_missionmarkers_min_clear.sqf'; };
 
 	//Conduct map operations
 	0 fadeSound 0;

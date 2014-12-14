@@ -71,8 +71,6 @@ sleep 5;
 
 [nil,nil,rTitleText,"The Ural Supplies have been Secured by Survivors!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Minor Ural Ambush Mission has Ended."];
-deleteMarker "DZMSMinMarker";
-deleteMarker "DZMSMinDot";
 
 //Let the timer know the mission is over
 DZMSMinDone = true;

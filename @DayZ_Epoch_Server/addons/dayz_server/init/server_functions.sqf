@@ -947,9 +947,8 @@ server_timeSync = {if (!initialSend) then {[] call donn_server_timeSync;}; initi
 };
 
 
-//IXXO custom buildings
+//Custom Buildings
 execVM "\z\addons\dayz_server\CustomBuildings\3cities.sqf";
-execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
 execVM "\z\addons\dayz_server\CustomBuildings\northeastairfield.sqf";
 execVM "\z\addons\dayz_server\CustomBuildings\northwestairfield.sqf";
 execVM "\z\addons\dayz_server\CustomBuildings\vybor.sqf";

@@ -64,8 +64,6 @@ sleep 5;
 //Let everyone know the mission is over
 [nil,nil,rTitleText,"The Helicopter has been Taken by Survivors!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Minor SM4 Helicopter Landing Mission has Ended."];
-deleteMarker "DZMSMinMarker";
-deleteMarker "DZMSMinDot";
 
 //Let the timer know the mission is over
 DZMSMinDone = true;

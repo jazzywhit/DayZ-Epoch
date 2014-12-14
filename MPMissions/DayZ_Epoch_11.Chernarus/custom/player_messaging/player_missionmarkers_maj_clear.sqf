@@ -1,0 +1,2 @@
+deleteMarkerLocal "MissionMajorCircle";
+deleteMarkerLocal "MissionMajorDot";

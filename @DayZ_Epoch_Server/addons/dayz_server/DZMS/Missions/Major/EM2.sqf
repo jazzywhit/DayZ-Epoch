@@ -94,8 +94,6 @@ if (Alive _plane && Alive _pilot) then {
 
 [nil,nil,rTitleText,"The C130 mission is over!", "PLAIN",6] call RE;
 diag_log text format["[DZMS]: Major EM2 C130 J landing mission is over."];
-deleteMarker "DZMSMajMarker";
-deleteMarker "DZMSMajDot";
 
 //Let the timer know the mission is over
 DZMSMajDone = true;
