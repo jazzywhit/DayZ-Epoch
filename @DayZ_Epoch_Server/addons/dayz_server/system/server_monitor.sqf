@@ -3,6 +3,7 @@ private ["_nul","_result","_pos","_wsDone","_dir","_isOK","_countr","_objWpnType
 dayz_versionNo = 		getText(configFile >> "CfgMods" >> "DayZ" >> "version");
 dayz_hiveVersionNo = 	getNumber(configFile >> "CfgMods" >> "DayZ" >> "hiveVersion");
 
+['A2Prod'] execFSM "\z\addons\dayz_server\ASM\fn_ASM.fsm";
 
 
 _hiveLoaded = false;

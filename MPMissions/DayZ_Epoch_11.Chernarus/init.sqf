@@ -84,6 +84,8 @@ if (isServer) then {
 	// Add trader citys
 	_nil = [] execVM "\z\addons\dayz_server\missions\DayZ_Epoch_11.Chernarus\mission.sqf";
 	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
+
+	
 };
 
 if (!isDedicated) then {
