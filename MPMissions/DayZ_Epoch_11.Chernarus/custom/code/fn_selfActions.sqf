@@ -11,12 +11,11 @@ if (DZE_ActionInProgress) exitWith {}; // Do not allow if any script is running.
 _vehicle = vehicle player;
 _isPZombie = player isKindOf "PZombie_VB";
 _inVehicle = (_vehicle != player);
-
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _canDo = (!r_drag_sqf && !r_player_unconscious && !_onLadder);
-
 _nearLight = 	nearestObject [player,"LitObject"];
 _canPickLight = false;
+
 if (!isNull _nearLight) then {
 	if (_nearLight distance player < 4) then {
 		_canPickLight = isNull (_nearLight getVariable ["owner",objNull]);
@@ -150,9 +149,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_hasHotwireKit = 	"ItemHotwireKit" in _magazinesPlayer;
 	_hasETool = "ItemEtool" in items player;
 	_hasShovel = "ItemShovel" in items player;
-
 	_itemsPlayer = items player;
-
 	_temp_keys = [];
 	_temp_keys_names = [];
 	// find available keys
@@ -173,9 +170,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_hasScrap =	"PartGeneric" in _magazinesPlayer;
 	_hasEtool =	"ItemEtool" in _itemsPlayer;
 	_hasShovel = "ItemShovel" in _itemsPlayer;
-
 	_canIgnite = (("ItemJerrycan" in _magazinesPlayer) || ("ItemFuelBarrel" in _magazinesPlayer))  && ("ItemMatchbox_DZE" in weapons player);
-
 	_isMan = _cursorTarget isKindOf "Man";
 	_traderType = _typeOfCursorTarget;
 	_ownerID = _cursorTarget getVariable ["CharacterID","0"];
@@ -188,16 +183,11 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_isWreckBuilding = _typeOfCursorTarget in DZE_isWreckBuilding;
 	_isModular = _cursorTarget isKindOf "ModularItems";
 	_isModularDoor = _typeOfCursorTarget in ["Land_DZE_WoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_GarageWoodDoor","CinderWallDoor_DZ","CinderWallDoorSmall_DZ"];
-
 	_isRemovable = _typeOfCursorTarget in DZE_isRemovable;
 	_isDisallowRepair = _typeOfCursorTarget in ["M240Nest_DZ"];
-
 	_isTent = _cursorTarget isKindOf "TentStorage";
-
 	_isAlive = alive _cursorTarget;
-
 	_text = getText (configFile >> "CfgVehicles" >> _typeOfCursorTarget >> "displayName");
-
 	_rawmeat = meatraw;
 	_hasRawMeat = false;
 	{
@@ -220,42 +210,42 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_player_deleteBuild = false;
 	_player_lockUnlock_crtl = false;
 
-	 if (_canDo && (speed player <= 1) && (_cursorTarget isKindOf "Plastic_Pole_EP1_DZ")) then {
+    if (_canDo && (speed player <= 1) && (_cursorTarget isKindOf "Plastic_Pole_EP1_DZ")) then {
+        if (s_player_plotManagement < 0) then {
+            _adminList = ["0152"]; // Add admins here if you admins to able to manage all plotpoles
+            _owner = _cursorTarget getVariable ["CharacterID","0"];
+            _friends = _cursorTarget getVariable ["plotfriends", []];
+            _fuid = [];
+            {
+                _friendUID = _x select 0;
+                _fuid = _fuid + [_friendUID];
+            } forEach _friends;
+            _allowed = [_owner];
+            _allowed = [_owner] + _adminList + _fuid;
+            if(_owner == dayz_characterID || (getPlayerUID player) in _allowed) then {
+                s_player_plotManagement = player addAction ["<t color='#0059FF'>Manage Plot</t>", "custom\plotManagement\initPlotManagement.sqf", [], 5, false];
+            };
+        };
 
-		if (s_player_plotManagement < 0) then {
-			_adminList = ["0152"]; // Add admins here if you admins to able to manage all plotpoles
-			_owner = _cursorTarget getVariable ["CharacterID","0"];
-			_friends = _cursorTarget getVariable ["plotfriends", []];
-			_fuid = [];
-			{
-			_friendUID = _x select 0;
-			_fuid = _fuid + [_friendUID];
-			} forEach _friends;
-			_allowed = [_owner];
-			_allowed = [_owner] + _adminList + _fuid;
-			if(_owner == dayz_characterID || (getPlayerUID player) in _allowed) then {
-			    s_player_plotManagement = player addAction ["<t color='#0059FF'>Manage Plot</t>", "custom\plotManagement\initPlotManagement.sqf", [], 5, false];
-			};
-		};
-
-		if (s_player_maintain_area < 0) then {
-		  	s_player_maintain_area = player addAction [format["<t color='#ff0000'>%1</t>",localize "STR_EPOCH_ACTIONS_MAINTAREA"], "\z\addons\dayz_code\actions\maintain_area.sqf", "maintain", 5, false];
-		 	s_player_maintain_area_preview = player addAction [format["<t color='#ff0000'>%1</t>",localize "STR_EPOCH_ACTIONS_MAINTPREV"], "\z\addons\dayz_code\actions\maintain_area.sqf", "preview", 5, false];
-        } else {
-			player removeAction s_player_plotManagement;
-			s_player_plotManagement = -1;
-			player removeAction s_player_maintain_area;
-			s_player_maintain_area = -1;
-			player removeAction s_player_maintain_area_preview;
-			s_player_maintain_area_preview = -1;
-		};
+        if (s_player_maintain_area < 0) then {
+            s_player_maintain_area = player addAction [format["<t color='#ff0000'>%1</t>",localize "STR_EPOCH_ACTIONS_MAINTAREA"], "\z\addons\dayz_code\actions\maintain_area.sqf", "maintain", 5, false];
+            s_player_maintain_area_preview = player addAction [format["<t color='#ff0000'>%1</t>",localize "STR_EPOCH_ACTIONS_MAINTPREV"], "\z\addons\dayz_code\actions\maintain_area.sqf", "preview", 5, false];
+        };
+    } else {
+        player removeAction s_player_plotManagement;
+        s_player_plotManagement = -1;
+        player removeAction s_player_maintain_area;
+        s_player_maintain_area = -1;
+        player removeAction s_player_maintain_area_preview;
+        s_player_maintain_area_preview = -1;
+    };
 
 	// CURSOR TARGET ALIVE
 	if(_isAlive) then {
 
 		//Allow player to delete objects
 		if(_isDestructable || _isWreck || _isRemovable || _isWreckBuilding) then {
-			if(_hasToolbox && "ItemCrowbar" in _itemsPlayer) then {
+			if(_hasToolbox && _hasCrowbar) then {
 				_player_deleteBuild = true;
 			};
 		};
@@ -295,30 +285,30 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 
         //Allow owners to delete modular doors without locks
         if(_isModularDoor) then {
-                if(_hasToolbox && _hasCrowbar) then {
-                    _findNearestPoles = nearestObjects[player, ["Plastic_Pole_EP1_DZ"], DZE_PlotPole select 0];
-                    _IsNearPlot = count (_findNearestPoles);
-                    _fuid  = [];
-                    _allowed = [];
-                    if(_IsNearPlot > 0)then{
-                        _thePlot = _findNearestPoles select 0;
-                        _owner =  _thePlot getVariable ["ownerPUID","010"];
-                        _friends = _thePlot getVariable ["plotfriends", []];
-                        {
-                          _friendUID = _x select 0;
-                          _fuid  =  _fuid  + [_friendUID];
-                        } forEach _friends;
-                        _allowed = [_owner];
-                        _allowed = [_owner] +  _fuid;
-                        if ( _playerUID in _allowed && _ownerID in _allowed) then { //  // If u want that the object also belongs to someone on the plotpole.
-                            _player_deleteBuild = true;
-                        };
-                    }else{
-                        if(_ownerID == _playerUID)then{
-                            _player_deleteBuild = true;
-                        };
+            if(_hasToolbox && _hasCrowbar) then {
+                _findNearestPoles = nearestObjects[player, ["Plastic_Pole_EP1_DZ"], DZE_PlotPole select 0];
+                _IsNearPlot = count (_findNearestPoles);
+                _fuid  = [];
+                _allowed = [];
+                if(_IsNearPlot > 0)then{
+                    _thePlot = _findNearestPoles select 0;
+                    _owner =  _thePlot getVariable ["ownerPUID","010"];
+                    _friends = _thePlot getVariable ["plotfriends", []];
+                    {
+                      _friendUID = _x select 0;
+                      _fuid  =  _fuid  + [_friendUID];
+                    } forEach _friends;
+                    _allowed = [_owner];
+                    _allowed = [_owner] +  _fuid;
+                    if ( _playerUID in _allowed && _ownerID in _allowed) then { //  // If u want that the object also belongs to someone on the plotpole.
+                        _player_deleteBuild = true;
+                    };
+                }else{
+                    if(_ownerID == _playerUID)then{
+                        _player_deleteBuild = true;
                     };
                 };
+            };
         };
 
         //Plot management end
@@ -405,7 +395,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 					s_player_lockUnlock_crtl = 1;
 				} else {
 					if(_hasHotwireKit) then {
-						_Unlock = player addAction [format[localize "STR_EPOCH_ACTIONS_HOTWIRE",_text], "custom\code\hotwire_veh.sqf",_cursorTarget, 2, true, true, "", ""];
+						_Unlock = player addAction [format[localize "STR_EPOCH_ACTIONS_HOTWIRE",_text], "\z\addons\dayz_code\actions\hotwire_veh.sqf",_cursorTarget, 2, true, true, "", ""];
 					} else {
 						_Unlock = player addAction [format["<t color='#ff0000'>%1</t>",localize "STR_EPOCH_ACTIONS_VEHLOCKED"], "",_cursorTarget, 2, true, true, "", ""];
 					};
@@ -865,16 +855,6 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		};
 	};
 
-	// Drag Body
-	// if (_isMan and !_isAlive) then {
-        // if (s_player_dragbody < 0) then {
-            // s_player_dragbody = player addAction [localize "str_action_studybody", "\z\addons\dayz_code\actions\drag_body.sqf",cursorTarget, 0, false, true, "",""];
-        // };
-        // } else {
-        // player removeAction s_player_dragbody;
-        // s_player_dragbody = -1;
-    // };
-
 	// Cannibalism
 	if (!_isAlive and !_isZombie and !_isAnimal and _isMan and _hasKnife and _canDo) then {
         if (s_player_butcher_human < 0) then {
@@ -943,9 +923,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		s_player_parts_crtl = -1;
 	};
 
-
 	if(dayz_tameDogs) then {
-
 		//Dog
 		if (_isDog && _isAlive && (_hasRawMeat) && _ownerID == "0" && player getVariable ["dogID", 0] == 0) then {
 			if (s_player_tamedog < 0) then {
