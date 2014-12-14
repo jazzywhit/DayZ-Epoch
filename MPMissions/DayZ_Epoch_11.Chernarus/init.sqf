@@ -84,7 +84,7 @@ if (isServer) then {
 	_nil = [] execVM "\z\addons\dayz_server\missions\DayZ_Epoch_11.Chernarus\mission.sqf";
 	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
 
-	["A2prod"] execFSM  "custom\ASM\fn_ASM.fsm";
+	
 };
 
 if (!isDedicated) then {
