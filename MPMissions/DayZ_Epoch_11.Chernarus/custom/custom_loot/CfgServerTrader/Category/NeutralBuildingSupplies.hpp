@@ -30,7 +30,7 @@ class Category_662 {
 		sell[] = {6,"ItemGoldBar10oz"};
 	};
 	class Cobalt_File {
-		type = "trade_items";
+		type = "trade_weapons";
 		buy[] = {1,"ItemBriefcase100oz"};
 		sell[] = {2,"ItemGoldBar10oz"};
 	};
@@ -97,7 +97,7 @@ class Category_508 {
 		sell[] = {6,"ItemGoldBar10oz"};
 	};
 	class Cobalt_File {
-		type = "trade_items";
+		type = "trade_weapons";
 		buy[] = {1,"ItemBriefcase100oz"};
 		sell[] = {1,"ItemBriefcase100oz"};
 	};
