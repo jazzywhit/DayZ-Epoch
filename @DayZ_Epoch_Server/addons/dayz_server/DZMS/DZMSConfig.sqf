@@ -176,19 +176,19 @@ DZMSMinorArray = ["MinM1","MinM2","MinM3","MinM4","MinM5","MinM6","MinM7","MinM8
 /////////////////////////////////////////////////////////////////////////////////////////////
 // The Minimum time in seconds before a major mission will run.
 // At least this much time will pass between major missions. Default = 900
-DZMSMajorMin = 90;
+DZMSMajorMin = 900;
 
 // Maximum time in seconds before a major mission will run.
 // A major mission will always run before this much time has passed. Default = 2700
-DZMSMajorMax = 270;
+DZMSMajorMax = 2700;
 
 // Time in seconds before a minor mission will run.
 // At least this much time will pass between minor missions. Default = 600 (10 Minutes)
-DZMSMinorMin = 60; // 5 minutes
+DZMSMinorMin = 600; // 5 minutes
 
 // Maximum time in seconds before a minor mission will run.
 // A minor mission will always run before this much time has passed. Default = 990 (16.5 Minutes)
-DZMSMinorMax = 90; // 15 minutes
+DZMSMinorMax = 900; // 15 minutes
 
 // Blacklist Zone Array -- missions will not spawn in these areas
 // format: [[x,y,z],radius]

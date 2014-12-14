@@ -32,7 +32,7 @@ class Category_662 {
 	class Cobalt_File {
 		type = "trade_items";
 		buy[] = {1,"ItemBriefcase100oz"};
-		sell[] = {1,"ItemBriefcase100oz"};
+		sell[] = {2,"ItemGoldBar10oz"};
 	};
     class ItemLockbox {
         type = "trade_items";
