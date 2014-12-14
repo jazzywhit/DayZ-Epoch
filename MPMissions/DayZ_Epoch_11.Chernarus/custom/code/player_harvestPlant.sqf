@@ -93,7 +93,7 @@ if (count(_findNearestTree) >= 1) then {
 	};
 
 	if (_proceed) then {
-		if (random 1 < 0.1) then {
+		if (random 1 < 0.25) then {
             _invResult = false;
             _i = 0;
             for "_x" from 1 to _countOut do {
