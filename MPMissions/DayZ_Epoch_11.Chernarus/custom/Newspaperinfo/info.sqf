@@ -12,7 +12,7 @@ closeDialog 1;
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
 <t size='1.1' shadow='1'align='left' color='#FFFFFF'>Good luck, you are going to need it.</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#ff8800'>Reddit: reddit.com/r/nmg</t><br/>
+<t size='1.1' shadow='1'align='left' color='#ff8800'>Reddit: reddit.com/r/nmg for complete list of changes.</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
 <t size='1.1' shadow='1'align='left' color='#ff8800'>Teamspeak: ts.narrowmindedgaming.com</t><br/>",
 (servername)];
