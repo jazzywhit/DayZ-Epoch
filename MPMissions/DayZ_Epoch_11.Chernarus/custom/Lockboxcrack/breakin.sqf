@@ -85,6 +85,6 @@ if (_cursorTarget isKindOf "VaultStorageLocked") then {
 };
 
 // Remove option to breakin and allow the player to take other actions
+player removeaction s_player_breakin;
 s_player_breakin = -1;
 DZE_ActionInProgress = false;
-player removeaction s_player_breakin;
