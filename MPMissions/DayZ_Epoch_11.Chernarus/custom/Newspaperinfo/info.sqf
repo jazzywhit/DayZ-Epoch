@@ -16,7 +16,7 @@ closeDialog 1;
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
 <t size='1.1' shadow='1'align='left' color='#FFFFFF'>Good luck, you are going to need it</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>reddit.com/r/nmg for more info and community</t><br/>",
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>reddit.com/r/nmg for more info and community</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
 <t size='1.1' shadow='1'align='left' color='#FFFFFF'>ts.narrowmindedgaming.com for Teamspeak 3</t><br/>",
 (servername)];
