@@ -1,4 +1,9 @@
 class Category_526 {
+	class Cobalt_File {
+		type = "trade_weapons";
+		buy[] = {1,"ItemBriefcase100oz"};
+		sell[] = {2,"ItemGoldBar10oz"};
+	};
     class G36A {
         type = "trade_weapons";
         buy[] = {12,"ItemGoldBar"};
