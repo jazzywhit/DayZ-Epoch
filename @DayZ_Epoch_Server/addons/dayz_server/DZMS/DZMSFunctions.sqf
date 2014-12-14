@@ -122,7 +122,7 @@ DZMSFindPos = {
             //Lets check for minimum mission separation distance
             _disMaj = (_pos distance DZMSMajCoords);
             _disMin = (_pos distance DZMSMinCoords);
-            _okDis = ((_disMaj > 100) AND (_disMin > 100));
+            _okDis = ((_disMaj > 2000) AND (_disMin > 2000));
 
             //make sure the point is not blacklisted
             _isBlack = false;
@@ -133,6 +133,7 @@ DZMSFindPos = {
             //Lets combine all our checks to possibly end the loop
             if (_okDis AND !_isBlack) then {
                 _findRun = false;
+                DZMSStatLocs = DZMSStatLocs - [_pos]; //Remove location from static location after it has spawned.
             };
 
             // If the missions never spawn after running, use this to debug the loop. noWater=true / Dis > 1000 / TaviHeight <= 185

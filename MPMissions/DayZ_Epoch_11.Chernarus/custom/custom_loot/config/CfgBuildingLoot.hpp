@@ -327,8 +327,7 @@ class CfgBuildingLoot {
 			{"PartVRotor","magazine",0.04},
 			{"","military_bric",0.2},
 			{"Strela","magazine",0.01},
-			{"PG7V","magazine",0.03},
-			{"","militaryclothes",0.03}
+			{"","militaryclothes",0.06}
 		};
 	};
 	class PlaneCrash: Default {
@@ -392,8 +391,7 @@ class CfgBuildingLoot {
 			{ "", "assaultrifleammo_bric", 0.06 },
 			{ "","military_bric",0.12},
 			{ "Strela","magazine",0.01},
-			{ "PG7V","magazine",0.03},
-			{ "","militaryclothes",0.1},
+			{ "","militaryclothes",0.13},
 		};
 	};
 

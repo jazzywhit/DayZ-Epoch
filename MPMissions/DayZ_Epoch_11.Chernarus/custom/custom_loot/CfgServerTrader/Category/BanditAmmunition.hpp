@@ -44,4 +44,24 @@ class Category_577 {
         buy[] = {4,"ItemGoldBar"};
         sell[] = {2,"ItemGoldBar"};
     };
+    class PG7V {
+        type = "trade_items";
+        buy[] = {35,"ItemGoldBar"};
+        sell[] = {7,"ItemGoldBar"};
+    };
+    class PG7VL {
+        type = "trade_items";
+        buy[] = {40,"ItemGoldBar"};
+        sell[] = {8,"ItemGoldBar"};
+    };
+    class PG7VR {
+        type = "trade_items";
+        buy[] = {70,"ItemGoldBar"};
+        sell[] = {14,"ItemGoldBar"};
+    };
+    class OG7 {
+        type = "trade_items";
+        buy[] = {30,"ItemGoldBar"};
+        sell[] = {6,"ItemGoldBar"};
+    };
 };
