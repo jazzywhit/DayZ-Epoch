@@ -19,6 +19,13 @@ _bpackList = [
     "DZ_Backpack_EP1"
     ];
 
+_bpackList_high = [
+    "DZ_CivilBackpack_EP1",
+    "DZ_GunBag_EP1",
+    "DZ_Backpack_EP1",
+    "DZ_LargeGunBag_EP1"
+    ];
+
 _gshellList = [
 	"FlareWhite_GP25",
 	"FlareGreen_GP25",
@@ -157,11 +164,11 @@ if (_type == "weapons_nato_high") then {
     _crate addMagazineCargoGlobal ["1Rnd_HE_M203",(floor(random 5))];
 
 	// load packs
-	_scount = count _bpackList;
+	_scount = count _bpackList_high;
 	for "_x" from 0 to 1 do {
 		_sSelect = floor(random _sCount);
-		_item = _bpackList select _sSelect;
-		_crate addBackpackCargoGlobal [_item,2];
+		_item = _bpackList_high select _sSelect;
+		_crate addBackpackCargoGlobal [_item,1];
 	};
 
 	//load sniper
@@ -206,7 +213,7 @@ if (_type == "weapons_nato_high") then {
 // Use for drops where there will be a single box
 // Only use for Major Missions
 if (_type == "weapons_nato_drop") then {
-    for "_x" from 0 to 3 do {
+    for "_x" from 0 to 2 do {
         // load grenades
         _scount = count _gshellListNATO;
         for "_x" from 0 to 2 do {
@@ -220,11 +227,11 @@ if (_type == "weapons_nato_drop") then {
         _crate addMagazineCargoGlobal ["1Rnd_HE_M203",(floor(random 5))];
 
         // load packs
-        _scount = count _bpackList;
+        _scount = count _bpackList_high;
         for "_x" from 0 to 1 do {
             _sSelect = floor(random _sCount);
-            _item = _bpackList select _sSelect;
-            _crate addBackpackCargoGlobal [_item,2];
+            _item = _bpackList_high select _sSelect;
+            _crate addBackpackCargoGlobal [_item,1];
         };
 
         //load sniper
@@ -341,10 +348,10 @@ if (_type == "weapons_high") then {
     _crate addMagazineCargoGlobal ["1Rnd_HE_GP25",(floor(random 3))];
 
 	// load packs
-	_scount = count _bpackList;
+	_scount = count _bpackList_high;
 	for "_x" from 0 to 1 do {
 		_sSelect = floor(random _sCount);
-		_item = _bpackList select _sSelect;
+		_item = _bpackList_high select _sSelect;
 		_crate addBackpackCargoGlobal [_item,1];
 	};
 
