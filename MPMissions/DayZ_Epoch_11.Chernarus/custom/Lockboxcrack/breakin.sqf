@@ -51,7 +51,7 @@ if (_cursorTarget isKindOf "LockboxStorageLocked") then {
     };
 };
 
-if (_cursorTarget isKindOf "VaultStorageLocked") {
+if (_cursorTarget isKindOf "VaultStorageLocked") then {
     If (_hasToolbox && _meleeSledge && _hasCrowbar && _hasRuby) then {
         cutText ['You attempt to break open the Safe..', 'PLAIN'];
         player playActionNow "Medic";
