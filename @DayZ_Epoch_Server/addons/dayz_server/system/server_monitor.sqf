@@ -275,7 +275,7 @@ if (isServer && isNil "sm_done") then {
                                 _dmgProjectile = _this select 4;
 
                                 // Get damage source
-                                if (_dmgProjectile in _modular_ammo_allowed) then {
+                                if (!(_dmgProjectile in _modular_ammo_allowed)) then {
                                     _damage = false;
                                 } else {
                                     // TODO Add custom damage handlers for body parts / player types
@@ -290,6 +290,7 @@ if (isServer && isNil "sm_done") then {
                                     //_olddamage = _gethit select _i;
                                     //_damage = _olddamage + ((_this select 2) - _olddamage) * _dmgMult;
                                     //_gethit set [_i, _damage];
+                                    _damage = _damage;
                                 };
                                 diag_log text format ["Object Damaged : T=%1 : %2 : %3", time, _this, _damage];
                                 _damage;
