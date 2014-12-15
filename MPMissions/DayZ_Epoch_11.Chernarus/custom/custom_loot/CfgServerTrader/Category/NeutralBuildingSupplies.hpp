@@ -29,11 +29,6 @@ class Category_662 {
 		buy[] = {3,"ItemBriefcase100oz"};
 		sell[] = {6,"ItemGoldBar10oz"};
 	};
-	class Cobalt_File {
-		type = "trade_items";
-		buy[] = {1,"ItemBriefcase100oz"};
-		sell[] = {2,"ItemGoldBar10oz"};
-	};
     class ItemLockbox {
         type = "trade_items";
         buy[] = {1,"ItemBriefcase100oz"};
@@ -95,11 +90,6 @@ class Category_508 {
 		type = "trade_items";
 		buy[] = {3,"ItemBriefcase100oz"};
 		sell[] = {6,"ItemGoldBar10oz"};
-	};
-	class Cobalt_File {
-		type = "trade_items";
-		buy[] = {1,"ItemBriefcase100oz"};
-		sell[] = {1,"ItemBriefcase100oz"};
 	};
     class ItemLockbox {
         type = "trade_items";

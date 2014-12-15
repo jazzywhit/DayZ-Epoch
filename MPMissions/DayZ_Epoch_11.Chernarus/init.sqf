@@ -40,6 +40,7 @@ dayz_tameDogs = true;
 DZE_BuildingLimit = 500;
 DZE_BuildOnRoads = false; // Default: False
 dayz_fullMoonNights = true;
+DZE_BuildingLimit = 500;
 
 //self bloodbag
 DZE_SelfTransfuse = true;

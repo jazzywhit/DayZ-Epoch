@@ -59,9 +59,6 @@ if (!isDedicated) then {
 	//Custom Harvest Plant
 	player_harvestPlant =		compile preprocessFileLineNumbers "custom\code\player_harvestPlant.sqf";
 
-	//Custom Remove Object
-	player_removeObject =			compile preprocessFileLineNumbers "custom\code\remove.sqf";
-
 	//Custom Spawn Check
 	player_spawnCheck = 			compile preprocessFileLineNumbers "custom\code\player_spawnCheck.sqf";
 
