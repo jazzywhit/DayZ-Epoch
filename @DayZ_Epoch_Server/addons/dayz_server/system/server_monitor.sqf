@@ -51,7 +51,7 @@ _modular_ammo_allowed = [
     "GrenadeHandTimedWest",
     "GrenadeHandTimedEast",
     "GrenadeHand_Stone"
-]
+];
 
 _hiveLoaded = false;
 
@@ -230,24 +230,24 @@ if (isServer && isNil "sm_done") then {
 			_object setposATL _pos;
 			_object setDamage _damage;
 
-			//  Update Damage Handler for Epoch Base Items
-			//  Based on information from http://forums.bistudio.com/showthread.php?113418-HandleDamage-EH-explained-(-poor-man-s-getHit)&highlight=event%20handler
-			//  Thanks to Celery for the breakdown
-			//
-			//  Source: https://community.bistudio.com/wiki/ArmA_2:_Event_Handlers#HandleDamage
-			//  Passed array: [unit, selectionName, damage, source, projectile]
+            //  Update Damage Handler for Epoch Base Items
+            //  Based on information from http://forums.bistudio.com/showthread.php?113418-HandleDamage-EH-explained-(-poor-man-s-getHit)&highlight=event%20handler
+            //  Thanks to Celery for the breakdown
+            //
+            //  Source: https://community.bistudio.com/wiki/ArmA_2:_Event_Handlers#HandleDamage
+            //  Passed array: [unit, selectionName, damage, source, projectile]
             //      unit: Object - Object the event handler is assigned to.
             //      selectionName: String - Name of the selection where the unit was damaged. "" for over-all structural damage, "?" for unknown selections.
             //      damage: Number - Resulting level of damage for the selection.
             //      source: Object - The source unit that caused the damage.
             //      projectile: String - Classname of the projectile that caused inflicted the damage. ("" for unknown, such as falling damage.)
 			
-			if ((typeOf _object) in dayz_allowedObjects) then {
-				if (DZE_GodModeBase) then {
-					_object addEventHandler ["HandleDamage", {false}];
-				} else {
-					_object addMPEventHandler ["MPKilled",{_this call object_handleServerKilled;}];
-				};
+            if ((typeOf _object) in dayz_allowedObjects) then {
+                if (DZE_GodModeBase) then {
+                    _object addEventHandler ["HandleDamage", {false}];
+                } else {
+                    _object addMPEventHandler ["MPKilled",{_this call object_handleServerKilled;}];
+                };
 
                 private [
                     "_dmgUnit",
@@ -260,10 +260,11 @@ if (isServer && isNil "sm_done") then {
                     "_olddamage",
                     "dmgMult"
                 ];
-				if (typeOf(_object) in _modular_units) then {
-				    _dmgMult = 1;
-                    _object setVariable ["selections", []];
-                    _object setVariable ["gethit", []];
+
+                if (typeOf(_object) in _modular_units) then {
+                    //_dmgMult = 1;
+                    //_object setVariable ["selections", []];
+                    //_object setVariable ["gethit", []];
                     _object addEventHandler
                     [
                         "HandleDamage",
@@ -297,16 +298,15 @@ if (isServer && isNil "sm_done") then {
                             }
                     ];
                     diag_log (format["Damage Handler: %1 Type: Custom", _object]);
-				} else {
-				    diag_log (format["Damage Handler: %1 Type: Standard", _object]);
-				}
+                } else {
+                    diag_log (format["Damage Handler: %1 Type: Standard", _object]);
+                };
 
-				// Test disabling simulation server side on buildables only.
-				_object enableSimulation false;
-				// used for inplace upgrades && lock/unlock of safe
-				_object setVariable ["OEMPos", _pos, true];
-				
-			};
+                // Test disabling simulation server side on buildables only.
+                _object enableSimulation false;
+                // used for inplace upgrades && lock/unlock of safe
+                _object setVariable ["OEMPos", _pos, true];
+            };
 
 			if ((count _inventory > 0) && !(typeOf( _object) == "Plastic_Pole_EP1_DZ")) then {
 				if (_type in DZE_LockedStorage) then {
