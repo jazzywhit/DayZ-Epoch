@@ -71,7 +71,9 @@ if (_ammo isKindOf "Hatchet_Swing_Ammo" || _ammo isKindOf "Chainsaw_Swing_Ammo")
 		};
 	};
 };
-//Random breaking chance on swinging
+
+//Random breaking chance when attacking a wall with a melee weapon
+//TODO move this to a custom function
 private ["_item","_iPos","_weapon","_primaryWeapon","_iItem","_removed","_radius","_dropPrimary","_buildableNearby","_breakChance"];
 _buildableNearby = false;
 _breakChance = 0.1;
