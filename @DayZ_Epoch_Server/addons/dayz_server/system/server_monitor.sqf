@@ -268,9 +268,6 @@ if (isServer && isNil "sm_done") then {
                     [
                         "HandleDamage",
                             {
-                                // Log damage event
-                                diag_log text format ["Object Damaged : T=%1 : %2", time, _this];
-                                
                                 //_dmgUnit = _this select 0;
                                 //_dmgSelectionName = _this select 1;
                                 _damage = select 2;
@@ -294,6 +291,7 @@ if (isServer && isNil "sm_done") then {
                                     //_damage = _olddamage + ((_this select 2) - _olddamage) * _dmgMult;
                                     //_gethit set [_i, _damage];
                                 };
+                                diag_log text format ["Object Damaged : T=%1 : %2 : %3", time, _this, _damage];
                                 _damage;
                             }
                     ];
