@@ -1,4 +1,6 @@
-//DJ SCOTTY's & Mckooters IED Crafting
+// DJ SCOTTY's & Mckooters IED Crafting
+// Updated by jesquik and Mist
+
 private["_hasToolbox","_cnt_ied_small"];
  
 if (!_hasToolbox) exitWith {cutText [format["You need a tool box to Craft a Large IED"], "PLAIN DOWN"];};
