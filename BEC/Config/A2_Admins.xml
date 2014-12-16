@@ -44,11 +44,5 @@
 		<group>0</group>
 		<groupname></groupname>
 	</admin> -->	
-	<admin id="4">
-		<name>Mist</name>
-		<guid>d43966d0a56434cc4e46dcbd390ce9dd</guid>
-		<group>0</group>
-		<groupname></groupname>
-	</admin>
 	
 </BEAdmins>
