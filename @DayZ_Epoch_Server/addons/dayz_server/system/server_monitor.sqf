@@ -263,8 +263,8 @@ if (isServer && isNil "sm_done") then {
 
                 if (typeOf(_object) in _modular_units) then {
                     //_dmgMult = 1;
-                    //_object setVariable ["selections", []];
-                    //_object setVariable ["gethit", []];
+                    _object setVariable ["selections", []];
+                    _object setVariable ["gethit", []];
                     _object addEventHandler
                     [
                         "HandleDamage",
@@ -278,6 +278,7 @@ if (isServer && isNil "sm_done") then {
                                 // Get damage source
                                 if (!(_dmgProjectile in _modular_ammo_allowed)) then {
                                     _damage = false;
+                                    diag_log text format ["Object Not Damaged : T=%1 : %2 : %3", time, _this, _damage];
                                 } else {
                                     // TODO Add custom damage handlers for body parts / player types
                                     //_selections = _dmgUnit getVariable ["selections", []];
@@ -291,9 +292,9 @@ if (isServer && isNil "sm_done") then {
                                     //_olddamage = _gethit select _i;
                                     //_damage = _olddamage + ((_this select 2) - _olddamage) * _dmgMult;
                                     //_gethit set [_i, _damage];
+                                    diag_log text format ["Object Damaged : T=%1 : %2 : %3", time, _this, _damage];
                                     _damage = _damage;
                                 };
-                                diag_log text format ["Object Damaged : T=%1 : %2 : %3", time, _this, _damage];
                                 _damage;
                             }
                     ];
