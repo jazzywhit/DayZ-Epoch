@@ -267,8 +267,8 @@ if (isServer && isNil "sm_done") then {
                     [
                         "HandleDamage",
                             {
-                                //_dmgUnit = _this select 0;
-                                //_dmgSelectionName = _this select 1;
+                                _dmgUnit = _this select 0;
+                                _dmgSelectionName = _this select 1;
                                 //_damage = _this select 2;
                                 //_dmgSource = _this select 3;
                                 _dmgProjectile = _this select 4;
