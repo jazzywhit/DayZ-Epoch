@@ -145,9 +145,9 @@ _dayzActions =
 ];
 /* ********************************************************************************* */
 	//	NEW (EXPERIMENTAL):
-	_UDP = false;		// Use Dupe Protection			/* true or false */
+	_UDP = true;		// Use Dupe Protection			/* true or false */
 	_URG = false;		// Antirefuel & AntiCargod		/* true or false */
-	_UIC = false;	//	Vehicle ID Check	/* true or false */
+	_UIC = true;	//	Vehicle ID Check	/* true or false */
 	_UCL =  true;		// Use Anti Combat Log	/* true or false */
 	
 	
@@ -158,7 +158,7 @@ _dayzActions =
 		Escape Menu will be default again, Chatfunctions and more
 		So it will make the server more unsecure! but look like it's a default one.
 	*/
-	_UIM = false;	/* true or false */
+	_UIM = true;	/* true or false */
 	
 	
 	/*
@@ -175,7 +175,7 @@ _dayzActions =
 		!vote day,/vote day, vote day,
 		!vote night,/vote night, vote night
 	*/
-	_UDN =  true;	/* true or false */
+	_UDN =  false;	/* true or false */
 	
 	
 	/*
