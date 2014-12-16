@@ -262,6 +262,8 @@ if (isServer && isNil "sm_done") then {
                 //];
 
                 if (typeOf(_object) in _modular_units) then {
+                    _object setVariable ["selections", []];
+                    _object setVariable ["gethit", []];
                     _dmgMult = 1;
                     _object addEventHandler
                     [
@@ -276,21 +278,24 @@ if (isServer && isNil "sm_done") then {
                                 // Get damaged part and previous damage amount
                                 _selections = _dmgUnit getVariable ["selections", []];
                                 _gethit = _dmgUnit getVariable ["gethit", []];
+                                diag_log text format ["Get Hit T=%1 : %2", _gethit];
+
                                 if !(_dmgSelectionName in _selections) then
                                 {
                                     _selections set [count _selections, _dmgSelectionName];
                                     _gethit set [count _gethit, 0];
                                 };
+                                diag_log text format ["Selection T=%1 : %2 : %3", _selections, _dmgSelectionName];
                                 _i = _selections find _dmgSelectionName;
                                 _olddamage = _gethit select _i;
 
                                 // Get damage source
-                                diag_log text format ["Projectile T=%1 : %2", _dmgProjectile];
                                 if (!(_dmgProjectile in _modular_ammo_allowed)) then {
                                     // Revert damage done
                                     _damage = 0;
                                     diag_log text format ["Damage T=%1 : %2", _damage];
                                 };
+                                diag_log text format ["Projectile T=%1 : %2", _dmgProjectile];
 
                                 // Set hit damage appropriately
                                 diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4", time, _this, _olddamage, _damage];
