@@ -285,12 +285,11 @@ if (isServer && isNil "sm_done") then {
                                 _olddamage = _gethit select _i;
 
                                 // Get damage source
+                                diag_log text format ["Projectile T=%1 : %2", _dmgProjectile];
                                 if (!(_dmgProjectile in _modular_ammo_allowed)) then {
                                     // Revert damage done
-                                    _damage = _olddamage;
-                                } else {
-                                    // Allow damage through
-                                    _damage = _olddamage + ((_this select 2) - _olddamage) * _dmgMult;
+                                    _damage = 0;
+                                    diag_log text format ["Damage T=%1 : %2", _damage];
                                 };
 
                                 // Set hit damage appropriately
