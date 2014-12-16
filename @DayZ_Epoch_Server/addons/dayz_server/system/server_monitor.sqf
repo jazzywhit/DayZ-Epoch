@@ -287,12 +287,12 @@ if (isServer && isNil "sm_done") then {
                                 };
                                 diag_log text format ["Selection T=%1 : %2 : %3", _selections, _dmgSelectionName];
                                 _i = _selections find _dmgSelectionName;
-                                _olddamage = _gethit select _i;
+                                _olddamage = damage _object;
+                                diag_log text format ["Old Damage T=%1 : %2", _olddamage];
 
                                 // Get damage source
                                 if (!(_dmgProjectile in _modular_ammo_allowed)) then {
-                                    // Revert damage done
-                                    _damage = 0;
+                                    _damage = _olddamage;
                                     diag_log text format ["Damage T=%1 : %2", _damage];
                                 };
                                 diag_log text format ["Projectile T=%1 : %2", _dmgProjectile];
