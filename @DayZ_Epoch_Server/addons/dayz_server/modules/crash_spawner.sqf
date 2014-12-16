@@ -8,14 +8,14 @@ Modified for custom functionality by jesquik
  
 private["_index1","_index2","_itemTypes","_timeAdjust","_timeToSpawn","_spawnRoll","_crash","_hasAdjustment","_newHeight","_adjustedPos","_useStatic","_crashDamage","_lootRadius","_preWaypoints","_preWaypointPos","_endTime","_startTime","_safetyPoint","_heliStart","_deadBody","_exploRange","_heliModel","_lootPos","_list","_craters","_dummy","_wp2","_wp3","_landingzone","_aigroup","_wp","_helipilot","_crash","_crashwreck","_smokerand","_staticcoords","_pos","_dir","_position","_num","_config","_itemType","_itemChance","_weights","_index","_iArray","_crashModel","_lootTable","_guaranteedLoot","_randomizedLoot","_frequency","_variance","_spawnChance","_spawnMarker","_spawnRadius","_spawnFire","_permanentFire","_crashName"];
 //############### //Config Start\\ ###############\\
-_SpawnMax        = 30;                //Maximum percent chance of spawning a crash number between 0 - 100
-_SpawnMin        = 30;                //Minimum percent chance of spawning a crash number between 0 - 100
+_SpawnMax        = 40;                //Maximum percent chance of spawning a crash number between 0 - 100
+_SpawnMin        = 60;                //Minimum percent chance of spawning a crash number between 0 - 100
 _guaranteedLoot = 6;                //Guaranteed Loot Spawns
 _randomizedLoot = 6;                //Random number of loot piles aswell as the guaranteed ones
 _spawnFire      = true;                //Spawn Smoke/Fire at the helicrash
 _fadeFire      = false;            //Fade the Smoke/Fire overtime
-_preWaypoints    = 3;                //Amount of waypoints the heli flys to before crashing
-_crashDamage    = 0.05;                //Amount of damage the heli can take before crashing (between 0.1 and 1) Lower the number and the heli can take less damage before crashing 1 damage is fully destroyed and 0.1 something like a DMR could one shot the heli
+_preWaypoints    = 2;                //Amount of waypoints the heli flys to before crashing
+_crashDamage    = 0.825;                //Amount of damage the heli can take before crashing (between 0.1 and 1) Lower the number and the heli can take less damage before crashing 1 damage is fully destroyed and 0.1 something like a DMR could one shot the heli
 _exploRange    = 250;                //How far away from the predefined crash point should the heli start crashing
 _minLootRadius    = 5;                //Minimum distance for loot to spawn from the crash site in meters
 _maxLootRadius    = 10;                //Maximum distance for loot to spawn from the crash site in meters
@@ -146,6 +146,7 @@ if (_spawnRoll <= _spawnChance) then
 		_crashwreck = createVehicle [_heliModel,_heliStart, [], 0, "FLY"];
 		_crashwreck setCombatMode "BLUE";
 		_crashwreck engineOn true;
+		_crashwreck setdamage 0.8; //Damage the crash spawn so it is smoking while flying around
 		
 		if (_plane) then
 		{
