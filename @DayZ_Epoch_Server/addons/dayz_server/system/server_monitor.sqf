@@ -249,17 +249,17 @@ if (isServer && isNil "sm_done") then {
                     _object addMPEventHandler ["MPKilled",{_this call object_handleServerKilled;}];
                 };
 
-                private [
-                    "_dmgUnit",
-                    "_dmgSelectionName",
-                    "_damage",
-                    "_dmgSource",
-                    "_dmgProjectile",
-                    "_selections",
-                    "_gethit",
-                    "_olddamage",
-                    "dmgMult"
-                ];
+                //private [
+                //    "_dmgUnit",
+                //   "_dmgSelectionName",
+                //    "_damage",
+                //    "_dmgSource",
+                //    "_dmgProjectile",
+                //    "_selections",
+                //    "_gethit",
+                //    "_olddamage",
+                //    "dmgMult"
+                //];
 
                 if (typeOf(_object) in _modular_units) then {
                     //_dmgMult = 1;
