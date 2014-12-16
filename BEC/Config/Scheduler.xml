@@ -1,0 +1,399 @@
+﻿<Scheduler>
+	
+	<!-- *** RESTARTS *** -->
+	<!-- 30 min to the 12:00am restart -->
+	<job id='0'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>23:30:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 MINUTES</cmd>
+	</job>
+	
+	<job id='1'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>23:50:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 10 MINUTES</cmd>
+	</job>
+	
+	<job id='2'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>23:55:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 5 MINUTES</cmd>
+	</job>
+	
+	<job id='3'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>23:57:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 3 MINUTES</cmd>
+	</job>
+	
+	<job id='4'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>23:59:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 1 MINUTE</cmd>
+	</job>
+	
+	<job id='5'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>23:59:30</start>
+		<runtime>001000</runtime>
+		<loop>-1</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR</cmd>
+	</job>
+	<!-- *** RESTARTS *** -->
+	<!-- 30 min to the 3:00am restart -->
+	<job id='6'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>02:30:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 MINUTES</cmd>
+	</job>	
+	
+	<job id='7'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>02:50:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 10 MINUTES</cmd>
+	</job>	
+
+	<job id='8'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>02:55:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 5 MINUTES</cmd>
+	</job>
+	
+	<job id='9'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>02:57:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 3 MINUTES</cmd>
+	</job>
+	
+	<job id='10'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>02:59:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 1 MINUTE</cmd>
+	</job>
+	
+	<job id='11'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>02:59:30</start>
+		<runtime>001000</runtime>
+		<loop>-1</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR</cmd>
+	</job>
+	<!-- *** RESTARTS *** -->
+	<!-- 30 min to the 06:00am restart -->
+	<job id='12'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>05:30:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 MINUTES</cmd>
+	</job>	
+
+	<job id='13'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>05:50:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 10 MINUTES</cmd>
+	</job>	
+	
+	<job id='14'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>05:55:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 5 MINUTES</cmd>
+	</job>
+	
+	<job id='15'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>05:57:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 3 MINUTES</cmd>
+	</job>
+	
+	<job id='16'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>05:59:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 1 MINUTE</cmd>
+	</job>
+	
+	<job id='17'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>05:59:30</start>
+		<runtime>001000</runtime>
+		<loop>-1</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR</cmd>
+	</job>
+	<!-- *** RESTARTS *** -->
+	<!-- 30 min to the 09:00am restart -->
+	<job id='18'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>08:30:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 MINUTES</cmd>
+	</job>	
+
+	<job id='19'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>08:50:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 10 MINUTES</cmd>
+	</job>	
+
+	<job id='20'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>08:55:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 5 MINUTES</cmd>
+	</job>
+	
+	<job id='21'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>08:57:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 3 MINUTES</cmd>
+	</job>
+	
+	<job id='22'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>08:59:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 1 MINUTE</cmd>
+	</job>
+	
+	<job id='23'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>08:59:30</start>
+		<runtime>001000</runtime>
+		<loop>-1</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR</cmd>
+	</job>				
+		<!-- *** RESTARTS *** -->
+	<!-- 30 min to the 12:00pm restart -->
+	<job id='24'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>11:30:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 MINUTES</cmd>
+	</job>		
+
+	<job id='25'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>11:50:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 10 MINUTES</cmd>
+	</job>	
+
+	<job id='26'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>11:55:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 5 MINUTES</cmd>
+	</job>
+	
+	<job id='27'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>11:57:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 3 MINUTES</cmd>
+	</job>
+	
+	<job id='28'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>11:59:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 1 MINUTE</cmd>
+	</job>
+	
+	<job id='29'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>11:59:30</start>
+		<runtime>001000</runtime>
+		<loop>-1</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR</cmd>
+	</job>
+
+	
+		<!-- *** RESTARTS *** -->
+	<!-- 30 min to the 3:00pm restart -->
+	<job id='30'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>14:30:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 MINUTES</cmd>
+	</job>	
+
+	<job id='31'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>14:50:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 10 MINUTES</cmd>
+	</job>	
+
+	<job id='32'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>14:55:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 5 MINUTES</cmd>
+	</job>
+	
+	<job id='33'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>14:57:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 3 MINUTES</cmd>
+	</job>
+	
+	<job id='34'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>14:59:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 1 MINUTE</cmd>
+	</job>
+	
+	<job id='35'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>14:59:30</start>
+		<runtime>001000</runtime>
+		<loop>-1</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR</cmd>
+	</job>
+		<!-- *** RESTARTS *** -->
+	<!-- 30 min to the 6:00pm restart -->
+	<job id='36'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>17:30:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 MINUTES</cmd>
+	</job>	
+
+	<job id='37'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>17:50:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 10 MINUTES</cmd>
+	</job>	
+
+	<job id='38'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>17:55:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 5 MINUTES</cmd>
+	</job>
+	
+	<job id='39'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>17:57:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 3 MINUTES</cmd>
+	</job>
+	
+	<job id='40'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>17:59:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 1 MINUTE</cmd>
+	</job>
+	
+	<job id='41'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>17:59:30</start>
+		<runtime>001000</runtime>
+		<loop>-1</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR</cmd>
+	</job>
+
+	
+		<!-- *** RESTARTS *** -->
+	<!-- 30 min to the 9:00pm restart -->
+	<job id='42'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>20:30:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 MINUTES</cmd>
+	</job>	
+	
+	<job id='43'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>20:50:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 10 MINUTES</cmd>
+	</job>	
+
+	<job id='44'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>20:55:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 5 MINUTES</cmd>
+	</job>
+	
+	<job id='45'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>20:57:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 3 MINUTES</cmd>
+	</job>
+	
+	<job id='46'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>20:59:00</start>
+		<runtime>000000</runtime>
+		<loop>0</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 1 MINUTE</cmd>
+	</job>
+	
+	<job id='47'>
+		<day>1,2,3,4,5,6,7</day>
+		<start>20:59:30</start>
+		<runtime>001000</runtime>
+		<loop>-1</loop>
+		<cmd>say -1 AUTO SERVER RESTART IN 30 SECONDS! - LOG OUT NOW OR YOU MAY LOSE YOUR GEAR</cmd>
+	</job>		
+</Scheduler>
