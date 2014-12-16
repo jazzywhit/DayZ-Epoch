@@ -258,49 +258,47 @@ if (isServer && isNil "sm_done") then {
                 //    "_selections",
                 //    "_gethit",
                 //    "_olddamage",
-                //    "dmgMult"
+                //    "_dmgMult"
                 //];
 
                 if (typeOf(_object) in _modular_units) then {
-                    //_dmgMult = 1;
-                    _object setVariable ["selections", []];
-                    _object setVariable ["gethit", []];
+                    _dmgMult = 1;
                     _object addEventHandler
                     [
                         "HandleDamage",
                             {
                                 //_dmgUnit = _this select 0;
                                 //_dmgSelectionName = _this select 1;
-                                _damage = _this select 2;
+                                //_damage = _this select 2;
                                 //_dmgSource = _this select 3;
                                 _dmgProjectile = _this select 4;
 
+                                // Get damaged part and previous damage amount
+                                _selections = _dmgUnit getVariable ["selections", []];
+                                _gethit = _dmgUnit getVariable ["gethit", []];
+                                if !(_dmgSelectionName in _selections) then
+                                {
+                                    _selections set [count _selections, _dmgSelectionName];
+                                    _gethit set [count _gethit, 0];
+                                };
+                                _i = _selections find _dmgSelectionName;
+                                _olddamage = _gethit select _i;
+
                                 // Get damage source
                                 if (!(_dmgProjectile in _modular_ammo_allowed)) then {
-                                    _damage = false;
-                                    diag_log text format ["Object Not Damaged : T=%1 : %2 : %3", time, _this, _damage];
+                                    // Revert damage done
+                                    _damage = _olddamage;
                                 } else {
-                                    // TODO Add custom damage handlers for body parts / player types
-                                    //_selections = _dmgUnit getVariable ["selections", []];
-                                    //_gethit = _dmgUnit getVariable ["gethit", []];
-                                    //if !(_dmgSelectionName in _selections) then
-                                    //{
-                                    //    _selections set [count _selections, _dmgSelectionName];
-                                    //    _gethit set [count _gethit, 0];
-                                    //};
-                                    //_i = _selections find _dmgSelectionName;
-                                    //_olddamage = _gethit select _i;
-                                    //_damage = _olddamage + ((_this select 2) - _olddamage) * _dmgMult;
-                                    //_gethit set [_i, _damage];
-                                    diag_log text format ["Object Damaged : T=%1 : %2 : %3", time, _this, _damage];
-                                    _damage = _damage;
+                                    // Allow damage through
+                                    _damage = _olddamage + ((_this select 2) - _olddamage) * _dmgMult;
                                 };
+
+                                // Set hit damage appropriately
+                                diag_log text format ["Object Hit : T=%1 : %2 : %3", time, _this, _damage];
+                                _gethit set [_i, _damage];
                                 _damage;
                             }
                     ];
-                    diag_log (format["Damage Handler: %1 Type: Custom", _object]);
-                } else {
-                    diag_log (format["Damage Handler: %1 Type: Standard", _object]);
                 };
 
                 // Test disabling simulation server side on buildables only.
