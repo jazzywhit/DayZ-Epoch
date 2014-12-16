@@ -19,4 +19,14 @@ class Category_517 {
 		buy[] = {5,"ItemGoldBar10oz"};
 		sell[] = {2,"ItemGoldBar10oz"};
 	};
+	class An2_1_TK_CIV_EP1 {
+		type = "trade_any_vehicle";
+		buy[] = {5,"ItemGoldBar10oz"};
+		sell[] = {2,"ItemGoldBar10oz"};
+	};
+	class An2_2_TK_CIV_EP1 {
+		type = "trade_any_vehicle";
+		buy[] = {5,"ItemGoldBar10oz"};
+		sell[] = {2,"ItemGoldBar10oz"};
+	};
 };
