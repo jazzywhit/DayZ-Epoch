@@ -269,7 +269,7 @@ if (isServer && isNil "sm_done") then {
                             {
                                 _dmgUnit = _this select 0;
                                 _dmgSelectionName = _this select 1;
-                                //_damage = _this select 2;
+                                _damage = _this select 2;
                                 //_dmgSource = _this select 3;
                                 _dmgProjectile = _this select 4;
 
@@ -294,7 +294,7 @@ if (isServer && isNil "sm_done") then {
                                 };
 
                                 // Set hit damage appropriately
-                                diag_log text format ["Object Hit : T=%1 : %2 : %3", time, _this, _damage];
+                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4", time, _this, _olddamage, _damage];
                                 _gethit set [_i, _damage];
                                 _damage;
                             }
