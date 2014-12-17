@@ -80,4 +80,7 @@ if (!isDedicated) then {
 	// Custom GUI
 	player_updateGui =			compile preprocessFileLineNumbers "custom\code\player_updateGui.sqf";
 
+	// Custom Hide Body
+	"PVDZE_plr_HideBody"		addPublicVariableEventHandler {systemChat "You can't hide a body like that..."};
+
 };
