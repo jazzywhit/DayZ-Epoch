@@ -145,9 +145,9 @@ _dayzActions =
 ];
 /* ********************************************************************************* */
 	//	NEW (EXPERIMENTAL):
-	_UDP = true;		// Use Dupe Protection			/* true or false */
+	_UDP = false;		// Use Dupe Protection			/* true or false */
 	_URG = false;		// Antirefuel & AntiCargod		/* true or false */
-	_UIC = true;	//	Vehicle ID Check	/* true or false */
+	_UIC = false;	//	Vehicle ID Check	/* true or false */
 	_UCL =  true;		// Use Anti Combat Log	/* true or false */
 	
 	
