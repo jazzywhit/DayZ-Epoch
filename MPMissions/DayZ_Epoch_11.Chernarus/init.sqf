@@ -114,6 +114,9 @@ if (!isDedicated) then {
 	
 };
 
+//WAI Radio Messages
+_nil = [] execVM "custom\player_messaging\wai_remote_message.sqf";
+
 //Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
