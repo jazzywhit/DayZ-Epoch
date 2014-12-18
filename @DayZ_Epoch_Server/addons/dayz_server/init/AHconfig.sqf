@@ -158,7 +158,7 @@ _dayzActions =
 		Escape Menu will be default again, Chatfunctions and more
 		So it will make the server more unsecure! but look like it's a default one.
 	*/
-	_UIM = false;	/* true or false */
+	_UIM = true;	/* true or false */
 	
 	
 	/*
@@ -175,7 +175,7 @@ _dayzActions =
 		!vote day,/vote day, vote day,
 		!vote night,/vote night, vote night
 	*/
-	_UDN =  true;	/* true or false */
+	_UDN =  false;	/* true or false */
 	
 	
 	/*
