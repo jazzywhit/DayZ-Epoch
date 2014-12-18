@@ -2,8 +2,8 @@ private ["_type","_inVehicle","_dateNow","_maxWildZombies","_age","_radius","_po
 //_t1 = diag_tickTime;
 
 _type = _this select 0;
-_inVehicle = false;
-_onTheMove = (speed (vehicle player) > 10);
+_inVehicle = (vehicle player != player);
+_onTheMove = (speed (vehicle player) > 20);
 _dateNow = (DateToNumber date);
 _maxWildZombies = 3;
 _age = -1;
@@ -98,31 +98,33 @@ if (_nearbyCount < 1) exitwith {};
 	_canLoot = 		isClass (_config);
 
 	if(_canLoot) then {
-
 		_dis = _x distance player;
 
 		//Loot
-		if ((_dis < 120) && (_dis > 30) && !_inVehicle) then {
+		if ((_dis < 40) && (_dis > 20)) then {
 			_looted = (_x getVariable ["looted",-0.1]);
 			_cleared = (_x getVariable ["cleared",true]);
 			_dateNow = (DateToNumber date);
 			_age = (_dateNow - _looted) * 525948;
+
 			//diag_log ("SPAWN LOOT: " + _type + " Building is " + str(_age) + " old" );
-			if ((_age > DZE_LootSpawnTimer) && (!_cleared)) then {
-				_nearByObj = nearestObjects [(getPosATL _x), ["WeaponHolder","WeaponHolderBase"],((sizeOf _type)+5)];
-				{deleteVehicle _x} count _nearByObj;
-				_x setVariable ["cleared",true,true];
-				_x setVariable ["looted",_dateNow,true];
-			};
-			if ((_age > DZE_LootSpawnTimer) && (_cleared)) then {
-				//Register
-				_x setVariable ["looted",_dateNow,true];
-				//cleanup
-				_x call building_spawnLoot;
+
+			if (_age > DZE_LootSpawnTimer) then {
+			    if (!_cleared) then {
+                    _nearByObj = nearestObjects [(getPosATL _x), ["WeaponHolder","WeaponHolderBase"],((sizeOf _type)+5)];
+                    {deleteVehicle _x} count _nearByObj;
+                    _x setVariable ["cleared",true,true];
+                    _x setVariable ["looted",_dateNow,true];
+			    } else {
+                    //Register
+                    _x setVariable ["looted",_dateNow,true];
+                    //cleanup
+                    _x call building_spawnLoot;
+			    };
 			};
 		};
 
-		// do not spawn zeds if player is moving faster then 10kmh
+		// do not spawn zeds if player is moving faster then 20kmh
 		if (!_onTheMove) then {
 			//Zeds
 			if ((time - dayz_spawnWait) > dayz_spawnDelay) then {
