@@ -9,18 +9,23 @@
 // Array of skin class names for the AI to use
 DZMSBanditSkins = [
     "Bandit1_DZ",
-    "BanditW1_DZ"
+    "Bandit2_DZ",
+    "TK_INS_Warlord_EP1_DZ",
+    "BanditW1_DZ",
+    "BanditW2_DZ"
     ]; //For skill 2
 
 DZMSSurvivorSkins = [
     "RU_Policeman_DZ",
-    "Pilot_EP1_DZ",
+    "SurvivorWcombat_DZ",
+    "Haris_Press_EP1_DZ",
     "Functionary1_EP1_DZ",
-    "Priest_DZ",
     "Rocker1_DZ",
     "Rocker2_DZ",
     "Rocker3_DZ",
     "Rocker4_DZ",
+    "Survivor2_DZ",
+    "SurvivorW2_DZ",
     "SurvivorW3_DZ",
     "SurvivorWpink_DZ",
     "SurvivorWurban_DZ",

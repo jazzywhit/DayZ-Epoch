@@ -252,7 +252,6 @@ class CfgLoot {
 		{"Skin_RU_Policeman_DZ",0.11}
 		,{"Skin_Pilot_EP1_DZ",0.1}
 		,{"Skin_Functionary1_EP1_DZ",0.1}
-		,{"Skin_Priest_DZ",0.1}
 		,{"Skin_Rocker1_DZ",0.07}
 		,{"Skin_Rocker2_DZ",0.07}
 		,{"Skin_Rocker3_DZ",0.08}
@@ -265,7 +264,8 @@ class CfgLoot {
 	};
 	militaryclothes[] = {
 		{"Skin_Rocket_DZ",0.14}
-		,{"Skin_Soldier1_DZ",0.58}
+		,{"Skin_Soldier1_DZ",0.54}
+		,{"Skin_Camo1_DZ",0.04}
 		,{"Skin_Drake_Light_DZ",0.07}
 		,{"Skin_Soldier_TL_PMC_DZ",0.07}
 		,{"Skin_Soldier_Sniper_PMC_DZ",0.05}
@@ -278,13 +278,10 @@ class CfgLoot {
 		,{"Skin_INS_Soldier_CO_DZ",0.04}
 	};
 	specialclothes[] = {
-		{"Skin_Ins_Soldier_GL_DZ",0.05}
-		,{"Skin_GUE_Commander_DZ",0.08}
-		,{"Skin_Bandit1_DZ",0.08}
-		,{"Skin_Bandit2_DZ",0.06}
-		,{"Skin_BanditW1_DZ",0.07}
-		,{"Skin_BanditW2_DZ",0.07}
-		,{"Skin_TK_INS_Soldier_EP1_DZ",0.05}
+		{"Skin_Ins_Soldier_GL_DZ",0.13}
+		,{"Skin_GUE_Commander_DZ",0.16}
+		,{"Haris_Press_EP1_DZ",0.07}
+		,{"Skin_TK_INS_Soldier_EP1_DZ",0.1}
 		,{"Skin_TK_INS_Warlord_EP1_DZ",0.07}
 		,{"Skin_SurvivorWcombat_DZ",0.08}
 		,{"Skin_SurvivorWdesert_DZ",0.08}
