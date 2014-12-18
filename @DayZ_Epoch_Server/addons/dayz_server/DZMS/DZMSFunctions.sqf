@@ -149,7 +149,7 @@ DZMSFindPos = {
 //Clears the cargo and sets fuel, direction, and orientation
 //Direction stops the awkwardness of every vehicle bearing 0
 DZMSSetupVehicle = {
-	private ["_object","_objectID","_ranFuel"];
+	private ["_object","_objectID"];
 	_object = _this select 0;
 
 	_objectID = str(round(random 999999));
@@ -166,10 +166,8 @@ DZMSSetupVehicle = {
 	
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
-	
-	_ranFuel = random 1;
-	if (_ranFuel < .1) then {_ranFuel = .1;};
-	_object setFuel _ranFuel;
+
+	_object setFuel ((random(MaxGasOnSale-MinGasOnSale)+MinGasOnSale) / 100);
 	_object setvelocity [0,0,1];
 	_object setDir (round(random 360));
 	
