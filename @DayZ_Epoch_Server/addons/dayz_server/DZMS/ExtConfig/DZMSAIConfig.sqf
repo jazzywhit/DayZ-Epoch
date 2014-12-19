@@ -9,18 +9,23 @@
 // Array of skin class names for the AI to use
 DZMSBanditSkins = [
     "Bandit1_DZ",
-    "BanditW1_DZ"
+    "Bandit2_DZ",
+    "TK_INS_Warlord_EP1_DZ",
+    "BanditW1_DZ",
+    "BanditW2_DZ"
     ]; //For skill 2
 
 DZMSSurvivorSkins = [
     "RU_Policeman_DZ",
-    "Pilot_EP1_DZ",
+    "SurvivorWcombat_DZ",
+    "Haris_Press_EP1_DZ",
     "Functionary1_EP1_DZ",
-    "Priest_DZ",
     "Rocker1_DZ",
     "Rocker2_DZ",
     "Rocker3_DZ",
     "Rocker4_DZ",
+    "Survivor2_DZ",
+    "SurvivorW2_DZ",
     "SurvivorW3_DZ",
     "SurvivorWpink_DZ",
     "SurvivorWurban_DZ",
@@ -83,7 +88,6 @@ DZMSSkills2 = [
 	["commanding",0.70,0.90],
 	["general",0.70,0.90]
 ];
-DZMSSkills1 = DZMSSkills2; //Make Survivors as difficult as bandits
 
 DZMSSkills3 = [	
 	["aimingAccuracy",0.20,0.25],
@@ -97,6 +101,9 @@ DZMSSkills3 = [
 	["commanding",0.80,0.90],
 	["general",0.80,1.00]
 ];
+
+DZMSSkills1 = DZMSSkills3; //Make Survivors as difficult as UN
+DZMSSkills2 = DZMSSkills3; //Make Bandits as difficult as UN
 
 //////////////////////////////////////////////////////////////
 // This is the primary weaponlist that can be assigned to AI

@@ -85,9 +85,10 @@ class CfgBuildingLoot {
             {"ItemKnife","weapon",0.02},
             {"ItemMatchbox_DZE","weapon",0.02},
             {"","backpacks",0.1},
-            {"","generic",0.25},
-            {"","trash",0.23},
+            {"","generic",0.21},
+            {"","trash",0.19},
             {"ItemCanvas","magazine",0.04},
+            {"Skin_Priest_DZ","magazine",0.08},
             {"ItemDocument", "magazine",0.02},
             {"Binocular","weapon",0.04},
             {"pistols_bric", "cfglootweapon", 0.06 },
@@ -524,45 +525,7 @@ class CfgBuildingLoot {
 			{ "ItemEtool", "weapon", 0.03 }
 		};
 	};
-	class IndustrialMilitary: Default {
-		zombieChance = 0.4;
-		maxRoaming = 6;
-		zombieClass[] = {"z_soldier","z_soldier_heavy","z_policeman","z_soldier","z_soldier_heavy","z_policeman","z_worker1","z_worker2","z_worker3"};
-		lootChance = 0.5;
-		lootPos[] = {};
-		lootType[] = {
-			{ "pistols_bric", "cfglootweapon", 0.07 },
-			{ "assaultrifles_bric", "cfglootweapon", 0.09 },
-			{ "sniperrifles_bric", "cfglootweapon", 0.05 },
-			{ "militaryshotguns_bric", "cfglootweapon", 0.06 },
-			{ "submachinegun_bric", "cfglootweapon", 0.06 },
-			{ "PartGeneric","magazine",0.03 },
-			{ "PartWheel","magazine",0.02 },
-			{ "Binocular","weapon",0.03 },
-			{ "ItemFlashlightRed","weapon",0.03 },
-			{ "ItemKnife","weapon",0.06 },
-			{ "PartFueltank","magazine",0.03 },
-			{ "PartEngine","magazine",0.04 },
-			{ "PartGlass","magazine",0.05 },
-			{ "ItemEtool","weapon",0.03 },
-			{ "ItemSandbag","magazine",0.02 },
-			{ "","medical",0.05 },
-			{ "","generic",0.25 },
-			{ "","military_bric",0.07 },
-			{ "machineguns_bric", "cfglootweapon", 0.01 }
-		};
-		lootTypeSmall[] = {
-			{ "Binocular", "weapon", 0.05 },
-			{ "ItemFlashlightRed", "weapon", 0.03 },
-			{ "ItemKnife", "weapon", 0.04 },
-			{ "ItemGPS", "weapon", 0.02 },
-			{ "ItemRadio", "weapon", 0.02 },
-			{ "", "medical", 0.1 },
-			{ "", "generic", 0.36 },
-			{ "", "military_bric", 0.35 },
-			{ "ItemEtool", "weapon", 0.03 }
-		};
-	};
+
 	class MilitarySpecial: Default {
 		zombieChance = 0.4;
 		minRoaming = 2;
