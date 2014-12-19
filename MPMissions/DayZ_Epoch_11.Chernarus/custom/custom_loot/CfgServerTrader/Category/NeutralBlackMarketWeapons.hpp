@@ -4,6 +4,11 @@ class Category_526 {
 		buy[] = {1,"ItemBriefcase100oz"};
 		sell[] = {2,"ItemGoldBar10oz"};
 	};
+    class M136 {
+        type = "trade_weapons";
+        buy[] = {6,"ItemBriefcase100oz"};
+        sell[] = {3,"ItemBriefcase100oz"};
+    };
     class G36A {
         type = "trade_weapons";
         buy[] = {12,"ItemGoldBar"};
