@@ -283,10 +283,10 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{"","hospital",0.60},
+			{"","hospital",0.50},
 			{"MedBox0","magazine",0.1},
 			{"pistols_bric", "cfglootweapon", 0.05},
-			{"","food_special",0.25}
+			{"","food_special",0.35}
 		};
 	};
 	class HeliCrash: Default {
@@ -298,11 +298,10 @@ class CfgBuildingLoot {
 		lootType[] = {
 			{ "assaultrifles", "cfglootweapon", 0.30 },
 			{ "submachinegun", "cfglootweapon", 0.15 },
-			{ "sniperrifles", "cfglootweapon", 0.01 },
-			{ "machineguns", "cfglootweapon", 0.04 },
+			{ "sniperrifles", "cfglootweapon", 0.02 },
+			{ "machineguns", "cfglootweapon", 0.07 },
 			{ "militaryshotguns", "cfglootweapon", 0.03 },
 			{ "pistols", "cfglootweapon", 0.05},
-			{"PartVRotor","magazine",0.04},
 			{"","military",0.20},
 			{"Stinger","magazine",0.01},
 			{"M136","magazine",0.03},
@@ -319,13 +318,12 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles_bric_high", "cfglootweapon", 0.13 },
+			{ "assaultrifles_bric_high", "cfglootweapon", 0.17 },
 			{ "submachinegun_bric", "cfglootweapon", 0.05 },
 			{ "sniperrifles_bric", "cfglootweapon", 0.21 },
 			{ "machineguns_bric_high", "cfglootweapon", 0.2 },
 			{ "pistols_bric", "cfglootweapon", 0.05},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.05 },
-			{"PartVRotor","magazine",0.04},
 			{"","military_bric",0.2},
 			{"Strela","magazine",0.01},
 			{"","militaryclothes",0.06}
