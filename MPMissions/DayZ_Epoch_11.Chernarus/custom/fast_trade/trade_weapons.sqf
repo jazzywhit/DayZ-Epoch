@@ -26,6 +26,10 @@ if(_buy_o_sell == "sell") then {
 	_msg = "Need the weapon in your hands before you can sell it.";
 	_config = (configFile >> "CfgWeapons" >> _part_in);
 	_configName = configName(_config);
+    _wepType = getNumber(_config >> "Type");
+
+    _isToolBelt = (_wepType == 131072);
+    _isBinocs = (_wepType == 4096);
 	
 	_abort = (!(_configName in (weapons player)));
 	
