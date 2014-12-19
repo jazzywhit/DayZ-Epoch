@@ -65,12 +65,11 @@ _gshellListNATO = [
 _medical = ["ItemBandage","ItemMorphine","ItemEpinephrine","ItemPainkiller","ItemAntibiotic","ItemBloodbag"];
 
 _money = [
-"ItemBriefcase10oz",
-"ItemBriefcase10oz",
-"ItemBriefcase10oz",
-"ItemBriefcase20oz",
-"ItemBriefcase20oz",
-"ItemBriefcase30oz"
+"ItemBriefcase60oz",
+"ItemBriefcase70oz",
+"ItemBriefcase80oz",
+"ItemBriefcase90oz",
+"ItemBriefcase100oz"
 ];
 
 _hemp = ["ItemKiloHemp"];
@@ -470,7 +469,7 @@ if (_type == "supply_high") then {
 if (_type == "money") then {
 	// load money
 	_scount = count _money;
-	for "_x" from 2 to 5 do {
+	for "_x" from 0 to 3 do {
 		_sSelect = floor(random _sCount);
 		_item = _money select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];

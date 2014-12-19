@@ -108,7 +108,7 @@ DZMSmachinegunListNATO = [
         "MG36",
         "M249",
         "M240",
-        "M249_m145_EP1"
+        "m249_m145_EP1_DZE"
         ];
 
 // Primary Rifles

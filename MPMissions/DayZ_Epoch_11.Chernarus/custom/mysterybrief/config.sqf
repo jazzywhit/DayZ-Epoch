@@ -69,7 +69,7 @@ _lmg_group = [
          "MG36",
          "M249",
          "M240",
-         "M249_m145_EP1"
+         "m249_m145_EP1_DZE"
          ];
 _sniper_group = [
         "m16a4_acg",

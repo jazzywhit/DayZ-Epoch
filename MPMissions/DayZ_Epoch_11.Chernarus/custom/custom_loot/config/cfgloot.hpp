@@ -472,7 +472,7 @@ class CfgLoot {
 		,{"MG36",0.1}
 		,{"M249",0.15}
 		,{"M240",0.15}
-		,{"M249_m145_EP1",0.05}
+		,{"m249_m145_EP1_DZE",0.05}
 	};
 	machinegunammo[] = {
 		{"100Rnd_556x45_BetaCMag",0.5}
