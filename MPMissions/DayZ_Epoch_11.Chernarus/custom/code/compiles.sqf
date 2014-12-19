@@ -80,4 +80,7 @@ if (!isDedicated) then {
 	// Custom GUI
 	player_updateGui =			compile preprocessFileLineNumbers "custom\code\player_updateGui.sqf";
 
+	// Custom Switch Skin
+	player_switchModel =		compile preprocessFileLineNumbers "custom\code\player_switchModel.sqf";
+
 };

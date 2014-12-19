@@ -43,6 +43,7 @@ player setPosATL dayz_spawnPos;
 
 //BackUp Player Object
 _oldUnit = player;
+_cId = player getVariable["CharacterID",0]; // or : _oldUnit getVariable["CharacterID",0];
 
 /**********************************/
 //DONT USE player AFTER THIS POINT//
@@ -54,6 +55,8 @@ _newUnit 	= _group createUnit [_class,dayz_spawnPos,[],0,"NONE"];
 
 _newUnit 	setPosATL _position;
 _newUnit 	setDir _dir;
+
+_newUnit setVariable ["CharacterID",_cId,true];
 
 //Clear New Character
 {_newUnit removeMagazine _x;} count  magazines _newUnit;
