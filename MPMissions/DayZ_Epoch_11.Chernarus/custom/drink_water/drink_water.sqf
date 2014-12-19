@@ -36,7 +36,7 @@ if (!_canDrink) then {
 if (_canDrink) then {
     player playActionNow "PutDown";
     dayz_lastDrink = time;
-    dayz_thirst = 0 max (SleepWater min (dayz_thirst - round(SleepWater/3)));
+    dayz_thirst = 0 max (dayz_thirst - round(SleepWater/3));
 
     if (random 1 < _infectionChance) then {
         // Infect the player

@@ -67,7 +67,7 @@ if (_badfood && ((random 1)  < 0.75)) then {
 // Set hunger levels
 player setVariable ["messing",[dayz_hunger,dayz_thirst],true];
 dayz_lastMeal =	time;
-dayz_hunger = 0 max (SleepFood min (day_hunger - round(SleepFood/3)));
+dayz_hunger = 0 max (dayz_hunger - round(SleepFood/3));
 
 //Ensure Control is visible
 _display = uiNamespace getVariable 'DAYZ_GUI_display';
