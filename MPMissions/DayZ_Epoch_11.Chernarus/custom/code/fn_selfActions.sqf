@@ -977,7 +977,13 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 			s_player_followdog = -1;
 		};
 	};
-
+	//User crafting cessna armed by Mist
+	if(_typeOfCursorTarget in ("GNT_C185U" || "GNT_C185" || "GNT_C185R" || "GNT_C185C")  && (player distance _cursorTarget < 3)) then {
+				s_player_cessnacraft = player addAction ["Add m240", "custom\Lockboxcrack\breakin.sqf", _cursorTarget, 0, false, true, "",""];
+	} else {
+		player removeAction s_player_cessnacraft;
+		s_player_cessnacraft = -1;
+	};
 } else {
 	//Engineering
 	player removeAction s_player_plotManagement;
