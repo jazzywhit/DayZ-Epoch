@@ -92,28 +92,28 @@ _positionsSmall = _posSmall call _ShuffleArray;
 
 		if (count _nearBy > 0) then {
 			_lootChance = _lootChance + 0.05;
-		};
 
-		if (dayz_currentWeaponHolders < dayz_maxMaxWeaponHolders) then {
-			if (_rnd <= _lootChance) then {
-				if (count _nearBy == 0) then {
-					_index = dayzE_CBLSBase find _type;
-					_weights = dayzE_CBLSChances select _index;
-					_cntWeights = count _weights;
-					_index = floor(random _cntWeights);
-					_index = _weights select _index;
+			if (dayz_currentWeaponHolders < dayz_maxMaxWeaponHolders) then {
+                if (_rnd <= _lootChance) then {
+                    if (count _nearBy == 0) then {
+                        _index = dayzE_CBLSBase find _type;
+                        _weights = dayzE_CBLSChances select _index;
+                        _cntWeights = count _weights;
+                        _index = floor(random _cntWeights);
+                        _index = _weights select _index;
 
-					//diag_log format["building_spawnLoot.sqf: %1", _itemTypesSmall];
+                        //diag_log format["building_spawnLoot.sqf: %1", _itemTypesSmall];
 
-					_itemType = _itemTypesSmall select _index;
-					//diag_log (format["building_spawnLoot.sqf: Pos: %1, LootType: %2/%3,",_iPos,_itemType select 0,_itemType select 1]);
-					[_itemType select 0, _itemType select 1, _iPos, 0.0] call spawn_loot_small;
-					dayz_currentWeaponHolders = dayz_currentWeaponHolders +1;
-					
-					//lockout system
-					_obj setVariable ["looted",diag_tickTime + dayz_tickTimeOffset];
-				};
-			};
+                        _itemType = _itemTypesSmall select _index;
+                        //diag_log (format["building_spawnLoot.sqf: Pos: %1, LootType: %2/%3,",_iPos,_itemType select 0,_itemType select 1]);
+                        [_itemType select 0, _itemType select 1, _iPos, 0.0] call spawn_loot_small;
+                        dayz_currentWeaponHolders = dayz_currentWeaponHolders +1;
+
+                        //lockout system
+                        _obj setVariable ["looted", diag_tickTime + dayz_tickTimeOffset];
+                    };
+                };
+            };
 		};
 	};
 } count _positionsSmall;
