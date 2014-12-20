@@ -1,9 +1,14 @@
 class Category_526 {
 	class Cobalt_File {
 		type = "trade_weapons";
-		buy[] = {1,"ItemBriefcase100oz"};
-		sell[] = {2,"ItemGoldBar10oz"};
+		buy[] = {100,"ItemGoldBar"};
+		sell[] = {20,"ItemGoldBar"};
 	};
+    class M136 {
+        type = "trade_weapons";
+        buy[] = {600,"ItemGoldBar"};
+        sell[] = {120,"ItemGoldBar"};
+    };
     class G36A {
         type = "trade_weapons";
         buy[] = {12,"ItemGoldBar"};
@@ -44,7 +49,7 @@ class Category_526 {
         buy[] = {14,"ItemGoldBar"};
         sell[] = {4,"ItemGoldBar"};
     };
-    class M249_EP1 {
+    class M249_EP1_DZ {
         type = "trade_weapons";
         buy[] = {25,"ItemGoldBar"};
         sell[] = {12,"ItemGoldBar"};
@@ -79,7 +84,7 @@ class Category_526 {
         buy[] = {15,"ItemGoldBar"};
         sell[] = {4,"ItemGoldBar"};
     };
-    class M249_m145_EP1 {
+    class m249_m145_EP1_DZE {
         type = "trade_weapons";
         buy[] = {48,"ItemGoldBar"};
         sell[] = {15,"ItemGoldBar"};
@@ -281,8 +286,8 @@ class Category_526 {
     };
     class M4SPR {
         type = "trade_weapons";
-        buy[] = {5,"ItemGoldBar10oz"};
-        sell[] = {2,"ItemGoldBar10oz"};
+        buy[] = {50,"ItemGoldBar"};
+        sell[] = {20,"ItemGoldBar"};
     };
     class M24 {
         type = "trade_weapons";
@@ -291,13 +296,13 @@ class Category_526 {
     };
     class M24_des_EP1 {
         type = "trade_weapons";
-        buy[] = {2,"ItemBriefcase100oz"};
-        sell[] = {6,"ItemGoldBar10oz"};
+        buy[] = {200,"ItemGoldBar"};
+        sell[] = {60,"ItemGoldBar"};
     };
     class M40A3 {
         type = "trade_weapons";
-        buy[] = {2,"ItemBriefcase100oz"};
-        sell[] = {6,"ItemGoldBar10oz"};
+        buy[] = {200,"ItemGoldBar"};
+        sell[] = {60,"ItemGoldBar"};
     };
     class M1014 {
         type = "trade_weapons";

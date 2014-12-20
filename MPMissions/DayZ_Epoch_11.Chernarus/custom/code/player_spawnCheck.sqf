@@ -8,14 +8,12 @@ _dateNow = (DateToNumber date);
 _maxWildZombies = 3;
 _age = -1;
 _zed_radius = 200;
-_loot_radius = 60;
-_loot_cutoff = 20;
+_loot_radius = 40;
 _position = getPosATL player;
 
 dayz_spawnZombies = 0;
 dayz_CurrentZombies = 0;
 
-//TODO Consider doing a [] spawn fn_playerdeath; here instead of looping all over the place.
 
 // TODO Check to see if removing this does not cause issues; seems like an unnecessary option. Global max should be global max
 _players = _position nearEntities ["CAManBase",_zed_radius + 200];
@@ -47,7 +45,7 @@ _nearby = _position nearObjects ["building",_loot_radius];
         _dis = _x distance player;
 
         //Loot
-        if ((_dis < _loot_radius) && (_dis > _loot_cutoff)) then {
+        if (_dis < _loot_radius) then {
             _looted = (_x getVariable ["looted",-0.1]);
             _cleared = (_x getVariable ["cleared",true]);
             _dateNow = (DateToNumber date);

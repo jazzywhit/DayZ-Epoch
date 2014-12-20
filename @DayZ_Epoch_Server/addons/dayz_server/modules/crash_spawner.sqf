@@ -33,10 +33,7 @@ _heliModel = [
 			"UH60M_EP1",
 			"UH60M_MEV_EP1",
 			"GNT_C185",
-			"GNT_C185U",
-			"GNT_C185R",
 			"GNT_C185C",
-			"An2_1_TK_CIV_EP1",
 			"An2_2_TK_CIV_EP1"
 			] call BIS_fnc_selectRandom;
 _crashModel    		= "UH1Wreck_DZ";    //The type of Crash model used after the heli crashes
@@ -60,21 +57,8 @@ if(_heliModel == "UH60M_EP1") then {
 };
 
 if(_heliModel == "GNT_C185") then {
-    _lootTable    = "MilitarySpecial";
-    _lootMultiplier = 4;
-    _crashModel    = "SU25Wreck";
-    _plane         = true;
-};
-
-if(_heliModel == "GNT_C185U") then {
     _lootTable    = "MedicalCrash";
     _lootMultiplier = 4;
-    _crashModel    = "SU25Wreck";
-    _plane         = true;
-};
-
-if(_heliModel == "GNT_C185R") then {
-    _lootTable    = "PlaneCrash_BRIC";
     _crashModel    = "SU25Wreck";
     _plane         = true;
 };
@@ -82,13 +66,6 @@ if(_heliModel == "GNT_C185R") then {
 if(_heliModel == "GNT_C185C") then {
     _lootTable    = "PlaneCrash_BRIC";
     _crashModel    = "SU25Wreck";
-    _plane         = true;
-};
-
-if(_heliModel == "An2_1_TK_CIV_EP1") then {
-    _lootTable    = "PlaneCrash_BRIC";
-    _crashModel    = "SU25Wreck";
-    _lootMultiplier = 2;
     _plane         = true;
 };
 
@@ -147,7 +124,7 @@ if (_spawnRoll <= _spawnChance) then
 		_crashwreck setCombatMode "BLUE";
 		_crashwreck engineOn true;
 		_crashwreck setdamage 0.8; //Damage the crash spawn so it is smoking while flying around
-		
+
 		if (_plane) then
 		{
 			_crashwreck setspeedmode "NORMAL";

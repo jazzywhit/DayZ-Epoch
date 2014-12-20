@@ -83,4 +83,7 @@ if (!isDedicated) then {
 	// Custom Hide Body
 	"PVDZE_plr_HideBody"		addPublicVariableEventHandler {systemChat "You can't hide a body like that..."};
 
+	// Custom Switch Skin
+	player_switchModel =		compile preprocessFileLineNumbers "custom\code\player_switchModel.sqf";
+
 };

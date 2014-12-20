@@ -90,7 +90,7 @@ class CfgLoot {
 	};
 	office[] = {
 		{"ItemSodaEmpty",0.31}
-		,{"TrashJackDaniels",0.26}
+		,{"TrashJackDaniels",0.23}
 		,{"ItemWaterbottleUnfilled",0.02}
 		,{"ItemBandage",0.15}
 		,{"HandRoadFlare",0.07}
@@ -101,8 +101,7 @@ class CfgLoot {
 		,{"ItemHeatPack",0.04}
 		,{"ItemDocument",0.03}
 		,{"ItemPlotDeed",0.01}
-		,{"ItemComboLock",0.01}
-		,{"ItemHotwireKit",0.01}
+		,{"ItemHotwireKit",0.05}
 		,{"ItemLockbox",0.01}
 	};
 	generic[] = {
@@ -472,7 +471,7 @@ class CfgLoot {
 		,{"MG36",0.1}
 		,{"M249",0.15}
 		,{"M240",0.15}
-		,{"M249_m145_EP1",0.05}
+		,{"m249_m145_EP1_DZE",0.05}
 	};
 	machinegunammo[] = {
 		{"100Rnd_556x45_BetaCMag",0.5}
