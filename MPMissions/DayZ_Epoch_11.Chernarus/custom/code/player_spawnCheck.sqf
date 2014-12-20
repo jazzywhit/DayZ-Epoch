@@ -8,7 +8,7 @@ _dateNow = (DateToNumber date);
 _maxWildZombies = 3;
 _age = -1;
 _zed_radius = 200;
-_loot_radius = 40;
+_loot_radius = 50;
 _position = getPosATL player;
 
 dayz_spawnZombies = 0;
@@ -51,9 +51,8 @@ _nearby = _position nearObjects ["building",_loot_radius];
             _dateNow = (DateToNumber date);
             _age = (_dateNow - _looted) * 525948;
 
-            //diag_log ("SPAWN LOOT: " + _type + " Building is " + str(_age) + " old" );
-
             if (_age > DZE_LootSpawnTimer) then {
+                diag_log ("SPAWN LOOT: " + _type + " Building is " + str(_age) + " old" );
                 if (!_cleared) then {
                     _nearByObj = nearestObjects [(getPosATL _x), ["WeaponHolder","WeaponHolderBase"],((sizeOf _type)+5)];
                     {deleteVehicle _x} count _nearByObj;

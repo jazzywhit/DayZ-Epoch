@@ -191,7 +191,7 @@ class Land_Ind_Vysypka: Industrial {
 	lootPosZombie[] = {{1.58472,2.12793,-4.09329},{1.99658,-12.5371,-4.09167},{-7.51147,-5.00488,-4.09327}};
 	lootPosSmall[] = {{2.5459,-16.5952,-4.97639},{-8.72485,-22.1318,-4.97806}};
 };
-class Land_A_MunicipalOffice: MilitarySpecial {
+class Land_A_MunicipalOffice: Military {
 	zombieChance = 0.4;
 	minRoaming = 3;
 	maxRoaming = 9;
