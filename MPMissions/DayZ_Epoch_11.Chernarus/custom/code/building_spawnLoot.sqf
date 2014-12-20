@@ -53,6 +53,7 @@ _bias = (_bias + random(100 - _bias)) / 100;
 		_iPos = _obj modelToWorld _x;
 		_nearBy = nearestObjects [_iPos, ["ReammoBox"], 2];
 
+        diag_log(format["Nearby:%1 LootChance:%2", _nearBy, _lootChance]);
 		if (count _nearBy > 0) then {
 			_lootChance = _lootChance + 0.05;
 
@@ -81,7 +82,6 @@ _bias = (_bias + random(100 - _bias)) / 100;
 // small loot
 _posSmall =	 [] + getArray (_config >> "lootPosSmall");
 _itemTypesSmall =	[] + getArray (_config >> "lootTypeSmall");
-
 _positionsSmall = _posSmall call _ShuffleArray;
 
 {
@@ -90,6 +90,7 @@ _positionsSmall = _posSmall call _ShuffleArray;
 		_iPos = _obj modelToWorld _x;
 		_nearBy = nearestObjects [_iPos, ["ReammoBox"], 2];
 
+        diag_log(format["Nearby:%1 LootChance:%2", _nearBy, _lootChance]);
 		if (count _nearBy > 0) then {
 			_lootChance = _lootChance + 0.05;
 
