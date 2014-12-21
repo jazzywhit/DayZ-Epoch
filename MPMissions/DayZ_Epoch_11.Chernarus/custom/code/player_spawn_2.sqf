@@ -1,9 +1,45 @@
-private ["_refObj","_size","_vel","_speed","_hunger","_thirst","_result","_factor","_distance","_lastTemp","_rnd","_listTalk","_id","_messTimer","_combatdisplay","_combatcontrol","_timeleft","_inVehicle","_lastUpdate","_foodVal","_thirstVal","_lowBlood","_startcombattimer","_combattimeout","_isPZombie","_outsideMap","_radsound","_bloodloss","_radTimer","_currentBlood","_wpnType"];
+private ["_refObj",
+            "_size",
+            "_vel",
+            "_speed",
+            "_hunger",
+            "_thirst",
+            "_result",
+            "_factor",
+            "_distance",
+            "_lastTemp",
+            "_rnd",
+            "_listTalk",
+            "_id",
+            "_messTimer",
+            "_combatdisplay",
+            "_combatcontrol",
+            "_timeleft",
+            "_inVehicle",
+            "_lastUpdate",
+            "_foodVal",
+            "_thirstVal",
+            "_lowBlood",
+            "_startcombattimer",
+            "_combattimeout",
+            "_isPZombie",
+            "_outsideMap",
+            "_radsound",
+            "_bloodloss",
+            "_radTimer",
+            "_currentBlood",
+            "_infection_timer",
+            "_infectionBloodLoss",
+            "_currentInfection",
+            "_wpnType"];
+
 disableSerialization;
 
 _messTimer = 0;
 _radTimer = 0;
 _lastTemp = dayz_temperatur;
+_infection_timer = nil;
+_infectionBloodLoss = 10;
 
 _isPZombie = player isKindOf "PZombie_VB";
 
@@ -69,51 +105,85 @@ while {true} do {
 		_lastTemp = dayz_temperatur;
 	};
 
-	//can get nearby infection
-	if (!r_player_infected && !_isPZombie) then {
-		//Infectionriskstart
-		if (dayz_temperatur < ((80 / 100) * (dayz_temperaturnormal - dayz_temperaturmin) + dayz_temperaturmin)) then {	//TeeChange
-			_listTalk = (getPosATL _refObj) nearEntities ["CAManBase",8];
-			{
-				if (_x getVariable["USEC_infected",false]) then {
-					_rnd = (random 1) * (((dayz_temperaturnormal - dayz_temperatur) * (100 /(dayz_temperaturnormal - dayz_temperaturmin)))/ 50);	//TeeChange
-					if (_rnd < 0.1) then {
-						_rnd = random 1;
-						if (_rnd > 0.7) then {
-							r_player_infected = true;
-							//player setVariable["USEC_infected",true];
-						};
-					};
-				};
-			} count _listTalk;
-			if (dayz_temperatur < ((50 / 100) * (dayz_temperaturnormal - dayz_temperaturmin) + dayz_temperaturmin)) then {	//TeeChange
-				_rnd = (random 1) * (((dayz_temperaturnormal - dayz_temperatur) * (100 /(dayz_temperaturnormal - dayz_temperaturmin)))/ 25);	//TeeChange
-				if (_rnd < 0.05) then {
-					_rnd = random 1;
-					if (_rnd > 0.95) then {
-						r_player_infected = true;
-						//player setVariable["USEC_infected",true];
-					};
-				};
-			};
-		};
-	};
+    // Update infection only if PVAR does not match GVAR.
+    _currentInfection = player getVariable ["USEC_infected", false];
+    if (r_player_infected != _currentInfection) then {
+        r_player_infected = _currentInfection;
+    };
+
+	// Handle Disease Transmissability
+    if (_isPZombie) then {
+        // Infect other players if you are a zombie
+        _listTalk = (getPosATL _refObj) nearEntities ["CAManBase",2];
+        {
+            if (_x getVariable["USEC_infected",false]) then {
+                _rnd = random 1;
+                if (_rnd < 0.2) then {
+                    _x = setVariable["USEC_infected",true,true];
+                };
+            };
+        } count _listTalk;
+    } else {
+        if (!r_player_infected) then {
+    	    // Infection risk from other players
+    	    // Lowered distance but increased chances of infection
+    	    // No longer has to do with temperature
+    	    _listTalk = (getPosATL _refObj) nearEntities ["CAManBase",5];
+            {
+                if (_x getVariable["USEC_infected",false]) then {
+                    _rnd = random 1;
+                    if (_rnd < 0.2) then {
+                        r_player_infected = true;
+                    };
+                };
+            } count _listTalk;
+
+    		// Infection risk from temperature
+            if (dayz_temperatur < ((50 / 100) * (dayz_temperaturnormal - dayz_temperaturmin) + dayz_temperaturmin)) then {	//TeeChange
+                _rnd = (random 1) * (((dayz_temperaturnormal - dayz_temperatur) * (100 /(dayz_temperaturnormal - dayz_temperaturmin)))/ 25);	//TeeChange
+                if (_rnd < 0.05) then {
+                    _rnd = random 1;
+                    if (_rnd > 0.95) then {
+                        r_player_infected = true;
+                    };
+                };
+            };
+    	};
+    };
 
 	//If has infection reduce blood cough && add shake
 	if (r_player_infected) then {
-		if !(player getVariable["USEC_infected",false]) then {
+		if (!player getVariable["USEC_infected",false]) then {
 			player setVariable["USEC_infected",true,true];
+			_infection_timer = diag_tickTime;
+		} else {
+		    if (isNil(_infection_timer)) then {
+                _infection_timer = diag_tickTime;
+            };
+		};
+
+		// After 5 minutes of infected put the player into pain state
+		if ((diag_tickTime - _infection_timer) > 300) then {
+		    //if (random 1 < 0.05) then {}
+		    if !(player getVariable["USEC_inPain",false]) then {
+		        player setVariable ["USEC_inPain", true, true];
+		        _infectionBloodLoss = 20;
+		    };
 		};
 
 		_rnd = ceil (random 8);
-		[player,"cough",_rnd,false,9] call dayz_zombieSpeak;
+		[player,"cough",_rnd,false,10] call dayz_zombieSpeak;
 
 		if (_rnd < 3) then {
 			addCamShake [2, 1, 25];
 		};
-		if (r_player_blood > 3000) then {
-			r_player_blood = r_player_blood - 3;
-		};
+
+		// Remove blood from player, increased to 10 from 3
+		r_player_blood = r_player_blood - _infectionBloodLoss;
+	} else {
+	    if (!isNil(_infection_timer)) then {
+            _infection_timer = nil;
+        };
 	};
 
 	//Pain Shake Effects
@@ -245,17 +315,17 @@ while {true} do {
 
 	//Melee Weapons ammo fix
         if(isNil {login_ammochecked}) then {
-                login_ammochecked = true;
-                 _wpnType = primaryWeapon player;
-                _ismelee = (gettext (configFile >> "CfgWeapons" >> _wpnType >> "melee"));
-                if (_ismelee == "true") then {
-                        call dayz_meleeMagazineCheck;
-                };
+            login_ammochecked = true;
+             _wpnType = primaryWeapon player;
+            _ismelee = (gettext (configFile >> "CfgWeapons" >> _wpnType >> "melee"));
+            if (_ismelee == "true") then {
+                    call dayz_meleeMagazineCheck;
+            };
         };
 
 	// Blood Effects
 	"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [1, 1, 1, 0.0]];
 	"colorCorrections" ppEffectCommit 0;
 
-	sleep 2;
+	uiSleep 2;
 };

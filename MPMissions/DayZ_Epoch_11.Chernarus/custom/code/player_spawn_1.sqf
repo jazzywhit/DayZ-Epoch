@@ -35,7 +35,8 @@ while {true} do {
 	};
 	
 	//spawning system
-	if ((diag_tickTime - _spawnCheck) > 14) then {
+	// Updated to 5 seconds from 14
+	if ((diag_tickTime - _spawnCheck) > 5) then {
 		["both"] spawn player_spawnCheck;
 
 		_spawnCheck  = diag_tickTime;
@@ -48,8 +49,6 @@ while {true} do {
 		if(dayz_currentDay != _day) then {
 			dayz_sunRise = call world_sunRise;
 			dayz_currentDay = _day;
-			
-			
 		};
 
 		_NewDay  = diag_tickTime;
@@ -67,9 +66,8 @@ while {true} do {
 			};
 			dayz_PreviousTown = _town;
 		};
-
 	};
 
 	//wait
-	sleep 0.001;
+	uiSleep 0.5;
 };
