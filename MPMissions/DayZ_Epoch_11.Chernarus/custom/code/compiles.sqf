@@ -86,4 +86,8 @@ if (!isDedicated) then {
 	// Custom Switch Skin
 	player_switchModel =		compile preprocessFileLineNumbers "custom\code\player_switchModel.sqf";
 
+	// Player Spawn Checkers
+	player_spawn_1 =			compile preprocessFileLineNumbers "custom\code\player_spawn_1.sqf";
+    player_spawn_2 =			compile preprocessFileLineNumbers "custom\code\player_spawn_2.sqf";
+
 };
