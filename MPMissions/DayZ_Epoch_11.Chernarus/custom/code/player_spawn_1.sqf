@@ -29,7 +29,6 @@ while {true} do {
 		//Current amounts
 		dayz_spawnZombies = {alive _x AND local _x} count (_position nearEntities ["zZombie_Base",200]);
 		dayz_CurrentNearByZombies = {alive _x} count (_position nearEntities ["zZombie_Base",200]);
-		dayz_currentWeaponHolders = count (_position nearObjects ["ReammoBox",100]);
 
 		_timer1 = diag_tickTime;
 	};
