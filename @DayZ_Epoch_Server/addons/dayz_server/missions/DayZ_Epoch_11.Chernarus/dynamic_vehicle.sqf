@@ -47,7 +47,6 @@ AllowedVehiclesList = [
     ["Pickup_PK_GUE_DZE",1],
     ["Pickup_PK_INS_DZE",1],
     ["Pickup_PK_TK_GUE_EP1_DZE",1],
-    ["RHIB",2],
     ["S1203_ambulance_EP1",2],
     ["S1203_TK_CIV_EP1",5],
     ["Skoda",5],

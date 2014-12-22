@@ -330,7 +330,8 @@ class CfgLoot {
 		,{"revolver_gold_EP1",0.01}
 	};
 	shotgunsingleshot[] = {
-		{"Winchester1866",0.7}
+		{"Winchester1866",0.5}
+		,{"LeeEnfield",0.2}
 		,{"MR43",0.3}
 	};
 	farmweapons[] = {
@@ -490,10 +491,15 @@ class CfgLoot {
 		{"75Rnd_545x39_RPK",0.90}
 		,{"100Rnd_762x54_PK",0.10}
 	};
-	machinegunammoexpl[] = {
-		{"75Rnd_545x39_RPK",0.8}
-		,{"100Rnd_762x54_PK",0.18}
-		,{"M_Igla_AA",0.02}
+	explosives_bric[] = {
+		{"PG7V",0.75}
+		,{"PG7VL",0.1}
+		,{"PG7VR",0.1}
+		,{"M_Igla_AA",0.05}
+	};
+	explosives_nato[] = {
+		{"M136",0.95}
+		,{"Stinger",0.05}
 	};
 	militaryshotguns[] = {
 		{"Remington870_lamp",0.35}
