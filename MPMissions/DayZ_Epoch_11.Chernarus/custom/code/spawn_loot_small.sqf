@@ -114,8 +114,8 @@ switch (_iClass) do
 	};
 };
 
-//if (!isNull(_item)) then {
-//	if (count _iPos == 3) then {
-//		_item setPosATL _iPos;
-//	};
-//};
+if (!isNull(_item)) then {
+	if (count _iPos == 3) then {
+		_item setPosATL _iPos;
+	};
+};
