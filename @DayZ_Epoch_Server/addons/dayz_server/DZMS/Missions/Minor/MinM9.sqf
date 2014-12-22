@@ -56,11 +56,11 @@ _crate2 setDir 62.744293;
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
 [[(_coords select 0) - 6.9458,(_coords select 1) - 3.5352, 0],4,2,"DZMSUnitsMinor"] call DZMSAISpawn;
-sleep 5;
+uiSleep 5;
 [[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],4,2,"DZMSUnitsMinor"] call DZMSAISpawn;
-sleep 5;
+uiSleep 5;
 [[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],4,2,"DZMSUnitsMinor"] call DZMSAISpawn;
-sleep 5;
+uiSleep 5;
 
 //Wait until the player is within 30 meters and also meets the kill req
 [_coords,"DZMSUnitsMinor"] call DZMSWaitMissionComp;
