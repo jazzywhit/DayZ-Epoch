@@ -134,6 +134,49 @@ class CfgBuildingLoot {
 			{ "ItemDocument","magazine",0.04 }
 		};
 	};
+
+	class IndustrialLarge: Default {
+        zombieChance = 0.4;
+        zombieClass[] = {"z_worker1","z_worker2","z_worker3"};
+        maxRoaming = 2;
+        lootChance = 0.4;
+        lootPos[] = {};
+        lootType[] = {
+            {"ItemGenerator","magazine",0.01},
+            {"ItemFuelBarrelEmpty","magazine",0.01},
+            {"","generic",0.12},
+            {"","trash",0.10},
+            {"","military_bric",0.04},
+            {"PartGeneric","magazine",0.04},
+            {"PartWheel","magazine",0.05},
+            {"PartFueltank","magazine",0.02},
+            {"PartEngine","magazine",0.02},
+            {"PartGlass","magazine",0.04},
+            {"ItemJerrycanEmpty","magazine",0.04},
+            {"ItemHatchet_DZE","weapon",0.07},
+            {"ItemKnife","weapon",0.07},
+            {"ItemToolbox","weapon",0.06},
+            {"ItemCrowbar","weapon",0.05},
+            {"ItemMachete","weapon",0.05},
+            {"ItemWire","magazine",0.04},
+            {"ItemTankTrap","magazine",0.05},
+            {"ItemKeyKit","weapon",0.01},
+            {"CinderBlocks","magazine",0.01},
+            {"PartPlywoodPack", "magazine", 0.05},
+            {"PartPlankPack", "magazine", 0.05}
+        };
+        lootTypeSmall[] = {
+            { "","generic",0.41 },
+            { "","trash",0.2 },
+            { "ItemCanvas","magazine",0.04 },
+            { "ItemPole","magazine",0.04 },
+            { "","military_bric",0.14 },
+            { "ItemSledgeHead","magazine",0.05},
+            { "ItemSledgeHandle","magazine",0.05},
+            { "ItemKnife","weapon",0.07 }
+        };
+    };
+
 	class Industrial: Default {
 		zombieChance = 0.4;
 		zombieClass[] = {"z_worker1","z_worker2","z_worker3"};
@@ -159,8 +202,7 @@ class CfgBuildingLoot {
 			{"ItemMachete","weapon",0.05},
 			{"ItemWire","magazine",0.04},
 			{"ItemTankTrap","magazine",0.05},
-			{"ItemKeyKit","weapon",0.01},
-			{"CinderBlocks","magazine",0.01},
+			{"ItemKeyKit","weapon",0.02},
 			{"PartPlywoodPack", "magazine", 0.05},
 			{"PartPlankPack", "magazine", 0.05}
 		};
