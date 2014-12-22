@@ -1,5 +1,5 @@
 private ["_type","_inVehicle","_dateNow","_maxWildZombies","_age","_zed_radius","_loot_radius","_loot_cutoff","_position","_markerstr","_markerstr1","_markerstr2","_markerstr3","_nearByObj","_handle","_looted","_cleared","_zombied","_config","_canLoot","_dis","_players","_nearby","_nearbyCount","_onTheMove","_soundLimit"];
-_start = diag_tickTime;
+//_start = diag_tickTime;
 
 _type = _this select 0;
 _inVehicle = (vehicle player != player);
@@ -95,5 +95,5 @@ _nearby = _position nearObjects ["building",_zed_radius];
     };
 } count _nearby;
 
-_stop = diag_tickTime;
-diag_log format ["player_spawnCheck: %1",_stop - _start];
+//_stop = diag_tickTime;
+//diag_log format ["player_spawnCheck: %1",_stop - _start];

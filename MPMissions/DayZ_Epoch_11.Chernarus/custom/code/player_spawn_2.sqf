@@ -105,15 +105,6 @@ while {true} do {
 		_lastTemp = dayz_temperatur;
 	};
 
-    // Update infection only if PVAR does not match GVAR.
-    //_currentInfection = player getVariable ["USEC_infected", false];
-    //diag_log format["Infection?: %1", _currentInfection];
-    //diag_log format["RInfection?: %1", r_player_infected];
-
-    //if (r_player_infected != _currentInfection) then {
-    //    r_player_infected = _currentInfection;
-    //};
-
 	// Handle Disease Transmissability
     if (_isPZombie) then {
         // Infect other players if you are a zombie
@@ -166,7 +157,7 @@ while {true} do {
 		};
 
 		// After 5 minutes of infection put the player into pain state and increase blood loss
-		diag_log format["Time: %1", (diag_tickTime - _infection_timer)];
+		//diag_log format["Time: %1", (diag_tickTime - _infection_timer)];
 		if ((diag_tickTime - _infection_timer) > 300) then {
 		    if !(r_player_inpain) then {
 		        r_player_inpain = true;
@@ -174,11 +165,12 @@ while {true} do {
 		    };
 		};
 
+        // Cough and shake
 		_rnd = ceil (random 8);
 		[player,"cough",_rnd,false,10] call dayz_zombieSpeak;
-
 		if (_rnd < 3) then {
 			addCamShake [2, 1, 25];
+			player setVariable["startcombattimer", 1];
 		};
 
 		// Remove blood from player, increased to 10 from 3
@@ -288,7 +280,7 @@ while {true} do {
 	};
 
 	// If in combat, display counter && restrict logout
-	_startcombattimer      = player getVariable["startcombattimer",0];
+	_startcombattimer = player getVariable["startcombattimer",0];
 	if (_startcombattimer == 1) then {
 		player setVariable["combattimeout", time + 30, true];
 		player setVariable["startcombattimer", 0];
