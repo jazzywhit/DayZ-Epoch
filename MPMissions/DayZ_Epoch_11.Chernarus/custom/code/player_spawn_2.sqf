@@ -98,7 +98,7 @@ while {true} do {
 	};
 	dayz_thirst = dayz_thirst + (_thirst / 60) * (dayz_temperatur / dayz_temperaturnormal);	//TeeChange Temperatur effects added Max Effects: -25% && + 16.6% waterloss
 
-	//Temperatur
+	//Temperature
 	2 call player_temp_calculation; //2 = sleep time of this loop		//TeeChange
 	if ((_lastTemp - dayz_temperatur) > 0.75 || (_lastTemp - dayz_temperatur) < -0.75 ) then {
 		player setVariable ["temperature",dayz_temperatur,true];
@@ -107,7 +107,10 @@ while {true} do {
 
     // Update infection only if PVAR does not match GVAR.
     _currentInfection = player getVariable ["USEC_infected", false];
-    if (r_player_infected != _currentInfection) then {
+    diag_log format["Infection?: %1", _currentInfection];
+    diag_log format["RInfection?: %1", r_player_infected];
+
+    if (!(r_player_infected == _currentInfection)) then {
         r_player_infected = _currentInfection;
     };
 
