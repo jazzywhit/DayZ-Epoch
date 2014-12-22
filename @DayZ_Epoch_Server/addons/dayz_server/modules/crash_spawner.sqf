@@ -15,7 +15,7 @@ _randomizedLoot = 6;                //Random number of loot piles aswell as the 
 _spawnFire      = true;                //Spawn Smoke/Fire at the helicrash
 _fadeFire      = false;            //Fade the Smoke/Fire overtime
 _preWaypoints    = 2;                //Amount of waypoints the heli flys to before crashing
-_crashDamage    = 0.825;                //Amount of damage the heli can take before crashing (between 0.1 and 1) Lower the number and the heli can take less damage before crashing 1 damage is fully destroyed and 0.1 something like a DMR could one shot the heli
+_crashDamage    = 0.05;                //Amount of damage the heli can take before crashing (between 0.1 and 1) Lower the number and the heli can take less damage before crashing 1 damage is fully destroyed and 0.1 something like a DMR could one shot the heli
 _exploRange    = 250;                //How far away from the predefined crash point should the heli start crashing
 _minLootRadius    = 5;                //Minimum distance for loot to spawn from the crash site in meters
 _maxLootRadius    = 10;                //Maximum distance for loot to spawn from the crash site in meters
@@ -33,7 +33,10 @@ _heliModel = [
 			"UH60M_EP1",
 			"UH60M_MEV_EP1",
 			"GNT_C185",
+			"GNT_C185U",
+			"GNT_C185R",
 			"GNT_C185C",
+			"An2_1_TK_CIV_EP1",
 			"An2_2_TK_CIV_EP1"
 			] call BIS_fnc_selectRandom;
 _crashModel    		= "UH1Wreck_DZ";    //The type of Crash model used after the heli crashes
@@ -57,8 +60,21 @@ if(_heliModel == "UH60M_EP1") then {
 };
 
 if(_heliModel == "GNT_C185") then {
+    _lootTable    = "MilitarySpecial";
+    _lootMultiplier = 4;
+    _crashModel    = "SU25Wreck";
+    _plane         = true;
+};
+
+if(_heliModel == "GNT_C185U") then {
     _lootTable    = "MedicalCrash";
     _lootMultiplier = 4;
+    _crashModel    = "SU25Wreck";
+    _plane         = true;
+};
+
+if(_heliModel == "GNT_C185R") then {
+    _lootTable    = "PlaneCrash_BRIC";
     _crashModel    = "SU25Wreck";
     _plane         = true;
 };
@@ -66,6 +82,13 @@ if(_heliModel == "GNT_C185") then {
 if(_heliModel == "GNT_C185C") then {
     _lootTable    = "PlaneCrash_BRIC";
     _crashModel    = "SU25Wreck";
+    _plane         = true;
+};
+
+if(_heliModel == "An2_1_TK_CIV_EP1") then {
+    _lootTable    = "PlaneCrash_BRIC";
+    _crashModel    = "SU25Wreck";
+    _lootMultiplier = 2;
     _plane         = true;
 };
 
@@ -123,8 +146,7 @@ if (_spawnRoll <= _spawnChance) then
 		_crashwreck = createVehicle [_heliModel,_heliStart, [], 0, "FLY"];
 		_crashwreck setCombatMode "BLUE";
 		_crashwreck engineOn true;
-		_crashwreck setdamage 0.8; //Damage the crash spawn so it is smoking while flying around
-
+		
 		if (_plane) then
 		{
 			_crashwreck setspeedmode "NORMAL";
@@ -321,12 +343,6 @@ if (_spawnRoll <= _spawnChance) then
 			{
 				_x setVariable ["permaLoot",true];
 			} forEach _nearBy;
-		};
-
-		// Add a guaranteed rotor on heli crashes
-		if (!_plane) then {
-		    _lootPos = [_pos, _maxLootRadius, random 360] call BIS_fnc_relPos;
-		    ["PartVRotor","magazine",_lootPos,5] call spawn_loot;
 		};
 	};
 	

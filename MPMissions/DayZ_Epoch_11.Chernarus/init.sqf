@@ -35,7 +35,7 @@ dayz_maxpos = 16000;
 dayz_sellDistance_vehicle = 30;
 dayz_sellDistance_boat = 30;
 dayz_sellDistance_air = 50;
-dayz_maxAnimals = 4; // Default: 8
+dayz_maxAnimals = 6; // Default: 8
 dayz_tameDogs = true;
 DZE_BuildingLimit = 500;
 DZE_BuildOnRoads = false; // Default: False
@@ -113,9 +113,6 @@ if (!isDedicated) then {
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
 	
 };
-
-//WAI Radio Messages
-_nil = [] execVM "custom\player_messaging\wai_remote_message.sqf";
 
 //Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";

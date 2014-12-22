@@ -22,11 +22,11 @@ _hemp_coords = [8988.8252, 7808.0654, 1.4512249];
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_ai_coords, count, skillLevel, unitArray]
 [_ai_coords,3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
-uiSleep 5;
+sleep 5;
 [_ai_coords,4,2,"DZMSUnitsMajor"] call DZMSAISpawn;
-uiSleep 5;
+sleep 5;
 [_ai_coords,3,2,"DZMSUnitsMajor"] call DZMSAISpawn;
-uiSleep 5;
+sleep 5;
 
 // Create final box
 _boxFin = createVehicle ["USVehicleBox",_hemp_coords,[],0,"CAN_COLLIDE"];

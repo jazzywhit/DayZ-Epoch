@@ -16,13 +16,14 @@ switch (_iClass) do
 		//Item is sigle, add 1 item from CfgLootSmall
 		_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 		_itemTypes = [];
-		if (DZE_MissionLootTable) then {
+		if (DZE_MissionLootTable) then{
 			{
-				_itemTypes set[count _itemTypes, _x select 0];
+				_itemTypes set[count _itemTypes, _x select 0]
 			} count getArray(missionConfigFile >> "CfgLootSmall" >> _iClass);
-		} else {
+		}
+		else {
 			{
-				_itemTypes set[count _itemTypes, _x select 0];
+				_itemTypes set[count _itemTypes, _x select 0]
 			} count getArray(configFile >> "CfgLootSmall" >> _iClass);
 		};
 		_index = dayzE_CLSBase find _iClass;
@@ -41,13 +42,14 @@ switch (_iClass) do
 		_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 
 		_itemTypes = [];
-		if (DZE_MissionLootTable) then {
+		if (DZE_MissionLootTable) then{
 			{
-				_itemTypes set[count _itemTypes, _x select 0];
+				_itemTypes set[count _itemTypes, _x select 0]
 			} count getArray(missionConfigFile >> "CfgLootSmall" >> _iItem);
-		} else {
+		}
+		else {
 			{
-				_itemTypes set[count _itemTypes, _x select 0];
+				_itemTypes set[count _itemTypes, _x select 0]
 			} count getArray(configFile >> "CfgLootSmall" >> _iItem);
 		};
 		_index = dayzE_CLSBase find _iItem;
@@ -65,13 +67,14 @@ switch (_iClass) do
 		_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 
 		_itemTypes = [];
-		if (DZE_MissionLootTable) then {
+		if (DZE_MissionLootTable) then{
 			{
-				_itemTypes set[count _itemTypes, _x select 0];
+				_itemTypes set[count _itemTypes, _x select 0]
 			} count getArray(missionConfigFile >> "CfgLootSmall" >> _iItem);
-		} else {
+		}
+		else {
 			{
-				_itemTypes set[count _itemTypes, _x select 0];
+				_itemTypes set[count _itemTypes, _x select 0]
 			} count getArray(configFile >> "CfgLootSmall" >> _iItem);
 		};
 		_index = dayzE_CLSBase find _iItem;
@@ -113,9 +116,10 @@ switch (_iClass) do
         //do nothing for now
 	};
 };
-
-if (!isNull(_item)) then {
-	if (count _iPos == 3) then {
+if (!isNull(_item)) then{
+	if ((count _iPos) > 2) then{
 		_item setPosATL _iPos;
 	};
 };
+
+_item

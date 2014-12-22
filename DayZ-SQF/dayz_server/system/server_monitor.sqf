@@ -94,7 +94,6 @@ if (isServer && isNil "sm_done") then {
 		_inventory =	_x select 5;
 		_hitPoints =	_x select 6;
 		_fuel =			_x select 7;
-		//TODO Add selection here for the vehicle fuel cargo
 		_damage = 		_x select 8;
 		
 		_dir = 0;

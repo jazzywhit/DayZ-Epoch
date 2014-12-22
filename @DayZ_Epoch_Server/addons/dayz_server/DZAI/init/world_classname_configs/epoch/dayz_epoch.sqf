@@ -13,7 +13,7 @@ DZAI_metalBarNum = 2;		//Maximum number of metal bars to generate
 DZAI_banditTypesNew = [
     "Bandit1_DZ",
     "Bandit2_DZ",
-    "BanditW1_DZ",
+    "BanditW1_DZ"
     "BanditW2_DZ",
     "RU_Policeman_DZ",
     "TK_INS_Warlord_EP1_DZ",

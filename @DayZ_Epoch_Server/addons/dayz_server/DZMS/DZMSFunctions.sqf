@@ -106,7 +106,7 @@ DZMSFindPos = {
             };
 			// If the missions never spawn after running, use this to debug the loop. noWater=true / Dis > 1000 / TaviHeight <= 185
 			//diag_log text format ["[DZMS]: DEBUG: Pos:[%1,%2] / noWater?:%3 / okDistance?:%4 / TaviHeight:%5 / BlackListed?:%6", _posX, _posY, _noWater, _okDis, _tavHeight, _isBlack];
-            uiSleep 2;
+            sleep 2;
         };
        
     };
@@ -138,7 +138,7 @@ DZMSFindPos = {
 
             // If the missions never spawn after running, use this to debug the loop. noWater=true / Dis > 1000 / TaviHeight <= 185
             //diag_log text format ["[DZMS]: DEBUG: Pos:[%1,%2] / noWater?:%3 / okDistance?:%4 / TaviHeight:%5 / BlackListed?:%6", _posX, _posY, _noWater, _okDis, _tavHeight, _isBlack];
-            uiSleep 2;
+            sleep 2;
         };
 	};
    
@@ -149,7 +149,7 @@ DZMSFindPos = {
 //Clears the cargo and sets fuel, direction, and orientation
 //Direction stops the awkwardness of every vehicle bearing 0
 DZMSSetupVehicle = {
-	private ["_object","_objectID"];
+	private ["_object","_objectID","_ranFuel"];
 	_object = _this select 0;
 
 	_objectID = str(round(random 999999));
@@ -166,8 +166,10 @@ DZMSSetupVehicle = {
 	
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
-
-	_object setFuel ((random(MaxGasOnSale-MinGasOnSale)+MinGasOnSale) / 100);
+	
+	_ranFuel = random 1;
+	if (_ranFuel < .1) then {_ranFuel = .1;};
+	_object setFuel _ranFuel;
 	_object setvelocity [0,0,1];
 	_object setDir (round(random 360));
 	
@@ -263,7 +265,7 @@ DZMSWaitMissionComp = {
 	
     diag_log text format["[DZMS]: (%3) Waiting for %1/%2 Units or Less to be Alive and a Player to be Near the Objective.",(_numSpawned - _numKillReq),_numSpawned,_unitArrayName];
 	
-    call compile format["waitUntil{uiSleep 1; ({isPlayer _x && _x distance _objective <= 30} count playableUnits > 0) && ({alive _x} count %1 <= (_numSpawned - _numKillReq));};",_unitArrayName];
+    call compile format["waitUntil{sleep 1; ({isPlayer _x && _x distance _objective <= 30} count playableUnits > 0) && ({alive _x} count %1 <= (_numSpawned - _numKillReq));};",_unitArrayName];
 	
     if (DZMSSceneryDespawnTimer > 0) then {_objective spawn DZMSCleanupThread;};
 };
@@ -276,7 +278,7 @@ DZMSSleep = {
     _checkInterval = _this select 1;
 	
     _startTime = diag_tickTime;
-    waitUntil{uiSleep _checkInterval; (diag_tickTime - _startTime) > _sleepTime;};
+    waitUntil{sleep _checkInterval; (diag_tickTime - _startTime) > _sleepTime;};
 };
 
 //function to purge objects

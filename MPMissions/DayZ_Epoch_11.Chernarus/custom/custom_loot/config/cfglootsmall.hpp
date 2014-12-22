@@ -264,15 +264,14 @@ class CfgLootSmall {
 		{"Skin_GUE_Soldier_CO_DZ",0.04},
 		{"Skin_GUE_Soldier_2_DZ",0.04}
 	};
-	explosives_bric[] = {
-		{"PG7V",0.75}
-		,{"PG7VL",0.1}
-		,{"PG7VR",0.1}
-		,{"M_Igla_AA",0.05}
-	};
-	explosives_nato[] = {
-		{"M136",0.95}
-		,{"Stinger",0.05}
+	machinegunammoexpl[] = {
+		{"100Rnd_556x45_BetaCMag",0.20},
+		{"75Rnd_545x39_RPK",0.20},
+		{"100Rnd_556x45_M249",0.15},
+		{"100Rnd_762x51_M240",0.15},
+		{"100Rnd_762x54_PK",0.14},
+		{"200Rnd_556x45_M249",0.14},
+		{"M_Igla_AA",0.01}
 	};
 	pistols[] = {
 		{"Makarov",0.25},

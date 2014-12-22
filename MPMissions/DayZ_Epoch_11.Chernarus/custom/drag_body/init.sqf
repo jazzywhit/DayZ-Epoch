@@ -1,1 +1,0 @@
-null = allUnits execVM "H8_dragBody.sqf";

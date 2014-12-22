@@ -94,7 +94,6 @@ _key call server_hiveWrite;
 		// Get a random fuel between MinGasOnSale and MaxGasOnSale
 		_fuel = (random(MaxGasOnSale-MinGasOnSale)+MinGasOnSale) / 100;
 		_object setFuel _fuel;
-		_object setFuelCargo 0;
 	};
 
 	clearWeaponCargoGlobal  _object;

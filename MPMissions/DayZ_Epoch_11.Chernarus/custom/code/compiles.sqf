@@ -80,17 +80,7 @@ if (!isDedicated) then {
 	// Custom GUI
 	player_updateGui =			compile preprocessFileLineNumbers "custom\code\player_updateGui.sqf";
 
-	// Custom Hide Body
-	"PVDZE_plr_HideBody"		addPublicVariableEventHandler {systemChat "You can't hide a body like that..."};
-
 	// Custom Switch Skin
 	player_switchModel =		compile preprocessFileLineNumbers "custom\code\player_switchModel.sqf";
-
-	// Player Spawn Checkers
-	player_spawn_1 =			compile preprocessFileLineNumbers "custom\code\player_spawn_1.sqf";
-    player_spawn_2 =			compile preprocessFileLineNumbers "custom\code\player_spawn_2.sqf";
-
-    // Zombies
-    zombie_generate = 			compile preprocessFileLineNumbers "custom\code\zombie_generate.sqf";
 
 };

@@ -45,13 +45,13 @@ _crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 7.1718,(_coords 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
 [[(_coords select 0) - 8.4614,(_coords select 1) - 5.0527,0],3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
-uiSleep 5;
+sleep 5;
 [[(_coords select 0) - 8.4614,(_coords select 1) - 5.0527,0],2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
-uiSleep 5;
+sleep 5;
 [[(_coords select 0) + 7.5337,(_coords select 1) + 4.2656,0],2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
-uiSleep 5;
+sleep 5;
 [[(_coords select 0) + 7.5337,(_coords select 1) + 4.2656,0],3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
-uiSleep 5;
+sleep 5;
 
 //Wait until the player is within 30 meters and also meets the kill req
 [_coords,"DZMSUnitsMinor"] call DZMSWaitMissionComp;

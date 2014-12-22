@@ -34,13 +34,13 @@ _vehicle2 = createVehicle [_veh2,[(_coords select 0) + 17.5078, (_coords select 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
 [_coords,4,2,"DZMSUnitsMajor"] call DZMSAISpawn;
-uiSleep 1;
+sleep 1;
 [_coords,4,2,"DZMSUnitsMajor"] call DZMSAISpawn;
-uiSleep 1;
+sleep 1;
 [_coords,4,2,"DZMSUnitsMajor"] call DZMSAISpawn;
-uiSleep 1;
+sleep 1;
 [_coords,4,2,"DZMSUnitsMajor"] call DZMSAISpawn;
-uiSleep 1;
+sleep 1;
 
 //Wait until the player is within 30 meters and also meets the kill req
 [_coords,"DZMSUnitsMajor"] call DZMSWaitMissionComp;
