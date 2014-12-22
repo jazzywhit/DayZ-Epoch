@@ -154,7 +154,7 @@ if(isServer) then {
                                         "Igla",
                                         "STINGER"];
 		
-		ai_packs					= [];
+		ai_packs					= ["DZ_Czech_Vest_Puch","DZ_ALICE_Pack_EP1","DZ_TK_Assault_Pack_EP1","DZ_British_ACU","DZ_GunBag_EP1","DZ_CivilBackpack_EP1","DZ_Backpack_EP1","DZ_LargeGunBag_EP1"];
 		ai_hero_skin				= ["FR_AC",
                                         "FR_AR",
                                         "FR_Corpsman",
