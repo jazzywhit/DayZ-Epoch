@@ -58,7 +58,7 @@ switch (_iClass) do {
 				_index = _weights select _index;
 
 				//diag_log ("dayz_CLChances: " + str(_itemTypes));
-				
+
 				_canType = _itemTypes select _index;
 				_tQty = round(random 1) + 1;
 				if (_canType in _uniq) then {
@@ -117,20 +117,20 @@ switch (_iClass) do {
 		//Item is sigle, add 1 item from cfgloot
 		_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 		_itemTypes = [];
-		if (DZE_MissionLootTable) then{
+		if (DZE_MissionLootTable) then {
 			{
-				_itemTypes set[count _itemTypes, _x select 0]
+				_itemTypes set[count _itemTypes, _x select 0];
 			} count getArray(missionConfigFile >> "cfgLoot" >> _iItem);
-		}
-		else {
+		} else {
 			{
-				_itemTypes set[count _itemTypes, _x select 0]
+				_itemTypes set[count _itemTypes, _x select 0];
 			} count getArray(configFile >> "cfgLoot" >> _iItem);
 		};
+
 		_index = dayz_CLBase find _iItem;
 		_weights = dayz_CLChances select _index;
 		_cntWeights = count _weights;
-			
+
 	    _index = floor(random _cntWeights);
 		_index = _weights select _index;
 		_canType = _itemTypes select _index;
@@ -145,6 +145,7 @@ switch (_iClass) do {
 		} else {
 			_itemTypes = ((getArray (configFile >> "cfgLoot" >> _iItem)) select 0);
 		};
+
 		_index = dayz_CLBase find _iItem;
 		_weights = dayz_CLChances select _index;
 		_cntWeights = count _weights;
@@ -209,7 +210,6 @@ switch (_iClass) do {
 			if (_mags select 0 == "30Rnd_556x45_G36SD") then { _mags set [0, "30Rnd_556x45_StanagSD"] };
 			_item addMagazineCargoGlobal [(_mags select 0), (round(random 2))];
 		};
-		
 	};
 	case "weapon":
 	{
@@ -250,10 +250,9 @@ switch (_iClass) do {
 		};
 	};
 };
-if (!isNull(_item)) then{
-	if ((count _iPos) > 2) then{
+
+if (!isNull(_item)) then {
+	if ((count _iPos) > 2) then {
 		_item setPosATL _iPos;
 	};
 };
-
-_item

@@ -3,7 +3,18 @@
         Please request permission to use/alter/distribute from project leader (R4Z0R49)
 		Modified for DayZ Epoch by [VB]AWOL vbawol@veteranbastards.com.
 */
-private ["_lootChance", "_dateNow"];
+private [
+    "_lootChance",
+    "_type",
+    "_config",
+    "_pos",
+    "_itemTypes",
+    "_qty",
+    "_lootSpawnBias",
+    "_ShuffleArray",
+    "_bias",
+    "_positions",
+    "_dateNow"];
 _obj = _this;
 
 // lower case to prevent issues with differing case for buildings from map to map.
