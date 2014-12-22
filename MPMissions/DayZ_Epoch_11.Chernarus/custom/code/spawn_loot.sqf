@@ -16,11 +16,11 @@ switch (_iClass) do {
 		_itemTypes = [];
 		if (DZE_MissionLootTable) then {
 			{
-				_itemTypes set [count _itemTypes, _x select 0]
+				_itemTypes set [count _itemTypes, _x select 0];
 			} count getArray (missionConfigFile >> "cfgLoot" >> _iClass);
 		} else {
 			{
-				_itemTypes set [count _itemTypes, _x select 0]
+				_itemTypes set [count _itemTypes, _x select 0];
 			} count getArray (configFile >> "cfgLoot" >> _iClass);
 		};
 		_qty = 0;
@@ -43,8 +43,8 @@ switch (_iClass) do {
                 "militarypilot",
                 "policeman",
                 "hunter",
-                "worker"
-        ]) then {
+                "worker"]) then {
+
 			_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 			while {_qty < _max} do {
 			    //diag_log format["DEBUG dayz_CLBase: %1", dayz_CLBase];
@@ -176,14 +176,13 @@ switch (_iClass) do {
 	case "cfglootweapon":
 	{
 		_itemTypes = [];
-		if (DZE_MissionLootTable) then{
+		if (DZE_MissionLootTable) then {
 			{
-				_itemTypes set[count _itemTypes, _x select 0]
+				_itemTypes set[count _itemTypes, _x select 0];
 			} count getArray(missionConfigFile >> "cfgLoot" >> _iItem);
-		}
-		else {
+		} else {
 			{
-				_itemTypes set[count _itemTypes, _x select 0]
+				_itemTypes set[count _itemTypes, _x select 0];
 			} count getArray(configFile >> "cfgLoot" >> _iItem);
 		};
 		_index = dayz_CLBase find _iItem;
@@ -202,8 +201,7 @@ switch (_iClass) do {
 		_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 		_item addWeaponCargoGlobal [_iItem,1];
 		_mags = [] + getArray (configFile >> "cfgWeapons" >> _iItem >> "magazines");
-		if ((count _mags) > 0) then
-		{
+		if ((count _mags) > 0) then {
 			if (_mags select 0 == "Quiver") then { _mags set [0, "WoodenArrow"] }; // Prevent spawning a Quiver
 			if (_mags select 0 == "20Rnd_556x45_Stanag") then { _mags set [0, "30Rnd_556x45_Stanag"] };
 			if (_mags select 0 == "30Rnd_556x45_G36") then { _mags set [0, "30Rnd_556x45_Stanag"] };
@@ -245,9 +243,6 @@ switch (_iClass) do {
 	};
 	case "object": {
 		_item = createVehicle [_iItem, _iPos, [], _radius, "CAN_COLLIDE"];
-		if ((count _iPos) > 2) then {
-			_item setPosATL _iPos;
-		};
 	};
 };
 
