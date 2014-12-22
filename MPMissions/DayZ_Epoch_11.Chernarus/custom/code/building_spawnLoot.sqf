@@ -39,14 +39,15 @@ _ShuffleArray = {
 	};
 	_rand_array;
 };
-_positions = _pos call _ShuffleArray;
 
 // bias for this building. The lower it is, the lower chance some of the lootpiles will spawn
 _bias = 50 max _lootSpawnBias;
 _bias = 100 min _bias;
 _bias = (_bias + random(100 - _bias)) / 100;
+_positions = _pos call _ShuffleArray;
 //diag_log(format["BIAS:%1 LOOTCHANCE:%2", _bias, _lootChance]);
 
+diag_log format["positions: %1", _positions];
 {
 	if (count _x == 3) then {
 		_rnd = (random 1) / _bias;
@@ -82,6 +83,7 @@ _bias = (_bias + random(100 - _bias)) / 100;
 _posSmall =	 [] + getArray (_config >> "lootPosSmall");
 _itemTypesSmall =	[] + getArray (_config >> "lootTypeSmall");
 _positionsSmall = _posSmall call _ShuffleArray;
+diag_log format["positionsSmall: %1", _positionsSmall];
 
 {
 	if (count _x == 3) then {
@@ -103,14 +105,13 @@ _positionsSmall = _posSmall call _ShuffleArray;
 					_index = _weights select _index;
 
 					//diag_log format["building_spawnLoot.sqf: %1", _itemTypesSmall];
-
 					_itemType = _itemTypesSmall select _index;
 					//diag_log (format["building_spawnLoot.sqf: Pos: %1, LootType: %2/%3,",_iPos,_itemType select 0,_itemType select 1]);
 					[_itemType select 0, _itemType select 1, _iPos, 0.0] call spawn_loot_small;
 					dayz_currentWeaponHolders = dayz_currentWeaponHolders +1;
 					
 					//lockout system
-					_obj setVariable ["looted",diag_tickTime + dayz_tickTimeOffset];
+					_obj setVariable ["looted", diag_tickTime + dayz_tickTimeOffset];
 				};
 			};
 		};
