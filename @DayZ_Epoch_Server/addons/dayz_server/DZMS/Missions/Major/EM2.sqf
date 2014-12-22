@@ -44,7 +44,7 @@ _wp setWaypointType "MOVE";
 _wp setWaypointBehaviour "CARELESS";
 _wp_pos = waypointPosition [_aiGrp,1];
 
-sleep 240;
+uiSleep 240;
 
 // Begin Landing
 deleteWaypoint [group _plane, 0]; // Delete waypoint to start a landing
@@ -78,7 +78,7 @@ while {_loop && _counter < 24 && Alive _plane && Alive _pilot} do {
 	    [nil,nil,rTitleText,"I got the signal!", "PLAIN",6] call RE;
 	    _loop = false;
     };
-	sleep 10;
+	uiSleep 10;
 	_counter = _counter + 1;
 };
 
@@ -89,7 +89,7 @@ if (Alive _plane && Alive _pilot) then {
     _wp setWaypointBehaviour "CARELESS";
     _wp_pos = waypointPosition [_aiGrp,1];
 
-    sleep 240;
+    uiSleep 240;
 };
 
 [nil,nil,rTitleText,"The C130 mission is over!", "PLAIN",6] call RE;

@@ -8,7 +8,7 @@ private["_modVariant"];
 waitUntil{initialized};
 
 // Lets let the heavier scripts run first
-sleep 60;
+uiSleep 60;
 
 // Error Check
 if (!isServer) exitWith { diag_log text format ["[DZMS]: <ERROR> DZMS is Installed Incorrectly! DZMS is not Running!"]; };

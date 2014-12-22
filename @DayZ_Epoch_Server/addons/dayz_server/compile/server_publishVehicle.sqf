@@ -109,6 +109,7 @@ PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_object];
 	} count _array;
 	
 	_object setFuel _fuel;
+	_object setFuelCargo 0;
 	
 	_object setvelocity [0,0,1];
 

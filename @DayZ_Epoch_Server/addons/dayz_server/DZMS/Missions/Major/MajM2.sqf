@@ -45,7 +45,7 @@ _pilot addWeapon 'ItemCompass';
 _pilot addWeapon 'ItemRadio';
 _pilot addWeapon 'ItemMap';
 _pilot addWeapon 'ItemGPS';
-sleep 5;
+uiSleep 5;
 
 private ["_veh1", "_vehicle", "_veh2", "_vehicle2"];
 //Create the vehicles
@@ -60,19 +60,19 @@ _vehicle2 = createVehicle [_veh2,[(_coords select 0) + 17.5078, (_coords select 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
 [_coords,3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
-sleep 5;
+uiSleep 5;
 [_coords,3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
-sleep 5;
+uiSleep 5;
 [_coords,3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
-sleep 5;
+uiSleep 5;
 [_coords,2,1,"DZMSUnitsMajor"] call DZMSAISpawn;
-sleep 5;
+uiSleep 5;
 
 _loop = true;
 _half = false;
 while {_loop} do {
 	if (!Alive _plane OR !Alive _pilot) then {
-		sleep 5;
+		uiSleep 5;
 		
 		// We are going to pretend the plane was shot down nearby
 		deleteVehicle _plane;
@@ -92,7 +92,7 @@ while {_loop} do {
 		_plane2 engineOn true;
 		_plane2 flyInHeight 150;
 		_plane2 forceSpeed 175;
-		sleep 2;
+		uiSleep 2;
 		_plane2 setDamage 1;
 		
 		//Update the location
@@ -147,7 +147,7 @@ while {_loop} do {
 _fallCount = 0;
 while {_fallCount < 45} do {
 	if (((getPos _box) select 2) < 1) then {_fallCount = 46};
-	sleep 0.1;
+	uiSleep 0.1;
 	_fallCount = _fallCount + 0.1;
 };
 
