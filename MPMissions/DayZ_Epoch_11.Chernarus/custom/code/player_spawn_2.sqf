@@ -38,7 +38,7 @@ disableSerialization;
 _messTimer = 0;
 _radTimer = 0;
 _lastTemp = dayz_temperatur;
-_infection_timer = nil;
+_infection_timer = -1;
 _infectionBloodLoss = 10;
 
 _isPZombie = player isKindOf "PZombie_VB";
@@ -160,7 +160,7 @@ while {true} do {
 			player setVariable["USEC_infected",true,true];
 			_infection_timer = diag_tickTime;
 		} else {
-		    if (isNil(_infection_timer)) then {
+		    if (_infection_timer == -1) then {
                 _infection_timer = diag_tickTime;
             };
 		};
@@ -184,8 +184,8 @@ while {true} do {
 		// Remove blood from player, increased to 10 from 3
 		r_player_blood = r_player_blood - _infectionBloodLoss;
 	} else {
-	    if (!isNil(_infection_timer)) then {
-            _infection_timer = nil;
+	    if !(_infection_timer == -1) then {
+            _infection_timer = -1;
         };
 	};
 
