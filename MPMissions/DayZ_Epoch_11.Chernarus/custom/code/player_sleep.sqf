@@ -10,7 +10,7 @@
 // Snoring sound added by jesquik from http://www.freesfx.co.uk
 // code cleanup and improvement by jesquik
 
-private ["_timeLeft", "_totalSleepTime","_i","_bloodAmount","_sleepCooldown","_sleepTime", "_snoreResult"];
+private ["_timeLeft", "_totalSleepTime","_i","_bloodAmount","_sleepCooldown","_sleepTime", "_snoreResult", "_snoreDistance"];
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Config Area Start																				//
@@ -20,6 +20,7 @@ private ["_timeLeft", "_totalSleepTime","_i","_bloodAmount","_sleepCooldown","_s
 _totalSleepTime = 60; // Total ammount of time it takes before you wake up
 _bloodAmount = 1000; // Total amount of blood to give back to player on sleep (12000 is the max life for a player)
 _sleepCooldown = 60; // This is how long in seconds before you can sleep again
+_snoreDistance = 15;
 
 ////////////////////////////////////////////////////////////////////////////////////
 // Everything below here need not be modified unless you know what you are doing! //
@@ -45,7 +46,7 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 
 	cutText [format["You begin sleeping. %1 seconds left.",_timeLeft], "BLACK OUT"]; // Text displayed when starting to sleep
 
-	_snoreResult = [objNull, player, rSAY, "playerSnoring"] call RE; // First Snore (16s)
+	[player,"playerSnoring",0,false,_snoreDistance] call dayz_zombieSpeak;
 	for "_i" from 0 to _totalSleepTime do { // For loop for counting down sleep timers and changing animations
 		sleep 1;
 		_timeLeft = _timeLeft - 1; // Minus _timeLeft by one every second
@@ -56,14 +57,14 @@ if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to 
 		    cutText [format["You are beginning to wake up!"], "BLACK FADED"]; // This is a fix for when timer reaches zero... displays text
 		};
 		if (_timeLeft == 40) then {
-		    _snoreResult = [objNull, player, rSAY, "playerSnoring"] call RE; // This is a RPC sound call for the snoring
+		    [player,"playerSnoring",0,false,_snoreDistance] call dayz_zombieSpeak;
 			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep2"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
 		};
 		if (_timeLeft == 30) then {
 			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep1"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
 		};
 		if (_timeLeft == 20) then {
-		    _snoreResult = [objNull, player, rSAY, "playerSnoring"] call RE; // This is a RPC sound call for the snoring
+		    [player,"playerSnoring",0,false,_snoreDistance] call dayz_zombieSpeak;
 			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep2"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
 		};
 		if (_timeLeft == 10) then {
