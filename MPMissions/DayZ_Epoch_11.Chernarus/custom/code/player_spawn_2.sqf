@@ -165,11 +165,12 @@ while {true} do {
             };
 		};
 
-		// After 5 minutes of infected put the player into pain state
+		// After 5 minutes of infection put the player into pain state and increase blood loss
 		diag_log format["Time: %1", (diag_tickTime - _infection_timer)];
 		if ((diag_tickTime - _infection_timer) > 300) then {
 		    //if (random 1 < 0.05) then {}
 		    if !(player getVariable["USEC_inPain",false]) then {
+		        r_player_inpain = true;
 		        player setVariable ["USEC_inPain", true, true];
 		        _infectionBloodLoss = 20;
 		    };
