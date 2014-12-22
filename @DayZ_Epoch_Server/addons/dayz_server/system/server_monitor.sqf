@@ -522,7 +522,7 @@ if (isServer && isNil "sm_done") then {
 	[] ExecVM "\z\addons\dayz_server\DynamicTraders\init.sqf";
 
 	// WAI
-	[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
+	//[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
 
 	allowConnection = true;
 	sm_done = true;
