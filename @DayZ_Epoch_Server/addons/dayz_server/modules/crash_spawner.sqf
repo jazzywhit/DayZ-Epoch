@@ -322,6 +322,12 @@ if (_spawnRoll <= _spawnChance) then
 				_x setVariable ["permaLoot",true];
 			} forEach _nearBy;
 		};
+
+		// Add a guaranteed rotor on heli crashes
+		if (!_plane) then {
+		    _lootPos = [_pos, _maxLootRadius, random 360] call BIS_fnc_relPos;
+		    ["PartVRotor","magazine",_lootPos,5] call spawn_loot;
+		};
 	};
 	
     _endTime = time - _startTime;

@@ -39,7 +39,7 @@ switch (_iClass) do {
                 "militaryammo",
                 "assaultrifleammo_bric",
                 "machinegunammo_bric",
-                "machinegunammoexpl",
+                "explosives_bric",
                 "militarypilot",
                 "policeman",
                 "hunter",
