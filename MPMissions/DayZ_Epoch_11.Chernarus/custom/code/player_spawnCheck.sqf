@@ -52,16 +52,15 @@ _nearby = _position nearObjects ["building",_loot_radius];
             _age = (_dateNow - _looted) * 525948;
 
             if (_age > DZE_LootSpawnTimer) then {
-                //diag_log ("SPAWN LOOT: " + _type + " Building is " + str(_age) + " old" );
+                diag_log ("SPAWN LOOT: " + _type + " Building is " + str(_age) + " old" );
                 if (!_cleared) then {
                     _nearByObj = nearestObjects [(getPosATL _x), ["WeaponHolder","WeaponHolderBase"],((sizeOf _type)+5)];
                     {deleteVehicle _x} count _nearByObj;
                     _x setVariable ["cleared",true,true];
                     _x setVariable ["looted",_dateNow,true];
                 } else {
-                    //Register
+                    //Register Building as having loot
                     _x setVariable ["looted",_dateNow,true];
-                    //cleanup
                     _x call building_spawnLoot;
                 };
             };

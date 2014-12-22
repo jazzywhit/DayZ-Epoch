@@ -3,7 +3,7 @@
         Please request permission to use/alter/distribute from project leader (R4Z0R49)
 		Modified for DayZ Epoch by [VB]AWOL vbawol@veteranbastards.com.
 */
-private ["_lootChance"];
+private ["_lootChance", "_dateNow"];
 _obj = _this;
 
 // lower case to prevent issues with differing case for buildings from map to map.
@@ -21,7 +21,6 @@ _lootChance = getNumber (_config >> "lootChance");
 //_countPositions = count _pos;
 _qty = 0; // effective quantity of spawned weaponholder
 _lootSpawnBias = 67; //67 between 50 && 100. The lower it is, the lower chance some of the lootpiles will spawn
-
 
 // shuffles an array
 // parameters: array
@@ -45,8 +44,8 @@ _bias = 50 max _lootSpawnBias;
 _bias = 100 min _bias;
 _bias = (_bias + random(100 - _bias)) / 100;
 _positions = _pos call _ShuffleArray;
+//_dateNow = (DateToNumber date);
 
-diag_log format["positions: %1", _positions];
 {
 	if (count _x == 3) then {
 		_rnd = (random 1) / _bias;
@@ -62,7 +61,7 @@ diag_log format["positions: %1", _positions];
             [_itemType select 0, _itemType select 1 , _iPos, 0.0] call spawn_loot;
 
             //lockout system
-            _obj setVariable ["looted",diag_tickTime + dayz_tickTimeOffset];
+            //_obj setVariable ["looted",_dateNow];
         };
 	};
 } count _positions;
@@ -71,7 +70,7 @@ diag_log format["positions: %1", _positions];
 _posSmall =	 [] + getArray (_config >> "lootPosSmall");
 _itemTypesSmall =	[] + getArray (_config >> "lootTypeSmall");
 _positionsSmall = _posSmall call _ShuffleArray;
-diag_log format["positionsSmall: %1", _positionsSmall];
+//_dateNow = (DateToNumber date);
 
 {
 	if (count _x == 3) then {
@@ -88,7 +87,7 @@ diag_log format["positionsSmall: %1", _positionsSmall];
             [_itemType select 0, _itemType select 1, _iPos, 0.0] call spawn_loot_small;
 
             //lockout system
-            _obj setVariable ["looted", diag_tickTime + dayz_tickTimeOffset];
+            //_obj setVariable ["looted", _dateNow];
         };
 	};
 } count _positionsSmall;
