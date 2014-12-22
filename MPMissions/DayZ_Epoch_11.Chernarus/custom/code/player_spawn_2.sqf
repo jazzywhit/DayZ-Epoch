@@ -156,7 +156,7 @@ while {true} do {
 
 	//If has infection reduce blood cough && add shake
 	if (r_player_infected) then {
-		if (!player getVariable["USEC_infected",false]) then {
+		if !(player getVariable["USEC_infected",false]) then {
 			player setVariable["USEC_infected",true,true];
 			_infection_timer = diag_tickTime;
 		} else {
