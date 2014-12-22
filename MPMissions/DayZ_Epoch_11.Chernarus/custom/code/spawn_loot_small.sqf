@@ -116,10 +116,9 @@ switch (_iClass) do
         //do nothing for now
 	};
 };
+
 if (!isNull(_item)) then{
 	if ((count _iPos) > 2) then{
 		_item setPosATL _iPos;
 	};
 };
-
-_item
