@@ -106,13 +106,13 @@ while {true} do {
 	};
 
     // Update infection only if PVAR does not match GVAR.
-    _currentInfection = player getVariable ["USEC_infected", false];
+    //_currentInfection = player getVariable ["USEC_infected", false];
     //diag_log format["Infection?: %1", _currentInfection];
     //diag_log format["RInfection?: %1", r_player_infected];
 
-    if (r_player_infected != _currentInfection) then {
-        r_player_infected = _currentInfection;
-    };
+    //if (r_player_infected != _currentInfection) then {
+    //    r_player_infected = _currentInfection;
+    //};
 
 	// Handle Disease Transmissability
     if (_isPZombie) then {
@@ -166,7 +166,7 @@ while {true} do {
 		};
 
 		// After 5 minutes of infected put the player into pain state
-		diag_log format["Infection Time: %1", (diag_tickTime - _infection_timer)];
+		diag_log format["Time: %1", (diag_tickTime - _infection_timer)];
 		if ((diag_tickTime - _infection_timer) > 300) then {
 		    //if (random 1 < 0.05) then {}
 		    if !(player getVariable["USEC_inPain",false]) then {
