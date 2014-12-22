@@ -110,9 +110,9 @@ while {true} do {
     diag_log format["Infection?: %1", _currentInfection];
     diag_log format["RInfection?: %1", r_player_infected];
 
-    if (!(r_player_infected == _currentInfection)) then {
-        r_player_infected = _currentInfection;
-    };
+    //if (r_player_infected != _currentInfection) then {
+    //    r_player_infected = _currentInfection;
+    //};
 
 	// Handle Disease Transmissability
     if (_isPZombie) then {
