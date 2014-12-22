@@ -90,4 +90,7 @@ if (!isDedicated) then {
 	player_spawn_1 =			compile preprocessFileLineNumbers "custom\code\player_spawn_1.sqf";
     player_spawn_2 =			compile preprocessFileLineNumbers "custom\code\player_spawn_2.sqf";
 
+    // Zombies
+    zombie_generate = 			compile preprocessFileLineNumbers "custom\code\zombie_generate.sqf";
+
 };
