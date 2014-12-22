@@ -45,7 +45,6 @@ _bias = 50 max _lootSpawnBias;
 _bias = 100 min _bias;
 _bias = (_bias + random(100 - _bias)) / 100;
 _positions = _pos call _ShuffleArray;
-//diag_log(format["BIAS:%1 LOOTCHANCE:%2", _bias, _lootChance]);
 
 diag_log format["positions: %1", _positions];
 {
@@ -60,7 +59,6 @@ diag_log format["positions: %1", _positions];
             _index = floor(random _cntWeights);
             _index = _weights select _index;
             _itemType = _itemTypes select _index;
-            //diag_log (format["building_spawnLoot.sqf: Pos: %1, LootType: %2/%3,",_iPos,_itemType select 0,_itemType select 1]);
             [_itemType select 0, _itemType select 1 , _iPos, 0.0] call spawn_loot;
 
             //lockout system
@@ -86,12 +84,8 @@ diag_log format["positionsSmall: %1", _positionsSmall];
             _cntWeights = count _weights;
             _index = floor(random _cntWeights);
             _index = _weights select _index;
-
-            //diag_log format["building_spawnLoot.sqf: %1", _itemTypesSmall];
             _itemType = _itemTypesSmall select _index;
-            //diag_log (format["building_spawnLoot.sqf: Pos: %1, LootType: %2/%3,",_iPos,_itemType select 0,_itemType select 1]);
             [_itemType select 0, _itemType select 1, _iPos, 0.0] call spawn_loot_small;
-            //dayz_currentWeaponHolders = dayz_currentWeaponHolders + 1;
 
             //lockout system
             _obj setVariable ["looted", diag_tickTime + dayz_tickTimeOffset];
