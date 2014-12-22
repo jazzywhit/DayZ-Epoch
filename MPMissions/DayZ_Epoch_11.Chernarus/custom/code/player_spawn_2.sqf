@@ -122,7 +122,7 @@ while {true} do {
             if (_x getVariable["USEC_infected",false]) then {
                 _rnd = random 1;
                 if (_rnd < 0.2) then {
-                    _x = setVariable["USEC_infected",true,true];
+                    _x setVariable["USEC_infected",true,true];
                 };
             };
         } count _listTalk;
