@@ -290,16 +290,18 @@ if (isServer && isNil "sm_done") then {
 
                                 // Get damage source
                                 if ((_modular_ammo_allowed find _dmgProjectile) >= 0) then {
-                                    diag_log text format ["Damage Allowed T=%1 : %2", _olddamage, _damage];
+                                    diag_log text format ["Damage Allowed"];
+                                    _damage;
                                 } else {
                                     _damage = _olddamage;
-                                    diag_log text format ["Damage Not Allowed T=%1 : %2", _olddamage, _damage];
+                                    diag_log text format ["Damage Not Allowed"];
+                                    _damage;
                                 };
 
                                 // Set hit damage appropriately
-                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
+                                //diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
                                 //_gethit set [_i, _damage];
-                                _damage;
+                                //_damage;
                             }
                     ];
                 };
