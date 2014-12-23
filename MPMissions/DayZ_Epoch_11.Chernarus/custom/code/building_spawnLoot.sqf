@@ -16,6 +16,11 @@ private [
     "_positions",
     "_rndRoll",
     "_iPos",
+    "_index",
+    "_weights",
+    "_index",
+    "_itemType",
+    "_cntWeights",
     "_dateNow"];
 _obj = _this;
 
@@ -60,7 +65,7 @@ _positions = _pos call _ShuffleArray;
 //_dateNow = (DateToNumber date);
 
 {
-    if (count _x == 3) then {
+    if ((count _x) == 3) then {
         _rndRoll = (random 1) / _bias;
         _iPos = _obj modelToWorld _x;
 
@@ -86,7 +91,7 @@ _positionsSmall = _posSmall call _ShuffleArray;
 //_dateNow = (DateToNumber date);
 
 {
-    if (count _x == 3) then {
+    if ((count _x) == 3) then {
         _rndRoll = (random 1) / _bias;
         _iPos = _obj modelToWorld _x;
 
