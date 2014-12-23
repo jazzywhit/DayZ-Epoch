@@ -291,7 +291,7 @@ class Category_526 {
     };
     class M24 {
         type = "trade_weapons";
-        buy[] = {2,"ItemBriefcase100oz"};
+        buy[] = {200,"ItemGoldBar"};
         sell[] = {6,"ItemGoldBar10oz"};
     };
     class M24_des_EP1 {

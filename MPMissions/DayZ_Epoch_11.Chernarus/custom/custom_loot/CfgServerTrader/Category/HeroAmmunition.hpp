@@ -46,17 +46,17 @@ class Category_478 {
     };
     class PG7V {
         type = "trade_items";
-        buy[] = {1,"ItemBriefcase100oz"};
+        buy[] = {100,"ItemGoldBar"};
         sell[] = {2,"ItemGoldBar10oz"};
     };
     class PG7VL {
         type = "trade_items";
-        buy[] = {3,"ItemBriefcase100oz"};
+        buy[] = {300,"ItemGoldBar"};
         sell[] = {6,"ItemGoldBar10oz"};
     };
     class PG7VR {
         type = "trade_items";
-        buy[] = {3,"ItemBriefcase100oz"};
+        buy[] = {300,"ItemGoldBar"};
         sell[] = {6,"ItemGoldBar10oz"};
     };
 };

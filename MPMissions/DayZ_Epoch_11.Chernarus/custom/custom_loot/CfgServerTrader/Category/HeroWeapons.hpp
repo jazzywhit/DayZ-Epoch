@@ -101,8 +101,8 @@ class Category_477 {
     };
     class RPG7V {
         type = "trade_weapons";
-        buy[] = {6,"ItemBriefcase100oz"};
-        sell[] = {3,"ItemBriefcase100oz"};
+        buy[] = {600,"ItemGoldBar"};
+        sell[] = {120,"ItemGoldBar"};
     };
     class M79_EP1 {
         type = "trade_weapons";
@@ -111,12 +111,12 @@ class Category_477 {
     };
     class BAF_LRR_scoped {
         type = "trade_weapons";
-        buy[] = {5,"ItemBriefcase100oz"};
-        sell[] = {1,"ItemBriefcase100oz"};
+        buy[] = {500,"ItemGoldBar"};
+        sell[] = {100,"ItemGoldBar"};
     };
     class BAF_LRR_scoped_W {
         type = "trade_weapons";
-        buy[] = {5,"ItemBriefcase100oz"};
-        sell[] = {1,"ItemBriefcase100oz"};
+        buy[] = {500,"ItemGoldBar"};
+        sell[] = {100,"ItemGoldBar"};
     };
 };
