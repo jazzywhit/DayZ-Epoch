@@ -285,20 +285,19 @@ if (isServer && isNil "sm_done") then {
                                     _selections set [count _selections, _dmgSelectionName];
                                     _gethit set [count _gethit, 0];
                                 };
-                                diag_log text format ["Selection T=%1 : %2 : %3", _selections, _dmgSelectionName];
                                 _i = _selections find _dmgSelectionName;
                                 _olddamage = damage _dmgUnit;
-                                diag_log text format ["Old Damage T=%1 : %2", _olddamage];
 
                                 // Get damage source
-                                if (!(_dmgProjectile in _modular_ammo_allowed)) then {
+                                if (_dmgProjectile in _modular_ammo_allowed) then {
+                                    diag_log text format ["Damage Allowed T=%1 : %2", _olddamage, _damage];
+                                } else {
                                     _damage = _olddamage;
-                                    diag_log text format ["Damage T=%1 : %2", _damage];
+                                    diag_log text format ["Damage Not Allowed T=%1 : %2", _olddamage, _damage];
                                 };
-                                diag_log text format ["Projectile T=%1 : %2", _dmgProjectile];
 
                                 // Set hit damage appropriately
-                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4", time, _this, _olddamage, _damage];
+                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
                                 _gethit set [_i, _damage];
                                 _damage;
                             }
