@@ -248,28 +248,38 @@ if (isServer && isNil "sm_done") then {
                                 //_dmgSource = _this select 3;
                                 _dmgProjectile = _this select 4;
                                 _olddamage = damage _dmgUnit;
+								_damage_inc = _damage - _olddamage;
+								
+								diag_log text format ["Object Hit : T=%1 : %2", time, _this];
+								diag_log text format ["Hit For: %1", _damage_inc];
 
                                 // If damage not from projectile types, don't allow
                                 if !(_dmgProjectile in ["Chainsaw_Swing_Ammo",
                                                         "Hatchet_Swing_Ammo",
                                                         "Crowbar_Swing_Ammo",
                                                         "Sledge_Swing_Ammo",
+														"B_127x99_Ball",
+														"B_127x107_Ball",
+														"B_762x51_3RndBurst",
+														"B_762x54_Ball",
                                                         "M_Stinger_AA",
                                                         "R_M136_AT",
                                                         "R_PG7V_AT",
                                                         "R_PG7VL_AT",
                                                         "R_PG7VR_AT",
                                                         "G_40mm_HE",
-                                                        "GrenadeHand",
-                                                        "GrenadeHandTimedWest",
-                                                        "GrenadeHandTimedEast",
-                                                        "GrenadeHand_Stone"
+														"G_30mm_HE",
+														"BAF_ied_v1",
+														"BAF_ied_v2"
                                                       ]) then {
                                     _damage = _olddamage;
                                 };
-
-                                // Set hit damage appropriately
-                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
+								diag_log text format ["Hit Result: %1 -> %2", _olddamage, _damage];
+								
+								if (_dmgProjectile == "BAF_ied_v2" && _damage_inc > 0.1) then {
+									diag_log text format ["Object Destroyed"];
+									_damage = 1;
+								};
                                 _damage;
                             }
                     ];
@@ -288,6 +298,10 @@ if (isServer && isNil "sm_done") then {
                                 //_dmgSource = _this select 3;
                                 _dmgProjectile = _this select 4;
                                 _olddamage = damage _dmgUnit;
+								_damage_inc = _damage - _olddamage;
+								
+								diag_log text format ["Object Hit : T=%1 : %2", time, _this];
+								diag_log text format ["Hit For: %1", _damage_inc];
 
                                 // If damage not from projectile types, don't allow
                                 if !(_dmgProjectile in ["M_Igla_AA",
@@ -297,16 +311,19 @@ if (isServer && isNil "sm_done") then {
                                                         "R_PG7VL_AT",
                                                         "R_PG7VR_AT",
                                                         "G_40mm_HE",
-                                                        "GrenadeHand",
-                                                        "GrenadeHandTimedWest",
-                                                        "GrenadeHandTimedEast",
-                                                        "GrenadeHand_Stone"
+														"G_30mm_HE",
+														"BAF_ied_v1",
+														"BAF_ied_v2"
                                                       ]) then {
                                     _damage = _olddamage;
                                 };
-
-                                // Set hit damage appropriately
-                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
+								
+								diag_log text format ["Hit Result: %1 -> %2", _olddamage, _damage];
+								
+								if (_dmgProjectile == "BAF_ied_v2" && _damage_inc > 0.2) then {
+									diag_log text format ["Object Destroyed"];
+									_damage = 1;
+								};
                                 _damage;
                             }
                     ];
