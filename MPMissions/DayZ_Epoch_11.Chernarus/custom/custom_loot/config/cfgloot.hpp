@@ -310,10 +310,14 @@ class CfgLoot {
 		,{"DZ_CivilBackpack_EP1",0.42}
 		,{"DZ_Backpack_EP1",0.03}
 	};
-	militaryammo[] = {
-		{"2000Rnd_762x51_M134",0.3}
-		,{"29Rnd_30mm_AGS30",0.2}
-		,{"100Rnd_127x99_M2",0.5}
+	mounted_ammo_nato[] = {
+        {"2000Rnd_762x51_M134",0.1}
+        ,{"48Rnd_40mm_MK19",0.3}
+        ,{"100Rnd_127x99_M2",0.6}
+	};
+	mounted_ammo_bric[] = {
+        {"29Rnd_30mm_AGS30",0.3}
+        ,{"50Rnd_127x107_DSHKM",0.7}
 	};
 	pistols_bric[] = {
 		{"Makarov",0.7}
