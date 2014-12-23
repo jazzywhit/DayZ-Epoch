@@ -3,7 +3,7 @@ private ["_type","_inVehicle","_dateNow","_maxWildZombies","_age","_zed_radius",
 
 _type = _this select 0;
 _inVehicle = (vehicle player != player);
-_onTheMove = (speed (vehicle player) > 10);
+_onTheMove = (speed (vehicle player) > 20);
 _dateNow = (DateToNumber date);
 _maxWildZombies = 3;
 _age = -1;
