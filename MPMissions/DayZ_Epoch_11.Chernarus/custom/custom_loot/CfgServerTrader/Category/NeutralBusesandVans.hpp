@@ -2,12 +2,12 @@ class Category_651 {
 	class Ikarus {
 		type = "trade_any_vehicle";
 		buy[] = {18,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		sell[] = {10,"ItemGoldBar"};
 	};
 	class Ikarus_TK_CIV_EP1 {
 		type = "trade_any_vehicle";
 		buy[] = {18,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		sell[] = {10,"ItemGoldBar"};
 	};
 	class S1203_TK_CIV_EP1 {
 		type = "trade_any_vehicle";
@@ -24,12 +24,12 @@ class Category_588 {
 	class Ikarus {
 		type = "trade_any_vehicle";
 		buy[] = {18,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		sell[] = {10,"ItemGoldBar"};
 	};
 	class Ikarus_TK_CIV_EP1 {
 		type = "trade_any_vehicle";
 		buy[] = {18,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		sell[] = {10,"ItemGoldBar"};
 	};
 	class S1203_TK_CIV_EP1 {
 		type = "trade_any_vehicle";

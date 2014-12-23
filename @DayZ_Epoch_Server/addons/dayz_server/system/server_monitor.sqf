@@ -5,53 +5,6 @@ dayz_hiveVersionNo = 	getNumber(configFile >> "CfgMods" >> "DayZ" >> "hiveVersio
 
 ['A2Prod'] execFSM "\z\addons\dayz_server\ASM\fn_ASM.fsm";
 
-// Update Damage Handler for Epoch Base Items
-// Define ammo types and modular building types
-private [
-    "_modular_units",
-    "_modular_ammo_allowed"
-];
-_modular_units = [
-    "WoodFloor_DZ",
-    "WoodFloorHalf_DZ",
-    "WoodFloorQuarter_DZ",
-    "Land_DZE_LargeWoodDoorLocked",
-    "WoodLargeWallDoor_DZ",
-    "WoodLargeWallWin_DZ",
-    "WoodLargeWall_DZ",
-    "Land_DZE_WoodDoorLocked",
-    "WoodSmallWallDoor_DZ",
-    "WoodSmallWallWin_DZ",
-    "Land_DZE_GarageWoodDoor",
-    "Land_DZE_GarageWoodDoorLocked",
-    "WoodLadder_DZ",
-    "WoodStairsSans_DZ",
-    "WoodStairs_DZ",
-    "WoodSmallWall_DZ",
-    "WoodSmallWallThird_DZ",
-    "CinderWallHalf_DZ",
-    "CinderWall_DZ",
-    "CinderWallDoorway_DZ",
-    "Land_DZE_LargeWoodDoor",
-    "MetalFloor_DZ",
-    "CinderWallDoorSmallLocked_DZ",
-    "CinderWallSmallDoorway_DZ",
-    "CinderWallDoor_DZ"
-];
-_modular_ammo_allowed = [
-    "M_Igla_AA",
-    "M_Stinger_AA",
-    "R_M136_AT",
-    "R_PG7V_AT",
-    "R_PG7VL_AT",
-    "R_PG7VR_AT",
-    "Sledge_Swing_Ammo",
-    "G_40mm_HE",
-    "GrenadeHand",
-    "GrenadeHandTimedWest",
-    "GrenadeHandTimedEast",
-    "GrenadeHand_Stone"
-];
 
 _hiveLoaded = false;
 
@@ -229,87 +182,19 @@ if (isServer && isNil "sm_done") then {
 			_object setdir _dir;
 			_object setposATL _pos;
 			_object setDamage _damage;
-
-            //  Update Damage Handler for Epoch Base Items
-            //  Based on information from http://forums.bistudio.com/showthread.php?113418-HandleDamage-EH-explained-(-poor-man-s-getHit)&highlight=event%20handler
-            //  Thanks to Celery for the breakdown
-            //
-            //  Source: https://community.bistudio.com/wiki/ArmA_2:_Event_Handlers#HandleDamage
-            //  Passed array: [unit, selectionName, damage, source, projectile]
-            //      unit: Object - Object the event handler is assigned to.
-            //      selectionName: String - Name of the selection where the unit was damaged. "" for over-all structural damage, "?" for unknown selections.
-            //      damage: Number - Resulting level of damage for the selection.
-            //      source: Object - The source unit that caused the damage.
-            //      projectile: String - Classname of the projectile that caused inflicted the damage. ("" for unknown, such as falling damage.)
 			
-            if ((typeOf _object) in dayz_allowedObjects) then {
-                if (DZE_GodModeBase) then {
-                    _object addEventHandler ["HandleDamage", {false}];
-                } else {
-                    _object addMPEventHandler ["MPKilled",{_this call object_handleServerKilled;}];
-                };
-
-                //private [
-                //    "_dmgUnit",
-                //   "_dmgSelectionName",
-                //    "_damage",
-                //    "_dmgSource",
-                //    "_dmgProjectile",
-                //    "_selections",
-                //    "_gethit",
-                //    "_olddamage",
-                //    "_dmgMult"
-                //];
-
-                if (typeOf(_object) in _modular_units) then {
-                    _object setVariable ["selections", []];
-                    _object setVariable ["gethit", []];
-                    _dmgMult = 1;
-                    _object addEventHandler
-                    [
-                        "HandleDamage",
-                            {
-                                _dmgUnit = _this select 0;
-                                _dmgSelectionName = _this select 1;
-                                _damage = _this select 2;
-                                //_dmgSource = _this select 3;
-                                _dmgProjectile = _this select 4;
-
-                                // Get damaged part and previous damage amount
-                                _selections = _dmgUnit getVariable ["selections", []];
-                                _gethit = _dmgUnit getVariable ["gethit", []];
-                                diag_log text format ["Get Hit T=%1 : %2", _gethit];
-
-                                if !(_dmgSelectionName in _selections) then
-                                {
-                                    _selections set [count _selections, _dmgSelectionName];
-                                    _gethit set [count _gethit, 0];
-                                };
-                                diag_log text format ["Selection T=%1 : %2 : %3", _selections, _dmgSelectionName];
-                                _i = _selections find _dmgSelectionName;
-                                _olddamage = damage _object;
-                                diag_log text format ["Old Damage T=%1 : %2", _olddamage];
-
-                                // Get damage source
-                                if (!(_dmgProjectile in _modular_ammo_allowed)) then {
-                                    _damage = _olddamage;
-                                    diag_log text format ["Damage T=%1 : %2", _damage];
-                                };
-                                diag_log text format ["Projectile T=%1 : %2", _dmgProjectile];
-
-                                // Set hit damage appropriately
-                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4", time, _this, _olddamage, _damage];
-                                _gethit set [_i, _damage];
-                                _damage;
-                            }
-                    ];
-                };
-
-                // Test disabling simulation server side on buildables only.
-                _object enableSimulation false;
-                // used for inplace upgrades && lock/unlock of safe
-                _object setVariable ["OEMPos", _pos, true];
-            };
+			if ((typeOf _object) in dayz_allowedObjects) then {
+				if (DZE_GodModeBase) then {
+					_object addEventHandler ["HandleDamage", {false}];
+				} else {
+					_object addMPEventHandler ["MPKilled",{_this call object_handleServerKilled;}];
+				};
+				// Test disabling simulation server side on buildables only.
+				_object enableSimulation false;
+				// used for inplace upgrades && lock/unlock of safe
+				_object setVariable ["OEMPos", _pos, true];
+				
+			};
 
 			if ((count _inventory > 0) && !(typeOf( _object) == "Plastic_Pole_EP1_DZ")) then {
 				if (_type in DZE_LockedStorage) then {
@@ -520,9 +405,6 @@ if (isServer && isNil "sm_done") then {
 
 	//Dynamic Traders
 	[] ExecVM "\z\addons\dayz_server\DynamicTraders\init.sqf";
-
-	// WAI
-	//[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
 
 	allowConnection = true;
 	sm_done = true;

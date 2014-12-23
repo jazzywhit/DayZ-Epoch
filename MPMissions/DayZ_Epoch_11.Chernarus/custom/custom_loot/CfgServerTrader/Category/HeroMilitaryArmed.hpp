@@ -1,32 +1,32 @@
 class Category_562 {
 	class HMMWV_M998A2_SOV_DES_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {8,"ItemBriefcase100oz"};
-		sell[] = {4,"ItemBriefcase100oz"};
+		buy[] = {800,"ItemGoldBar"};
+		sell[] = {160,"ItemGoldBar"};
 	};
 	class LandRover_Special_CZ_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {8,"ItemBriefcase100oz"};
-		sell[] = {4,"ItemBriefcase100oz"};
+		buy[] = {800,"ItemGoldBar"};
+		sell[] = {160,"ItemGoldBar"};
 	};
 	class LandRover_MG_TK_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {4,"ItemBriefcase100oz"};
-		sell[] = {2,"ItemBriefcase100oz"};
+		buy[] = {400,"ItemGoldBar"};
+		sell[] = {80,"ItemGoldBar"};
 	};
     class Offroad_DSHKM_Gue_DZE {
         type = "trade_any_vehicle";
-        buy[] = {1,"ItemBriefcase100oz"};
-        sell[] = {5,"ItemGoldBar10oz"};
+        buy[] = {100,"ItemGoldBar"};
+        sell[] = {20,"ItemGoldBar"};
     };
 	class UAZ_MG_TK_EP1_DZE {
 		type = "trade_any_vehicle";
-		buy[] = {2,"ItemBriefcase100oz"};
-		sell[] = {1,"ItemBriefcase100oz"};
+		buy[] = {200,"ItemGoldBar"};
+		sell[] = {40,"ItemGoldBar"};
 	};
     class GAZ_Vodnik_MedEvac {
         type = "trade_any_vehicle";
-        buy[] = {2,"ItemBriefcase100oz"};
-        sell[] = {1,"ItemBriefcase100oz"};
+        buy[] = {300,"ItemGoldBar"};
+        sell[] = {60,"ItemGoldBar"};
     };
 };

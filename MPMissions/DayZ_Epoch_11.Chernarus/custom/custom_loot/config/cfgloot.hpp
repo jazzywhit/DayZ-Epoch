@@ -27,7 +27,7 @@ class CfgLoot {
 		{"ItemSodaMzlyEmpty",0.02},
 		{"ItemSodaRabbitEmpty",0.02}
 	};
-	civilian[] = {
+	civilian[] = { //Zombie Loot
 		{"TrashJackDaniels",0.08}
 		,{"ItemSodaEmpty",0.1}
 		,{"8Rnd_9x18_Makarov",0.17}
@@ -38,7 +38,7 @@ class CfgLoot {
 		,{"ItemPainkiller",0.06}
 		,{"ItemDocument",0.03}
 	};
-	office2[] = {
+	office2[] = { // Zombie Loot
 		{"TrashJackDaniels",0.08}
 		,{"ItemSodaEmpty",0.1}
 		,{"8Rnd_9x18_Makarov",0.17}
@@ -88,7 +88,7 @@ class CfgLoot {
 		,{"FoodPistachio",0.05}
 		,{"FoodNutmix",0.05}
 	};
-	office[] = {
+	office[] = { // Zombie Loot
 		{"ItemSodaEmpty",0.31}
 		,{"TrashJackDaniels",0.23}
 		,{"ItemWaterbottleUnfilled",0.02}
@@ -104,7 +104,7 @@ class CfgLoot {
 		,{"ItemHotwireKit",0.05}
 		,{"ItemLockbox",0.01}
 	};
-	generic[] = {
+	generic[] = { //Zombie Loot
 		{"ItemNewspaper",0.04}
 		,{"ItemWaterbottleUnfilled",0.02}
 		,{"ItemBandage",0.14}
@@ -122,7 +122,7 @@ class CfgLoot {
 		,{"HandChemRed",0.12}
 		,{"ItemHeatPack",0.04}
 	};
-	medical[] = {
+	medical[] = { //Zombie Loot
 		{"ItemBandage",0.48}
 		,{"ItemPainkiller",0.15}
 		,{"ItemMorphine",0.2}
@@ -138,7 +138,7 @@ class CfgLoot {
 		,{"ItemBloodbag",0.05}
 		,{"ItemAntibiotic",0.02}
 	};
-	military[] = {
+	military[] = { // Zombie Loot
 		{"ItemSodaEmpty",0.11}
 		,{"ItemBandage",0.06}
 		,{"ItemPainkiller",0.04}
@@ -212,7 +212,7 @@ class CfgLoot {
 		,{"ItemHeatPack",0.04}
 		,{"FoodMRE",0.04}
 	};
-	policeman[] = {
+	policeman[] = { //Zombies Loot
 		{"ItemBandage",0.3}
 		,{"7Rnd_45ACP_1911",0.08}
 		,{"6Rnd_45ACP",0.08}
@@ -224,7 +224,7 @@ class CfgLoot {
 		,{"ItemHotwireKit",0.01}
 		,{"ItemDocument",0.03}
 	};
-	hunter[] = {
+	hunter[] = { // Zombie Loot
 		{"ItemBandage",0.6}
 		,{"ItemWaterbottleUnfilled",0.05}
 		,{"WoodenArrow",0.2}
@@ -232,7 +232,7 @@ class CfgLoot {
 		,{"FoodMRE",0.02}
 		,{"5x_22_LR_17_HMR",0.05}
 	};
-	worker[] = {
+	worker[] = { // Zombie Loot
 		{"TrashJackDaniels",0.09}
 		,{"ItemSodaEmpty",0.35}
 		,{"ItemBandage",0.31}
@@ -310,10 +310,14 @@ class CfgLoot {
 		,{"DZ_CivilBackpack_EP1",0.42}
 		,{"DZ_Backpack_EP1",0.03}
 	};
-	militaryammo[] = {
-		{"2000Rnd_762x51_M134",0.3}
-		,{"29Rnd_30mm_AGS30",0.2}
-		,{"100Rnd_127x99_M2",0.5}
+	mounted_ammo_nato[] = {
+        {"2000Rnd_762x51_M134",0.1}
+        ,{"48Rnd_40mm_MK19",0.3}
+        ,{"100Rnd_127x99_M2",0.6}
+	};
+	mounted_ammo_bric[] = {
+        {"29Rnd_30mm_AGS30",0.3}
+        ,{"50Rnd_127x107_DSHKM",0.7}
 	};
 	pistols_bric[] = {
 		{"Makarov",0.7}

@@ -21,43 +21,43 @@ class Category_666 {
 	};
 	class FlareWhite_GP25 {
 		type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
 	};
 	class FlareGreen_GP25 {
 		type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
 	};
 	class FlareRed_GP25 {
 		type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
 	};
 	class FlareYellow_GP25 {
 		type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
 	};
  class FlareWhite_M203 {
         type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
     };
     class FlareGreen_M203 {
         type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
     };
     class FlareRed_M203 {
         type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
     };
     class FlareYellow_M203 {
         type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
     };
 };
 
@@ -84,42 +84,42 @@ class Category_669 {
 	};
 	class FlareWhite_GP25 {
 		type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
 	};
 	class FlareGreen_GP25 {
 		type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
 	};
 	class FlareRed_GP25 {
 		type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
 	};
 	class FlareYellow_GP25 {
 		type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
 	};
  class FlareWhite_M203 {
         type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
     };
     class FlareGreen_M203 {
         type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
     };
     class FlareRed_M203 {
         type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
     };
     class FlareYellow_M203 {
         type = "trade_items";
-        buy[] = {5,"ItemSilverBar10oz"};
-        sell[] = {3,"ItemSilverBar10oz"};
+        buy[] = {50,"ItemSilverBar"};
+        sell[] = {30,"ItemSilverBar"};
     };
 };

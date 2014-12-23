@@ -14,6 +14,13 @@ private [
     "_ShuffleArray",
     "_bias",
     "_positions",
+    "_rndRoll",
+    "_iPos",
+    "_index",
+    "_weights",
+    "_index",
+    "_itemType",
+    "_cntWeights",
     "_dateNow"];
 _obj = _this;
 
@@ -58,11 +65,11 @@ _positions = _pos call _ShuffleArray;
 //_dateNow = (DateToNumber date);
 
 {
-	if (count _x == 3) then {
-		_rnd = (random 1) / _bias;
-		_iPos = _obj modelToWorld _x;
+    if ((count _x) == 3) then {
+        _rndRoll = (random 1) / _bias;
+        _iPos = _obj modelToWorld _x;
 
-        if (_rnd <= _lootChance) then {
+        if (_rndRoll <= _lootChance) then {
             _index = dayz_CBLBase find _type;
             _weights = dayz_CBLChances select _index;
             _cntWeights = count _weights;
@@ -74,7 +81,7 @@ _positions = _pos call _ShuffleArray;
             //lockout system
             //_obj setVariable ["looted",_dateNow];
         };
-	};
+    };
 } count _positions;
 
 // small loot
@@ -84,11 +91,11 @@ _positionsSmall = _posSmall call _ShuffleArray;
 //_dateNow = (DateToNumber date);
 
 {
-	if (count _x == 3) then {
-		_rnd = (random 1) / _bias;
-		_iPos = _obj modelToWorld _x;
+    if ((count _x) == 3) then {
+        _rndRoll = (random 1) / _bias;
+        _iPos = _obj modelToWorld _x;
 
-        if (_rnd <= _lootChance) then {
+        if (_rndRoll <= _lootChance) then {
             _index = dayzE_CBLSBase find _type;
             _weights = dayzE_CBLSChances select _index;
             _cntWeights = count _weights;
@@ -100,5 +107,5 @@ _positionsSmall = _posSmall call _ShuffleArray;
             //lockout system
             //_obj setVariable ["looted", _dateNow];
         };
-	};
+    };
 } count _positionsSmall;

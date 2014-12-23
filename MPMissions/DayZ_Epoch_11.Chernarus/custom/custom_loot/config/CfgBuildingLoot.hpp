@@ -342,12 +342,12 @@ class CfgBuildingLoot {
 			{ "machineguns", "cfglootweapon", 0.04 },
 			{ "militaryshotguns", "cfglootweapon", 0.03 },
 			{ "pistols", "cfglootweapon", 0.05},
-			{ "","military",0.24},
+			{ "","military",0.22},
 			{ "","explosives_nato",0.03},
 			{ "AmmoBoxSmall_556","magazine",0.05},
 			{ "AmmoBoxSmall_762","magazine",0.02},
 			{ "","militaryclothes",0.04},
-			{ "","militaryammo",0.04}
+			{ "","mounted_ammo_nato",0.02}
 		};
 	};
 	class HeliCrash_BRIC: Default {
@@ -363,8 +363,9 @@ class CfgBuildingLoot {
 			{ "machineguns_bric_high", "cfglootweapon", 0.2 },
 			{ "pistols_bric", "cfglootweapon", 0.05},
 			{ "assaultrifleammo_bric", "assaultrifleammo_bric", 0.05 },
-			{ "","military_bric",0.22},
+			{ "","military_bric",0.2},
 			{ "","explosives_bric",0.03},
+			{ "","mounted_ammo_bric",0.02},
 			{ "","militaryclothes",0.06}
 		};
 	};
@@ -375,7 +376,7 @@ class CfgBuildingLoot {
 		lootChance = 0.5;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles", "cfglootweapon", 0.32 },
+			{ "assaultrifles", "cfglootweapon", 0.3 },
 			{ "submachinegun", "cfglootweapon", 0.15 },
 			{ "sniperrifles", "cfglootweapon", 0.01 },
 			{ "machineguns", "cfglootweapon", 0.06 },
@@ -386,7 +387,7 @@ class CfgBuildingLoot {
 			{ "AmmoBoxSmall_556","magazine",0.05},
 			{ "AmmoBoxSmall_762","magazine",0.03},
 			{ "","militaryclothes",0.11},
-			{ "","militaryammo",0.02}
+			{ "","mounted_ammo_nato",0.02}
 		};
 	};
 	
@@ -397,7 +398,7 @@ class CfgBuildingLoot {
 		lootChance = 0.7;
 		lootPos[] = {};
 		lootType[] = {
-			{ "assaultrifles", "cfglootweapon", 0.32 },
+			{ "assaultrifles", "cfglootweapon", 0.3 },
 			{ "submachinegun", "cfglootweapon", 0.15 },
 			{ "sniperrifles", "cfglootweapon", 0.01 },
 			{ "machineguns", "cfglootweapon", 0.06 },
@@ -408,7 +409,7 @@ class CfgBuildingLoot {
 			{ "AmmoBoxSmall_556","magazine",0.05},
 			{ "AmmoBoxSmall_762","magazine",0.03},
 			{ "","militaryclothes",0.11},
-			{ "","militaryammo",0.02}
+			{ "","mounted_ammo_nato",0.02}
 		};
 	};
 	
@@ -427,7 +428,8 @@ class CfgBuildingLoot {
 			{ "", "assaultrifleammo_bric", 0.06 },
 			{ "","military_bric",0.1},
 			{ "","explosives_bric",0.03},
-			{ "","militaryclothes",0.13},
+			{ "","militaryclothes",0.11},
+			{ "","mounted_ammo_bric",0.02}
 		};
 	};
 

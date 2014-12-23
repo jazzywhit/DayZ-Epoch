@@ -1,8 +1,8 @@
 class Category_649 {
 	class 15Rnd_W1866_Slug {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {20,"ItemSilverBar"};
+		sell[] = {10,"ItemSilverBar"};
 	};
 	class 2Rnd_shotgun_74Pellets {
 		type = "trade_items";
@@ -16,15 +16,15 @@ class Category_649 {
 	};
 	class 10x_303 {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {20,"ItemSilverBar"};
+		sell[] = {10,"ItemSilverBar"};
 	};
 };
 class Category_613 {
 	class 15Rnd_W1866_Slug {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {20,"ItemSilverBar"};
+		sell[] = {10,"ItemSilverBar"};
 	};
 	class 2Rnd_shotgun_74Pellets {
 		type = "trade_items";
@@ -38,7 +38,7 @@ class Category_613 {
 	};
 	class 10x_303 {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {20,"ItemSilverBar"};
+		sell[] = {10,"ItemSilverBar"};
 	};
 };

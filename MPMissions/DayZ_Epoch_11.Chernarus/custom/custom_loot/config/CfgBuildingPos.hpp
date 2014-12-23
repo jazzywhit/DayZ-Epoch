@@ -806,9 +806,7 @@ class Land_Mil_Barracks_L_EP1: Military
 };
 class Land_vez: Military
 {
-	maxRoaming = 1;
-	lootPos[] = {{-0.0585938,1.51367,1.36331}};
-	lootPosZombie[] = {{-0.116699,-0.801758,-2.81857}};
+	lootPos[] = {};
 };
 class Land_Shed_W03_EP1: Residential
 {

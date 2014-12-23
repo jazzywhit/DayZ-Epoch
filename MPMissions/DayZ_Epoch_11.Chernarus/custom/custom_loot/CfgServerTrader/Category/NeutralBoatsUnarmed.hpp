@@ -2,12 +2,12 @@ class Category_672 {
 	class Smallboat_1 {
 		type = "trade_any_boat";
 		buy[] = {15,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		sell[] = {10,"ItemGoldBar"};
 	};
 	class Smallboat_2 {
 		type = "trade_any_boat";
 		buy[] = {15,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		sell[] = {10,"ItemGoldBar"};
 	};
 	class Zodiac {
 		type = "trade_any_boat";
@@ -16,8 +16,8 @@ class Category_672 {
 	};
 	class Fishing_Boat {
 		type = "trade_any_boat";
-		buy[] = {4,"ItemGoldBar10oz"};
-		sell[] = {2,"ItemGoldBar10oz"};
+		buy[] = {40,"ItemGoldBar"};
+		sell[] = {20,"ItemGoldBar"};
 	};
 	class PBX {
 		type = "trade_any_boat";
@@ -49,12 +49,12 @@ class Category_557 {
 	class Smallboat_1 {
 		type = "trade_any_boat";
 		buy[] = {15,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		sell[] = {10,"ItemGoldBar"};
 	};
 	class Smallboat_2 {
 		type = "trade_any_boat";
 		buy[] = {15,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar10oz"};
+		sell[] = {10,"ItemGoldBar"};
 	};
 	class Zodiac {
 		type = "trade_any_boat";
@@ -63,8 +63,8 @@ class Category_557 {
 	};
 	class Fishing_Boat {
 		type = "trade_any_boat";
-		buy[] = {4,"ItemGoldBar10oz"};
-		sell[] = {2,"ItemGoldBar10oz"};
+		buy[] = {40,"ItemGoldBar"};
+		sell[] = {20,"ItemGoldBar"};
 	};
 	class PBX {
 		type = "trade_any_boat";
