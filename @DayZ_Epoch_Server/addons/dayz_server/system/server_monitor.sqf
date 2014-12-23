@@ -303,11 +303,9 @@ if (isServer && isNil "sm_done") then {
                                                         "GrenadeHand_Stone"
                                                       ]) then {
                                     diag_log text format ["Damage Allowed"];
-                                    _damage;
                                 } else {
                                     _damage = _olddamage;
                                     diag_log text format ["Damage Not Allowed"];
-                                    _damage;
                                 };
 
                                 // Set hit damage appropriately
