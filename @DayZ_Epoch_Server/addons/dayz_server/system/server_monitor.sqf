@@ -289,7 +289,7 @@ if (isServer && isNil "sm_done") then {
                                 _olddamage = damage _dmgUnit;
 
                                 // Get damage source
-                                if (_dmgProjectile in _modular_ammo_allowed) then {
+                                if ((_modular_ammo_allowed find _dmgProjectile) >= 0) then {
                                     diag_log text format ["Damage Allowed T=%1 : %2", _olddamage, _damage];
                                 } else {
                                     _damage = _olddamage;
