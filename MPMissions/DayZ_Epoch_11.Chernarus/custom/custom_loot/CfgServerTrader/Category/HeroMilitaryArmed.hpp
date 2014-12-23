@@ -17,7 +17,7 @@ class Category_562 {
     class Offroad_DSHKM_Gue_DZE {
         type = "trade_any_vehicle";
         buy[] = {100,"ItemGoldBar"};
-        sell[] = {5,"ItemGoldBar10oz"};
+        sell[] = {20,"ItemGoldBar"};
     };
 	class UAZ_MG_TK_EP1_DZE {
 		type = "trade_any_vehicle";

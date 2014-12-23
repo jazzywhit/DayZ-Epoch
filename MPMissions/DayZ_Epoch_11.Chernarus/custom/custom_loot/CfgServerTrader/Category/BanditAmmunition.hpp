@@ -1,13 +1,13 @@
 class Category_577 {
 	class 75Rnd_545x39_RPK {
 		type = "trade_items";
-		buy[] = {3,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
+		buy[] = {2,"ItemGoldBar"};
+		sell[] = {2,"ItemGoldBar"};
 	};
     class 100Rnd_762x54_PK {
         type = "trade_items";
-        buy[] = {2,"ItemGoldBar10oz"};
-        sell[] = {2,"ItemGoldBar10oz"};
+        buy[] = {20,"ItemGoldBar"};
+        sell[] = {20,"ItemGoldBar"};
     };
 	class 30Rnd_545x39_AK {
 		type = "trade_items";
@@ -47,16 +47,16 @@ class Category_577 {
     class PG7V {
         type = "trade_items";
         buy[] = {100,"ItemGoldBar"};
-        sell[] = {2,"ItemGoldBar10oz"};
+        sell[] = {20,"ItemGoldBar"};
     };
     class PG7VL {
         type = "trade_items";
         buy[] = {300,"ItemGoldBar"};
-        sell[] = {6,"ItemGoldBar10oz"};
+        sell[] = {60,"ItemGoldBar"};
     };
     class PG7VR {
         type = "trade_items";
         buy[] = {300,"ItemGoldBar"};
-        sell[] = {6,"ItemGoldBar10oz"};
+        sell[] = {60,"ItemGoldBar"};
     };
 };

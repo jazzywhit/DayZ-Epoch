@@ -6,7 +6,7 @@ class Category_603 {
 	};
     class PK {
 		type = "trade_weapons";
-		buy[] = {4,"ItemGoldBar10oz"};
+		buy[] = {40,"ItemGoldBar"};
 		sell[] = {15,"ItemGoldBar"};
 	};
 };
@@ -18,7 +18,7 @@ class Category_638 {
 	};
     class PK {
 		type = "trade_weapons";
-		buy[] = {4,"ItemGoldBar10oz"};
+		buy[] = {40,"ItemGoldBar"};
 		sell[] = {15,"ItemGoldBar"};
 	};
 };
