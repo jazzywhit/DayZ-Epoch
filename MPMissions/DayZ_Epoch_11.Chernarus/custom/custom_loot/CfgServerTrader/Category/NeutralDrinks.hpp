@@ -2,12 +2,12 @@ class Category_684 {
 	class ItemSodaCoke {
 		type = "trade_items";
 		buy[] = {1,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class ItemSodaPepsi {
 		type = "trade_items";
 		buy[] = {1,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class ItemSodaMdew {
 		type = "trade_items";
@@ -32,12 +32,12 @@ class Category_684 {
     class ItemSodaDrwaste {
         type = "trade_items";
         buy[] = {2,"ItemGoldBar"};
-        sell[] = {7,"ItemSilverBar10oz"};
+        sell[] = {70,"ItemSilverBar"};
     };
     class ItemSodaRabbit {
         type = "trade_items";
         buy[] = {2,"ItemGoldBar"};
-        sell[] = {7,"ItemSilverBar10oz"};
+        sell[] = {70,"ItemSilverBar"};
     };
 	class ItemSodaMtngreen {
 		type = "trade_items";
@@ -74,12 +74,12 @@ class Category_498 {
 	class ItemSodaCoke {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class ItemSodaPepsi {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class ItemSodaMdew {
 		type = "trade_items";
@@ -104,12 +104,12 @@ class Category_498 {
     class ItemSodaDrwaste {
         type = "trade_items";
         buy[] = {2,"ItemGoldBar"};
-        sell[] = {7,"ItemSilverBar10oz"};
+        sell[] = {70,"ItemSilverBar"};
     };
     class ItemSodaRabbit {
         type = "trade_items";
         buy[] = {2,"ItemGoldBar"};
-        sell[] = {7,"ItemSilverBar10oz"};
+        sell[] = {70,"ItemSilverBar"};
     };
 	class ItemSodaMtngreen {
 		type = "trade_items";
@@ -146,12 +146,12 @@ class Category_633 {
 	class ItemSodaCoke {
 		type = "trade_items";
 		buy[] = {1,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class ItemSodaPepsi {
 		type = "trade_items";
 		buy[] = {1,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class ItemSodaMdew {
 		type = "trade_items";
@@ -176,12 +176,12 @@ class Category_633 {
     class ItemSodaDrwaste {
         type = "trade_items";
         buy[] = {2,"ItemGoldBar"};
-        sell[] = {7,"ItemSilverBar10oz"};
+        sell[] = {70,"ItemSilverBar"};
     };
     class ItemSodaRabbit {
         type = "trade_items";
         buy[] = {2,"ItemGoldBar"};
-        sell[] = {7,"ItemSilverBar10oz"};
+        sell[] = {70,"ItemSilverBar"};
     };
 	class ItemSodaMtngreen {
 		type = "trade_items";

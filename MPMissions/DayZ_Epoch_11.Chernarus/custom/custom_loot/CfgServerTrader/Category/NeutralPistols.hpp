@@ -12,12 +12,12 @@ class Category_606 {
 	class Makarov {
 		type = "trade_weapons";
 		buy[] = {1,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		sell[] = {20,"ItemSilverBar"};
 	};
 	class revolver_EP1 {
 		type = "trade_weapons";
 		buy[] = {1,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		sell[] = {20,"ItemSilverBar"};
 	};
 };
 class Category_674 {
@@ -34,11 +34,11 @@ class Category_674 {
 	class Makarov {
 		type = "trade_weapons";
 		buy[] = {1,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		sell[] = {20,"ItemSilverBar"};
 	};
 	class revolver_EP1 {
 		type = "trade_weapons";
 		buy[] = {1,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		sell[] = {20,"ItemSilverBar"};
 	};
 };

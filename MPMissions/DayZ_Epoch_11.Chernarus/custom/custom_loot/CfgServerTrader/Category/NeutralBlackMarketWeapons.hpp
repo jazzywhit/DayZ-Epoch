@@ -277,12 +277,12 @@ class Category_526 {
     class MP5A5 {
         type = "trade_weapons";
         buy[] = {1,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
     class MP5SD {
         type = "trade_weapons";
         buy[] = {3,"ItemGoldBar"};
-        sell[] = {6,"ItemSilverBar10oz"};
+        sell[] = {60,"ItemSilverBar"};
     };
     class M4SPR {
         type = "trade_weapons";
@@ -322,16 +322,16 @@ class Category_526 {
     class glock17_EP1 {
         type = "trade_weapons";
         buy[] = {1,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
     class Colt1911 {
         type = "trade_weapons";
         buy[] = {1,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
     class M9 {
         type = "trade_weapons";
         buy[] = {1,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
 };

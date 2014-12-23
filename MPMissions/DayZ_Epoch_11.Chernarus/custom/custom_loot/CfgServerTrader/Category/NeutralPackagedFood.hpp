@@ -27,32 +27,32 @@ class Category_687 {
 	class FoodCanBakedBeans {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanFrankBeans {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanPasta {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanSardines {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodPistachio {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodNutmix {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		sell[] = {10,"ItemSilverBar"};
 	};
     class FoodCanDemon {
         type = "trade_items";
@@ -87,12 +87,12 @@ class Category_687 {
     class FoodPumpkin {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
     class FoodSunFlowerSeed {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
 };
 class Category_579 {
@@ -124,32 +124,32 @@ class Category_579 {
 	class FoodCanBakedBeans {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanFrankBeans {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanPasta {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanSardines {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodPistachio {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodNutmix {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		sell[] = {10,"ItemSilverBar"};
 	};
     class FoodCanDemon {
         type = "trade_items";
@@ -184,12 +184,12 @@ class Category_579 {
     class FoodPumpkin {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
     class FoodSunFlowerSeed {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
 };
 class Category_635 {
@@ -221,32 +221,32 @@ class Category_635 {
 	class FoodCanBakedBeans {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanFrankBeans {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanPasta {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodCanSardines {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodPistachio {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
+		sell[] = {50,"ItemSilverBar"};
 	};
 	class FoodNutmix {
 		type = "trade_items";
 		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		sell[] = {10,"ItemSilverBar"};
 	};
     class FoodCanDemon {
         type = "trade_items";
@@ -281,11 +281,11 @@ class Category_635 {
     class FoodPumpkin {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
     class FoodSunFlowerSeed {
         type = "trade_items";
         buy[] = {4,"ItemGoldBar"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        sell[] = {20,"ItemSilverBar"};
     };
 };

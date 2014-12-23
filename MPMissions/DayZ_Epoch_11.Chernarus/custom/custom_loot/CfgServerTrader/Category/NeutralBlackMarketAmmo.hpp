@@ -36,13 +36,13 @@ class Category_527 {
 	};
 	class 30rnd_9x19_MP5 {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		buy[] = {20,"ItemSilverBar"};
+		sell[] = {20,"ItemSilverBar"};
 	};
 	class 302_9x19_MP5SD {
 		type = "trade_items";
-		buy[] = {4,"ItemSilverBar10oz"};
-		sell[] = {4,"ItemSilverBar10oz"};
+		buy[] = {40,"ItemSilverBar"};
+		sell[] = {40,"ItemSilverBar"};
 	};
     class 15Rnd_9x19_M9 {
         type = "trade_items";
@@ -51,8 +51,8 @@ class Category_527 {
     };
     class 15Rnd_9x19_M9SD {
         type = "trade_items";
-        buy[] = {2,"ItemSilverBar10oz"};
-        sell[] = {2,"ItemSilverBar10oz"};
+        buy[] = {20,"ItemSilverBar"};
+        sell[] = {20,"ItemSilverBar"};
     };
     class 17Rnd_9x19_glock17 {
         type = "trade_items";

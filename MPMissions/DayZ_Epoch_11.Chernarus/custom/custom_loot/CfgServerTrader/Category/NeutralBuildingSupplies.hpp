@@ -46,8 +46,8 @@ class Category_662 {
 	};
 	class ItemLightBulb {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {20,"ItemSilverBar"};
+		sell[] = {10,"ItemSilverBar"};
 	};
 	class ItemGenerator {
 		type = "trade_items";
@@ -108,8 +108,8 @@ class Category_508 {
 	};
 	class ItemLightBulb {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] = {20,"ItemSilverBar"};
+		sell[] = {10,"ItemSilverBar"};
 	};
 	class ItemGenerator {
 		type = "trade_items";
