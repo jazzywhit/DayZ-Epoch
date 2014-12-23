@@ -41,81 +41,86 @@ if (isNil "sleepTimer") then {
 if(_sleepTime < _sleepCooldown) exitWith { // If cooldown is not done then exit script
 	cutText [format["You are too well rested to take a nap, try again in %1 seconds!",(abs (round(_sleepTime - _sleepCooldown)))], "PLAIN DOWN"]; //display text at bottom center of screen when players cooldown is not done
 };
+
+if (dayz_combat == 1) then { // Check if in combat (dunno why you would want to sleep in combat but the check is here anyway)
+    cutText [format["You cannot sleep while in combat!"], "PLAIN DOWN"]; //display text at bottom center of screen when in combat
+} else {
 	
-_timeLeft = _totalSleepTime; // Variable used as a countdown timer
-disableUserInput true; // Disable the players keyboard/mouse input when sleeping
-[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_layDown"] call RE; // Public RPC call to change animation so all players see the animation when laying down
-sleep 3;
+	_timeLeft = _totalSleepTime; // Variable used as a countdown timer
+	disableUserInput true; // Disable the players keyboard/mouse input when sleeping
+	[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_layDown"] call RE; // Public RPC call to change animation so all players see the animation when laying down
+	sleep 3;
 
-cutText [format["You begin sleeping. %1 seconds left.",_timeLeft], "BLACK OUT"]; // Text displayed when starting to sleep
+	cutText [format["You begin sleeping. %1 seconds left.",_timeLeft], "BLACK OUT"]; // Text displayed when starting to sleep
 
-_snoreResult = [objNull, player, rSAY, "playerSnoring", _snoreDistance] call RE;
-for "_i" from 0 to _totalSleepTime do { // For loop for counting down sleep timers and changing animations
-    sleep 1;
-    _timeLeft = _timeLeft - 1; // Minus _timeLeft by one every second
+	_snoreResult = [objNull, player, rSAY, "playerSnoring", _snoreDistance] call RE;
+	for "_i" from 0 to _totalSleepTime do { // For loop for counting down sleep timers and changing animations
+		sleep 1;
+		_timeLeft = _timeLeft - 1; // Minus _timeLeft by one every second
+		
+		if (_timeLeft > 0) then {
+			cutText [format["You are sleeping. %1 seconds left.",_timeLeft], "BLACK FADED"]; // Display sleep countdown while sleeping
+		} else {
+		    cutText [format["You are beginning to wake up!"], "BLACK FADED"]; // This is a fix for when timer reaches zero... displays text
+		};
+		if (_timeLeft == 40) then {
+		    _snoreResult = [objNull, player, rSAY, "playerSnoring", _snoreDistance] call RE;
+			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep2"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
+		};
+		if (_timeLeft == 30) then {
+			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep1"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
+		};
+		if (_timeLeft == 20) then {
+		    _snoreResult = [objNull, player, rSAY, "playerSnoring", _snoreDistance] call RE;
+			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep2"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
+		};
+		if (_timeLeft == 10) then {
+			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep3"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
+		};
+		if (_timeLeft == 5) then {
+			[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep1"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
+		};
+	};
 
-    if (_timeLeft > 0) then {
-        cutText [format["You are sleeping. %1 seconds left.",_timeLeft], "BLACK FADED"]; // Display sleep countdown while sleeping
-    } else {
-        cutText [format["You are beginning to wake up!"], "BLACK FADED"]; // This is a fix for when timer reaches zero... displays text
-    };
-    if (_timeLeft == 40) then {
-        _snoreResult = [objNull, player, rSAY, "playerSnoring", _snoreDistance] call RE;
-        [objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep2"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
-    };
-    if (_timeLeft == 30) then {
-        [objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep1"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
-    };
-    if (_timeLeft == 20) then {
-        _snoreResult = [objNull, player, rSAY, "playerSnoring", _snoreDistance] call RE;
-        [objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep2"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
-    };
-    if (_timeLeft == 10) then {
-        [objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep3"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
-    };
-    if (_timeLeft == 5) then {
-        [objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_sleep1"] call RE; // Public RPC call to change animation so all players see the animation while sleeping
-    };
-};
+	if (_timeLeft == 0 || _timeLeft < 0) then { // If sleep countdown is done then.....
+		sleep 3;
+		cutText [format["You wake up!"], "BLACK IN"]; // Display wake up text (don't think this actually gets shown)
+		[objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_standUp"] call RE; // Public RPC call to change animation so all players see the animation on wake up
 
-if (_timeLeft == 0 || _timeLeft < 0) then { // If sleep countdown is done then.....
-    sleep 3;
-    cutText [format["You wake up!"], "BLACK IN"]; // Display wake up text (don't think this actually gets shown)
-    [objNull, player, rSwitchMove,"AidlPpneMstpSnonWnonDnon_SleepA_standUp"] call RE; // Public RPC call to change animation so all players see the animation on wake up
+        // Determine the amount of blood after sleeping
+		r_player_blood = 12000 min (r_player_blood + _bloodAmount);
 
-    // Determine the amount of blood after sleeping
-    r_player_blood = 12000 min (r_player_blood + _bloodAmount);
+        // Fix status effects on the player
+        10 fadeSound 1; // Fades sound in over time
+        "dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5; // Disable post processing blur effect
+        "colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];"colorCorrections" ppEffectCommit 5; // Give player their color back
 
-    // Fix status effects on the player
-    10 fadeSound 1; // Fades sound in over time
-    "dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5; // Disable post processing blur effect
-    "colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];"colorCorrections" ppEffectCommit 5; // Give player their color back
+        // Fix blood state
+		player setVariable["USEC_BloodQty",r_player_blood,true]; // Save this blood amount to the database
+		player setVariable["medForceUpdate",true];
 
-    // Fix blood state
-    player setVariable["USEC_BloodQty",r_player_blood,true]; // Save this blood amount to the database
-    player setVariable["medForceUpdate",true];
+		// Update hunger/thirst
+		[round(SleepFood/4),round(SleepWater/4)] call dayz_HungerThirst; // Each time you sleep you will lose 1/4 of the max food/drink
 
-    // Update hunger/thirst
-    [round(SleepFood/4),round(SleepWater/4)] call dayz_HungerThirst; // Each time you sleep you will lose 1/4 of the max food/drink
+		//Ensure Control is visible
+        _display = uiNamespace getVariable 'DAYZ_GUI_display';
+        (_display displayCtrl 1301) ctrlShow true;
 
-    //Ensure Control is visible
-    _display = uiNamespace getVariable 'DAYZ_GUI_display';
-    (_display displayCtrl 1301) ctrlShow true;
-
-    // Chance to escape infection
-    if (r_player_infected) then {
-        if ((random 1) < 0.30) then {
-            r_player_infected = false;
-            player setVariable["USEC_infected",false,true];
-            cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you no longer have a fever!"], "PLAIN DOWN"];
+        // Chance to escape infection
+		if (r_player_infected) then {
+		    if ((random 1) < 0.30) then {
+                r_player_infected = false;
+                player setVariable["USEC_infected",false,true];
+                cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you no longer have a fever!"], "PLAIN DOWN"];
+            } else {
+                cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you still have a fever!"], "PLAIN DOWN"];
+            };
         } else {
-            cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty; you still have a fever!"], "PLAIN DOWN"];
+            cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty!"], "PLAIN DOWN"];
         };
-    } else {
-        cutText [format["You awake from your nap feeling stronger, hungrier, and more thirsty!"], "PLAIN DOWN"];
-    };
 
-    // Finish Up
-    disableUserInput false; // Give players input controls back
-    sleepTimer = time; // Set public cooldown variable
+        // Finish Up
+		disableUserInput false; // Give players input controls back
+		sleepTimer = time; // Set public cooldown variable
+	};
 };
