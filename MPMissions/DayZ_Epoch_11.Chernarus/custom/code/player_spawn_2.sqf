@@ -147,6 +147,10 @@ while {true} do {
 
 	//If has infection reduce blood cough && add shake
 	if (r_player_infected) then {
+		#define R3F_TIRED_WEIGHT_LEVEL1 20
+    	#define R3F_TIRED_WEIGHT_LEVEL2 30
+    	#define R3F_TIRED_WEIGHT_LEVEL3 40
+
 		if !(player getVariable["USEC_infected",false]) then {
 			player setVariable["USEC_infected",true,true];
 			_infection_timer = diag_tickTime;
@@ -159,6 +163,10 @@ while {true} do {
 		// After 5 minutes of infection put the player into pain state and increase blood loss
 		//diag_log format["Time: %1", (diag_tickTime - _infection_timer)];
 		if ((diag_tickTime - _infection_timer) > 300) then {
+            #define R3F_TIRED_WEIGHT_LEVEL1 10
+            #define R3F_TIRED_WEIGHT_LEVEL2 20
+            #define R3F_TIRED_WEIGHT_LEVEL3 30
+
 		    if !(r_player_inpain) then {
 		        r_player_inpain = true;
 		        player setVariable ["USEC_inPain", true, true];
@@ -176,6 +184,10 @@ while {true} do {
 		// Remove blood from player, increased to 10 from 3
 		r_player_blood = r_player_blood - _infectionBloodLoss;
 	} else {
+		#define R3F_TIRED_WEIGHT_LEVEL1 40
+    	#define R3F_TIRED_WEIGHT_LEVEL2 50
+    	#define R3F_TIRED_WEIGHT_LEVEL3 60
+
 	    if !(_infection_timer == -1) then {
             _infection_timer = -1;
         };

@@ -113,7 +113,7 @@ _spawnChance = (random _spawnChance) + _SpawnMin;
 
 // Roll and spawn Event
 _spawnRoll = floor(random(100)+1);
-diag_log(format["CRASHSPAWNER: %1%2 chance to start a crashing %3 with loot table '%4'", _spawnChance, '%', _crashName, _lootTable]);
+//diag_log(format["CRASHSPAWNER: %1%2 chance to start a crashing %3 with loot table '%4'", _spawnChance, '%', _crashName, _lootTable]);
 if (_spawnRoll <= _spawnChance) then
 {
 	if (!_massGraveSite) then {
@@ -212,7 +212,7 @@ if (_spawnRoll <= _spawnChance) then
 
 					waitUntil{sleep 1; getpos _crashwreck select 2 <= 15};
 
-					diag_log(format["CRASHSPAWNER: %1 just exploded at %2!, ", _crashName, str(getPosATL _crashwreck)]);
+					//diag_log(format["CRASHSPAWNER: %1 just exploded at %2!, ", _crashName, str(getPosATL _crashwreck)]);
 					_pos = [getpos _crashwreck select 0, getpos _crashwreck select 1,0];
 				};
 				deletevehicle _crashwreck;
@@ -279,7 +279,7 @@ if (_spawnRoll <= _spawnChance) then
 
 			waitUntil{sleep 1; getpos _crashwreck select 2 <= 5};
 
-			diag_log(format["CRASHSPAWNER: %1 just exploded at %2!, ", _crashName, str(getPosATL _crashwreck)]);
+			//diag_log(format["CRASHSPAWNER: %1 just exploded at %2!, ", _crashName, str(getPosATL _crashwreck)]);
 			_pos = [getpos _crashwreck select 0, getpos _crashwreck select 1,0];
 			deletevehicle _crashwreck;
 			// deletevehicle _helipilot;
@@ -316,7 +316,7 @@ if (_spawnRoll <= _spawnChance) then
 			_index2 = _weights select _index1;
 			_itemType = _itemTypes select _index2;
 			[_itemType select 0, _itemType select 1, _lootPos, 5] call spawn_loot;
-			diag_log(format["CRASHSPAWNER: Loot spawn at '%1' with loot table '%2'", _pos, _lootTable]);
+			//diag_log(format["CRASHSPAWNER: Loot spawn at '%1' with loot table '%2'", _pos, _lootTable]);
 			_nearby = _pos nearObjects ["ReammoBox", sizeOf(_crashModel)];
 			{
 				_x setVariable ["permaLoot",true];
@@ -331,5 +331,5 @@ if (_spawnRoll <= _spawnChance) then
 	};
 	
     _endTime = time - _startTime;
-    diag_log(format["CRASHSPAWNER: Crash completed! Wreck at: %2 - Runtime: %1 Seconds || Distance from calculated POC: %3 meters", round(_endTime), str(getPos _crash), round(_position distance _crash)]);
+    //diag_log(format["CRASHSPAWNER: Crash completed! Wreck at: %2 - Runtime: %1 Seconds || Distance from calculated POC: %3 meters", round(_endTime), str(getPos _crash), round(_position distance _crash)]);
 };
