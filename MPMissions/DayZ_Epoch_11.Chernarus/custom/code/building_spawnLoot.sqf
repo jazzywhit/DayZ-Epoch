@@ -14,6 +14,8 @@ private [
     "_ShuffleArray",
     "_bias",
     "_positions",
+    "_rndRoll",
+    "_iPos",
     "_dateNow"];
 _obj = _this;
 
@@ -57,27 +59,25 @@ _bias = (_bias + random(100 - _bias)) / 100;
 _positions = _pos call _ShuffleArray;
 //_dateNow = (DateToNumber date);
 
-if !(isNil "_positions") then {
-    {
-        if (count _x == 3) then {
-            _rnd = (random 1) / _bias;
-            _iPos = _obj modelToWorld _x;
+{
+    if (count _x == 3) then {
+        _rndRoll = (random 1) / _bias;
+        _iPos = _obj modelToWorld _x;
 
-            if (_rnd <= _lootChance) then {
-                _index = dayz_CBLBase find _type;
-                _weights = dayz_CBLChances select _index;
-                _cntWeights = count _weights;
-                _index = floor(random _cntWeights);
-                _index = _weights select _index;
-                _itemType = _itemTypes select _index;
-                [_itemType select 0, _itemType select 1 , _iPos, 0.0] call spawn_loot;
+        if (_rndRoll <= _lootChance) then {
+            _index = dayz_CBLBase find _type;
+            _weights = dayz_CBLChances select _index;
+            _cntWeights = count _weights;
+            _index = floor(random _cntWeights);
+            _index = _weights select _index;
+            _itemType = _itemTypes select _index;
+            [_itemType select 0, _itemType select 1 , _iPos, 0.0] call spawn_loot;
 
-                //lockout system
-                //_obj setVariable ["looted",_dateNow];
-            };
+            //lockout system
+            //_obj setVariable ["looted",_dateNow];
         };
-    } count _positions;
-};
+    };
+} count _positions;
 
 // small loot
 _posSmall =	 [] + getArray (_config >> "lootPosSmall");
@@ -85,24 +85,22 @@ _itemTypesSmall =	[] + getArray (_config >> "lootTypeSmall");
 _positionsSmall = _posSmall call _ShuffleArray;
 //_dateNow = (DateToNumber date);
 
-if !(isNil "_positionsSmall") then {
-    {
-        if (count _x == 3) then {
-            _rnd = (random 1) / _bias;
-            _iPos = _obj modelToWorld _x;
+{
+    if (count _x == 3) then {
+        _rndRoll = (random 1) / _bias;
+        _iPos = _obj modelToWorld _x;
 
-            if (_rnd <= _lootChance) then {
-                _index = dayzE_CBLSBase find _type;
-                _weights = dayzE_CBLSChances select _index;
-                _cntWeights = count _weights;
-                _index = floor(random _cntWeights);
-                _index = _weights select _index;
-                _itemType = _itemTypesSmall select _index;
-                [_itemType select 0, _itemType select 1, _iPos, 0.0] call spawn_loot_small;
+        if (_rndRoll <= _lootChance) then {
+            _index = dayzE_CBLSBase find _type;
+            _weights = dayzE_CBLSChances select _index;
+            _cntWeights = count _weights;
+            _index = floor(random _cntWeights);
+            _index = _weights select _index;
+            _itemType = _itemTypesSmall select _index;
+            [_itemType select 0, _itemType select 1, _iPos, 0.0] call spawn_loot_small;
 
-                //lockout system
-                //_obj setVariable ["looted", _dateNow];
-            };
+            //lockout system
+            //_obj setVariable ["looted", _dateNow];
         };
-    } count _positionsSmall;
-};
+    };
+} count _positionsSmall;
