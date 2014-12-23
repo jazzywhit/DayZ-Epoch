@@ -289,7 +289,19 @@ if (isServer && isNil "sm_done") then {
                                 _olddamage = damage _dmgUnit;
 
                                 // Get damage source
-                                if ((_modular_ammo_allowed find _dmgProjectile) >= 0) then {
+                                if (_dmgProjectile in ["M_Igla_AA",
+                                                        "M_Stinger_AA",
+                                                        "R_M136_AT",
+                                                        "R_PG7V_AT",
+                                                        "R_PG7VL_AT",
+                                                        "R_PG7VR_AT",
+                                                        "Sledge_Swing_Ammo",
+                                                        "G_40mm_HE",
+                                                        "GrenadeHand",
+                                                        "GrenadeHandTimedWest",
+                                                        "GrenadeHandTimedEast",
+                                                        "GrenadeHand_Stone"
+                                                      ]) then {
                                     diag_log text format ["Damage Allowed"];
                                     _damage;
                                 } else {
@@ -299,9 +311,9 @@ if (isServer && isNil "sm_done") then {
                                 };
 
                                 // Set hit damage appropriately
-                                //diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
+                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
                                 //_gethit set [_i, _damage];
-                                //_damage;
+                                _damage;
                             }
                     ];
                 };
