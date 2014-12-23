@@ -278,7 +278,7 @@ if (isServer && isNil "sm_done") then {
                                 // Get damaged part and previous damage amount
                                 _selections = _dmgUnit getVariable ["selections", []];
                                 _gethit = _dmgUnit getVariable ["gethit", []];
-                                diag_log text format ["Get Hit T=%1 : %2", _gethit];
+                                //diag_log text format ["Get Hit T=%1 : %2", _gethit];
 
                                 if !(_dmgSelectionName in _selections) then
                                 {
@@ -298,7 +298,7 @@ if (isServer && isNil "sm_done") then {
 
                                 // Set hit damage appropriately
                                 diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
-                                _gethit set [_i, _damage];
+                                //_gethit set [_i, _damage];
                                 _damage;
                             }
                     ];
