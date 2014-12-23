@@ -108,7 +108,7 @@ while {true} do {
 	// Handle Disease Transmissability
     if (_isPZombie) then {
         // Infect other players if you are a zombie
-        _listTalk = (getPosATL _refObj) nearEntities ["CAManBase",15];
+        _listTalk = (getPosATL _refObj) nearEntities ["CAManBase",1]; //TODO find a way to infect another player
         {
             if (_x getVariable["USEC_infected",false]) then {
                 _rnd = random 1;
@@ -145,10 +145,6 @@ while {true} do {
     	};
     };
 
-    if (player getVariable["USEC_infected",false]) then {
-        r_player_infected = true;
-    };
-
 	//If has infection reduce blood cough && add shake
 	if (r_player_infected) then {
 		if !(player getVariable["USEC_infected",false]) then {
@@ -171,7 +167,7 @@ while {true} do {
 
         // Cough and shake
 		_rnd = ceil (random 8);
-		[player,"cough",_rnd,false,25] call dayz_zombieSpeak;
+		[player,"cough",_rnd,false,30] call dayz_zombieSpeak;
 		if (_rnd < 3) then {
 			addCamShake [2, 1, 25];
 			//player setVariable["startcombattimer", 1];
