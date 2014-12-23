@@ -57,7 +57,7 @@ _bias = (_bias + random(100 - _bias)) / 100;
 _positions = _pos call _ShuffleArray;
 //_dateNow = (DateToNumber date);
 
-if (!isNull(_positions)) then {
+if !(isNull(_positions)) then {
     {
         if (count _x == 3) then {
             _rnd = (random 1) / _bias;
@@ -85,7 +85,7 @@ _itemTypesSmall =	[] + getArray (_config >> "lootTypeSmall");
 _positionsSmall = _posSmall call _ShuffleArray;
 //_dateNow = (DateToNumber date);
 
-if (!isNull(_positionsSmall)) then {
+if !(isNull(_positionsSmall)) then {
     {
         if (count _x == 3) then {
             _rnd = (random 1) / _bias;
