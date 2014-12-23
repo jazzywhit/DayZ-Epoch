@@ -9,7 +9,7 @@ dayz_hiveVersionNo = 	getNumber(configFile >> "CfgMods" >> "DayZ" >> "hiveVersio
 // Define ammo types and modular building types
 private [
     "_modular_units",
-    "_modular_ammo_allowed"
+    "_modular_units_high"
 ];
 _modular_units = [
     "WoodFloor_DZ",
@@ -24,33 +24,19 @@ _modular_units = [
     "WoodSmallWallWin_DZ",
     "Land_DZE_GarageWoodDoor",
     "Land_DZE_GarageWoodDoorLocked",
-    "WoodLadder_DZ",
-    "WoodStairsSans_DZ",
-    "WoodStairs_DZ",
     "WoodSmallWall_DZ",
     "WoodSmallWallThird_DZ",
+    "Land_DZE_LargeWoodDoor"
+];
+
+_modular_units_high = [
     "CinderWallHalf_DZ",
     "CinderWall_DZ",
     "CinderWallDoorway_DZ",
-    "Land_DZE_LargeWoodDoor",
     "MetalFloor_DZ",
     "CinderWallDoorSmallLocked_DZ",
     "CinderWallSmallDoorway_DZ",
     "CinderWallDoor_DZ"
-];
-_modular_ammo_allowed = [
-    "M_Igla_AA",
-    "M_Stinger_AA",
-    "R_M136_AT",
-    "R_PG7V_AT",
-    "R_PG7VL_AT",
-    "R_PG7VR_AT",
-    "Sledge_Swing_Ammo",
-    "G_40mm_HE",
-    "GrenadeHand",
-    "GrenadeHandTimedWest",
-    "GrenadeHandTimedEast",
-    "GrenadeHand_Stone"
 ];
 
 _hiveLoaded = false;
@@ -249,68 +235,78 @@ if (isServer && isNil "sm_done") then {
                     _object addMPEventHandler ["MPKilled",{_this call object_handleServerKilled;}];
                 };
 
-                //private [
-                //    "_dmgUnit",
-                //   "_dmgSelectionName",
-                //    "_damage",
-                //    "_dmgSource",
-                //    "_dmgProjectile",
-                //    "_selections",
-                //    "_gethit",
-                //    "_olddamage",
-                //    "_dmgMult"
-                //];
-
                 if (typeOf(_object) in _modular_units) then {
-                    _object setVariable ["selections", []];
-                    _object setVariable ["gethit", []];
-                    _dmgMult = 1;
+                    //_object setVariable ["selections", []];
+                    //_object setVariable ["gethit", []];
                     _object addEventHandler
                     [
                         "HandleDamage",
                             {
                                 _dmgUnit = _this select 0;
-                                _dmgSelectionName = _this select 1;
+                                //_dmgSelectionName = _this select 1;
                                 _damage = _this select 2;
                                 //_dmgSource = _this select 3;
                                 _dmgProjectile = _this select 4;
-
-                                // Get damaged part and previous damage amount
-                                _selections = _dmgUnit getVariable ["selections", []];
-                                _gethit = _dmgUnit getVariable ["gethit", []];
-                                //diag_log text format ["Get Hit T=%1 : %2", _gethit];
-
-                                if !(_dmgSelectionName in _selections) then
-                                {
-                                    _selections set [count _selections, _dmgSelectionName];
-                                    _gethit set [count _gethit, 0];
-                                };
-                                _i = _selections find _dmgSelectionName;
                                 _olddamage = damage _dmgUnit;
 
-                                // Get damage source
-                                if (_dmgProjectile in ["M_Igla_AA",
+                                // If damage not from projectile types, don't allow
+                                if !(_dmgProjectile in ["Chainsaw_Swing_Ammo",
+                                                        "Hatchet_Swing_Ammo",
+                                                        "Crowbar_Swing_Ammo",
+                                                        "Sledge_Swing_Ammo",
                                                         "M_Stinger_AA",
                                                         "R_M136_AT",
                                                         "R_PG7V_AT",
                                                         "R_PG7VL_AT",
                                                         "R_PG7VR_AT",
-                                                        "Sledge_Swing_Ammo",
                                                         "G_40mm_HE",
                                                         "GrenadeHand",
                                                         "GrenadeHandTimedWest",
                                                         "GrenadeHandTimedEast",
                                                         "GrenadeHand_Stone"
                                                       ]) then {
-                                    diag_log text format ["Damage Allowed"];
-                                } else {
                                     _damage = _olddamage;
-                                    diag_log text format ["Damage Not Allowed"];
                                 };
 
                                 // Set hit damage appropriately
                                 diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
-                                //_gethit set [_i, _damage];
+                                _damage;
+                            }
+                    ];
+                };
+
+                if (typeOf(_object) in _modular_units_high) then {
+                    //_object setVariable ["selections", []];
+                    //_object setVariable ["gethit", []];
+                    _object addEventHandler
+                    [
+                        "HandleDamage",
+                            {
+                                _dmgUnit = _this select 0;
+                                //_dmgSelectionName = _this select 1;
+                                _damage = _this select 2;
+                                //_dmgSource = _this select 3;
+                                _dmgProjectile = _this select 4;
+                                _olddamage = damage _dmgUnit;
+
+                                // If damage not from projectile types, don't allow
+                                if !(_dmgProjectile in ["M_Igla_AA",
+                                                        "M_Stinger_AA",
+                                                        "R_M136_AT",
+                                                        "R_PG7V_AT",
+                                                        "R_PG7VL_AT",
+                                                        "R_PG7VR_AT",
+                                                        "G_40mm_HE",
+                                                        "GrenadeHand",
+                                                        "GrenadeHandTimedWest",
+                                                        "GrenadeHandTimedEast",
+                                                        "GrenadeHand_Stone"
+                                                      ]) then {
+                                    _damage = _olddamage;
+                                };
+
+                                // Set hit damage appropriately
+                                diag_log text format ["Object Hit : T=%1 : %2 : %3 : %4 : ", time, _this, _olddamage, _damage];
                                 _damage;
                             }
                     ];
